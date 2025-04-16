@@ -1,0 +1,38 @@
+{
+  "name": "github",
+  "version": "1.0.0",
+  "description": "GitHub MCP Server for AI tools using Model Context Protocol (MCP).",
+  "vendor": "GitHub",
+  "homepage": "https://github.com/github/github-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/github/github-mcp-server.git"
+  },
+  "license": "MIT",
+  "keywords": ["mcp", "ai", "github", "copilot", "claude", "agent", "integration"],
+  "platforms": ["vscode", "claude"],
+  "protocol": "mcp",
+  "inputs": [
+    {
+      "id": "github_token",
+      "type": "promptString",
+      "description": "GitHub Personal Access Token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "docker",
+    "args": [
+      "run",
+      "-i",
+      "--rm",
+      "-e",
+      "GITHUB_PERSONAL_ACCESS_TOKEN",
+      "ghcr.io/github/github-mcp-server"
+    ],
+    "env": {
+      "GITHUB_PERSONAL_ACCESS_TOKEN": "${input:github_token}"
+    },
+    "timeout": 60
+  }
+}

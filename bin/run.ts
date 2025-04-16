@@ -1,19 +1,25 @@
+#!/usr/bin/env ts-node
+
 import yargs, { CommandModule } from 'yargs'
+import { hideBin } from 'yargs/helpers'
 import { config } from 'dotenv'
 import { commands } from '../src'
-import { bgBlue, bold, red } from 'picocolors'
+import { bold, blue } from 'picocolors'
 
 config()
 
-const run = yargs(process.argv.slice(2))
+const run = yargs(hideBin(process.argv)).scriptName('mcps')
 run.usage(
-  bgBlue(
-    `Welcome to the CLI application powered by ${bold(red('cli-typescript-starter'))}!
-    See more on https://github.com/kucherenko/cli-typescript-starter`,
-  ),
+  `Welcome to the CLI manager for ${bold(blue('MCP server'))}!
+    See more on https://mcp.bar`,
 )
 for (const command of commands) {
   run.command(command as CommandModule)
 }
 
-run.demandCommand(1, 'You need at least one command before moving on').help().argv
+run
+  .demandCommand(1, 'You need at least one command before moving on')
+  .help()
+  .alias('h', 'help')
+  .alias('v', 'version')
+  .parse()

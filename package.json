@@ -1,9 +1,9 @@
 {
-  "name": "cli-typescript-starter",
-  "version": "1.0.0",
-  "description": "`cli-typescript-starter` is a simple and efficient tool that enables you to quickly create command-line applications using TypeScript. With its well-structured codebase and robust features, it provides an easy-to-use interface for developing and testing your CLI applications. It also comes with a set of predefined tools that allow you to quickly create a basic structure for your CLI application, which can be customized according to your needs. Additionally, it provides a simple way to add dependencies and plugins to your CLI app, making it ideal for developers who want to use third-party libraries and extend the functionality of their CLI apps.",
+  "name": "mcps",
+  "version": "0.0.1",
+  "description": "`mcps` is a package manager for MCP server.",
   "bin": {
-    "cli-typescript-starter": "./bin/run"
+    "mcps": "./bin/run"
   },
   "directories": {
     "lib": "src",
@@ -15,7 +15,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/kucherenko/cli-typescript-starter.git"
+    "url": "git+ssh://git@github.com/in-fun/mcps.git"
   },
   "scripts": {
     "build": "tsup-node",
@@ -37,11 +37,11 @@
   },
   "keywords": [
     "typescript",
-    "starter",
-    "cli",
-    "bootstrap"
+    "mcps",
+    "package manager",
+    "mcp server"
   ],
-  "author": "Andrey Kucherenko <kucherenko.andrey@gmail.com>",
+  "author": "lilac <tech@rabrain.com>",
   "license": "MIT",
   "devDependencies": {
     "@commitlint/cli": "^18.6.1",

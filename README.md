@@ -1,107 +1,46 @@
-# CLI TypeScript Starter
+# MCPS
 
-An all-inclusive starter kit for crafting command-line interfaces (CLI) using TypeScript, driven by Node.js. This kit is
-meticulously designed to kick-start your development journey with a solid foundation, encompassing features such as
-argument parsing, environment setup, logging, testing suites, as well as code formatting and linting capabilities.
+The CLI manager for MCP servers.
 
-## Features
+## 🌟 Features
 
-This template incorporates several key tools and libraries to enhance your CLI development experience:
+- 🔄 Simple installation and management of MCP servers
+- 📱 Works cross platform
 
-- **[Yargs](https://github.com/yargs/yargs):** A powerful library for parsing command-line arguments.
-- **[Dotenv](https://github.com/motdotla/dotenv):** Loads environment variables from a `.env` file into `process.env`,
-  making it easy to manage application configuration.
-- **[PicoColors](https://github.com/alexeyraspopov/picocolors):** Lightweight and fast library for styling terminal
-  text.
-- **[Consola](https://github.com/unjs/consola):** 🐨Elegant Console Logger for Node.js and Browser
-- **[Jest](https://jestjs.io/):** A delightful JavaScript Testing Framework with a focus on simplicity.
-- **[TS-Node](https://typestrong.org/ts-node/):** TypeScript execution and REPL for Node.js.
-- **[TSUP](https://tsup.egoist.dev/):** The simplest and fastest way to bundle your TypeScript libraries.
-- **[Prettier](https://prettier.io/):** An opinionated code formatter that supports many languages and integrates with
-  most editors.
-- **[ESLint](https://eslint.org/):** A pluggable and configurable linter tool for identifying and reporting on patterns
-  in JavaScript and TypeScript.
-- **[giget](https://github.com/unjs/giget)** ✨ Download templates and git repositories with pleasure!
-
-## Prerequisites
-
-Before you begin, ensure you have installed [Node.js](https://nodejs.org/) and [pnpm](https://pnpm.io/) on your system.
-
-## Getting Started
-
-To start using this CLI TypeScript starter, follow these steps:
-
-### 1. Make a new project
+## 📦 Installation
 
 ```sh
-npx cli-typescript-starter create my-project
+npm install -g mcps
 ```
 
-or
+## 🔧 Usage
 
 ```sh
-npx giget@latest gh:kucherenko/cli-typescript-starter my-project
+# 🔍 Install a server
+mcps install playwright # install playwright server
+
+# 🗑️ Remove a server 
+mcps remove playwright # remove playwright server
+
+# 📋 List installed servers
+mcps list # show existing mcp servers installed on the device
 ```
 
-or
-
-```sh
-pnpm exec degit kucherenko/cli-typescript-starter my-project
-```
-
-### 2. Install dependencies
-
-Navigate to your project directory and install the necessary dependencies:
-
-```sh
-cd my-project && pnpm install
-```
-
-### 3. Configure the package
-
-Update the `package.json` to reflect your project's details:
-
-- Rename the package:
-  ```json
-  "name": "my-project",
-  ```
-- Set the command name:
-  ```json
-  "bin": {
-    "my-project": "./bin/run"
-  }
-  ```
-
-### 4. Set up environment variables
-
-Create a `.env` file in the root directory and configure your environment variables as needed.
-
-## Usage
-
-This starter comes equipped with several predefined scripts to facilitate development, alongside sample commands to
-demonstrate the capabilities of the CLI application.
+## Development
 
 ### Running Commands
 
 - In development mode, use `pnpm start [command name]` to run any command. This utilizes `ts-node` for a seamless
   development experience.
-- In production, execute the CLI application directly with `my-project [command name]` to run the desired
+- In production, execute the CLI application directly with `mcps [command name]` to run the desired
   command from the built project (the name of command should be provided in `package.json` in `bin`).
-
-### Sample Commands
-
-- **`info`**: Prints information about the current system and Node.js configuration. This command is useful for
-  verifying the environment in which the CLI is running.
-- **`greeting`**: Demonstrates interactive prompts within the CLI. It's a great way to see how user inputs can be
-  handled in a friendly manner.
-- **`create`**: Create new project based on `cli-typescript-starter`.
 
 All commands are located in the `src/commands/` folder. This organization makes it easy to find and modify commands or
 add new ones as needed.
 
 ### Script Commands
 
-This starter comes with several predefined scripts to help with development:
+This package comes with several predefined scripts to help with development:
 
 - `pnpm build` - Build the project using `tsup`.
 - `pnpm build:watch` - Automatically rebuild the project on file changes.
@@ -166,7 +105,7 @@ To contribute to this project or customize it for your needs, consider the follo
 
 ## Contributing
 
-Contributions are welcome! If you'd like to improve this CLI TypeScript starter, please follow the standard
+Contributions are welcome! If you'd like to improve this CLI app, please follow the standard
 fork-and-pull request workflow. Here are a few guidelines to keep in mind:
 
 - Make sure your code adheres to the project's coding standards, including using Prettier for code formatting and ESLint
@@ -182,13 +121,3 @@ others to contribute and for users to understand and utilize the project effecti
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
-
-## Author
-
-**Andrey Kucherenko**
-
-- GitHub: [@kucherenko](https://github.com/kucherenko)
-
----
-
-Happy Coding!
