@@ -1,4 +1,4 @@
-# MCPS
+# MCP Bar
 
 The CLI manager for MCP servers.
 
@@ -10,20 +10,20 @@ The CLI manager for MCP servers.
 ## 📦 Installation
 
 ```sh
-npm install -g mcps
+npm install -g mcpbar
 ```
 
 ## 🔧 Usage
 
 ```sh
 # 🔍 Install a server
-mcps install playwright # install playwright server
+mcpbar install playwright # install playwright server
 
 # 🗑️ Remove a server
-mcps remove playwright # remove playwright server
+mcpbar remove playwright # remove playwright server
 
 # 📋 List installed servers
-mcps list # show existing mcp servers installed on the device
+mcpbar list # show existing mcp servers installed on the device
 ```
 
 ## Development
@@ -32,7 +32,7 @@ mcps list # show existing mcp servers installed on the device
 
 - In development mode, use `pnpm start [command name]` to run any command. This utilizes `ts-node` for a seamless
   development experience.
-- In production, execute the CLI application directly with `mcps [command name]` to run the desired
+- In production, execute the CLI application directly with `mcpbar [command name]` to run the desired
   command from the built project (the name of command should be provided in `package.json` in `bin`).
 
 All commands are located in the `src/commands/` folder. This organization makes it easy to find and modify commands or

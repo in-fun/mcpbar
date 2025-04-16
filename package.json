@@ -1,9 +1,9 @@
 {
-  "name": "mcps",
+  "name": "mcpbar",
   "version": "0.0.1",
-  "description": "`mcps` is a package manager for MCP server.",
+  "description": "`mcpbar` is a package manager for MCP server.",
   "bin": {
-    "mcps": "./bin/run"
+    "mcpbar": "./bin/run"
   },
   "directories": {
     "lib": "src",
@@ -13,9 +13,10 @@
     "dist",
     "bin"
   ],
+  "homepage": "https://mcp.bar",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/in-fun/mcps.git"
+    "url": "git+ssh://git@github.com/in-fun/mcpbar.git"
   },
   "scripts": {
     "build": "tsup-node",
@@ -37,7 +38,7 @@
   },
   "keywords": [
     "typescript",
-    "mcps",
+    "mcpbar",
     "package manager",
     "mcp server"
   ],

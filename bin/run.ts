@@ -8,7 +8,7 @@ import { bold, blue } from 'picocolors'
 
 config()
 
-const run = yargs(hideBin(process.argv)).scriptName('mcps')
+const run = yargs(hideBin(process.argv)).scriptName('mcpbar')
 run.usage(
   `Welcome to the CLI manager for ${bold(blue('MCP server'))}!
     See more on https://mcp.bar`,
