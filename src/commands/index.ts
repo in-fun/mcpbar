@@ -7,4 +7,13 @@ import * as remove from './remove'
 import * as start from './start'
 import * as packages from './packages'
 
-export const commands = [info, greeting, create, list, install, remove, start, packages]
+export const commands = [
+  info,
+  greeting,
+  create,
+  list,
+  install,
+  remove,
+  start,
+  packages,
+]

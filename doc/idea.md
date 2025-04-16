@@ -1,17 +1,19 @@
 ### Introduction
 
-As of now, the Model Context Protocol (MCP) ecosystem lacks a unified, standardized package manager akin to npm or Homebrew. 
+As of now, the Model Context Protocol (MCP) ecosystem lacks a unified, standardized package manager akin to npm or Homebrew.
 
 The `mcp.json` manifest file, akin to `package.json` in npm, for the Model Context Protocol (MCP) ecosystem is both innovative and timely. It addresses the current fragmentation in MCP server discovery and installation by promoting a decentralized yet standardized approach.
 
 ---
 
 ### 📦 The `mcp.json` Manifest: A Decentralized Solution
+
 The idea of an `mcp.json` file serving as a manifest for MCP servers is compellingBy including metadata such as `name`, `description`, `version`, `vendor`, `homepage`, and `readme`, this file can provide a comprehensive overview of an MCP server. Hosting this file in a GitHub repository and referencing it via a URL would allow developers to share their servers easily. This approach mirrors the functionality of ESM (ECMAScript Modules), where modules can be imported directly from URLs, promoting a decentralized distribution model
 
 ---
 
 ### 🔧 Implementing a Decentralized Package Manager
+
 Building a command-line interface (CLI) tool that can parse the `mcp.json` file and automate the installation process would streamline the user experienc. By executing a command like `mcp install <URL>`, users could fetch and set up MCP servers seamlessl. This mechanism would eliminate the need for a centralized registry, as the installation relies solely on the provided UR.
 
 ---
@@ -24,10 +26,10 @@ While decentralization offers flexibility, maintaining an optional centralized r
 
 ### ✅ Advantages of the Proposed Approach
 
-- **Decentralization*: Empowers developers to host and distribute their servers without relying on a central authoriy.
-- **Standardization*: Establishes a consistent format (`mcp.json`) for describing MCP servers, facilitating interoperabiliy.
-- **Ease of Use*: Simplifies the installation process through a CLI tool, enhancing user adoptin.
-- **Scalability*: Supports a growing ecosystem of MCP servers by allowing easy addition and discovey.
+- **Decentralization**: Empowers developers to host and distribute their servers without relying on a central authoriy.
+- **Standardization**: Establishes a consistent format (`mcp.json`) for describing MCP servers, facilitating interoperabiliy.
+- **Ease of Use**: Simplifies the installation process through a CLI tool, enhancing user adoptin.
+- **Scalability**: Supports a growing ecosystem of MCP servers by allowing easy addition and discovey.
 
 ---
 

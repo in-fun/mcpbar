@@ -19,7 +19,7 @@ npm install -g mcps
 # 🔍 Install a server
 mcps install playwright # install playwright server
 
-# 🗑️ Remove a server 
+# 🗑️ Remove a server
 mcps remove playwright # remove playwright server
 
 # 📋 List installed servers

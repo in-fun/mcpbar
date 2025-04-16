@@ -74,8 +74,19 @@ Below is the proposed structure for `mcp.json`:
     "url": "https://github.com/github/github-mcp-server.git"
   },
   "license": "MIT",
-  "keywords": ["mcp", "ai", "github", "copilot", "claude", "agent", "integration"],
-  "platforms": ["vscode", "claude"],
+  "keywords": [
+    "mcp",
+    "ai",
+    "github",
+    "copilot",
+    "claude",
+    "agent",
+    "integration"
+  ],
+  "platforms": [
+    "vscode",
+    "claude"
+  ],
   "protocol": "mcp",
   "inputs": [
     {
@@ -151,4 +162,3 @@ Below is the proposed structure for `mcp.json`:
 - [NPM package.json Specification](https://docs.npmjs.com/cli/v10/configuring-npm/package-json)
 - [GitHub MCP Server](https://github.com/github/github-mcp-server)
 - [VS Code MCP Server Configuration Docs](https://code.visualstudio.com/docs/copilot/chat/mcp-servers)
-

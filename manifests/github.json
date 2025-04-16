@@ -9,8 +9,19 @@
     "url": "https://github.com/github/github-mcp-server.git"
   },
   "license": "MIT",
-  "keywords": ["mcp", "ai", "github", "copilot", "claude", "agent", "integration"],
-  "platforms": ["vscode", "claude"],
+  "keywords": [
+    "mcp",
+    "ai",
+    "github",
+    "copilot",
+    "claude",
+    "agent",
+    "integration"
+  ],
+  "platforms": [
+    "vscode",
+    "claude"
+  ],
   "protocol": "mcp",
   "inputs": [
     {
