@@ -8,6 +8,5 @@ export default {
   printWidth: 120,
   singleQuote: true,
   semi: false,
-  // multilineArraysWrapThreshold: 3,
   plugins: ['prettier-plugin-multiline-arrays'],
 }

@@ -27,7 +27,7 @@ export async function handler(_: ArgumentsCamelCase<ListArgv>) {
 
     logger.info(bold(green('Configured MCP Servers:\n')))
 
-    // prettier-ignore
+    // prettier-multiline-arrays-next-threshold: 3
     Object.entries(config.mcpServers).forEach(([name, server]: [string, any]) => {
       logger.info(bold(green(`${name}:`)))
       logger.info(`  Command: ${server.command}`)
