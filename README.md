@@ -5,7 +5,9 @@ The CLI manager for MCP servers.
 ## 🌟 Features
 
 - 🔄 Simple installation and management of MCP servers
+- 🛠️ User-friendly command-line interface with interactive prompts for easy configuration
 - 📱 Works cross platform
+- 🔍 Search, install, disable, and enable MCP servers with ease
 
 ## 📦 Installation
 
@@ -14,6 +16,8 @@ npm install -g mcpbar
 ```
 
 ## 🔧 Usage
+
+### Basic Commands
 
 ```sh
 # 🔍 Install a server
@@ -26,97 +30,65 @@ mcpbar remove playwright # remove playwright server
 mcpbar list # show existing mcp servers installed on the device
 ```
 
-## Development
+### Search for MCP Servers
 
-### Running Commands
+Search for available MCP packages in the registry:
 
-- In development mode, use `pnpm start [command name]` to run any command. This utilizes `ts-node` for a seamless
-  development experience.
-- In production, execute the CLI application directly with `mcpbar [command name]` to run the desired
-  command from the built project (the name of command should be provided in `package.json` in `bin`).
+```bash
+mcpbar search                # Interactive search mode
+mcpbar search <query>        # Search with a specific query
+```
 
-All commands are located in the `src/commands/` folder. This organization makes it easy to find and modify commands or
-add new ones as needed.
+### Install a MCP Server
 
-### Script Commands
+Install a MCP package by its name:
 
-This package comes with several predefined scripts to help with development:
+```bash
+mcpbar install <name>   # Install a specific package
+mcpbar i <name>         # Short alias for install
+```
 
-- `pnpm build` - Build the project using `tsup`.
-- `pnpm build:watch` - Automatically rebuild the project on file changes.
-- `pnpm commit` - run `commitizen` tool for helping with commit messages.
-- `pnpm commitlint` - lint commit messages.
-- `pnpm compile` - Compile TypeScript files using `tsc`.
-- `pnpm clean` - Remove compiled code from the `dist/` directory.
-- `pnpm format` - Check files for code style issues using Prettier.
-- `pnpm format:fix` - Automatically fix code formatting issues with Prettier.
-- `pnpm lint` - Check code for style issues with ESLint.
-- `pnpm lint:fix` - Automatically fix code style issues with ESLint.
-- `pnpm start [command]` - Run the CLI application using `ts-node`.
-- `pnpm start:node [command]` - Run the CLI application from the `dist/` directory.
-- `pnpm test` - Run unit tests.
-- `pnpm test:watch` - Run tests and watch for file changes.
+### Remove a MCP Server
 
-## CI/CD and Automation
+Remove a MCP server:
 
-### Automated Version Management and NPM Publishing with Semantic-Release
+```bash
+mcpbar remove <name>         # Remove a specific server
+mcpbar rm <name>             # Short alias for remove
+```
 
-This project utilizes `semantic-release` to automate version management and the NPM publishing
-process. `Semantic-release` automates the workflow of releasing new versions, including the generation of detailed
-release notes based on commit messages that follow the conventional commit format.
+### List MCP Servers
 
-The publishing process is triggered automatically when changes are merged into the main branch. Here's how it works:
+View all your configured MCP servers:
 
-1. **Automated Versioning:** Based on the commit messages, `semantic-release` determines the type of version change (
-   major, minor, or patch) and updates the version accordingly.
-2. **Release Notes:** It then generates comprehensive release notes detailing new features, bug fixes, and any breaking
-   changes, enhancing clarity and communication with users.
-3. **NPM Publishing:** Finally, `semantic-release` publishes the new version to the NPM registry and creates a GitHub
-   release with the generated notes.
+```bash
+mcpbar list
+# Or use the short alias
+mcpbar ls
+```
 
-To ensure a smooth `semantic-release` process:
+### Start an MCP Server
 
-- Merge feature or fix branches into the main branch following thorough review and testing.
-- Use conventional commit messages to help `semantic-release` accurately determine version changes and generate
-  meaningful release notes.
-- Configure an NPM access token as a GitHub secret under the name `NPM_TOKEN` for authentication during the publication
-  process.
+Run a MCP server on standalone mode.
 
-By integrating `semantic-release`, this project streamlines its release process, ensuring that versions are managed
-efficiently and that users are well-informed of each update through automatically generated release notes.
+```bash
+mcpbar start <name>
+# Or use the alias
+mcpbar s <name>
+```
 
-## Development
+## 📋 Example Workflow
 
-To contribute to this project or customize it for your needs, consider the following guidelines:
+```bash
+# Search for available servers
+mcpbar search playwright
 
-1. **Code Styling:** Follow the predefined code style, using Prettier for formatting and ESLint for linting, to ensure
-   consistency.
-2. **Commit Messages:** We use `commitizen` and `commitlint` to ensure our commit messages are consistent and follow the
-   conventional commit format, recommended by `@commitlint/config-conventional`. To make a commit, you can
-   run `pnpm commit`, which will guide you through creating a conventional commit message.
-3. **Testing:** Write unit tests for new features or bug fixes using Jest. Make sure to run tests before pushing any
-   changes.
-4. **Environment Variables:** Use the `.env` file for local development. For production, ensure you configure the
-   environment variables in your deployment environment.
-5. **Husky Git Hooks:** This project utilizes Husky to automate linting, formatting, and commit message verification via
-   git hooks. This ensures that code commits meet our quality and style standards without manual checks. The hooks set
-   up include pre-commit hooks for running ESLint and Prettier, and commit-msg hooks for validating commit messages
-   with `commitlint`.
+# Install the server you want
+mcpbar install playwright
 
-## Contributing
-
-Contributions are welcome! If you'd like to improve this CLI app, please follow the standard
-fork-and-pull request workflow. Here are a few guidelines to keep in mind:
-
-- Make sure your code adheres to the project's coding standards, including using Prettier for code formatting and ESLint
-  for linting.
-- Follow the conventional commit format for your commit messages. This project uses `commitizen` and `commitlint` with
-  the `@commitlint/config-conventional` configuration, enforced by Husky git hooks.
-- Include tests for new features or bug fixes when applicable.
-- Ensure your changes are properly formatted and linted before submitting a pull request.
-
-By adhering to these guidelines, you help maintain the quality and consistency of the project, making it easier for
-others to contribute and for users to understand and utilize the project effectively.
+# Verify installation
+mcpbar list
+```
 
 ## License
 
