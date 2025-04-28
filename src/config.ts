@@ -3,26 +3,42 @@ import os from 'node:os'
 import fs from 'fs/promises'
 import { logger } from './logger'
 
-// Config file management
-export function getClaudeConfigDir(): string {
-  switch (os.platform()) {
-    case 'darwin':
-      return path.join(os.homedir(), 'Library', 'Application Support', 'Claude')
-    case 'win32':
-      if (!process.env.APPDATA) {
-        throw new Error('APPDATA environment variable is not set')
-      }
-      return path.join(process.env.APPDATA, 'Claude')
-    case 'linux':
-      return path.join(os.homedir(), '.config', 'claude')
-    default:
-      throw new Error(`Unsupported operating system for Claude configuration: ${os.platform()}`)
-  }
+// Configuration paths for different MCP clients
+const homeDir = os.homedir()
+const platformPaths = {
+  win32: {
+    baseDir: process.env.APPDATA || path.join(homeDir, 'AppData', 'Roaming'),
+    vscodePath: path.join('Code', 'User', 'globalStorage'),
+  },
+  darwin: {
+    baseDir: path.join(homeDir, 'Library', 'Application Support'),
+    vscodePath: path.join('Code', 'User', 'globalStorage'),
+  },
+  linux: {
+    baseDir: process.env.XDG_CONFIG_HOME || path.join(homeDir, '.config'),
+    vscodePath: path.join('Code/User/globalStorage'),
+  },
 }
 
-export async function readClaudeConfig() {
-  const configDir = getClaudeConfigDir()
-  const configFile = path.join(configDir, 'claude_desktop_config.json')
+const platform = process.platform as keyof typeof platformPaths
+const { baseDir, vscodePath } = platformPaths[platform]
+
+export const clientPaths: Record<string, string> = {
+  claude: path.join(baseDir, 'Claude', 'claude_desktop_config.json'),
+  cline: path.join(baseDir, vscodePath, 'saoudrizwan.claude-dev', 'settings', 'cline_mcp_settings.json'),
+  'roo-cline': path.join(baseDir, vscodePath, 'rooveterinaryinc.roo-cline', 'settings', 'cline_mcp_settings.json'),
+  windsurf: path.join(homeDir, '.codeium', 'windsurf', 'mcp_config.json'),
+  witsy: path.join(baseDir, 'Witsy', 'settings.json'),
+  enconvo: path.join(homeDir, '.config', 'enconvo', 'mcp_config.json'),
+  cursor: path.join(homeDir, '.cursor', 'mcp.json'),
+}
+
+export async function readClientConfig(client: string) {
+  const configFile = clientPaths[client]
+  if (!configFile) {
+    throw new Error(`Unknown client: ${client}`)
+  }
+
   try {
     const rawConfig = await fs.readFile(configFile, 'utf-8')
     return JSON.parse(rawConfig)
@@ -30,7 +46,7 @@ export async function readClaudeConfig() {
     if (err.code === 'ENOENT') {
       // File doesn't exist, create initial config
       const initialConfig = { mcpServers: {} }
-      await fs.mkdir(configDir, { recursive: true })
+      await fs.mkdir(path.dirname(configFile), { recursive: true })
       await fs.writeFile(configFile, JSON.stringify(initialConfig, null, 2))
       return initialConfig
     }
@@ -38,10 +54,17 @@ export async function readClaudeConfig() {
   }
 }
 
-export async function writeClaudeConfig(config: any) {
-  const configDir = getClaudeConfigDir()
-  const configFile = path.join(configDir, 'claude_desktop_config.json')
-  await fs.mkdir(configDir, { recursive: true })
+export async function writeClientConfig(client: string, config: any) {
+  const configFile = clientPaths[client]
+  if (!configFile) {
+    throw new Error(`Unknown client: ${client}`)
+  }
+
+  await fs.mkdir(path.dirname(configFile), { recursive: true })
   await fs.writeFile(configFile, JSON.stringify(config, null, 2))
-  logger.success(`Claude configuration updated at ${configFile}`)
+  logger.success(`${client} configuration updated at ${configFile}`)
+}
+
+export function getAvailableClients(): string[] {
+  return Object.keys(clientPaths)
 }

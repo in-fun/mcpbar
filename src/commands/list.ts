@@ -1,31 +1,49 @@
 import { ArgumentsCamelCase, Argv } from 'yargs'
 import { logger } from '../logger'
-import { readClaudeConfig } from '../config'
-import { bold, green, gray, yellow } from 'picocolors'
+import { readClientConfig, getAvailableClients, clientPaths } from '../config'
+import { bold, green, gray, yellow, red } from 'picocolors'
 
-// No arguments for this command
-interface ListArgv {}
+// Add client option
+interface ListArgv {
+  client?: string
+}
 
 export const command = 'list'
 export const describe = 'List all configured MCP servers'
 export const aliases = ['ls']
 
 export function builder(yargs: Argv): Argv<ListArgv> {
-  return yargs
+  return yargs.option('client', {
+    type: 'string',
+    description: 'MCP client to list servers from',
+    alias: 'c',
+    choices: getAvailableClients(),
+    default: 'claude',
+  })
 }
 
-export async function handler(_: ArgumentsCamelCase<ListArgv>) {
+export async function handler(argv: ArgumentsCamelCase<ListArgv>) {
   try {
-    const config = await readClaudeConfig()
+    const clientName = argv.client as string
 
-    if (!config.mcpServers || Object.keys(config.mcpServers).length === 0) {
-      logger.info(yellow('No MCP servers configured'))
-      logger.info('Use the install command to add a new MCP server:')
-      logger.info(gray('  mcps install <package-name>'))
+    // Verify client is supported
+    if (!clientPaths[clientName]) {
+      logger.error(red(`Client "${clientName}" is not supported.`))
+      logger.info(yellow(`Supported clients: ${getAvailableClients().join(', ')}`))
       return
     }
 
-    logger.info(bold(green('Configured MCP Servers:\n')))
+    // Read config
+    const config = await readClientConfig(clientName)
+
+    if (!config.mcpServers || Object.keys(config.mcpServers).length === 0) {
+      logger.info(yellow(`No MCP servers configured for ${clientName}`))
+      logger.info('Use the install command to add a new MCP server:')
+      logger.info(gray(`  mcps install <package-name> --client ${clientName}`))
+      return
+    }
+
+    logger.info(bold(green(`Configured MCP Servers for ${clientName}:\n`)))
 
     // prettier-multiline-arrays-next-threshold: 3
     Object.entries(config.mcpServers).forEach(([name, server]: [string, any]) => {

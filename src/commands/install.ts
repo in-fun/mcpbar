@@ -1,6 +1,6 @@
 import { ArgumentsCamelCase, Argv } from 'yargs'
 import { logger } from '../logger'
-import { readClaudeConfig, writeClaudeConfig } from '../config'
+import { readClientConfig, writeClientConfig, getAvailableClients, clientPaths } from '../config'
 import { green, red, yellow } from 'picocolors'
 import { loadManifests, packages, searchPackages } from '../packages'
 import { McpServerInput } from '../types'
@@ -8,6 +8,7 @@ import { McpServerInput } from '../types'
 interface InstallArgv {
   package: string
   name?: string
+  client?: string
 }
 
 export const command = 'install <package>'
@@ -26,11 +27,27 @@ export function builder(yargs: Argv): Argv<InstallArgv> {
       description: 'Custom name for the MCP server',
       alias: 'n',
     })
+    .option('client', {
+      type: 'string',
+      description: 'MCP client to install the server for',
+      alias: 'c',
+      choices: getAvailableClients(),
+      default: 'claude',
+    })
 }
 
 export async function handler(argv: ArgumentsCamelCase<InstallArgv>) {
   try {
     const packageName = argv.package as string
+    const clientName = argv.client as string
+
+    // Verify client is supported
+    if (!clientPaths[clientName]) {
+      logger.error(red(`Client "${clientName}" is not supported.`))
+      logger.info(yellow(`Supported clients: ${getAvailableClients().join(', ')}`))
+      return
+    }
+
     await loadManifests()
     // Find package
     const server = packages[packageName]
@@ -57,8 +74,8 @@ export async function handler(argv: ArgumentsCamelCase<InstallArgv>) {
     // Build config
     const mcpConfig = server.buildConfig(inputs)
 
-    // Update Claude config
-    const config = await readClaudeConfig()
+    // Update client config
+    const config = await readClientConfig(clientName)
 
     if (!config.mcpServers) {
       config.mcpServers = {}
@@ -66,12 +83,12 @@ export async function handler(argv: ArgumentsCamelCase<InstallArgv>) {
 
     if (config.mcpServers[serverName]) {
       const replace = await logger.prompt(
-        `An MCP server named "${serverName}" is already configured. Do you want to replace it?`,
+        `An MCP server named "${serverName}" is already configured in ${clientName}. Do you want to replace it?`,
         { type: 'confirm', default: false },
       )
 
       if (!replace) {
-        logger.info(yellow(`⚠️ Skipped replacing config for existing MCP server "${serverName}"`))
+        logger.info(yellow(`⚠️ Skipped replacing config for existing MCP server "${serverName}" in ${clientName}`))
         return
       }
     }
@@ -82,9 +99,10 @@ export async function handler(argv: ArgumentsCamelCase<InstallArgv>) {
       env: mcpConfig.env,
     }
 
-    await writeClaudeConfig(config)
+    // Write updated config
+    await writeClientConfig(clientName, config)
 
-    logger.success(green(`✅ Successfully installed ${server.name} as "${serverName}"`))
+    logger.success(green(`✅ Successfully installed ${server.name} as "${serverName}" for ${clientName}`))
   } catch (error: any) {
     logger.error(`Failed to install MCP server: ${error.message}`)
   }
