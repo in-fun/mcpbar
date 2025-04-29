@@ -68,3 +68,20 @@ export async function writeClientConfig(client: string, config: any) {
 export function getAvailableClients(): string[] {
   return Object.keys(clientPaths)
 }
+
+/**
+ * Create a platform-specific command for running an MCP server
+ */
+export const createPlatformCommand = (command: string, passedArgs: string[]) => {
+  if (process.platform === 'win32') {
+    return {
+      command: 'cmd',
+      args: ['/c', command, ...passedArgs],
+    }
+  }
+
+  return {
+    command: command,
+    args: passedArgs,
+  }
+}

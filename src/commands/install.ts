@@ -1,6 +1,6 @@
 import { ArgumentsCamelCase, Argv } from 'yargs'
 import { logger } from '../logger'
-import { readClientConfig, writeClientConfig, getAvailableClients, clientPaths } from '../config'
+import { readClientConfig, writeClientConfig, getAvailableClients, clientPaths, createPlatformCommand } from '../config'
 import { green, red, yellow } from 'picocolors'
 import { loadManifests, packages, searchPackages } from '../packages'
 import { McpServerInput } from '../types'
@@ -72,7 +72,13 @@ export async function handler(argv: ArgumentsCamelCase<InstallArgv>) {
     }
 
     // Build config
-    const mcpConfig = server.buildConfig(inputs)
+    const rawConfig = server.buildConfig(inputs)
+
+    // Apply platform-specific command adjustments
+    const mcpConfig = {
+      ...rawConfig,
+      ...createPlatformCommand(rawConfig.command, rawConfig.args),
+    }
 
     // Update client config
     const config = await readClientConfig(clientName)
