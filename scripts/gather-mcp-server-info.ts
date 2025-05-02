@@ -130,50 +130,97 @@ function extractJsonCodeBlocks(readmeContent: string): string[] {
  * Extract MCP server configuration from JSON code blocks
  */
 function extractMCPConfigFromJsonBlocks(jsonBlocks: string[]): MCPServerConfig | null {
+  // Track candidates by priority
+  let mcpServerCandidate: MCPServerConfig | null = null
+  let serverCandidate: MCPServerConfig | null = null
+  let mcpServersCandidate: MCPServerConfig | null = null
+  let directServerCandidate: MCPServerConfig | null = null
+  let manifestServerCandidate: MCPServerConfig | null = null
+
   for (const jsonBlock of jsonBlocks) {
     try {
       const parsed = JSON.parse(jsonBlock)
 
-      // Check for mcpServers pattern
-      if (parsed.mcpServers && typeof parsed.mcpServers === 'object') {
-        // Get the first mcpServer entry
-        const serverName = Object.keys(parsed.mcpServers)[0]
-        if (serverName && parsed.mcpServers[serverName]) {
-          const serverConfig = parsed.mcpServers[serverName]
-          if (serverConfig.command && serverConfig.args && serverConfig.env) {
-            return serverConfig as MCPServerConfig
+      // Check for mcp object pattern (highest priority)
+      if (!mcpServerCandidate && parsed.mcp && typeof parsed.mcp === 'object') {
+        if (parsed.mcp.servers && typeof parsed.mcp.servers === 'object') {
+          // Get the first server entry
+          const serverName = Object.keys(parsed.mcp.servers)[0]
+          if (serverName && parsed.mcp.servers[serverName]) {
+            const serverConfig = parsed.mcp.servers[serverName]
+            if (serverConfig.command && serverConfig.args && serverConfig.env) {
+              mcpServerCandidate = serverConfig as MCPServerConfig
+            }
           }
         }
       }
 
-      // Check for servers pattern
-      if (parsed.servers && typeof parsed.servers === 'object') {
+      // Check for servers pattern (second priority)
+      if (!serverCandidate && parsed.servers && typeof parsed.servers === 'object') {
         // Get the first server entry
         const serverName = Object.keys(parsed.servers)[0]
         if (serverName && parsed.servers[serverName]) {
           const serverConfig = parsed.servers[serverName]
           if (serverConfig.command && serverConfig.args && serverConfig.env) {
-            return serverConfig as MCPServerConfig
+            serverCandidate = serverConfig as MCPServerConfig
           }
         }
       }
 
-      // Check for server direct object pattern
-      if (parsed.command && parsed.args && parsed.env) {
-        return parsed as MCPServerConfig
+      // Check for mcpServers pattern (third priority)
+      if (!mcpServersCandidate && parsed.mcpServers && typeof parsed.mcpServers === 'object') {
+        // Get the first mcpServer entry
+        const serverName = Object.keys(parsed.mcpServers)[0]
+        if (serverName && parsed.mcpServers[serverName]) {
+          const serverConfig = parsed.mcpServers[serverName]
+          if (serverConfig.command && serverConfig.args && serverConfig.env) {
+            mcpServersCandidate = serverConfig as MCPServerConfig
+          }
+        }
       }
 
-      // Check for MCP manifest pattern with server property
-      if (parsed.server && typeof parsed.server === 'object') {
+      // Check for server direct object pattern (fourth priority)
+      if (!directServerCandidate && parsed.command && parsed.args && parsed.env) {
+        directServerCandidate = parsed as MCPServerConfig
+      }
+
+      // Check for MCP manifest pattern with server property (lowest priority)
+      if (!manifestServerCandidate && parsed.server && typeof parsed.server === 'object') {
         const serverConfig = parsed.server
         if (serverConfig.command && serverConfig.args && serverConfig.env) {
-          return serverConfig as MCPServerConfig
+          manifestServerCandidate = serverConfig as MCPServerConfig
         }
       }
     } catch (e) {
       // Skip invalid JSON
       console.debug('Error parsing JSON block:', e)
     }
+  }
+
+  // Return the highest priority candidate that exists
+  if (mcpServerCandidate) {
+    console.debug('Using server config from mcp.servers')
+    return mcpServerCandidate
+  }
+
+  if (serverCandidate) {
+    console.debug('Using server config from servers')
+    return serverCandidate
+  }
+
+  if (mcpServersCandidate) {
+    console.debug('Using server config from mcpServers')
+    return mcpServersCandidate
+  }
+
+  if (directServerCandidate) {
+    console.debug('Using direct server config')
+    return directServerCandidate
+  }
+
+  if (manifestServerCandidate) {
+    console.debug('Using server config from manifest')
+    return manifestServerCandidate
   }
 
   return null
@@ -183,28 +230,65 @@ function extractMCPConfigFromJsonBlocks(jsonBlocks: string[]): MCPServerConfig |
  * Extract MCP inputs from JSON code blocks
  */
 function extractMCPInputsFromJsonBlocks(jsonBlocks: string[]): MCPInput[] {
+  // Track candidates by priority
+  let mcpInputsCandidate: MCPInput[] | null = null
+  let directInputsCandidate: MCPInput[] | null = null
+  let manifestInputsCandidate: MCPInput[] | null = null
+
   for (const jsonBlock of jsonBlocks) {
     try {
       const parsed = JSON.parse(jsonBlock)
 
-      // Check for direct inputs array
-      if (Array.isArray(parsed.inputs) && parsed.inputs.length > 0) {
-        // Validate that it has the expected properties
-        if (parsed.inputs[0].id && parsed.inputs[0].type && parsed.inputs[0].description) {
-          return parsed.inputs as MCPInput[]
+      // Check for mcp object pattern (highest priority)
+      if (!mcpInputsCandidate && parsed.mcp && typeof parsed.mcp === 'object') {
+        if (Array.isArray(parsed.mcp.inputs) && parsed.mcp.inputs.length > 0) {
+          // Validate that it has the expected properties
+          if (parsed.mcp.inputs[0].id && parsed.mcp.inputs[0].type && parsed.mcp.inputs[0].description) {
+            mcpInputsCandidate = parsed.mcp.inputs as MCPInput[]
+          }
         }
       }
 
-      // Check for inputs within an MCP manifest
-      if (parsed.name && parsed.version && Array.isArray(parsed.inputs) && parsed.inputs.length > 0) {
+      // Check for direct inputs array (second priority)
+      if (!directInputsCandidate && Array.isArray(parsed.inputs) && parsed.inputs.length > 0) {
+        // Validate that it has the expected properties
         if (parsed.inputs[0].id && parsed.inputs[0].type && parsed.inputs[0].description) {
-          return parsed.inputs as MCPInput[]
+          directInputsCandidate = parsed.inputs as MCPInput[]
+        }
+      }
+
+      // Check for inputs within an MCP manifest (lowest priority)
+      if (
+        !manifestInputsCandidate &&
+        parsed.name &&
+        parsed.version &&
+        Array.isArray(parsed.inputs) &&
+        parsed.inputs.length > 0
+      ) {
+        if (parsed.inputs[0].id && parsed.inputs[0].type && parsed.inputs[0].description) {
+          manifestInputsCandidate = parsed.inputs as MCPInput[]
         }
       }
     } catch (e) {
       // Skip invalid JSON
       console.debug('Error parsing JSON block for inputs:', e)
     }
+  }
+
+  // Return the highest priority candidate that exists
+  if (mcpInputsCandidate) {
+    console.debug('Using inputs from mcp.inputs')
+    return mcpInputsCandidate
+  }
+
+  if (directInputsCandidate) {
+    console.debug('Using direct inputs array')
+    return directInputsCandidate
+  }
+
+  if (manifestInputsCandidate) {
+    console.debug('Using inputs from manifest')
+    return manifestInputsCandidate
   }
 
   return []
