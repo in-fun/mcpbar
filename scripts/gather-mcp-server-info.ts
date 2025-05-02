@@ -16,6 +16,13 @@ interface RepoInfo {
   licenseInfo?: {
     spdxId: string
   }
+  repositoryTopics?: {
+    nodes: {
+      topic: {
+        name: string
+      }
+    }[]
+  }
 }
 
 interface PackageInfo {
@@ -48,7 +55,6 @@ interface MCPManifest {
   name: string
   version: string
   description: string
-  vendor: string
   homepage: string
   repository?: {
     type: string
@@ -56,8 +62,6 @@ interface MCPManifest {
   }
   license: string
   keywords?: string[]
-  platforms?: string[]
-  protocol?: string
   inputs?: MCPInput[]
   server: MCPServerConfig
 }
@@ -404,6 +408,13 @@ async function getRepoInfo(owner: string, repo: string, token: string | undefine
         licenseInfo {
           spdxId
         }
+        repositoryTopics(first: 10) {
+          nodes {
+            topic {
+              name
+            }
+          }
+        }
       }
     }
   `
@@ -566,6 +577,26 @@ export async function extractGitHubInfo(repoUrl: string, githubToken?: string): 
     // Get license information
     const license = repoInfo.licenseInfo?.spdxId || 'Unknown'
 
+    // Extract keywords from repository topics
+    const topics: string[] = []
+    if (repoInfo.repositoryTopics?.nodes) {
+      topics.push(...repoInfo.repositoryTopics.nodes.map((node) => node.topic.name))
+    }
+
+    // Add default keywords if no topics found
+    if (topics.length === 0) {
+      topics.push('mcp', 'model-context-protocol')
+      topics.push(repo.toLowerCase(), owner.toLowerCase())
+    } else {
+      // Add mcp and model-context-protocol if not already in topics
+      if (!topics.includes('mcp')) {
+        topics.push('mcp')
+      }
+      if (!topics.includes('model-context-protocol')) {
+        topics.push('model-context-protocol')
+      }
+    }
+
     // Check package publish status
     let publishStatus = { published: false }
     if (packageName) {
@@ -641,16 +672,13 @@ export async function extractGitHubInfo(repoUrl: string, githubToken?: string): 
       name: packageName || repo,
       version: packageInfo.version || '1.0.0',
       description: packageInfo.description || repoInfo.description || `MCP server for ${repo}`,
-      vendor: repoInfo.owner.login,
       homepage: repoInfo.homepage || repoUrl,
       repository: {
         type: 'git',
         url: repoUrl,
       },
       license,
-      keywords: ['mcp', 'model-context-protocol', repo.toLowerCase(), owner.toLowerCase()],
-      platforms: ['vscode', 'claude', 'cursor'],
-      protocol: 'mcp',
+      keywords: topics,
       inputs: mcpInputs,
       server: serverConfig,
     }

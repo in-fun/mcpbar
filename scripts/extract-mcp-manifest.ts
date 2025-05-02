@@ -39,9 +39,30 @@ async function main() {
       process.exit(1)
     }
 
-    // Output the manifest
-    console.log('\n=== MCP Manifest ===')
-    console.log(JSON.stringify(manifest, null, 2))
+    // Output the manifest info
+    console.log('\n=== MCP Server Information ===')
+    console.log(`Name: ${manifest.name}`)
+    console.log(`Description: ${manifest.description}`)
+    console.log(`Version: ${manifest.version}`)
+    console.log(`License: ${manifest.license}`)
+    console.log(`Homepage: ${manifest.homepage}`)
+    console.log(`Repository: ${manifest.repository?.url || repoUrl}`)
+
+    if (manifest.keywords && manifest.keywords.length > 0) {
+      console.log(`Keywords: ${manifest.keywords.join(', ')}`)
+    }
+
+    if (manifest.inputs && manifest.inputs.length > 0) {
+      console.log(`\nInputs:`)
+      manifest.inputs.forEach((input) => {
+        console.log(`  - ${input.id}: ${input.description} (${input.password ? 'password' : 'text'})`)
+      })
+    }
+
+    console.log(`\nServer configuration:`)
+    console.log(`  Command: ${manifest.server.command}`)
+    console.log(`  Args: ${manifest.server.args.join(' ')}`)
+    console.log(`  Environment variables: ${Object.keys(manifest.server.env).join(', ')}`)
 
     // Save to file
     const repoName = repoUrl.split('/').pop() || 'unknown-repo'
