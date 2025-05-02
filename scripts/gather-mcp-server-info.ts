@@ -468,6 +468,52 @@ async function getFileContent(
 }
 
 /**
+ * Get README content from GitHub's REST API without requiring specific filename
+ */
+async function getReadmeContent(owner: string, repo: string, token: string | undefined): Promise<string | null> {
+  const url = `https://api.github.com/repos/${owner}/${repo}/readme`
+
+  const headers: HeadersInit = {
+    Accept: 'application/vnd.github.v3.raw',
+  }
+
+  if (token) {
+    headers['Authorization'] = `Bearer ${token}`
+  }
+
+  try {
+    const response = await fetch(url, { headers })
+
+    if (response.status === 404) {
+      console.log('No README found in the repository')
+      return null
+    }
+
+    if (!response.ok) {
+      throw new Error(`GitHub API error: ${response.status} ${response.statusText}`)
+    }
+
+    return await response.text()
+  } catch (error) {
+    console.error('Error fetching README:', error)
+
+    // Fallback to common README filenames if the API call fails
+    const commonReadmeFiles = ['README.md', 'Readme.md', 'readme.md', 'README.markdown', 'README.txt', 'README']
+
+    for (const filename of commonReadmeFiles) {
+      console.log(`Trying to fetch ${filename}...`)
+      const content = await getFileContent(owner, repo, filename, token)
+      if (content) {
+        console.log(`Found README at ${filename}`)
+        return content
+      }
+    }
+
+    return null
+  }
+}
+
+/**
  * Extract GitHub information and create an MCP manifest
  */
 export async function extractGitHubInfo(repoUrl: string, githubToken?: string): Promise<MCPManifest | null> {
@@ -510,10 +556,10 @@ export async function extractGitHubInfo(repoUrl: string, githubToken?: string): 
       }
     }
 
-    // Get README.md content
-    const readmeContent = await getFileContent(owner, repo, 'README.md', githubToken)
+    // Get README content using the dedicated method
+    const readmeContent = await getReadmeContent(owner, repo, githubToken)
     if (!readmeContent) {
-      console.error('README.md not found')
+      console.error('No README found in the repository')
       return null
     }
 
