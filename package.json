@@ -34,7 +34,8 @@
     "test": "jest",
     "test:watch": "jest --watchAll",
     "prepare": "husky",
-    "release": "semantic-release"
+    "release": "semantic-release",
+    "extract-mcp": "ts-node ./scripts/extract-mcp-manifest.ts"
   },
   "keywords": [
     "typescript",
