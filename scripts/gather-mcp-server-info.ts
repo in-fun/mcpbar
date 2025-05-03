@@ -152,7 +152,7 @@ function extractMCPConfigFromJsonBlocks(jsonBlocks: string[]): MCPServerConfig |
           const serverName = Object.keys(parsed.mcp.servers)[0]
           if (serverName && parsed.mcp.servers[serverName]) {
             const serverConfig = parsed.mcp.servers[serverName]
-            if (serverConfig.command && serverConfig.args && serverConfig.env) {
+            if (serverConfig.command) {
               mcpServerCandidate = serverConfig as MCPServerConfig
             }
           }
@@ -165,7 +165,7 @@ function extractMCPConfigFromJsonBlocks(jsonBlocks: string[]): MCPServerConfig |
         const serverName = Object.keys(parsed.servers)[0]
         if (serverName && parsed.servers[serverName]) {
           const serverConfig = parsed.servers[serverName]
-          if (serverConfig.command && serverConfig.args && serverConfig.env) {
+          if (serverConfig.command) {
             serverCandidate = serverConfig as MCPServerConfig
           }
         }
@@ -177,21 +177,21 @@ function extractMCPConfigFromJsonBlocks(jsonBlocks: string[]): MCPServerConfig |
         const serverName = Object.keys(parsed.mcpServers)[0]
         if (serverName && parsed.mcpServers[serverName]) {
           const serverConfig = parsed.mcpServers[serverName]
-          if (serverConfig.command && serverConfig.args && serverConfig.env) {
+          if (serverConfig.command) {
             mcpServersCandidate = serverConfig as MCPServerConfig
           }
         }
       }
 
       // Check for server direct object pattern (fourth priority)
-      if (!directServerCandidate && parsed.command && parsed.args && parsed.env) {
+      if (!directServerCandidate && parsed.command) {
         directServerCandidate = parsed as MCPServerConfig
       }
 
       // Check for MCP manifest pattern with server property (lowest priority)
       if (!manifestServerCandidate && parsed.server && typeof parsed.server === 'object') {
         const serverConfig = parsed.server
-        if (serverConfig.command && serverConfig.args && serverConfig.env) {
+        if (serverConfig.command) {
           manifestServerCandidate = serverConfig as MCPServerConfig
         }
       }
