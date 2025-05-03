@@ -120,12 +120,21 @@ To add new features or fix issues:
 
 Both scripts support the following environment variables:
 
-| Variable                    | Description                                        | Default     |
-| --------------------------- | -------------------------------------------------- | ----------- |
-| `GITHUB_TOKEN`              | GitHub personal access token for API access        | none        |
-| `RATE_LIMIT_PER_MINUTE`     | Number of requests per minute for batch extraction | 30          |
-| `DELAY_BETWEEN_REQUESTS_MS` | Milliseconds between requests for batch extraction | 2000        |
-| `REGISTRY_PATH`             | Custom path for saving batch manifests             | ./registry  |
-| `MANIFESTS_PATH`            | Custom path for saving single manifests            | ./manifests |
+| Variable                    | Description                                        | Default                         |
+| --------------------------- | -------------------------------------------------- | ------------------------------- |
+| `GITHUB_TOKEN`              | GitHub personal access token for API access        | none                            |
+| `RATE_LIMIT_PER_HOUR`       | Number of requests per hour for batch extraction   | 5000 with token, 60 without     |
+| `DELAY_BETWEEN_REQUESTS_MS` | Milliseconds between requests for batch extraction | Calculated based on rate limits |
+| `REGISTRY_PATH`             | Custom path for saving batch manifests             | ./registry                      |
+| `MANIFESTS_PATH`            | Custom path for saving single manifests            | ./manifests                     |
 
 You can set these in your environment or in a `.env` file at the project root.
+
+## Rate Limiting
+
+The batch script uses GitHub's official API [rate limits](https://docs.github.com/en/enterprise-cloud@latest/rest/using-the-rest-api/rate-limits-for-the-rest-api?apiVersion=2022-11-28#primary-rate-limit-for-authenticated-users):
+
+- **With authentication**: 5000 requests per hour
+- **Without authentication**: 60 requests per hour
+
+The script automatically calculates appropriate delays between requests based on these limits. If you provide a GitHub token, the script will use the higher rate limit. You can override these defaults by setting the `RATE_LIMIT_PER_HOUR` environment variable.
