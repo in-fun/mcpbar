@@ -2,24 +2,24 @@ import { ArgumentsCamelCase, Argv } from 'yargs'
 import { logger } from '../logger'
 import { readClientConfig, writeClientConfig, getAvailableClients, clientPaths, createPlatformCommand } from '../config'
 import { green, red, yellow } from 'picocolors'
-import { loadManifests, packages, searchPackages } from '../packages'
+import { downloadManifest } from '../packages'
 import { McpServerInput } from '../types'
 
 interface InstallArgv {
-  package: string
+  source: string
   name?: string
   client?: string
 }
 
-export const command = 'install <package>'
-export const describe = 'Install and configure an MCP server'
+export const command = 'install <source>'
+export const describe = 'Install and configure an MCP server from a URL or file path'
 export const aliases = ['i']
 
 export function builder(yargs: Argv): Argv<InstallArgv> {
   return yargs
-    .positional('package', {
+    .positional('source', {
       type: 'string',
-      description: 'Package to install',
+      description: 'URL or file path to the MCP server manifest',
       demandOption: true,
     })
     .option('name', {
@@ -38,7 +38,7 @@ export function builder(yargs: Argv): Argv<InstallArgv> {
 
 export async function handler(argv: ArgumentsCamelCase<InstallArgv>) {
   try {
-    const packageName = argv.package as string
+    const manifestSource = argv.source as string
     const clientName = argv.client as string
 
     // Verify client is supported
@@ -48,22 +48,14 @@ export async function handler(argv: ArgumentsCamelCase<InstallArgv>) {
       return
     }
 
-    await loadManifests()
-    // Find package
-    const server = packages[packageName]
+    // Download/load manifest from URL or file path
+    const server = await downloadManifest(manifestSource)
     if (!server) {
-      const suggestions = await searchPackages(packageName)
-      if (suggestions.length > 0) {
-        logger.error(red(`Package "${packageName}" not found.`))
-        logger.info(yellow(`Did you mean: ${suggestions.join(', ')}?`))
-      } else {
-        logger.error(red(`Package "${packageName}" not found.`))
-      }
-      return
+      return // Error already logged in downloadManifest
     }
 
-    // Use provided server name or use package name
-    const serverName = argv.name || packageName
+    // Use provided server name or use manifest name
+    const serverName = argv.name || server.manifest.name
 
     // Collect inputs
     const inputs: Record<string, any> = {}

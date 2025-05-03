@@ -21,7 +21,7 @@ npm install -g mcpbar
 
 ```sh
 # 🔍 Install a server
-mcpbar install playwright # install playwright server
+mcpbar install ./manifests/github.json
 
 # 🗑️ Remove a server
 mcpbar remove playwright # remove playwright server
@@ -41,11 +41,22 @@ mcpbar s <query>             # Short alias for search
 
 ### Install a MCP Server
 
-Install a MCP package by its name:
+Install a MCP server from a URL or file path:
 
 ```bash
-mcpbar install <name>   # Install a specific package
-mcpbar i <name>         # Short alias for install
+mcpbar install <path-to-manifest.json>  # Install from local manifest file
+mcpbar i <path-to-manifest.json>        # Short alias for install
+mcpbar install https://example.com/manifest.json  # Install from URL
+```
+
+Example:
+
+```bash
+# Install from a local manifest file
+mcpbar install ./manifests/github.json
+
+# Install from a URL
+mcpbar install https://raw.githubusercontent.com/example/repo/main/mcp.json
 ```
 
 ### Remove a MCP Server

@@ -49,6 +49,51 @@ export async function loadManifests(manifestsDir = 'manifests'): Promise<void> {
 }
 
 /**
+ * Load a manifest from a URL or file path
+ */
+export async function downloadManifest(source: string): Promise<McpServer | null> {
+  try {
+    logger.info(`Loading MCP server manifest from ${source}...`)
+
+    let content: string
+
+    if (source.startsWith('http://') || source.startsWith('https://')) {
+      // It's a URL, fetch it
+      const response = await fetch(source)
+
+      if (!response.ok) {
+        throw new Error(`Failed to download manifest: ${response.statusText}`)
+      }
+
+      content = await response.text()
+    } else {
+      // Treat as a file path
+      try {
+        content = await fs.readFile(source, 'utf-8')
+      } catch (error: any) {
+        if (error.code === 'ENOENT') {
+          throw new Error(`Manifest file not found: ${source}`)
+        }
+        throw error
+      }
+    }
+
+    const manifest = JSON.parse(content) as McpServerManifest
+
+    // Convert manifest to McpServer
+    const server = manifestToServer(manifest)
+
+    // Add to servers map
+    servers[manifest.name] = server
+
+    return server
+  } catch (error: any) {
+    logger.error(`Error loading manifest from ${source}: ${error.message}`)
+    return null
+  }
+}
+
+/**
  * Convert a manifest to an McpServer object
  */
 function manifestToServer(manifest: McpServerManifest): McpServer {
