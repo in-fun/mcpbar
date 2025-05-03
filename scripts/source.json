@@ -22274,13 +22274,6 @@
     "overview": "Build and deploy AI agents with blockchain capabilities. Interact seamlessly with multiple blockchain networks to manage assets, execute transactions, and deploy smart contracts. Enhance your AI applications with robust blockchain integration tools and development kits."
   },
   {
-    "name": "Oraichain Multichain Server",
-    "repository": "https://github.com/oraichain/orai-mcp/tree/main/packages/mcp-server",
-    "slug": "oraichain/orai-mcp",
-    "homepage": "https://rpc.orai.io",
-    "overview": "Connect and interact with multichain data seamlessly. Leverage the power of Oraichain to query blockchain information and integrate with AI agents effortlessly."
-  },
-  {
     "name": "RAGFlow",
     "repository": "https://github.com/oraichain/ragflow-mcp",
     "slug": "oraichain/ragflow-mcp",
@@ -23721,13 +23714,6 @@
     "slug": "puneet253/testing",
     "homepage": null,
     "overview": "Enhance your applications with dynamic data integration and real-time processing capabilities. Utilize a standardized protocol to access tools, resources, and prompts seamlessly. Empower your agents to interact with real-world data and perform actions efficiently."
-  },
-  {
-    "name": "Dmitry's DevOps Hub",
-    "repository": "https://github.com/punprapor/punprapor",
-    "slug": "punprapor/punprapor",
-    "homepage": null,
-    "overview": "Learn and enhance your DevOps skills with practical insights and collaborative opportunities. Join a community focused on making impactful changes in the tech world. Connect with like-minded individuals and grow together in your DevOps journey."
   },
   {
     "name": "ArcGIS Location Services",
