@@ -1,0 +1,48 @@
+{
+  "name": "python-local",
+  "version": "1.0.0",
+  "description": "MCP Server to run python code locally",
+  "homepage": "https://github.com/Alec2435/python_mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Alec2435/python_mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "python_mcp",
+    "alec2435"
+  ],
+  "inputs": [
+    {
+      "id": "uv_publish_token",
+      "type": "promptString",
+      "description": "Environment variable for uv publish token",
+      "password": true
+    },
+    {
+      "id": "uv_publish_user",
+      "type": "promptString",
+      "description": "Environment variable for uv publish user",
+      "password": false
+    },
+    {
+      "id": "uv_publish_pass",
+      "type": "promptString",
+      "description": "Environment variable for uv publish pass",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "python-local"
+    ],
+    "env": {
+      "UV_PUBLISH_TOKEN": "${input:uv_publish_token}",
+      "UV_PUBLISH_USER": "${input:uv_publish_user}",
+      "UV_PUBLISH_PASS": "${input:uv_publish_pass}"
+    }
+  }
+}

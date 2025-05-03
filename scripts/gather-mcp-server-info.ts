@@ -636,13 +636,12 @@ export async function extractGitHubInfo(repoUrl: string, githubToken?: string): 
         if (packageName) defaultArgs.push(packageName)
         else defaultArgs.push(repo)
       } else {
-        defaultArgs.push('-m')
         if (packageName) defaultArgs.push(packageName)
         else defaultArgs.push(repo)
       }
 
       serverConfig = {
-        command: runtime === 'node' ? 'npx' : 'python',
+        command: runtime === 'node' ? 'npx' : 'uvx',
         args: defaultArgs,
         env: envVars.reduce(
           (acc, envVar) => {

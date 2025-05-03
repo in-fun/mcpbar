@@ -36,7 +36,8 @@
     "prepare": "husky",
     "release": "semantic-release",
     "extract-mcp": "ts-node scripts/batch-extract-mcp-manifests.ts",
-    "extract-mcp:test": "ts-node scripts/extract-mcp-manifest.ts https://github.com/eyaltoledano/claude-task-master"
+    "extract-mcp:test": "ts-node scripts/extract-mcp-manifest.ts https://github.com/eyaltoledano/claude-task-master",
+    "extract-mcp:test:uv": "ts-node scripts/extract-mcp-manifest.ts https://github.com/Alec2435/python_mcp"
   },
   "keywords": [
     "typescript",
