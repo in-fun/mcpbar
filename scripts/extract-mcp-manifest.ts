@@ -5,20 +5,40 @@
  *
  * Usage: node extract-mcp-manifest.ts <github-repo-url> [github-token]
  * Example: node extract-mcp-manifest.ts https://github.com/mendableai/firecrawl-mcp-server
+ *
+ * Environment variables:
+ * - GITHUB_TOKEN: GitHub personal access token (can also be set in .env file)
+ * - MANIFESTS_PATH: Custom path for saving manifests (default: ./manifests)
  */
 
 import { extractGitHubInfo } from './gather-mcp-server-info'
 import fs from 'fs'
 import path from 'path'
+import dotenv from 'dotenv'
+
+// Load environment variables from .env file
+dotenv.config({ debug: true })
+
+// Get GitHub token from environment variables or CLI args
+const getGitHubToken = (): string | undefined => {
+  // Priority:
+  // 1. Command line argument
+  // 2. Environment variable
+  const cliToken = process.argv[3]
+  const envToken = process.env.GITHUB_TOKEN
+
+  return cliToken || envToken
+}
 
 async function main() {
   const repoUrl = process.argv[2]
-  const githubToken = process.argv[3]
+  const githubToken = getGitHubToken()
 
   if (!repoUrl) {
     console.error('Error: GitHub repository URL is required')
     console.log('Usage: node extract-mcp-manifest.ts <github-repo-url> [github-token]')
     console.log('Example: node extract-mcp-manifest.ts https://github.com/mendableai/firecrawl-mcp-server')
+    console.log('\nYou can also set the GITHUB_TOKEN environment variable or add it to .env file')
     process.exit(1)
   }
 
@@ -27,6 +47,12 @@ async function main() {
     console.error('Error: Invalid GitHub repository URL format')
     console.log('URL must be in format: https://github.com/{owner}/{repo}')
     process.exit(1)
+  }
+
+  if (githubToken) {
+    console.log(`Using GitHub token for authentication`)
+  } else {
+    console.log('No GitHub token provided. API rate limits will be lower.')
   }
 
   console.log(`Extracting MCP manifest from ${repoUrl}...`)
@@ -66,10 +92,13 @@ async function main() {
 
     // Save to file
     const repoName = repoUrl.split('/').pop() || 'unknown-repo'
-    const outputDir = path.join(process.cwd(), 'manifests')
+    const manifestsPathFromEnv = process.env.MANIFESTS_PATH
+    const outputDir = manifestsPathFromEnv ? path.resolve(manifestsPathFromEnv) : path.join(process.cwd(), 'manifests')
 
+    // Create output directory only after successfully extracting the manifest
     if (!fs.existsSync(outputDir)) {
       fs.mkdirSync(outputDir, { recursive: true })
+      console.log(`Created output directory at ${outputDir}`)
     }
 
     const outputFile = path.join(outputDir, `${repoName}.json`)
