@@ -2,7 +2,6 @@
   "name": "github",
   "version": "1.0.0",
   "description": "GitHub MCP Server for AI tools using Model Context Protocol (MCP).",
-  "vendor": "GitHub",
   "homepage": "https://github.com/github/github-mcp-server",
   "repository": {
     "type": "git",
@@ -18,11 +17,6 @@
     "agent",
     "integration"
   ],
-  "platforms": [
-    "vscode",
-    "claude"
-  ],
-  "protocol": "mcp",
   "inputs": [
     {
       "id": "github_token",
