@@ -35,8 +35,8 @@ mcpbar list # show existing mcp servers installed on the device
 Search for available MCP packages in the registry:
 
 ```bash
-mcpbar search                # Interactive search mode
-mcpbar search <query>        # Search with a specific query
+mcpbar search <query>        # Search for MCP servers and opens in your browser
+mcpbar s <query>             # Short alias for search
 ```
 
 ### Install a MCP Server

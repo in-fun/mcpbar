@@ -11,7 +11,7 @@ interface StartArgv {
 
 export const command = 'start <server>'
 export const describe = 'Start an MCP server'
-export const aliases = ['s']
+export const aliases = ['st', 'run', 'r']
 
 export function builder(yargs: Argv): Argv<StartArgv> {
   return yargs
