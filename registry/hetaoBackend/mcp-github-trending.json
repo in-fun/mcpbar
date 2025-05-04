@@ -1,0 +1,27 @@
+{
+  "name": "mcp-github-trending",
+  "version": "1.0.0",
+  "description": "MCP server for getting github trending repos & developers",
+  "homepage": "https://github.com/hetaoBackend/mcp-github-trending",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hetaoBackend/mcp-github-trending"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-github-trending",
+    "hetaobackend"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "/path/to/mcp-github-trending",
+      "run",
+      "mcp-github-trending"
+    ]
+  }
+}

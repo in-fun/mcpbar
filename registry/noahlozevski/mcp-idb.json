@@ -1,0 +1,25 @@
+{
+  "name": "@noahlozevski/mcp-idb",
+  "version": "1.0.3",
+  "description": "MCP server for exposing idb (Facebook iOS Development Bridge)",
+  "homepage": "https://github.com/noahlozevski/mcp-idb",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/noahlozevski/mcp-idb"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-idb",
+    "noahlozevski"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@noahlozevski/idb"
+    ]
+  }
+}

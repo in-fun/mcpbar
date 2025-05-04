@@ -1,0 +1,35 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Secure middleware server implementing Model Context Protocol (MCP) over SSE with JWT authentication. Enables standardized communication between AI tools and clients with dynamic tool registration, request logging, and session management. Perfect for building production-ready AI systems requiring secure access patterns.",
+  "homepage": "https://github.com/anisirji/mcp-server-remote-setup-with-jwt-auth",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anisirji/mcp-server-remote-setup-with-jwt-auth"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-remote-setup-with-jwt-auth",
+    "anisirji"
+  ],
+  "inputs": [
+    {
+      "id": "jwt_secret",
+      "type": "promptString",
+      "description": "Environment variable for jwt secret",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "server"
+    ],
+    "env": {
+      "JWT_SECRET": "${input:jwt_secret}"
+    }
+  }
+}

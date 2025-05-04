@@ -1,0 +1,34 @@
+{
+  "name": "server-wp-mcp",
+  "version": "1.0.0",
+  "description": "The WordPress MCP server enables AI assistants to interact with WordPress sites through a standardized interface. It handles authentication and provides a secure way to discover and interact with WordPress REST API endpoints.",
+  "homepage": "https://github.com/emzimmer/server-wp-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emzimmer/server-wp-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "server-wp-mcp",
+    "emzimmer"
+  ],
+  "inputs": [
+    {
+      "id": "wp_sites_path",
+      "type": "promptString",
+      "description": "Environment variable for wp sites path configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "path/to/server/dist/index.js"
+    ],
+    "env": {
+      "WP_SITES_PATH": "/absolute/path/to/wp-sites.json"
+    }
+  }
+}

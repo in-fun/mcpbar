@@ -1,0 +1,38 @@
+{
+  "name": "@glifxyz/glif-mcp-server",
+  "version": "0.9.9",
+  "description": "Run AI magic workflows from glif.app",
+  "homepage": "https://glif.app/api",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/glifxyz/glif-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "generative-ai",
+    "glif",
+    "mcp",
+    "mcp-server",
+    "mcp-servers",
+    "workflows",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "glif_api_token",
+      "type": "promptString",
+      "description": "Environment variable for glif api token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@glifxyz/glif-mcp-server@latest"
+    ],
+    "env": {
+      "GLIF_API_TOKEN": "your-token-here"
+    }
+  }
+}

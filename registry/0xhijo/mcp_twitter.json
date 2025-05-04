@@ -1,0 +1,112 @@
+{
+  "name": "mcp_twitter",
+  "version": "1.0.1",
+  "description": "A TypeScript Model Context Protocol for Twitter/X platform integration.",
+  "homepage": "https://github.com/0xhijo/mcp_twitter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0xhijo/mcp_twitter"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp_twitter",
+    "0xhijo"
+  ],
+  "inputs": [
+    {
+      "id": "twitter_user",
+      "type": "promptString",
+      "description": "Environment variable for twitter user",
+      "password": false
+    },
+    {
+      "id": "your_twitter_user",
+      "type": "promptString",
+      "description": "Environment variable for your twitter user",
+      "password": false
+    },
+    {
+      "id": "twitter_pass",
+      "type": "promptString",
+      "description": "Environment variable for twitter pass",
+      "password": false
+    },
+    {
+      "id": "your_twitter_pass",
+      "type": "promptString",
+      "description": "Environment variable for your twitter pass",
+      "password": false
+    },
+    {
+      "id": "twitter_api",
+      "type": "promptString",
+      "description": "Environment variable for twitter api",
+      "password": false
+    },
+    {
+      "id": "your_twitter_api",
+      "type": "promptString",
+      "description": "Environment variable for your twitter api",
+      "password": false
+    },
+    {
+      "id": "twitter_api_secret",
+      "type": "promptString",
+      "description": "Environment variable for twitter api secret",
+      "password": true
+    },
+    {
+      "id": "your_twitter_api_secret",
+      "type": "promptString",
+      "description": "Environment variable for your twitter api secret",
+      "password": true
+    },
+    {
+      "id": "twitter_access_token",
+      "type": "promptString",
+      "description": "Environment variable for twitter access token",
+      "password": true
+    },
+    {
+      "id": "your_twitter_access_token",
+      "type": "promptString",
+      "description": "Environment variable for your twitter access token",
+      "password": true
+    },
+    {
+      "id": "twitter_access_token_secret",
+      "type": "promptString",
+      "description": "Environment variable for twitter access token secret",
+      "password": true
+    },
+    {
+      "id": "your_twitter_access_token_secret",
+      "type": "promptString",
+      "description": "Environment variable for your twitter access token secret",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp_twitter"
+    ],
+    "env": {
+      "TWITTER_USER": "${input:twitter_user}",
+      "YOUR_TWITTER_USER": "${input:your_twitter_user}",
+      "TWITTER_PASS": "${input:twitter_pass}",
+      "YOUR_TWITTER_PASS": "${input:your_twitter_pass}",
+      "TWITTER_API": "${input:twitter_api}",
+      "YOUR_TWITTER_API": "${input:your_twitter_api}",
+      "TWITTER_API_SECRET": "${input:twitter_api_secret}",
+      "YOUR_TWITTER_API_SECRET": "${input:your_twitter_api_secret}",
+      "TWITTER_ACCESS_TOKEN": "${input:twitter_access_token}",
+      "YOUR_TWITTER_ACCESS_TOKEN": "${input:your_twitter_access_token}",
+      "TWITTER_ACCESS_TOKEN_SECRET": "${input:twitter_access_token_secret}",
+      "YOUR_TWITTER_ACCESS_TOKEN_SECRET": "${input:your_twitter_access_token_secret}"
+    }
+  }
+}

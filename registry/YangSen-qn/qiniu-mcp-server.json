@@ -1,0 +1,63 @@
+{
+  "name": "qiniu-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for qiniu-mcp-server",
+  "homepage": "https://github.com/YangSen-qn/qiniu-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YangSen-qn/qiniu-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "qiniu-mcp-server",
+    "yangsen-qn"
+  ],
+  "inputs": [
+    {
+      "id": "qiniu_access_key",
+      "type": "promptString",
+      "description": "Environment variable for qiniu access key authentication",
+      "password": true
+    },
+    {
+      "id": "qiniu_secret_key",
+      "type": "promptString",
+      "description": "Environment variable for qiniu secret key authentication",
+      "password": true
+    },
+    {
+      "id": "qiniu_region_name",
+      "type": "promptString",
+      "description": "Environment variable for qiniu region name configuration",
+      "password": false
+    },
+    {
+      "id": "qiniu_endpoint_url",
+      "type": "promptString",
+      "description": "Environment variable for qiniu endpoint url configuration",
+      "password": false
+    },
+    {
+      "id": "qiniu_buckets",
+      "type": "promptString",
+      "description": "Environment variable for qiniu buckets configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "qiniu-mcp-server"
+    ],
+    "env": {
+      "QINIU_ACCESS_KEY": "YOUR_ACCESS_KEY",
+      "QINIU_SECRET_KEY": "YOUR_SECRET_KEY",
+      "QINIU_REGION_NAME": "YOUR_REGION_NAME",
+      "QINIU_ENDPOINT_URL": "YOUR_ENDPOINT_URL",
+      "QINIU_BUCKETS": "YOUR_BUCKET_A,YOUR_BUCKET_B"
+    },
+    "disabled": false
+  }
+}

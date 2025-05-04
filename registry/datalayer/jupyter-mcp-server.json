@@ -1,0 +1,59 @@
+{
+  "name": "jupyter_mcp_server",
+  "version": "1.0.0",
+  "description": "🪐 ✨ Model Context Protocol (MCP) Server for Jupyter.",
+  "homepage": "https://datalayer.ai",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/datalayer/jupyter-mcp-server"
+  },
+  "license": "BSD-3-Clause",
+  "keywords": [
+    "jupyter",
+    "mcp-server",
+    "ai",
+    "mcp",
+    "tools",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "server_url",
+      "type": "promptString",
+      "description": "Environment variable for server url configuration",
+      "password": false
+    },
+    {
+      "id": "token",
+      "type": "promptString",
+      "description": "Environment variable for token authentication",
+      "password": true
+    },
+    {
+      "id": "notebook_path",
+      "type": "promptString",
+      "description": "Environment variable for notebook path configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "docker",
+    "args": [
+      "run",
+      "-i",
+      "--rm",
+      "-e",
+      "SERVER_URL",
+      "-e",
+      "TOKEN",
+      "-e",
+      "NOTEBOOK_PATH",
+      "datalayer/jupyter-mcp-server:latest"
+    ],
+    "env": {
+      "SERVER_URL": "http://host.docker.internal:8888",
+      "TOKEN": "MY_TOKEN",
+      "NOTEBOOK_PATH": "notebook.ipynb"
+    }
+  }
+}

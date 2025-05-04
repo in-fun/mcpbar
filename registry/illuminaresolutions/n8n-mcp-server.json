@@ -1,0 +1,38 @@
+{
+  "name": "@illuminaresolutions/n8n-mcp-server",
+  "version": "1.0.0",
+  "description": "An MCP server that provides access to n8n workflows, executions, credentials, and more through the Model Context Protocol",
+  "homepage": "https://github.com/illuminaresolutions/n8n-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/illuminaresolutions/n8n-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "n8n-mcp-server",
+    "illuminaresolutions"
+  ],
+  "inputs": [
+    {
+      "id": "n8n_host",
+      "type": "promptString",
+      "description": "Environment variable for n8n host configuration",
+      "password": false
+    },
+    {
+      "id": "n8n_api_key",
+      "type": "promptString",
+      "description": "Environment variable for n8n api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "n8n-mcp-server",
+    "env": {
+      "N8N_HOST": "https://your-n8n-instance.com",
+      "N8N_API_KEY": "your-api-key-here"
+    }
+  }
+}

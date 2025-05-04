@@ -1,0 +1,50 @@
+{
+  "name": "@intsig/server-textin",
+  "version": "0.1.5",
+  "description": "MCP Server for the Textin Robot API. TextIn官方MCP，支持文档OCR识别，文档转Markdown，文档关键信息提取。",
+  "homepage": "https://github.com/intsig-textin/textin-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/intsig-textin/textin-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "textin-mcp",
+    "intsig-textin"
+  ],
+  "inputs": [
+    {
+      "id": "app_id",
+      "type": "promptString",
+      "description": "Environment variable for app id configuration",
+      "password": false
+    },
+    {
+      "id": "app_secret",
+      "type": "promptString",
+      "description": "Environment variable for app secret authentication",
+      "password": true
+    },
+    {
+      "id": "mcp_server_request_timeout",
+      "type": "promptString",
+      "description": "Environment variable for mcp server request timeout configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@intsig/server-textin"
+    ],
+    "env": {
+      "APP_ID": "<YOUR_APP_ID>",
+      "APP_SECRET": "<YOUR_APP_SECRET>",
+      "MCP_SERVER_REQUEST_TIMEOUT": "600000"
+    },
+    "timeout": 600
+  }
+}

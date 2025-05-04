@@ -1,0 +1,34 @@
+{
+  "name": "nps",
+  "version": "1.0.0",
+  "description": "MCP using National Park Service API",
+  "homepage": "https://github.com/amysatterlee/nps_mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amysatterlee/nps_mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "nps_mcp",
+    "amysatterlee"
+  ],
+  "inputs": [
+    {
+      "id": "api_key",
+      "type": "promptString",
+      "description": "Environment variable for api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "/<Path to Server>/build/index.js"
+    ],
+    "env": {
+      "API_KEY": "Your NPS API Key"
+    }
+  }
+}

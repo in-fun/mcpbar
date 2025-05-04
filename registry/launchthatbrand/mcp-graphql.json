@@ -1,0 +1,26 @@
+{
+  "name": "mcp-graphql",
+  "version": "0.2.2",
+  "description": "Model Context Protocol server for GraphQL",
+  "homepage": "https://github.com/launchthatbrand/mcp-graphql",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/launchthatbrand/mcp-graphql"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-graphql",
+    "launchthatbrand"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "mcp-graphql",
+      "--endpoint",
+      "http://localhost:3000/graphql"
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "name": "@tsmztech/mcp-server-salesforce",
+  "version": "0.0.2",
+  "description": "A Salesforce connector MCP Server.",
+  "homepage": "https://github.com/tsmztech/mcp-server-salesforce",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tsmztech/mcp-server-salesforce"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude",
+    "mcp",
+    "modelcontextprotocol",
+    "salesforce",
+    "server",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "salesforce_user",
+      "type": "promptString",
+      "description": "Environment variable for salesforce user",
+      "password": false
+    },
+    {
+      "id": "salesforce_pass",
+      "type": "promptString",
+      "description": "Environment variable for salesforce pass",
+      "password": false
+    },
+    {
+      "id": "salesforce_token",
+      "type": "promptString",
+      "description": "Environment variable for salesforce token",
+      "password": true
+    },
+    {
+      "id": "salesforce_instance_url",
+      "type": "promptString",
+      "description": "Environment variable for salesforce instance url",
+      "password": false
+    },
+    {
+      "id": "salesforce_client_secret",
+      "type": "promptString",
+      "description": "Environment variable for salesforce client secret",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@tsmztech/mcp-server-salesforce"
+    ],
+    "env": {
+      "SALESFORCE_USER": "${input:salesforce_user}",
+      "SALESFORCE_PASS": "${input:salesforce_pass}",
+      "SALESFORCE_TOKEN": "${input:salesforce_token}",
+      "SALESFORCE_INSTANCE_URL": "${input:salesforce_instance_url}",
+      "SALESFORCE_CLIENT_SECRET": "${input:salesforce_client_secret}"
+    }
+  }
+}

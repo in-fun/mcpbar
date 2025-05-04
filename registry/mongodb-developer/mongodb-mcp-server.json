@@ -1,0 +1,26 @@
+{
+  "name": "@pash1986/mongodb-mcp-server",
+  "version": "0.1.7",
+  "description": "MongoDB MCP server for local mongodb queries",
+  "homepage": "https://github.com/mongodb-developer/mongodb-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mongodb-developer/mongodb-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mongodb-mcp-server",
+    "mongodb-developer"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@pash1986/mongodb-mcp-server"
+    ],
+    "env": {}
+  }
+}

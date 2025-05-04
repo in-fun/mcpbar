@@ -1,0 +1,26 @@
+{
+  "name": "chat-app",
+  "version": "0.1.0",
+  "description": "MCP server for webchat",
+  "homepage": "https://webchat-sepia-six.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WebChatAppAi/webchat"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "webchat",
+    "webchatappai"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "chat-app"
+    ],
+    "env": {}
+  }
+}

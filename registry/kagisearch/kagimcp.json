@@ -1,0 +1,48 @@
+{
+  "name": "kagimcp",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol (MCP) server for Kagi search & other tools.",
+  "homepage": "https://github.com/kagisearch/kagimcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kagisearch/kagimcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "kagimcp",
+    "kagisearch"
+  ],
+  "inputs": [
+    {
+      "id": "kagi_api_key",
+      "type": "promptString",
+      "description": "Environment variable for kagi api key",
+      "password": true
+    },
+    {
+      "id": "your_api_key",
+      "type": "promptString",
+      "description": "Environment variable for your api key",
+      "password": true
+    },
+    {
+      "id": "api_key",
+      "type": "promptString",
+      "description": "Environment variable for api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "kagimcp"
+    ],
+    "env": {
+      "KAGI_API_KEY": "${input:kagi_api_key}",
+      "YOUR_API_KEY": "${input:your_api_key}",
+      "API_KEY": "${input:api_key}"
+    }
+  }
+}

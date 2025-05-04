@@ -1,0 +1,56 @@
+{
+  "name": "mcp-zotero",
+  "version": "1.0.6",
+  "description": "A connector for Claude Desktop to work with collection and sources on your Zotero Cloud.",
+  "homepage": "https://github.com/kaliaboi/mcp-zotero",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kaliaboi/mcp-zotero"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-zotero",
+    "kaliaboi"
+  ],
+  "inputs": [
+    {
+      "id": "your_api_key",
+      "type": "promptString",
+      "description": "Environment variable for your api key",
+      "password": true
+    },
+    {
+      "id": "zotero_api_key",
+      "type": "promptString",
+      "description": "Environment variable for zotero api key",
+      "password": true
+    },
+    {
+      "id": "zotero_user",
+      "type": "promptString",
+      "description": "Environment variable for zotero user",
+      "password": false
+    },
+    {
+      "id": "your_user",
+      "type": "promptString",
+      "description": "Environment variable for your user",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-zotero"
+    ],
+    "env": {
+      "YOUR_API_KEY": "${input:your_api_key}",
+      "ZOTERO_API_KEY": "${input:zotero_api_key}",
+      "ZOTERO_USER": "${input:zotero_user}",
+      "YOUR_USER": "${input:your_user}"
+    }
+  }
+}

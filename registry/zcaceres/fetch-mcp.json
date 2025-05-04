@@ -1,0 +1,24 @@
+{
+  "name": "fetch",
+  "version": "1.0.0",
+  "description": "A flexible HTTP fetching Model Context Protocol server.",
+  "homepage": "https://github.com/zcaceres/fetch-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zcaceres/fetch-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "fetch-mcp",
+    "zcaceres"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "{ABSOLUTE PATH TO FILE HERE}/dist/index.js"
+    ]
+  }
+}

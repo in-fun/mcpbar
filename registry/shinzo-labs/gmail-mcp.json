@@ -1,0 +1,49 @@
+{
+  "name": "@shinzolabs/gmail-mcp",
+  "version": "1.2.2",
+  "description": "Gmail MCP - Provides complete Gmail API access with file-based OAuth2 authentication",
+  "homepage": "https://github.com/shinzo-labs/gmail-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shinzo-labs/gmail-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "gmail-mcp",
+    "shinzo-labs"
+  ],
+  "inputs": [
+    {
+      "id": "auth_server_port",
+      "type": "promptString",
+      "description": "Environment variable for auth server port",
+      "password": false
+    },
+    {
+      "id": "client_secret",
+      "type": "promptString",
+      "description": "Environment variable for client secret",
+      "password": true
+    },
+    {
+      "id": "refresh_token",
+      "type": "promptString",
+      "description": "Environment variable for refresh token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@shinzolabs/gmail-mcp"
+    ],
+    "env": {
+      "AUTH_SERVER_PORT": "${input:auth_server_port}",
+      "CLIENT_SECRET": "${input:client_secret}",
+      "REFRESH_TOKEN": "${input:refresh_token}"
+    }
+  }
+}

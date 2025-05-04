@@ -1,0 +1,25 @@
+{
+  "name": "mcp-server-fetch",
+  "version": "1.0.0",
+  "description": "MCP Fetch Server Implementation",
+  "homepage": "https://github.com/ExactDoug/mcp-fetch",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ExactDoug/mcp-fetch"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-fetch",
+    "exactdoug"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-server-fetch"
+    ],
+    "env": {}
+  }
+}

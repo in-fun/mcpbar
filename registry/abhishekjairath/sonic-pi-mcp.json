@@ -1,0 +1,28 @@
+{
+  "name": "sonic-pi-mcp",
+  "version": "0.2.0",
+  "description": "Model Context Protocol server for Sonic Pi",
+  "homepage": "https://github.com/abhishekjairath/sonic-pi-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abhishekjairath/sonic-pi-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "sonic-pi-mcp",
+    "abhishekjairath"
+  ],
+  "inputs": [],
+  "server": {
+    "name": "Sonic Pi MCP",
+    "command": "bunx",
+    "args": [
+      "sonic-pi-mcp"
+    ],
+    "transport": {
+      "type": "stdio"
+    }
+  }
+}

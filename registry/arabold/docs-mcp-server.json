@@ -1,0 +1,77 @@
+{
+  "name": "@arabold/docs-mcp-server",
+  "version": "1.11.0",
+  "description": "MCP server for fetching and searching documentation",
+  "homepage": "https://github.com/arabold/docs-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arabold/docs-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "docs-mcp-server",
+    "arabold"
+  ],
+  "inputs": [
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key",
+      "password": true
+    },
+    {
+      "id": "openai_api",
+      "type": "promptString",
+      "description": "Environment variable for openai api",
+      "password": false
+    },
+    {
+      "id": "google_api_key",
+      "type": "promptString",
+      "description": "Environment variable for google api key",
+      "password": true
+    },
+    {
+      "id": "aws_access_key",
+      "type": "promptString",
+      "description": "Environment variable for aws access key",
+      "password": true
+    },
+    {
+      "id": "aws_secret_access_key",
+      "type": "promptString",
+      "description": "Environment variable for aws secret access key",
+      "password": true
+    },
+    {
+      "id": "azure_openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for azure openai api key",
+      "password": true
+    },
+    {
+      "id": "azure_openai_api",
+      "type": "promptString",
+      "description": "Environment variable for azure openai api",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@arabold/docs-mcp-server"
+    ],
+    "env": {
+      "OPENAI_API_KEY": "${input:openai_api_key}",
+      "OPENAI_API": "${input:openai_api}",
+      "GOOGLE_API_KEY": "${input:google_api_key}",
+      "AWS_ACCESS_KEY": "${input:aws_access_key}",
+      "AWS_SECRET_ACCESS_KEY": "${input:aws_secret_access_key}",
+      "AZURE_OPENAI_API_KEY": "${input:azure_openai_api_key}",
+      "AZURE_OPENAI_API": "${input:azure_openai_api}"
+    }
+  }
+}

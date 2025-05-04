@@ -1,0 +1,26 @@
+{
+  "name": "@dillip285/mcp-terminal",
+  "version": "1.0.1",
+  "description": "MCP Terminal Server - Execute commands within allowed paths",
+  "homepage": "https://github.com/dillip285/mcp-terminal",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dillip285/mcp-terminal"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-terminal",
+    "dillip285"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "@dillip285/mcp-terminal",
+      "--allowed-paths",
+      "/path/to/allowed/directory"
+    ]
+  }
+}

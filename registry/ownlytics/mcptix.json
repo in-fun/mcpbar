@@ -1,0 +1,43 @@
+{
+  "name": "@ownlytics/mcptix",
+  "version": "0.1.21",
+  "description": "A simple, powerful ticket tracking system with AI assistant integration",
+  "homepage": "https://github.com/ownlytics/mcptix",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ownlytics/mcptix"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcptix",
+    "ownlytics"
+  ],
+  "inputs": [
+    {
+      "id": "mcptix_home_dir",
+      "type": "promptString",
+      "description": "Environment variable for mcptix home dir configuration",
+      "password": false
+    },
+    {
+      "id": "home",
+      "type": "promptString",
+      "description": "Environment variable for home configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "/absolute/path/to/node",
+    "args": [
+      "/absolute/path/to/node_modules/@ownlytics/mcptix/dist/mcp/index.js"
+    ],
+    "env": {
+      "MCPTIX_HOME_DIR": "/absolute/path/to/your/project/.mcptix",
+      "HOME": "/home/your-username"
+    },
+    "disabled": false,
+    "alwaysAllow": []
+  }
+}

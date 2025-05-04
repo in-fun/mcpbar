@@ -1,0 +1,27 @@
+{
+  "name": "shadow-cljs-mcp",
+  "version": "0.1.3",
+  "description": "A Model Context Protocol server for monitoring shadow-cljs builds",
+  "homepage": "https://github.com/Bigsy/shadow-cljs-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bigsy/shadow-cljs-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "shadow-cljs-mcp",
+    "bigsy"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "shadow-cljs-mcp"
+    ],
+    "disabled": false,
+    "autoApprove": [],
+    "timeout": 60
+  }
+}

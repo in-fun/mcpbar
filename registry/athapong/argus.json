@@ -1,0 +1,34 @@
+{
+  "name": "argus",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol (MCP) server for analyzing GitLab repositories and performing security assessments.",
+  "homepage": "https://github.com/athapong/argus",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/athapong/argus"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "argus",
+    "athapong"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "--from",
+      "git+https://github.com/athapong/argus",
+      "argus"
+    ],
+    "alwaysAllow": [
+      "get_commit_history",
+      "enumerate_branches",
+      "compare_git_changes",
+      "analyze_code_quality",
+      "security_scan_repository"
+    ],
+    "timeout": 300
+  }
+}

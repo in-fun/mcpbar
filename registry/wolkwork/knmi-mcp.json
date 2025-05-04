@@ -1,0 +1,34 @@
+{
+  "name": "knmi-weather-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for knmi-mcp",
+  "homepage": "https://github.com/wolkwork/knmi-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wolkwork/knmi-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "knmi-mcp",
+    "wolkwork"
+  ],
+  "inputs": [
+    {
+      "id": "knmi_api_key",
+      "type": "promptString",
+      "description": "Environment variable for knmi api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "knmi-weather-mcp"
+    ],
+    "env": {
+      "KNMI_API_KEY": "${input:knmi_api_key}"
+    }
+  }
+}

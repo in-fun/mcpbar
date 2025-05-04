@@ -1,0 +1,24 @@
+{
+  "name": "openapi-client-generator",
+  "version": "0.1.1",
+  "description": "A Model Context Protocol server to generate API clients by using TypeScript.",
+  "homepage": "https://github.com/orhanveli/openapi-client-generator-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/orhanveli/openapi-client-generator-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "openapi-client-generator-mcp",
+    "orhanveli"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "< PATH TO >/openapi-client-generator/build/index.js"
+    ]
+  }
+}

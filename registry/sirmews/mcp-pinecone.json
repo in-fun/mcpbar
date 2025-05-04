@@ -1,0 +1,50 @@
+{
+  "name": "mcp-pinecone",
+  "version": "1.0.0",
+  "description": "Model Context Protocol server to allow for reading and writing from Pinecone. Rudimentary RAG",
+  "homepage": "https://github.com/sirmews/mcp-pinecone",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sirmews/mcp-pinecone"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude",
+    "model-context-protocol",
+    "pinecone",
+    "rag",
+    "mcp",
+    "mcp-server"
+  ],
+  "inputs": [
+    {
+      "id": "uv_publish_token",
+      "type": "promptString",
+      "description": "Environment variable for uv publish token",
+      "password": true
+    },
+    {
+      "id": "uv_publish_user",
+      "type": "promptString",
+      "description": "Environment variable for uv publish user",
+      "password": false
+    },
+    {
+      "id": "uv_publish_pass",
+      "type": "promptString",
+      "description": "Environment variable for uv publish pass",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-pinecone"
+    ],
+    "env": {
+      "UV_PUBLISH_TOKEN": "${input:uv_publish_token}",
+      "UV_PUBLISH_USER": "${input:uv_publish_user}",
+      "UV_PUBLISH_PASS": "${input:uv_publish_pass}"
+    }
+  }
+}

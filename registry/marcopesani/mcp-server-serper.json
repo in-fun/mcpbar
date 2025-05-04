@@ -1,0 +1,35 @@
+{
+  "name": "serper-search-scrape-mcp-server",
+  "version": "0.2.0",
+  "description": "Serper MCP Server supporting search and webpage scraping",
+  "homepage": "https://github.com/marcopesani/mcp-server-serper",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcopesani/mcp-server-serper"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-serper",
+    "marcopesani"
+  ],
+  "inputs": [
+    {
+      "id": "serper_api_key",
+      "type": "promptString",
+      "description": "Environment variable for serper api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "serper-search-scrape-mcp-server"
+    ],
+    "env": {
+      "SERPER_API_KEY": "your_api_key_here"
+    }
+  }
+}

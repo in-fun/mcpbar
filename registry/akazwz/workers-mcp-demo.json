@@ -1,0 +1,22 @@
+{
+  "name": "mcp-demo",
+  "version": "0.0.0",
+  "description": "cloudflare workers MCP server ",
+  "homepage": "https://github.com/akazwz/workers-mcp-demo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akazwz/workers-mcp-demo"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "workers-mcp-demo",
+    "akazwz"
+  ],
+  "inputs": [],
+  "server": {
+    "type": "command",
+    "command": "/path/to/workers-mcp run workers-mcp-demo https://your-worker-url.workers.dev /path/to/workers-mcp-demo"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "file-context-server",
+  "version": "1.0.0",
+  "description": "File context server for Model Context Protocol",
+  "homepage": "https://github.com/bsmi021/mcp-file-context-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bsmi021/mcp-file-context-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "context",
+    "mcp",
+    "mcp-server",
+    "modelcontextprotocol",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "file-context-server"
+    ],
+    "env": {}
+  }
+}

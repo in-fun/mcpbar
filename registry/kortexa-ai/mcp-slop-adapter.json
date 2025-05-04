@@ -1,0 +1,25 @@
+{
+  "name": "@kortexa-ai/mcp-slop-adapter",
+  "version": "0.3.0",
+  "description": "MCP to SLOP adapter",
+  "homepage": "https://github.com/kortexa-ai/mcp-slop-adapter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kortexa-ai/mcp-slop-adapter"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-slop-adapter",
+    "kortexa-ai"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "@kortexa-ai/mcp-slop-adapter",
+      "http://your-slop-server-url"
+    ]
+  }
+}

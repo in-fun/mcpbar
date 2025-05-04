@@ -1,0 +1,35 @@
+{
+  "name": "shortcut-mcp",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol (MCP) server for interacting with Shortcut (formerly Clubhouse)",
+  "homepage": "https://github.com/zekus/shortcut-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zekus/shortcut-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "shortcut-mcp",
+    "zekus"
+  ],
+  "inputs": [
+    {
+      "id": "shortcut_api_token",
+      "type": "promptString",
+      "description": "Environment variable for shortcut api token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "python",
+    "args": [
+      "-m",
+      "shortcut_mcp"
+    ],
+    "env": {
+      "SHORTCUT_API_TOKEN": "your_token_here"
+    }
+  }
+}

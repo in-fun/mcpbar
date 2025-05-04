@@ -1,0 +1,26 @@
+{
+  "name": "apple-mcp",
+  "version": "0.2.6",
+  "description": "Apple MCP tools for contacts, notes, messages, and mail integration",
+  "homepage": "https://x.com/DhravyaShah/status/1892363590671233255",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jxnl/apple-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "apple-mcp",
+    "jxnl"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "apple-mcp"
+    ],
+    "env": {}
+  }
+}

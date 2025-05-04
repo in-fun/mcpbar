@@ -1,0 +1,24 @@
+{
+  "name": "scrapling-fetch-mcp",
+  "version": "1.0.0",
+  "description": "Helps AI assistants access text content from bot-protected websites. MCP server that fetches HTML/markdown from sites with anti-automation measures using Scrapling.",
+  "homepage": "https://github.com/cyberchitta/scrapling-fetch-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cyberchitta/scrapling-fetch-mcp"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "scrapling-fetch-mcp",
+    "cyberchitta"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "scrapling-fetch-mcp"
+    ]
+  }
+}

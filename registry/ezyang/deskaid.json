@@ -1,0 +1,25 @@
+{
+  "name": "codemcp",
+  "version": "1.0.0",
+  "description": "Coding assistant MCP for Claude Desktop",
+  "homepage": "https://github.com/ezyang/deskaid",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ezyang/deskaid"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "deskaid",
+    "ezyang"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "codemcp"
+    ],
+    "env": {}
+  }
+}

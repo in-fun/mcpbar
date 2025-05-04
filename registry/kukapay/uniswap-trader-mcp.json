@@ -1,0 +1,41 @@
+{
+  "name": "uniswap-trader-mcp",
+  "version": "1.0.1",
+  "description": "An MCP server for AI agents to automate token swaps on Uniswap DEX across multiple blockchains.",
+  "homepage": "https://github.com/kukapay/uniswap-trader-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kukapay/uniswap-trader-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "uniswap-trader-mcp",
+    "kukapay"
+  ],
+  "inputs": [
+    {
+      "id": "infura_key",
+      "type": "promptString",
+      "description": "Environment variable for infura key authentication",
+      "password": true
+    },
+    {
+      "id": "wallet_private_key",
+      "type": "promptString",
+      "description": "Environment variable for wallet private key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "path/to/uniswap-trader-mcp/server/index.js"
+    ],
+    "env": {
+      "INFURA_KEY": "your infura key",
+      "WALLET_PRIVATE_KEY": "your private key"
+    }
+  }
+}

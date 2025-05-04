@@ -1,0 +1,27 @@
+{
+  "name": "email_client",
+  "version": "1.0.0",
+  "description": "ClaudePost enables seamless email management through natural language conversations with Claude, offering secure features like email search, reading, and sending.",
+  "homepage": "https://github.com/ZilongXue/claude-post",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZilongXue/claude-post"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "claude-post",
+    "zilongxue"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "/Users/username/.local/bin/uv",
+    "args": [
+      "--directory",
+      "/path/to/claude-post/src/email_client",
+      "run",
+      "email-client"
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "obsidian-mcp",
+  "version": "1.0.0",
+  "description": "Obsidian MCP (Model Context Protocol) 服务器",
+  "homepage": "https://github.com/newtype-01/obsidian-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/newtype-01/obsidian-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "obsidian-mcp",
+    "newtype-01"
+  ],
+  "inputs": [
+    {
+      "id": "obsidian_api_token",
+      "type": "promptString",
+      "description": "Environment variable for obsidian api token",
+      "password": true
+    },
+    {
+      "id": "obsidian_api_port",
+      "type": "promptString",
+      "description": "Environment variable for obsidian api port",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "obsidian-mcp"
+    ],
+    "env": {
+      "OBSIDIAN_API_TOKEN": "${input:obsidian_api_token}",
+      "OBSIDIAN_API_PORT": "${input:obsidian_api_port}"
+    }
+  }
+}

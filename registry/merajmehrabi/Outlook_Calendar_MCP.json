@@ -1,0 +1,23 @@
+{
+  "name": "outlook-calendar-mcp",
+  "version": "1.0.2",
+  "description": "MCP server for Outlook Calendar integration",
+  "homepage": "https://github.com/merajmehrabi/Outlook_Calendar_MCP",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/merajmehrabi/Outlook_Calendar_MCP"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "outlook_calendar_mcp",
+    "merajmehrabi"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "outlook-calendar-mcp",
+    "args": [],
+    "env": {}
+  }
+}

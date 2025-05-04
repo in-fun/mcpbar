@@ -1,0 +1,42 @@
+{
+  "name": "open-webui",
+  "version": "0.4.2",
+  "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)",
+  "homepage": "https://openwebui.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/willsmith2099/open-webui"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "open-webui",
+    "willsmith2099"
+  ],
+  "inputs": [
+    {
+      "id": "ollama_base_url",
+      "type": "promptString",
+      "description": "Environment variable for ollama base url",
+      "password": false
+    },
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "open-webui"
+    ],
+    "env": {
+      "OLLAMA_BASE_URL": "${input:ollama_base_url}",
+      "OPENAI_API_KEY": "${input:openai_api_key}"
+    }
+  }
+}

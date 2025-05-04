@@ -1,0 +1,41 @@
+{
+  "name": "@suthio/brave-deep-research-mcp",
+  "version": "0.0.1",
+  "description": "DeepSearch MCP Server with Brave Search API and Puppeteer content extraction",
+  "homepage": "https://github.com/suthio/brave-deep-research-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suthio/brave-deep-research-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "brave-deep-research-mcp",
+    "suthio"
+  ],
+  "inputs": [
+    {
+      "id": "brave_api_key",
+      "type": "promptString",
+      "description": "Environment variable for brave api key authentication",
+      "password": true
+    },
+    {
+      "id": "puppeteer_headless",
+      "type": "promptString",
+      "description": "Environment variable for puppeteer headless configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "@suthio/brave-deep-research-mcp"
+    ],
+    "env": {
+      "BRAVE_API_KEY": "your_brave_api_key_here",
+      "PUPPETEER_HEADLESS": "true"
+    }
+  }
+}

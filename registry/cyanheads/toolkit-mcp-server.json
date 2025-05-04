@@ -1,0 +1,40 @@
+{
+  "name": "@cyanheads/toolkit-mcp-server",
+  "version": "1.0.1",
+  "description": "MCP server providing system, network, geolocation, generator, datetime, and security tools",
+  "homepage": "https://github.com/cyanheads/toolkit-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cyanheads/toolkit-mcp-server"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "cryptography",
+    "developer-tools",
+    "geolocation",
+    "llm",
+    "llm-agent",
+    "mcp",
+    "model-context-protocol",
+    "networking",
+    "system-utilities",
+    "typescript"
+  ],
+  "inputs": [
+    {
+      "id": "node_env",
+      "type": "promptString",
+      "description": "Environment variable for node env configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "node_modules/@cyanheads/toolkit-mcp-server/build/index.js"
+    ],
+    "env": {
+      "NODE_ENV": "production"
+    }
+  }
+}

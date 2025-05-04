@@ -1,0 +1,25 @@
+{
+  "name": "feishu-bot",
+  "version": "1.0.0",
+  "description": "飞书MCP服务器，用于通过MCP协议向飞书发送消息",
+  "homepage": "https://github.com/Chenzhi-Ana/feishu_mcp_server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Chenzhi-Ana/feishu_mcp_server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "feishu_mcp_server",
+    "chenzhi-ana"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "feishu-bot"
+    ],
+    "env": {}
+  }
+}

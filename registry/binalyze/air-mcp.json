@@ -1,0 +1,42 @@
+{
+  "name": "@binalyze/air-mcp",
+  "version": "5.5.0",
+  "description": "Binalyze AIR MCP Server",
+  "homepage": "https://github.com/binalyze/air-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/binalyze/air-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "air-mcp",
+    "binalyze"
+  ],
+  "inputs": [
+    {
+      "id": "air_host",
+      "type": "promptString",
+      "description": "Environment variable for air host configuration",
+      "password": false
+    },
+    {
+      "id": "air_api_token",
+      "type": "promptString",
+      "description": "Environment variable for air api token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@binalyze/air-mcp"
+    ],
+    "env": {
+      "AIR_HOST": "your-api-host.com",
+      "AIR_API_TOKEN": "your-api-token"
+    }
+  }
+}

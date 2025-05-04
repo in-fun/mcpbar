@@ -1,0 +1,25 @@
+{
+  "name": "mcp-svg-converter",
+  "version": "1.0.6",
+  "description": "MCP server for converting SVG to PNG and JPG",
+  "homepage": "https://github.com/surferdot/mcp-svg-converter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/surferdot/mcp-svg-converter"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-svg-converter",
+    "surferdot"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "mcp-svg-converter",
+      "/absolute/path/to/output/directory"
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "mcp-cursor",
+  "version": "1.0.0",
+  "description": "MCP server for multiplatform-cursor-mcp",
+  "homepage": "https://github.com/johnneerdael/multiplatform-cursor-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnneerdael/multiplatform-cursor-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "multiplatform-cursor-mcp",
+    "johnneerdael"
+  ],
+  "inputs": [
+    {
+      "id": "claude_api_key",
+      "type": "promptString",
+      "description": "Environment variable for claude api key",
+      "password": true
+    },
+    {
+      "id": "github_token",
+      "type": "promptString",
+      "description": "Environment variable for github token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-cursor"
+    ],
+    "env": {
+      "CLAUDE_API_KEY": "${input:claude_api_key}",
+      "GITHUB_TOKEN": "${input:github_token}"
+    }
+  }
+}

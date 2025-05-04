@@ -1,0 +1,69 @@
+{
+  "name": "atlas-mcp-server",
+  "version": "2.7.3",
+  "description": "A Model Context Protocol (MCP) server for ATLAS, a Neo4j-powered task management system for LLM Agents - implementing a three-tier architecture (Projects, Tasks, Knowledge) to manage complex workflows.",
+  "homepage": "https://www.npmjs.com/package/atlas-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cyanheads/atlas-mcp-server"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "ai",
+    "llm",
+    "mcp",
+    "modelcontextprotocol",
+    "task-management",
+    "agents",
+    "llm-agent",
+    "graph-database",
+    "neo4j",
+    "projects-tasks-knowledge",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "neo4j_uri",
+      "type": "promptString",
+      "description": "Environment variable for neo4j uri configuration",
+      "password": false
+    },
+    {
+      "id": "neo4j_user",
+      "type": "promptString",
+      "description": "Environment variable for neo4j user configuration",
+      "password": false
+    },
+    {
+      "id": "neo4j_password",
+      "type": "promptString",
+      "description": "Environment variable for neo4j password authentication",
+      "password": false
+    },
+    {
+      "id": "log_level",
+      "type": "promptString",
+      "description": "Environment variable for log level configuration",
+      "password": false
+    },
+    {
+      "id": "node_env",
+      "type": "promptString",
+      "description": "Environment variable for node env configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/atlas-mcp-server/dist/index.js"
+    ],
+    "env": {
+      "NEO4J_URI": "bolt://localhost:7687",
+      "NEO4J_USER": "neo4j",
+      "NEO4J_PASSWORD": "password2",
+      "LOG_LEVEL": "info",
+      "NODE_ENV": "production"
+    }
+  }
+}

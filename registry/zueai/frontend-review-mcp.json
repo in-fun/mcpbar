@@ -1,0 +1,26 @@
+{
+  "name": "frontend-review-mcp",
+  "version": "0.1.5",
+  "description": "An MCP server that performs a visual review of UI edit requests",
+  "homepage": "https://www.npmjs.com/package/frontend-review-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zueai/frontend-review-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "cursor",
+    "frontend",
+    "mcp",
+    "screenshot",
+    "windsurf",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "frontend-review-mcp HYPERBOLIC_API_KEY=<YOUR_API_KEY>"
+    ]
+  }
+}

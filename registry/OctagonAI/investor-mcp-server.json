@@ -1,0 +1,52 @@
+{
+  "name": "octagon-vc-agents",
+  "version": "1.0.0",
+  "description": "An MCP server that runs AI-driven venture capitalist agents (Fred Wilson, Peter Thiel, etc.), whose thinking is continuously enriched by Octagon Private Markets' real-time deals, valuations, and deep research intelligence. Use it to spin up programmable \"VC brains\" for pitch feedback, diligence simulations, term sheet negotiations, and more.",
+  "homepage": "https://octagonagents.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OctagonAI/investor-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "ai-agents",
+    "investment",
+    "mcp-server",
+    "openai-agents-sdk",
+    "open-source",
+    "openai",
+    "ai-agent",
+    "agentic-ai",
+    "agent",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key authentication",
+      "password": true
+    },
+    {
+      "id": "octagon_api_key",
+      "type": "promptString",
+      "description": "Environment variable for octagon api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "pipx",
+    "args": [
+      "run",
+      "--pip-args=\"--no-cache-dir\"",
+      "octagon-vc-agents",
+      "run"
+    ],
+    "env": {
+      "OPENAI_API_KEY": "YOUR_OPENAI_API_KEY_HERE",
+      "OCTAGON_API_KEY": "YOUR_OCTAGON_API_KEY_HERE"
+    }
+  }
+}

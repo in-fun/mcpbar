@@ -1,0 +1,43 @@
+{
+  "name": "@rikukawa/youtube-sheets-server",
+  "version": "1.0.0",
+  "description": "MCP server for searching YouTube videos and saving results to Google Sheets",
+  "homepage": "https://github.com/Rickyyy1116/mcp-youtube-sheets",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rickyyy1116/mcp-youtube-sheets"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-youtube-sheets",
+    "rickyyy1116"
+  ],
+  "inputs": [
+    {
+      "id": "youtube_api_key",
+      "type": "promptString",
+      "description": "Environment variable for youtube api key authentication",
+      "password": true
+    },
+    {
+      "id": "spreadsheet_id",
+      "type": "promptString",
+      "description": "Environment variable for spreadsheet id configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "path/to/youtube-sheets-server/build/index.js"
+    ],
+    "env": {
+      "YOUTUBE_API_KEY": "your-youtube-api-key",
+      "SPREADSHEET_ID": "your-spreadsheet-id"
+    },
+    "disabled": false,
+    "alwaysAllow": []
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "@deventerprisesoftware/scrapi-mcp",
+  "version": "0.0.3",
+  "description": "MCP server for using ScrAPI to scrape web pages.",
+  "homepage": "https://scrapi.tech",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DevEnterpriseSoftware/scrapi-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "ai",
+    "mcp-server",
+    "scraper-api",
+    "web-scraping",
+    "webscraper",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "scrapi_api_key",
+      "type": "promptString",
+      "description": "Environment variable for scrapi api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "docker",
+    "args": [
+      "run",
+      "-i",
+      "--rm",
+      "-e",
+      "SCRAPI_API_KEY",
+      "deventerprisesoftware/scrapi-mcp"
+    ],
+    "env": {
+      "SCRAPI_API_KEY": "<YOUR_API_KEY>"
+    }
+  }
+}

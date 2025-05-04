@@ -1,0 +1,25 @@
+{
+  "name": "mcp-simple-arxiv",
+  "version": "1.0.0",
+  "description": "Tool to  work with arXiv, provide LLM with ability to search and read papers from there",
+  "homepage": "https://github.com/andybrandt/mcp-simple-arxiv",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andybrandt/mcp-simple-arxiv"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-simple-arxiv",
+    "andybrandt"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "python",
+    "args": [
+      "-m",
+      "mcp_simple_arxiv"
+    ]
+  }
+}

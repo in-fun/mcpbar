@@ -1,0 +1,27 @@
+{
+  "name": "earthdata_mcp_server",
+  "version": "1.0.0",
+  "description": "🌎 Earthdata MCP Server",
+  "homepage": "https://datalayer.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ngoiyaeric/earthdata-mcp-server"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "earthdata-mcp-server",
+    "ngoiyaeric"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "docker",
+    "args": [
+      "run",
+      "-i",
+      "--rm",
+      "datalayer/earthdata-mcp-server:latest"
+    ]
+  }
+}

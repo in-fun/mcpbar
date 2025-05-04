@@ -1,0 +1,42 @@
+{
+  "name": "youtube-data-mcp-server",
+  "version": "1.0.15",
+  "description": "YouTube MCP Server Implementation",
+  "homepage": "https://github.com/icraft2170/youtube-data-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/icraft2170/youtube-data-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "youtube-data-mcp-server",
+    "icraft2170"
+  ],
+  "inputs": [
+    {
+      "id": "youtube_api_key",
+      "type": "promptString",
+      "description": "Environment variable for youtube api key authentication",
+      "password": true
+    },
+    {
+      "id": "youtube_transcript_lang",
+      "type": "promptString",
+      "description": "Environment variable for youtube transcript lang configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "youtube-data-mcp-server"
+    ],
+    "env": {
+      "YOUTUBE_API_KEY": "YOUR_API_KEY_HERE",
+      "YOUTUBE_TRANSCRIPT_LANG": "ko"
+    }
+  }
+}

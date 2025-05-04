@@ -1,0 +1,24 @@
+{
+  "name": "duckduckgo-mcp-server",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol (MCP) server that provides web search capabilities through DuckDuckGo, with additional features for content fetching and parsing.",
+  "homepage": "https://github.com/Ovizro/duckduckgo-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ovizro/duckduckgo-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "duckduckgo-mcp-server",
+    "ovizro"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "duckduckgo-mcp-server"
+    ]
+  }
+}

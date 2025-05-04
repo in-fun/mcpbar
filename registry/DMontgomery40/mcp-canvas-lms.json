@@ -1,0 +1,26 @@
+{
+  "name": "canvas-mcp-server",
+  "version": "0.2.8",
+  "description": "A Model Context Protocol (MCP) server for interacting with the Canvas API. This server allows you to manage courses, assignments, enrollments, and grades within Canvas.",
+  "homepage": "https://github.com/DMontgomery40/mcp-canvas-lms",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DMontgomery40/mcp-canvas-lms"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-canvas-lms",
+    "dmontgomery40"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "canvas-mcp-server"
+    ],
+    "env": {}
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "name": "mcp-shrimp-task-manager",
+  "version": "1.0.13",
+  "description": "Shrimp Task Manager is a task tool built for AI Agents, emphasizing chain-of-thought, reflection, and style consistency. It converts natural language into structured dev tasks with dependency tracking and iterative refinement, enabling agent-like developer behavior in reasoning AI systems",
+  "homepage": "https://cjo4m06.github.io/mcp-shrimp-task-manager/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cjo4m06/mcp-shrimp-task-manager"
+  },
+  "license": "MIT",
+  "keywords": [
+    "codeagent",
+    "coding-assistant",
+    "mcp",
+    "mcp-server",
+    "task-manager",
+    "agent",
+    "thought-processes",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "data_dir",
+      "type": "promptString",
+      "description": "Environment variable for data dir configuration",
+      "password": false
+    },
+    {
+      "id": "mcp_prompt_plan_task",
+      "type": "promptString",
+      "description": "Environment variable for mcp prompt plan task configuration",
+      "password": false
+    },
+    {
+      "id": "mcp_prompt_execute_task_append",
+      "type": "promptString",
+      "description": "Environment variable for mcp prompt execute task append configuration",
+      "password": false
+    },
+    {
+      "id": "enable_thought_chain",
+      "type": "promptString",
+      "description": "Environment variable for enable thought chain configuration",
+      "password": false
+    },
+    {
+      "id": "templates_use",
+      "type": "promptString",
+      "description": "Environment variable for templates use configuration",
+      "password": false
+    },
+    {
+      "id": "enable_gui",
+      "type": "promptString",
+      "description": "Environment variable for enable gui configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/mcp-shrimp-task-manager/dist/index.js"
+    ],
+    "env": {
+      "DATA_DIR": "/path/to/project/data",
+      "MCP_PROMPT_PLAN_TASK": "Custom planning guidance...",
+      "MCP_PROMPT_EXECUTE_TASK_APPEND": "Additional execution instructions...",
+      "ENABLE_THOUGHT_CHAIN": "true",
+      "TEMPLATES_USE": "en",
+      "ENABLE_GUI": "false"
+    }
+  }
+}

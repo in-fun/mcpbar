@@ -1,0 +1,41 @@
+{
+  "name": "mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for sui-mcp-server",
+  "homepage": "https://github.com/ProbonoBonobo/sui-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ProbonoBonobo/sui-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "sui-mcp-server",
+    "probonobonobo"
+  ],
+  "inputs": [
+    {
+      "id": "github_token",
+      "type": "promptString",
+      "description": "Environment variable for github token",
+      "password": true
+    },
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-server"
+    ],
+    "env": {
+      "GITHUB_TOKEN": "${input:github_token}",
+      "OPENAI_API_KEY": "${input:openai_api_key}"
+    }
+  }
+}

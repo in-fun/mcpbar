@@ -1,0 +1,42 @@
+{
+  "name": "mcpm",
+  "version": "1.0.0",
+  "description": "CLI MCP package manager & registry for all platforms and all clients. Search & configure MCP servers. Advanced Router & Profile features.",
+  "homepage": "https://mcpm.sh/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pathintegral-institute/mcpm.sh"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "claude-desktop",
+    "cli",
+    "cline",
+    "continue",
+    "cursor",
+    "goose",
+    "llm",
+    "mcp",
+    "package-manager",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "server_url",
+      "type": "promptString",
+      "description": "Environment variable for server url",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcpm"
+    ],
+    "env": {
+      "SERVER_URL": "${input:server_url}"
+    }
+  }
+}

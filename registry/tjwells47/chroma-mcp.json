@@ -1,0 +1,62 @@
+{
+  "name": "chroma-mcp",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol (MCP) server implementation that provides database capabilities for Chroma",
+  "homepage": "https://github.com/tjwells47/chroma-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tjwells47/chroma-mcp"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "chroma-mcp",
+    "tjwells47"
+  ],
+  "inputs": [
+    {
+      "id": "chroma_api_key",
+      "type": "promptString",
+      "description": "Environment variable for chroma api key",
+      "password": true
+    },
+    {
+      "id": "chroma_host",
+      "type": "promptString",
+      "description": "Environment variable for chroma host",
+      "password": false
+    },
+    {
+      "id": "chroma_port",
+      "type": "promptString",
+      "description": "Environment variable for chroma port",
+      "password": false
+    },
+    {
+      "id": "_api_key",
+      "type": "promptString",
+      "description": "Environment variable for  api key",
+      "password": true
+    },
+    {
+      "id": "chroma_cohere_api_key",
+      "type": "promptString",
+      "description": "Environment variable for chroma cohere api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "chroma-mcp"
+    ],
+    "env": {
+      "CHROMA_API_KEY": "${input:chroma_api_key}",
+      "CHROMA_HOST": "${input:chroma_host}",
+      "CHROMA_PORT": "${input:chroma_port}",
+      "_API_KEY": "${input:_api_key}",
+      "CHROMA_COHERE_API_KEY": "${input:chroma_cohere_api_key}"
+    }
+  }
+}

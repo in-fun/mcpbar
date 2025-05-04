@@ -1,0 +1,24 @@
+{
+  "name": "my-first-mcp",
+  "version": "1.0.0",
+  "description": "my-first-mcp",
+  "homepage": "https://github.com/JHSeo-git/my-first-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JHSeo-git/my-first-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "my-first-mcp",
+    "jhseo-git"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "/absolute/path/to/your/dist/index.js"
+    ]
+  }
+}

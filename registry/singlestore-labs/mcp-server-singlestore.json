@@ -1,0 +1,26 @@
+{
+  "name": "singlestore_mcp_server",
+  "version": "1.0.0",
+  "description": "MCP server for interacting with SingleStore Management API and services",
+  "homepage": "https://pypi.org/project/singlestore-mcp-server/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/singlestore-labs/mcp-server-singlestore"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-singlestore",
+    "singlestore-labs"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "singlestore-mcp-server",
+      "start",
+      "<SINGLESTORE_API_KEY>"
+    ]
+  }
+}

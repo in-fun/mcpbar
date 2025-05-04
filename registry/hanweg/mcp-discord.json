@@ -1,0 +1,34 @@
+{
+  "name": "mcp-discord",
+  "version": "1.0.0",
+  "description": "MCP server for discord bot",
+  "homepage": "https://github.com/hanweg/mcp-discord",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hanweg/mcp-discord"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-discord",
+    "hanweg"
+  ],
+  "inputs": [
+    {
+      "id": "discord_token",
+      "type": "promptString",
+      "description": "Environment variable for discord token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-discord"
+    ],
+    "env": {
+      "DISCORD_TOKEN": "${input:discord_token}"
+    }
+  }
+}

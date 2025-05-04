@@ -1,0 +1,25 @@
+{
+  "name": "g-search-mcp",
+  "version": "0.1.5",
+  "description": "MCP server for Google search using Playwright browser",
+  "homepage": "https://github.com/jae-jae/g-search-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jae-jae/g-search-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "google-search",
+    "mcp",
+    "playwright",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "g-search-mcp"
+    ]
+  }
+}

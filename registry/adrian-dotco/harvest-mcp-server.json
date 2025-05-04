@@ -1,0 +1,35 @@
+{
+  "name": "harvest-mcp-server-setup",
+  "version": "0.1.2",
+  "description": "Natural language time tracking with Harvest",
+  "homepage": "https://github.com/adrian-dotco/harvest-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adrian-dotco/harvest-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "harvest-mcp-server",
+    "adrian-dotco"
+  ],
+  "inputs": [
+    {
+      "id": "harvest_access_token",
+      "type": "promptString",
+      "description": "Environment variable for harvest access token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "harvest-mcp-server-setup"
+    ],
+    "env": {
+      "HARVEST_ACCESS_TOKEN": "${input:harvest_access_token}"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "scraperis-mcp",
+  "version": "0.1.22",
+  "description": "Model Context Protocol (MCP) integration for Scraper.is - A web scraping tool for AI assistants",
+  "homepage": "https://github.com/Ai-Quill/scraperis-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ai-Quill/scraperis-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "scraperis-mcp",
+    "ai-quill"
+  ],
+  "inputs": [
+    {
+      "id": "scraperis_api_key",
+      "type": "promptString",
+      "description": "Environment variable for scraperis api key authentication",
+      "password": true
+    },
+    {
+      "id": "debug",
+      "type": "promptString",
+      "description": "Environment variable for debug configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "scraperis-mcp",
+    "args": [],
+    "env": {
+      "SCRAPERIS_API_KEY": "your-api-key-here",
+      "DEBUG": "*"
+    }
+  }
+}

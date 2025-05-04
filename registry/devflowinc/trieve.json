@@ -1,0 +1,78 @@
+{
+  "name": "trieve",
+  "version": "1.0.0",
+  "description": "All-in-one infrastructure for search, recommendations, RAG, and analytics offered via API",
+  "homepage": "https://trieve.ai",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devflowinc/trieve/tree/main/clients/mcp-server"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "actix-web",
+    "diesel",
+    "postgresql",
+    "qdrant",
+    "qdrant-vector-database",
+    "rust",
+    "search",
+    "search-engine",
+    "embedding",
+    "llm",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "llm_api_key",
+      "type": "promptString",
+      "description": "Environment variable for llm api key",
+      "password": true
+    },
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key",
+      "password": true
+    },
+    {
+      "id": "pagefind_cdn_base_url",
+      "type": "promptString",
+      "description": "Environment variable for pagefind cdn base url",
+      "password": false
+    },
+    {
+      "id": "_secret_key",
+      "type": "promptString",
+      "description": "Environment variable for  secret key",
+      "password": true
+    },
+    {
+      "id": "groq_api_key",
+      "type": "promptString",
+      "description": "Environment variable for groq api key",
+      "password": true
+    },
+    {
+      "id": "stripe_webhook_secret",
+      "type": "promptString",
+      "description": "Environment variable for stripe webhook secret",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "trieve"
+    ],
+    "env": {
+      "LLM_API_KEY": "${input:llm_api_key}",
+      "OPENAI_API_KEY": "${input:openai_api_key}",
+      "PAGEFIND_CDN_BASE_URL": "${input:pagefind_cdn_base_url}",
+      "_SECRET_KEY": "${input:_secret_key}",
+      "GROQ_API_KEY": "${input:groq_api_key}",
+      "STRIPE_WEBHOOK_SECRET": "${input:stripe_webhook_secret}"
+    }
+  }
+}

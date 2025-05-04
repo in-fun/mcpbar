@@ -1,0 +1,26 @@
+{
+  "name": "cursor-mcp-installer-free",
+  "version": "0.1.3",
+  "description": "A MCP server to install other MCP servers in Cursor",
+  "homepage": "https://github.com/matthewdcage/cursor-mcp-installer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matthewdcage/cursor-mcp-installer"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "cursor-mcp-installer",
+    "matthewdcage"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "type": "stdio",
+    "args": [
+      "cursor-mcp-installer-free@0.1.3",
+      "index.mjs"
+    ]
+  }
+}

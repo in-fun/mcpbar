@@ -1,0 +1,45 @@
+{
+  "name": "@promptz/mcp",
+  "version": "1.1.0",
+  "description": "MCP server to give developers access to prompts from promptz.dev",
+  "homepage": "https://www.promptz.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cremich/promptz-mcp"
+  },
+  "license": "MIT-0",
+  "keywords": [
+    "amazon-q-developer",
+    "aws",
+    "mcp-server",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "promptz_api_url",
+      "type": "promptString",
+      "description": "Environment variable for promptz api url configuration",
+      "password": false
+    },
+    {
+      "id": "promptz_api_key",
+      "type": "promptString",
+      "description": "Environment variable for promptz api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@promptz/mcp"
+    ],
+    "env": {
+      "PROMPTZ_API_URL": "your-api-url-from-promptz.dev",
+      "PROMPTZ_API_KEY": "your-api-key-from-promptz.dev"
+    },
+    "disabled": false,
+    "autoApprove": []
+  }
+}

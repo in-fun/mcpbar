@@ -1,0 +1,26 @@
+{
+  "name": "time-mcp-local",
+  "version": "1.0.0",
+  "description": "MCP server for time-mcp-local",
+  "homepage": "https://github.com/ConechoAI/time-mcp-local",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ConechoAI/time-mcp-local"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "time-mcp-local",
+    "conechoai"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "python",
+    "args": [
+      "-m",
+      "time_mcp_local",
+      "--local-timezone=America/New_York"
+    ]
+  }
+}

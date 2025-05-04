@@ -1,0 +1,42 @@
+{
+  "name": "mcp-confluence",
+  "version": "0.0.0-development",
+  "description": "A model context server for confluence",
+  "homepage": "https://github.com/mouhamadalmounayar/mcp-confluence",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mouhamadalmounayar/mcp-confluence"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-confluence",
+    "mouhamadalmounayar"
+  ],
+  "inputs": [
+    {
+      "id": "api_key",
+      "type": "promptString",
+      "description": "Environment variable for api key",
+      "password": true
+    },
+    {
+      "id": "api_token",
+      "type": "promptString",
+      "description": "Environment variable for api token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-confluence"
+    ],
+    "env": {
+      "API_KEY": "${input:api_key}",
+      "API_TOKEN": "${input:api_token}"
+    }
+  }
+}

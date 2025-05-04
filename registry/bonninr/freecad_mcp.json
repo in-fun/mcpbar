@@ -1,0 +1,24 @@
+{
+  "name": "freecad-mcp",
+  "version": "1.0.0",
+  "description": "FreecadMCP connects Freecad to Claude AI and other MCP-ready tools like Cursor through the Model Context Protocol (MCP), allowing Claude to directly interact with and control Freecad. This integration enables prompt assisted CAD 3d Design.",
+  "homepage": "https://github.com/bonninr/freecad_mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bonninr/freecad_mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "freecad_mcp",
+    "bonninr"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "C:\\ProgramData\\anaconda3\\python.exe",
+    "args": [
+      "C:\\Users\\USER\\AppData\\Roaming\\FreeCAD\\Mod\\freecad_mcp\\src\\freecad_bridge.py"
+    ]
+  }
+}

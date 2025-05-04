@@ -1,0 +1,35 @@
+{
+  "name": "mcp-memory-libsql",
+  "version": "0.0.14",
+  "description": "LibSQL-based persistent memory tool for MCP",
+  "homepage": "https://github.com/joleyline/mcp-memory-libsql",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joleyline/mcp-memory-libsql"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-memory-libsql",
+    "joleyline"
+  ],
+  "inputs": [
+    {
+      "id": "libsql_url",
+      "type": "promptString",
+      "description": "Environment variable for libsql url configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-memory-libsql"
+    ],
+    "env": {
+      "LIBSQL_URL": "file:/path/to/your/database.db"
+    }
+  }
+}

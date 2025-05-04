@@ -1,0 +1,36 @@
+{
+  "name": "mcp-server-memos",
+  "version": "1.0.0",
+  "description": "A Python package enabling LLM models to interact with the Memos server via the MCP interface for searching, creating, retrieving, and managing memos.",
+  "homepage": "https://github.com/RyoJerryYu/mcp-server-memos-py",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RyoJerryYu/mcp-server-memos-py"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "mcp-servers",
+    "memos",
+    "usememo",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "your_access_token",
+      "type": "promptString",
+      "description": "Environment variable for your access token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-server-memos"
+    ],
+    "env": {
+      "YOUR_ACCESS_TOKEN": "${input:your_access_token}"
+    }
+  }
+}

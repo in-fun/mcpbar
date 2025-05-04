@@ -1,0 +1,24 @@
+{
+  "name": "figma-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for figma-mcp",
+  "homepage": "https://github.com/JayZeeDesign/figma-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JayZeeDesign/figma-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "figma-mcp",
+    "jayzeedesign"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "figma-mcp",
+    "args": [
+      "--figma-api-key=your_figma_key"
+    ]
+  }
+}

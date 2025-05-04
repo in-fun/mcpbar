@@ -1,0 +1,33 @@
+{
+  "name": "@aashari/mcp-server-atlassian-jira",
+  "version": "1.22.1",
+  "description": "Node.js/TypeScript MCP server for Atlassian Jira. Equips AI systems (LLMs) with tools to list/get projects, search/get issues (using JQL/ID), and view dev info (commits, PRs). Connects AI capabilities directly into Jira project management and issue tracking workflows.",
+  "homepage": "https://github.com/aashari/mcp-server-atlassian-jira",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aashari/mcp-server-atlassian-jira"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "ai",
+    "ai-connector",
+    "ai-integration",
+    "anthropic",
+    "atlassian",
+    "claude",
+    "cli",
+    "external-tools",
+    "issue-tracking",
+    "jira",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@aashari/mcp-server-atlassian-jira"
+    ]
+  }
+}

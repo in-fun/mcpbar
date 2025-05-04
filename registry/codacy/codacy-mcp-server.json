@@ -1,0 +1,35 @@
+{
+  "name": "@codacy/codacy-mcp",
+  "version": "0.0.1",
+  "description": "Codacy MCP server",
+  "homepage": "https://github.com/codacy/codacy-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/codacy/codacy-mcp-server"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "codacy-mcp-server",
+    "codacy"
+  ],
+  "inputs": [
+    {
+      "id": "codacy_account_token",
+      "type": "promptString",
+      "description": "Environment variable for codacy account token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@codacy/codacy-mcp"
+    ],
+    "env": {
+      "CODACY_ACCOUNT_TOKEN": "<YOUR_TOKEN>"
+    }
+  }
+}

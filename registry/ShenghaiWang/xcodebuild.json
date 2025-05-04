@@ -1,0 +1,25 @@
+{
+  "name": "mcpxcodebuild",
+  "version": "1.0.0",
+  "description": "MCP tool for building Xcode iOS workspace/project and feeding back error to LLMs.",
+  "homepage": "https://github.com/ShenghaiWang/xcodebuild",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ShenghaiWang/xcodebuild"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "xcodebuild",
+    "shenghaiwang"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcpxcodebuild"
+    ],
+    "env": {}
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "@niledatabase/nile-mcp-server",
+  "version": "1.6.0-alpha.1",
+  "description": "Nile MCP Server Implementation",
+  "homepage": "https://github.com/niledatabase/nile-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/niledatabase/nile-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "nile-mcp-server",
+    "niledatabase"
+  ],
+  "inputs": [
+    {
+      "id": "nile_api_key",
+      "type": "promptString",
+      "description": "Environment variable for nile api key authentication",
+      "password": true
+    },
+    {
+      "id": "nile_workspace_slug",
+      "type": "promptString",
+      "description": "Environment variable for nile workspace slug configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/your/nile-mcp-server/dist/index.js"
+    ],
+    "env": {
+      "NILE_API_KEY": "your_api_key_here",
+      "NILE_WORKSPACE_SLUG": "your_workspace_slug"
+    }
+  }
+}

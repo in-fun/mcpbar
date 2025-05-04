@@ -1,0 +1,42 @@
+{
+  "name": "mcp-deep-research",
+  "version": "1.1.0",
+  "description": "MCP Deep Research is a tool that allows you to search the web for information. It is built with the Model Context Protocol and the Tavily API.",
+  "homepage": "https://github.com/baranwang/mcp-deep-research",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/baranwang/mcp-deep-research"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-deep-research",
+    "baranwang"
+  ],
+  "inputs": [
+    {
+      "id": "tavily_api_key",
+      "type": "promptString",
+      "description": "Environment variable for tavily api key",
+      "password": true
+    },
+    {
+      "id": "max_search_key",
+      "type": "promptString",
+      "description": "Environment variable for max search key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-deep-research"
+    ],
+    "env": {
+      "TAVILY_API_KEY": "${input:tavily_api_key}",
+      "MAX_SEARCH_KEY": "${input:max_search_key}"
+    }
+  }
+}

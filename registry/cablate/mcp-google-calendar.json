@@ -1,0 +1,53 @@
+{
+  "name": "@cablate/mcp-google-calendar",
+  "version": "0.0.3",
+  "description": "MCP server that provides google calendar capabilities",
+  "homepage": "https://github.com/cablate/mcp-google-calendar",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cablate/mcp-google-calendar"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "dive",
+    "google-calendar",
+    "google-calendar-api",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "google_calendar_id",
+      "type": "promptString",
+      "description": "Environment variable for google calendar id configuration",
+      "password": false
+    },
+    {
+      "id": "google_time_zone",
+      "type": "promptString",
+      "description": "Environment variable for google time zone configuration",
+      "password": false
+    },
+    {
+      "id": "google_credentials_path",
+      "type": "promptString",
+      "description": "Environment variable for google credentials path configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@cablate/mcp-google-calendar"
+    ],
+    "env": {
+      "GOOGLE_CALENDAR_ID": "your_calendar_id",
+      "GOOGLE_TIME_ZONE": "your_time_zone",
+      "GOOGLE_CREDENTIALS_PATH": "your_credentials_path"
+    },
+    "enabled": true
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "artic-mcp",
+  "version": "0.9.1",
+  "description": "A Model Context Protocol (MCP) server that provides access to the Art Institute of Chicago Collection through natural language interactions. This server allows AI models to search the Art Institute of Chicago Collection and have art works available as a Resource.",
+  "homepage": "https://github.com/mikechao/artic-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikechao/artic-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "art",
+    "model-context-protocol",
+    "art-institue-of-chicago",
+    "mcp"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "artic-mcp"
+    ],
+    "env": {}
+  }
+}

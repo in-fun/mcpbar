@@ -1,0 +1,24 @@
+{
+  "name": "mcp-server-calculator",
+  "version": "1.0.0",
+  "description": "Example project showing how to build a simple MCP Server (and having it on Smithery!)",
+  "homepage": "https://github.com/simonberner/mcp-server-calculator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/simonberner/mcp-server-calculator"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-calculator",
+    "simonberner"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "python",
+    "args": [
+      "<YOUR-PATH>/mcp-server-calculator/src/mcp_server_calculator/calculator.py"
+    ]
+  }
+}

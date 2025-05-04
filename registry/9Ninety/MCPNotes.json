@@ -1,0 +1,32 @@
+{
+  "name": "mcp-notes",
+  "version": "1.0.5",
+  "description": "A simple note-taking MCP server for recording and managing notes with AI models.",
+  "homepage": "https://github.com/9Ninety/MCPNotes",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/9Ninety/MCPNotes"
+  },
+  "license": "GPL-2.0",
+  "keywords": [
+    "ai",
+    "claude",
+    "gpt",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "note-taking"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "-p",
+      "mcp-notes",
+      "mcp-notes-server",
+      "--dynamodb",
+      "dynamodb://access_key:secret_key@region/table"
+    ]
+  }
+}

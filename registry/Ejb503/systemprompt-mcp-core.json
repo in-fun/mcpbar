@@ -1,0 +1,22 @@
+{
+  "name": "systemprompt-mcp-core",
+  "version": "1.0.29",
+  "description": "A specialized Model Context Protocol (MCP) server that integrates with systemprompt.io to provide powerful prompt management capabilities. This server enables seamless creation, management, and versioning of system prompts and agents through MCP. It works in conjunction with the multimodal-mcp-client to provide a complete voice-powered AI workflow solution.",
+  "homepage": "https://systemprompt.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ejb503/systemprompt-mcp-core"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "ai",
+    "mcp",
+    "mcp-server",
+    "systemprompt",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "/path/to/systemprompt-agent-server/build/index.js"
+  }
+}

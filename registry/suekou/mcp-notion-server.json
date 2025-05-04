@@ -1,0 +1,35 @@
+{
+  "name": "@suekou/mcp-notion-server",
+  "version": "1.2.3",
+  "description": "MCP server for interacting with Notion API based on Node",
+  "homepage": "https://github.com/suekou/mcp-notion-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suekou/mcp-notion-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-notion-server",
+    "suekou"
+  ],
+  "inputs": [
+    {
+      "id": "notion_api_token",
+      "type": "promptString",
+      "description": "Environment variable for notion api token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@suekou/mcp-notion-server"
+    ],
+    "env": {
+      "NOTION_API_TOKEN": "your-integration-token"
+    }
+  }
+}

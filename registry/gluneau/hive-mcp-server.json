@@ -1,0 +1,56 @@
+{
+  "name": "@gluneau/hive-mcp-server",
+  "version": "1.0.3",
+  "description": "An MCP server that enables AI assistants to interact with the Hive blockchain",
+  "homepage": "https://github.com/gluneau/hive-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gluneau/hive-mcp-server"
+  },
+  "license": "ISC",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "hive-mcp-server",
+    "gluneau"
+  ],
+  "inputs": [
+    {
+      "id": "hive_username",
+      "type": "promptString",
+      "description": "Environment variable for hive username configuration",
+      "password": false
+    },
+    {
+      "id": "hive_posting_key",
+      "type": "promptString",
+      "description": "Environment variable for hive posting key authentication",
+      "password": true
+    },
+    {
+      "id": "hive_active_key",
+      "type": "promptString",
+      "description": "Environment variable for hive active key authentication",
+      "password": true
+    },
+    {
+      "id": "hive_memo_key",
+      "type": "promptString",
+      "description": "Environment variable for hive memo key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@gluneau/hive-mcp-server"
+    ],
+    "env": {
+      "HIVE_USERNAME": "your-hive-username",
+      "HIVE_POSTING_KEY": "your-hive-posting-private-key",
+      "HIVE_ACTIVE_KEY": "your-hive-active-private-key",
+      "HIVE_MEMO_KEY": "your-hive-memo-private-key"
+    }
+  }
+}

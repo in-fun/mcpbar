@@ -1,0 +1,26 @@
+{
+  "name": "browser-tools-mcp",
+  "version": "1.0.0",
+  "description": "browser-tools-mcp",
+  "homepage": "https://github.com/oenius/browser-tools-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oenius/browser-tools-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "browser-tools-mcp",
+    "oenius"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "browser-tools-mcp"
+    ],
+    "env": {}
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "mcp-server-replicate",
+  "version": "1.0.0",
+  "description": "MCP server for mcp-server-replicate",
+  "homepage": "https://github.com/gerred/mcp-server-replicate",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gerred/mcp-server-replicate"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-replicate",
+    "gerred"
+  ],
+  "inputs": [
+    {
+      "id": "replicate_api_token",
+      "type": "promptString",
+      "description": "Environment variable for replicate api token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uv",
+    "args": [
+      "tool",
+      "run",
+      "mcp-server-replicate"
+    ],
+    "env": {
+      "REPLICATE_API_TOKEN": "APITOKEN"
+    },
+    "cwd": "$PATH_TO_REPO"
+  }
+}

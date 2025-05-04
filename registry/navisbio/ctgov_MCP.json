@@ -1,0 +1,41 @@
+{
+  "name": "mcp-server-aact",
+  "version": "1.0.0",
+  "description": "MCP server for ctgov_MCP",
+  "homepage": "https://github.com/navisbio/ctgov_MCP",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/navisbio/ctgov_MCP"
+  },
+  "license": "GPL-3.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ctgov_mcp",
+    "navisbio"
+  ],
+  "inputs": [
+    {
+      "id": "db_user",
+      "type": "promptString",
+      "description": "Environment variable for db user",
+      "password": false
+    },
+    {
+      "id": "db_pass",
+      "type": "promptString",
+      "description": "Environment variable for db pass",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-server-aact"
+    ],
+    "env": {
+      "DB_USER": "${input:db_user}",
+      "DB_PASS": "${input:db_pass}"
+    }
+  }
+}

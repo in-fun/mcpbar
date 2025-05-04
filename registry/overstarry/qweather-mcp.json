@@ -1,0 +1,42 @@
+{
+  "name": "qweather-mcp",
+  "version": "1.0.8",
+  "description": "QWeather MCP SDK CLI Tool",
+  "homepage": "https://github.com/overstarry/qweather-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/overstarry/qweather-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "qweather-mcp",
+    "overstarry"
+  ],
+  "inputs": [
+    {
+      "id": "qweather_api_base",
+      "type": "promptString",
+      "description": "Environment variable for qweather api base configuration",
+      "password": false
+    },
+    {
+      "id": "qweather_api_key",
+      "type": "promptString",
+      "description": "Environment variable for qweather api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "qweather-mcp"
+    ],
+    "env": {
+      "QWEATHER_API_BASE": "<your-api-url>",
+      "QWEATHER_API_KEY": "<your-api-key>"
+    }
+  }
+}

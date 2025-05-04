@@ -1,0 +1,36 @@
+{
+  "name": "mcp-local-file-reader",
+  "version": "0.1.0",
+  "description": "A Model Context Protocol server for reading local files",
+  "homepage": "https://github.com/sworddut/mcp-local-file-reader",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sworddut/mcp-local-file-reader"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-local-file-reader",
+    "sworddut"
+  ],
+  "inputs": [
+    {
+      "id": "file_tools_api_key",
+      "type": "promptString",
+      "description": "Environment variable for file tools api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "cmd",
+    "args": [
+      "/c",
+      "node",
+      "path/to/mcp-local-file-reader/build/index.js"
+    ],
+    "env": {
+      "FILE_TOOLS_API_KEY": ""
+    }
+  }
+}

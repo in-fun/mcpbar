@@ -1,0 +1,24 @@
+{
+  "name": "ttaat",
+  "version": "1.0.0",
+  "description": "Two Truths and a Twist: The world's first Model Context Protocol game",
+  "homepage": "https://github.com/ErgodicLabs/TwoTruthsAndATwist",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ErgodicLabs/TwoTruthsAndATwist"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "twotruthsandatwist",
+    "ergodiclabs"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "ttaat",
+    "args": [
+      "serve"
+    ]
+  }
+}

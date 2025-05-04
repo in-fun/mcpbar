@@ -1,0 +1,25 @@
+{
+  "name": "whiskerrag",
+  "version": "1.0.0",
+  "description": "MCP server for whiskerrag_toolkit",
+  "homepage": "https://github.com/petercat-ai/whiskerrag_toolkit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/petercat-ai/whiskerrag_toolkit"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "whiskerrag_toolkit",
+    "petercat-ai"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "whiskerrag"
+    ],
+    "env": {}
+  }
+}

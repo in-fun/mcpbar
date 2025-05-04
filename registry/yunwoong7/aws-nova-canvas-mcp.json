@@ -1,0 +1,41 @@
+{
+  "name": "aws-nova-canvas-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for generating and editing images using AWS Bedrock’s Nova Canvas model",
+  "homepage": "https://github.com/yunwoong7/aws-nova-canvas-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yunwoong7/aws-nova-canvas-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "aws-nova-canvas-mcp",
+    "yunwoong7"
+  ],
+  "inputs": [
+    {
+      "id": "aws_access_key",
+      "type": "promptString",
+      "description": "Environment variable for aws access key",
+      "password": true
+    },
+    {
+      "id": "aws_secret_access_key",
+      "type": "promptString",
+      "description": "Environment variable for aws secret access key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "aws-nova-canvas-mcp"
+    ],
+    "env": {
+      "AWS_ACCESS_KEY": "${input:aws_access_key}",
+      "AWS_SECRET_ACCESS_KEY": "${input:aws_secret_access_key}"
+    }
+  }
+}

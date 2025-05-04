@@ -1,0 +1,64 @@
+{
+  "name": "mysql-mcp-server",
+  "version": "0.1.3",
+  "description": "An MCP server that provides read-only access to MySQL databases.",
+  "homepage": "https://github.com/dpflucas/mysql-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dpflucas/mysql-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mysql-mcp-server",
+    "dpflucas"
+  ],
+  "inputs": [
+    {
+      "id": "mysql_host",
+      "type": "promptString",
+      "description": "Environment variable for mysql host configuration",
+      "password": false
+    },
+    {
+      "id": "mysql_port",
+      "type": "promptString",
+      "description": "Environment variable for mysql port configuration",
+      "password": false
+    },
+    {
+      "id": "mysql_user",
+      "type": "promptString",
+      "description": "Environment variable for mysql user configuration",
+      "password": false
+    },
+    {
+      "id": "mysql_password",
+      "type": "promptString",
+      "description": "Environment variable for mysql password authentication",
+      "password": false
+    },
+    {
+      "id": "mysql_database",
+      "type": "promptString",
+      "description": "Environment variable for mysql database configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "mysql-mcp-server"
+    ],
+    "env": {
+      "MYSQL_HOST": "your-mysql-host",
+      "MYSQL_PORT": "3306",
+      "MYSQL_USER": "your-mysql-user",
+      "MYSQL_PASSWORD": "your-mysql-password",
+      "MYSQL_DATABASE": "your-default-database"
+    },
+    "disabled": false,
+    "autoApprove": []
+  }
+}

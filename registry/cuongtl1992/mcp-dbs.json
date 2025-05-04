@@ -1,0 +1,42 @@
+{
+  "name": "mcp-dbs",
+  "version": "1.0.4",
+  "description": "MCP TypeScript SDK for database connections",
+  "homepage": "https://github.com/cuongtl1992/mcp-dbs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cuongtl1992/mcp-dbs"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-dbs",
+    "cuongtl1992"
+  ],
+  "inputs": [
+    {
+      "id": "mcp_mongodb_uri",
+      "type": "promptString",
+      "description": "Environment variable for mcp mongodb uri configuration",
+      "password": false
+    },
+    {
+      "id": "mcp_mongodb_database",
+      "type": "promptString",
+      "description": "Environment variable for mcp mongodb database configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/your/mcp-dbs/dist/cli.js",
+      "--stdio"
+    ],
+    "env": {
+      "MCP_MONGODB_URI": "mongodb://localhost:27017",
+      "MCP_MONGODB_DATABASE": "your-database-name"
+    }
+  }
+}

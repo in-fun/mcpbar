@@ -1,0 +1,34 @@
+{
+  "name": "dappier-mcp",
+  "version": "1.0.0",
+  "description": "Enable fast, free real-time web search and access premium data from trusted media brands—news, financial markets, sports, entertainment, weather, and more. Build powerful AI agents with Dappier.",
+  "homepage": "https://dappier.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DappierAI/dappier-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "dappier-mcp",
+    "dappierai"
+  ],
+  "inputs": [
+    {
+      "id": "dappier_api_key",
+      "type": "promptString",
+      "description": "Environment variable for dappier api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "dappier-mcp"
+    ],
+    "env": {
+      "DAPPIER_API_KEY": "YOUR_API_KEY_HERE"
+    }
+  }
+}

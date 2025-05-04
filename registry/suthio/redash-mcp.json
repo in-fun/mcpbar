@@ -1,0 +1,42 @@
+{
+  "name": "@suthio/redash-mcp",
+  "version": "0.0.2",
+  "description": "MCP server for Redash integration",
+  "homepage": "https://github.com/suthio/redash-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suthio/redash-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "redash-mcp",
+    "suthio"
+  ],
+  "inputs": [
+    {
+      "id": "redash_api_key",
+      "type": "promptString",
+      "description": "Environment variable for redash api key authentication",
+      "password": true
+    },
+    {
+      "id": "redash_url",
+      "type": "promptString",
+      "description": "Environment variable for redash url configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@suthio/redash-mcp"
+    ],
+    "env": {
+      "REDASH_API_KEY": "your-api-key",
+      "REDASH_URL": "https://your-redash-instance.com"
+    }
+  }
+}

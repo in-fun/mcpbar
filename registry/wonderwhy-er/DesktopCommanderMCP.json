@@ -1,0 +1,30 @@
+{
+  "name": "@wonderwhy-er/desktop-commander",
+  "version": "0.1.38",
+  "description": "MCP server for terminal operations and file editing",
+  "homepage": "https://desktopcommander.app/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP"
+  },
+  "license": "MIT",
+  "keywords": [
+    "agent",
+    "ai",
+    "code-analysis",
+    "code-generation",
+    "mcp",
+    "terminal-ai",
+    "terminal-automation",
+    "vibe-coding",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@wonderwhy-er/desktop-commander"
+    ]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "@earnbasejs/mcp-github",
+  "version": "0.6.6",
+  "description": "MCP server for using the GitHub API",
+  "homepage": "https://github.com/tuanle96/mcp-github",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tuanle96/mcp-github"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-github",
+    "tuanle96"
+  ],
+  "inputs": [
+    {
+      "id": "github_personal_access_token",
+      "type": "promptString",
+      "description": "Environment variable for github personal access token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "docker",
+    "args": [
+      "run",
+      "-i",
+      "--rm",
+      "-e",
+      "GITHUB_PERSONAL_ACCESS_TOKEN",
+      "ghcr.io/tuanle96/mcp-github"
+    ],
+    "env": {
+      "GITHUB_PERSONAL_ACCESS_TOKEN": "<YOUR_TOKEN>"
+    }
+  }
+}

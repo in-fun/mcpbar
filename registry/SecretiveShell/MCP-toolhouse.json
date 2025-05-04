@@ -1,0 +1,49 @@
+{
+  "name": "mcp-toolhouse",
+  "version": "1.0.0",
+  "description": "A model context protocol (MCP) server that provides access to tools from the https://toolhouse.ai platform.",
+  "homepage": "https://github.com/SecretiveShell/MCP-toolhouse",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SecretiveShell/MCP-toolhouse"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-toolhouse",
+    "secretiveshell"
+  ],
+  "inputs": [
+    {
+      "id": "toolhouse_api_key",
+      "type": "promptString",
+      "description": "Environment variable for toolhouse api key authentication",
+      "password": true
+    },
+    {
+      "id": "toolhouse_bundle",
+      "type": "promptString",
+      "description": "Environment variable for toolhouse bundle configuration",
+      "password": false
+    },
+    {
+      "id": "pythonutf8",
+      "type": "promptString",
+      "description": "Environment variable for pythonutf8 configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uv",
+    "args": [
+      "run",
+      "mcp-toolhouse"
+    ],
+    "env": {
+      "TOOLHOUSE_API_KEY": "th-******************_*****_******************",
+      "TOOLHOUSE_BUNDLE": "toolhouse-bundle-name",
+      "PYTHONUTF8": "1"
+    }
+  }
+}

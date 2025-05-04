@@ -1,0 +1,42 @@
+{
+  "name": "@translated/lara-mcp",
+  "version": "0.0.10",
+  "description": "Lara API official MCP server",
+  "homepage": "https://github.com/translated/lara-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/translated/lara-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "lara-mcp",
+    "translated"
+  ],
+  "inputs": [
+    {
+      "id": "lara_access_key_id",
+      "type": "promptString",
+      "description": "Environment variable for lara access key id authentication",
+      "password": true
+    },
+    {
+      "id": "lara_access_key_secret",
+      "type": "promptString",
+      "description": "Environment variable for lara access key secret authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@translated/lara-mcp@latest"
+    ],
+    "env": {
+      "LARA_ACCESS_KEY_ID": "<YOUR_ACCESS_KEY_ID>",
+      "LARA_ACCESS_KEY_SECRET": "<YOUR_ACCESS_KEY_SECRET>"
+    }
+  }
+}

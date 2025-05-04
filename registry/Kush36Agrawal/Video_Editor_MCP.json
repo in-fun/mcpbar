@@ -1,0 +1,25 @@
+{
+  "name": "video-editor",
+  "version": "1.0.0",
+  "description": "MCP server for Video_Editor_MCP",
+  "homepage": "https://github.com/Kush36Agrawal/Video_Editor_MCP",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kush36Agrawal/Video_Editor_MCP"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "video_editor_mcp",
+    "kush36agrawal"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uv",
+    "args": [
+      "run",
+      "video-editor"
+    ]
+  }
+}

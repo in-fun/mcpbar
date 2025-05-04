@@ -1,0 +1,26 @@
+{
+  "name": "mcp-grep",
+  "version": "1.0.0",
+  "description": "simple mcp server to wrap the local instance of grep.",
+  "homepage": "https://github.com/erniebrodeur/mcp-grep",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erniebrodeur/mcp-grep"
+  },
+  "license": "GPL-3.0",
+  "keywords": [
+    "anthropic",
+    "mcp-server",
+    "mcp",
+    "vscode",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-grep"
+    ],
+    "env": {}
+  }
+}

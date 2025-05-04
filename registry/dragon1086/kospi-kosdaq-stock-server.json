@@ -1,0 +1,23 @@
+{
+  "name": "kospi-kosdaq-stock-server",
+  "version": "1.0.0",
+  "description": "An MCP server that provides KOSPI/KOSDAQ stock data using FastMCP",
+  "homepage": "https://github.com/dragon1086/kospi-kosdaq-stock-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dragon1086/kospi-kosdaq-stock-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "finance",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "kospi_kosdaq_stock_server"
+    ]
+  }
+}

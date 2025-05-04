@@ -1,0 +1,41 @@
+{
+  "name": "flights-mcp",
+  "version": "1.0.0",
+  "description": "An MCP server to search for flights.",
+  "homepage": "https://github.com/ravinahp/flights-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ravinahp/flights-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "flights-mcp",
+    "ravinahp"
+  ],
+  "inputs": [
+    {
+      "id": "your_user",
+      "type": "promptString",
+      "description": "Environment variable for your user",
+      "password": false
+    },
+    {
+      "id": "duffel_api_key",
+      "type": "promptString",
+      "description": "Environment variable for duffel api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "flights-mcp"
+    ],
+    "env": {
+      "YOUR_USER": "${input:your_user}",
+      "DUFFEL_API_KEY": "${input:duffel_api_key}"
+    }
+  }
+}

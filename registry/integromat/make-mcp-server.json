@@ -1,0 +1,49 @@
+{
+  "name": "@makehq/mcp-server",
+  "version": "0.5.0",
+  "description": "MCP server for interacting with Make automations",
+  "homepage": "https://github.com/integromat/make-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/integromat/make-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "make-mcp-server",
+    "integromat"
+  ],
+  "inputs": [
+    {
+      "id": "make_api_key",
+      "type": "promptString",
+      "description": "Environment variable for make api key authentication",
+      "password": true
+    },
+    {
+      "id": "make_zone",
+      "type": "promptString",
+      "description": "Environment variable for make zone configuration",
+      "password": false
+    },
+    {
+      "id": "make_team",
+      "type": "promptString",
+      "description": "Environment variable for make team configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@makehq/mcp-server"
+    ],
+    "env": {
+      "MAKE_API_KEY": "<your-api-key>",
+      "MAKE_ZONE": "<your-zone>",
+      "MAKE_TEAM": "<your-team-id>"
+    }
+  }
+}

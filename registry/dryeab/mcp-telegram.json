@@ -1,0 +1,32 @@
+{
+  "name": "mcp-telegram",
+  "version": "1.0.0",
+  "description": "MCP Server for Telegram",
+  "homepage": "https://x.com/dryeab/status/1912187620131487999",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dryeab/mcp-telegram"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude",
+    "llm",
+    "mcp",
+    "telegram",
+    "ai",
+    "cursor",
+    "telethon",
+    "mtproto",
+    "bot",
+    "telegram-bot",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-telegram"
+    ],
+    "env": {}
+  }
+}

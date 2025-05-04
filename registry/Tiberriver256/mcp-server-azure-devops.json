@@ -1,0 +1,49 @@
+{
+  "name": "@tiberriver256/mcp-server-azure-devops",
+  "version": "0.1.34",
+  "description": "Azure DevOps reference server for the Model Context Protocol (MCP)",
+  "homepage": "https://github.com/Tiberriver256/mcp-server-azure-devops",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tiberriver256/mcp-server-azure-devops"
+  },
+  "license": "MIT",
+  "keywords": [
+    "azure-devops",
+    "mcp-server",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "azure_devops_org_url",
+      "type": "promptString",
+      "description": "Environment variable for azure devops org url configuration",
+      "password": false
+    },
+    {
+      "id": "azure_devops_auth_method",
+      "type": "promptString",
+      "description": "Environment variable for azure devops auth method configuration",
+      "password": false
+    },
+    {
+      "id": "azure_devops_default_project",
+      "type": "promptString",
+      "description": "Environment variable for azure devops default project configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@tiberriver256/mcp-server-azure-devops"
+    ],
+    "env": {
+      "AZURE_DEVOPS_ORG_URL": "https://dev.azure.com/your-organization",
+      "AZURE_DEVOPS_AUTH_METHOD": "azure-identity",
+      "AZURE_DEVOPS_DEFAULT_PROJECT": "your-project-name"
+    }
+  }
+}

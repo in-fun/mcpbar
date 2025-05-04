@@ -1,0 +1,24 @@
+{
+  "name": "class",
+  "version": "1.0.0",
+  "description": "MCP server for google-classroom-mcp-server",
+  "homepage": "https://github.com/faizan45640/google-classroom-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/faizan45640/google-classroom-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "google-classroom-mcp-server",
+    "faizan45640"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "PATH_TO_YOUR_DIRECTORY\\index.js"
+    ]
+  }
+}

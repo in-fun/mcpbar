@@ -1,0 +1,30 @@
+{
+  "name": "sdk",
+  "version": "2.2.2",
+  "description": "Integrate SettleMint into your application with ease.",
+  "homepage": "https://settlemint.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/settlemint/sdk"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "blockchain-transformation",
+    "hasura",
+    "nextjs",
+    "sdk",
+    "smart-contracts",
+    "thegraphprotocol",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "sdk"
+    ],
+    "env": {}
+  }
+}

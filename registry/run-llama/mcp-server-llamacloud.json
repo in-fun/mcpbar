@@ -1,0 +1,51 @@
+{
+  "name": "@llamaindex/mcp-server-llamacloud",
+  "version": "0.1.1",
+  "description": "A MCP server connecting to a managed index on LlamaCloud",
+  "homepage": "https://github.com/run-llama/mcp-server-llamacloud",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/run-llama/mcp-server-llamacloud"
+  },
+  "license": "MIT",
+  "keywords": [
+    "aitool",
+    "llamaindex",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "llama_cloud_project_name",
+      "type": "promptString",
+      "description": "Environment variable for llama cloud project name configuration",
+      "password": false
+    },
+    {
+      "id": "llama_cloud_api_key",
+      "type": "promptString",
+      "description": "Environment variable for llama cloud api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@llamaindex/mcp-server-llamacloud",
+      "--index",
+      "10k-SEC-Tesla",
+      "--description",
+      "10k SEC documents from 2023 for Tesla",
+      "--index",
+      "10k-SEC-Apple",
+      "--description",
+      "10k SEC documents from 2023 for Apple"
+    ],
+    "env": {
+      "LLAMA_CLOUD_PROJECT_NAME": "<YOUR_PROJECT_NAME>",
+      "LLAMA_CLOUD_API_KEY": "<YOUR_API_KEY>"
+    }
+  }
+}

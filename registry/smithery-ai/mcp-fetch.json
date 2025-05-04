@@ -1,0 +1,26 @@
+{
+  "name": "@smithery/mcp-fetch",
+  "version": "0.8.12",
+  "description": "A Model Context Protocol server that provides web content fetching capabilities",
+  "homepage": "https://github.com/smithery-ai/mcp-fetch",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smithery-ai/mcp-fetch"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-fetch",
+    "smithery-ai"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@smithery/mcp-fetch"
+    ],
+    "env": {}
+  }
+}

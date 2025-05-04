@@ -1,0 +1,37 @@
+{
+  "name": "flightradar-mcp-server",
+  "version": "0.1.0",
+  "description": "A Model Context Protocol server for flight tracking and status information",
+  "homepage": "https://github.com/Cyreslab-AI/flightradar-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cyreslab-AI/flightradar-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "cyreslab",
+    "mcp",
+    "mcp-server",
+    "security-tools",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "aviationstack_api_key",
+      "type": "promptString",
+      "description": "Environment variable for aviationstack api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/flightradar-mcp-server/build/index.js"
+    ],
+    "env": {
+      "AVIATIONSTACK_API_KEY": "YOUR_API_KEY_HERE"
+    },
+    "disabled": false,
+    "autoApprove": []
+  }
+}

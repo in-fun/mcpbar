@@ -1,0 +1,26 @@
+{
+  "name": "@vj-presidio/specif-ai-mcp-server",
+  "version": "0.6.2",
+  "description": "Specif-ai MCP Server that runs over stdio",
+  "homepage": "https://github.com/vj-presidio/specif-ai-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vj-presidio/specif-ai-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "specif-ai-mcp-server",
+    "vj-presidio"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@vj-presidio/specif-ai-mcp-server"
+    ],
+    "env": {}
+  }
+}

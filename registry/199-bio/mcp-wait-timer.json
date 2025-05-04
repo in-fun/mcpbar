@@ -1,0 +1,26 @@
+{
+  "name": "mcp-wait-timer",
+  "version": "0.1.8",
+  "description": "MCP server with a simple wait tool",
+  "homepage": "https://github.com/199-bio/mcp-wait-timer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/199-bio/mcp-wait-timer"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-wait-timer",
+    "199-bio"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-wait-timer"
+    ],
+    "env": {}
+  }
+}

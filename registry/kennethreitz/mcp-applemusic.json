@@ -1,0 +1,25 @@
+{
+  "name": "mcp-applemusic",
+  "version": "1.0.0",
+  "description": "An experimental MCP server for controlling Apple Music.",
+  "homepage": "https://github.com/kennethreitz/mcp-applemusic",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kennethreitz/mcp-applemusic"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-applemusic",
+    "kennethreitz"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "-n",
+      "mcp-applemusic"
+    ]
+  }
+}

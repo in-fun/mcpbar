@@ -1,0 +1,34 @@
+{
+  "name": "webflow-mcp-server",
+  "version": "1.0.0",
+  "description": "An MCP server for using Webflow APIs",
+  "homepage": "https://github.com/TimKJones/mcp-webflow",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TimKJones/mcp-webflow"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-webflow",
+    "timkjones"
+  ],
+  "inputs": [
+    {
+      "id": "webflow_api_token",
+      "type": "promptString",
+      "description": "Environment variable for webflow api token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "/ABSOLUTE/PATH/TO/YOUR/build/index.js"
+    ],
+    "env": {
+      "WEBFLOW_API_TOKEN": "your-api-token"
+    }
+  }
+}

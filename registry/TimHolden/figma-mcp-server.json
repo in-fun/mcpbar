@@ -1,0 +1,34 @@
+{
+  "name": "figma-mcp-server",
+  "version": "1.0.0",
+  "description": "Model Context Protocol server implementation for Figma API",
+  "homepage": "https://github.com/TimHolden/figma-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TimHolden/figma-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "figma-mcp-server",
+    "timholden"
+  ],
+  "inputs": [
+    {
+      "id": "figma_access_token",
+      "type": "promptString",
+      "description": "Environment variable for figma access token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "/ABSOLUTE/PATH/TO/figma-mcp-server/dist/index.js"
+    ],
+    "env": {
+      "FIGMA_ACCESS_TOKEN": "your_token_here"
+    }
+  }
+}

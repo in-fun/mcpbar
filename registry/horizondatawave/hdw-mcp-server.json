@@ -1,0 +1,42 @@
+{
+  "name": "@horizondatawave/mcp",
+  "version": "0.1.3",
+  "description": "A Model Context Protocol (MCP) server that provides access to Horizon Data Wave's LinkedIn API",
+  "homepage": "https://github.com/horizondatawave/hdw-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/horizondatawave/hdw-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "hdw-mcp-server",
+    "horizondatawave"
+  ],
+  "inputs": [
+    {
+      "id": "hdw_access_token",
+      "type": "promptString",
+      "description": "Environment variable for hdw access token authentication",
+      "password": true
+    },
+    {
+      "id": "hdw_account_id",
+      "type": "promptString",
+      "description": "Environment variable for hdw account id configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@horizondatawave/mcp"
+    ],
+    "env": {
+      "HDW_ACCESS_TOKEN": "YOUR_HD_W_ACCESS_TOKEN",
+      "HDW_ACCOUNT_ID": "YOUR_HD_W_ACCOUNT_ID"
+    }
+  }
+}

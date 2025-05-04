@@ -1,0 +1,25 @@
+{
+  "name": "mongo-mcp",
+  "version": "0.2.0",
+  "description": "MCP server for interacting with MongoDB databases",
+  "homepage": "https://github.com/nickiiitu/MongoDB-Model-Context-Protocol-MCP-",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nickiiitu/MongoDB-Model-Context-Protocol-MCP-"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mongodb-model-context-protocol-mcp-",
+    "nickiiitu"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "mongo-mcp",
+      "mongodb://<username>:<password>@<host>:<port>/<database>?authSource=admin"
+    ]
+  }
+}

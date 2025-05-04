@@ -1,0 +1,65 @@
+{
+  "name": "aws-s3-mcp",
+  "version": "0.2.5",
+  "description": "MCP Server for S3",
+  "homepage": "https://github.com/samuraikun/aws-s3-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samuraikun/aws-s3-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "aws-s3",
+    "mcp",
+    "typescript",
+    "aws",
+    "mcp-servers",
+    "modelcontextprotocol",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "aws_region",
+      "type": "promptString",
+      "description": "Environment variable for aws region configuration",
+      "password": false
+    },
+    {
+      "id": "s3_buckets",
+      "type": "promptString",
+      "description": "Environment variable for s3 buckets configuration",
+      "password": false
+    },
+    {
+      "id": "s3_max_buckets",
+      "type": "promptString",
+      "description": "Environment variable for s3 max buckets configuration",
+      "password": false
+    },
+    {
+      "id": "aws_access_key_id",
+      "type": "promptString",
+      "description": "Environment variable for aws access key id authentication",
+      "password": true
+    },
+    {
+      "id": "aws_secret_access_key",
+      "type": "promptString",
+      "description": "Environment variable for aws secret access key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "aws-s3-mcp"
+    ],
+    "env": {
+      "AWS_REGION": "us-east-1",
+      "S3_BUCKETS": "bucket1,bucket2,bucket3",
+      "S3_MAX_BUCKETS": "5",
+      "AWS_ACCESS_KEY_ID": "your-access-key",
+      "AWS_SECRET_ACCESS_KEY": "your-secret-key"
+    }
+  }
+}

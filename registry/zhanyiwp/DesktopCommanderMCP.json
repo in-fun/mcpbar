@@ -1,0 +1,25 @@
+{
+  "name": "@wonderwhy-er/desktop-commander",
+  "version": "0.1.22",
+  "description": "MCP server for terminal operations and file editing",
+  "homepage": "https://github.com/zhanyiwp/DesktopCommanderMCP",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhanyiwp/DesktopCommanderMCP"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "desktopcommandermcp",
+    "zhanyiwp"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@wonderwhy-er/desktop-commander"
+    ]
+  }
+}

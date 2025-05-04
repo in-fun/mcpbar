@@ -1,0 +1,25 @@
+{
+  "name": "@cloudflare/mcp-server-cloudflare",
+  "version": "1.0.0",
+  "description": "MCP server for interacting with Cloudflare API",
+  "homepage": "https://github.com/cloudflare/mcp-server-cloudflare",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cloudflare/mcp-server-cloudflare"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-cloudflare",
+    "cloudflare"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "mcp-remote",
+      "https://observability.mcp.cloudflare.com/sse"
+    ]
+  }
+}

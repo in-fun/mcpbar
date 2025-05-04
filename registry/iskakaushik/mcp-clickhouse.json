@@ -1,0 +1,55 @@
+{
+  "name": "mcp-clickhouse",
+  "version": "1.0.0",
+  "description": "MCP server for mcp-clickhouse",
+  "homepage": "https://github.com/iskakaushik/mcp-clickhouse",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iskakaushik/mcp-clickhouse"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-clickhouse",
+    "iskakaushik"
+  ],
+  "inputs": [
+    {
+      "id": "clickhouse_host",
+      "type": "promptString",
+      "description": "Environment variable for clickhouse host",
+      "password": false
+    },
+    {
+      "id": "clickhouse_port",
+      "type": "promptString",
+      "description": "Environment variable for clickhouse port",
+      "password": false
+    },
+    {
+      "id": "clickhouse_user",
+      "type": "promptString",
+      "description": "Environment variable for clickhouse user",
+      "password": false
+    },
+    {
+      "id": "clickhouse_pass",
+      "type": "promptString",
+      "description": "Environment variable for clickhouse pass",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-clickhouse"
+    ],
+    "env": {
+      "CLICKHOUSE_HOST": "${input:clickhouse_host}",
+      "CLICKHOUSE_PORT": "${input:clickhouse_port}",
+      "CLICKHOUSE_USER": "${input:clickhouse_user}",
+      "CLICKHOUSE_PASS": "${input:clickhouse_pass}"
+    }
+  }
+}

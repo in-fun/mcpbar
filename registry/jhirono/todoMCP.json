@@ -1,0 +1,35 @@
+{
+  "name": "@jhirono/todomcp",
+  "version": "1.0.0",
+  "description": "Microsoft Todo MCP service for Claude and Cursor",
+  "homepage": "https://github.com/jhirono/todoMCP",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jhirono/todoMCP"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "todomcp",
+    "jhirono"
+  ],
+  "inputs": [
+    {
+      "id": "client_secret",
+      "type": "promptString",
+      "description": "Environment variable for client secret",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@jhirono/todomcp"
+    ],
+    "env": {
+      "CLIENT_SECRET": "${input:client_secret}"
+    }
+  }
+}

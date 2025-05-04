@@ -1,0 +1,49 @@
+{
+  "name": "mcp-trello",
+  "version": "0.1.2",
+  "description": "A Model Context Protocol server for Trello",
+  "homepage": "https://github.com/Hint-Services/mcp-trello",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hint-Services/mcp-trello"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-trello",
+    "hint-services"
+  ],
+  "inputs": [
+    {
+      "id": "trelloapikey",
+      "type": "promptString",
+      "description": "Environment variable for trelloapikey configuration",
+      "password": false
+    },
+    {
+      "id": "trellotoken",
+      "type": "promptString",
+      "description": "Environment variable for trellotoken configuration",
+      "password": false
+    },
+    {
+      "id": "trelloboardid",
+      "type": "promptString",
+      "description": "Environment variable for trelloboardid configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@Hint-Services/mcp-trello"
+    ],
+    "env": {
+      "trelloApiKey": "your-api-key",
+      "trelloToken": "your-token",
+      "trelloBoardId": "your-board-id"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "mcp-nixos",
+  "version": "1.0.0",
+  "description": "MCP-NixOS - Model Context Protocol Server for NixOS resources",
+  "homepage": "https://mcp-nixos.io/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/utensils/mcp-nixos"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai-assistant",
+    "ai-integration",
+    "ai-tools",
+    "anthropic",
+    "claude",
+    "developer-tools",
+    "devops-tools",
+    "fastmcp",
+    "llm-tools",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-nixos"
+    ]
+  }
+}

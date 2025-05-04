@@ -1,0 +1,25 @@
+{
+  "name": "@devabdultech/hn-mcp-server",
+  "version": "1.2.2",
+  "description": "MCP Server for using the Hacker News API",
+  "homepage": "https://github.com/devabdultech/hn-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devabdultech/hn-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "hn-mcp",
+    "devabdultech"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@devabdultech/hn-mcp-server"
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "name": "mysql_mcp_server",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol (MCP) server that enables secure interaction with MySQL databases",
+  "homepage": "https://github.com/designcomputer/mysql_mcp_server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/designcomputer/mysql_mcp_server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "mcp",
+    "model-context-protocol",
+    "mysql"
+  ],
+  "inputs": [
+    {
+      "id": "mysql_host",
+      "type": "promptString",
+      "description": "Environment variable for mysql host configuration",
+      "password": false
+    },
+    {
+      "id": "mysql_port",
+      "type": "promptString",
+      "description": "Environment variable for mysql port configuration",
+      "password": false
+    },
+    {
+      "id": "mysql_user",
+      "type": "promptString",
+      "description": "Environment variable for mysql user configuration",
+      "password": false
+    },
+    {
+      "id": "mysql_password",
+      "type": "promptString",
+      "description": "Environment variable for mysql password authentication",
+      "password": false
+    },
+    {
+      "id": "mysql_database",
+      "type": "promptString",
+      "description": "Environment variable for mysql database configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "path/to/mysql_mcp_server",
+      "run",
+      "mysql_mcp_server"
+    ],
+    "env": {
+      "MYSQL_HOST": "localhost",
+      "MYSQL_PORT": "3306",
+      "MYSQL_USER": "your_username",
+      "MYSQL_PASSWORD": "your_password",
+      "MYSQL_DATABASE": "your_database"
+    }
+  }
+}

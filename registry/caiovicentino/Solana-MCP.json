@@ -1,0 +1,49 @@
+{
+  "name": "solana-mcp",
+  "version": "1.0.0",
+  "description": "Model Context Protocol server for AI agents to interact with Solana blockchain",
+  "homepage": "https://github.com/caiovicentino/Solana-MCP",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/caiovicentino/Solana-MCP"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "solana-mcp",
+    "caiovicentino"
+  ],
+  "inputs": [
+    {
+      "id": "solana_private_key",
+      "type": "promptString",
+      "description": "Environment variable for solana private key",
+      "password": true
+    },
+    {
+      "id": "rpc_url",
+      "type": "promptString",
+      "description": "Environment variable for rpc url",
+      "password": false
+    },
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "solana-mcp"
+    ],
+    "env": {
+      "SOLANA_PRIVATE_KEY": "${input:solana_private_key}",
+      "RPC_URL": "${input:rpc_url}",
+      "OPENAI_API_KEY": "${input:openai_api_key}"
+    }
+  }
+}

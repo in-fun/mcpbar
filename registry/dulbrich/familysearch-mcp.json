@@ -1,0 +1,26 @@
+{
+  "name": "familysearch",
+  "version": "1.0.0",
+  "description": "Plug FamilySearch into Claude and Cursor AI",
+  "homepage": "https://github.com/dulbrich/familysearch-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dulbrich/familysearch-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "familysearch-mcp",
+    "dulbrich"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "familysearch"
+    ],
+    "env": {}
+  }
+}

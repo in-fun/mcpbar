@@ -1,0 +1,29 @@
+{
+  "name": "mcp-korea-tourism-api",
+  "version": "1.0.0",
+  "description": "Model Context Protocol (MCP) server that provides tools for accessing the Korea Tourism API",
+  "homepage": "https://github.com/harimkang/mcp-korea-tourism-api",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/harimkang/mcp-korea-tourism-api"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-korea-tourism-api",
+    "harimkang"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "docker",
+    "args": [
+      "run",
+      "--rm",
+      "-i",
+      "-e",
+      "KOREA_TOURISM_API_KEY=YOUR_KTO_API_KEY",
+      "mcp-korea-tourism-api"
+    ]
+  }
+}

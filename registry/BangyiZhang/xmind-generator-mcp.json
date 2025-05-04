@@ -1,0 +1,41 @@
+{
+  "name": "xmind-generator-mcp",
+  "version": "0.1.1",
+  "description": "MCP server for generating Xmind mind maps",
+  "homepage": "https://github.com/BangyiZhang/xmind-generator-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BangyiZhang/xmind-generator-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "xmind-generator-mcp",
+    "bangyizhang"
+  ],
+  "inputs": [
+    {
+      "id": "outputpath",
+      "type": "promptString",
+      "description": "Environment variable for outputpath configuration",
+      "password": false
+    },
+    {
+      "id": "autoopenfile",
+      "type": "promptString",
+      "description": "Environment variable for autoopenfile configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "xmind-generator-mcp"
+    ],
+    "env": {
+      "outputPath": "/path/to/save/xmind/files",
+      "autoOpenFile": "false"
+    }
+  }
+}

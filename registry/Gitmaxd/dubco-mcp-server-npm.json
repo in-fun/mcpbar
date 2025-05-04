@@ -1,0 +1,38 @@
+{
+  "name": "dubco-mcp-server",
+  "version": "1.0.5",
+  "description": "Model Context Protocol (MCP) server for creating and managing Dub.co short links",
+  "homepage": "https://github.com/Gitmaxd/dubco-mcp-server-npm",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Gitmaxd/dubco-mcp-server-npm"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "cline",
+    "cursorai",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "dubco_api_key",
+      "type": "promptString",
+      "description": "Environment variable for dubco api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "dubco-mcp-server"
+    ],
+    "env": {
+      "DUBCO_API_KEY": "your_api_key_here"
+    },
+    "disabled": false,
+    "autoApprove": []
+  }
+}

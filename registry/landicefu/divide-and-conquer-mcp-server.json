@@ -1,0 +1,26 @@
+{
+  "name": "@landicefu/divide-and-conquer-mcp-server",
+  "version": "1.1.1",
+  "description": "An MCP server for breaking down complex tasks into manageable pieces with structured JSON storage",
+  "homepage": "https://github.com/landicefu/divide-and-conquer-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/landicefu/divide-and-conquer-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "divide-and-conquer-mcp-server",
+    "landicefu"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@landicefu/divide-and-conquer-mcp-server"
+    ],
+    "disabled": false
+  }
+}

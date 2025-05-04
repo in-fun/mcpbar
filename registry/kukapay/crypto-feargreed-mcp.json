@@ -1,0 +1,25 @@
+{
+  "name": "crypto-feargreed-mcp",
+  "version": "1.0.0",
+  "description": "Providing real-time and historical Crypto Fear & Greed Index data",
+  "homepage": "https://github.com/kukapay/crypto-feargreed-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kukapay/crypto-feargreed-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "crypto-feargreed-mcp",
+    "kukapay"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "crypto-feargreed-mcp"
+    ],
+    "env": {}
+  }
+}

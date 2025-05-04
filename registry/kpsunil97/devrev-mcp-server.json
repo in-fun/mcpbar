@@ -1,0 +1,41 @@
+{
+  "name": "devrev-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for devrev-mcp-server",
+  "homepage": "https://github.com/kpsunil97/devrev-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kpsunil97/devrev-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "devrev-mcp-server",
+    "kpsunil97"
+  ],
+  "inputs": [
+    {
+      "id": "devrev_api_key",
+      "type": "promptString",
+      "description": "Environment variable for devrev api key",
+      "password": true
+    },
+    {
+      "id": "your_devrev_api_key",
+      "type": "promptString",
+      "description": "Environment variable for your devrev api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "devrev-mcp"
+    ],
+    "env": {
+      "DEVREV_API_KEY": "${input:devrev_api_key}",
+      "YOUR_DEVREV_API_KEY": "${input:your_devrev_api_key}"
+    }
+  }
+}

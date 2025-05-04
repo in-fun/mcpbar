@@ -1,0 +1,42 @@
+{
+  "name": "qasphere-mcp",
+  "version": "0.2.1",
+  "description": "MCP server for QA Sphere integration",
+  "homepage": "https://github.com/Hypersequent/qasphere-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hypersequent/qasphere-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "qasphere-mcp",
+    "hypersequent"
+  ],
+  "inputs": [
+    {
+      "id": "qasphere_tenant_url",
+      "type": "promptString",
+      "description": "Environment variable for qasphere tenant url configuration",
+      "password": false
+    },
+    {
+      "id": "qasphere_api_key",
+      "type": "promptString",
+      "description": "Environment variable for qasphere api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "qasphere-mcp"
+    ],
+    "env": {
+      "QASPHERE_TENANT_URL": "your-company.region.qasphere.com",
+      "QASPHERE_API_KEY": "your-api-key"
+    }
+  }
+}

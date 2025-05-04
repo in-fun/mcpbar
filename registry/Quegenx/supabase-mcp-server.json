@@ -1,0 +1,25 @@
+{
+  "name": "github-tools",
+  "version": "1.0.0",
+  "description": "MCP server for supabase-mcp-server",
+  "homepage": "https://github.com/Quegenx/supabase-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Quegenx/supabase-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "supabase-mcp-server",
+    "quegenx"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "/path/to/node",
+    "args": [
+      "/path/to/dist/index.js",
+      "postgresql://postgres.[PROJECT-ID]:[PASSWORD]@aws-0-eu-central-1.pooler.supabase.com:5432/postgres"
+    ]
+  }
+}

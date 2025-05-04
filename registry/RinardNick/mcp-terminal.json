@@ -1,0 +1,32 @@
+{
+  "name": "@rinardnick/mcp-terminal",
+  "version": "0.1.0",
+  "description": "A secure terminal execution server implementing the Model Context Protocol (MCP). This server provides controlled command execution capabilities with security features and resource limits.",
+  "homepage": "https://github.com/RinardNick/mcp-terminal",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RinardNick/mcp-terminal"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-terminal",
+    "rinardnick"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uv",
+    "args": [
+      "pip",
+      "run",
+      "mcp-terminal",
+      "--allowed-commands",
+      "python,pip,git,ls,cd",
+      "--timeout-ms",
+      "30000",
+      "--max-output-size",
+      "1048576"
+    ]
+  }
+}

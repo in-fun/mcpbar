@@ -1,0 +1,56 @@
+{
+  "name": "@ibraheem4/clover-mcp",
+  "version": "1.4.0",
+  "description": "A Clover MCP server for interacting with Clover's API",
+  "homepage": "https://github.com/ibraheem4/clover-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ibraheem4/clover-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "clover-mcp",
+    "ibraheem4"
+  ],
+  "inputs": [
+    {
+      "id": "clover_client_id",
+      "type": "promptString",
+      "description": "Environment variable for clover client id configuration",
+      "password": false
+    },
+    {
+      "id": "clover_client_secret",
+      "type": "promptString",
+      "description": "Environment variable for clover client secret authentication",
+      "password": true
+    },
+    {
+      "id": "clover_base_url",
+      "type": "promptString",
+      "description": "Environment variable for clover base url configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@ibraheem4/clover-mcp"
+    ],
+    "env": {
+      "CLOVER_CLIENT_ID": "your-clover-client-id",
+      "CLOVER_CLIENT_SECRET": "your-clover-client-secret",
+      "CLOVER_BASE_URL": "https://apisandbox.dev.clover.com"
+    },
+    "disabled": false,
+    "autoApprove": [
+      "initiate_oauth_flow",
+      "get_merchant_info",
+      "list_inventory",
+      "list_orders"
+    ]
+  }
+}

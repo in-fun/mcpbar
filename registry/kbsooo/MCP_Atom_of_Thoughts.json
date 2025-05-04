@@ -1,0 +1,26 @@
+{
+  "name": "atom-of-thoughts",
+  "version": "1.0.0",
+  "description": "Atom of Thoughts (AoT) MCP is a server that decomposes complex problems into independent atomic units of thought, using the dependencies between these units to deliver more robust reasoning and validated insights.",
+  "homepage": "https://github.com/kbsooo/MCP_Atom_of_Thoughts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kbsooo/MCP_Atom_of_Thoughts"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "/ABSOLUTE/PATH/TO/PARENT/FOLDER/atom-of-thoughts/build/index.js"
+    ],
+    "disabled": false,
+    "autoApprove": []
+  }
+}

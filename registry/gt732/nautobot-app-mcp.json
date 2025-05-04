@@ -1,0 +1,41 @@
+{
+  "name": "nautobot-mcp",
+  "version": "1.0.0",
+  "description": "Nautobot plugin that enables AI assistants to interact with network data through the Model Context Protocol (MCP).",
+  "homepage": "https://github.com/gt732/nautobot-app-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gt732/nautobot-app-mcp"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "nautobot-app-mcp",
+    "gt732"
+  ],
+  "inputs": [
+    {
+      "id": "mcp_port",
+      "type": "promptString",
+      "description": "Environment variable for mcp port",
+      "password": false
+    },
+    {
+      "id": "mcp_host",
+      "type": "promptString",
+      "description": "Environment variable for mcp host",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "nautobot-mcp"
+    ],
+    "env": {
+      "MCP_PORT": "${input:mcp_port}",
+      "MCP_HOST": "${input:mcp_host}"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "arango-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for interacting with Arango databases. For more information about the Model Context Protocol, visit https://modelcontextprotocol.io",
+  "homepage": "https://github.com/lucas-deangelis/arango-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lucas-deangelis/arango-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "arango-mcp-server",
+    "lucas-deangelis"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "arango-mcp-server",
+      "http://localhost:8529",
+      "root",
+      "root"
+    ]
+  }
+}

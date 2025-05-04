@@ -1,0 +1,32 @@
+{
+  "name": "mcp-llm",
+  "version": "1.0.6",
+  "description": "MCP server for interacting with LLMs using LlamaIndexTS",
+  "homepage": "https://smcleod.net",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sammcj/mcp-llm"
+  },
+  "license": "MIT",
+  "keywords": [
+    "anthropic",
+    "bedrock",
+    "claude",
+    "llama",
+    "llm",
+    "mcp",
+    "mcp-server",
+    "ollama",
+    "openai",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-llm"
+    ],
+    "env": {}
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "remote-mcp-server",
+  "version": "0.0.0",
+  "description": "MCP server for remote-mcp-server",
+  "homepage": "https://github.com/Cam10001110101/remote-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cam10001110101/remote-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "remote-mcp-server",
+    "cam10001110101"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "mcp-remote",
+      "http://localhost:8787/sse"
+    ]
+  }
+}

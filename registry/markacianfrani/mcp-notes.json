@@ -1,0 +1,26 @@
+{
+  "name": "@cianfrani/mcp-notes",
+  "version": "0.2.0-alpha",
+  "description": "Personal knowledge management system built on the Model Context Protocol (MCP)",
+  "homepage": "https://github.com/markacianfrani/mcp-notes",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/markacianfrani/mcp-notes"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-notes",
+    "markacianfrani"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@cianfrani/mcp-notes"
+    ],
+    "env": {}
+  }
+}

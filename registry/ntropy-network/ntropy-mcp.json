@@ -1,0 +1,34 @@
+{
+  "name": "ntropy-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for enriching banking data using the Ntropy API",
+  "homepage": "https://github.com/ntropy-network/ntropy-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ntropy-network/ntropy-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ntropy-mcp",
+    "ntropy-network"
+  ],
+  "inputs": [
+    {
+      "id": "your_ntropy_api_key",
+      "type": "promptString",
+      "description": "Environment variable for your ntropy api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "ntropy-mcp"
+    ],
+    "env": {
+      "YOUR_NTROPY_API_KEY": "${input:your_ntropy_api_key}"
+    }
+  }
+}

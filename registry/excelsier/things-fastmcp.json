@@ -1,0 +1,27 @@
+{
+  "name": "things-fastmcp",
+  "version": "1.0.0",
+  "description": "Enhanced FastMCP implementation of the Things MCP server for Claude and Windsurf",
+  "homepage": "https://github.com/excelsier/things-fastmcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/excelsier/things-fastmcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "things-fastmcp",
+    "excelsier"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "/ABSOLUTE/PATH/TO/PARENT/FOLDER/things-mcp",
+      "run",
+      "things_server.py"
+    ]
+  }
+}

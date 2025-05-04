@@ -1,0 +1,41 @@
+{
+  "name": "pagerduty_mcp_server",
+  "version": "1.0.0",
+  "description": "PagerDuty MCP Server for LLM Agent Integration",
+  "homepage": "https://github.com/wpfleger96/pagerduty-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wpfleger96/pagerduty-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "pagerduty-mcp-server",
+    "wpfleger96"
+  ],
+  "inputs": [
+    {
+      "id": "pagerduty_api_key",
+      "type": "promptString",
+      "description": "Environment variable for pagerduty api key",
+      "password": true
+    },
+    {
+      "id": "invalid_user",
+      "type": "promptString",
+      "description": "Environment variable for invalid user",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "pagerduty_mcp_server"
+    ],
+    "env": {
+      "PAGERDUTY_API_KEY": "${input:pagerduty_api_key}",
+      "INVALID_USER": "${input:invalid_user}"
+    }
+  }
+}

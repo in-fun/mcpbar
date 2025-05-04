@@ -1,0 +1,66 @@
+{
+  "name": "mcp-server-port",
+  "version": "1.0.0",
+  "description": "Port's MVP Server",
+  "homepage": "https://github.com/port-experimental/port-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/port-experimental/port-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "port-mcp-server",
+    "port-experimental"
+  ],
+  "inputs": [
+    {
+      "id": "port_client_id",
+      "type": "promptString",
+      "description": "Environment variable for port client id configuration",
+      "password": false
+    },
+    {
+      "id": "port_client_secret",
+      "type": "promptString",
+      "description": "Environment variable for port client secret authentication",
+      "password": true
+    },
+    {
+      "id": "port_region",
+      "type": "promptString",
+      "description": "Environment variable for port region configuration",
+      "password": false
+    },
+    {
+      "id": "port_log_level",
+      "type": "promptString",
+      "description": "Environment variable for port log level configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "docker",
+    "args": [
+      "run",
+      "-i",
+      "--rm",
+      "-e",
+      "PORT_CLIENT_ID",
+      "-e",
+      "PORT_CLIENT_SECRET",
+      "-e",
+      "PORT_REGION",
+      "-e",
+      "PORT_LOG_LEVEL",
+      "ivan/test-port-mcp-no-prompt"
+    ],
+    "env": {
+      "PORT_CLIENT_ID": "<PORT_CLIENT_ID>",
+      "PORT_CLIENT_SECRET": "<PORT_CLIENT_SECRET>",
+      "PORT_REGION": "<PORT_REGION>",
+      "PORT_LOG_LEVEL": "<PORT_LOG_LEVEL>"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "@multiversx/mcp",
+  "version": "1.0.3",
+  "description": "MCP Server for MultiversX",
+  "homepage": "https://github.com/multiversx/mx-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/multiversx/mx-mcp"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mx-mcp",
+    "multiversx"
+  ],
+  "inputs": [
+    {
+      "id": "mvx_network",
+      "type": "promptString",
+      "description": "Environment variable for mvx network configuration",
+      "password": false
+    },
+    {
+      "id": "mvx_wallet",
+      "type": "promptString",
+      "description": "Environment variable for mvx wallet configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@multiversx/mcp"
+    ],
+    "env": {
+      "MVX_NETWORK": "devnet",
+      "MVX_WALLET": "absolute/path/to/someWallet.pem"
+    }
+  }
+}

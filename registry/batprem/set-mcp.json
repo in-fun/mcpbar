@@ -1,0 +1,25 @@
+{
+  "name": "set-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for set-mcp",
+  "homepage": "https://set-mcp.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/batprem/set-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "set-mcp",
+    "batprem"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "set-mcp"
+    ],
+    "env": {}
+  }
+}

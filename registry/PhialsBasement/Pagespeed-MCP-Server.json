@@ -1,0 +1,26 @@
+{
+  "name": "mcp-pagespeed-server",
+  "version": "1.0.2",
+  "description": "MCP server for performing PageSpeed Audits",
+  "homepage": "https://github.com/PhialsBasement/Pagespeed-MCP-Server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PhialsBasement/Pagespeed-MCP-Server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "pagespeed-mcp-server",
+    "phialsbasement"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-pagespeed-server"
+    ],
+    "env": {}
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "apple-books-mcp",
+  "version": "1.0.0",
+  "description": "Apple Books MCP Server",
+  "homepage": "https://pypi.org/project/apple-books-mcp/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vgnshiyer/apple-books-mcp"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "ai",
+    "apple",
+    "apple-books",
+    "llm",
+    "mcp",
+    "mcp-server",
+    "productivity",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "apple-books-mcp"
+    ]
+  }
+}

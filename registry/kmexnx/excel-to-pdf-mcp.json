@@ -1,0 +1,25 @@
+{
+  "name": "excel-to-pdf-mcp",
+  "version": "1.0.1",
+  "description": "An MCP server that can convert Excel (.xls/.xlsx) and Apple Numbers (.numbers) files to PDF",
+  "homepage": "https://github.com/kmexnx/excel-to-pdf-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kmexnx/excel-to-pdf-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "excel-to-pdf-mcp",
+    "kmexnx"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "excel-to-pdf-mcp"
+    ],
+    "name": "Excel to PDF Converter"
+  }
+}

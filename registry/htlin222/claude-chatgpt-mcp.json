@@ -1,0 +1,26 @@
+{
+  "name": "claude-chatgpt-mcp",
+  "version": "1.0.1",
+  "description": "A Claude MCP tool to interact with the ChatGPT desktop app on macOS",
+  "homepage": "https://github.com/htlin222/claude-chatgpt-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/htlin222/claude-chatgpt-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "claude-chatgpt-mcp",
+    "htlin222"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "claude-chatgpt-mcp"
+    ],
+    "env": {}
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for scraper-mcp-smithery",
+  "homepage": "https://github.com/rockerritesh/scraper-mcp-smithery",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rockerritesh/scraper-mcp-smithery"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "scraper-mcp-smithery",
+    "rockerritesh"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-server"
+    ],
+    "env": {}
+  }
+}

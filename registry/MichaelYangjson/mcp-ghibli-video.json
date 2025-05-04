@@ -1,0 +1,35 @@
+{
+  "name": "@openmcprouter/mcp-server-ghibli-video",
+  "version": "0.1.0",
+  "description": "ghibli mcp video server",
+  "homepage": "https://github.com/MichaelYangjson/mcp-ghibli-video",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MichaelYangjson/mcp-ghibli-video"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-ghibli-video",
+    "michaelyangjson"
+  ],
+  "inputs": [
+    {
+      "id": "ghibli_api_url",
+      "type": "promptString",
+      "description": "Environment variable for ghibli api url configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@openmcprouter/mcp-server-ghibli-video"
+    ],
+    "env": {
+      "Ghibli_API_URL": "https://www.gpt4oimg.com"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "@aindreyway/mcp-neurolora",
+  "version": "1.4.0",
+  "description": "An MCP server for collecting and documenting code from directories",
+  "homepage": "https://github.com/aindreyway/mcp-neurolora",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aindreyway/mcp-neurolora"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-neurolora",
+    "aindreyway"
+  ],
+  "inputs": [
+    {
+      "id": "node_options",
+      "type": "promptString",
+      "description": "Environment variable for node options configuration",
+      "password": false
+    },
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@aindreyway/mcp-neurolora@latest"
+    ],
+    "env": {
+      "NODE_OPTIONS": "--max-old-space-size=256",
+      "OPENAI_API_KEY": "your_api_key_here"
+    }
+  }
+}

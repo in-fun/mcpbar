@@ -1,0 +1,27 @@
+{
+  "name": "@modelcontextprotocol/server-memory",
+  "version": "0.6.3",
+  "description": "MCP server for enabling memory for Claude through a knowledge graph",
+  "homepage": "https://github.com/yodakeisuke/mcp-memory-domain-knowledge",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yodakeisuke/mcp-memory-domain-knowledge"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-memory-domain-knowledge",
+    "yodakeisuke"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "docker",
+    "args": [
+      "run",
+      "-i",
+      "--rm",
+      "mcp/memory"
+    ]
+  }
+}

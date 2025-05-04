@@ -1,0 +1,41 @@
+{
+  "name": "freshservice-mcp",
+  "version": "1.0.0",
+  "description": "MCP server created for Freshservice, allowing AI models to interact with Freshservice modules",
+  "homepage": "https://github.com/effytech/freshservice_mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/effytech/freshservice_mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "freshservice_mcp",
+    "effytech"
+  ],
+  "inputs": [
+    {
+      "id": "freshservice_api_key",
+      "type": "promptString",
+      "description": "Environment variable for freshservice api key",
+      "password": true
+    },
+    {
+      "id": "your_freshservice_api_key",
+      "type": "promptString",
+      "description": "Environment variable for your freshservice api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "freshservice-mcp"
+    ],
+    "env": {
+      "FRESHSERVICE_API_KEY": "${input:freshservice_api_key}",
+      "YOUR_FRESHSERVICE_API_KEY": "${input:your_freshservice_api_key}"
+    }
+  }
+}

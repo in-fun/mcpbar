@@ -1,0 +1,24 @@
+{
+  "name": "uuid-mcp",
+  "version": "1.0.0",
+  "description": "A simple MCP server that provides timestamp-based UUIDs",
+  "homepage": "https://www.npmjs.com/package/uuid-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tanker327/uuid-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "uuid-mcp",
+    "tanker327"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "/absolute/path/to/uuid-mcp/build/index.js"
+    ]
+  }
+}

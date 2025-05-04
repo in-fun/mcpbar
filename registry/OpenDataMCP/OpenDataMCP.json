@@ -1,0 +1,25 @@
+{
+  "name": "odmcp",
+  "version": "1.0.0",
+  "description": "Connect any Open Data to any LLM with Model Context Protocol.",
+  "homepage": "https://github.com/OpenDataMCP/OpenDataMCP",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OpenDataMCP/OpenDataMCP"
+  },
+  "license": "MIT",
+  "keywords": [
+    "llm",
+    "mcp",
+    "open-data",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "odmcp"
+    ],
+    "env": {}
+  }
+}

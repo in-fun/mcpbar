@@ -1,0 +1,25 @@
+{
+  "name": "zaturn",
+  "version": "1.0.0",
+  "description": "MCP server for zaturn",
+  "homepage": "https://github.com/kdqed/zaturn",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kdqed/zaturn"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "zaturn",
+    "kdqed"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "zaturn"
+    ],
+    "env": {}
+  }
+}

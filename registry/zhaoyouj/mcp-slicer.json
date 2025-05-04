@@ -1,0 +1,24 @@
+{
+  "name": "mcp-slicer",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol server for 3D Slicer integration",
+  "homepage": "https://github.com/zhaoyouj/mcp-slicer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhaoyouj/mcp-slicer"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-slicer",
+    "zhaoyouj"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-slicer"
+    ]
+  }
+}

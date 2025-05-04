@@ -1,0 +1,34 @@
+{
+  "name": "discord-mcp-server",
+  "version": "1.0.0",
+  "description": "Discord MCP server for integrating Discord with Claude",
+  "homepage": "https://github.com/v-3/discordmcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/v-3/discordmcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "discordmcp",
+    "v-3"
+  ],
+  "inputs": [
+    {
+      "id": "discord_token",
+      "type": "promptString",
+      "description": "Environment variable for discord token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "path/to/discordmcp/build/index.js"
+    ],
+    "env": {
+      "DISCORD_TOKEN": "your_discord_bot_token_here"
+    }
+  }
+}

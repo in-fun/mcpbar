@@ -1,0 +1,25 @@
+{
+  "name": "mcp-server-demo",
+  "version": "1.0.0",
+  "description": "MCP server for MCPserver",
+  "homepage": "https://github.com/ShresthaAnkit/MCPserver",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ShresthaAnkit/MCPserver"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcpserver",
+    "shresthaankit"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-server-demo"
+    ],
+    "env": {}
+  }
+}

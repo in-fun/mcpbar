@@ -1,0 +1,28 @@
+{
+  "name": "@mcpdotdirect/evm-mcp-server",
+  "version": "1.1.3",
+  "description": "Model Context Protocol (MCP) server for interacting with EVM-compatible networks",
+  "homepage": "https://github.com/mcpdotdirect/evm-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mcpdotdirect/evm-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "blockchain",
+    "ethereum",
+    "evm",
+    "mcp",
+    "mcp-server",
+    "agent",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@mcpdotdirect/evm-mcp-server"
+    ]
+  }
+}

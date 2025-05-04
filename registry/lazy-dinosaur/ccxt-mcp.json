@@ -1,0 +1,47 @@
+{
+  "name": "@lazydino/ccxt-mcp",
+  "version": "0.4.1",
+  "description": "CCXT integration for Model Context Protocol",
+  "homepage": "https://github.com/lazy-dinosaur/ccxt-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lazy-dinosaur/ccxt-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai-trading",
+    "automated-trading",
+    "ccxt",
+    "claude-integration",
+    "mcp",
+    "model-context-protocol",
+    "trading",
+    "trading-bot",
+    "claude",
+    "mcp-server"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@lazydino/ccxt-mcp"
+    ],
+    "accounts": [
+      {
+        "name": "bybit_main",
+        "exchangeId": "bybit",
+        "apiKey": "YOUR_API_KEY",
+        "secret": "YOUR_SECRET_KEY",
+        "defaultType": "spot"
+      },
+      {
+        "name": "bybit_futures",
+        "exchangeId": "bybit",
+        "apiKey": "YOUR_API_KEY",
+        "secret": "YOUR_SECRET_KEY",
+        "defaultType": "swap"
+      }
+    ]
+  }
+}

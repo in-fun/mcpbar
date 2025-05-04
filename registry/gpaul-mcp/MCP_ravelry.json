@@ -1,0 +1,42 @@
+{
+  "name": "ts-boilerplate",
+  "version": "1.0.0",
+  "description": "MCP for letting Claude search Ravelry",
+  "homepage": "https://github.com/gpaul-mcp/MCP_ravelry",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gpaul-mcp/MCP_ravelry"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp_ravelry",
+    "gpaul-mcp"
+  ],
+  "inputs": [
+    {
+      "id": "auth_user",
+      "type": "promptString",
+      "description": "Environment variable for auth user",
+      "password": false
+    },
+    {
+      "id": "auth_pass",
+      "type": "promptString",
+      "description": "Environment variable for auth pass",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "ts-boilerplate"
+    ],
+    "env": {
+      "AUTH_USER": "${input:auth_user}",
+      "AUTH_PASS": "${input:auth_pass}"
+    }
+  }
+}

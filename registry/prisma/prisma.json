@@ -1,0 +1,34 @@
+{
+  "name": "dev-env",
+  "version": "1.0.0",
+  "description": "Next-generation ORM for Node.js & TypeScript | PostgreSQL, MySQL, MariaDB, SQL Server, SQLite, MongoDB and CockroachDB",
+  "homepage": "https://www.prisma.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prisma/prisma"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "prisma",
+    "orm",
+    "database",
+    "typescript",
+    "javascript",
+    "nodejs",
+    "mariadb",
+    "mysql",
+    "postgresql",
+    "sqlserver",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "prisma",
+      "mcp"
+    ]
+  }
+}

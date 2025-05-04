@@ -1,0 +1,49 @@
+{
+  "name": "@yiyang.1i/sms-mcp-server",
+  "version": "2025.2.24",
+  "description": "A Model Context Protocol (MCP) server that enables Claude and other AI assistants to send SMS and MMS messages using Twilio.",
+  "homepage": "https://github.com/YiyangLi/sms-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YiyangLi/sms-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "sms-mcp-server",
+    "yiyangli"
+  ],
+  "inputs": [
+    {
+      "id": "account_sid",
+      "type": "promptString",
+      "description": "Environment variable for account sid configuration",
+      "password": false
+    },
+    {
+      "id": "auth_token",
+      "type": "promptString",
+      "description": "Environment variable for auth token authentication",
+      "password": true
+    },
+    {
+      "id": "from_number",
+      "type": "promptString",
+      "description": "Environment variable for from number configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@yiyang.1i/sms-mcp-server"
+    ],
+    "env": {
+      "ACCOUNT_SID": "your_account_sid",
+      "AUTH_TOKEN": "your_auth_token",
+      "FROM_NUMBER": "your_twilio_number"
+    }
+  }
+}

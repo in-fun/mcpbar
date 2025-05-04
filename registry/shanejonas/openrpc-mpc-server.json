@@ -1,0 +1,25 @@
+{
+  "name": "openrpc-mcp-server",
+  "version": "0.1.2",
+  "description": "OpenRPC MCP server",
+  "homepage": "https://github.com/shanejonas/openrpc-mpc-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shanejonas/openrpc-mpc-server"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "openrpc-mpc-server",
+    "shanejonas"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "openrpc-mcp-server"
+    ]
+  }
+}

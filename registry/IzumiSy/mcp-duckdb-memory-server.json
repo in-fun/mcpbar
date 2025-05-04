@@ -1,0 +1,26 @@
+{
+  "name": "@izumisy/mcp-duckdb-memory-server",
+  "version": "1.1.2",
+  "description": "MCP Memory Server with DuckDB backend",
+  "homepage": "https://www.npmjs.com/package/@izumisy/mcp-duckdb-memory-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/IzumiSy/mcp-duckdb-memory-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "duckdb",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@izumisy/mcp-duckdb-memory-server"
+    ],
+    "env": {}
+  }
+}

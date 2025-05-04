@@ -1,0 +1,25 @@
+{
+  "name": "iterm-mcp",
+  "version": "1.2.3",
+  "description": "A Model Context Protocol server that provides access to the currently active tab of iTerm",
+  "homepage": "https://www.npmjs.com/package/iterm-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lite/iterm-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "iterm-mcp",
+    "lite"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "iterm-mcp"
+    ]
+  }
+}

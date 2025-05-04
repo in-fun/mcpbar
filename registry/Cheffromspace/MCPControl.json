@@ -1,0 +1,30 @@
+{
+  "name": "mcp-control",
+  "version": "0.1.20",
+  "description": "Windows control server for the Model Context Protocol",
+  "homepage": "https://github.com/Cheffromspace/MCPControl",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cheffromspace/MCPControl"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "claude",
+    "computer-control",
+    "mcp",
+    "windows",
+    "computer-vision",
+    "os-automation",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "--no-cache",
+      "-y",
+      "mcp-control"
+    ]
+  }
+}

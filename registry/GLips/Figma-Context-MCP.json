@@ -1,0 +1,29 @@
+{
+  "name": "figma-developer-mcp",
+  "version": "0.2.1",
+  "description": "Model Context Protocol server for Figma integration",
+  "homepage": "https://www.framelink.ai/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GLips/Figma-Context-MCP"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "cursor",
+    "figma",
+    "mcp",
+    "typescript",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "figma-developer-mcp",
+      "--figma-api-key=YOUR-KEY",
+      "--stdio"
+    ]
+  }
+}

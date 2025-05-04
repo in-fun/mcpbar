@@ -1,0 +1,24 @@
+{
+  "name": "mcp-starter",
+  "version": "1.0.0",
+  "description": "An opinionated starter project for Model Context Protocol (MCP) servers",
+  "homepage": "https://github.com/aiteks-ltda/mcp-evolution-whatsapp-api",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aiteks-ltda/mcp-evolution-whatsapp-api"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-evolution-whatsapp-api",
+    "aiteks-ltda"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/your/mcp-evo-api/dist/main.js"
+    ]
+  }
+}

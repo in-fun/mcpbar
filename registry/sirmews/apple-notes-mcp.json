@@ -1,0 +1,48 @@
+{
+  "name": "apple-notes-mcp",
+  "version": "1.0.0",
+  "description": "Read your Apple Notes with Claude Model Context Protocol",
+  "homepage": "https://github.com/sirmews/apple-notes-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sirmews/apple-notes-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "apple-notes-mcp",
+    "sirmews"
+  ],
+  "inputs": [
+    {
+      "id": "uv_publish_token",
+      "type": "promptString",
+      "description": "Environment variable for uv publish token",
+      "password": true
+    },
+    {
+      "id": "uv_publish_user",
+      "type": "promptString",
+      "description": "Environment variable for uv publish user",
+      "password": false
+    },
+    {
+      "id": "uv_publish_pass",
+      "type": "promptString",
+      "description": "Environment variable for uv publish pass",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "apple-notes-mcp"
+    ],
+    "env": {
+      "UV_PUBLISH_TOKEN": "${input:uv_publish_token}",
+      "UV_PUBLISH_USER": "${input:uv_publish_user}",
+      "UV_PUBLISH_PASS": "${input:uv_publish_pass}"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "name": "ntfy-mcp-server",
+  "version": "1.0.4",
+  "description": "An MCP (Model Context Protocol) server designed to interact with the ntfy push notification service. It enables LLMs and AI agents to send notifications to your devices with extensive customization options.",
+  "homepage": "https://www.npmjs.com/package/ntfy-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cyanheads/ntfy-mcp-server"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "llm",
+    "llm-agent",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "notifications",
+    "ntfy"
+  ],
+  "inputs": [
+    {
+      "id": "ntfy_base_url",
+      "type": "promptString",
+      "description": "Environment variable for ntfy base url configuration",
+      "password": false
+    },
+    {
+      "id": "ntfy_default_topic",
+      "type": "promptString",
+      "description": "Environment variable for ntfy default topic configuration",
+      "password": false
+    },
+    {
+      "id": "log_level",
+      "type": "promptString",
+      "description": "Environment variable for log level configuration",
+      "password": false
+    },
+    {
+      "id": "node_env",
+      "type": "promptString",
+      "description": "Environment variable for node env configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "ntfy-mcp-server",
+    "env": {
+      "NTFY_BASE_URL": "https://ntfy.sh",
+      "NTFY_DEFAULT_TOPIC": "your_default_topic",
+      "LOG_LEVEL": "info",
+      "NODE_ENV": "production"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "swift",
+  "version": "1.0.0",
+  "description": "MCP server for swift",
+  "homepage": "https://github.com/lumix-labs/swift/tree/main/mcp-service",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lumix-labs/swift/tree/main/mcp-service"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "swift",
+    "lumix-labs"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "docker",
+    "args": [
+      "run",
+      "-i",
+      "--rm",
+      "-v",
+      "/path/to/your/repo1:/repo1",
+      "-v",
+      "/path/to/your/repo2:/repo2",
+      "-w",
+      "/",
+      "lumixlabs/mcp-server"
+    ]
+  }
+}

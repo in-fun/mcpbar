@@ -1,0 +1,26 @@
+{
+  "name": "@liuyoshio/mcp-compass",
+  "version": "1.0.7",
+  "description": "MCP Discovery & Recommendation Service - Find the right MCP server for your needs",
+  "homepage": "https://github.com/liuyoshio/mcp-compass",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liuyoshio/mcp-compass"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-compass",
+    "liuyoshio"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@liuyoshio/mcp-compass"
+    ],
+    "env": {}
+  }
+}

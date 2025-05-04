@@ -1,0 +1,48 @@
+{
+  "name": "obsidian-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for obsidian-mcp",
+  "homepage": "https://github.com/takuya0206/obsidian-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/takuya0206/obsidian-mcp"
+  },
+  "license": "ISC",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "obsidian-mcp",
+    "takuya0206"
+  ],
+  "inputs": [
+    {
+      "id": "apikey",
+      "type": "promptString",
+      "description": "Environment variable for apikey configuration",
+      "password": false
+    },
+    {
+      "id": "port",
+      "type": "promptString",
+      "description": "Environment variable for port configuration",
+      "password": false
+    },
+    {
+      "id": "host",
+      "type": "promptString",
+      "description": "Environment variable for host configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "/Users/<Your Own Path>/obsisian-mcp/build/index.js"
+    ],
+    "env": {
+      "apiKey": "<Your API Token>",
+      "port": "27123",
+      "host": "127.0.0.1"
+    }
+  }
+}

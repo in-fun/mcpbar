@@ -1,0 +1,53 @@
+{
+  "name": "@fanyangmeng/ghost-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for using the Ghost API",
+  "homepage": "https://fanyangmeng.blog/from-python-to-typescript-improving-ghost-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MFYDev/ghost-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude",
+    "claude-ai",
+    "ghost-blog",
+    "ghost-cms",
+    "mcp",
+    "mcp-server",
+    "modelcontextprotocol",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "ghost_api_url",
+      "type": "promptString",
+      "description": "Environment variable for ghost api url configuration",
+      "password": false
+    },
+    {
+      "id": "ghost_admin_api_key",
+      "type": "promptString",
+      "description": "Environment variable for ghost admin api key authentication",
+      "password": true
+    },
+    {
+      "id": "ghost_api_version",
+      "type": "promptString",
+      "description": "Environment variable for ghost api version configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@fanyangmeng/ghost-mcp"
+    ],
+    "env": {
+      "GHOST_API_URL": "https://yourblog.com",
+      "GHOST_ADMIN_API_KEY": "your_admin_api_key",
+      "GHOST_API_VERSION": "v5.0"
+    }
+  }
+}

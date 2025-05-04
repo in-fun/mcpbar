@@ -1,0 +1,22 @@
+{
+  "name": "draw-things-mcp-cursor",
+  "version": "1.4.3",
+  "description": "Draw Things API integration for Cursor using Model Context Protocol (MCP)",
+  "homepage": "https://github.com/jaokuohsuan/draw-things-mcp-cursor",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jaokuohsuan/draw-things-mcp-cursor"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "draw-things-mcp-cursor",
+    "jaokuohsuan"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "draw-things-mcp-cursor",
+    "args": []
+  }
+}

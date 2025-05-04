@@ -1,0 +1,25 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Awesome MCP template for awesome FastAPI builders",
+  "homepage": "https://mr-green1337.github.io/awesome-mcp-fastapi/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MR-GREEN1337/awesome-mcp-fastapi"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "awesome-mcp-fastapi",
+    "mr-green1337"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "backend"
+    ],
+    "env": {}
+  }
+}

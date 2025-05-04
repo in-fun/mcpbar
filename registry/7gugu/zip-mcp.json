@@ -1,0 +1,26 @@
+{
+  "name": "zip-mcp",
+  "version": "1.0.1",
+  "description": "A Model Context Protocol server for ZIP compression using fastMCP and zip.js",
+  "homepage": "https://www.npmjs.com/package/zip-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/7gugu/zip-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude",
+    "cursor",
+    "local",
+    "mcp",
+    "mcp-server",
+    "compression",
+    "zip",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "zip-mcp",
+    "args": []
+  }
+}

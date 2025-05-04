@@ -1,0 +1,28 @@
+{
+  "name": "@executeautomation/database-server",
+  "version": "1.0.2",
+  "description": "MCP server for interacting with SQLite and SQL Server databases by ExecuteAutomation",
+  "homepage": "https://executeautomation.github.io/mcp-database-server/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/executeautomation/mcp-database-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp-server",
+    "posgresql",
+    "sqlite",
+    "sqlserver",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@executeautomation/database-server",
+      "/path/to/your/database.db"
+    ]
+  }
+}

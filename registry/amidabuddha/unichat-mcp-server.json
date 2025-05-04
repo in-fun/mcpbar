@@ -1,0 +1,55 @@
+{
+  "name": "unichat-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for unichat-mcp-server",
+  "homepage": "https://github.com/amidabuddha/unichat-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amidabuddha/unichat-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "unichat-mcp-server",
+    "amidabuddha"
+  ],
+  "inputs": [
+    {
+      "id": "your_unichat_api_key",
+      "type": "promptString",
+      "description": "Environment variable for your unichat api key",
+      "password": true
+    },
+    {
+      "id": "unichat_api_key",
+      "type": "promptString",
+      "description": "Environment variable for unichat api key",
+      "password": true
+    },
+    {
+      "id": "your_openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for your openai api key",
+      "password": true
+    },
+    {
+      "id": "your_pypi_api_token",
+      "type": "promptString",
+      "description": "Environment variable for your pypi api token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "unichat-mcp-server"
+    ],
+    "env": {
+      "YOUR_UNICHAT_API_KEY": "${input:your_unichat_api_key}",
+      "UNICHAT_API_KEY": "${input:unichat_api_key}",
+      "YOUR_OPENAI_API_KEY": "${input:your_openai_api_key}",
+      "YOUR_PYPI_API_TOKEN": "${input:your_pypi_api_token}"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "mcp-claude-code",
+  "version": "1.0.0",
+  "description": "MCP implementation of Claude Code capabilities and more",
+  "homepage": "https://github.com/SDGLBL/mcp-claude-code",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SDGLBL/mcp-claude-code"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude",
+    "claude-code",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-claude-code"
+    ],
+    "env": {}
+  }
+}

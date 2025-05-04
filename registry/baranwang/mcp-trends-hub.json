@@ -1,0 +1,25 @@
+{
+  "name": "mcp-trends-hub",
+  "version": "1.6.0",
+  "description": "🔥 基于 Model Context Protocol (MCP) 协议的全网热点趋势一站式聚合服务",
+  "homepage": "https://www.npmjs.com/package/mcp-trends-hub",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/baranwang/mcp-trends-hub"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-trends-hub",
+    "baranwang"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-trends-hub@1.6.0"
+    ]
+  }
+}

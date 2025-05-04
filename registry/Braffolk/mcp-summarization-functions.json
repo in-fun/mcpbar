@@ -1,0 +1,55 @@
+{
+  "name": "mcp-summarization-functions",
+  "version": "0.1.5",
+  "description": "Provides summarised output from various actions that could otherwise eat up tokens and cause crashes",
+  "homepage": "https://github.com/Braffolk/mcp-summarization-functions",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Braffolk/mcp-summarization-functions"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "cline"
+  ],
+  "inputs": [
+    {
+      "id": "provider",
+      "type": "promptString",
+      "description": "Environment variable for provider configuration",
+      "password": false
+    },
+    {
+      "id": "api_key",
+      "type": "promptString",
+      "description": "Environment variable for api key authentication",
+      "password": true
+    },
+    {
+      "id": "model_id",
+      "type": "promptString",
+      "description": "Environment variable for model id configuration",
+      "password": false
+    },
+    {
+      "id": "mcp_working_dir",
+      "type": "promptString",
+      "description": "Environment variable for mcp working dir configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "path/to/summarization-functions/build/index.js"
+    ],
+    "env": {
+      "PROVIDER": "ANTHROPIC",
+      "API_KEY": "your-api-key",
+      "MODEL_ID": "claude-3-5-sonnet-20241022",
+      "MCP_WORKING_DIR": "default_working_directory"
+    }
+  }
+}

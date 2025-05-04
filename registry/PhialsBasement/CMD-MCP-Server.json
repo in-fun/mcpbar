@@ -1,0 +1,26 @@
+{
+  "name": "server-cmd",
+  "version": "1.0.0",
+  "description": "MCP server for executing CMD and SSH commands",
+  "homepage": "https://github.com/PhialsBasement/CMD-MCP-Server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PhialsBasement/CMD-MCP-Server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "cmd-mcp-server",
+    "phialsbasement"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "server-cmd"
+    ],
+    "env": {}
+  }
+}

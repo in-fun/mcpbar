@@ -1,0 +1,40 @@
+{
+  "name": "postgres-mcp",
+  "version": "1.0.0",
+  "description": "Postgres MCP Pro provides configurable read/write access and performance analysis for you and your AI agents.",
+  "homepage": "https://github.com/crystaldba/postgres-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crystaldba/postgres-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "postgres-mcp",
+    "crystaldba"
+  ],
+  "inputs": [
+    {
+      "id": "database_uri",
+      "type": "promptString",
+      "description": "Environment variable for database uri configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "docker",
+    "args": [
+      "run",
+      "-i",
+      "--rm",
+      "-e",
+      "DATABASE_URI",
+      "crystaldba/postgres-mcp",
+      "--access-mode=unrestricted"
+    ],
+    "env": {
+      "DATABASE_URI": "postgresql://username:password@localhost:5432/dbname"
+    }
+  }
+}

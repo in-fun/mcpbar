@@ -1,0 +1,25 @@
+{
+  "name": "mcp-notmuch-sendmail",
+  "version": "1.0.0",
+  "description": "A model context protocol server that reads mails with notmuch and sends mail with sendmail",
+  "homepage": "https://github.com/runekaagaard/mcp-notmuch-sendmail",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/runekaagaard/mcp-notmuch-sendmail"
+  },
+  "license": "MPL-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-notmuch-sendmail",
+    "runekaagaard"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-notmuch-sendmail"
+    ],
+    "env": {}
+  }
+}

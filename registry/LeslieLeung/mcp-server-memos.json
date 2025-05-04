@@ -1,0 +1,42 @@
+{
+  "name": "memos-mcp-server",
+  "version": "1.0.0",
+  "description": "A MCP(Model Context Protocol) server for Memos.",
+  "homepage": "https://github.com/LeslieLeung/mcp-server-memos",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LeslieLeung/mcp-server-memos"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "memos",
+    "usememos",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "memos_url",
+      "type": "promptString",
+      "description": "Environment variable for memos url",
+      "password": false
+    },
+    {
+      "id": "memos_api_key",
+      "type": "promptString",
+      "description": "Environment variable for memos api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "memos-mcp-server"
+    ],
+    "env": {
+      "MEMOS_URL": "${input:memos_url}",
+      "MEMOS_API_KEY": "${input:memos_api_key}"
+    }
+  }
+}

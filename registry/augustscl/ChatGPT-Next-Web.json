@@ -1,0 +1,56 @@
+{
+  "name": "chatgpt-next-web",
+  "version": "1.0.0",
+  "description": "A well-designed cross-platform ChatGPT UI (Web / PWA / Linux / Win / MacOS). 一键拥有你自己的跨平台 ChatGPT 应用。",
+  "homepage": "https://chatgpt1.nextweb.fun",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/augustscl/ChatGPT-Next-Web"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "chatgpt-next-web",
+    "augustscl"
+  ],
+  "inputs": [
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key",
+      "password": true
+    },
+    {
+      "id": "base_url",
+      "type": "promptString",
+      "description": "Environment variable for base url",
+      "password": false
+    },
+    {
+      "id": "hide_user_api_key",
+      "type": "promptString",
+      "description": "Environment variable for hide user api key",
+      "password": true
+    },
+    {
+      "id": "proxy_url",
+      "type": "promptString",
+      "description": "Environment variable for proxy url",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "chatgpt-next-web"
+    ],
+    "env": {
+      "OPENAI_API_KEY": "${input:openai_api_key}",
+      "BASE_URL": "${input:base_url}",
+      "HIDE_USER_API_KEY": "${input:hide_user_api_key}",
+      "PROXY_URL": "${input:proxy_url}"
+    }
+  }
+}

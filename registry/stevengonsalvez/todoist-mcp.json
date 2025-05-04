@@ -1,0 +1,34 @@
+{
+  "name": "todoist-mcp-server",
+  "version": "1.0.7",
+  "description": "MCP server for Todoist API",
+  "homepage": "https://github.com/stevengonsalvez/todoist-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stevengonsalvez/todoist-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "todoist-mcp",
+    "stevengonsalvez"
+  ],
+  "inputs": [
+    {
+      "id": "todoist_api_token",
+      "type": "promptString",
+      "description": "Environment variable for todoist api token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "todoist-mcp"
+    ],
+    "env": {
+      "TODOIST_API_TOKEN": "your_todoist_token"
+    }
+  }
+}

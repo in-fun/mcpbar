@@ -1,0 +1,49 @@
+{
+  "name": "jira-mcp-server",
+  "version": "0.2.0",
+  "description": "JIRA MCP Server",
+  "homepage": "https://github.com/Dsazz/mcp-jira",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dsazz/mcp-jira"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-jira",
+    "dsazz"
+  ],
+  "inputs": [
+    {
+      "id": "jira_host",
+      "type": "promptString",
+      "description": "Environment variable for jira host",
+      "password": false
+    },
+    {
+      "id": "jira_user",
+      "type": "promptString",
+      "description": "Environment variable for jira user",
+      "password": false
+    },
+    {
+      "id": "jira_api_token",
+      "type": "promptString",
+      "description": "Environment variable for jira api token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "jira-mcp-server"
+    ],
+    "env": {
+      "JIRA_HOST": "${input:jira_host}",
+      "JIRA_USER": "${input:jira_user}",
+      "JIRA_API_TOKEN": "${input:jira_api_token}"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "name": "arango-server",
+  "version": "0.4.4",
+  "description": "A Model Context Protocol Server for ArangoDB",
+  "homepage": "https://github.com/ravenwits/mcp-server-arangodb",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ravenwits/mcp-server-arangodb"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "claude",
+    "cline",
+    "mcp-server",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "arango_url",
+      "type": "promptString",
+      "description": "Environment variable for arango url configuration",
+      "password": false
+    },
+    {
+      "id": "arango_db",
+      "type": "promptString",
+      "description": "Environment variable for arango db configuration",
+      "password": false
+    },
+    {
+      "id": "arango_username",
+      "type": "promptString",
+      "description": "Environment variable for arango username configuration",
+      "password": false
+    },
+    {
+      "id": "arango_password",
+      "type": "promptString",
+      "description": "Environment variable for arango password authentication",
+      "password": false
+    }
+  ],
+  "server": {
+    "type": "stdio",
+    "command": "npx",
+    "args": [
+      "arango-server"
+    ],
+    "env": {
+      "ARANGO_URL": "http://localhost:8529",
+      "ARANGO_DB": "v20",
+      "ARANGO_USERNAME": "app",
+      "ARANGO_PASSWORD": "75Sab@MYa3Dj8Fc"
+    }
+  }
+}

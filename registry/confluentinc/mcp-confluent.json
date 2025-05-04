@@ -1,0 +1,84 @@
+{
+  "name": "@confluentinc/mcp-confluent",
+  "version": "1.0.1",
+  "description": "Confluent MCP Server",
+  "homepage": "https://github.com/confluentinc/mcp-confluent",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/confluentinc/mcp-confluent"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-confluent",
+    "confluentinc"
+  ],
+  "inputs": [
+    {
+      "id": "kafka_api_key",
+      "type": "promptString",
+      "description": "Environment variable for kafka api key",
+      "password": true
+    },
+    {
+      "id": "kafka_api_secret",
+      "type": "promptString",
+      "description": "Environment variable for kafka api secret",
+      "password": true
+    },
+    {
+      "id": "flink_api_key",
+      "type": "promptString",
+      "description": "Environment variable for flink api key",
+      "password": true
+    },
+    {
+      "id": "flink_api_secret",
+      "type": "promptString",
+      "description": "Environment variable for flink api secret",
+      "password": true
+    },
+    {
+      "id": "confluent_cloud_api_key",
+      "type": "promptString",
+      "description": "Environment variable for confluent cloud api key",
+      "password": true
+    },
+    {
+      "id": "confluent_cloud_api_secret",
+      "type": "promptString",
+      "description": "Environment variable for confluent cloud api secret",
+      "password": true
+    },
+    {
+      "id": "schema_registry_api_key",
+      "type": "promptString",
+      "description": "Environment variable for schema registry api key",
+      "password": true
+    },
+    {
+      "id": "schema_registry_api_secret",
+      "type": "promptString",
+      "description": "Environment variable for schema registry api secret",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@confluentinc/mcp-confluent"
+    ],
+    "env": {
+      "KAFKA_API_KEY": "${input:kafka_api_key}",
+      "KAFKA_API_SECRET": "${input:kafka_api_secret}",
+      "FLINK_API_KEY": "${input:flink_api_key}",
+      "FLINK_API_SECRET": "${input:flink_api_secret}",
+      "CONFLUENT_CLOUD_API_KEY": "${input:confluent_cloud_api_key}",
+      "CONFLUENT_CLOUD_API_SECRET": "${input:confluent_cloud_api_secret}",
+      "SCHEMA_REGISTRY_API_KEY": "${input:schema_registry_api_key}",
+      "SCHEMA_REGISTRY_API_SECRET": "${input:schema_registry_api_secret}"
+    }
+  }
+}

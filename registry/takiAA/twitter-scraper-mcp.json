@@ -1,0 +1,77 @@
+{
+  "name": "twitter-mcp-server",
+  "version": "1.0.0",
+  "description": "An MCP (Model Context Protocol) server that provides tools for interacting with Twitter using the agent-twitter-client library.",
+  "homepage": "https://github.com/takiAA/twitter-scraper-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/takiAA/twitter-scraper-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "twitter-scraper-mcp",
+    "takiaa"
+  ],
+  "inputs": [
+    {
+      "id": "twitter_user",
+      "type": "promptString",
+      "description": "Environment variable for twitter user",
+      "password": false
+    },
+    {
+      "id": "twitter_pass",
+      "type": "promptString",
+      "description": "Environment variable for twitter pass",
+      "password": false
+    },
+    {
+      "id": "fa_secret",
+      "type": "promptString",
+      "description": "Environment variable for fa secret",
+      "password": true
+    },
+    {
+      "id": "twitter_api_key",
+      "type": "promptString",
+      "description": "Environment variable for twitter api key",
+      "password": true
+    },
+    {
+      "id": "twitter_api_secret_key",
+      "type": "promptString",
+      "description": "Environment variable for twitter api secret key",
+      "password": true
+    },
+    {
+      "id": "twitter_access_token",
+      "type": "promptString",
+      "description": "Environment variable for twitter access token",
+      "password": true
+    },
+    {
+      "id": "twitter_access_token_secret",
+      "type": "promptString",
+      "description": "Environment variable for twitter access token secret",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "twitter-mcp-server"
+    ],
+    "env": {
+      "TWITTER_USER": "${input:twitter_user}",
+      "TWITTER_PASS": "${input:twitter_pass}",
+      "FA_SECRET": "${input:fa_secret}",
+      "TWITTER_API_KEY": "${input:twitter_api_key}",
+      "TWITTER_API_SECRET_KEY": "${input:twitter_api_secret_key}",
+      "TWITTER_ACCESS_TOKEN": "${input:twitter_access_token}",
+      "TWITTER_ACCESS_TOKEN_SECRET": "${input:twitter_access_token_secret}"
+    }
+  }
+}

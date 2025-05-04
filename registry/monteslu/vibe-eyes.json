@@ -1,0 +1,26 @@
+{
+  "name": "@monteslu/vibe-eyes",
+  "version": "1.0.2",
+  "description": "MCP server that provides LLMs with vectorized canvas output and debug information for vibe coding",
+  "homepage": "https://github.com/monteslu/vibe-eyes",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/monteslu/vibe-eyes"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "vibe-eyes",
+    "monteslu"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@monteslu/vibe-eyes"
+    ],
+    "env": {}
+  }
+}

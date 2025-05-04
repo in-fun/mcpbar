@@ -1,0 +1,26 @@
+{
+  "name": "mcp-rand",
+  "version": "0.2.0",
+  "description": "MCP server providing random generation utilities including UUID, numbers, strings, passwords, Gaussian distribution, dice rolling, and card drawing",
+  "homepage": "https://github.com/turlockmike/mcp-rand",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/turlockmike/mcp-rand"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-rand",
+    "turlockmike"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "path/to/mcp-rand/build/index.js"
+    ],
+    "disabled": false,
+    "alwaysAllow": []
+  }
+}

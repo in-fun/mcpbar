@@ -1,0 +1,37 @@
+{
+  "name": "@inhiblab-core/mcp-image-compression",
+  "version": "0.1.2",
+  "description": "A high-performance image compression microservice based on MCP (Modal Context Protocol)",
+  "homepage": "https://glama.ai/mcp/servers/@InhiblabCore/mcp-image-compression",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/InhiblabCore/mcp-image-compression"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-image-compression",
+    "inhiblabcore"
+  ],
+  "inputs": [
+    {
+      "id": "image_compression_download_dir",
+      "type": "promptString",
+      "description": "Environment variable for image compression download dir configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@inhiblab-core/mcp-image-compression"
+    ],
+    "env": {
+      "IMAGE_COMPRESSION_DOWNLOAD_DIR": "<YOUR_DIR>"
+    },
+    "disabled": false,
+    "autoApprove": []
+  }
+}

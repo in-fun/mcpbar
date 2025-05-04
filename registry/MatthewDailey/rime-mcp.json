@@ -1,0 +1,35 @@
+{
+  "name": "rime-mcp",
+  "version": "0.8.0",
+  "description": "ModelContextProtocol server for Rime text-to-speech API",
+  "homepage": "https://github.com/MatthewDailey/rime-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MatthewDailey/rime-mcp"
+  },
+  "license": "Unlicense",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "rime-mcp",
+    "matthewdailey"
+  ],
+  "inputs": [
+    {
+      "id": "rime_api_key",
+      "type": "promptString",
+      "description": "Environment variable for rime api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "rime-mcp"
+    ],
+    "env": {
+      "RIME_API_KEY": "${input:rime_api_key}"
+    }
+  }
+}

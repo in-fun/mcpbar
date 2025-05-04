@@ -1,0 +1,24 @@
+{
+  "name": "@gongrzhe/quickchart-mcp-server",
+  "version": "1.0.4",
+  "description": "A Model Context Protocol server for generating charts using QuickChart.io",
+  "homepage": "https://github.com/GongRzhe/Quickchart-MCP-Server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GongRzhe/Quickchart-MCP-Server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "quickchart-mcp-server",
+    "gongrzhe"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/quickchart-server/build/index.js"
+    ]
+  }
+}

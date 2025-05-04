@@ -1,0 +1,70 @@
+{
+  "name": "mcp-salesforce-connector",
+  "version": "1.0.0",
+  "description": "MCP Salesforce connector",
+  "homepage": "https://github.com/smn2gnt/MCP-Salesforce",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smn2gnt/MCP-Salesforce"
+  },
+  "license": "MIT",
+  "keywords": [
+    "modelcontextprotocol",
+    "salesforce",
+    "mcp",
+    "server",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "salesforce_user",
+      "type": "promptString",
+      "description": "Environment variable for salesforce user",
+      "password": false
+    },
+    {
+      "id": "your_salesforce_user",
+      "type": "promptString",
+      "description": "Environment variable for your salesforce user",
+      "password": false
+    },
+    {
+      "id": "salesforce_pass",
+      "type": "promptString",
+      "description": "Environment variable for salesforce pass",
+      "password": false
+    },
+    {
+      "id": "your_salesforce_pass",
+      "type": "promptString",
+      "description": "Environment variable for your salesforce pass",
+      "password": false
+    },
+    {
+      "id": "salesforce_security_token",
+      "type": "promptString",
+      "description": "Environment variable for salesforce security token",
+      "password": true
+    },
+    {
+      "id": "your_salesforce_security_token",
+      "type": "promptString",
+      "description": "Environment variable for your salesforce security token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-salesforce-connector"
+    ],
+    "env": {
+      "SALESFORCE_USER": "${input:salesforce_user}",
+      "YOUR_SALESFORCE_USER": "${input:your_salesforce_user}",
+      "SALESFORCE_PASS": "${input:salesforce_pass}",
+      "YOUR_SALESFORCE_PASS": "${input:your_salesforce_pass}",
+      "SALESFORCE_SECURITY_TOKEN": "${input:salesforce_security_token}",
+      "YOUR_SALESFORCE_SECURITY_TOKEN": "${input:your_salesforce_security_token}"
+    }
+  }
+}

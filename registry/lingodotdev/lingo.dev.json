@@ -1,0 +1,52 @@
+{
+  "name": "@lingo.dev",
+  "version": "1.0.0",
+  "description": "⚡️ Open-source AI-powered CLI for web & mobile localization. Bring your own LLM or use Lingo.dev-managed localization engine.",
+  "homepage": "https://lingo.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lingodotdev/lingo.dev/tree/main/blob/main/mcp.md"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "i18n",
+    "javascript",
+    "react",
+    "react-native",
+    "typescript",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "anthropic_api_key",
+      "type": "promptString",
+      "description": "Environment variable for anthropic api key",
+      "password": true
+    },
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key",
+      "password": true
+    },
+    {
+      "id": "lingodotdev_api_key",
+      "type": "promptString",
+      "description": "Environment variable for lingodotdev api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@lingo.dev"
+    ],
+    "env": {
+      "ANTHROPIC_API_KEY": "${input:anthropic_api_key}",
+      "OPENAI_API_KEY": "${input:openai_api_key}",
+      "LINGODOTDEV_API_KEY": "${input:lingodotdev_api_key}"
+    }
+  }
+}

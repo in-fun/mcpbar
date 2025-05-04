@@ -1,0 +1,35 @@
+{
+  "name": "airtable-mcp-server",
+  "version": "1.3.0",
+  "description": "Airtable Model Context Protocol Server, for allowing AI systems to interact with your Airtable bases",
+  "homepage": "https://www.npmjs.com/package/airtable-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wanattichia-skeelo/airtable-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "airtable-mcp-server",
+    "wanattichia-skeelo"
+  ],
+  "inputs": [
+    {
+      "id": "airtable_api_key",
+      "type": "promptString",
+      "description": "Environment variable for airtable api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "airtable-mcp-server"
+    ],
+    "env": {
+      "AIRTABLE_API_KEY": "pat123.abc123"
+    }
+  }
+}

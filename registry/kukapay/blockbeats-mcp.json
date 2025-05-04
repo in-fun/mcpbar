@@ -1,0 +1,25 @@
+{
+  "name": "blockbeats-mcp",
+  "version": "1.0.0",
+  "description": "An MCP server that delivers blockchain news and in-depth articles from BlockBeats for AI agents.",
+  "homepage": "https://github.com/kukapay/blockbeats-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kukapay/blockbeats-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "blockbeats-mcp",
+    "kukapay"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "blockbeats-mcp"
+    ],
+    "env": {}
+  }
+}

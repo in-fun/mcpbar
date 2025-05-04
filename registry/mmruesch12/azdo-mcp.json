@@ -1,0 +1,57 @@
+{
+  "name": "azure-devops-mcp",
+  "version": "0.1.0",
+  "description": "Azure DevOps MCP tool",
+  "homepage": "https://github.com/mmruesch12/azdo-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmruesch12/azdo-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "azdo-mcp",
+    "mmruesch12"
+  ],
+  "inputs": [
+    {
+      "id": "azure_devops_org_url",
+      "type": "promptString",
+      "description": "Environment variable for azure devops org url configuration",
+      "password": false
+    },
+    {
+      "id": "azure_devops_pat",
+      "type": "promptString",
+      "description": "Environment variable for azure devops pat configuration",
+      "password": false
+    },
+    {
+      "id": "azure_devops_project",
+      "type": "promptString",
+      "description": "Environment variable for azure devops project configuration",
+      "password": false
+    },
+    {
+      "id": "azure_devops_repository",
+      "type": "promptString",
+      "description": "Environment variable for azure devops repository configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/azure-devops-mcp/build/index.js"
+    ],
+    "env": {
+      "AZURE_DEVOPS_ORG_URL": "your-org-url",
+      "AZURE_DEVOPS_PAT": "your-pat",
+      "AZURE_DEVOPS_PROJECT": "your-project",
+      "AZURE_DEVOPS_REPOSITORY": "your-repo"
+    },
+    "disabled": false,
+    "autoApprove": []
+  }
+}

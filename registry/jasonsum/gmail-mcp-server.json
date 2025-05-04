@@ -1,0 +1,31 @@
+{
+  "name": "gmail",
+  "version": "1.0.0",
+  "description": "Model Context Protocol (MCP) server for Gmail",
+  "homepage": "https://github.com/jasonsum/gmail-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jasonsum/gmail-mcp-server"
+  },
+  "license": "GPL-3.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "gmail-mcp-server",
+    "jasonsum"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "[absolute-path-to-git-repo]",
+      "run",
+      "gmail",
+      "--creds-file-path",
+      "[absolute-path-to-credentials-file]",
+      "--token-path",
+      "[absolute-path-to-access-tokens-file]"
+    ]
+  }
+}

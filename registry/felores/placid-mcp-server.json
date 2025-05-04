@@ -1,0 +1,34 @@
+{
+  "name": "@felores/placid-mcp-server",
+  "version": "1.7.0",
+  "description": "Placid.app MCP server to list templates and generate images and videos",
+  "homepage": "https://github.com/felores/placid-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/felores/placid-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "placid-mcp-server",
+    "felores"
+  ],
+  "inputs": [
+    {
+      "id": "placid_api_token",
+      "type": "promptString",
+      "description": "Environment variable for placid api token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "@felores/placid-mcp-server"
+    ],
+    "env": {
+      "PLACID_API_TOKEN": "your-api-token"
+    }
+  }
+}

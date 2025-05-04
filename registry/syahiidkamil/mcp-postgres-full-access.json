@@ -1,0 +1,50 @@
+{
+  "name": "mcp-postgres-full-access",
+  "version": "0.3.0",
+  "description": "Full-access PostgreSQL server for Model Context Protocol with read/write capabilities and enhanced schema metadata",
+  "homepage": "https://github.com/syahiidkamil/mcp-postgres-full-access",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/syahiidkamil/mcp-postgres-full-access"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-postgres-full-access",
+    "syahiidkamil"
+  ],
+  "inputs": [
+    {
+      "id": "transaction_timeout_ms",
+      "type": "promptString",
+      "description": "Environment variable for transaction timeout ms configuration",
+      "password": false
+    },
+    {
+      "id": "max_concurrent_transactions",
+      "type": "promptString",
+      "description": "Environment variable for max concurrent transactions configuration",
+      "password": false
+    },
+    {
+      "id": "pg_statement_timeout_ms",
+      "type": "promptString",
+      "description": "Environment variable for pg statement timeout ms configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-postgres-full-access",
+      "postgresql://username:password@localhost:5432/database"
+    ],
+    "env": {
+      "TRANSACTION_TIMEOUT_MS": "60000",
+      "MAX_CONCURRENT_TRANSACTIONS": "5",
+      "PG_STATEMENT_TIMEOUT_MS": "30000"
+    }
+  }
+}

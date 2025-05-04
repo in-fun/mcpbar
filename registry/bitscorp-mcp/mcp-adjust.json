@@ -1,0 +1,35 @@
+{
+  "name": "mcp-adjust",
+  "version": "1.0.3",
+  "description": "Adjust Reporting MCP server",
+  "homepage": "https://github.com/bitscorp-mcp/mcp-adjust",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bitscorp-mcp/mcp-adjust"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-adjust",
+    "bitscorp-mcp"
+  ],
+  "inputs": [
+    {
+      "id": "your_adjust_api_key",
+      "type": "promptString",
+      "description": "Environment variable for your adjust api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-adjust"
+    ],
+    "env": {
+      "YOUR_ADJUST_API_KEY": "${input:your_adjust_api_key}"
+    }
+  }
+}

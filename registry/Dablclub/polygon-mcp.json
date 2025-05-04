@@ -1,0 +1,36 @@
+{
+  "name": "polygon-mcp",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol (MCP) server that provides onchain tools for Claude AI, allowing it to interact with the Polygon PoS blockchain",
+  "homepage": "https://github.com/Dablclub/polygon-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dablclub/polygon-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "polygon-mcp",
+    "dablclub"
+  ],
+  "inputs": [
+    {
+      "id": "seed_phrase",
+      "type": "promptString",
+      "description": "Environment variable for seed phrase configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/polygon-mcp/build/index.js"
+    ],
+    "env": {
+      "SEED_PHRASE": "your twelve word seed phrase here"
+    },
+    "disabled": false,
+    "autoApprove": []
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "name": "inbox-zero",
+  "version": "1.0.0",
+  "description": "AI personal assistant for email. Open source app to help you reach inbox zero fast.",
+  "homepage": "https://getinboxzero.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elie222/inbox-zero/tree/main/./apps/mcp-server"
+  },
+  "license": "AGPL-3.0",
+  "keywords": [
+    "ai",
+    "email",
+    "nextjs",
+    "openai",
+    "prisma",
+    "productivity",
+    "tailwind",
+    "typescript",
+    "turborepo",
+    "shadcn-ui",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "nextauth_secret",
+      "type": "promptString",
+      "description": "Environment variable for nextauth secret",
+      "password": true
+    },
+    {
+      "id": "google_client_secret",
+      "type": "promptString",
+      "description": "Environment variable for google client secret",
+      "password": true
+    },
+    {
+      "id": "google_encrypt_secret",
+      "type": "promptString",
+      "description": "Environment variable for google encrypt secret",
+      "password": true
+    },
+    {
+      "id": "upstash_redis_url",
+      "type": "promptString",
+      "description": "Environment variable for upstash redis url",
+      "password": false
+    },
+    {
+      "id": "upstash_redis_token",
+      "type": "promptString",
+      "description": "Environment variable for upstash redis token",
+      "password": true
+    },
+    {
+      "id": "database_url",
+      "type": "promptString",
+      "description": "Environment variable for database url",
+      "password": false
+    },
+    {
+      "id": "ollama_base_url",
+      "type": "promptString",
+      "description": "Environment variable for ollama base url",
+      "password": false
+    },
+    {
+      "id": "ollama_host",
+      "type": "promptString",
+      "description": "Environment variable for ollama host",
+      "password": false
+    },
+    {
+      "id": "google_pubsub_verification_token",
+      "type": "promptString",
+      "description": "Environment variable for google pubsub verification token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "inbox-zero"
+    ],
+    "env": {
+      "NEXTAUTH_SECRET": "${input:nextauth_secret}",
+      "GOOGLE_CLIENT_SECRET": "${input:google_client_secret}",
+      "GOOGLE_ENCRYPT_SECRET": "${input:google_encrypt_secret}",
+      "UPSTASH_REDIS_URL": "${input:upstash_redis_url}",
+      "UPSTASH_REDIS_TOKEN": "${input:upstash_redis_token}",
+      "DATABASE_URL": "${input:database_url}",
+      "OLLAMA_BASE_URL": "${input:ollama_base_url}",
+      "OLLAMA_HOST": "${input:ollama_host}",
+      "GOOGLE_PUBSUB_VERIFICATION_TOKEN": "${input:google_pubsub_verification_token}"
+    }
+  }
+}

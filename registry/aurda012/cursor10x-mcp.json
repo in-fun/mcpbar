@@ -1,0 +1,49 @@
+{
+  "name": "cursor10x-mcp",
+  "version": "1.4.0",
+  "description": "Memory System for Cursor using MCP - Provides persistent context awareness for Claude",
+  "homepage": "https://github.com/aurda012/cursor10x-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aurda012/cursor10x-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "agent-memory",
+    "cursor",
+    "mcp",
+    "mcp-server",
+    "memory",
+    "agentic-ai",
+    "cursor-ai",
+    "cursorai",
+    "sqlite",
+    "turso",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "turso_database_url",
+      "type": "promptString",
+      "description": "Environment variable for turso database url configuration",
+      "password": false
+    },
+    {
+      "id": "turso_auth_token",
+      "type": "promptString",
+      "description": "Environment variable for turso auth token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "cursor10x-mcp"
+    ],
+    "enabled": true,
+    "env": {
+      "TURSO_DATABASE_URL": "your-turso-database-url",
+      "TURSO_AUTH_TOKEN": "your-turso-auth-token"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "dkmaker-mcp-server-tablestore",
+  "version": "0.2.0",
+  "description": "MCP server for Azure Table Storage interaction",
+  "homepage": "https://github.com/dkmaker/mcp-azure-tablestorage",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dkmaker/mcp-azure-tablestorage"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "dkmaker-mcp-server-tablestore"
+    ],
+    "env": {}
+  }
+}

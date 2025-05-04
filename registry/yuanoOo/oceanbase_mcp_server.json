@@ -1,0 +1,65 @@
+{
+  "name": "oceanbase_mcp_server",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol (MCP) server that enables secure interaction with OceanBase databases. This server allows AI assistants to list tables, read data, and execute SQL queries through a controlled interface, making database exploration and analysis safer and more structured.",
+  "homepage": "https://github.com/yuanoOo/oceanbase_mcp_server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuanoOo/oceanbase_mcp_server"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "oceanbase_mcp_server",
+    "yuanooo"
+  ],
+  "inputs": [
+    {
+      "id": "ob_host",
+      "type": "promptString",
+      "description": "Environment variable for ob host configuration",
+      "password": false
+    },
+    {
+      "id": "ob_port",
+      "type": "promptString",
+      "description": "Environment variable for ob port configuration",
+      "password": false
+    },
+    {
+      "id": "ob_user",
+      "type": "promptString",
+      "description": "Environment variable for ob user configuration",
+      "password": false
+    },
+    {
+      "id": "ob_password",
+      "type": "promptString",
+      "description": "Environment variable for ob password authentication",
+      "password": false
+    },
+    {
+      "id": "ob_database",
+      "type": "promptString",
+      "description": "Environment variable for ob database configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "path/to/oceanbase_mcp_server",
+      "run",
+      "oceanbase_mcp_server"
+    ],
+    "env": {
+      "OB_HOST": "localhost",
+      "OB_PORT": "2881",
+      "OB_USER": "your_username",
+      "OB_PASSWORD": "your_password",
+      "OB_DATABASE": "your_database"
+    }
+  }
+}

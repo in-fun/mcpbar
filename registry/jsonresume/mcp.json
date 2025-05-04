@@ -1,0 +1,49 @@
+{
+  "name": "@jsonresume/mcp",
+  "version": "3.0.3",
+  "description": "ModelContextProtocol server for enhancing JSON Resumes",
+  "homepage": "https://github.com/jsonresume/mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jsonresume/mcp"
+  },
+  "license": "Unlicense",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp",
+    "jsonresume"
+  ],
+  "inputs": [
+    {
+      "id": "github_token",
+      "type": "promptString",
+      "description": "Environment variable for github token authentication",
+      "password": true
+    },
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key authentication",
+      "password": true
+    },
+    {
+      "id": "github_username",
+      "type": "promptString",
+      "description": "Environment variable for github username configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@jsonresume/mcp"
+    ],
+    "env": {
+      "GITHUB_TOKEN": "your-github-token",
+      "OPENAI_API_KEY": "your-openai-api-key",
+      "GITHUB_USERNAME": "your-github-username"
+    }
+  }
+}

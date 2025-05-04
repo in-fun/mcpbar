@@ -1,0 +1,49 @@
+{
+  "name": "@inkdropapp/mcp-server",
+  "version": "1.1.1",
+  "description": "Inkdrop Model Context Protocol Server",
+  "homepage": "https://github.com/inkdropapp/mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/inkdropapp/mcp-server"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server",
+    "inkdropapp"
+  ],
+  "inputs": [
+    {
+      "id": "inkdrop_local_server_url",
+      "type": "promptString",
+      "description": "Environment variable for inkdrop local server url configuration",
+      "password": false
+    },
+    {
+      "id": "inkdrop_local_username",
+      "type": "promptString",
+      "description": "Environment variable for inkdrop local username configuration",
+      "password": false
+    },
+    {
+      "id": "inkdrop_local_password",
+      "type": "promptString",
+      "description": "Environment variable for inkdrop local password authentication",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@inkdropapp/mcp-server"
+    ],
+    "env": {
+      "INKDROP_LOCAL_SERVER_URL": "http://localhost:19840",
+      "INKDROP_LOCAL_USERNAME": "your-local-server-username",
+      "INKDROP_LOCAL_PASSWORD": "your-local-server-password"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "audius-mcp-atris",
+  "version": "2.0.1",
+  "description": "Atris MCP - STDIO-based Model Context Protocol integration for Audius music platform",
+  "homepage": "https://github.com/glassBead-tc/audius-mcp-atris",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/glassBead-tc/audius-mcp-atris"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "audius-mcp-atris",
+    "glassbead-tc"
+  ],
+  "inputs": [
+    {
+      "id": "audius_api_key",
+      "type": "promptString",
+      "description": "Environment variable for audius api key authentication",
+      "password": true
+    },
+    {
+      "id": "audius_api_secret",
+      "type": "promptString",
+      "description": "Environment variable for audius api secret authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "audius-mcp-atris"
+    ],
+    "env": {
+      "AUDIUS_API_KEY": "your_api_key_here",
+      "AUDIUS_API_SECRET": "your_api_secret_here"
+    }
+  }
+}

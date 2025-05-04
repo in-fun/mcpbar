@@ -1,0 +1,26 @@
+{
+  "name": "next-mcp-server",
+  "version": "0.2.2",
+  "description": "Help LLMs to understand your Next.js project better",
+  "homepage": "https://github.com/jazelly/next-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jazelly/next-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "next-mcp-server",
+    "jazelly"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "next-mcp-server"
+    ],
+    "env": {}
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "sequential-story",
+  "version": "1.0.0",
+  "description": "story based implementation for sequential thinking",
+  "homepage": "https://github.com/dhkts1/sequentialStory",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dhkts1/sequentialStory"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "sequentialstory",
+    "dhkts1"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "sequential-story"
+    ],
+    "env": {}
+  }
+}

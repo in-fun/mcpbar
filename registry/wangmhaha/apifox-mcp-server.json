@@ -1,0 +1,35 @@
+{
+  "name": "@wangmhaha/apifox-mcp-server",
+  "version": "1.6.7",
+  "description": "基于MCP协议的获取ApiFox接口信息的服务",
+  "homepage": "https://github.com/wangmhaha/apifox-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wangmhaha/apifox-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "apifox-mcp-server",
+    "wangmhaha"
+  ],
+  "inputs": [
+    {
+      "id": "apifox_api_key",
+      "type": "promptString",
+      "description": "Environment variable for apifox api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@wangmhaha/apifox-mcp-server"
+    ],
+    "env": {
+      "APIFOX_API_KEY": "${input:apifox_api_key}"
+    }
+  }
+}

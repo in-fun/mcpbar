@@ -1,0 +1,42 @@
+{
+  "name": "vercel-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for vercel-mcp-server",
+  "homepage": "https://github.com/Quegenx/vercel-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Quegenx/vercel-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "vercel-mcp-server",
+    "quegenx"
+  ],
+  "inputs": [
+    {
+      "id": "default_access_token",
+      "type": "promptString",
+      "description": "Environment variable for default access token",
+      "password": true
+    },
+    {
+      "id": "your_access_token",
+      "type": "promptString",
+      "description": "Environment variable for your access token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "vercel-mcp"
+    ],
+    "env": {
+      "DEFAULT_ACCESS_TOKEN": "${input:default_access_token}",
+      "YOUR_ACCESS_TOKEN": "${input:your_access_token}"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@gerred/mcpmc",
+  "version": "0.0.9",
+  "description": "A MCP server for interacting with Minecraft via Mineflayer",
+  "homepage": "https://github.com/gerred/mcpmc",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gerred/mcpmc"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcpmc",
+    "gerred"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@gerred/mcpmc"
+    ],
+    "env": {}
+  }
+}

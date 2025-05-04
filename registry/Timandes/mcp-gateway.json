@@ -1,0 +1,26 @@
+{
+  "name": "mcp-gateway",
+  "version": "1.0.0",
+  "description": "MCP Gateway - translate MCP tool-callings to HTTP requests",
+  "homepage": "https://github.com/Timandes/mcp-gateway",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Timandes/mcp-gateway"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-gateway",
+    "timandes"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uv",
+    "args": [
+      "run",
+      "mcp-gateway",
+      "--transport=stdio"
+    ]
+  }
+}

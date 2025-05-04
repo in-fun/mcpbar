@@ -1,0 +1,45 @@
+{
+  "name": "mcp-server-onenote",
+  "version": "0.1.1",
+  "description": "OneNote MCP Server Implementation",
+  "homepage": "https://github.com/ZubeidHendricks/azure-onenote-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZubeidHendricks/azure-onenote-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "azure-onenote-mcp-server",
+    "zubeidhendricks"
+  ],
+  "inputs": [
+    {
+      "id": "azure_tenant_id",
+      "type": "promptString",
+      "description": "Environment variable for azure tenant id configuration",
+      "password": false
+    },
+    {
+      "id": "azure_client_id",
+      "type": "promptString",
+      "description": "Environment variable for azure client id configuration",
+      "password": false
+    },
+    {
+      "id": "azure_client_secret",
+      "type": "promptString",
+      "description": "Environment variable for azure client secret authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "mcp-server-onenote",
+    "env": {
+      "AZURE_TENANT_ID": "<YOUR_TENANT_ID>",
+      "AZURE_CLIENT_ID": "<YOUR_CLIENT_ID>",
+      "AZURE_CLIENT_SECRET": "<YOUR_CLIENT_SECRET>"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "notion-mcp-server",
+  "version": "1.0.1",
+  "description": "MCP for Notion",
+  "homepage": "https://github.com/awkoy/notion-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/awkoy/notion-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "notion",
+    "notion-ai",
+    "notion-mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "env NOTION_TOKEN=YOUR_KEY NOTION_PAGE_ID=YOUR_PAGE_ID npx",
+    "args": [
+      "-y",
+      "notion-mcp-server"
+    ]
+  }
+}

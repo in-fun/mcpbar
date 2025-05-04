@@ -1,0 +1,69 @@
+{
+  "name": "mysql-mcp-connect",
+  "version": "0.1.1",
+  "description": "MySQL MCP 서버 - Model Context Protocol로 MySQL 데이터베이스에 접근하는 도구",
+  "homepage": "https://github.com/sussa3007/mysql-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sussa3007/mysql-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mysql-mcp",
+    "sussa3007"
+  ],
+  "inputs": [
+    {
+      "id": "mysql_host",
+      "type": "promptString",
+      "description": "Environment variable for mysql host configuration",
+      "password": false
+    },
+    {
+      "id": "mysql_port",
+      "type": "promptString",
+      "description": "Environment variable for mysql port configuration",
+      "password": false
+    },
+    {
+      "id": "mysql_user",
+      "type": "promptString",
+      "description": "Environment variable for mysql user configuration",
+      "password": false
+    },
+    {
+      "id": "mysql_password",
+      "type": "promptString",
+      "description": "Environment variable for mysql password authentication",
+      "password": false
+    },
+    {
+      "id": "mysql_database",
+      "type": "promptString",
+      "description": "Environment variable for mysql database configuration",
+      "password": false
+    },
+    {
+      "id": "mysql_readonly",
+      "type": "promptString",
+      "description": "Environment variable for mysql readonly configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "mysql-mcp"
+    ],
+    "env": {
+      "MYSQL_HOST": "localhost",
+      "MYSQL_PORT": "3306",
+      "MYSQL_USER": "root",
+      "MYSQL_PASSWORD": "your_password",
+      "MYSQL_DATABASE": "your_database",
+      "MYSQL_READONLY": "true"
+    }
+  }
+}

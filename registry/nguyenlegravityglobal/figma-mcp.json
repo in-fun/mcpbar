@@ -1,0 +1,35 @@
+{
+  "name": "mcp-demo",
+  "version": "1.0.0",
+  "description": "MCP Demo Server",
+  "homepage": "https://github.com/nguyenlegravityglobal/figma-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nguyenlegravityglobal/figma-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "figma-mcp",
+    "nguyenlegravityglobal"
+  ],
+  "inputs": [
+    {
+      "id": "figma_api_key",
+      "type": "promptString",
+      "description": "Environment variable for figma api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-demo"
+    ],
+    "env": {
+      "FIGMA_API_KEY": "${input:figma_api_key}"
+    }
+  }
+}

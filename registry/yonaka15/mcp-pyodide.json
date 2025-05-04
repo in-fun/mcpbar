@@ -1,0 +1,26 @@
+{
+  "name": "mcp-pyodide",
+  "version": "1.0.0",
+  "description": "Model Context Protocol Server implementation with Pyodide",
+  "homepage": "https://github.com/yonaka15/mcp-pyodide",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yonaka15/mcp-pyodide"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-pyodide",
+    "yonaka15"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-pyodide"
+    ],
+    "env": {}
+  }
+}

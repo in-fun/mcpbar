@@ -1,0 +1,55 @@
+{
+  "name": "x-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for X (Twitter) integration",
+  "homepage": "https://github.com/DataWhisker/x-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DataWhisker/x-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "x-mcp-server",
+    "datawhisker"
+  ],
+  "inputs": [
+    {
+      "id": "twitter_api_key",
+      "type": "promptString",
+      "description": "Environment variable for twitter api key authentication",
+      "password": true
+    },
+    {
+      "id": "twitter_api_secret",
+      "type": "promptString",
+      "description": "Environment variable for twitter api secret authentication",
+      "password": true
+    },
+    {
+      "id": "twitter_access_token",
+      "type": "promptString",
+      "description": "Environment variable for twitter access token authentication",
+      "password": true
+    },
+    {
+      "id": "twitter_access_secret",
+      "type": "promptString",
+      "description": "Environment variable for twitter access secret authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "%USERPROFILE%/Projects/MCP Basket/x-server/build/index.js"
+    ],
+    "env": {
+      "TWITTER_API_KEY": "paste-your-api-key-here",
+      "TWITTER_API_SECRET": "paste-your-api-key-secret-here",
+      "TWITTER_ACCESS_TOKEN": "paste-your-access-token-here",
+      "TWITTER_ACCESS_SECRET": "paste-your-access-token-secret-here"
+    }
+  }
+}

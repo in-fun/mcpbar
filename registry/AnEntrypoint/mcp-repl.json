@@ -1,0 +1,30 @@
+{
+  "name": "mcp-repl",
+  "version": "2.0.9",
+  "description": "Direct Node.js executor with ESM import support for MCP",
+  "homepage": "https://github.com/AnEntrypoint/mcp-repl",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AnEntrypoint/mcp-repl"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-repl",
+    "anentrypoint"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "path/to/direct-node-executor.js",
+      "path/to/your/project"
+    ],
+    "env": {},
+    "disabled": false,
+    "autoApprove": [
+      "execute"
+    ]
+  }
+}

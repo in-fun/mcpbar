@@ -1,0 +1,65 @@
+{
+  "name": "mcp-server-mariadb",
+  "version": "1.0.0",
+  "description": "An mcp server that provides read-only access to MariaDB.",
+  "homepage": "https://github.com/abel9851/mcp-server-mariadb",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abel9851/mcp-server-mariadb"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mariadb",
+    "model-context-protocol",
+    "mcp",
+    "mcp-server"
+  ],
+  "inputs": [
+    {
+      "id": "mariadb_host",
+      "type": "promptString",
+      "description": "Environment variable for mariadb host configuration",
+      "password": false
+    },
+    {
+      "id": "mariadb_user",
+      "type": "promptString",
+      "description": "Environment variable for mariadb user configuration",
+      "password": false
+    },
+    {
+      "id": "mariadb_password",
+      "type": "promptString",
+      "description": "Environment variable for mariadb password authentication",
+      "password": false
+    },
+    {
+      "id": "mariadb_database",
+      "type": "promptString",
+      "description": "Environment variable for mariadb database configuration",
+      "password": false
+    },
+    {
+      "id": "mariadb_port",
+      "type": "promptString",
+      "description": "Environment variable for mariadb port configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "/PATH/TO/uv",
+    "args": [
+      "--directory",
+      "/YOUR/SOURCE/PATH/mcp-server-mariadb/src/mcp_server_mariadb",
+      "run",
+      "server.py"
+    ],
+    "env": {
+      "MARIADB_HOST": "127.0.0.1",
+      "MARIADB_USER": "USER",
+      "MARIADB_PASSWORD": "PASSWORD",
+      "MARIADB_DATABASE": "DATABASE",
+      "MARIADB_PORT": "3306"
+    }
+  }
+}

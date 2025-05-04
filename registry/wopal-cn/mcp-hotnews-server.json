@@ -1,0 +1,25 @@
+{
+  "name": "@wopal/mcp-server-hotnews",
+  "version": "0.2.0",
+  "description": "A Model Context Protocol server that provides real-time hot trending topics from major Chinese social platforms and news sites",
+  "homepage": "https://github.com/wopal-cn/mcp-hotnews-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wopal-cn/mcp-hotnews-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-hotnews-server",
+    "wopal-cn"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@wopal/mcp-server-hotnews"
+    ]
+  }
+}

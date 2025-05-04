@@ -1,0 +1,83 @@
+{
+  "name": "ultrade-mcp",
+  "version": "1.1.0",
+  "description": "Ultrade MCP server",
+  "homepage": "https://ultrade.org/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ultrade-org/ultrade-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "agents",
+    "mcp",
+    "ultrade",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "algorand_network",
+      "type": "promptString",
+      "description": "Environment variable for algorand network configuration",
+      "password": false
+    },
+    {
+      "id": "algorand_algod_api",
+      "type": "promptString",
+      "description": "Environment variable for algorand algod api configuration",
+      "password": false
+    },
+    {
+      "id": "algorand_algod",
+      "type": "promptString",
+      "description": "Environment variable for algorand algod configuration",
+      "password": false
+    },
+    {
+      "id": "algorand_algod_port",
+      "type": "promptString",
+      "description": "Environment variable for algorand algod port configuration",
+      "password": false
+    },
+    {
+      "id": "algorand_token",
+      "type": "promptString",
+      "description": "Environment variable for algorand token authentication",
+      "password": true
+    },
+    {
+      "id": "algorand_agent_wallet_active",
+      "type": "promptString",
+      "description": "Environment variable for algorand agent wallet active configuration",
+      "password": false
+    },
+    {
+      "id": "ultrade_api_url",
+      "type": "promptString",
+      "description": "Environment variable for ultrade api url configuration",
+      "password": false
+    },
+    {
+      "id": "items_per_page",
+      "type": "promptString",
+      "description": "Environment variable for items per page configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "PATH_ON_YOUR_MACHINE/Claude/mcp-servers/ultrade-mcp/dist/index.js"
+    ],
+    "env": {
+      "ALGORAND_NETWORK": "mainnet",
+      "ALGORAND_ALGOD_API": "https://mainnet-api.algonode.cloud/v2",
+      "ALGORAND_ALGOD": "https://mainnet-api.algonode.cloud",
+      "ALGORAND_ALGOD_PORT": "",
+      "ALGORAND_TOKEN": "",
+      "ALGORAND_AGENT_WALLET_ACTIVE": "problem aim online jaguar upper oil flight stumble mystery aerobic toy avoid file tomato moment exclude witness guard lab opera crunch noodle dune abandon broccoli",
+      "ULTRADE_API_URL": "https://api.ultrade.io",
+      "ITEMS_PER_PAGE": "10"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@thirdstrandstudio/mcp-figma",
+  "version": "0.7.0",
+  "description": "MCP server for figma",
+  "homepage": "https://github.com/thirdstrandstudio/mcp-figma",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thirdstrandstudio/mcp-figma"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-figma",
+    "thirdstrandstudio"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "@thirdstrandstudio/mcp-figma",
+      "--figma-token",
+      "your_figma_api_key"
+    ]
+  }
+}

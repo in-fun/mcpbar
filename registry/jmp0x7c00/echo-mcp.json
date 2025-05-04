@@ -1,0 +1,28 @@
+{
+  "name": "echo-server",
+  "version": "0.1.0",
+  "description": "Repeats back whatever it is prompted for testing",
+  "homepage": "https://github.com/jmp0x7c00/echo-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jmp0x7c00/echo-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "echo-mcp",
+    "jmp0x7c00"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/echo-server/build/index.js"
+    ],
+    "disabled": false,
+    "autoApprove": [
+      "echo"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "sentry-mcp",
+  "version": "0.0.1",
+  "description": "Sentry MCP Server",
+  "homepage": "https://mcp.sentry.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/getsentry/sentry-mcp"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "mcp-server",
+    "tag-to-be-production-20250414",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "mcp-remote",
+      "https://mcp-github-oauth.<your-subdomain>.workers.dev/sse"
+    ]
+  }
+}

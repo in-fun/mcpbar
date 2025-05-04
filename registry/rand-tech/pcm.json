@@ -1,0 +1,27 @@
+{
+  "name": "pcm",
+  "version": "1.0.0",
+  "description": "MCP for reverse engineering",
+  "homepage": "https://github.com/rand-tech/pcm",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rand-tech/pcm"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "pcm",
+    "rand-tech"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "path_to/pcm",
+      "run",
+      "server.py"
+    ]
+  }
+}

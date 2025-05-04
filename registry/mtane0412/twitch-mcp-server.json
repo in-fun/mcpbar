@@ -1,0 +1,35 @@
+{
+  "name": "@mtane0412/twitch-mcp-server",
+  "version": "2.0.4",
+  "description": "Twitch MCP Server using Helix API",
+  "homepage": "https://github.com/mtane0412/twitch-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mtane0412/twitch-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "twitch-mcp-server",
+    "mtane0412"
+  ],
+  "inputs": [
+    {
+      "id": "twitch_client_secret",
+      "type": "promptString",
+      "description": "Environment variable for twitch client secret",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@mtane0412/twitch-mcp-server"
+    ],
+    "env": {
+      "TWITCH_CLIENT_SECRET": "${input:twitch_client_secret}"
+    }
+  }
+}

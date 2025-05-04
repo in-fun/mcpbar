@@ -1,0 +1,26 @@
+{
+  "name": "swapi",
+  "version": "1.0.0",
+  "description": "swapi",
+  "homepage": "https://github.com/alexandrebagio/swapi-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexandrebagio/swapi-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "swapi-mcp",
+    "alexandrebagio"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "swapi"
+    ],
+    "env": {}
+  }
+}

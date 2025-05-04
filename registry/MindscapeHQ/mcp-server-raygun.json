@@ -1,0 +1,35 @@
+{
+  "name": "@raygun.io/mcp-server-raygun",
+  "version": "0.1.0",
+  "description": "MCP Server for Raygun's API V3 endpoints for interacting with your Crash Reporting and Real User Monitoring applications",
+  "homepage": "https://github.com/MindscapeHQ/mcp-server-raygun",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MindscapeHQ/mcp-server-raygun"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-raygun",
+    "mindscapehq"
+  ],
+  "inputs": [
+    {
+      "id": "raygun_pat_token",
+      "type": "promptString",
+      "description": "Environment variable for raygun pat token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@raygun.io/mcp-server-raygun"
+    ],
+    "env": {
+      "RAYGUN_PAT_TOKEN": "your-pat-token-here"
+    }
+  }
+}

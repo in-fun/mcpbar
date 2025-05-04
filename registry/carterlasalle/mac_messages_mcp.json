@@ -1,0 +1,30 @@
+{
+  "name": "mac-messages-mcp",
+  "version": "1.0.0",
+  "description": "An MCP server that securely interfaces with your iMessage database via the Model Context Protocol (MCP), allowing LLMs to query and analyze iMessage conversations. It includes robust phone number validation, attachment processing, contact management, group chat handling, and full support for sending and receiving messages.",
+  "homepage": "https://pypi.org/project/mac-messages-mcp/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/carterlasalle/mac_messages_mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "applescript",
+    "claude",
+    "contacts",
+    "cursor",
+    "imessage",
+    "mac",
+    "macos",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mac-messages-mcp"
+    ]
+  }
+}

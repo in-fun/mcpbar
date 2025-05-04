@@ -1,0 +1,41 @@
+{
+  "name": "youtube-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for youtube-mcp",
+  "homepage": "https://github.com/Prajwal-ak-0/youtube-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Prajwal-ak-0/youtube-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "youtube-mcp",
+    "prajwal-ak-0"
+  ],
+  "inputs": [
+    {
+      "id": "gemini_api_key",
+      "type": "promptString",
+      "description": "Environment variable for gemini api key",
+      "password": true
+    },
+    {
+      "id": "youtube_api_key",
+      "type": "promptString",
+      "description": "Environment variable for youtube api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "youtube-mcp"
+    ],
+    "env": {
+      "GEMINI_API_KEY": "${input:gemini_api_key}",
+      "YOUTUBE_API_KEY": "${input:youtube_api_key}"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "fpl-mcp",
+  "version": "1.0.0",
+  "description": "Fantasy Premier League MCP Server",
+  "homepage": "https://github.com/rishijatia/fantasy-pl-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rishijatia/fantasy-pl-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "fantasy-pl-mcp",
+    "rishijatia"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "python",
+    "args": [
+      "-m",
+      "fpl_mcp"
+    ]
+  }
+}

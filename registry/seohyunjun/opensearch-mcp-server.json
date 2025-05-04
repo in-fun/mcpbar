@@ -1,0 +1,51 @@
+{
+  "name": "opensearch-mcp-server",
+  "version": "1.0.0",
+  "description": "OpenSearch MCP Server: Open-source search cluster management component",
+  "homepage": "https://github.com/seohyunjun/opensearch-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seohyunjun/opensearch-mcp-server"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "opensearch-mcp-server",
+    "seohyunjun"
+  ],
+  "inputs": [
+    {
+      "id": "opensearch_host",
+      "type": "promptString",
+      "description": "Environment variable for opensearch host configuration",
+      "password": false
+    },
+    {
+      "id": "opensearch_username",
+      "type": "promptString",
+      "description": "Environment variable for opensearch username configuration",
+      "password": false
+    },
+    {
+      "id": "opensearch_password",
+      "type": "promptString",
+      "description": "Environment variable for opensearch password authentication",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "path/to/src/opensearch_mcp_server",
+      "run",
+      "opensearch-mcp-server"
+    ],
+    "env": {
+      "OPENSEARCH_HOST": "https://localhost:9200",
+      "OPENSEARCH_USERNAME": "opensearch",
+      "OPENSEARCH_PASSWORD": "test123"
+    }
+  }
+}

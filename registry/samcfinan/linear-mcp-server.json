@@ -1,0 +1,37 @@
+{
+  "name": "linear-mcp-server",
+  "version": "1.0.0",
+  "description": "A MCP server for Linear",
+  "homepage": "https://github.com/samcfinan/linear-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samcfinan/linear-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "claude",
+    "linear",
+    "mcp",
+    "mcp-server",
+    "model",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "linear_api_key",
+      "type": "promptString",
+      "description": "Environment variable for linear api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "/Users/USERNAME/.nvm/versions/node/v22.13.0/bin/node",
+    "args": [
+      "--experimental-strip-types",
+      "/absolute/path/to/repo/index.ts"
+    ],
+    "env": {
+      "LINEAR_API_KEY": "your_linear_api_key_here"
+    }
+  }
+}

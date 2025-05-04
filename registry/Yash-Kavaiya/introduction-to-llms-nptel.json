@@ -1,0 +1,26 @@
+{
+  "name": "nextra-docs-template",
+  "version": "0.0.1",
+  "description": "Nextra docs template",
+  "homepage": "https://introduction-to-llms-nptel.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Yash-Kavaiya/introduction-to-llms-nptel"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "introduction-to-llms-nptel",
+    "yash-kavaiya"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "nextra-docs-template"
+    ],
+    "env": {}
+  }
+}

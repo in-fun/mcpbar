@@ -1,0 +1,24 @@
+{
+  "name": "mcp-server-siri-shortcuts",
+  "version": "1.0.0",
+  "description": "MCP server that provides access to Siri shortcuts",
+  "homepage": "https://github.com/dvcrn/mcp-server-siri-shortcuts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dvcrn/mcp-server-siri-shortcuts"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "llm",
+    "mcp",
+    "model-context-protocol",
+    "siri-shortcuts"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "mcp-server-siri-shortcuts"
+    ]
+  }
+}

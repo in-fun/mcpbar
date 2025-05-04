@@ -1,0 +1,41 @@
+{
+  "name": "flightradar24-mcp-server",
+  "version": "1.0.0",
+  "description": "Model Context Protocol server for FlightRadar24 API",
+  "homepage": "https://github.com/sunsetcoder/flightradar24-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sunsetcoder/flightradar24-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "flightradar24-mcp-server",
+    "sunsetcoder"
+  ],
+  "inputs": [
+    {
+      "id": "fr24_api_key",
+      "type": "promptString",
+      "description": "Environment variable for fr24 api key authentication",
+      "password": true
+    },
+    {
+      "id": "fr24_api_url",
+      "type": "promptString",
+      "description": "Environment variable for fr24 api url configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "/Users/<username>/<FULL_PATH...>/flightradar24-mcp-server/dist/index.js"
+    ],
+    "env": {
+      "FR24_API_KEY": "your_api_key_here",
+      "FR24_API_URL": "https://fr24api.flightradar24.com"
+    }
+  }
+}

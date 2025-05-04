@@ -1,0 +1,27 @@
+{
+  "name": "whoami-mcp",
+  "version": "1.0.0",
+  "description": "A lightweight MCP server that tells you exactly who you are.",
+  "homepage": "https://github.com/kukapay/whoami-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kukapay/whoami-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "whoami-mcp",
+    "kukapay"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "path/to/whoami_mcp",
+      "run",
+      "main.py"
+    ]
+  }
+}

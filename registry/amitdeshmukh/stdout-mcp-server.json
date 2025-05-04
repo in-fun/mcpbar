@@ -1,0 +1,24 @@
+{
+  "name": "stdout-mcp-server",
+  "version": "1.0.6",
+  "description": "An MCP server that any process can pipe stdout logs to including console logs from nodejs programs",
+  "homepage": "https://github.com/amitdeshmukh/stdout-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amitdeshmukh/stdout-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "stdout-mcp-server",
+    "amitdeshmukh"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "stdio-mcp-server"
+    ]
+  }
+}

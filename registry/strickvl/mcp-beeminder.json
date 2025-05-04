@@ -1,0 +1,55 @@
+{
+  "name": "mcp-beeminder",
+  "version": "1.0.0",
+  "description": "MCP server for mcp-beeminder",
+  "homepage": "https://github.com/strickvl/mcp-beeminder",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/strickvl/mcp-beeminder"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-beeminder",
+    "strickvl"
+  ],
+  "inputs": [
+    {
+      "id": "beeminder_api_key",
+      "type": "promptString",
+      "description": "Environment variable for beeminder api key",
+      "password": true
+    },
+    {
+      "id": "your_beeminder_api_key",
+      "type": "promptString",
+      "description": "Environment variable for your beeminder api key",
+      "password": true
+    },
+    {
+      "id": "beeminder_user",
+      "type": "promptString",
+      "description": "Environment variable for beeminder user",
+      "password": false
+    },
+    {
+      "id": "your_beeminder_user",
+      "type": "promptString",
+      "description": "Environment variable for your beeminder user",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-beeminder"
+    ],
+    "env": {
+      "BEEMINDER_API_KEY": "${input:beeminder_api_key}",
+      "YOUR_BEEMINDER_API_KEY": "${input:your_beeminder_api_key}",
+      "BEEMINDER_USER": "${input:beeminder_user}",
+      "YOUR_BEEMINDER_USER": "${input:your_beeminder_user}"
+    }
+  }
+}

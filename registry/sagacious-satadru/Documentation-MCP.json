@@ -1,0 +1,34 @@
+{
+  "name": "documentation",
+  "version": "1.0.0",
+  "description": "An MCP server that can work with Claude desktop to fetch documentation from langchain, llama-index, and OpenAI.",
+  "homepage": "https://github.com/sagacious-satadru/Documentation-MCP",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sagacious-satadru/Documentation-MCP"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "documentation-mcp",
+    "sagacious-satadru"
+  ],
+  "inputs": [
+    {
+      "id": "serper_api_key",
+      "type": "promptString",
+      "description": "Environment variable for serper api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "documentation"
+    ],
+    "env": {
+      "SERPER_API_KEY": "${input:serper_api_key}"
+    }
+  }
+}

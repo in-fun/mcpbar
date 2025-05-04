@@ -1,0 +1,34 @@
+{
+  "name": "@modelcontextprotocol/server-filesystem",
+  "version": "0.6.2",
+  "description": "MCP server for filesystem access",
+  "homepage": "https://github.com/Legaltime/filesystem",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Legaltime/filesystem"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "filesystem",
+    "legaltime"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "docker",
+    "args": [
+      "run",
+      "-i",
+      "--rm",
+      "--mount",
+      "type=bind,src=/Users/username/Desktop,dst=/projects/Desktop",
+      "--mount",
+      "type=bind,src=/path/to/other/allowed/dir,dst=/projects/other/allowed/dir,ro",
+      "--mount",
+      "type=bind,src=/path/to/file.txt,dst=/projects/path/to/file.txt",
+      "mcp/filesystem",
+      "/projects"
+    ]
+  }
+}

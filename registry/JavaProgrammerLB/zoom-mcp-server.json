@@ -1,0 +1,49 @@
+{
+  "name": "@yitianyigexiangfa/zoom-mcp-server",
+  "version": "0.7.1",
+  "description": "Now you can date a ZOOM meeting with AI's help.",
+  "homepage": "https://github.com/JavaProgrammerLB/zoom-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JavaProgrammerLB/zoom-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "zoom-mcp-server",
+    "javaprogrammerlb"
+  ],
+  "inputs": [
+    {
+      "id": "zoom_account_id",
+      "type": "promptString",
+      "description": "Environment variable for zoom account id configuration",
+      "password": false
+    },
+    {
+      "id": "zoom_client_id",
+      "type": "promptString",
+      "description": "Environment variable for zoom client id configuration",
+      "password": false
+    },
+    {
+      "id": "zoom_client_secret",
+      "type": "promptString",
+      "description": "Environment variable for zoom client secret authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@yitianyigexiangfa/zoom-mcp-server@latest"
+    ],
+    "env": {
+      "ZOOM_ACCOUNT_ID": "${ZOOM_ACCOUNT_ID}",
+      "ZOOM_CLIENT_ID": "${ZOOM_CLIENT_ID}",
+      "ZOOM_CLIENT_SECRET": "${ZOOM_CLIENT_SECRET}"
+    }
+  }
+}

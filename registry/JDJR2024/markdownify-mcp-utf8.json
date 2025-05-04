@@ -1,0 +1,26 @@
+{
+  "name": "mcp-markdownify-server-utf8",
+  "version": "0.0.1",
+  "description": "MCP Markdownify Server with UTF-8 Support - Model Context Protocol Server for Converting Almost Anything to Markdown",
+  "homepage": "https://github.com/JDJR2024/markdownify-mcp-utf8",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JDJR2024/markdownify-mcp-utf8"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "markdownify-mcp-utf8",
+    "jdjr2024"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-markdownify-server-utf8"
+    ],
+    "env": {}
+  }
+}

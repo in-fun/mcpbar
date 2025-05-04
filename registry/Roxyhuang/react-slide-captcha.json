@@ -1,0 +1,26 @@
+{
+  "name": "react-slide-captcha",
+  "version": "1.0.1",
+  "description": "Slide Captcha for React by Typescript",
+  "homepage": "https://github.com/Roxyhuang/react-slide-captcha",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Roxyhuang/react-slide-captcha"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "react-slide-captcha",
+    "roxyhuang"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "react-slide-captcha"
+    ],
+    "env": {}
+  }
+}

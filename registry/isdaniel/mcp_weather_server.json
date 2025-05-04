@@ -1,0 +1,27 @@
+{
+  "name": "mcp_weather_server",
+  "version": "1.0.0",
+  "description": "MCP server for mcp_weather_server",
+  "homepage": "https://github.com/isdaniel/mcp_weather_server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/isdaniel/mcp_weather_server"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp_weather_server",
+    "isdaniel"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "python",
+    "args": [
+      "-m",
+      "mcp_weather_server"
+    ],
+    "disabled": false,
+    "autoApprove": []
+  }
+}

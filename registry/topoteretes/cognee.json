@@ -1,0 +1,49 @@
+{
+  "name": "cognee",
+  "version": "1.0.0",
+  "description": "Memory for AI Agents in 5 lines of code",
+  "homepage": "https://www.cognee.ai",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/topoteretes/cognee/tree/main/cognee-mcp"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "ai",
+    "cognitive-architecture",
+    "vector-database",
+    "openai",
+    "rag",
+    "ai-agents",
+    "graph-database",
+    "ai-memory",
+    "cognitive-memory",
+    "neo4j",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "llm_api_key",
+      "type": "promptString",
+      "description": "Environment variable for llm api key",
+      "password": true
+    },
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "cognee"
+    ],
+    "env": {
+      "LLM_API_KEY": "${input:llm_api_key}",
+      "OPENAI_API_KEY": "${input:openai_api_key}"
+    }
+  }
+}

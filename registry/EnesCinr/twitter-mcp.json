@@ -1,0 +1,56 @@
+{
+  "name": "@enescinar/twitter-mcp",
+  "version": "0.1.0",
+  "description": "A Model Context Protocol server allows to interact with Twitter, enabling posting tweets and searching Twitter.",
+  "homepage": "https://github.com/EnesCinr/twitter-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EnesCinr/twitter-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "twitter-mcp",
+    "enescinr"
+  ],
+  "inputs": [
+    {
+      "id": "api_key",
+      "type": "promptString",
+      "description": "Environment variable for api key authentication",
+      "password": true
+    },
+    {
+      "id": "api_secret_key",
+      "type": "promptString",
+      "description": "Environment variable for api secret key authentication",
+      "password": true
+    },
+    {
+      "id": "access_token",
+      "type": "promptString",
+      "description": "Environment variable for access token authentication",
+      "password": true
+    },
+    {
+      "id": "access_token_secret",
+      "type": "promptString",
+      "description": "Environment variable for access token secret authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@enescinar/twitter-mcp"
+    ],
+    "env": {
+      "API_KEY": "your_api_key_here",
+      "API_SECRET_KEY": "your_api_secret_key_here",
+      "ACCESS_TOKEN": "your_access_token_here",
+      "ACCESS_TOKEN_SECRET": "your_access_token_secret_here"
+    }
+  }
+}

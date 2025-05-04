@@ -1,0 +1,24 @@
+{
+  "name": "modal-mcp-toolbox",
+  "version": "1.0.0",
+  "description": "A collection of tools for your LLMs that run on Modal",
+  "homepage": "https://github.com/philipp-eisen/modal-mcp-toolbox",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/philipp-eisen/modal-mcp-toolbox"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "modal-mcp-toolbox",
+    "philipp-eisen"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "modal-mcp-toolbox"
+    ]
+  }
+}

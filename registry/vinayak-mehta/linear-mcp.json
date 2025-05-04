@@ -1,0 +1,41 @@
+{
+  "name": "mcp-linear",
+  "version": "1.0.0",
+  "description": "MCP server for linear-mcp",
+  "homepage": "https://github.com/vinayak-mehta/linear-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vinayak-mehta/linear-mcp"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "linear-mcp",
+    "vinayak-mehta"
+  ],
+  "inputs": [
+    {
+      "id": "linear_api_key",
+      "type": "promptString",
+      "description": "Environment variable for linear api key",
+      "password": true
+    },
+    {
+      "id": "linear_api",
+      "type": "promptString",
+      "description": "Environment variable for linear api",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-linear"
+    ],
+    "env": {
+      "LINEAR_API_KEY": "${input:linear_api_key}",
+      "LINEAR_API": "${input:linear_api}"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "age-mcp-server",
+  "version": "1.0.0",
+  "description": "Apache AGE MCP Server",
+  "homepage": "https://github.com/rioriost/homebrew-age-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rioriost/homebrew-age-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "homebrew-age-mcp-server",
+    "rioriost"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "/Users/your_user_name/.local/bin/uv",
+    "args": [
+      "--directory",
+      "/path/to/your_project",
+      "run",
+      "age-mcp-server",
+      "--pg-con-str",
+      "host=your_server.postgres.database.azure.com port=5432 dbname=postgres user=your_username password=your_password",
+      "--debug"
+    ]
+  }
+}

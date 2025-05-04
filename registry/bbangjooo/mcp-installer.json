@@ -1,0 +1,35 @@
+{
+  "name": "@bbangjo/mcp-installer",
+  "version": "1.0.18",
+  "description": "MCP installer for cursor and claude",
+  "homepage": "https://github.com/bbangjooo/mcp-installer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bbangjooo/mcp-installer"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-installer",
+    "bbangjooo"
+  ],
+  "inputs": [
+    {
+      "id": "smithery_api_key",
+      "type": "promptString",
+      "description": "Environment variable for smithery api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@bbangjo/mcp-installer"
+    ],
+    "env": {
+      "SMITHERY_API_KEY": "${input:smithery_api_key}"
+    }
+  }
+}

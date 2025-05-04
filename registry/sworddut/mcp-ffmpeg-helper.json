@@ -1,0 +1,26 @@
+{
+  "name": "@sworddut/mcp-ffmpeg-helper",
+  "version": "0.1.0",
+  "description": "A Model Context Protocol (MCP) helper for FFmpeg video processing operations",
+  "homepage": "https://github.com/sworddut/mcp-ffmpeg-helper",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sworddut/mcp-ffmpeg-helper"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-ffmpeg-helper",
+    "sworddut"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@sworddut/mcp-ffmpeg-helper"
+    ],
+    "env": {}
+  }
+}

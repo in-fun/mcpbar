@@ -1,0 +1,25 @@
+{
+  "name": "mcp-ffmpeg",
+  "version": "1.0.5",
+  "description": "FFmpeg MCP server",
+  "homepage": "https://github.com/bitscorp-mcp/mcp-ffmpeg",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bitscorp-mcp/mcp-ffmpeg"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-ffmpeg",
+    "bitscorp-mcp"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "--yes",
+      "/absolute/path/to/mcp-ffmpeg"
+    ]
+  }
+}

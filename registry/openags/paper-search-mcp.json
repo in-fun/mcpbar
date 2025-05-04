@@ -1,0 +1,28 @@
+{
+  "name": "paper-search-mcp",
+  "version": "1.0.0",
+  "description": "A MCP for searching and downloading academic papers from multiple sources like arXiv, PubMed, bioRxiv, etc.",
+  "homepage": "https://github.com/openags/paper-search-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/openags/paper-search-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "paper-search-mcp",
+    "openags"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uv",
+    "args": [
+      "run",
+      "--directory",
+      "/path/to/your/paper-search-mcp",
+      "-m",
+      "paper_search_mcp.server"
+    ]
+  }
+}

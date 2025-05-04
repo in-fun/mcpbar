@@ -1,0 +1,26 @@
+{
+  "name": "mcp-openapi-schema",
+  "version": "0.0.1",
+  "description": "A Model Context Protocol server that exposes OpenAPI schema information to Large Language Models",
+  "homepage": "https://github.com/hannesj/mcp-openapi-schema",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hannesj/mcp-openapi-schema"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-openapi-schema",
+    "hannesj"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-openapi-schema",
+      "/ABSOLUTE/PATH/TO/openapi.yaml"
+    ]
+  }
+}

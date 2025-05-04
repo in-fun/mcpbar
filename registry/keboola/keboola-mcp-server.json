@@ -1,0 +1,43 @@
+{
+  "name": "keboola-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for keboola-mcp-server",
+  "homepage": "https://github.com/keboola/keboola-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keboola/keboola-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "keboola-mcp-server",
+    "keboola"
+  ],
+  "inputs": [
+    {
+      "id": "kbc_storage_token",
+      "type": "promptString",
+      "description": "Environment variable for kbc storage token authentication",
+      "password": true
+    },
+    {
+      "id": "kbc_workspace_schema",
+      "type": "promptString",
+      "description": "Environment variable for kbc workspace schema configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "keboola_mcp_server",
+      "--api-url",
+      "https://connection.YOUR_REGION.keboola.com"
+    ],
+    "env": {
+      "KBC_STORAGE_TOKEN": "your-keboola-storage-token",
+      "KBC_WORKSPACE_SCHEMA": "your-workspace-schema"
+    }
+  }
+}

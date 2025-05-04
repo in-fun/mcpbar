@@ -1,0 +1,24 @@
+{
+  "name": "horoscope",
+  "version": "1.0.0",
+  "description": "MCP server for horoscope-serve",
+  "homepage": "https://github.com/GBcui/horoscope-serve",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GBcui/horoscope-serve"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "horoscope-serve",
+    "gbcui"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/horoscope-serve/build/index.js"
+    ]
+  }
+}

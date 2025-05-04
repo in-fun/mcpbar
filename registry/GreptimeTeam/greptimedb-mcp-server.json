@@ -1,0 +1,66 @@
+{
+  "name": "greptimedb-mcp-server",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol (MCP) server implementation for GreptimeDB",
+  "homepage": "https://github.com/GreptimeTeam/greptimedb-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GreptimeTeam/greptimedb-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "greptimedb-mcp-server",
+    "greptimeteam"
+  ],
+  "inputs": [
+    {
+      "id": "greptimedb_host",
+      "type": "promptString",
+      "description": "Environment variable for greptimedb host configuration",
+      "password": false
+    },
+    {
+      "id": "greptimedb_port",
+      "type": "promptString",
+      "description": "Environment variable for greptimedb port configuration",
+      "password": false
+    },
+    {
+      "id": "greptimedb_user",
+      "type": "promptString",
+      "description": "Environment variable for greptimedb user configuration",
+      "password": false
+    },
+    {
+      "id": "greptimedb_password",
+      "type": "promptString",
+      "description": "Environment variable for greptimedb password authentication",
+      "password": false
+    },
+    {
+      "id": "greptimedb_database",
+      "type": "promptString",
+      "description": "Environment variable for greptimedb database configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "/path/to/greptimedb-mcp-server",
+      "run",
+      "-m",
+      "greptimedb_mcp_server.server"
+    ],
+    "env": {
+      "GREPTIMEDB_HOST": "localhost",
+      "GREPTIMEDB_PORT": "4002",
+      "GREPTIMEDB_USER": "root",
+      "GREPTIMEDB_PASSWORD": "",
+      "GREPTIMEDB_DATABASE": "public"
+    }
+  }
+}

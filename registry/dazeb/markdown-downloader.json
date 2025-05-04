@@ -1,0 +1,34 @@
+{
+  "name": "markdown-downloader",
+  "version": "1.0.0",
+  "description": "A MCP Server that will download any webpage as markdown in an instant. Download docs straight to your IDE for AI context. Powered by Jina.ai",
+  "homepage": "https://github.com/dazeb/markdown-downloader",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dazeb/markdown-downloader"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "ai-tools",
+    "claude-3-5-sonnet",
+    "downloader",
+    "llm-training",
+    "markdown",
+    "mcp",
+    "jinaai",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "/home/user/Documents/Cline/MCP/markdown-downloader/build/index.js"
+    ],
+    "disabled": false,
+    "alwaysAllow": [
+      "download_markdown",
+      "set_download_directory"
+    ]
+  }
+}

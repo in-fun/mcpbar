@@ -1,0 +1,42 @@
+{
+  "name": "systemprompt-mcp-notion",
+  "version": "1.0.7",
+  "description": "A specialized Model Context Protocol (MCP) server that integrates Notion into your AI workflows. This server enables seamless access to Notion through MCP, allowing AI agents to interact with pages, databases, and comments.",
+  "homepage": "https://systemprompt.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ejb503/systemprompt-mcp-notion"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "ai",
+    "mcp",
+    "mcp-server",
+    "systemprompt",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "systemprompt_api_key",
+      "type": "promptString",
+      "description": "Environment variable for systemprompt api key authentication",
+      "password": true
+    },
+    {
+      "id": "notion_api_key",
+      "type": "promptString",
+      "description": "Environment variable for notion api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "systemprompt-mcp-notion"
+    ],
+    "env": {
+      "SYSTEMPROMPT_API_KEY": "your_systemprompt_api_key",
+      "NOTION_API_KEY": "your_notion_integration_token"
+    }
+  }
+}

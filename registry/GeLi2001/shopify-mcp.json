@@ -1,0 +1,29 @@
+{
+  "name": "shopify-mcp",
+  "version": "1.0.5",
+  "description": "MCP Server for Shopify API, enabling interaction with store data through GraphQL API",
+  "homepage": "https://github.com/GeLi2001/shopify-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GeLi2001/shopify-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "shopify",
+    "typescript",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "shopify-mcp",
+      "--accessToken",
+      "<YOUR_ACCESS_TOKEN>",
+      "--domain",
+      "<YOUR_SHOP>.myshopify.com"
+    ]
+  }
+}

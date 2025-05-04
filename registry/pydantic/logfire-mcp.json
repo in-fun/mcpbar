@@ -1,0 +1,25 @@
+{
+  "name": "logfire-mcp",
+  "version": "1.0.0",
+  "description": "The Logfire MCP Server is here! :tada:",
+  "homepage": "https://github.com/pydantic/logfire-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pydantic/logfire-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "logfire-mcp",
+    "pydantic"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "logfire-mcp",
+      "--read-token=YOUR-TOKEN"
+    ]
+  }
+}

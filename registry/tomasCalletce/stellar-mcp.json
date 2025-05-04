@@ -1,0 +1,26 @@
+{
+  "name": "stellar-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for stellar-mcp",
+  "homepage": "https://github.com/tomasCalletce/stellar-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tomasCalletce/stellar-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "stellar-mcp",
+    "tomascalletce"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "stellar-mcp"
+    ],
+    "env": {}
+  }
+}

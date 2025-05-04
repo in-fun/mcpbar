@@ -1,0 +1,25 @@
+{
+  "name": "mcp-sequentialthinking-tools",
+  "version": "0.0.2",
+  "description": "MCP server for Sequential Thinking Tools",
+  "homepage": "https://github.com/spences10/mcp-sequentialthinking-tools",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spences10/mcp-sequentialthinking-tools"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "modelcontextprotocol",
+    "tool"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-sequentialthinking-tools"
+    ]
+  }
+}

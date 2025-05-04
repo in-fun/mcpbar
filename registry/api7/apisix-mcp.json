@@ -1,0 +1,65 @@
+{
+  "name": "apisix-mcp",
+  "version": "0.0.7",
+  "description": "APISIX Model Context Protocol (MCP) server is used to bridge large language models (LLMs) with the APISIX Admin API.",
+  "homepage": "https://github.com/api7/apisix-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/api7/apisix-mcp"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "apisix",
+    "mcp",
+    "mcp-server",
+    "typescript",
+    "api-management",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "apisix_server_host",
+      "type": "promptString",
+      "description": "Environment variable for apisix server host configuration",
+      "password": false
+    },
+    {
+      "id": "apisix_server_port",
+      "type": "promptString",
+      "description": "Environment variable for apisix server port configuration",
+      "password": false
+    },
+    {
+      "id": "apisix_admin_api_port",
+      "type": "promptString",
+      "description": "Environment variable for apisix admin api port configuration",
+      "password": false
+    },
+    {
+      "id": "apisix_admin_api_prefix",
+      "type": "promptString",
+      "description": "Environment variable for apisix admin api prefix configuration",
+      "password": false
+    },
+    {
+      "id": "apisix_admin_key",
+      "type": "promptString",
+      "description": "Environment variable for apisix admin key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "apisix-mcp"
+    ],
+    "env": {
+      "APISIX_SERVER_HOST": "your-apisix-server-host",
+      "APISIX_SERVER_PORT": "your-apisix-server-port",
+      "APISIX_ADMIN_API_PORT": "your-apisix-admin-api-port",
+      "APISIX_ADMIN_API_PREFIX": "your-apisix-admin-api-prefix",
+      "APISIX_ADMIN_KEY": "your-apisix-api-key"
+    }
+  }
+}

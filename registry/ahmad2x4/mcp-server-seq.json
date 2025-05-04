@@ -1,0 +1,42 @@
+{
+  "name": "mcp-seq",
+  "version": "0.3.3",
+  "description": "MCP Server for Seq's API endpoints",
+  "homepage": "https://github.com/ahmad2x4/mcp-server-seq",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahmad2x4/mcp-server-seq"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-seq",
+    "ahmad2x4"
+  ],
+  "inputs": [
+    {
+      "id": "seq_base_url",
+      "type": "promptString",
+      "description": "Environment variable for seq base url configuration",
+      "password": false
+    },
+    {
+      "id": "seq_api_key",
+      "type": "promptString",
+      "description": "Environment variable for seq api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-seq"
+    ],
+    "env": {
+      "SEQ_BASE_URL": "your-seq-url",
+      "SEQ_API_KEY": "your-api-key"
+    }
+  }
+}

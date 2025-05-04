@@ -1,0 +1,38 @@
+{
+  "name": "mcp-wolfram-alpha",
+  "version": "1.0.0",
+  "description": "Connect your chat repl to wolfram alpha computational intelligence",
+  "homepage": "https://github.com/SecretiveShell/MCP-wolfram-alpha",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SecretiveShell/MCP-wolfram-alpha"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "wolfram",
+    "wolfram-alpha",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "wolfram_api_key",
+      "type": "promptString",
+      "description": "Environment variable for wolfram api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "C:\\Users\\root\\Documents\\MCP-wolfram-alpha",
+      "run",
+      "MCP-wolfram-alpha"
+    ],
+    "env": {
+      "WOLFRAM_API_KEY": "your-app-id"
+    }
+  }
+}

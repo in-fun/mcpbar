@@ -1,0 +1,26 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "MCP server for ejemplo-mcp",
+  "homepage": "https://github.com/dragon88888888888/ejemplo-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dragon88888888888/ejemplo-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ejemplo-mcp",
+    "dragon88888888888"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "package"
+    ],
+    "env": {}
+  }
+}

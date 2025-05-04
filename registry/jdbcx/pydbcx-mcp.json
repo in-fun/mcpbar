@@ -1,0 +1,51 @@
+{
+  "name": "pydbcx-mcp",
+  "version": "1.0.0",
+  "description": "Python MCP server for enabling data communication (databases, web services, scripts) via JDBCX server.",
+  "homepage": "https://github.com/jdbcx/pydbcx-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jdbcx/pydbcx-mcp"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "pydbcx-mcp",
+    "jdbcx"
+  ],
+  "inputs": [
+    {
+      "id": "jdbcx_server_url",
+      "type": "promptString",
+      "description": "Environment variable for jdbcx server url configuration",
+      "password": false
+    },
+    {
+      "id": "jdbcx_server_token",
+      "type": "promptString",
+      "description": "Environment variable for jdbcx server token authentication",
+      "password": true
+    },
+    {
+      "id": "max_rows_limit",
+      "type": "promptString",
+      "description": "Environment variable for max rows limit configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "</path/to/your/pydbcx-mcp/dir>",
+      "run",
+      "pydbcx-mcp"
+    ],
+    "env": {
+      "JDBCX_SERVER_URL": "http://localhost:8080/",
+      "JDBCX_SERVER_TOKEN": "",
+      "MAX_ROWS_LIMIT": "5000"
+    }
+  }
+}

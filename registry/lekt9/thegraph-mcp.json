@@ -1,0 +1,37 @@
+{
+  "name": "thegraph-mcp",
+  "version": "1.0.0",
+  "description": "An MCP server that powers AI agents with indexed blockchain data from The Graph.",
+  "homepage": "https://github.com/lekt9/thegraph-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lekt9/thegraph-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "thegraph-mcp",
+    "lekt9"
+  ],
+  "inputs": [
+    {
+      "id": "thegraph_api_key",
+      "type": "promptString",
+      "description": "Environment variable for thegraph api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "path/to/thegraph-mcp",
+      "run",
+      "main.py"
+    ],
+    "env": {
+      "THEGRAPH_API_KEY": "your_api_key_here"
+    }
+  }
+}

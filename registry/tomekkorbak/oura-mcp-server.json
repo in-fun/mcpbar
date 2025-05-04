@@ -1,0 +1,33 @@
+{
+  "name": "oura-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for Oura API integration",
+  "homepage": "https://github.com/tomekkorbak/oura-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tomekkorbak/oura-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "oura-ring",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "oura_api_token",
+      "type": "promptString",
+      "description": "Environment variable for oura api token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "oura-mcp-server"
+    ],
+    "env": {
+      "OURA_API_TOKEN": "YOUR_OURA_API_TOKEN"
+    }
+  }
+}

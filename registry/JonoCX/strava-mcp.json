@@ -1,0 +1,49 @@
+{
+  "name": "strava-mcp",
+  "version": "1.0.0",
+  "description": "A Strava MCP",
+  "homepage": "https://jonocx.github.io/blog/2025/strava-mcp/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JonoCX/strava-mcp"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "claude",
+    "strava",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "strava_client_secret",
+      "type": "promptString",
+      "description": "Environment variable for strava client secret",
+      "password": true
+    },
+    {
+      "id": "strava_access_token",
+      "type": "promptString",
+      "description": "Environment variable for strava access token",
+      "password": true
+    },
+    {
+      "id": "strava_refresh_token",
+      "type": "promptString",
+      "description": "Environment variable for strava refresh token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "strava-mcp"
+    ],
+    "env": {
+      "STRAVA_CLIENT_SECRET": "${input:strava_client_secret}",
+      "STRAVA_ACCESS_TOKEN": "${input:strava_access_token}",
+      "STRAVA_REFRESH_TOKEN": "${input:strava_refresh_token}"
+    }
+  }
+}

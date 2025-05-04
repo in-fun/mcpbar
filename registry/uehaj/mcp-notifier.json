@@ -1,0 +1,24 @@
+{
+  "name": "@uehaj/mcp-notifier",
+  "version": "1.3.3",
+  "description": "MCP server for desktop notifications",
+  "homepage": "https://github.com/uehaj/mcp-notifier",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uehaj/mcp-notifier"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-notifier",
+    "uehaj"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "@uehaj/mcp-notifier"
+    ]
+  }
+}

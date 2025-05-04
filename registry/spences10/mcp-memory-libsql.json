@@ -1,0 +1,40 @@
+{
+  "name": "mcp-memory-libsql",
+  "version": "0.0.14",
+  "description": "LibSQL-based persistent memory tool for MCP",
+  "homepage": "https://github.com/spences10/mcp-memory-libsql",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spences10/mcp-memory-libsql"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai-tools",
+    "embeddings",
+    "knowledge-graph",
+    "libsql",
+    "mcp",
+    "model-context-protocol",
+    "persistent-storage",
+    "semantic-search",
+    "vector-search"
+  ],
+  "inputs": [
+    {
+      "id": "libsql_url",
+      "type": "promptString",
+      "description": "Environment variable for libsql url configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-memory-libsql"
+    ],
+    "env": {
+      "LIBSQL_URL": "file:/path/to/your/database.db"
+    }
+  }
+}

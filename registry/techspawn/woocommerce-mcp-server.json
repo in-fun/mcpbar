@@ -1,0 +1,63 @@
+{
+  "name": "woocommerce-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for WooCommerce integration",
+  "homepage": "https://github.com/techspawn/woocommerce-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/techspawn/woocommerce-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp-server",
+    "mcp",
+    "woocommerce",
+    "wordpress",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "wordpress_site_url",
+      "type": "promptString",
+      "description": "Environment variable for wordpress site url configuration",
+      "password": false
+    },
+    {
+      "id": "woocommerce_consumer_key",
+      "type": "promptString",
+      "description": "Environment variable for woocommerce consumer key authentication",
+      "password": true
+    },
+    {
+      "id": "woocommerce_consumer_secret",
+      "type": "promptString",
+      "description": "Environment variable for woocommerce consumer secret authentication",
+      "password": true
+    },
+    {
+      "id": "wordpress_username",
+      "type": "promptString",
+      "description": "Environment variable for wordpress username configuration",
+      "password": false
+    },
+    {
+      "id": "wordpress_password",
+      "type": "promptString",
+      "description": "Environment variable for wordpress password authentication",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "path/to/build/index.js"
+    ],
+    "env": {
+      "WORDPRESS_SITE_URL": "https://your-wordpress-site.com",
+      "WOOCOMMERCE_CONSUMER_KEY": "your-woocommerce-consumer-key",
+      "WOOCOMMERCE_CONSUMER_SECRET": "your-woocommerce-consumer-secret",
+      "WORDPRESS_USERNAME": "your-wordpress-username",
+      "WORDPRESS_PASSWORD": "your-wordpress-password"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "mantis-mcp-server",
+  "version": "0.4.5",
+  "description": "Mantis MCP Server",
+  "homepage": "https://github.com/kfnzero/mantis-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kfnzero/mantis-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mantis-mcp-server",
+    "kfnzero"
+  ],
+  "inputs": [],
+  "server": {
+    "type": "stdio",
+    "command": "node",
+    "args": [
+      "${workspaceFolder}/dist/index.js"
+    ]
+  }
+}

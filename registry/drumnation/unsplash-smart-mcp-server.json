@@ -1,0 +1,36 @@
+{
+  "name": "@drumnation/unsplash-smart-mcp-server",
+  "version": "1.0.1",
+  "description": "AI-powered FastMCP server for intelligent stock photo search, download, and attribution management from Unsplash",
+  "homepage": "https://github.com/drumnation/unsplash-smart-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/drumnation/unsplash-smart-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "unsplash-smart-mcp-server",
+    "drumnation"
+  ],
+  "inputs": [
+    {
+      "id": "unsplash_access_key",
+      "type": "promptString",
+      "description": "Environment variable for unsplash access key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "tsx",
+      "src/server.ts"
+    ],
+    "cwd": "/absolute/path/to/unsplash-smart-mcp-server",
+    "env": {
+      "UNSPLASH_ACCESS_KEY": "your_api_key_here"
+    }
+  }
+}

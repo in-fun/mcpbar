@@ -1,0 +1,25 @@
+{
+  "name": "mcp_mlb_statsapi",
+  "version": "1.0.0",
+  "description": "This project provides an MCP (Multi-Channel Pipeline) server that acts as a wrapper for the MLB Stats API.  It allows you to easily access and process various MLB data points, including schedules, game results, and team information.  This server is designed for efficient data retrieval and processing within an MCP framework.",
+  "homepage": "https://github.com/mpizza/mcp_mlb_statsapi",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mpizza/mcp_mlb_statsapi"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp_mlb_statsapi",
+    "mpizza"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "{YOUR_PYTHON_EXECUTABLE_PATH}/python",
+    "args": [
+      "-m",
+      "mcp_mlb_statsapi"
+    ]
+  }
+}

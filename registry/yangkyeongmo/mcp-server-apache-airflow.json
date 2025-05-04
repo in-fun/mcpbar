@@ -1,0 +1,48 @@
+{
+  "name": "mcp-server-apache-airflow",
+  "version": "1.0.0",
+  "description": "MCP server for mcp-server-apache-airflow",
+  "homepage": "https://pypi.org/project/mcp-server-apache-airflow/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yangkyeongmo/mcp-server-apache-airflow"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-apache-airflow",
+    "yangkyeongmo"
+  ],
+  "inputs": [
+    {
+      "id": "airflow_host",
+      "type": "promptString",
+      "description": "Environment variable for airflow host configuration",
+      "password": false
+    },
+    {
+      "id": "airflow_username",
+      "type": "promptString",
+      "description": "Environment variable for airflow username configuration",
+      "password": false
+    },
+    {
+      "id": "airflow_password",
+      "type": "promptString",
+      "description": "Environment variable for airflow password authentication",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-server-apache-airflow"
+    ],
+    "env": {
+      "AIRFLOW_HOST": "https://your-airflow-host",
+      "AIRFLOW_USERNAME": "your-username",
+      "AIRFLOW_PASSWORD": "your-password"
+    }
+  }
+}

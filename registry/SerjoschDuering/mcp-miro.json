@@ -1,0 +1,35 @@
+{
+  "name": "@llmindset/mcp-miro",
+  "version": "0.1.1",
+  "description": "A Model Context Protocol server to connect to the MIRO Whiteboard Application",
+  "homepage": "https://github.com/SerjoschDuering/mcp-miro",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SerjoschDuering/mcp-miro"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-miro",
+    "serjoschduering"
+  ],
+  "inputs": [
+    {
+      "id": "your_token",
+      "type": "promptString",
+      "description": "Environment variable for your token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@llmindset/mcp-miro"
+    ],
+    "env": {
+      "YOUR_TOKEN": "${input:your_token}"
+    }
+  }
+}

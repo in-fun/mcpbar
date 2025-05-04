@@ -1,0 +1,35 @@
+{
+  "name": "open-deep-research",
+  "version": "0.1.0",
+  "description": "An open-source alternative to Perplexity Deep Research using MCP protocol",
+  "homepage": "https://github.com/tositon/OpenDeepSearch",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tositon/OpenDeepSearch"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "opendeepsearch",
+    "tositon"
+  ],
+  "inputs": [
+    {
+      "id": "brave_api_key",
+      "type": "promptString",
+      "description": "Environment variable for brave api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "open-deep-research"
+    ],
+    "env": {
+      "BRAVE_API_KEY": "your_api_key_here"
+    }
+  }
+}

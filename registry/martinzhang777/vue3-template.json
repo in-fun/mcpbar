@@ -1,0 +1,63 @@
+{
+  "name": "fast-vue3",
+  "version": "0.1.2",
+  "description": "Vue3+Vite+Ts+Pinia+...一个快速开发vue3的模板框架",
+  "homepage": "https://tobe-fe-dalao.github.io/fast-vue3/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/martinzhang777/vue3-template"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "vue3-template",
+    "martinzhang777"
+  ],
+  "inputs": [
+    {
+      "id": "vite_port",
+      "type": "promptString",
+      "description": "Environment variable for vite port",
+      "password": false
+    },
+    {
+      "id": "api_base_url",
+      "type": "promptString",
+      "description": "Environment variable for api base url",
+      "password": false
+    },
+    {
+      "id": "api_target_url",
+      "type": "promptString",
+      "description": "Environment variable for api target url",
+      "password": false
+    },
+    {
+      "id": "mock_api_base_url",
+      "type": "promptString",
+      "description": "Environment variable for mock api base url",
+      "password": false
+    },
+    {
+      "id": "mock_api_target_url",
+      "type": "promptString",
+      "description": "Environment variable for mock api target url",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "fast-vue3"
+    ],
+    "env": {
+      "VITE_PORT": "${input:vite_port}",
+      "API_BASE_URL": "${input:api_base_url}",
+      "API_TARGET_URL": "${input:api_target_url}",
+      "MOCK_API_BASE_URL": "${input:mock_api_base_url}",
+      "MOCK_API_TARGET_URL": "${input:mock_api_target_url}"
+    }
+  }
+}

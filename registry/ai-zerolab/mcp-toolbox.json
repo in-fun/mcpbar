@@ -1,0 +1,57 @@
+{
+  "name": "mcp-toolbox",
+  "version": "1.0.0",
+  "description": "Maintenance of a set of tools to enhance LLM through MCP protocols.",
+  "homepage": "https://github.com/ai-zerolab/mcp-toolbox",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ai-zerolab/mcp-toolbox"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-toolbox",
+    "ai-zerolab"
+  ],
+  "inputs": [
+    {
+      "id": "figma_api_key",
+      "type": "promptString",
+      "description": "Environment variable for figma api key authentication",
+      "password": true
+    },
+    {
+      "id": "tavily_api_key",
+      "type": "promptString",
+      "description": "Environment variable for tavily api key authentication",
+      "password": true
+    },
+    {
+      "id": "duckduckgo_api_key",
+      "type": "promptString",
+      "description": "Environment variable for duckduckgo api key authentication",
+      "password": true
+    },
+    {
+      "id": "bfl_api_key",
+      "type": "promptString",
+      "description": "Environment variable for bfl api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "--prerelease=allow",
+      "mcp-toolbox@latest",
+      "stdio"
+    ],
+    "env": {
+      "FIGMA_API_KEY": "your-figma-api-key",
+      "TAVILY_API_KEY": "your-tavily-api-key",
+      "DUCKDUCKGO_API_KEY": "your-duckduckgo-api-key",
+      "BFL_API_KEY": "your-bfl-api-key"
+    }
+  }
+}

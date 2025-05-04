@@ -1,0 +1,35 @@
+{
+  "name": "claudeus-wp-mcp",
+  "version": "2.0.5",
+  "description": "Model Context Protocol server for WordPress integration",
+  "homepage": "https://github.com/deus-h/claudeus-wp-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deus-h/claudeus-wp-mcp"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "claudeus-wp-mcp",
+    "deus-h"
+  ],
+  "inputs": [
+    {
+      "id": "wp_sites_path",
+      "type": "promptString",
+      "description": "Environment variable for wp sites path configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "claudeus-wp-mcp"
+    ],
+    "env": {
+      "WP_SITES_PATH": "/absolute/path/to/your/wp-sites.json"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "databutton",
+  "version": "0.1.0",
+  "description": "A MCP server for Databutton",
+  "homepage": "https://github.com/databutton/databutton-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/databutton/databutton-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "appbuilder",
+    "codegen",
+    "codegeneration",
+    "mcp",
+    "mcp-server",
+    "vibecoding",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "/path/to/databutton/build/index.js"
+  }
+}

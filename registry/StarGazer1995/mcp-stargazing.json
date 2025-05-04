@@ -1,0 +1,25 @@
+{
+  "name": "mcp-stargazing",
+  "version": "1.0.0",
+  "description": "MCP server for mcp-stargazing",
+  "homepage": "https://github.com/StarGazer1995/mcp-stargazing",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StarGazer1995/mcp-stargazing"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-stargazing",
+    "stargazer1995"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-stargazing"
+    ],
+    "env": {}
+  }
+}

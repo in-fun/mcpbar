@@ -1,0 +1,56 @@
+{
+  "name": "lumbretravel-mcp",
+  "version": "0.1.14",
+  "description": "A Model Context Protocol server for LumbreTravel",
+  "homepage": "https://github.com/lumile/lumbretravel-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lumile/lumbretravel-mcp"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "lumbretravel-mcp",
+    "lumile"
+  ],
+  "inputs": [
+    {
+      "id": "client_id",
+      "type": "promptString",
+      "description": "Environment variable for client id configuration",
+      "password": false
+    },
+    {
+      "id": "client_secret",
+      "type": "promptString",
+      "description": "Environment variable for client secret authentication",
+      "password": true
+    },
+    {
+      "id": "email",
+      "type": "promptString",
+      "description": "Environment variable for email configuration",
+      "password": false
+    },
+    {
+      "id": "password",
+      "type": "promptString",
+      "description": "Environment variable for password authentication",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "lumbretravel-mcp"
+    ],
+    "env": {
+      "CLIENT_ID": "<YOUR_CLIENT_ID>",
+      "CLIENT_SECRET": "<YOUR_CLIENT_SECRET>",
+      "EMAIL": "<YOUR_EMAIL>",
+      "PASSWORD": "<YOUR_PASSWORD>"
+    }
+  }
+}

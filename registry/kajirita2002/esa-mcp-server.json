@@ -1,0 +1,35 @@
+{
+  "name": "@kajirita2002/esa-mcp-server",
+  "version": "1.1.0",
+  "description": "MCP server for interacting with esa API",
+  "homepage": "https://github.com/kajirita2002/esa-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kajirita2002/esa-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "esa-mcp-server",
+    "kajirita2002"
+  ],
+  "inputs": [
+    {
+      "id": "esa_access_token",
+      "type": "promptString",
+      "description": "Environment variable for esa access token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@kajirita2002/esa-mcp-server"
+    ],
+    "env": {
+      "ESA_ACCESS_TOKEN": "${input:esa_access_token}"
+    }
+  }
+}

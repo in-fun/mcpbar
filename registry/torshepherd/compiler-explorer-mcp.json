@@ -1,0 +1,25 @@
+{
+  "name": "compiler-explorer-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for compiler-explorer-mcp",
+  "homepage": "https://github.com/torshepherd/compiler-explorer-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/torshepherd/compiler-explorer-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "compiler-explorer-mcp",
+    "torshepherd"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "compiler-explorer-mcp"
+    ],
+    "env": {}
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "name": "@zereight/sentry-server",
+  "version": "0.0.4",
+  "description": "A Model Context Protocol server",
+  "homepage": "https://github.com/zereight/sentry-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zereight/sentry-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "sentry-mcp",
+    "zereight"
+  ],
+  "inputs": [
+    {
+      "id": "sentry_auth_token",
+      "type": "promptString",
+      "description": "Environment variable for sentry auth token",
+      "password": true
+    },
+    {
+      "id": "your_sentry_auth_token",
+      "type": "promptString",
+      "description": "Environment variable for your sentry auth token",
+      "password": true
+    },
+    {
+      "id": "sentry_base_url",
+      "type": "promptString",
+      "description": "Environment variable for sentry base url",
+      "password": false
+    },
+    {
+      "id": "your_sentry_base_url",
+      "type": "promptString",
+      "description": "Environment variable for your sentry base url",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@zereight/sentry-server"
+    ],
+    "env": {
+      "SENTRY_AUTH_TOKEN": "${input:sentry_auth_token}",
+      "YOUR_SENTRY_AUTH_TOKEN": "${input:your_sentry_auth_token}",
+      "SENTRY_BASE_URL": "${input:sentry_base_url}",
+      "YOUR_SENTRY_BASE_URL": "${input:your_sentry_base_url}"
+    }
+  }
+}

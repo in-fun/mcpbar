@@ -1,0 +1,25 @@
+{
+  "name": "speech-mcp",
+  "version": "1.0.0",
+  "description": "Speech MCP: A Goose MCP extension for voice interaction with audio visualization",
+  "homepage": "https://github.com/Kvadratni/speech-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kvadratni/speech-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "speech-mcp",
+    "kvadratni"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "speech-mcp"
+    ],
+    "env": {}
+  }
+}

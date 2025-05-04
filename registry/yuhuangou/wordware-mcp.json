@@ -1,0 +1,21 @@
+{
+  "name": "wordware-mcp",
+  "version": "1.4.3",
+  "description": "The Wordware MCP (Master Control Program) server allows you to run your Wordware apps locally, with interactive setup.",
+  "homepage": "https://github.com/yuhuangou/wordware-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuhuangou/wordware-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "wordware-mcp",
+    "yuhuangou"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "wordware-mcp"
+  }
+}

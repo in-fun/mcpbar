@@ -1,0 +1,34 @@
+{
+  "name": "youtubeinsights-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for youtubeinsights-mcp-server",
+  "homepage": "https://github.com/dabidstudio/youtubeinsights-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dabidstudio/youtubeinsights-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "youtubeinsights-mcp-server",
+    "dabidstudio"
+  ],
+  "inputs": [
+    {
+      "id": "youtube_api_key",
+      "type": "promptString",
+      "description": "Environment variable for youtube api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "youtubeinsights-mcp-server"
+    ],
+    "env": {
+      "YOUTUBE_API_KEY": "${input:youtube_api_key}"
+    }
+  }
+}

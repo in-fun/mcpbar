@@ -1,0 +1,26 @@
+{
+  "name": "gemini",
+  "version": "0.0.0",
+  "description": "使用 Deno 免费代理 Google Gemini，国内直连，不限地区/网络环境，打开即用。",
+  "homepage": "https://github.com/ningyu32504/gemini",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ningyu32504/gemini"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "gemini",
+    "ningyu32504"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "gemini"
+    ],
+    "env": {}
+  }
+}

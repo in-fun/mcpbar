@@ -1,0 +1,27 @@
+{
+  "name": "@nearai/near-mcp",
+  "version": "0.0.33",
+  "description": "MCP server for interacting with Near Blockchain",
+  "homepage": "https://github.com/nearai/near-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nearai/near-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "near-mcp",
+    "nearai"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@nearai/near-mcp@latest",
+      "run"
+    ],
+    "env": {}
+  }
+}

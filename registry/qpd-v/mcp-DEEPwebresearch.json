@@ -1,0 +1,22 @@
+{
+  "name": "mcp-deepwebresearch",
+  "version": "0.3.0",
+  "description": "MCP Web Research Server with Deep Research capabilities",
+  "homepage": "https://github.com/qpd-v/mcp-DEEPwebresearch",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qpd-v/mcp-DEEPwebresearch"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-deepwebresearch",
+    "qpd-v"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "mcp-deepwebresearch",
+    "args": []
+  }
+}

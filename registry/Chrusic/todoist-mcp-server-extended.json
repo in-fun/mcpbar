@@ -1,0 +1,35 @@
+{
+  "name": "@chrusic/todoist-mcp-server-extended",
+  "version": "0.2.5",
+  "description": "Todoist MCP Server Extended, made to be efficient to use for an LLM's like Claude.",
+  "homepage": "https://github.com/Chrusic/todoist-mcp-server-extended",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Chrusic/todoist-mcp-server-extended"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "todoist-mcp-server-extended",
+    "chrusic"
+  ],
+  "inputs": [
+    {
+      "id": "todoist_api_token",
+      "type": "promptString",
+      "description": "Environment variable for todoist api token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@chrusic/todoist-mcp-server-extended"
+    ],
+    "env": {
+      "TODOIST_API_TOKEN": "${input:todoist_api_token}"
+    }
+  }
+}

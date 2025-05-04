@@ -1,0 +1,29 @@
+{
+  "name": "hello-mcp",
+  "version": "1.0.0",
+  "description": "Playground create my first MCP (Model Context Protocol) server",
+  "homepage": "https://github.com/moises-paschoalick/ai-agent-with-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moises-paschoalick/ai-agent-with-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai-agent-with-mcp",
+    "moises-paschoalick"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@smithery/cli@latest",
+      "run",
+      "@wonderwhy-er/desktop-commander",
+      "--key",
+      "dda23bec-caa6-4487-a1e9-eb74e22e33eb"
+    ]
+  }
+}

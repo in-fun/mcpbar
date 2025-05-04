@@ -1,0 +1,24 @@
+{
+  "name": "cursor-talk-to-figma-mcp",
+  "version": "1.0.0",
+  "description": "Cursor Talk to Figma MCP",
+  "homepage": "https://github.com/yhc984/cursor-talk-to-figma-mcp-main",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yhc984/cursor-talk-to-figma-mcp-main"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "cursor-talk-to-figma-mcp-main",
+    "yhc984"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "bun",
+    "args": [
+      "/path/to/cursor-talk-to-figma-mcp/src/talk_to_figma_mcp/server.ts"
+    ]
+  }
+}

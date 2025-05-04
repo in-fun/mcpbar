@@ -1,0 +1,34 @@
+{
+  "name": "cryo-mcp",
+  "version": "1.0.0",
+  "description": "A Python package for accessing Cryo datasets via Claude Code",
+  "homepage": "https://github.com/z80dev/cryo-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/z80dev/cryo-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "cryo-mcp",
+    "z80dev"
+  ],
+  "inputs": [
+    {
+      "id": "eth_rpc_url",
+      "type": "promptString",
+      "description": "Environment variable for eth rpc url",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "cryo-mcp"
+    ],
+    "env": {
+      "ETH_RPC_URL": "${input:eth_rpc_url}"
+    }
+  }
+}

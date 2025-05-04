@@ -1,0 +1,34 @@
+{
+  "name": "sec-edgar-mcp",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol (MCP) Server for SEC EDGAR",
+  "homepage": "https://github.com/stefanoamorelli/sec-edgar-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stefanoamorelli/sec-edgar-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "sec-edgar-mcp",
+    "stefanoamorelli"
+  ],
+  "inputs": [
+    {
+      "id": "sec_api_user",
+      "type": "promptString",
+      "description": "Environment variable for sec api user",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "sec-edgar-mcp"
+    ],
+    "env": {
+      "SEC_API_USER": "${input:sec_api_user}"
+    }
+  }
+}

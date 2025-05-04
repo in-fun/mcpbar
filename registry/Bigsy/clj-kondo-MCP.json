@@ -1,0 +1,26 @@
+{
+  "name": "clj-kondo-mcp",
+  "version": "0.1.2",
+  "description": "MCP server for clj-kondo linting",
+  "homepage": "https://github.com/Bigsy/clj-kondo-MCP",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bigsy/clj-kondo-MCP"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "clj-kondo-mcp",
+    "bigsy"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "clj-kondo-mcp"
+    ],
+    "disabled": false,
+    "autoApprove": []
+  }
+}

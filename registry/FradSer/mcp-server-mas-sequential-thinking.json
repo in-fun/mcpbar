@@ -1,0 +1,63 @@
+{
+  "name": "mcp-server-mas-sequential-thinking",
+  "version": "1.0.0",
+  "description": "An advanced sequential thinking process using a Multi-Agent System (MAS) built with the Agno framework and served via MCP.",
+  "homepage": "https://github.com/FradSer/mcp-server-mas-sequential-thinking",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FradSer/mcp-server-mas-sequential-thinking"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "agno",
+    "mcp",
+    "mcp-server",
+    "sequential-thinking",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "groq_api_key",
+      "type": "promptString",
+      "description": "Environment variable for groq api key",
+      "password": true
+    },
+    {
+      "id": "deepseek_api_key",
+      "type": "promptString",
+      "description": "Environment variable for deepseek api key",
+      "password": true
+    },
+    {
+      "id": "openrouter_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openrouter api key",
+      "password": true
+    },
+    {
+      "id": "exa_api_key",
+      "type": "promptString",
+      "description": "Environment variable for exa api key",
+      "password": true
+    },
+    {
+      "id": "deepseek_base_url",
+      "type": "promptString",
+      "description": "Environment variable for deepseek base url",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-server-mas-sequential-thinking"
+    ],
+    "env": {
+      "GROQ_API_KEY": "${input:groq_api_key}",
+      "DEEPSEEK_API_KEY": "${input:deepseek_api_key}",
+      "OPENROUTER_API_KEY": "${input:openrouter_api_key}",
+      "EXA_API_KEY": "${input:exa_api_key}",
+      "DEEPSEEK_BASE_URL": "${input:deepseek_base_url}"
+    }
+  }
+}

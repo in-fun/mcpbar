@@ -1,0 +1,35 @@
+{
+  "name": "@hackle-io/hackle-mcp",
+  "version": "1.2.0",
+  "description": "Model Context Protocol server for Hackle",
+  "homepage": "https://github.com/hackle-io/hackle-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hackle-io/hackle-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "hackle-mcp",
+    "hackle-io"
+  ],
+  "inputs": [
+    {
+      "id": "api_key",
+      "type": "promptString",
+      "description": "Environment variable for api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@hackle-io/hackle-mcp@latest"
+    ],
+    "env": {
+      "API_KEY": "YOUR_API_KEY"
+    }
+  }
+}

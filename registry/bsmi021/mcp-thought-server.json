@@ -1,0 +1,66 @@
+{
+  "name": "mcp-thought-server",
+  "version": "1.0.0",
+  "description": "A powerful server providing advanced thinking tools via the Model Context Protocol (MCP) to enhance the reasoning, planning, and iterative refinement capabilities of AI agents like Cline.",
+  "homepage": "https://github.com/bsmi021/mcp-thought-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bsmi021/mcp-thought-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "cognitive",
+    "mcp",
+    "mcp-server",
+    "modelcontextprotocol",
+    "thinking",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "http_port",
+      "type": "promptString",
+      "description": "Environment variable for http port",
+      "password": false
+    },
+    {
+      "id": "mcp_server_url",
+      "type": "promptString",
+      "description": "Environment variable for mcp server url",
+      "password": false
+    },
+    {
+      "id": "mcp_api_key",
+      "type": "promptString",
+      "description": "Environment variable for mcp api key",
+      "password": true
+    },
+    {
+      "id": "coherence_api_key",
+      "type": "promptString",
+      "description": "Environment variable for coherence api key",
+      "password": true
+    },
+    {
+      "id": "coherence_api",
+      "type": "promptString",
+      "description": "Environment variable for coherence api",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-thought-server"
+    ],
+    "env": {
+      "HTTP_PORT": "${input:http_port}",
+      "MCP_SERVER_URL": "${input:mcp_server_url}",
+      "MCP_API_KEY": "${input:mcp_api_key}",
+      "COHERENCE_API_KEY": "${input:coherence_api_key}",
+      "COHERENCE_API": "${input:coherence_api}"
+    }
+  }
+}

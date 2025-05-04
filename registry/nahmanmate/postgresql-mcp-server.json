@@ -1,0 +1,26 @@
+{
+  "name": "postgresql-mcp-server",
+  "version": "0.1.0",
+  "description": "MCP server for PostgreSQL database management",
+  "homepage": "https://github.com/nahmanmate/postgresql-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nahmanmate/postgresql-mcp-server"
+  },
+  "license": "AGPL-3.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "postgresql-mcp-server",
+    "nahmanmate"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/postgresql-mcp-server/build/index.js"
+    ],
+    "disabled": false,
+    "alwaysAllow": []
+  }
+}

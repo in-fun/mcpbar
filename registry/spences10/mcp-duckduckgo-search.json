@@ -1,0 +1,35 @@
+{
+  "name": "mcp-duckduckgo-search",
+  "version": "0.0.2",
+  "description": "MCP server for DuckDuckGo search",
+  "homepage": "https://github.com/spences10/mcp-duckduckgo-search",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spences10/mcp-duckduckgo-search"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-duckduckgo-search",
+    "spences10"
+  ],
+  "inputs": [
+    {
+      "id": "serpapi_key",
+      "type": "promptString",
+      "description": "Environment variable for serpapi key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-duckduckgo-search"
+    ],
+    "env": {
+      "SERPAPI_KEY": "your-serpapi-api-key"
+    }
+  }
+}

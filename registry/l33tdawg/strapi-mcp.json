@@ -1,0 +1,45 @@
+{
+  "name": "strapi-mcp",
+  "version": "0.1.7",
+  "description": "An MCP server for your Strapi CMS that provides access to content types and entries through the MCP protocol",
+  "homepage": "https://github.com/l33tdawg/strapi-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/l33tdawg/strapi-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "strapi-mcp",
+    "l33tdawg"
+  ],
+  "inputs": [
+    {
+      "id": "strapi_url",
+      "type": "promptString",
+      "description": "Environment variable for strapi url configuration",
+      "password": false
+    },
+    {
+      "id": "strapi_api_token",
+      "type": "promptString",
+      "description": "Environment variable for strapi api token authentication",
+      "password": true
+    },
+    {
+      "id": "strapi_dev_mode",
+      "type": "promptString",
+      "description": "Environment variable for strapi dev mode configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "/path/to/strapi-mcp/build/index.js",
+    "env": {
+      "STRAPI_URL": "http://localhost:1337",
+      "STRAPI_API_TOKEN": "your-api-token-here",
+      "STRAPI_DEV_MODE": "false"
+    }
+  }
+}

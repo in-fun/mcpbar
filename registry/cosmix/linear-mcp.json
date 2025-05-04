@@ -1,0 +1,35 @@
+{
+  "name": "linear-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Linear integration providing issue querying and searching capabilities",
+  "homepage": "https://github.com/cosmix/linear-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cosmix/linear-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "linear",
+    "mcp",
+    "anthropic",
+    "llm",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "linear_api_key",
+      "type": "promptString",
+      "description": "Environment variable for linear api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "/absolute/path/to/linear-mcp/build/index.js"
+    ],
+    "env": {
+      "LINEAR_API_KEY": "your_api_key"
+    }
+  }
+}

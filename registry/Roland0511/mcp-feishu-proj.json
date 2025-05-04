@@ -1,0 +1,57 @@
+{
+  "name": "mcp-feishu-proj",
+  "version": "1.0.0",
+  "description": "基于MCP（Model Context Protocol）协议的飞书项目管理工具",
+  "homepage": "https://github.com/Roland0511/mcp-feishu-proj",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Roland0511/mcp-feishu-proj"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-feishu-proj",
+    "roland0511"
+  ],
+  "inputs": [
+    {
+      "id": "fs_proj_project_key",
+      "type": "promptString",
+      "description": "Environment variable for fs proj project key authentication",
+      "password": true
+    },
+    {
+      "id": "fs_proj_user_key",
+      "type": "promptString",
+      "description": "Environment variable for fs proj user key authentication",
+      "password": true
+    },
+    {
+      "id": "fs_proj_plugin_id",
+      "type": "promptString",
+      "description": "Environment variable for fs proj plugin id configuration",
+      "password": false
+    },
+    {
+      "id": "fs_proj_plugin_secret",
+      "type": "promptString",
+      "description": "Environment variable for fs proj plugin secret authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-feishu-proj@latest",
+      "--transport",
+      "stdio"
+    ],
+    "env": {
+      "FS_PROJ_PROJECT_KEY": "your_project_key",
+      "FS_PROJ_USER_KEY": "your_user_key",
+      "FS_PROJ_PLUGIN_ID": "your_plugin_id",
+      "FS_PROJ_PLUGIN_SECRET": "your_plugin_secret"
+    }
+  }
+}

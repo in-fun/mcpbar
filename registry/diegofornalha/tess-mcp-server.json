@@ -1,0 +1,26 @@
+{
+  "name": "@diegofornalha/crew-ai-tess-pareto",
+  "version": "1.0.0",
+  "description": "Integração TESS com Crew AI",
+  "homepage": "https://github.com/diegofornalha/tess-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diegofornalha/tess-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "tess-mcp-server",
+    "diegofornalha"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@diegofornalha/crew-ai-tess-pareto"
+    ],
+    "env": {}
+  }
+}

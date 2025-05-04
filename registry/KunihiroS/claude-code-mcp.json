@@ -1,0 +1,29 @@
+{
+  "name": "@kunihiros/claude-code-mcp",
+  "version": "0.1.2",
+  "description": "MCP server for Claude Code",
+  "homepage": "https://modelcontextprotocol.io/introduction",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KunihiroS/claude-code-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "anthropic",
+    "anthropic-claude",
+    "claude",
+    "claude-code"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@kunihiros/claude-code-mcp"
+    ],
+    "env": {}
+  }
+}

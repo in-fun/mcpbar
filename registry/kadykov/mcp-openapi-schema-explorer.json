@@ -1,0 +1,35 @@
+{
+  "name": "mcp-openapi-schema-explorer",
+  "version": "1.2.1",
+  "description": "MCP OpenAPI schema explorer",
+  "homepage": "https://github.com/kadykov/mcp-openapi-schema-explorer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kadykov/mcp-openapi-schema-explorer"
+  },
+  "license": "MIT",
+  "keywords": [
+    "api-specification",
+    "developer-tools",
+    "development",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "node",
+    "node-js",
+    "nodejs",
+    "openapi"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-openapi-schema-explorer@latest",
+      "<path-or-url-to-spec>",
+      "--output-format",
+      "yaml"
+    ],
+    "env": {}
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "name": "google-search-mcp",
+  "version": "1.1.0",
+  "description": "MCP Server for Google Search and Content Extraction",
+  "homepage": "https://github.com/Claw256/mcp-web-search",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Claw256/mcp-web-search"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-web-search",
+    "claw256"
+  ],
+  "inputs": [
+    {
+      "id": "google_api_key",
+      "type": "promptString",
+      "description": "Environment variable for google api key authentication",
+      "password": true
+    },
+    {
+      "id": "google_search_engine_id",
+      "type": "promptString",
+      "description": "Environment variable for google search engine id configuration",
+      "password": false
+    },
+    {
+      "id": "max_concurrent_browsers",
+      "type": "promptString",
+      "description": "Environment variable for max concurrent browsers configuration",
+      "password": false
+    },
+    {
+      "id": "browser_timeout",
+      "type": "promptString",
+      "description": "Environment variable for browser timeout configuration",
+      "password": false
+    },
+    {
+      "id": "rate_limit_window",
+      "type": "promptString",
+      "description": "Environment variable for rate limit window configuration",
+      "password": false
+    },
+    {
+      "id": "rate_limit_max_requests",
+      "type": "promptString",
+      "description": "Environment variable for rate limit max requests configuration",
+      "password": false
+    },
+    {
+      "id": "search_cache_ttl",
+      "type": "promptString",
+      "description": "Environment variable for search cache ttl configuration",
+      "password": false
+    },
+    {
+      "id": "view_url_cache_ttl",
+      "type": "promptString",
+      "description": "Environment variable for view url cache ttl configuration",
+      "password": false
+    },
+    {
+      "id": "max_cache_items",
+      "type": "promptString",
+      "description": "Environment variable for max cache items configuration",
+      "password": false
+    },
+    {
+      "id": "browser_pool_min",
+      "type": "promptString",
+      "description": "Environment variable for browser pool min configuration",
+      "password": false
+    },
+    {
+      "id": "browser_pool_max",
+      "type": "promptString",
+      "description": "Environment variable for browser pool max configuration",
+      "password": false
+    },
+    {
+      "id": "browser_pool_idle_timeout",
+      "type": "promptString",
+      "description": "Environment variable for browser pool idle timeout configuration",
+      "password": false
+    },
+    {
+      "id": "rebrowser_patches_runtime_fix_mode",
+      "type": "promptString",
+      "description": "Environment variable for rebrowser patches runtime fix mode configuration",
+      "password": false
+    },
+    {
+      "id": "rebrowser_patches_source_url",
+      "type": "promptString",
+      "description": "Environment variable for rebrowser patches source url configuration",
+      "password": false
+    },
+    {
+      "id": "rebrowser_patches_utility_world_name",
+      "type": "promptString",
+      "description": "Environment variable for rebrowser patches utility world name configuration",
+      "password": false
+    },
+    {
+      "id": "rebrowser_patches_debug",
+      "type": "promptString",
+      "description": "Environment variable for rebrowser patches debug configuration",
+      "password": false
+    },
+    {
+      "id": "browser_cookies_path",
+      "type": "promptString",
+      "description": "Environment variable for browser cookies path configuration",
+      "password": false
+    },
+    {
+      "id": "log_level",
+      "type": "promptString",
+      "description": "Environment variable for log level configuration",
+      "password": false
+    },
+    {
+      "id": "no_color",
+      "type": "promptString",
+      "description": "Environment variable for no color configuration",
+      "password": false
+    },
+    {
+      "id": "bun_force_color",
+      "type": "promptString",
+      "description": "Environment variable for bun force color configuration",
+      "password": false
+    },
+    {
+      "id": "force_color",
+      "type": "promptString",
+      "description": "Environment variable for force color configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "bun",
+    "args": [
+      "run",
+      "/ABSOLUTE/PATH/TO/web_search_mcp/dist/index.js"
+    ],
+    "env": {
+      "GOOGLE_API_KEY": "your_api_key",
+      "GOOGLE_SEARCH_ENGINE_ID": "your_search_engine_id",
+      "MAX_CONCURRENT_BROWSERS": "3",
+      "BROWSER_TIMEOUT": "30000",
+      "RATE_LIMIT_WINDOW": "60000",
+      "RATE_LIMIT_MAX_REQUESTS": "60",
+      "SEARCH_CACHE_TTL": "3600",
+      "VIEW_URL_CACHE_TTL": "7200",
+      "MAX_CACHE_ITEMS": "1000",
+      "BROWSER_POOL_MIN": "1",
+      "BROWSER_POOL_MAX": "5",
+      "BROWSER_POOL_IDLE_TIMEOUT": "30000",
+      "REBROWSER_PATCHES_RUNTIME_FIX_MODE": "addBinding",
+      "REBROWSER_PATCHES_SOURCE_URL": "jquery.min.js",
+      "REBROWSER_PATCHES_UTILITY_WORLD_NAME": "util",
+      "REBROWSER_PATCHES_DEBUG": "0",
+      "BROWSER_COOKIES_PATH": "C:\\path\\to\\cookies.json",
+      "LOG_LEVEL": "info",
+      "NO_COLOR": "0",
+      "BUN_FORCE_COLOR": "1",
+      "FORCE_COLOR": "1"
+    }
+  }
+}

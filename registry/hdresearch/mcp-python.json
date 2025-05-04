@@ -1,0 +1,27 @@
+{
+  "name": "mcp-python",
+  "version": "1.0.0",
+  "description": "A python repl for MCP",
+  "homepage": "https://github.com/hdresearch/mcp-python",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hdresearch/mcp-python"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-python",
+    "hdresearch"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "/absolute/path/to/python-repl-server",
+      "run",
+      "mcp_python"
+    ]
+  }
+}

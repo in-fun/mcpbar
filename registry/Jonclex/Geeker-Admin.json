@@ -1,0 +1,26 @@
+{
+  "name": "geeker-admin",
+  "version": "1.2.0",
+  "description": "geeker-admin open source management system",
+  "homepage": "https://admin.spicyboy.cn",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jonclex/Geeker-Admin"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "geeker-admin",
+    "jonclex"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "geeker-admin"
+    ],
+    "env": {}
+  }
+}

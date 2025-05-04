@@ -1,0 +1,26 @@
+{
+  "name": "pipedream",
+  "version": "1.2.1",
+  "description": "Pipedream Monorepo",
+  "homepage": "https://pipedream.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WallaceObsidian01/pipedream"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "pipedream",
+    "wallaceobsidian01"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "pipedream"
+    ],
+    "env": {}
+  }
+}

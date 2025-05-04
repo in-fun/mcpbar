@@ -1,0 +1,25 @@
+{
+  "name": "mcp-server-weather",
+  "version": "1.0.0",
+  "description": "MCP Server 和风天气API例子。",
+  "homepage": "https://github.com/xuezhijian/mcp_weather",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xuezhijian/mcp_weather"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp_weather",
+    "xuezhijian"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-server-weather"
+    ],
+    "env": {}
+  }
+}

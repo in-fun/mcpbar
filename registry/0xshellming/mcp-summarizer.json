@@ -1,0 +1,32 @@
+{
+  "name": "mcp-summarizer",
+  "version": "1.0.0-alpha.2",
+  "description": "A MCP server for summarizing text",
+  "homepage": "https://3min.top/en",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0xshellming/mcp-summarizer"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "ai",
+    "ai-summarizer",
+    "book",
+    "bookreader",
+    "deepseek-r1",
+    "ebook",
+    "gemini",
+    "summarizer",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-summarizer"
+    ],
+    "env": {}
+  }
+}

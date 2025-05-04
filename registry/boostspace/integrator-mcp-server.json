@@ -1,0 +1,42 @@
+{
+  "name": "@boostspace/integrator-mcp-server",
+  "version": "0.1.4",
+  "description": "MCP server for interacting with Integrator automations",
+  "homepage": "https://github.com/boostspace/integrator-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/boostspace/integrator-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "integrator-mcp-server",
+    "boostspace"
+  ],
+  "inputs": [
+    {
+      "id": "integrator_api_key",
+      "type": "promptString",
+      "description": "Environment variable for integrator api key authentication",
+      "password": true
+    },
+    {
+      "id": "integrator_team",
+      "type": "promptString",
+      "description": "Environment variable for integrator team configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@boostspace/integrator-mcp-server"
+    ],
+    "env": {
+      "INTEGRATOR_API_KEY": "<your-api-key>",
+      "INTEGRATOR_TEAM": "<your-team-id>"
+    }
+  }
+}

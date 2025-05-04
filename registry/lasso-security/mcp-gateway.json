@@ -1,0 +1,46 @@
+{
+  "name": "mcp-gateway",
+  "version": "1.0.0",
+  "description": "A plugin-based gateway that orchestrates other MCPs and allows developers to build upon it enterprise-grade agents.",
+  "homepage": "https://www.lasso.security/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lasso-security/mcp-gateway"
+  },
+  "license": "MIT",
+  "keywords": [
+    "agent",
+    "agent-security",
+    "gateway",
+    "genai",
+    "mcp",
+    "mcp-client",
+    "mcp-server",
+    "proxy",
+    "python",
+    "genai-security",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "mcp-gateway",
+    "args": [
+      "--mcp-json-path",
+      "~/.cursor/mcp.json",
+      "--plugin",
+      "basic",
+      "--plugin",
+      "xetrack"
+    ],
+    "servers": {
+      "filesystem": {
+        "command": "npx",
+        "args": [
+          "-y",
+          "@modelcontextprotocol/server-filesystem",
+          "."
+        ]
+      }
+    }
+  }
+}

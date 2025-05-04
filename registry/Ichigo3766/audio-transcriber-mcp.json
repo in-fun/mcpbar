@@ -1,0 +1,42 @@
+{
+  "name": "audio-transcriber",
+  "version": "0.1.0",
+  "description": "A MCP server to transcribe audio files using OpenAI Api",
+  "homepage": "https://github.com/Ichigo3766/audio-transcriber-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ichigo3766/audio-transcriber-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "audio-transcriber-mcp",
+    "ichigo3766"
+  ],
+  "inputs": [
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key",
+      "password": true
+    },
+    {
+      "id": "openai_base_url",
+      "type": "promptString",
+      "description": "Environment variable for openai base url",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "audio-transcriber"
+    ],
+    "env": {
+      "OPENAI_API_KEY": "${input:openai_api_key}",
+      "OPENAI_BASE_URL": "${input:openai_base_url}"
+    }
+  }
+}

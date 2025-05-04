@@ -1,0 +1,21 @@
+{
+  "name": "my-server",
+  "version": "0.1.0",
+  "description": "A Model Context Protocol server",
+  "homepage": "https://github.com/vivalalova/mcp_practice",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vivalalova/mcp_practice"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp_practice",
+    "vivalalova"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "/path/to/my-server/build/index.js"
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "name": "mcp-mixpanel",
+  "version": "1.0.0",
+  "description": "MCP Server for Mixpanel API (talk to your Mixpanel data)",
+  "homepage": "https://github.com/dragonkhoi/mixpanel-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dragonkhoi/mixpanel-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mixpanel-mcp",
+    "dragonkhoi"
+  ],
+  "inputs": [
+    {
+      "id": "your_service_acct_user",
+      "type": "promptString",
+      "description": "Environment variable for your service acct user",
+      "password": false
+    },
+    {
+      "id": "your_service_acct_pass",
+      "type": "promptString",
+      "description": "Environment variable for your service acct pass",
+      "password": false
+    },
+    {
+      "id": "your_service_account_user",
+      "type": "promptString",
+      "description": "Environment variable for your service account user",
+      "password": false
+    },
+    {
+      "id": "your_service_account_pass",
+      "type": "promptString",
+      "description": "Environment variable for your service account pass",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-mixpanel"
+    ],
+    "env": {
+      "YOUR_SERVICE_ACCT_USER": "${input:your_service_acct_user}",
+      "YOUR_SERVICE_ACCT_PASS": "${input:your_service_acct_pass}",
+      "YOUR_SERVICE_ACCOUNT_USER": "${input:your_service_account_user}",
+      "YOUR_SERVICE_ACCOUNT_PASS": "${input:your_service_account_pass}"
+    }
+  }
+}

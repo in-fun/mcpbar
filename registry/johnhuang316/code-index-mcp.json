@@ -1,0 +1,24 @@
+{
+  "name": "code-index-mcp",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol (MCP) server that helps large language models index, search, and analyze code repositories with minimal setup",
+  "homepage": "https://github.com/johnhuang316/code-index-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnhuang316/code-index-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "code-index-mcp",
+    "johnhuang316"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "code-index-mcp"
+    ]
+  }
+}

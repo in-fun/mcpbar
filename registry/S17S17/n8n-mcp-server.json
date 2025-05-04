@@ -1,0 +1,35 @@
+{
+  "name": "n8n-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP (Model-Controller-Provider) server implementation for n8n workflow automation",
+  "homepage": "https://github.com/S17S17/n8n-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/S17S17/n8n-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "n8n-mcp-server",
+    "s17s17"
+  ],
+  "inputs": [
+    {
+      "id": "n_api_key",
+      "type": "promptString",
+      "description": "Environment variable for n api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "n8n-mcp-server"
+    ],
+    "env": {
+      "N_API_KEY": "${input:n_api_key}"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "mcp-server-ancestry",
+  "version": "1.0.0",
+  "description": "Ancestry MCP server made with Python that allows interactability with .ged (GEDCOM) files",
+  "homepage": "https://github.com/reeeeemo/ancestry-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reeeeemo/ancestry-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude",
+    "mcp-servers",
+    "python",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "mcp-server-ancestry",
+    "args": [
+      "--gedcom-path",
+      "path/to/your/gedcom/files"
+    ]
+  }
+}

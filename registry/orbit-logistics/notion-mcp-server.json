@@ -1,0 +1,27 @@
+{
+  "name": "@orbit-logistics/notion-mcp-server",
+  "version": "0.1.0",
+  "description": "MCP server for Notion integration",
+  "homepage": "https://github.com/orbit-logistics/notion-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/orbit-logistics/notion-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "notion-mcp-server",
+    "orbit-logistics"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-sequential-thinking-test",
+      "-t",
+      "<notion_integration_token>"
+    ]
+  }
+}

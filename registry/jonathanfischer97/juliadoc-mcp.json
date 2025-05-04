@@ -1,0 +1,38 @@
+{
+  "name": "@jonathanfischer97/server-juliadoc",
+  "version": "1.0.3",
+  "description": "MCP server for Julia documentation and source code access",
+  "homepage": "https://github.com/jonathanfischer97/juliadoc-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonathanfischer97/juliadoc-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-desktop",
+    "julia",
+    "julia-language",
+    "mcp",
+    "mcp-server",
+    "ai",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "julia_project",
+      "type": "promptString",
+      "description": "Environment variable for julia project configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@jonathanfischer97/server-juliadoc"
+    ],
+    "env": {
+      "JULIA_PROJECT": "/path/to/your/julia/project"
+    }
+  }
+}

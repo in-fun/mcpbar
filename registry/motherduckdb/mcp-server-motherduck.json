@@ -1,0 +1,36 @@
+{
+  "name": "mcp-server-motherduck",
+  "version": "1.0.0",
+  "description": "MCP server for DuckDB and MotherDuck",
+  "homepage": "https://github.com/motherduckdb/mcp-server-motherduck",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/motherduckdb/mcp-server-motherduck"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "duckdb",
+    "motherduck",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "motherduck_token",
+      "description": "MotherDuck Token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-server-motherduck",
+      "--db-path",
+      "md:",
+      "--motherduck-token",
+      "${input:motherduck_token}"
+    ]
+  }
+}

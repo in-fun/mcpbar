@@ -1,0 +1,35 @@
+{
+  "name": "@shinzolabs/coinmarketcap-mcp",
+  "version": "1.2.4",
+  "description": "A complete MCP for the CoinMarketCap API",
+  "homepage": "https://github.com/shinzo-labs/coinmarketcap-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shinzo-labs/coinmarketcap-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "coinmarketcap-mcp",
+    "shinzo-labs"
+  ],
+  "inputs": [
+    {
+      "id": "coinmarketcap_api_key",
+      "type": "promptString",
+      "description": "Environment variable for coinmarketcap api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@shinzolabs/coinmarketcap-mcp"
+    ],
+    "env": {
+      "COINMARKETCAP_API_KEY": "${input:coinmarketcap_api_key}"
+    }
+  }
+}

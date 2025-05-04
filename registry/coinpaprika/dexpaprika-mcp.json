@@ -1,0 +1,29 @@
+{
+  "name": "dexpaprika-mcp",
+  "version": "1.0.5",
+  "description": "A Model Context Protocol server for DexPaprika cryptocurrency data",
+  "homepage": "https://docs.dexpaprika.com/introduction",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coinpaprika/dexpaprika-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-integration",
+    "crypto-analysis-tool",
+    "crypto-api",
+    "cryptocurrency",
+    "defi",
+    "dex",
+    "mcp",
+    "model-context-protocol",
+    "dexpaprika"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "dexpaprika-mcp"
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "name": "mcp-server-collector",
+  "version": "1.0.0",
+  "description": "A MCP Server used to collect MCP Servers over the internet.",
+  "homepage": "https://mcp.so",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chatmcp/mcp-server-collector"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp-server-collector",
+    "submit-mcp-server",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key",
+      "password": true
+    },
+    {
+      "id": "openai_base_url",
+      "type": "promptString",
+      "description": "Environment variable for openai base url",
+      "password": false
+    },
+    {
+      "id": "mcp_server_submit_url",
+      "type": "promptString",
+      "description": "Environment variable for mcp server submit url",
+      "password": false
+    },
+    {
+      "id": "uv_publish_token",
+      "type": "promptString",
+      "description": "Environment variable for uv publish token",
+      "password": true
+    },
+    {
+      "id": "uv_publish_user",
+      "type": "promptString",
+      "description": "Environment variable for uv publish user",
+      "password": false
+    },
+    {
+      "id": "uv_publish_pass",
+      "type": "promptString",
+      "description": "Environment variable for uv publish pass",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-server-collector"
+    ],
+    "env": {
+      "OPENAI_API_KEY": "${input:openai_api_key}",
+      "OPENAI_BASE_URL": "${input:openai_base_url}",
+      "MCP_SERVER_SUBMIT_URL": "${input:mcp_server_submit_url}",
+      "UV_PUBLISH_TOKEN": "${input:uv_publish_token}",
+      "UV_PUBLISH_USER": "${input:uv_publish_user}",
+      "UV_PUBLISH_PASS": "${input:uv_publish_pass}"
+    }
+  }
+}

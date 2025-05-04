@@ -1,0 +1,35 @@
+{
+  "name": "@metamcp/mcp-server-metamcp",
+  "version": "0.5.0",
+  "description": "MCP Server MetaMCP manages all your other MCPs in one MCP.",
+  "homepage": "https://github.com/metatool-ai/mcp-server-metamcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/metatool-ai/mcp-server-metamcp"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-metamcp",
+    "metatool-ai"
+  ],
+  "inputs": [
+    {
+      "id": "metamcp_api_key",
+      "type": "promptString",
+      "description": "Environment variable for metamcp api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@metamcp/mcp-server-metamcp@latest"
+    ],
+    "env": {
+      "METAMCP_API_KEY": "<your api key>"
+    }
+  }
+}

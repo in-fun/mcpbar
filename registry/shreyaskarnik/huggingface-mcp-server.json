@@ -1,0 +1,55 @@
+{
+  "name": "huggingface",
+  "version": "1.0.0",
+  "description": "MCP server for huggingface-mcp-server",
+  "homepage": "https://github.com/shreyaskarnik/huggingface-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shreyaskarnik/huggingface-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "huggingface-mcp-server",
+    "shreyaskarnik"
+  ],
+  "inputs": [
+    {
+      "id": "hf_token",
+      "type": "promptString",
+      "description": "Environment variable for hf token",
+      "password": true
+    },
+    {
+      "id": "uv_publish_token",
+      "type": "promptString",
+      "description": "Environment variable for uv publish token",
+      "password": true
+    },
+    {
+      "id": "uv_publish_user",
+      "type": "promptString",
+      "description": "Environment variable for uv publish user",
+      "password": false
+    },
+    {
+      "id": "uv_publish_pass",
+      "type": "promptString",
+      "description": "Environment variable for uv publish pass",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "huggingface"
+    ],
+    "env": {
+      "HF_TOKEN": "${input:hf_token}",
+      "UV_PUBLISH_TOKEN": "${input:uv_publish_token}",
+      "UV_PUBLISH_USER": "${input:uv_publish_user}",
+      "UV_PUBLISH_PASS": "${input:uv_publish_pass}"
+    }
+  }
+}

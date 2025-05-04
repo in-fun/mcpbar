@@ -1,0 +1,25 @@
+{
+  "name": "terminal-mcp-server",
+  "version": "0.1.0",
+  "description": "操作X主机",
+  "homepage": "https://github.com/weidwonder/terminal-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/weidwonder/terminal-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "terminal-mcp-server",
+    "weidwonder"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/terminal-mcp-server/build/index.js"
+    ],
+    "env": {}
+  }
+}

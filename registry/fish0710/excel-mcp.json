@@ -1,0 +1,32 @@
+{
+  "name": "excel-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for excel-mcp",
+  "homepage": "https://github.com/fish0710/excel-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fish0710/excel-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "excel-mcp",
+    "fish0710"
+  ],
+  "inputs": [
+    {
+      "id": "excel_files_path",
+      "type": "promptString",
+      "description": "Environment variable for excel files path configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uv run excel-mcp-server",
+    "transport": "sse",
+    "env": {
+      "EXCEL_FILES_PATH": "/path/to/excel/files"
+    }
+  }
+}

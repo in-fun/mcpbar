@@ -1,0 +1,25 @@
+{
+  "name": "mcp-server-calculator",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol server for calculating.",
+  "homepage": "https://github.com/githejie/mcp-server-calculator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/githejie/mcp-server-calculator"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-calculator",
+    "githejie"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-server-calculator"
+    ],
+    "env": {}
+  }
+}

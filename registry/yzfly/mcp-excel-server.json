@@ -1,0 +1,28 @@
+{
+  "name": "mcp-excel-server",
+  "version": "1.0.0",
+  "description": "The Excel MCP Server is a powerful tool that enables natural language interaction with Excel files through the Model Context Protocol (MCP). It provides a comprehensive set of capabilities for reading, analyzing, visualizing, and writing Excel data.",
+  "homepage": "https://github.com/yzfly/mcp-excel-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yzfly/mcp-excel-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "claude",
+    "claude-mcp",
+    "data",
+    "excel",
+    "mcp",
+    "mcp-excel-server",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-excel-server"
+    ],
+    "env": {}
+  }
+}

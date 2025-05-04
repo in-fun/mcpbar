@@ -1,0 +1,43 @@
+{
+  "name": "onyx-mcp-server",
+  "version": "1.2.0",
+  "description": "Model Context Protocol (MCP) server for seamless integration with Onyx AI knowledge bases",
+  "homepage": "https://github.com/lupuletic/onyx-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lupuletic/onyx-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "onyx-mcp-server",
+    "lupuletic"
+  ],
+  "inputs": [
+    {
+      "id": "onyx_api_token",
+      "type": "promptString",
+      "description": "Environment variable for onyx api token authentication",
+      "password": true
+    },
+    {
+      "id": "onyx_api_url",
+      "type": "promptString",
+      "description": "Environment variable for onyx api url configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/onyx-mcp-server/build/index.js"
+    ],
+    "env": {
+      "ONYX_API_TOKEN": "your-api-token-here",
+      "ONYX_API_URL": "http://localhost:8080/api"
+    },
+    "disabled": false,
+    "alwaysAllow": []
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "employee",
+  "version": "1.0.0",
+  "description": "A complete walkthrough on how to build an MCP server to serve a trained Random Forest model and integrate it with Bee Framework for ReAct interactivity.",
+  "homepage": "https://github.com/nicknochnack/BuildMCPServer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicknochnack/BuildMCPServer"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "buildmcpserver",
+    "nicknochnack"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "employee"
+    ],
+    "env": {}
+  }
+}

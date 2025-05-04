@@ -1,0 +1,42 @@
+{
+  "name": "@tmhr1850/backlog-mcp-server",
+  "version": "1.0.1",
+  "description": "Backlog APIへのアクセスを提供するMCPサーバー",
+  "homepage": "https://github.com/tmhr1850/backlog-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tmhr1850/backlog-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "backlog-mcp-server",
+    "tmhr1850"
+  ],
+  "inputs": [
+    {
+      "id": "backlog_domain",
+      "type": "promptString",
+      "description": "Environment variable for backlog domain configuration",
+      "password": false
+    },
+    {
+      "id": "backlog_api_key",
+      "type": "promptString",
+      "description": "Environment variable for backlog api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@tmhr1850/backlog-mcp-server"
+    ],
+    "env": {
+      "BACKLOG_DOMAIN": "your-domain.backlog.com",
+      "BACKLOG_API_KEY": "your-api-key"
+    }
+  }
+}

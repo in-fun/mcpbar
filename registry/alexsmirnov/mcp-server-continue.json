@@ -1,0 +1,25 @@
+{
+  "name": "mcps",
+  "version": "1.0.0",
+  "description": "MCP server for mcp-server-continue",
+  "homepage": "https://github.com/alexsmirnov/mcp-server-continue",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexsmirnov/mcp-server-continue"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-continue",
+    "alexsmirnov"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcps"
+    ],
+    "env": {}
+  }
+}

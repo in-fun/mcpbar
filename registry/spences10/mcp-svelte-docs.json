@@ -1,0 +1,44 @@
+{
+  "name": "mcp-svelte-docs",
+  "version": "0.0.12",
+  "description": "MCP server for Svelte docs",
+  "homepage": "https://github.com/spences10/mcp-svelte-docs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spences10/mcp-svelte-docs"
+  },
+  "license": "MIT",
+  "keywords": [
+    "developer-tools",
+    "documentation",
+    "libsql",
+    "llm",
+    "mcp",
+    "model-context-protocol",
+    "search",
+    "svelte"
+  ],
+  "inputs": [
+    {
+      "id": "debug",
+      "type": "promptString",
+      "description": "Environment variable for debug configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/mcp-svelte-docs/dist/index.js"
+    ],
+    "env": {
+      "DEBUG": "false"
+    },
+    "disabled": false,
+    "autoApprove": [
+      "svelte_pattern",
+      "svelte5_feature",
+      "svelte5_common_mistakes"
+    ]
+  }
+}

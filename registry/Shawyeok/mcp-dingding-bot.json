@@ -1,0 +1,58 @@
+{
+  "name": "mcp-dingding-bot",
+  "version": "1.0.1",
+  "description": "MCP Server for send text/markdown message via dingding (aka dingtalk) group custom robot api",
+  "homepage": "https://github.com/Shawyeok/mcp-dingding-bot",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Shawyeok/mcp-dingding-bot"
+  },
+  "license": "MIT",
+  "keywords": [
+    "dingding-robot",
+    "dingtalk",
+    "dingtalk-robot",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "dingtalk_bot_access_token",
+      "type": "promptString",
+      "description": "Environment variable for dingtalk bot access token",
+      "password": true
+    },
+    {
+      "id": "dingtalk_bot_secret",
+      "type": "promptString",
+      "description": "Environment variable for dingtalk bot secret",
+      "password": true
+    },
+    {
+      "id": "your_access_token",
+      "type": "promptString",
+      "description": "Environment variable for your access token",
+      "password": true
+    },
+    {
+      "id": "your_secret",
+      "type": "promptString",
+      "description": "Environment variable for your secret",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-dingding-bot"
+    ],
+    "env": {
+      "DINGTALK_BOT_ACCESS_TOKEN": "${input:dingtalk_bot_access_token}",
+      "DINGTALK_BOT_SECRET": "${input:dingtalk_bot_secret}",
+      "YOUR_ACCESS_TOKEN": "${input:your_access_token}",
+      "YOUR_SECRET": "${input:your_secret}"
+    }
+  }
+}

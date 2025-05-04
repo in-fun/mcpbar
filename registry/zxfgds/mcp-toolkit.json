@@ -1,0 +1,26 @@
+{
+  "name": "mcp-toolkit",
+  "version": "0.1.0",
+  "description": "A Model Context Protocol server",
+  "homepage": "https://github.com/zxfgds/mcp-toolkit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zxfgds/mcp-toolkit"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-toolkit",
+    "zxfgds"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-toolkit"
+    ],
+    "env": {}
+  }
+}

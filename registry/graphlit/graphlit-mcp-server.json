@@ -1,0 +1,56 @@
+{
+  "name": "graphlit-mcp-server",
+  "version": "1.0.0",
+  "description": "Graphlit MCP Server",
+  "homepage": "https://www.graphlit.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/graphlit/graphlit-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude",
+    "content-extraction",
+    "content-ingestion",
+    "data-collection",
+    "llm-tools",
+    "mcp-server",
+    "model-context-protocol",
+    "search-api",
+    "unstructured-data",
+    "web-crawler",
+    "mcp"
+  ],
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "organization_id",
+      "description": "Graphlit Organization ID",
+      "password": true
+    },
+    {
+      "type": "promptString",
+      "id": "environment_id",
+      "description": "Graphlit Environment ID",
+      "password": true
+    },
+    {
+      "type": "promptString",
+      "id": "jwt_secret",
+      "description": "Graphlit JWT Secret",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "graphlit-mcp-server"
+    ],
+    "env": {
+      "GRAPHLIT_ORGANIZATION_ID": "${input:organization_id}",
+      "GRAPHLIT_ENVIRONMENT_ID": "${input:environment_id}",
+      "GRAPHLIT_JWT_SECRET": "${input:jwt_secret}"
+    }
+  }
+}

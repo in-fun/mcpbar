@@ -1,0 +1,25 @@
+{
+  "name": "notion-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for Notion integration",
+  "homepage": "https://github.com/SAhmadUmass/notion-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SAhmadUmass/notion-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "notion-mcp-server",
+    "sahmadumass"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "/Users/shaheerahmad/Documents/notion-mcp-server/dist/index.js",
+      "--notion-api-key=YOUR_ACTUAL_API_KEY_HERE"
+    ]
+  }
+}

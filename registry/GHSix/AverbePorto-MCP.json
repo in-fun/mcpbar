@@ -1,0 +1,40 @@
+{
+  "name": "app",
+  "version": "1.1.0",
+  "description": "AverbePorto MCP Server",
+  "homepage": "https://github.com/GHSix/AverbePorto-MCP",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GHSix/AverbePorto-MCP"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "averbeporto-mcp",
+    "ghsix"
+  ],
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "averbeporto-user",
+      "description": "AverbePorto API Username"
+    },
+    {
+      "type": "promptString",
+      "id": "averbeporto-pass",
+      "description": "AverbePorto API Password",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "/caminho/para/AverbePorto-MCP/build/index.js"
+    ],
+    "env": {
+      "AVERBEPORTO_USER": "${input:averbeporto-user}",
+      "AVERBEPORTO_PASS": "${input:averbeporto-pass}"
+    }
+  }
+}

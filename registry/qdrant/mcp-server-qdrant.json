@@ -1,0 +1,50 @@
+{
+  "name": "mcp-server-qdrant",
+  "version": "1.0.0",
+  "description": "An official Qdrant Model Context Protocol (MCP) server implementation",
+  "homepage": "https://qdrant.tech",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qdrant/mcp-server-qdrant"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "claude",
+    "cursor",
+    "llm",
+    "mcp",
+    "mcp-server",
+    "semantic-search",
+    "windsurf",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "qdrantUrl",
+      "description": "Qdrant URL"
+    },
+    {
+      "type": "promptString",
+      "id": "qdrantApiKey",
+      "description": "Qdrant API Key",
+      "password": true
+    },
+    {
+      "type": "promptString",
+      "id": "collectionName",
+      "description": "Collection Name"
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-server-qdrant"
+    ],
+    "env": {
+      "QDRANT_URL": "${input:qdrantUrl}",
+      "QDRANT_API_KEY": "${input:qdrantApiKey}",
+      "COLLECTION_NAME": "${input:collectionName}"
+    }
+  }
+}

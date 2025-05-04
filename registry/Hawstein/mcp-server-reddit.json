@@ -1,0 +1,25 @@
+{
+  "name": "mcp-server-reddit",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol (MCP) server that provides tools for fetching Reddit content, including frontpage posts, subreddit information and hot posts, post details, and comments.",
+  "homepage": "https://github.com/Hawstein/mcp-server-reddit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hawstein/mcp-server-reddit"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-reddit",
+    "hawstein"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-server-reddit"
+    ],
+    "env": {}
+  }
+}

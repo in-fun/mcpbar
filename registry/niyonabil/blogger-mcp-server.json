@@ -1,0 +1,35 @@
+{
+  "name": "@mcproadev/blogger-mcp-server",
+  "version": "1.0.4",
+  "description": "MCP Server for Blogger API",
+  "homepage": "https://github.com/niyonabil/blogger-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/niyonabil/blogger-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "blogger-mcp-server",
+    "niyonabil"
+  ],
+  "inputs": [
+    {
+      "id": "blogger_api_key",
+      "type": "promptString",
+      "description": "Environment variable for blogger api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@mcproadev/blogger-mcp-server"
+    ],
+    "env": {
+      "BLOGGER_API_KEY": "VOTRE_CLE_API_ICI"
+    }
+  }
+}

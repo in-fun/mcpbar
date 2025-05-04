@@ -1,0 +1,27 @@
+{
+  "name": "databricks",
+  "version": "1.0.0",
+  "description": "Databricks MCP Server",
+  "homepage": "https://github.com/RafaelCartenet/mcp-databricks-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RafaelCartenet/mcp-databricks-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-databricks-server",
+    "rafaelcartenet"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "/path/to/your/mcp-databricks-server",
+      "run",
+      "main.py"
+    ]
+  }
+}

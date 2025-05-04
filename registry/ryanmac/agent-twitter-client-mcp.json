@@ -1,0 +1,47 @@
+{
+  "name": "agent-twitter-client-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Twitter integration using agent-twitter-client",
+  "homepage": "https://github.com/ryanmac/agent-twitter-client-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ryanmac/agent-twitter-client-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "grok",
+    "grok-api",
+    "grok3",
+    "mcp",
+    "model-context-protocol",
+    "twitter",
+    "twitter-api",
+    "x",
+    "agent-twitter-client"
+  ],
+  "inputs": [
+    {
+      "id": "auth_method",
+      "type": "promptString",
+      "description": "Environment variable for auth method configuration",
+      "password": false
+    },
+    {
+      "id": "twitter_cookies",
+      "type": "promptString",
+      "description": "Environment variable for twitter cookies configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "agent-twitter-client-mcp"
+    ],
+    "env": {
+      "AUTH_METHOD": "cookies",
+      "TWITTER_COOKIES": "[\"auth_token=YOUR_AUTH_TOKEN; Domain=.twitter.com\", \"ct0=YOUR_CT0_VALUE; Domain=.twitter.com\", \"twid=u%3DYOUR_USER_ID; Domain=.twitter.com\"]"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "azure-devops-mcp",
+  "version": "0.1.0",
+  "description": "Azure DevOps reference server for the Model Context Protocol (MCP)",
+  "homepage": "https://github.com/kevinmeyvaert/azure-devops-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kevinmeyvaert/azure-devops-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "azure-devops-mcp",
+    "kevinmeyvaert"
+  ],
+  "inputs": [
+    {
+      "id": "azure_devops_org_url",
+      "type": "promptString",
+      "description": "Environment variable for azure devops org url",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "azure-devops-mcp"
+    ],
+    "env": {
+      "AZURE_DEVOPS_ORG_URL": "${input:azure_devops_org_url}"
+    }
+  }
+}

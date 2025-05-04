@@ -1,0 +1,49 @@
+{
+  "name": "@gentoro/mcp-nodejs-server",
+  "version": "0.0.7",
+  "description": "Integration layer between Model Context Protocol and Gentoro's MCP Server implementation",
+  "homepage": "https://github.com/gentoro-GT/mcp-nodejs-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gentoro-GT/mcp-nodejs-server"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-nodejs-server",
+    "gentoro-gt"
+  ],
+  "inputs": [
+    {
+      "id": "gentoro_api_key",
+      "type": "promptString",
+      "description": "Environment variable for gentoro api key authentication",
+      "password": true
+    },
+    {
+      "id": "gentoro_bridge_uid",
+      "type": "promptString",
+      "description": "Environment variable for gentoro bridge uid configuration",
+      "password": false
+    },
+    {
+      "id": "gentoro_base_url",
+      "type": "promptString",
+      "description": "Environment variable for gentoro base url configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@gentoro/mcp-nodejs-server"
+    ],
+    "env": {
+      "GENTORO_API_KEY": "<your api key>",
+      "GENTORO_BRIDGE_UID": "<your bridge uid>",
+      "GENTORO_BASE_URL": "<url where gentoro is hosted>"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "rmcp",
+  "version": "1.0.0",
+  "description": "R MCP Server",
+  "homepage": "https://github.com/gojiplus/rmcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gojiplus/rmcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "rmcp",
+    "gojiplus"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "rmcp"
+    ],
+    "env": {}
+  }
+}

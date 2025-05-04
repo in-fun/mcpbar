@@ -1,0 +1,21 @@
+{
+  "name": "apple-notifier-mcp",
+  "version": "1.1.0",
+  "description": "An MCP server for sending native macOS notifications",
+  "homepage": "https://github.com/turlockmike/apple-notifier-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/turlockmike/apple-notifier-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "apple-notifier-mcp",
+    "turlockmike"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "apple-notifier-mcp"
+  }
+}

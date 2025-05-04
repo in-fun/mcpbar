@@ -1,0 +1,26 @@
+{
+  "name": "@daipendency/mcp",
+  "version": "0.9.4",
+  "description": "Model Context Protocol (MCP) server for Daipendency",
+  "homepage": "https://github.com/daipendency/daipendency-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daipendency/daipendency-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "daipendency-mcp",
+    "daipendency"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@daipendency/mcp"
+    ],
+    "env": {}
+  }
+}

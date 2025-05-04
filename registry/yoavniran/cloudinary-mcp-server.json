@@ -1,0 +1,49 @@
+{
+  "name": "cloudinary-mcp-server",
+  "version": "0.4.0",
+  "description": "MCP server for Cloudinary's APIs",
+  "homepage": "https://www.npmjs.com/package/cloudinary-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yoavniran/cloudinary-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "cloudinary-mcp-server",
+    "yoavniran"
+  ],
+  "inputs": [
+    {
+      "id": "cloudinary_cloud_name",
+      "type": "promptString",
+      "description": "Environment variable for cloudinary cloud name configuration",
+      "password": false
+    },
+    {
+      "id": "cloudinary_api_key",
+      "type": "promptString",
+      "description": "Environment variable for cloudinary api key authentication",
+      "password": true
+    },
+    {
+      "id": "cloudinary_api_secret",
+      "type": "promptString",
+      "description": "Environment variable for cloudinary api secret authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "cloudinary-mcp-server"
+    ],
+    "env": {
+      "CLOUDINARY_CLOUD_NAME": "<cloud name>",
+      "CLOUDINARY_API_KEY": "<api-key>",
+      "CLOUDINARY_API_SECRET": "<api-secret>"
+    }
+  }
+}

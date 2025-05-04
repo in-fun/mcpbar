@@ -1,0 +1,42 @@
+{
+  "name": "api-service",
+  "version": "0.1.0",
+  "description": "A Model Context Protocol server",
+  "homepage": "HomePage",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nstanw/api-service"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "api-service",
+    "nstanw"
+  ],
+  "inputs": [
+    {
+      "id": "ten_nhom_api",
+      "type": "promptString",
+      "description": "Environment variable for ten nhom api",
+      "password": false
+    },
+    {
+      "id": "action_api",
+      "type": "promptString",
+      "description": "Environment variable for action api",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "api-service"
+    ],
+    "env": {
+      "TEN_NHOM_API": "${input:ten_nhom_api}",
+      "ACTION_API": "${input:action_api}"
+    }
+  }
+}

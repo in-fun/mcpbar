@@ -1,0 +1,25 @@
+{
+  "name": "mcp-server-ds",
+  "version": "1.0.0",
+  "description": "MCP server for mcp-server-data-exploration",
+  "homepage": "https://github.com/reading-plus-ai/mcp-server-data-exploration",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reading-plus-ai/mcp-server-data-exploration"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-data-exploration",
+    "reading-plus-ai"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-server-ds"
+    ],
+    "env": {}
+  }
+}

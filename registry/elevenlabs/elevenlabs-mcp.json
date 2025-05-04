@@ -1,0 +1,34 @@
+{
+  "name": "elevenlabs-mcp",
+  "version": "1.0.0",
+  "description": "The official ElevenLabs MCP server",
+  "homepage": "https://elevenlabs.io/blog/introducing-elevenlabs-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elevenlabs/elevenlabs-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "elevenlabs",
+    "elevenlabs-api",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "elevenlabs_api_key",
+      "type": "promptString",
+      "description": "Environment variable for elevenlabs api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "elevenlabs-mcp"
+    ],
+    "env": {
+      "ELEVENLABS_API_KEY": "<insert-your-api-key-here>"
+    }
+  }
+}

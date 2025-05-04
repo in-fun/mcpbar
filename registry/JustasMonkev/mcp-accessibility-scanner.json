@@ -1,0 +1,25 @@
+{
+  "name": "mcp-accessibility-scanner",
+  "version": "1.0.7",
+  "description": "A Model Context Protocol (MCP) server for performing automated accessibility scans of web pages using Playwright and Axe-core",
+  "homepage": "https://github.com/JustasMonkev/mcp-accessibility-scanner",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JustasMonkev/mcp-accessibility-scanner"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-accessibility-scanner",
+    "justasmonkev"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-accessibility-scanner"
+    ]
+  }
+}

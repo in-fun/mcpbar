@@ -1,0 +1,26 @@
+{
+  "name": "mcp-google-sheets",
+  "version": "1.0.0",
+  "description": "This MCP server integrates with your Google Drive and Google Sheets, to enable creating and modifying spreadsheets.",
+  "homepage": "https://github.com/xing5/mcp-google-sheets",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xing5/mcp-google-sheets"
+  },
+  "license": "MIT",
+  "keywords": [
+    "google",
+    "mcp",
+    "mcp-server",
+    "spreadsheet",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-google-sheets"
+    ],
+    "env": {}
+  }
+}

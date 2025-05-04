@@ -1,0 +1,32 @@
+{
+  "name": "mcp-linear",
+  "version": "0.1.0",
+  "description": "Linear issue tracking integration for Model Context Protocol",
+  "homepage": "https://github.com/scoutos/mcp-linear",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scoutos/mcp-linear"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-linear",
+    "scoutos"
+  ],
+  "inputs": [
+    {
+      "id": "linear_api_key",
+      "type": "promptString",
+      "description": "Environment variable for linear api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "name": "Linear",
+    "command": "node /path/to/mcp-linear/src/index.js",
+    "env": {
+      "LINEAR_API_KEY": "your_linear_api_key_here"
+    }
+  }
+}

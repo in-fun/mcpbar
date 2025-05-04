@@ -1,0 +1,48 @@
+{
+  "name": "devhub-cms-mcp",
+  "version": "1.0.0",
+  "description": "DevHub CMS LLM integration through the Model Context Protocol",
+  "homepage": "https://github.com/devhub/devhub-cms-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devhub/devhub-cms-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "devhub-cms-mcp",
+    "devhub"
+  ],
+  "inputs": [
+    {
+      "id": "devhub_api_key",
+      "type": "promptString",
+      "description": "Environment variable for devhub api key authentication",
+      "password": true
+    },
+    {
+      "id": "devhub_api_secret",
+      "type": "promptString",
+      "description": "Environment variable for devhub api secret authentication",
+      "password": true
+    },
+    {
+      "id": "devhub_base_url",
+      "type": "promptString",
+      "description": "Environment variable for devhub base url configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "devhub-cms-mcp"
+    ],
+    "env": {
+      "DEVHUB_API_KEY": "YOUR_KEY_HERE",
+      "DEVHUB_API_SECRET": "YOUR_SECRET_HERE",
+      "DEVHUB_BASE_URL": "https://yourbrand.cloudfrontend.net"
+    }
+  }
+}

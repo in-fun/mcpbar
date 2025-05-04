@@ -1,0 +1,25 @@
+{
+  "name": "text2image",
+  "version": "1.0.0",
+  "description": "    Image generation assistant, please imagine and describe a complete picture in detail based on my simple description. Then translate your detailed description into English",
+  "homepage": "https://github.com/PawNzZi/image-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PawNzZi/image-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "image-server",
+    "pawnzzi"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "text2image"
+    ],
+    "env": {}
+  }
+}

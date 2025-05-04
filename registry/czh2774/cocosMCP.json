@@ -1,0 +1,26 @@
+{
+  "name": "cocos-mcp",
+  "version": "1.0.0",
+  "description": "Cocos Creator MCP Log Bridge",
+  "homepage": "https://github.com/czh2774/cocosMCP",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/czh2774/cocosMCP"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "cocosmcp",
+    "czh2774"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "cocos-mcp"
+    ],
+    "env": {}
+  }
+}

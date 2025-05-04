@@ -1,0 +1,27 @@
+{
+  "name": "dataset-viewer",
+  "version": "1.0.0",
+  "description": "MCP server for Hugging Face dataset viewer",
+  "homepage": "https://github.com/privetin/dataset-viewer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/privetin/dataset-viewer"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "dataset-viewer",
+    "privetin"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "parent_to_repo/dataset-viewer",
+      "run",
+      "dataset-viewer"
+    ]
+  }
+}

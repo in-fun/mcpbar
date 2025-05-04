@@ -1,0 +1,33 @@
+{
+  "name": "arize-phoenix",
+  "version": "1.0.0",
+  "description": "AI Observability & Evaluation",
+  "homepage": "https://docs.arize.com/phoenix",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Arize-ai/phoenix"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "llmops",
+    "ai-monitoring",
+    "ai-observability",
+    "llm-eval",
+    "aiengineering",
+    "datasets",
+    "agents",
+    "llms",
+    "prompt-engineering",
+    "anthropic",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "arize-phoenix"
+    ],
+    "env": {}
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "manifold-mcp-server",
+  "version": "0.2.0",
+  "description": "Comprehensive MCP server for Manifold Markets providing market creation, trading, liquidity management, and social features",
+  "homepage": "https://github.com/bmorphism/manifold-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bmorphism/manifold-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "manifold-mcp-server",
+    "bmorphism"
+  ],
+  "inputs": [
+    {
+      "id": "manifold_api_key",
+      "type": "promptString",
+      "description": "Environment variable for manifold api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/manifold-mcp-server/build/index.js"
+    ],
+    "env": {
+      "MANIFOLD_API_KEY": "your_api_key_here"
+    }
+  }
+}

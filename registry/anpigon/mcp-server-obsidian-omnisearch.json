@@ -1,0 +1,29 @@
+{
+  "name": "mcp-server-obsidian-omnisearch",
+  "version": "1.0.0",
+  "description": "An MCP server that enables searches within Obsidian vaults using the Omnisearch plugin API. Returns absolute paths to matching notes for seamless integration. 🚀",
+  "homepage": "https://github.com/anpigon/mcp-server-obsidian-omnisearch",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anpigon/mcp-server-obsidian-omnisearch"
+  },
+  "license": "MIT",
+  "keywords": [
+    "obsidian",
+    "omnisearch",
+    "secondbrain",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "<dir_to>/mcp-server-obsidian-omnisearch",
+      "run",
+      "mcp-server-obsidian-omnisearch",
+      "/path/to/your/obsidian/vault"
+    ]
+  }
+}

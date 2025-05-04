@@ -1,0 +1,26 @@
+{
+  "name": "server-koboldai",
+  "version": "1.0.0",
+  "description": "MCP server for KoboldAI API integration",
+  "homepage": "https://github.com/PhialsBasement/KoboldCPP-MCP-Server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PhialsBasement/KoboldCPP-MCP-Server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "koboldcpp-mcp-server",
+    "phialsbasement"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "server-koboldai"
+    ],
+    "env": {}
+  }
+}

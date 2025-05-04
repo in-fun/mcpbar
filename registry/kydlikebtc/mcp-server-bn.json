@@ -1,0 +1,42 @@
+{
+  "name": "@kydfeng/mcp-server-cex-bn",
+  "version": "0.1.2",
+  "description": "MCP Server for Binance Spot Trading",
+  "homepage": "https://github.com/kydlikebtc/mcp-server-bn",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kydlikebtc/mcp-server-bn"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-bn",
+    "kydlikebtc"
+  ],
+  "inputs": [
+    {
+      "id": "binance_api_key",
+      "type": "promptString",
+      "description": "Environment variable for binance api key",
+      "password": true
+    },
+    {
+      "id": "binance_api_secret",
+      "type": "promptString",
+      "description": "Environment variable for binance api secret",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@kydfeng/mcp-server-cex-bn"
+    ],
+    "env": {
+      "BINANCE_API_KEY": "${input:binance_api_key}",
+      "BINANCE_API_SECRET": "${input:binance_api_secret}"
+    }
+  }
+}

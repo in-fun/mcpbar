@@ -1,0 +1,26 @@
+{
+  "name": "quill",
+  "version": "2.0.0-dev.2",
+  "description": "Your powerful, rich text editor",
+  "homepage": "https://quilljs.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BH-NOTHING/quill"
+  },
+  "license": "BSD-3-Clause",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "quill",
+    "bh-nothing"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "quill"
+    ],
+    "env": {}
+  }
+}

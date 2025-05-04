@@ -1,0 +1,29 @@
+{
+  "name": "mongodb-lens",
+  "version": "9.1.4",
+  "description": "MongoDB Lens: Full Featured MCP Server for MongoDB Databases",
+  "homepage": "https://www.npmjs.com/package/mongodb-lens",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/furey/mongodb-lens"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "claude",
+    "database",
+    "llm",
+    "mcp",
+    "mongodb",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "/path/to/npx",
+    "args": [
+      "-y",
+      "mongodb-lens@latest",
+      "mongodb://your-connection-string"
+    ]
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "openai-websearch-mcp",
+  "version": "1.0.0",
+  "description": "openai websearch tool as mcp server",
+  "homepage": "https://github.com/ConechoAI/openai-websearch-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ConechoAI/openai-websearch-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "openai-websearch-mcp",
+    "conechoai"
+  ],
+  "inputs": [
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "openai-websearch-mcp"
+    ],
+    "env": {
+      "OPENAI_API_KEY": "${input:openai_api_key}"
+    }
+  }
+}

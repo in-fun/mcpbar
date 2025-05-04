@@ -1,0 +1,25 @@
+{
+  "name": "mcp-shell-server",
+  "version": "1.0.0",
+  "description": "MCP server for mcp-shell-server",
+  "homepage": "https://github.com/tumf/mcp-shell-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tumf/mcp-shell-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-shell-server",
+    "tumf"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-shell-server"
+    ],
+    "env": {}
+  }
+}

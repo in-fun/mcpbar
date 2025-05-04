@@ -1,0 +1,65 @@
+{
+  "name": "adb-mysql-mcp-server",
+  "version": "1.0.0",
+  "description": "AnalyticDB for MySQL MCP Server",
+  "homepage": "https://github.com/aliyun/alibabacloud-adb-mysql-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aliyun/alibabacloud-adb-mysql-mcp-server"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "alibabacloud-adb-mysql-mcp-server",
+    "aliyun"
+  ],
+  "inputs": [
+    {
+      "id": "adb_mysql_host",
+      "type": "promptString",
+      "description": "Environment variable for adb mysql host configuration",
+      "password": false
+    },
+    {
+      "id": "adb_mysql_port",
+      "type": "promptString",
+      "description": "Environment variable for adb mysql port configuration",
+      "password": false
+    },
+    {
+      "id": "adb_mysql_user",
+      "type": "promptString",
+      "description": "Environment variable for adb mysql user configuration",
+      "password": false
+    },
+    {
+      "id": "adb_mysql_password",
+      "type": "promptString",
+      "description": "Environment variable for adb mysql password authentication",
+      "password": false
+    },
+    {
+      "id": "adb_mysql_database",
+      "type": "promptString",
+      "description": "Environment variable for adb mysql database configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "/path/to/alibabacloud-adb-mysql-mcp-server",
+      "run",
+      "adb-mysql-mcp-server"
+    ],
+    "env": {
+      "ADB_MYSQL_HOST": "host",
+      "ADB_MYSQL_PORT": "port",
+      "ADB_MYSQL_USER": "database_user",
+      "ADB_MYSQL_PASSWORD": "database_password",
+      "ADB_MYSQL_DATABASE": "database"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "mcp-server-math",
+  "version": "1.0.0",
+  "description": "MCP server for math-mcp-server",
+  "homepage": "https://github.com/swaroopkasaraneni/math-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/swaroopkasaraneni/math-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "math-mcp-server",
+    "swaroopkasaraneni"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-server-math"
+    ],
+    "env": {}
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@odgrim/mcp-datetime",
+  "version": "0.2.0",
+  "description": "A TypeScript implementation of a simple MCP server that exposes datetime information to agentic systems and chat REPLs",
+  "homepage": "https://github.com/odgrim/mcp-datetime",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/odgrim/mcp-datetime"
+  },
+  "license": "MPL-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-datetime",
+    "odgrim"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@odgrim/mcp-datetime"
+    ],
+    "env": {}
+  }
+}

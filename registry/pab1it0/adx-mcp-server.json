@@ -1,0 +1,44 @@
+{
+  "name": "adx_mcp_server",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol (MCP) server that enables AI assistants to query and analyze Azure Data Explorer databases through standardized interfaces.",
+  "homepage": "https://github.com/pab1it0/adx-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pab1it0/adx-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "adx-mcp-server",
+    "pab1it0"
+  ],
+  "inputs": [
+    {
+      "id": "adx_cluster_url",
+      "type": "promptString",
+      "description": "Environment variable for adx cluster url configuration",
+      "password": false
+    },
+    {
+      "id": "adx_database",
+      "type": "promptString",
+      "description": "Environment variable for adx database configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "<full path to adx-mcp-server directory>",
+      "run",
+      "src/adx_mcp_server/main.py"
+    ],
+    "env": {
+      "ADX_CLUSTER_URL": "https://yourcluster.region.kusto.windows.net",
+      "ADX_DATABASE": "your_database"
+    }
+  }
+}

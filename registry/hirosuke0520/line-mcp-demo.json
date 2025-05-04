@@ -1,0 +1,41 @@
+{
+  "name": "@line/line-bot-mcp-server",
+  "version": "0.0.1",
+  "description": "MCP server for interacting with your LINE Official Account",
+  "homepage": "https://line-mcp-demo.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hirosuke0520/line-mcp-demo"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "line-mcp-demo",
+    "hirosuke0520"
+  ],
+  "inputs": [
+    {
+      "id": "channel_access_token",
+      "type": "promptString",
+      "description": "Environment variable for channel access token authentication",
+      "password": true
+    },
+    {
+      "id": "destination_user_id",
+      "type": "promptString",
+      "description": "Environment variable for destination user id configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "PATH/TO/line-bot-mcp-server/dist/index.js"
+    ],
+    "env": {
+      "CHANNEL_ACCESS_TOKEN": "FILL_HERE",
+      "DESTINATION_USER_ID": "FILL_HERE"
+    }
+  }
+}

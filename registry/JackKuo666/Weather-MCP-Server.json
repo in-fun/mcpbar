@@ -1,0 +1,34 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "MCP server for Weather-MCP-Server",
+  "homepage": "https://github.com/JackKuo666/Weather-MCP-Server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JackKuo666/Weather-MCP-Server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "weather-mcp-server",
+    "jackkuo666"
+  ],
+  "inputs": [
+    {
+      "id": "nws_api",
+      "type": "promptString",
+      "description": "Environment variable for nws api",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "weather"
+    ],
+    "env": {
+      "NWS_API": "${input:nws_api}"
+    }
+  }
+}

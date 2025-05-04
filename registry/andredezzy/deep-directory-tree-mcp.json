@@ -1,0 +1,24 @@
+{
+  "name": "@andredezzy/deep-directory-tree-mcp",
+  "version": "1.0.1",
+  "description": "Powerful Model Context Protocol (MCP) implementation for visualizing directory structures with real-time updates, configurable depth, and smart exclusions for efficient project navigation",
+  "homepage": "https://smithery.ai/server/@andredezzy/deep-directory-tree-mcp/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andredezzy/deep-directory-tree-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@andredezzy/deep-directory-tree-mcp"
+    ]
+  }
+}

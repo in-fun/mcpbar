@@ -1,0 +1,25 @@
+{
+  "name": "@kevinwatt/mcp-server-searxng",
+  "version": "0.3.9",
+  "description": "MCP server for SearXNG meta search integration",
+  "homepage": "https://github.com/kevinwatt/mcp-server-searxng",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kevinwatt/mcp-server-searxng"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-searxng",
+    "kevinwatt"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@kevinwatt/mcp-server-searxng"
+    ]
+  }
+}

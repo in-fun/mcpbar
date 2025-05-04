@@ -1,0 +1,56 @@
+{
+  "name": "mcp-mysql-server",
+  "version": "0.1.4",
+  "description": "A Model Context Protocol server for MySQL database operations",
+  "homepage": "https://github.com/enemyrr/mcp-mysql-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/enemyrr/mcp-mysql-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-mysql-server",
+    "enemyrr"
+  ],
+  "inputs": [
+    {
+      "id": "database_url",
+      "type": "promptString",
+      "description": "Environment variable for database url",
+      "password": false
+    },
+    {
+      "id": "db_host",
+      "type": "promptString",
+      "description": "Environment variable for db host",
+      "password": false
+    },
+    {
+      "id": "db_user",
+      "type": "promptString",
+      "description": "Environment variable for db user",
+      "password": false
+    },
+    {
+      "id": "db_pass",
+      "type": "promptString",
+      "description": "Environment variable for db pass",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-mysql-server"
+    ],
+    "env": {
+      "DATABASE_URL": "${input:database_url}",
+      "DB_HOST": "${input:db_host}",
+      "DB_USER": "${input:db_user}",
+      "DB_PASS": "${input:db_pass}"
+    }
+  }
+}

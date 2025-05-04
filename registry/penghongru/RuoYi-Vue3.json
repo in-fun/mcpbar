@@ -1,0 +1,26 @@
+{
+  "name": "ruoyi",
+  "version": "3.8.6",
+  "description": "若依管理系统",
+  "homepage": "https://github.com/penghongru/RuoYi-Vue3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/penghongru/RuoYi-Vue3"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ruoyi-vue3",
+    "penghongru"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "ruoyi"
+    ],
+    "env": {}
+  }
+}

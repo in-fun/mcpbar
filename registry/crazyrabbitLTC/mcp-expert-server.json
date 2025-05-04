@@ -1,0 +1,34 @@
+{
+  "name": "mcp-expert-server",
+  "version": "1.0.0",
+  "description": "An MCP server for query generation and documentation assistance",
+  "homepage": "https://github.com/crazyrabbitLTC/mcp-expert-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crazyrabbitLTC/mcp-expert-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-expert-server",
+    "crazyrabbitltc"
+  ],
+  "inputs": [
+    {
+      "id": "anthropic_api_key",
+      "type": "promptString",
+      "description": "Environment variable for anthropic api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "/ABSOLUTE/PATH/TO/expert-server/build/index.js"
+    ],
+    "env": {
+      "ANTHROPIC_API_KEY": "your_api_key_here"
+    }
+  }
+}

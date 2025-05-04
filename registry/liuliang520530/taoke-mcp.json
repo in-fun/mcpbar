@@ -1,0 +1,56 @@
+{
+  "name": "@liuliang520500/sinataoke_cn",
+  "version": "1.1.28",
+  "description": "淘宝联盟，京东联盟，多多进宝全平台MCP服务 - 支持淘宝、京东、拼多多平台",
+  "homepage": "https://github.com/liuliang520530/taoke-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/liuliang520530/taoke-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "taoke-mcp",
+    "liuliang520530"
+  ],
+  "inputs": [
+    {
+      "id": "env_url",
+      "type": "promptString",
+      "description": "Environment variable for env url",
+      "password": false
+    },
+    {
+      "id": "env_secret",
+      "type": "promptString",
+      "description": "Environment variable for env secret",
+      "password": true
+    },
+    {
+      "id": "jd_key",
+      "type": "promptString",
+      "description": "Environment variable for jd key",
+      "password": true
+    },
+    {
+      "id": "pdd_session_token",
+      "type": "promptString",
+      "description": "Environment variable for pdd session token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@liuliang520500/sinataoke_cn"
+    ],
+    "env": {
+      "ENV_URL": "${input:env_url}",
+      "ENV_SECRET": "${input:env_secret}",
+      "JD_KEY": "${input:jd_key}",
+      "PDD_SESSION_TOKEN": "${input:pdd_session_token}"
+    }
+  }
+}

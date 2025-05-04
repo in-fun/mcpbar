@@ -1,0 +1,25 @@
+{
+  "name": "boring-news-mcp",
+  "version": "1.0.0",
+  "description": "Serveur MCP pour obternir l'actualié du jour",
+  "homepage": "https://github.com/Oliviergg/boring-news-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Oliviergg/boring-news-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "boring-news-mcp",
+    "oliviergg"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "boring-news-mcp"
+    ],
+    "env": {}
+  }
+}

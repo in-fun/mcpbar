@@ -1,0 +1,25 @@
+{
+  "name": "@joshuarileydev/simulator-mcp-server",
+  "version": "0.0.1",
+  "description": "An MCP server for controlling iOS simulators",
+  "homepage": "https://github.com/JoshuaRileyDev/simulator-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JoshuaRileyDev/simulator-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "simulator-mcp-server",
+    "joshuarileydev"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "y",
+      "@joshuarileydev/simulator-mcp-server"
+    ]
+  }
+}

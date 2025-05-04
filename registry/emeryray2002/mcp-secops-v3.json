@@ -1,0 +1,51 @@
+{
+  "name": "secops-mcp",
+  "version": "1.0.0",
+  "description": "This is an MCP (Model Context Protocol) server for interacting with Google's Chronicle Security Operations API.",
+  "homepage": "https://github.com/emeryray2002/mcp-secops-v3",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emeryray2002/mcp-secops-v3"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-secops-v3",
+    "emeryray2002"
+  ],
+  "inputs": [
+    {
+      "id": "chronicle_project_id",
+      "type": "promptString",
+      "description": "Environment variable for chronicle project id configuration",
+      "password": false
+    },
+    {
+      "id": "chronicle_customer_id",
+      "type": "promptString",
+      "description": "Environment variable for chronicle customer id configuration",
+      "password": false
+    },
+    {
+      "id": "chronicle_region",
+      "type": "promptString",
+      "description": "Environment variable for chronicle region configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "/path/to/your/uv",
+    "args": [
+      "--directory",
+      "/path/to/your/mcp-secops-v3",
+      "run",
+      "secops_mcp.py"
+    ],
+    "env": {
+      "CHRONICLE_PROJECT_ID": "your-google-cloud-project-id",
+      "CHRONICLE_CUSTOMER_ID": "your-chronicle-customer-id",
+      "CHRONICLE_REGION": "us"
+    }
+  }
+}

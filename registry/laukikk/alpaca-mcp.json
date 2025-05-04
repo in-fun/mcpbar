@@ -1,0 +1,27 @@
+{
+  "name": "aaaa",
+  "version": "1.0.0",
+  "description": "MCP for the Alpaca trading API to manage stock and crypto portfolios, place trades, and access market data",
+  "homepage": "https://github.com/laukikk/alpaca-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/laukikk/alpaca-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "alpaca-mcp",
+    "laukikk"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "/ABSOLUTE/PATH/TO/PARENT/FOLDER/alpaca-mcp-server",
+      "run",
+      "src/server.py"
+    ]
+  }
+}

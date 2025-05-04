@@ -1,0 +1,56 @@
+{
+  "name": "@zereight/bithumb-mcp",
+  "version": "1.0.6",
+  "description": "MCP server for using the Bithumb API",
+  "homepage": "https://github.com/zereight/bithumb-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zereight/bithumb-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "bithumb-mcp",
+    "zereight"
+  ],
+  "inputs": [
+    {
+      "id": "bithumb_api_key",
+      "type": "promptString",
+      "description": "Environment variable for bithumb api key",
+      "password": true
+    },
+    {
+      "id": "your_bithumb_api_key",
+      "type": "promptString",
+      "description": "Environment variable for your bithumb api key",
+      "password": true
+    },
+    {
+      "id": "bithumb_secret_key",
+      "type": "promptString",
+      "description": "Environment variable for bithumb secret key",
+      "password": true
+    },
+    {
+      "id": "your_bithumb_secret_key",
+      "type": "promptString",
+      "description": "Environment variable for your bithumb secret key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@zereight/bithumb-mcp"
+    ],
+    "env": {
+      "BITHUMB_API_KEY": "${input:bithumb_api_key}",
+      "YOUR_BITHUMB_API_KEY": "${input:your_bithumb_api_key}",
+      "BITHUMB_SECRET_KEY": "${input:bithumb_secret_key}",
+      "YOUR_BITHUMB_SECRET_KEY": "${input:your_bithumb_secret_key}"
+    }
+  }
+}

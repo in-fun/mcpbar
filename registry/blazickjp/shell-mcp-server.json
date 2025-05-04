@@ -1,0 +1,35 @@
+{
+  "name": "shell-mcp-server",
+  "version": "1.0.0",
+  "description": "Secure shell command execution MCP server for Claude AI. Enables controlled shell access within specified directories.",
+  "homepage": "https://github.com/blazickjp/shell-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blazickjp/shell-mcp-server"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "shell-mcp-server",
+    "blazickjp"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "/path/to/shell-mcp-server",
+      "run",
+      "shell-mcp-server",
+      "/path/to/allowed/dir1",
+      "/path/to/allowed/dir2",
+      "--shell",
+      "bash",
+      "/bin/bash",
+      "--shell",
+      "zsh",
+      "/bin/zsh"
+    ]
+  }
+}

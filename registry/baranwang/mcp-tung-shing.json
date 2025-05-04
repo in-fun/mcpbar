@@ -1,0 +1,25 @@
+{
+  "name": "mcp-tung-shing",
+  "version": "1.7.1",
+  "description": "A Model Context Protocol plugin for Chinese Tung Shing (黄历/通勝/通胜) almanac calculations",
+  "homepage": "https://www.npmjs.com/package/mcp-tung-shing",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/baranwang/mcp-tung-shing"
+  },
+  "license": "MIT",
+  "keywords": [
+    "lunar-calendar",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-tung-shing@latest"
+    ]
+  }
+}

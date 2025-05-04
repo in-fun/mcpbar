@@ -1,0 +1,31 @@
+{
+  "name": "@burtthecoder/mcp-virustotal",
+  "version": "1.0.10",
+  "description": "MCP server for VirusTotal API integration",
+  "homepage": "https://github.com/BurtTheCoder/mcp-virustotal",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BurtTheCoder/mcp-virustotal"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-virustotal",
+    "burtthecoder"
+  ],
+  "inputs": [
+    {
+      "id": "virustotal_api_key",
+      "type": "promptString",
+      "description": "Environment variable for virustotal api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "mcp-virustotal",
+    "env": {
+      "VIRUSTOTAL_API_KEY": "your-virustotal-api-key"
+    }
+  }
+}

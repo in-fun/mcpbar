@@ -1,0 +1,25 @@
+{
+  "name": "beancount-mcp",
+  "version": "1.0.0",
+  "description": "A MCP Server for beancount query and transaction submmit.",
+  "homepage": "https://github.com/StdioA/beancount-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StdioA/beancount-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "beancount-mcp",
+    "stdioa"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "beancount-mcp"
+    ],
+    "env": {}
+  }
+}

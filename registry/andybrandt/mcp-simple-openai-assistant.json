@@ -1,0 +1,35 @@
+{
+  "name": "mcp-simple-openai-assistant",
+  "version": "1.0.0",
+  "description": "MCP server that gives Claude ability to use OpenAI's GPTs assistants",
+  "homepage": "https://github.com/andybrandt/mcp-simple-openai-assistant",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andybrandt/mcp-simple-openai-assistant"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-simple-openai-assistant",
+    "andybrandt"
+  ],
+  "inputs": [
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "python",
+    "args": [
+      "-m",
+      "mcp_simple_openai_assistant"
+    ],
+    "env": {
+      "OPENAI_API_KEY": "your-api-key-here"
+    }
+  }
+}

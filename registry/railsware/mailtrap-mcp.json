@@ -1,0 +1,42 @@
+{
+  "name": "mcp-mailtrap",
+  "version": "0.0.2",
+  "description": "Official MCP Server for Mailtrap",
+  "homepage": "https://mailtrap.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/railsware/mailtrap-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mailtrap-mcp",
+    "railsware"
+  ],
+  "inputs": [
+    {
+      "id": "mailtrap_api_token",
+      "type": "promptString",
+      "description": "Environment variable for mailtrap api token authentication",
+      "password": true
+    },
+    {
+      "id": "default_from_email",
+      "type": "promptString",
+      "description": "Environment variable for default from email configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-mailtrap"
+    ],
+    "env": {
+      "MAILTRAP_API_TOKEN": "your_mailtrap_api_token",
+      "DEFAULT_FROM_EMAIL": "your_sender@example.com"
+    }
+  }
+}

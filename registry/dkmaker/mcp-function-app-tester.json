@@ -1,0 +1,48 @@
+{
+  "name": "dkmaker-mcp-function-app-tester",
+  "version": "0.2.0",
+  "description": "A test of responses from a Function App",
+  "homepage": "https://github.com/dkmaker/mcp-function-app-tester",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dkmaker/mcp-function-app-tester"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "mcpe-server",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "auth_basic_user",
+      "type": "promptString",
+      "description": "Environment variable for auth basic user",
+      "password": false
+    },
+    {
+      "id": "auth_basic_pass",
+      "type": "promptString",
+      "description": "Environment variable for auth basic pass",
+      "password": false
+    },
+    {
+      "id": "auth_api",
+      "type": "promptString",
+      "description": "Environment variable for auth api",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "dkmaker-mcp-function-app-tester"
+    ],
+    "env": {
+      "AUTH_BASIC_USER": "${input:auth_basic_user}",
+      "AUTH_BASIC_PASS": "${input:auth_basic_pass}",
+      "AUTH_API": "${input:auth_api}"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "@scopiousdigital/server-hubspot",
+  "version": "1.0.4",
+  "description": "MCP server for interacting with HubSpot",
+  "homepage": "https://github.com/scopiousdigital/hubspot-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scopiousdigital/hubspot-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "hubspot-mcp",
+    "scopiousdigital"
+  ],
+  "inputs": [
+    {
+      "id": "hubspot_api_key",
+      "type": "promptString",
+      "description": "Environment variable for hubspot api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@modelcontextprotocol/server-hubspot"
+    ],
+    "env": {
+      "HUBSPOT_API_KEY": "your-api-key-here"
+    }
+  }
+}

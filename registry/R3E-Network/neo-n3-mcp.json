@@ -1,0 +1,26 @@
+{
+  "name": "@r3e/neo-n3-mcp",
+  "version": "1.4.0",
+  "description": "MCP server and HTTP API for Neo N3 blockchain integration",
+  "homepage": "https://github.com/R3E-Network/neo-n3-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/R3E-Network/neo-n3-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "neo-n3-mcp",
+    "r3e-network"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@r3e/neo-n3-mcp"
+    ],
+    "env": {}
+  }
+}

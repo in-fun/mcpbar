@@ -1,0 +1,28 @@
+{
+  "name": "@mastergo/magic-mcp",
+  "version": "0.0.4-beta.6",
+  "description": "MasterGo MCP standalone service",
+  "homepage": "https://mastergo.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mastergo-design/mastergo-magic-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mastergo-magic-mcp",
+    "mastergo-design"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@mastergo/magic-mcp",
+      "--token=<MG_MCP_TOKEN>",
+      "--url=https://mastergo.com"
+    ],
+    "env": {}
+  }
+}

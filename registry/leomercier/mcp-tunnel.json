@@ -1,0 +1,26 @@
+{
+  "name": "mcp-cli",
+  "version": "1.0.0",
+  "description": "MCP server for accessing VM command line with web tunneling",
+  "homepage": "https://github.com/leomercier/mcp-tunnel",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leomercier/mcp-tunnel"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-tunnel",
+    "leomercier"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-cli"
+    ],
+    "env": {}
+  }
+}

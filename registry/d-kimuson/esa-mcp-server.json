@@ -1,0 +1,42 @@
+{
+  "name": "esa-mcp-server",
+  "version": "0.1.1",
+  "description": "esa の Model Context Protocol サーバー実装",
+  "homepage": "https://github.com/d-kimuson/esa-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/d-kimuson/esa-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "esa-mcp-server",
+    "d-kimuson"
+  ],
+  "inputs": [
+    {
+      "id": "esa_api_key",
+      "type": "promptString",
+      "description": "Environment variable for esa api key authentication",
+      "password": true
+    },
+    {
+      "id": "default_esa_team",
+      "type": "promptString",
+      "description": "Environment variable for default esa team configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "esa-mcp-server@latest"
+    ],
+    "env": {
+      "ESA_API_KEY": "your api key here",
+      "DEFAULT_ESA_TEAM": "your default esa team"
+    }
+  }
+}

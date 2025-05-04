@@ -1,0 +1,56 @@
+{
+  "name": "mcp",
+  "version": "1.0.0",
+  "description": "An MCP server implementation that provides tools for interacting with the [Twitter/X API v2](https://docs.x.com/x-api/introduction).",
+  "homepage": "https://github.com/NexusX-MCP/x-v2-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NexusX-MCP/x-v2-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "x-v2-server",
+    "nexusx-mcp"
+  ],
+  "inputs": [
+    {
+      "id": "twitter_api_key",
+      "type": "promptString",
+      "description": "Environment variable for twitter api key",
+      "password": true
+    },
+    {
+      "id": "twitter_api_key_secret",
+      "type": "promptString",
+      "description": "Environment variable for twitter api key secret",
+      "password": true
+    },
+    {
+      "id": "twitter_access_token",
+      "type": "promptString",
+      "description": "Environment variable for twitter access token",
+      "password": true
+    },
+    {
+      "id": "twitter_access_token_secret",
+      "type": "promptString",
+      "description": "Environment variable for twitter access token secret",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp"
+    ],
+    "env": {
+      "TWITTER_API_KEY": "${input:twitter_api_key}",
+      "TWITTER_API_KEY_SECRET": "${input:twitter_api_key_secret}",
+      "TWITTER_ACCESS_TOKEN": "${input:twitter_access_token}",
+      "TWITTER_ACCESS_TOKEN_SECRET": "${input:twitter_access_token_secret}"
+    }
+  }
+}

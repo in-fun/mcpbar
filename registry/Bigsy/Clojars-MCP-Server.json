@@ -1,0 +1,24 @@
+{
+  "name": "clojars-deps-server",
+  "version": "0.1.1",
+  "description": "A Model Context Protocol server for fetching Clojars dependency information",
+  "homepage": "https://github.com/Bigsy/Clojars-MCP-Server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bigsy/Clojars-MCP-Server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "clojars-mcp-server",
+    "bigsy"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/clojars-deps-server/build/index.js"
+    ]
+  }
+}

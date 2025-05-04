@@ -1,0 +1,29 @@
+{
+  "name": "umi-plugin-mobx",
+  "version": "0.1.5",
+  "description": "Use mobx-state-tree gracefully with umi.",
+  "homepage": "https://github.com/HeskeyBaozi/umi-plugin-mobx",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HeskeyBaozi/umi-plugin-mobx"
+  },
+  "license": "MIT",
+  "keywords": [
+    "umi",
+    "mobx",
+    "mobx-state-tree",
+    "react",
+    "umi-plugin",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "umi-plugin-mobx"
+    ],
+    "env": {}
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "@nicholmikey/chrome-tools",
+  "version": "1.3.0",
+  "description": "MCP server for Chrome DevTools Protocol integration - control Chrome tabs, execute JavaScript, capture screenshots, and monitor network traffic",
+  "homepage": "https://github.com/nicholmikey/chrome-tools-MCP",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicholmikey/chrome-tools-MCP"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "chrome-tools-mcp",
+    "nicholmikey"
+  ],
+  "inputs": [
+    {
+      "id": "chrome_debug_url",
+      "type": "promptString",
+      "description": "Environment variable for chrome debug url",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@nicholmikey/chrome-tools"
+    ],
+    "env": {
+      "CHROME_DEBUG_URL": "${input:chrome_debug_url}"
+    }
+  }
+}

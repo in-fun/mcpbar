@@ -1,0 +1,38 @@
+{
+  "name": "nasdaq-data-link-mcp-os",
+  "version": "1.0.0",
+  "description": "A Nasdaq Data Link MCP (Model Context Protocol) Server",
+  "homepage": "https://amorelli.tech/open-source/nasdaq-data-link-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stefanoamorelli/nasdaq-data-link-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "data",
+    "llm",
+    "mcp",
+    "nasdaq",
+    "finance",
+    "genai",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "nasdaq_data_link_api_key",
+      "type": "promptString",
+      "description": "Environment variable for nasdaq data link api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "nasdaq-data-link-mcp-os"
+    ],
+    "env": {
+      "NASDAQ_DATA_LINK_API_KEY": "${input:nasdaq_data_link_api_key}"
+    }
+  }
+}

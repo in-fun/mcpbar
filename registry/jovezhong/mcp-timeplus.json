@@ -1,0 +1,101 @@
+{
+  "name": "mcp-timeplus",
+  "version": "1.0.0",
+  "description": "Execute SQL queries and manage databases seamlessly with Timeplus. Leverage powerful tools to interact with your data, Kafka topics, and Iceberg tables efficiently. Enhance your data workflows with a user-friendly interface and robust backend capabilities.",
+  "homepage": "https://github.com/jovezhong/mcp-timeplus",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jovezhong/mcp-timeplus"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "clickhouse",
+    "flink",
+    "iceberg",
+    "kafka",
+    "mcp-server",
+    "spark",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "timeplus_host",
+      "type": "promptString",
+      "description": "Environment variable for timeplus host configuration",
+      "password": false
+    },
+    {
+      "id": "timeplus_port",
+      "type": "promptString",
+      "description": "Environment variable for timeplus port configuration",
+      "password": false
+    },
+    {
+      "id": "timeplus_user",
+      "type": "promptString",
+      "description": "Environment variable for timeplus user configuration",
+      "password": false
+    },
+    {
+      "id": "timeplus_password",
+      "type": "promptString",
+      "description": "Environment variable for timeplus password authentication",
+      "password": false
+    },
+    {
+      "id": "timeplus_secure",
+      "type": "promptString",
+      "description": "Environment variable for timeplus secure configuration",
+      "password": false
+    },
+    {
+      "id": "timeplus_verify",
+      "type": "promptString",
+      "description": "Environment variable for timeplus verify configuration",
+      "password": false
+    },
+    {
+      "id": "timeplus_connect_timeout",
+      "type": "promptString",
+      "description": "Environment variable for timeplus connect timeout configuration",
+      "password": false
+    },
+    {
+      "id": "timeplus_send_receive_timeout",
+      "type": "promptString",
+      "description": "Environment variable for timeplus send receive timeout configuration",
+      "password": false
+    },
+    {
+      "id": "timeplus_read_only",
+      "type": "promptString",
+      "description": "Environment variable for timeplus read only configuration",
+      "password": false
+    },
+    {
+      "id": "timeplus_kafka_config",
+      "type": "promptString",
+      "description": "Environment variable for timeplus kafka config configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-timeplus"
+    ],
+    "env": {
+      "TIMEPLUS_HOST": "<timeplus-host>",
+      "TIMEPLUS_PORT": "<timeplus-port>",
+      "TIMEPLUS_USER": "<timeplus-user>",
+      "TIMEPLUS_PASSWORD": "<timeplus-password>",
+      "TIMEPLUS_SECURE": "false",
+      "TIMEPLUS_VERIFY": "true",
+      "TIMEPLUS_CONNECT_TIMEOUT": "30",
+      "TIMEPLUS_SEND_RECEIVE_TIMEOUT": "30",
+      "TIMEPLUS_READ_ONLY": "false",
+      "TIMEPLUS_KAFKA_CONFIG": "{\"bootstrap.servers\":\"a.aivencloud.com:28864\", \"sasl.mechanism\":\"SCRAM-SHA-256\",\"sasl.username\":\"avnadmin\", \"sasl.password\":\"thePassword\",\"security.protocol\":\"SASL_SSL\",\"enable.ssl.certificate.verification\":\"false\"}"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "mcp-telegram",
+  "version": "1.0.0",
+  "description": "MCP server to work with Telegram through MTProto",
+  "homepage": "https://github.com/sparfenyuk/mcp-telegram",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sparfenyuk/mcp-telegram"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude",
+    "mcp-servers",
+    "telegram-api",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "telegram_api",
+      "type": "promptString",
+      "description": "Environment variable for telegram api",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-telegram"
+    ],
+    "env": {
+      "TELEGRAM_API": "${input:telegram_api}"
+    }
+  }
+}

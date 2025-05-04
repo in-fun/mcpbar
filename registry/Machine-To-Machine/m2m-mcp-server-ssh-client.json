@@ -1,0 +1,25 @@
+{
+  "name": "m2m-mcp-server-ssh-client",
+  "version": "1.0.0",
+  "description": "MCP server for m2m-mcp-server-ssh-client",
+  "homepage": "https://github.com/Machine-To-Machine/m2m-mcp-server-ssh-client",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Machine-To-Machine/m2m-mcp-server-ssh-client"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "m2m-mcp-server-ssh-client",
+    "machine-to-machine"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "m2m-mcp-server-ssh-client"
+    ],
+    "env": {}
+  }
+}

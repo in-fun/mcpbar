@@ -1,0 +1,27 @@
+{
+  "name": "@ddukbg/github-enterprise-mcp",
+  "version": "1.3.0",
+  "description": "MCP server for GitHub Enterprise API integration with Cursor, enabling AI access to repositories, issues, PRs and workflows",
+  "homepage": "https://github.com/ddukbg/github-enterprise-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ddukbg/github-enterprise-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "github-enterprise-mcp",
+    "ddukbg"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@ddukbg/github-enterprise-mcp",
+      "--token=YOUR_GITHUB_TOKEN",
+      "--github-enterprise-url=YOUR_GITHUB_ENTERPRISE_URL"
+    ]
+  }
+}

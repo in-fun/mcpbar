@@ -1,0 +1,26 @@
+{
+  "name": "solana-mcp",
+  "version": "1.0.0",
+  "description": "A MCP server to interact with the Solana blockchain with your own private key",
+  "homepage": "https://github.com/Grandbusta/solana-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Grandbusta/solana-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "solana-mcp",
+    "grandbusta"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "solana-mcp"
+    ],
+    "env": {}
+  }
+}

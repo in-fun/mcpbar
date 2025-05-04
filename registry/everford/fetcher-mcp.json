@@ -1,0 +1,33 @@
+{
+  "name": "fetcher-mcp",
+  "version": "0.2.1",
+  "description": "MCP server for fetching web content using Playwright browser",
+  "homepage": "https://github.com/everford/fetcher-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/everford/fetcher-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "anthropic",
+    "cryptocurrency",
+    "genai",
+    "headless-browser",
+    "law",
+    "mcp",
+    "mcp-server",
+    "mcpserver",
+    "modelcontextprotocol",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "fetcher-mcp"
+    ],
+    "env": {}
+  }
+}

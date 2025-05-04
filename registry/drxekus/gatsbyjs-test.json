@@ -1,0 +1,35 @@
+{
+  "name": "gatsby-datocms-demo",
+  "version": "1.0.0",
+  "description": "Gatsby DatoCMS creative portfolio demo",
+  "homepage": "https://github.com/drxekus/gatsbyjs-test",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/drxekus/gatsbyjs-test"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "gatsbyjs-test",
+    "drxekus"
+  ],
+  "inputs": [
+    {
+      "id": "dato_api_token",
+      "type": "promptString",
+      "description": "Environment variable for dato api token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "gatsby-datocms-demo"
+    ],
+    "env": {
+      "DATO_API_TOKEN": "${input:dato_api_token}"
+    }
+  }
+}

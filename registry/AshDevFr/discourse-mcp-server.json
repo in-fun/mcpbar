@@ -1,0 +1,33 @@
+{
+  "name": "@ashdev/discourse-mcp-server",
+  "version": "1.0.2",
+  "description": "MCP server for discourse-mcp-server",
+  "homepage": "https://github.com/AshDevFr/discourse-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AshDevFr/discourse-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "discourse-mcp-server",
+    "ashdevfr"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "docker",
+    "args": [
+      "run",
+      "-i",
+      "--rm",
+      "-e",
+      "DISCOURSE_API_URL=https://try.discourse.org",
+      "-e",
+      "DISCOURSE_API_KEY=1234",
+      "-e",
+      "DISCOURSE_API_USERNAME=ash",
+      "ashdev/discourse-mcp-server"
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "my-turborepo",
+  "version": "1.0.0",
+  "description": "MCP server for blah",
+  "homepage": "https://blah-web.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thomasdavis/blah"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "blah",
+    "thomasdavis"
+  ],
+  "inputs": [
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key",
+      "password": true
+    },
+    {
+      "id": "blah_host",
+      "type": "promptString",
+      "description": "Environment variable for blah host",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "my-turborepo"
+    ],
+    "env": {
+      "OPENAI_API_KEY": "${input:openai_api_key}",
+      "BLAH_HOST": "${input:blah_host}"
+    }
+  }
+}

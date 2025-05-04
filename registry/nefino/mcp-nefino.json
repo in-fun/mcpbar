@@ -1,0 +1,56 @@
+{
+  "name": "mcp-nefino",
+  "version": "1.0.0",
+  "description": "Nefino middleware implementation of the Model Context Protocol (MCP)",
+  "homepage": "https://github.com/nefino/mcp-nefino",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nefino/mcp-nefino"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-nefino",
+    "nefino"
+  ],
+  "inputs": [
+    {
+      "id": "nefino_username",
+      "type": "promptString",
+      "description": "Environment variable for nefino username configuration",
+      "password": false
+    },
+    {
+      "id": "nefino_password",
+      "type": "promptString",
+      "description": "Environment variable for nefino password authentication",
+      "password": false
+    },
+    {
+      "id": "nefino_jwt_secret",
+      "type": "promptString",
+      "description": "Environment variable for nefino jwt secret authentication",
+      "password": true
+    },
+    {
+      "id": "nefino_base_url",
+      "type": "promptString",
+      "description": "Environment variable for nefino base url configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "python",
+    "args": [
+      "-m",
+      "mcp_nefino"
+    ],
+    "env": {
+      "NEFINO_USERNAME": "your_username",
+      "NEFINO_PASSWORD": "your_password",
+      "NEFINO_JWT_SECRET": "your_jwt_secret",
+      "NEFINO_BASE_URL": "http://api_endpoint"
+    }
+  }
+}

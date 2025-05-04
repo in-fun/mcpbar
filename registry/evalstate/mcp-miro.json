@@ -1,0 +1,26 @@
+{
+  "name": "@llmindset/mcp-miro",
+  "version": "0.1.1",
+  "description": "A Model Context Protocol server to connect to the MIRO Whiteboard Application",
+  "homepage": "https://github.com/evalstate/mcp-miro",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evalstate/mcp-miro"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-miro",
+    "evalstate"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "/path/to/node-or-npx",
+    "arguments": [
+      "/path/to/mcp-miro/build/index.js",
+      "--token",
+      "MIRO-OAUTH-KEY"
+    ]
+  }
+}

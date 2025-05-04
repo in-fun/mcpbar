@@ -1,0 +1,27 @@
+{
+  "name": "@gabrielmaialva33/mcp-filesystem",
+  "version": "1.6.1",
+  "description": "MCP server for secure filesystem access",
+  "homepage": "https://www.npmjs.com/package/@gabrielmaialva33/mcp-filesystem",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gabrielmaialva33/mcp-filesystem"
+  },
+  "license": "MIT",
+  "keywords": [
+    "filesystem",
+    "mcp",
+    "mcp-server",
+    "server",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "mcp-filesystem",
+    "args": [
+      "/Users/gabrielmaia/Documents",
+      "/Users/gabrielmaia/Desktop",
+      "/Users/gabrielmaia/Downloads"
+    ]
+  }
+}

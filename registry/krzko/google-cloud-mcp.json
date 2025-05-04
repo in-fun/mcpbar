@@ -1,0 +1,38 @@
+{
+  "name": "google-cloud-mcp",
+  "version": "0.1.4",
+  "description": "Model Context Protocol server for Google Cloud services",
+  "homepage": "https://github.com/krzko/google-cloud-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/krzko/google-cloud-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "gcp",
+    "google",
+    "google-cloud",
+    "google-cloud-platform",
+    "mcp",
+    "mcp-server",
+    "llmops",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "google_application_credentials",
+      "type": "promptString",
+      "description": "Environment variable for google application credentials configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "/Users/foo/code/google-cloud-mcp/dist/index.js"
+    ],
+    "env": {
+      "GOOGLE_APPLICATION_CREDENTIALS": "/Users/foo/.config/gcloud/application_default_credentials.json"
+    }
+  }
+}

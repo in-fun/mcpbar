@@ -1,0 +1,25 @@
+{
+  "name": "rssmcp",
+  "version": "1.0.0",
+  "description": "Simple RSS MCP Server",
+  "homepage": "https://pypi.org/project/rssmcp/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lunran/rssmcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp-server",
+    "rss",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "rssmcp"
+    ],
+    "env": {}
+  }
+}

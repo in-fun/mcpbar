@@ -1,0 +1,26 @@
+{
+  "name": "kb-mcp-server",
+  "version": "1.0.0",
+  "description": "Build a knowledge base into a tar.gz and give it to this MCP server, and it is ready to serve.",
+  "homepage": "https://github.com/Geeksfino/kb-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Geeksfino/kb-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "kb-mcp-server",
+    "geeksfino"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "/your/home/project/.venv/bin/kb-mcp-server",
+    "args": [
+      "--embeddings",
+      "/path/to/knowledge_base.tar.gz"
+    ],
+    "cwd": "/path/to/working/directory"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "name": "mcp-naver",
+  "version": "1.0.0",
+  "description": "python MCP NAVER",
+  "homepage": "https://github.com/pfldy2850/py-mcp-naver",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pfldy2850/py-mcp-naver"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "py-mcp-naver",
+    "pfldy2850"
+  ],
+  "inputs": [
+    {
+      "id": "naver_client_secret",
+      "type": "promptString",
+      "description": "Environment variable for naver client secret",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-naver"
+    ],
+    "env": {
+      "NAVER_CLIENT_SECRET": "${input:naver_client_secret}"
+    }
+  }
+}

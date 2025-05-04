@@ -1,0 +1,31 @@
+{
+  "name": "jsondiffpatch",
+  "version": "1.0.0",
+  "description": "Diff & patch JavaScript objects",
+  "homepage": "https://jsondiffpatch.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/benjamine/jsondiffpatch"
+  },
+  "license": "MIT",
+  "keywords": [
+    "json",
+    "diff",
+    "patch",
+    "text-diff",
+    "jsondiffpatch",
+    "delta",
+    "diffing",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "jsondiffpatch"
+    ],
+    "env": {}
+  }
+}

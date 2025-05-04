@@ -1,0 +1,42 @@
+{
+  "name": "@uh-joan/cortellis-mcp-server",
+  "version": "0.1.0",
+  "description": "MCP server for Cortellis drug database search and ontology exploration",
+  "homepage": "https://github.com/uh-joan/cortellis-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/uh-joan/cortellis-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "cortellis-mcp-server",
+    "uh-joan"
+  ],
+  "inputs": [
+    {
+      "id": "cortellis_username",
+      "type": "promptString",
+      "description": "Environment variable for cortellis username configuration",
+      "password": false
+    },
+    {
+      "id": "cortellis_password",
+      "type": "promptString",
+      "description": "Environment variable for cortellis password authentication",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@uh-joan/cortellis-mcp-server"
+    ],
+    "env": {
+      "CORTELLIS_USERNAME": "your_username",
+      "CORTELLIS_PASSWORD": "your_password"
+    }
+  }
+}

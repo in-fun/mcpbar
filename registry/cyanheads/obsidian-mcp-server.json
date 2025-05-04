@@ -1,0 +1,109 @@
+{
+  "name": "obsidian-mcp-server",
+  "version": "1.5.8",
+  "description": "Model Context Protocol (MCP) server designed for LLMs to interact with Obsidian vaults. Provides secure, token-aware tools for seamless knowledge base management through a standardized interface.",
+  "homepage": "https://www.npmjs.com/package/obsidian-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cyanheads/obsidian-mcp-server"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "ai-tools",
+    "knowledge-base",
+    "llm",
+    "llm-agent",
+    "mcp",
+    "model-context-protocol",
+    "note-taking",
+    "obsidian",
+    "typescript"
+  ],
+  "inputs": [
+    {
+      "id": "obsidian_api_key",
+      "type": "promptString",
+      "description": "Environment variable for obsidian api key authentication",
+      "password": true
+    },
+    {
+      "id": "verify_ssl",
+      "type": "promptString",
+      "description": "Environment variable for verify ssl configuration",
+      "password": false
+    },
+    {
+      "id": "obsidian_protocol",
+      "type": "promptString",
+      "description": "Environment variable for obsidian protocol configuration",
+      "password": false
+    },
+    {
+      "id": "obsidian_host",
+      "type": "promptString",
+      "description": "Environment variable for obsidian host configuration",
+      "password": false
+    },
+    {
+      "id": "obsidian_port",
+      "type": "promptString",
+      "description": "Environment variable for obsidian port configuration",
+      "password": false
+    },
+    {
+      "id": "request_timeout",
+      "type": "promptString",
+      "description": "Environment variable for request timeout configuration",
+      "password": false
+    },
+    {
+      "id": "max_content_length",
+      "type": "promptString",
+      "description": "Environment variable for max content length configuration",
+      "password": false
+    },
+    {
+      "id": "max_body_length",
+      "type": "promptString",
+      "description": "Environment variable for max body length configuration",
+      "password": false
+    },
+    {
+      "id": "rate_limit_window_ms",
+      "type": "promptString",
+      "description": "Environment variable for rate limit window ms configuration",
+      "password": false
+    },
+    {
+      "id": "rate_limit_max_requests",
+      "type": "promptString",
+      "description": "Environment variable for rate limit max requests configuration",
+      "password": false
+    },
+    {
+      "id": "tool_timeout_ms",
+      "type": "promptString",
+      "description": "Environment variable for tool timeout ms configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/obsidian-mcp-server/dist/index.js"
+    ],
+    "env": {
+      "OBSIDIAN_API_KEY": "your_api_key_here",
+      "VERIFY_SSL": "false",
+      "OBSIDIAN_PROTOCOL": "https",
+      "OBSIDIAN_HOST": "127.0.0.1",
+      "OBSIDIAN_PORT": "27124",
+      "REQUEST_TIMEOUT": "5000",
+      "MAX_CONTENT_LENGTH": "52428800",
+      "MAX_BODY_LENGTH": "52428800",
+      "RATE_LIMIT_WINDOW_MS": "900000",
+      "RATE_LIMIT_MAX_REQUESTS": "200",
+      "TOOL_TIMEOUT_MS": "60000"
+    }
+  }
+}

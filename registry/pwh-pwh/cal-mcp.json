@@ -1,0 +1,25 @@
+{
+  "name": "cal-mcp",
+  "version": "1.0.6",
+  "description": "A MCP server for evaluating mathematical expressions",
+  "homepage": "https://smithery.ai/server/@pwh-pwh/cal-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pwh-pwh/cal-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp-server",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "cal-mcp"
+    ],
+    "env": {}
+  }
+}

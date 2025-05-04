@@ -1,0 +1,26 @@
+{
+  "name": "mcp-youtube",
+  "version": "1.0.0",
+  "description": "MCP server for Youtube",
+  "homepage": "https://github.com/sparfenyuk/mcp-youtube",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sparfenyuk/mcp-youtube"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude",
+    "mcp-server",
+    "youtube",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-youtube"
+    ],
+    "env": {}
+  }
+}

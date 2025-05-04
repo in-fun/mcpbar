@@ -1,0 +1,35 @@
+{
+  "name": "mcp-gaodeweather-server",
+  "version": "1.0.0",
+  "description": "MCP server for mcp-gaodeweather-server",
+  "homepage": "https://github.com/kevinkelin/mcp-gaodeweather-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kevinkelin/mcp-gaodeweather-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-gaodeweather-server",
+    "kevinkelin"
+  ],
+  "inputs": [
+    {
+      "id": "gaode_key",
+      "type": "promptString",
+      "description": "Environment variable for gaode key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "name": "gaodeweather",
+    "command": "uvx",
+    "args": [
+      "mcp-gaodeweather-server"
+    ],
+    "env": {
+      "GAODE_KEY": "your apikey"
+    }
+  }
+}

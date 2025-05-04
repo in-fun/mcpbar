@@ -1,0 +1,35 @@
+{
+  "name": "@emmett.deen/linear-mcp-server",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol (MCP) server implementation for the Linear GraphQL API that enables AI assistants to interact with Linear project management systems.",
+  "homepage": "https://smithery.ai/server/@emmett-deen/linear-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wkoutre/linear-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "linear-mcp-server",
+    "wkoutre"
+  ],
+  "inputs": [
+    {
+      "id": "linear_api_key",
+      "type": "promptString",
+      "description": "Environment variable for linear api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@emmett.deen/linear-mcp-server"
+    ],
+    "env": {
+      "LINEAR_API_KEY": "your_linear_api_key_here"
+    }
+  }
+}

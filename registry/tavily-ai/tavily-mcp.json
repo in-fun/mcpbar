@@ -1,0 +1,35 @@
+{
+  "name": "tavily-mcp",
+  "version": "0.1.4",
+  "description": "MCP server for advanced web search using Tavily",
+  "homepage": "https://github.com/tavily-ai/tavily-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tavily-ai/tavily-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "tavily-mcp",
+    "tavily-ai"
+  ],
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "tavily_api_key",
+      "description": "Tavily API Key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "tavily-mcp@0.1.4"
+    ],
+    "env": {
+      "TAVILY_API_KEY": "${input:tavily_api_key}"
+    }
+  }
+}

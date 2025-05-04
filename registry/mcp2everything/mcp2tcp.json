@@ -1,0 +1,24 @@
+{
+  "name": "mcp2tcp",
+  "version": "1.0.0",
+  "description": "Conenct TCP device to LLMs via MCP protocol ",
+  "homepage": "https://github.com/mcp2everything/mcp2tcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mcp2everything/mcp2tcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp2tcp",
+    "mcp2everything"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp2tcp"
+    ]
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "name": "nocodb-mcp-server",
+  "version": "1.0.23",
+  "description": "Model Context Protocol server for nocodb",
+  "homepage": "https://github.com/edwinbernadus/nocodb-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/edwinbernadus/nocodb-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "nocodb-mcp-server",
+    "edwinbernadus"
+  ],
+  "inputs": [
+    {
+      "id": "nocodb_url",
+      "type": "promptString",
+      "description": "Environment variable for nocodb url configuration",
+      "password": false
+    },
+    {
+      "id": "nocodb_base_id",
+      "type": "promptString",
+      "description": "Environment variable for nocodb base id configuration",
+      "password": false
+    },
+    {
+      "id": "nocodb_api_token",
+      "type": "promptString",
+      "description": "Environment variable for nocodb api token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "{working_folder}/dist/start.js"
+    ],
+    "env": {
+      "NOCODB_URL": "https://your-nocodb-instance.com",
+      "NOCODB_BASE_ID": "your_base_id_here",
+      "NOCODB_API_TOKEN": "your_api_token_here"
+    }
+  }
+}

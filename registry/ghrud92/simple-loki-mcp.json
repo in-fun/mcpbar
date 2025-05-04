@@ -1,0 +1,35 @@
+{
+  "name": "simple-loki-mcp",
+  "version": "0.0.7",
+  "description": "MCP server for querying Loki logs via logcli",
+  "homepage": "https://github.com/ghrud92/simple-loki-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ghrud92/simple-loki-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "simple-loki-mcp",
+    "ghrud92"
+  ],
+  "inputs": [
+    {
+      "id": "loki_addr",
+      "type": "promptString",
+      "description": "Environment variable for loki addr configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "simple-loki-mcp"
+    ],
+    "env": {
+      "LOKI_ADDR": "https://loki.sup.band"
+    }
+  }
+}

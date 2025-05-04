@@ -1,0 +1,26 @@
+{
+  "name": "surveymars-mcp",
+  "version": "1.0.0",
+  "description": "Official SurveyMars Model Context Protocol (MCP) server that enables interaction with SurveyMars APIs. This server allows MCP clients like Claude Desktop, Cursor, Windsurf, OpenAI Agents and others to create, distribute, and analyze surveys.",
+  "homepage": "https://github.com/surveymars/surveymars-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/surveymars/surveymars-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "surveymars-mcp",
+    "surveymars"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "surveymars-mcp",
+      "--account-id=your-account-id",
+      "--secret-key=your-secret-key"
+    ]
+  }
+}

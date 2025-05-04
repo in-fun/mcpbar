@@ -1,0 +1,26 @@
+{
+  "name": "hex-mcp",
+  "version": "1.0.0",
+  "description": "A MCP server to interact with Hex projects",
+  "homepage": "https://github.com/franccesco/hex-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/franccesco/hex-mcp"
+  },
+  "license": "AGPL-3.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "hex-mcp",
+    "franccesco"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uv",
+    "args": [
+      "run",
+      "hex-mcp",
+      "run"
+    ]
+  }
+}

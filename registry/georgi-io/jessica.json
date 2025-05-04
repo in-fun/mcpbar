@@ -1,0 +1,48 @@
+{
+  "name": "elevenlabs-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for jessica",
+  "homepage": "https://github.com/georgi-io/jessica",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/georgi-io/jessica"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "jessica",
+    "georgi-io"
+  ],
+  "inputs": [
+    {
+      "id": "elevenlabs_api_key",
+      "type": "promptString",
+      "description": "Environment variable for elevenlabs api key",
+      "password": true
+    },
+    {
+      "id": "vite_api_url",
+      "type": "promptString",
+      "description": "Environment variable for vite api url",
+      "password": false
+    },
+    {
+      "id": "vite_ws_url",
+      "type": "promptString",
+      "description": "Environment variable for vite ws url",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "elevenlabs-mcp"
+    ],
+    "env": {
+      "ELEVENLABS_API_KEY": "${input:elevenlabs_api_key}",
+      "VITE_API_URL": "${input:vite_api_url}",
+      "VITE_WS_URL": "${input:vite_ws_url}"
+    }
+  }
+}

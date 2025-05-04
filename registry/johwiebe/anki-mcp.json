@@ -1,0 +1,25 @@
+{
+  "name": "anki-mcp",
+  "version": "1.0.0",
+  "description": "Anki MCP server",
+  "homepage": "https://github.com/johwiebe/anki-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johwiebe/anki-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "anki-mcp",
+    "johwiebe"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "anki-mcp"
+    ],
+    "env": {}
+  }
+}

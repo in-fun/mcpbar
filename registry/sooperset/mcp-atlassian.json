@@ -1,0 +1,85 @@
+{
+  "name": "mcp-atlassian",
+  "version": "1.0.0",
+  "description": "MCP server for Atlassian tools (Confluence, Jira)",
+  "homepage": "https://github.com/sooperset/mcp-atlassian",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sooperset/mcp-atlassian"
+  },
+  "license": "MIT",
+  "keywords": [
+    "atlassian",
+    "confluence",
+    "jira",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "confluence_url",
+      "type": "promptString",
+      "description": "Environment variable for confluence url configuration",
+      "password": false
+    },
+    {
+      "id": "confluence_username",
+      "type": "promptString",
+      "description": "Environment variable for confluence username configuration",
+      "password": false
+    },
+    {
+      "id": "confluence_api_token",
+      "type": "promptString",
+      "description": "Environment variable for confluence api token authentication",
+      "password": true
+    },
+    {
+      "id": "jira_url",
+      "type": "promptString",
+      "description": "Environment variable for jira url configuration",
+      "password": false
+    },
+    {
+      "id": "jira_username",
+      "type": "promptString",
+      "description": "Environment variable for jira username configuration",
+      "password": false
+    },
+    {
+      "id": "jira_api_token",
+      "type": "promptString",
+      "description": "Environment variable for jira api token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "docker",
+    "args": [
+      "run",
+      "-i",
+      "--rm",
+      "-e",
+      "CONFLUENCE_URL",
+      "-e",
+      "CONFLUENCE_USERNAME",
+      "-e",
+      "CONFLUENCE_API_TOKEN",
+      "-e",
+      "JIRA_URL",
+      "-e",
+      "JIRA_USERNAME",
+      "-e",
+      "JIRA_API_TOKEN",
+      "ghcr.io/sooperset/mcp-atlassian:latest"
+    ],
+    "env": {
+      "CONFLUENCE_URL": "https://your-company.atlassian.net/wiki",
+      "CONFLUENCE_USERNAME": "your.email@company.com",
+      "CONFLUENCE_API_TOKEN": "your_confluence_api_token",
+      "JIRA_URL": "https://your-company.atlassian.net",
+      "JIRA_USERNAME": "your.email@company.com",
+      "JIRA_API_TOKEN": "your_jira_api_token"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "vite-react-typescript-starter",
+  "version": "0.0.0",
+  "description": "Created with StackBlitz ⚡️",
+  "homepage": "https://stackblitz.com/edit/sb1-ksznhupa",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/woaker/navigator"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "navigator",
+    "woaker"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "vite-react-typescript-starter"
+    ],
+    "env": {}
+  }
+}

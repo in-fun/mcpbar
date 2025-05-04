@@ -1,0 +1,29 @@
+{
+  "name": "zotero-mcp",
+  "version": "1.0.0",
+  "description": "MCP server to expose local zotero repository to MCP clients ",
+  "homepage": "https://github.com/swairshah/zotero-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/swairshah/zotero-mcp-server"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "zotero-mcp-server",
+    "swairshah"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "/Users/swairshah/work/research/zotero-mcp",
+      "run",
+      "python",
+      "-m",
+      "zotero_mcp.server"
+    ]
+  }
+}

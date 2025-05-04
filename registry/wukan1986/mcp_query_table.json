@@ -1,0 +1,34 @@
+{
+  "name": "mcp_query_table",
+  "version": "1.0.0",
+  "description": "query table from some websites, support MCP",
+  "homepage": "https://github.com/wukan1986/mcp_query_table",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wukan1986/mcp_query_table"
+  },
+  "license": "MIT",
+  "keywords": [
+    "eastmoney",
+    "playwright",
+    "tdx",
+    "iwencai",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "timeout": 300,
+    "command": "D:\\Users\\Kan\\miniconda3\\envs\\py312\\python.exe",
+    "args": [
+      "-m",
+      "mcp_query_table",
+      "--format",
+      "markdown",
+      "--endpoint",
+      "http://127.0.0.1:9222",
+      "--executable_path",
+      "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"
+    ]
+  }
+}

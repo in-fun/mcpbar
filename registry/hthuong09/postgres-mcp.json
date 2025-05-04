@@ -1,0 +1,70 @@
+{
+  "name": "@hthuong09/postgres-mcp",
+  "version": "0.1.3",
+  "description": "MCP server for interacting with PostgreSQL databases",
+  "homepage": "https://github.com/hthuong09/postgres-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hthuong09/postgres-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "postgres-mcp",
+    "hthuong09"
+  ],
+  "inputs": [
+    {
+      "id": "postgres_url",
+      "type": "promptString",
+      "description": "Environment variable for postgres url",
+      "password": false
+    },
+    {
+      "id": "postgres_host",
+      "type": "promptString",
+      "description": "Environment variable for postgres host",
+      "password": false
+    },
+    {
+      "id": "postgres_port",
+      "type": "promptString",
+      "description": "Environment variable for postgres port",
+      "password": false
+    },
+    {
+      "id": "postgres_db",
+      "type": "promptString",
+      "description": "Environment variable for postgres db",
+      "password": false
+    },
+    {
+      "id": "postgres_user",
+      "type": "promptString",
+      "description": "Environment variable for postgres user",
+      "password": false
+    },
+    {
+      "id": "postgres_pass",
+      "type": "promptString",
+      "description": "Environment variable for postgres pass",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@hthuong09/postgres-mcp"
+    ],
+    "env": {
+      "POSTGRES_URL": "${input:postgres_url}",
+      "POSTGRES_HOST": "${input:postgres_host}",
+      "POSTGRES_PORT": "${input:postgres_port}",
+      "POSTGRES_DB": "${input:postgres_db}",
+      "POSTGRES_USER": "${input:postgres_user}",
+      "POSTGRES_PASS": "${input:postgres_pass}"
+    }
+  }
+}

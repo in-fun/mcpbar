@@ -1,0 +1,33 @@
+{
+  "name": "yellhorn-mcp",
+  "version": "1.0.0",
+  "description": "Yellhorn offers MCP tools to publish detailed workplans as GitHub issues with entire-codebase reasoning and to review diffs against them",
+  "homepage": "https://github.com/msnidal/yellhorn-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/msnidal/yellhorn-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "yellhorn-mcp",
+    "msnidal"
+  ],
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "gemini-api-key",
+      "description": "Gemini API Key"
+    }
+  ],
+  "server": {
+    "type": "stdio",
+    "command": "/Users/msnidal/.pyenv/shims/yellhorn-mcp",
+    "args": [],
+    "env": {
+      "GEMINI_API_KEY": "${input:gemini-api-key}",
+      "REPO_PATH": "${workspaceFolder}"
+    }
+  }
+}

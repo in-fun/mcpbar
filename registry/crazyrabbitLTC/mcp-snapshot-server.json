@@ -1,0 +1,24 @@
+{
+  "name": "mcp-snapshot-server",
+  "version": "1.0.2",
+  "description": "A Model Context Protocol server boilerplate",
+  "homepage": "https://github.com/crazyrabbitLTC/mcp-snapshot-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crazyrabbitLTC/mcp-snapshot-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-snapshot-server",
+    "crazyrabbitltc"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "/ABSOLUTE/PATH/TO/snapshot-server/build/index.js"
+    ]
+  }
+}

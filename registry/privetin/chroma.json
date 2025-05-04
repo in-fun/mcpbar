@@ -1,0 +1,27 @@
+{
+  "name": "chroma",
+  "version": "1.0.0",
+  "description": "MCP server for Chroma",
+  "homepage": "https://github.com/privetin/chroma",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/privetin/chroma"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "chroma",
+    "privetin"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "C:/MCP/server/community/chroma",
+      "run",
+      "chroma"
+    ]
+  }
+}

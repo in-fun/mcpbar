@@ -1,0 +1,25 @@
+{
+  "name": "@egyleader/dart-mcp-server",
+  "version": "1.0.2",
+  "description": "MCP server for Dart SDK commands",
+  "homepage": "https://github.com/egyleader/dart-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/egyleader/dart-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "dart-mcp",
+    "egyleader"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@egyleader/dart-mcp-server"
+    ]
+  }
+}

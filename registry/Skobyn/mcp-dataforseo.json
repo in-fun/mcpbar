@@ -1,0 +1,42 @@
+{
+  "name": "@skobyn/mcp-dataforseo",
+  "version": "1.0.0",
+  "description": "Model Context Protocol server for DataForSEO API",
+  "homepage": "https://github.com/Skobyn/mcp-dataforseo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Skobyn/mcp-dataforseo"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-dataforseo",
+    "skobyn"
+  ],
+  "inputs": [
+    {
+      "id": "dataforseo_user",
+      "type": "promptString",
+      "description": "Environment variable for dataforseo user",
+      "password": false
+    },
+    {
+      "id": "dataforseo_pass",
+      "type": "promptString",
+      "description": "Environment variable for dataforseo pass",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@skobyn/mcp-dataforseo"
+    ],
+    "env": {
+      "DATAFORSEO_USER": "${input:dataforseo_user}",
+      "DATAFORSEO_PASS": "${input:dataforseo_pass}"
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "name": "mcp-server-starrocks",
+  "version": "1.0.0",
+  "description": "StarRocks MCP (Model Context Protocol) Server",
+  "homepage": "https://github.com/StarRocks/mcp-server-starrocks",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StarRocks/mcp-server-starrocks"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "agent",
+    "ai",
+    "database",
+    "mcp-server",
+    "model-context-protocol",
+    "starrocks",
+    "mcp"
+  ],
+  "inputs": [
+    {
+      "id": "starrocks_host",
+      "type": "promptString",
+      "description": "Environment variable for starrocks host configuration",
+      "password": false
+    },
+    {
+      "id": "starrocks_port",
+      "type": "promptString",
+      "description": "Environment variable for starrocks port configuration",
+      "password": false
+    },
+    {
+      "id": "starrocks_user",
+      "type": "promptString",
+      "description": "Environment variable for starrocks user configuration",
+      "password": false
+    },
+    {
+      "id": "starrocks_password",
+      "type": "promptString",
+      "description": "Environment variable for starrocks password authentication",
+      "password": false
+    },
+    {
+      "id": "starrocks_db",
+      "type": "promptString",
+      "description": "Environment variable for starrocks db configuration",
+      "password": false
+    },
+    {
+      "id": "starrocks_overview_limit",
+      "type": "promptString",
+      "description": "Environment variable for starrocks overview limit configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uv",
+    "args": [
+      "run",
+      "--with",
+      "mcp-server-starrocks",
+      "mcp-server-starrocks"
+    ],
+    "env": {
+      "STARROCKS_HOST": "default localhost",
+      "STARROCKS_PORT": "default 9030",
+      "STARROCKS_USER": "default root",
+      "STARROCKS_PASSWORD": "default empty",
+      "STARROCKS_DB": "default empty",
+      "STARROCKS_OVERVIEW_LIMIT": "default 20000"
+    }
+  }
+}

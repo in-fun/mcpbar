@@ -1,0 +1,43 @@
+{
+  "name": "mcp-server-sqlite-npx",
+  "version": "0.3.0",
+  "description": "MCP server for mcp-server-sqlite-npx",
+  "homepage": "https://github.com/johnnyoshika/mcp-server-sqlite-npx",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnnyoshika/mcp-server-sqlite-npx"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-sqlite-npx",
+    "johnnyoshika"
+  ],
+  "inputs": [
+    {
+      "id": "path",
+      "type": "promptString",
+      "description": "Environment variable for path configuration",
+      "password": false
+    },
+    {
+      "id": "node_path",
+      "type": "promptString",
+      "description": "Environment variable for node path configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "/absolute/path/to/npx",
+    "args": [
+      "-y",
+      "mcp-server-sqlite-npx",
+      "/absolute/path/to/database.db"
+    ],
+    "env": {
+      "PATH": "/absolute/path/to/executables",
+      "NODE_PATH": "/absolute/path/to/node_modules"
+    }
+  }
+}

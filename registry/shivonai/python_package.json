@@ -1,0 +1,41 @@
+{
+  "name": "shivonai",
+  "version": "1.0.0",
+  "description": "MCP server for python_package",
+  "homepage": "https://github.com/shivonai/python_package",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shivonai/python_package"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "python_package",
+    "shivonai"
+  ],
+  "inputs": [
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key",
+      "password": true
+    },
+    {
+      "id": "mcp_auth_token",
+      "type": "promptString",
+      "description": "Environment variable for mcp auth token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "shivonai"
+    ],
+    "env": {
+      "OPENAI_API_KEY": "${input:openai_api_key}",
+      "MCP_AUTH_TOKEN": "${input:mcp_auth_token}"
+    }
+  }
+}

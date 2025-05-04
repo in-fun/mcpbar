@@ -1,0 +1,34 @@
+{
+  "name": "mcp-sleep",
+  "version": "1.0.0",
+  "description": "Tool that allows you to wait a certain time to continue the execution of an agent.",
+  "homepage": "https://github.com/AgentsWorkingTogether/mcp-sleep",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AgentsWorkingTogether/mcp-sleep"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-sleep",
+    "agentsworkingtogether"
+  ],
+  "inputs": [
+    {
+      "id": "mcp_sleep_timeout",
+      "type": "promptString",
+      "description": "Environment variable for mcp sleep timeout configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-sleep"
+    ],
+    "env": {
+      "MCP_SLEEP_TIMEOUT": "<MCP_SLEEP_TIMEOUT>"
+    }
+  }
+}

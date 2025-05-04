@@ -1,0 +1,49 @@
+{
+  "name": "mercadolibre-mcp",
+  "version": "0.1.2",
+  "description": "A Model Context Protocol server for Mercado Libre",
+  "homepage": "https://github.com/lumile/mercadolibre-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lumile/mercadolibre-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mercadolibre-mcp",
+    "lumile"
+  ],
+  "inputs": [
+    {
+      "id": "client_id",
+      "type": "promptString",
+      "description": "Environment variable for client id configuration",
+      "password": false
+    },
+    {
+      "id": "client_secret",
+      "type": "promptString",
+      "description": "Environment variable for client secret authentication",
+      "password": true
+    },
+    {
+      "id": "site_id",
+      "type": "promptString",
+      "description": "Environment variable for site id configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mercadolibre-mcp"
+    ],
+    "env": {
+      "CLIENT_ID": "<YOUR_CLIENT_ID>",
+      "CLIENT_SECRET": "<YOUR_CLIENT_SECRET>",
+      "SITE_ID": "<YOUR_SITE_ID>"
+    }
+  }
+}

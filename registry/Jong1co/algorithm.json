@@ -1,0 +1,26 @@
+{
+  "name": "algorithm",
+  "version": "1.0.0",
+  "description": "### Level 2",
+  "homepage": "https://github.com/Jong1co/algorithm",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jong1co/algorithm"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "algorithm",
+    "jong1co"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "algorithm"
+    ],
+    "env": {}
+  }
+}

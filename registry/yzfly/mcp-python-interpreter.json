@@ -1,0 +1,32 @@
+{
+  "name": "mcp-python-interpreter",
+  "version": "1.0.0",
+  "description": "MCP Python Interpreter: run python code. Python-mcp-server, mcp-python-server, Code Executor",
+  "homepage": "https://github.com/yzfly/mcp-python-interpreter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yzfly/mcp-python-interpreter"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "claude",
+    "claude-mcp",
+    "code",
+    "mcp",
+    "mcp-client",
+    "mcp-server",
+    "python",
+    "qwen",
+    "mcp-python-server",
+    "python-mcp-server",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-python-interpreter"
+    ],
+    "env": {}
+  }
+}

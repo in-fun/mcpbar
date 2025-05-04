@@ -1,0 +1,48 @@
+{
+  "name": "playwright-server",
+  "version": "1.0.0",
+  "description": "MCP server for playwright-plus-python-mcp",
+  "homepage": "https://github.com/williamvd4/playwright-plus-python-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/williamvd4/playwright-plus-python-mcp"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "playwright-plus-python-mcp",
+    "williamvd4"
+  ],
+  "inputs": [
+    {
+      "id": "uv_publish_token",
+      "type": "promptString",
+      "description": "Environment variable for uv publish token",
+      "password": true
+    },
+    {
+      "id": "uv_publish_user",
+      "type": "promptString",
+      "description": "Environment variable for uv publish user",
+      "password": false
+    },
+    {
+      "id": "uv_publish_pass",
+      "type": "promptString",
+      "description": "Environment variable for uv publish pass",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "playwright-server"
+    ],
+    "env": {
+      "UV_PUBLISH_TOKEN": "${input:uv_publish_token}",
+      "UV_PUBLISH_USER": "${input:uv_publish_user}",
+      "UV_PUBLISH_PASS": "${input:uv_publish_pass}"
+    }
+  }
+}

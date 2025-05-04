@@ -1,0 +1,44 @@
+{
+  "name": "perplexity-advanced-mcp",
+  "version": "1.0.0",
+  "description": "Advanced MCP tool for Perplexity and OpenRouter API integration.",
+  "homepage": "https://github.com/code-yeongyu/perplexity-advanced-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/code-yeongyu/perplexity-advanced-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "agent",
+    "agentic-ai",
+    "cursor",
+    "llm",
+    "mcp",
+    "perplexity",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "openrouter_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openrouter api key",
+      "password": true
+    },
+    {
+      "id": "perplexity_api_key",
+      "type": "promptString",
+      "description": "Environment variable for perplexity api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "perplexity-advanced-mcp"
+    ],
+    "env": {
+      "OPENROUTER_API_KEY": "${input:openrouter_api_key}",
+      "PERPLEXITY_API_KEY": "${input:perplexity_api_key}"
+    }
+  }
+}

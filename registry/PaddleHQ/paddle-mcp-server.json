@@ -1,0 +1,27 @@
+{
+  "name": "@paddle/paddle-mcp",
+  "version": "0.1.2",
+  "description": "MCP Server for Paddle Billing",
+  "homepage": "https://developer.paddle.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PaddleHQ/paddle-mcp-server"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "llm",
+    "mcp",
+    "typescript",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@paddle/paddle-mcp",
+      "--api-key=PADDLE_API_KEY",
+      "--environment=(sandbox|production)"
+    ]
+  }
+}

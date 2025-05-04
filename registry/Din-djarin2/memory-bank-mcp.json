@@ -1,0 +1,26 @@
+{
+  "name": "@allpepper/memory-bank-mcp",
+  "version": "0.2.1",
+  "description": "MCP server for remote management of project memory banks",
+  "homepage": "https://www.npmjs.com/package/@allpepper/memory-bank-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Din-djarin2/memory-bank-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "memory-bank-mcp",
+    "din-djarin2"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@allpepper/memory-bank-mcp"
+    ],
+    "env": {}
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@zephyr-mcp/gitlab",
+  "version": "0.2.0",
+  "description": "基于 Model Context Protocol (MCP) 框架构建的 GitLab 集成服务器，提供与 GitLab 实例的强大集成能力",
+  "homepage": "https://github.com/ZephyrDeng/mcp-server-gitlab",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZephyrDeng/mcp-server-gitlab"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-gitlab",
+    "zephyrdeng"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@zephyr-mcp/gitlab"
+    ]
+  }
+}

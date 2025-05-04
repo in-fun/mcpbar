@@ -1,0 +1,31 @@
+{
+  "name": "mcp-server-tree-sitter",
+  "version": "1.0.0",
+  "description": "MCP Server for Tree-sitter",
+  "homepage": "https://github.com/wrale/mcp-server-tree-sitter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wrale/mcp-server-tree-sitter"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai-assistant",
+    "ast",
+    "claude",
+    "claude-ai",
+    "claude-desktop",
+    "code-analysis",
+    "code-search",
+    "coding-assistant",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "python",
+    "args": [
+      "-m",
+      "mcp_server_tree_sitter.server"
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "notion-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP Server for Notion",
+  "homepage": "https://github.com/arre-ankit/notion-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arre-ankit/notion-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "notion-mcp-server",
+    "arre-ankit"
+  ],
+  "inputs": [
+    {
+      "id": "notion_api_token",
+      "type": "promptString",
+      "description": "Environment variable for notion api token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "notion-mcp-server"
+    ],
+    "env": {
+      "NOTION_API_TOKEN": "${input:notion_api_token}"
+    }
+  }
+}

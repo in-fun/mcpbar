@@ -1,0 +1,26 @@
+{
+  "name": "xx",
+  "version": "0.1.0",
+  "description": "大模型代理策略：支持 OpenAI 代理、nginx方式、node方式",
+  "homepage": "https://proxy.agicto.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhuzhu0221/agi-proxy"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "agi-proxy",
+    "zhuzhu0221"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "xx"
+    ],
+    "env": {}
+  }
+}

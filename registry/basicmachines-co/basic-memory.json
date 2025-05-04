@@ -1,0 +1,30 @@
+{
+  "name": "basic-memory",
+  "version": "1.0.0",
+  "description": "Basic Memory is a knowledge management system that allows you to build a persistent semantic graph from conversations with AI assistants, stored in standard Markdown files on your computer. Integrates directly with Obsidan.md",
+  "homepage": "https://basicmachines.co",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/basicmachines-co/basic-memory"
+  },
+  "license": "AGPL-3.0",
+  "keywords": [
+    "ai",
+    "claude",
+    "llm",
+    "mcp",
+    "open-source",
+    "python",
+    "obsidian",
+    "obsidian-md",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "basic-memory",
+      "mcp"
+    ]
+  }
+}

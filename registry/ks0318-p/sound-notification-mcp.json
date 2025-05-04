@@ -1,0 +1,26 @@
+{
+  "name": "sound-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for sound-notification-mcp",
+  "homepage": "https://github.com/ks0318-p/sound-notification-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ks0318-p/sound-notification-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "sound-notification-mcp",
+    "ks0318-p"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "sound-mcp"
+    ],
+    "env": {}
+  }
+}

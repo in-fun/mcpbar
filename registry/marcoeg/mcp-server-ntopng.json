@@ -1,0 +1,97 @@
+{
+  "name": "mcp-ntopng",
+  "version": "1.0.0",
+  "description": "ntopng Model Context Protocol Server",
+  "homepage": "https://github.com/marcoeg/mcp-server-ntopng",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcoeg/mcp-server-ntopng"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-ntopng",
+    "marcoeg"
+  ],
+  "inputs": [
+    {
+      "id": "ntopng_host",
+      "type": "promptString",
+      "description": "Environment variable for ntopng host configuration",
+      "password": false
+    },
+    {
+      "id": "ntopng_dbport",
+      "type": "promptString",
+      "description": "Environment variable for ntopng dbport configuration",
+      "password": false
+    },
+    {
+      "id": "ntopng_dbuser",
+      "type": "promptString",
+      "description": "Environment variable for ntopng dbuser configuration",
+      "password": false
+    },
+    {
+      "id": "ntopng_dbpassword",
+      "type": "promptString",
+      "description": "Environment variable for ntopng dbpassword configuration",
+      "password": false
+    },
+    {
+      "id": "ntopng_secure",
+      "type": "promptString",
+      "description": "Environment variable for ntopng secure configuration",
+      "password": false
+    },
+    {
+      "id": "ntopng_verify",
+      "type": "promptString",
+      "description": "Environment variable for ntopng verify configuration",
+      "password": false
+    },
+    {
+      "id": "ntopng_connect_timeout",
+      "type": "promptString",
+      "description": "Environment variable for ntopng connect timeout configuration",
+      "password": false
+    },
+    {
+      "id": "ntopng_send_receive_timeout",
+      "type": "promptString",
+      "description": "Environment variable for ntopng send receive timeout configuration",
+      "password": false
+    },
+    {
+      "id": "select_query_timeout_secs",
+      "type": "promptString",
+      "description": "Environment variable for select query timeout secs configuration",
+      "password": false
+    },
+    {
+      "id": "ntopng_api_key",
+      "type": "promptString",
+      "description": "Environment variable for ntopng api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "/Users/marco/Development/claude/mcp-server-ntopng/.venv/bin/python",
+    "args": [
+      "/Users/marco/Development/claude/mcp-server-ntopng/run_mcp_ntopng.py"
+    ],
+    "env": {
+      "NTOPNG_HOST": "marcoeg-nod004.ntoplink.com",
+      "NTOPNG_DBPORT": "9000",
+      "NTOPNG_DBUSER": "default",
+      "NTOPNG_DBPASSWORD": "",
+      "NTOPNG_SECURE": "false",
+      "NTOPNG_VERIFY": "false",
+      "NTOPNG_CONNECT_TIMEOUT": "30",
+      "NTOPNG_SEND_RECEIVE_TIMEOUT": "300",
+      "SELECT_QUERY_TIMEOUT_SECS": "30",
+      "NTOPNG_API_KEY": "NTOPNG_TOKEN"
+    }
+  }
+}

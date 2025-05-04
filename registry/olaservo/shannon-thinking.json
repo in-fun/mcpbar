@@ -1,0 +1,25 @@
+{
+  "name": "server-shannon-thinking",
+  "version": "0.1.0",
+  "description": "MCP server for applying a Claude Shannon-inspired problem-solving pattern",
+  "homepage": "https://github.com/olaservo/shannon-thinking",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/olaservo/shannon-thinking"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "shannon-thinking",
+    "olaservo"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "server-shannon-thinking@latest"
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "name": "norman-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for norman-mcp-server",
+  "homepage": "https://github.com/norman-finance/norman-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/norman-finance/norman-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "norman-mcp-server",
+    "norman-finance"
+  ],
+  "inputs": [
+    {
+      "id": "norman_email",
+      "type": "promptString",
+      "description": "Environment variable for norman email configuration",
+      "password": false
+    },
+    {
+      "id": "norman_password",
+      "type": "promptString",
+      "description": "Environment variable for norman password authentication",
+      "password": false
+    },
+    {
+      "id": "norman_environment",
+      "type": "promptString",
+      "description": "Environment variable for norman environment configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "<home_path>/.local/bin/uvx",
+    "args": [
+      "--from",
+      "norman-mcp-server@latest",
+      "norman-mcp"
+    ],
+    "env": {
+      "NORMAN_EMAIL": "your-email@example.com",
+      "NORMAN_PASSWORD": "your-password",
+      "NORMAN_ENVIRONMENT": "production"
+    }
+  }
+}

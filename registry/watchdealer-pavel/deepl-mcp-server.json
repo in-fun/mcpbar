@@ -1,0 +1,46 @@
+{
+  "name": "deepl-mcp-server",
+  "version": "0.1.0",
+  "description": "This server implements the Model Context Protocol (MCP) to provide high-quality text translation services by acting as an interface to the DeepL API.",
+  "homepage": "https://github.com/watchdealer-pavel/deepl-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/watchdealer-pavel/deepl-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "deepl",
+    "google-translate",
+    "mcp",
+    "mcp-server",
+    "translation",
+    "translation-api",
+    "translations",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "deepl_api_key",
+      "type": "promptString",
+      "description": "Environment variable for deepl api key",
+      "password": true
+    },
+    {
+      "id": "your_deepl_api_key",
+      "type": "promptString",
+      "description": "Environment variable for your deepl api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "deepl-mcp-server"
+    ],
+    "env": {
+      "DEEPL_API_KEY": "${input:deepl_api_key}",
+      "YOUR_DEEPL_API_KEY": "${input:your_deepl_api_key}"
+    }
+  }
+}

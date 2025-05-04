@@ -1,0 +1,41 @@
+{
+  "name": "portone-mcp-server",
+  "version": "1.0.0",
+  "description": "PortOne MCP Server for Developers",
+  "homepage": "https://github.com/portone-io/mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/portone-io/mcp-server"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server",
+    "portone-io"
+  ],
+  "inputs": [
+    {
+      "id": "developers_port",
+      "type": "promptString",
+      "description": "Environment variable for developers port",
+      "password": false
+    },
+    {
+      "id": "help_port",
+      "type": "promptString",
+      "description": "Environment variable for help port",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "portone-mcp-server"
+    ],
+    "env": {
+      "DEVELOPERS_PORT": "${input:developers_port}",
+      "HELP_PORT": "${input:help_port}"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "@surajadsul02/mcp-server-salesforce",
+  "version": "0.0.2",
+  "description": "A Salesforce connector MCP Server.",
+  "homepage": "https://github.com/SurajAdsul/mcp-server-salesforce",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SurajAdsul/mcp-server-salesforce"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "salesforce",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "env",
+    "args": [
+      "SALESFORCE_USERNAME=your.actual.email@example.com",
+      "SALESFORCE_PASSWORD=YourActualPassword123",
+      "SALESFORCE_TOKEN=YourActualSecurityToken123",
+      "SALESFORCE_INSTANCE_URL=https://login.salesforce.com",
+      "npx",
+      "-y",
+      "@surajadsul02/mcp-server-salesforce"
+    ]
+  }
+}

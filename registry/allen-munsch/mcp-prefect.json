@@ -1,0 +1,36 @@
+{
+  "name": "mcp-prefect",
+  "version": "1.0.0",
+  "description": "https://pypi.org/project/mcp-prefect/0.1.0/",
+  "homepage": "https://github.com/allen-munsch/mcp-prefect",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/allen-munsch/mcp-prefect"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-prefect",
+    "allen-munsch"
+  ],
+  "inputs": [
+    {
+      "id": "pythonpath",
+      "type": "promptString",
+      "description": "Environment variable for pythonpath configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "mcp-prefect",
+    "args": [
+      "--transport",
+      "sse"
+    ],
+    "env": {
+      "PYTHONPATH": "/path/to/your/project/directory"
+    },
+    "cwd": "/path/to/your/project/directory"
+  }
+}

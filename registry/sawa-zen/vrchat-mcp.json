@@ -1,0 +1,43 @@
+{
+  "name": "vrchat-mcp",
+  "version": "0.15.0",
+  "description": "VRChat MCP Server - Access VRChat API through Model Context Protocol",
+  "homepage": "https://github.com/sawa-zen/vrchat-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sawa-zen/vrchat-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "claude",
+    "cline",
+    "mcp",
+    "vrchat",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "vrchat_username",
+      "type": "promptString",
+      "description": "Environment variable for vrchat username configuration",
+      "password": false
+    },
+    {
+      "id": "vrchat_auth_token",
+      "type": "promptString",
+      "description": "Environment variable for vrchat auth token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "vrchat-mcp"
+    ],
+    "env": {
+      "VRCHAT_USERNAME": "your-username",
+      "VRCHAT_AUTH_TOKEN": "your-auth-token"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "mcp",
+  "version": "1.0.0",
+  "description": "The official Python SDK for Model Context Protocol servers and clients",
+  "homepage": "https://modelcontextprotocol.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zxsimple/mcp-sample/tree/main/examples/servers/simple-tool"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-sample",
+    "zxsimple"
+  ],
+  "inputs": [
+    {
+      "id": "api_key",
+      "type": "promptString",
+      "description": "Environment variable for api key",
+      "password": true
+    },
+    {
+      "id": "db_url",
+      "type": "promptString",
+      "description": "Environment variable for db url",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp"
+    ],
+    "env": {
+      "API_KEY": "${input:api_key}",
+      "DB_URL": "${input:db_url}"
+    }
+  }
+}

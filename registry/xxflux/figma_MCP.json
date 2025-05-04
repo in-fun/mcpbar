@@ -1,0 +1,26 @@
+{
+  "name": "figma-mcp",
+  "version": "1.0.0",
+  "description": "Figma MCP Root Project",
+  "homepage": "https://github.com/xxflux/figma_MCP",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xxflux/figma_MCP"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "figma_mcp",
+    "xxflux"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "figma-mcp"
+    ],
+    "env": {}
+  }
+}

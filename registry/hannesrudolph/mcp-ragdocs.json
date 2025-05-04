@@ -1,0 +1,51 @@
+{
+  "name": "@hannesrudolph/mcp-ragdocs",
+  "version": "1.1.0",
+  "description": "An MCP server for semantic documentation search and retrieval using vector databases to augment LLM capabilities.",
+  "homepage": "https://github.com/hannesrudolph/mcp-ragdocs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hannesrudolph/mcp-ragdocs"
+  },
+  "license": "MIT",
+  "keywords": [
+    "llm",
+    "mcp",
+    "mcp-servers",
+    "rag",
+    "vector-database",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key authentication",
+      "password": true
+    },
+    {
+      "id": "qdrant_url",
+      "type": "promptString",
+      "description": "Environment variable for qdrant url configuration",
+      "password": false
+    },
+    {
+      "id": "qdrant_api_key",
+      "type": "promptString",
+      "description": "Environment variable for qdrant api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@hannesrudolph/mcp-ragdocs"
+    ],
+    "env": {
+      "OPENAI_API_KEY": "",
+      "QDRANT_URL": "",
+      "QDRANT_API_KEY": ""
+    }
+  }
+}

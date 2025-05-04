@@ -1,0 +1,41 @@
+{
+  "name": "comfy-mcp-server",
+  "version": "1.0.0",
+  "description": "A server using FastMCP framework to generate images based on prompts via a remote Comfy server.",
+  "homepage": "https://github.com/lalanikarim/comfy-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lalanikarim/comfy-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "comfyui",
+    "mcp-server",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "comfy_url",
+      "type": "promptString",
+      "description": "Environment variable for comfy url",
+      "password": false
+    },
+    {
+      "id": "ollama_api",
+      "type": "promptString",
+      "description": "Environment variable for ollama api",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "comfy-mcp-server"
+    ],
+    "env": {
+      "COMFY_URL": "${input:comfy_url}",
+      "OLLAMA_API": "${input:ollama_api}"
+    }
+  }
+}

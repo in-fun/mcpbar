@@ -1,0 +1,26 @@
+{
+  "name": "remix-app-template",
+  "version": "1.0.0",
+  "description": "MCP server for marbiano.dev",
+  "homepage": "https://marbiano.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marbiano/marbiano.dev"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "marbiano.dev",
+    "marbiano"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "remix-app-template"
+    ],
+    "env": {}
+  }
+}

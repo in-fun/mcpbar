@@ -1,0 +1,42 @@
+{
+  "name": "brightsy-mcp",
+  "version": "1.0.2",
+  "description": "MCP server that connects to an OpenAI-compatible AI agent",
+  "homepage": "https://github.com/mattlevine/brightsy-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mattlevine/brightsy-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "brightsy-mcp",
+    "mattlevine"
+  ],
+  "inputs": [
+    {
+      "id": "brightsy_api_key",
+      "type": "promptString",
+      "description": "Environment variable for brightsy api key",
+      "password": true
+    },
+    {
+      "id": "api_key",
+      "type": "promptString",
+      "description": "Environment variable for api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "brightsy-mcp"
+    ],
+    "env": {
+      "BRIGHTSY_API_KEY": "${input:brightsy_api_key}",
+      "API_KEY": "${input:api_key}"
+    }
+  }
+}

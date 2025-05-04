@@ -1,0 +1,42 @@
+{
+  "name": "@integration-app/mcp-server",
+  "version": "1.0.3",
+  "description": "Model Context Protocol server for Integration.app",
+  "homepage": "https://github.com/integration-app/mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/integration-app/mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server",
+    "integration-app"
+  ],
+  "inputs": [
+    {
+      "id": "integration_app_token",
+      "type": "promptString",
+      "description": "Environment variable for integration app token authentication",
+      "password": true
+    },
+    {
+      "id": "integration_key",
+      "type": "promptString",
+      "description": "Environment variable for integration key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@integration-app/mcp-server"
+    ],
+    "env": {
+      "INTEGRATION_APP_TOKEN": "<your-integration-app-token>",
+      "INTEGRATION_KEY": "hubspot"
+    }
+  }
+}

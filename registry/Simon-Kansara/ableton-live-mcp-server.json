@@ -1,0 +1,25 @@
+{
+  "name": "ableton-live-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP Server implementation for Ableton Live OSC control",
+  "homepage": "https://github.com/Simon-Kansara/ableton-live-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Simon-Kansara/ableton-live-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ableton-live-mcp-server",
+    "simon-kansara"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "ableton-live-mcp-server"
+    ],
+    "env": {}
+  }
+}

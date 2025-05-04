@@ -1,0 +1,65 @@
+{
+  "name": "mssql_mcp_server",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol (MCP) server facilitating secure interactions with MSSQL databases.",
+  "homepage": "https://github.com/JexinSam/mssql_mcp_server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JexinSam/mssql_mcp_server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mssql_mcp_server",
+    "jexinsam"
+  ],
+  "inputs": [
+    {
+      "id": "mssql_driver",
+      "type": "promptString",
+      "description": "Environment variable for mssql driver configuration",
+      "password": false
+    },
+    {
+      "id": "mssql_host",
+      "type": "promptString",
+      "description": "Environment variable for mssql host configuration",
+      "password": false
+    },
+    {
+      "id": "mssql_user",
+      "type": "promptString",
+      "description": "Environment variable for mssql user configuration",
+      "password": false
+    },
+    {
+      "id": "mssql_password",
+      "type": "promptString",
+      "description": "Environment variable for mssql password authentication",
+      "password": false
+    },
+    {
+      "id": "mssql_database",
+      "type": "promptString",
+      "description": "Environment variable for mssql database configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "path/to/mssql_mcp_server",
+      "run",
+      "mssql_mcp_server"
+    ],
+    "env": {
+      "MSSQL_DRIVER": "mssql_driver",
+      "MSSQL_HOST": "localhost",
+      "MSSQL_USER": "your_username",
+      "MSSQL_PASSWORD": "your_password",
+      "MSSQL_DATABASE": "your_database"
+    }
+  }
+}

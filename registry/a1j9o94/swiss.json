@@ -1,0 +1,25 @@
+{
+  "name": "swiss",
+  "version": "1.0.0",
+  "description": "An MCP tool that gets things done for you",
+  "homepage": "https://github.com/a1j9o94/swiss",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/a1j9o94/swiss"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "swiss",
+    "a1j9o94"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "swiss"
+    ],
+    "env": {}
+  }
+}

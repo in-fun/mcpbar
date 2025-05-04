@@ -1,0 +1,46 @@
+{
+  "name": "mcp-server",
+  "version": "1.0.0",
+  "description": "learn to make some mcp servers",
+  "homepage": "https://yigmmk.github.io/mcp-server/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yiGmMk/mcp-server"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server",
+    "yigmmk"
+  ],
+  "inputs": [
+    {
+      "id": "jina_api_key",
+      "type": "promptString",
+      "description": "Environment variable for jina api key authentication",
+      "password": true
+    },
+    {
+      "id": "pythonioencoding",
+      "type": "promptString",
+      "description": "Environment variable for pythonioencoding configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "/path/to/your/mcp-server",
+      "run",
+      "main.py"
+    ],
+    "env": {
+      "JINA_API_KEY": "jina_api_key,请从https://jina.ai/reader获取",
+      "PYTHONIOENCODING": "utf-8"
+    },
+    "disabled": false,
+    "autoApprove": []
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "freshdesk-mcp",
+  "version": "1.0.0",
+  "description": "MCP server created for Freshdesk, allowing AI models to interact with Freshdesk modules",
+  "homepage": "https://github.com/effytech/freshdesk_mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/effytech/freshdesk_mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "freshdesk_mcp",
+    "effytech"
+  ],
+  "inputs": [
+    {
+      "id": "freshdesk_api_key",
+      "type": "promptString",
+      "description": "Environment variable for freshdesk api key",
+      "password": true
+    },
+    {
+      "id": "your_freshdesk_api_key",
+      "type": "promptString",
+      "description": "Environment variable for your freshdesk api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "freshdesk-mcp"
+    ],
+    "env": {
+      "FRESHDESK_API_KEY": "${input:freshdesk_api_key}",
+      "YOUR_FRESHDESK_API_KEY": "${input:your_freshdesk_api_key}"
+    }
+  }
+}

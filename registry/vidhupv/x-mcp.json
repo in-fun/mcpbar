@@ -1,0 +1,58 @@
+{
+  "name": "x-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for x-mcp",
+  "homepage": "https://github.com/vidhupv/x-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vidhupv/x-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "x-mcp",
+    "vidhupv"
+  ],
+  "inputs": [
+    {
+      "id": "twitter_api_key",
+      "type": "promptString",
+      "description": "Environment variable for twitter api key authentication",
+      "password": true
+    },
+    {
+      "id": "twitter_api_secret",
+      "type": "promptString",
+      "description": "Environment variable for twitter api secret authentication",
+      "password": true
+    },
+    {
+      "id": "twitter_access_token",
+      "type": "promptString",
+      "description": "Environment variable for twitter access token authentication",
+      "password": true
+    },
+    {
+      "id": "twitter_access_token_secret",
+      "type": "promptString",
+      "description": "Environment variable for twitter access token secret authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "/path/to/x-mcp",
+      "run",
+      "x-mcp"
+    ],
+    "env": {
+      "TWITTER_API_KEY": "your_api_key",
+      "TWITTER_API_SECRET": "your_api_secret",
+      "TWITTER_ACCESS_TOKEN": "your_access_token",
+      "TWITTER_ACCESS_TOKEN_SECRET": "your_access_token_secret"
+    }
+  }
+}

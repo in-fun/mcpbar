@@ -1,0 +1,26 @@
+{
+  "name": "my-next-app",
+  "version": "0.1.0",
+  "description": " Chinese Medicine Health Program.",
+  "homepage": "https://my-next-app-eta-two.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/colechengame/TCM_FBT"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "tcm_fbt",
+    "colechengame"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "my-next-app"
+    ],
+    "env": {}
+  }
+}

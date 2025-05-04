@@ -1,0 +1,24 @@
+{
+  "name": "@tkoba1974/mcp-kroki",
+  "version": "1.1.0",
+  "description": "A Model Context Protocol server for converting Mermaid diagrams to SVG using Kroki.io",
+  "homepage": "https://github.com/tkoba1974/mcp-kroki",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tkoba1974/mcp-kroki"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-kroki",
+    "tkoba1974"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/mcp-kroki/build/index.js"
+    ]
+  }
+}

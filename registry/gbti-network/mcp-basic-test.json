@@ -1,0 +1,31 @@
+{
+  "name": "test-mcp-server",
+  "version": "1.0.0",
+  "description": "A custom MCP server that provides super secret combinations",
+  "homepage": "https://github.com/gbti-network/mcp-basic-test",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gbti-network/mcp-basic-test"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "boilerplate",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "node-js"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "--yes",
+      "node",
+      "<path-to-project>/index.js"
+    ],
+    "disabled": false,
+    "autoApprove": [
+      "getSecretPassphrase"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "whereami-mcp",
+  "version": "1.0.0",
+  "description": "A lightweight mcp server that tells you exactly where you are.",
+  "homepage": "https://github.com/kukapay/whereami-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kukapay/whereami-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "whereami-mcp",
+    "kukapay"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "whereami-mcp"
+    ],
+    "env": {}
+  }
+}

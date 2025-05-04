@@ -1,0 +1,42 @@
+{
+  "name": "agentic_security",
+  "version": "1.0.0",
+  "description": "Agentic LLM Vulnerability Scanner / AI red teaming kit 🧪",
+  "homepage": "https://agentic-security.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/msoedov/agentic_security/tree/main/\tagentic_security/mcp"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "llm-guardrails",
+    "llm-security",
+    "llm-jailbreaks",
+    "llm-scanner",
+    "llm-vulnerabilities",
+    "llm-fuzzer",
+    "llm-fuzzing",
+    "llm-fuzzer-aggregator",
+    "ai-red-team",
+    "llm-evaluation",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "groq_api_key",
+      "type": "promptString",
+      "description": "Environment variable for groq api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "agentic_security"
+    ],
+    "env": {
+      "GROQ_API_KEY": "${input:groq_api_key}"
+    }
+  }
+}

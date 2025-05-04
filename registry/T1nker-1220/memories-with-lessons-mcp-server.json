@@ -1,0 +1,29 @@
+{
+  "name": "@modelcontextprotocol/server-memory",
+  "version": "0.6.3",
+  "description": "MCP server for enabling memory for Claude through a knowledge graph",
+  "homepage": "https://github.com/T1nker-1220/memories-with-lessons-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/T1nker-1220/memories-with-lessons-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "memories-with-lessons-mcp-server",
+    "t1nker-1220"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "docker",
+    "args": [
+      "run",
+      "-i",
+      "-v",
+      "claude-memory:/app/dist",
+      "--rm",
+      "mcp/memory"
+    ]
+  }
+}

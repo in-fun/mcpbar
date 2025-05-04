@@ -1,0 +1,35 @@
+{
+  "name": "firecrawl-mcp",
+  "version": "1.7.2",
+  "description": "MCP server for FireCrawl web scraping integration. Supports both cloud and self-hosted instances. Features include web scraping, batch processing, structured data extraction, and LLM-powered content analysis.",
+  "homepage": "https://firecrawl.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Yu-Xiao-Sheng/firecrawl-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "firecrawl-mcp-server",
+    "yu-xiao-sheng"
+  ],
+  "inputs": [
+    {
+      "id": "firecrawl_api_key",
+      "type": "promptString",
+      "description": "Environment variable for firecrawl api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "firecrawl-mcp"
+    ],
+    "env": {
+      "FIRECRAWL_API_KEY": "YOUR_API_KEY_HERE"
+    }
+  }
+}

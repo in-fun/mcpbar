@@ -1,0 +1,66 @@
+{
+  "name": "@delorenj/mcp-qdrant-memory",
+  "version": "0.2.4",
+  "description": "MCP server for enabling the named memory graphs to be persisted to a qdrant instance.",
+  "homepage": "https://github.com/tjwells47/mcp-qdrant-memory",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tjwells47/mcp-qdrant-memory"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-qdrant-memory",
+    "tjwells47"
+  ],
+  "inputs": [
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key authentication",
+      "password": true
+    },
+    {
+      "id": "qdrant_api_key",
+      "type": "promptString",
+      "description": "Environment variable for qdrant api key authentication",
+      "password": true
+    },
+    {
+      "id": "qdrant_url",
+      "type": "promptString",
+      "description": "Environment variable for qdrant url configuration",
+      "password": false
+    },
+    {
+      "id": "qdrant_collection_name",
+      "type": "promptString",
+      "description": "Environment variable for qdrant collection name configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "/bin/zsh",
+    "args": [
+      "-c",
+      "cd /path/to/server && node dist/index.js"
+    ],
+    "env": {
+      "OPENAI_API_KEY": "your-openai-api-key",
+      "QDRANT_API_KEY": "your-qdrant-api-key",
+      "QDRANT_URL": "http://your-qdrant-server:6333",
+      "QDRANT_COLLECTION_NAME": "your-collection-name"
+    },
+    "alwaysAllow": [
+      "create_entities",
+      "create_relations",
+      "add_observations",
+      "delete_entities",
+      "delete_observations",
+      "delete_relations",
+      "read_graph",
+      "search_similar"
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "@apify/actors-mcp-server",
+  "version": "0.1.30",
+  "description": "Model Context Protocol Server for Apify",
+  "homepage": "https://apify.com/apify/actors-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apify/actors-mcp-server"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "actors-mcp-server",
+    "apify"
+  ],
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "apify_token",
+      "description": "Apify API Token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@apify/actors-mcp-server"
+    ],
+    "env": {
+      "APIFY_TOKEN": "${input:apify_token}"
+    }
+  }
+}

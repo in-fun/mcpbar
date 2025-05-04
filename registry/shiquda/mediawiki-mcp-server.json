@@ -1,0 +1,38 @@
+{
+  "name": "mediawiki-mcp-server",
+  "version": "1.0.0",
+  "description": "A MCP server that allows you to search and retrieve content on any wiki site using MediaWiki with LLMs 🤖 wikipedia.org, fandom.com, wiki.gg and more sites using Mediawiki are supported!",
+  "homepage": "https://github.com/shiquda/mediawiki-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shiquda/mediawiki-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "mediawiki",
+    "wiki",
+    "wikipedia",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "http_proxy",
+      "type": "promptString",
+      "description": "Environment variable for http proxy configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mediawiki-mcp-server",
+      "--base-url",
+      "https://example.com/"
+    ],
+    "env": {
+      "HTTP_PROXY": "http://example.com:port"
+    }
+  }
+}

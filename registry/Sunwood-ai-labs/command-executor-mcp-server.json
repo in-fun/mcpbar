@@ -1,0 +1,21 @@
+{
+  "name": "command-executor",
+  "version": "0.1.0",
+  "description": "A Model Context Protocol server for executing pre-approved commands",
+  "homepage": "https://github.com/Sunwood-ai-labs/command-executor-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sunwood-ai-labs/command-executor-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "command-executor-mcp-server",
+    "sunwood-ai-labs"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "/path/to/command-executor/build/index.js"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "@gannonh/firebase-mcp",
+  "version": "1.3.4",
+  "description": "Firebase MCP server for interacting with Firebase services through the Model Context Protocol",
+  "homepage": "https://github.com/gannonh/firebase-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gannonh/firebase-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "firebase",
+    "modelcontextprotocol",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "service_account_key",
+      "type": "promptString",
+      "description": "Environment variable for service account key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@gannonh/firebase-mcp"
+    ],
+    "env": {
+      "SERVICE_ACCOUNT_KEY": "${input:service_account_key}"
+    }
+  }
+}

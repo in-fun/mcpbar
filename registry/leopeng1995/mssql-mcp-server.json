@@ -1,0 +1,47 @@
+{
+  "name": "mssql-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for mssql-mcp-server",
+  "homepage": "https://github.com/leopeng1995/mssql-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leopeng1995/mssql-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "mssql_port",
+      "type": "promptString",
+      "description": "Environment variable for mssql port",
+      "password": false
+    },
+    {
+      "id": "mssql_user",
+      "type": "promptString",
+      "description": "Environment variable for mssql user",
+      "password": false
+    },
+    {
+      "id": "mssql_pass",
+      "type": "promptString",
+      "description": "Environment variable for mssql pass",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mssql-mcp-server"
+    ],
+    "env": {
+      "MSSQL_PORT": "${input:mssql_port}",
+      "MSSQL_USER": "${input:mssql_user}",
+      "MSSQL_PASS": "${input:mssql_pass}"
+    }
+  }
+}

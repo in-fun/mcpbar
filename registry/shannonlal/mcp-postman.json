@@ -1,0 +1,24 @@
+{
+  "name": "mcp-postman",
+  "version": "1.0.2",
+  "description": "MCP Server for running Postman collections using Newman",
+  "homepage": "https://github.com/shannonlal/mcp-postman",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shannonlal/mcp-postman"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-postman",
+    "shannonlal"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "/absolute/path/to/mcp-postman/build/index.js"
+    ]
+  }
+}

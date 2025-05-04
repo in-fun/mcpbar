@@ -1,0 +1,26 @@
+{
+  "name": "ableton-copilot-mcp",
+  "version": "0.3.1",
+  "description": "Ableton Live MCP depend on Ableton JS",
+  "homepage": "https://github.com/xiaolaa2/ableton-copilot-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xiaolaa2/ableton-copilot-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ableton-live",
+    "mcp-server",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "ableton-copilot-mcp"
+    ],
+    "env": {}
+  }
+}

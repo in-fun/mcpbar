@@ -1,0 +1,95 @@
+{
+  "name": "solana-agent-kit",
+  "version": "2.0.3",
+  "description": "connect any ai agents to solana protocols",
+  "homepage": "https://kit.sendai.fun",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sendaifun/solana-agent-kit/tree/main/examples/agent-kit-mcp-server"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "ai",
+    "langchain",
+    "langchain-js",
+    "solana",
+    "web3js",
+    "solana-langchain",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "your_secret_key",
+      "type": "promptString",
+      "description": "Environment variable for your secret key",
+      "password": true
+    },
+    {
+      "id": "your_rpc_url",
+      "type": "promptString",
+      "description": "Environment variable for your rpc url",
+      "password": false
+    },
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key",
+      "password": true
+    },
+    {
+      "id": "your_openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for your openai api key",
+      "password": true
+    },
+    {
+      "id": "okx_api_key",
+      "type": "promptString",
+      "description": "Environment variable for okx api key",
+      "password": true
+    },
+    {
+      "id": "okx_secret_key",
+      "type": "promptString",
+      "description": "Environment variable for okx secret key",
+      "password": true
+    },
+    {
+      "id": "okx_api_pass",
+      "type": "promptString",
+      "description": "Environment variable for okx api pass",
+      "password": false
+    },
+    {
+      "id": "rpc_url",
+      "type": "promptString",
+      "description": "Environment variable for rpc url",
+      "password": false
+    },
+    {
+      "id": "solana_private_key",
+      "type": "promptString",
+      "description": "Environment variable for solana private key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "solana-agent-kit"
+    ],
+    "env": {
+      "YOUR_SECRET_KEY": "${input:your_secret_key}",
+      "YOUR_RPC_URL": "${input:your_rpc_url}",
+      "OPENAI_API_KEY": "${input:openai_api_key}",
+      "YOUR_OPENAI_API_KEY": "${input:your_openai_api_key}",
+      "OKX_API_KEY": "${input:okx_api_key}",
+      "OKX_SECRET_KEY": "${input:okx_secret_key}",
+      "OKX_API_PASS": "${input:okx_api_pass}",
+      "RPC_URL": "${input:rpc_url}",
+      "SOLANA_PRIVATE_KEY": "${input:solana_private_key}"
+    }
+  }
+}

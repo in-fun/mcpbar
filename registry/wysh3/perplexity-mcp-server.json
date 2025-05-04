@@ -1,0 +1,27 @@
+{
+  "name": "perplexity-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server using Puppeteer to interact with Perplexity.ai without an API key.",
+  "homepage": "https://github.com/wysh3/perplexity-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wysh3/perplexity-mcp-server"
+  },
+  "license": "GPL-3.0",
+  "keywords": [
+    "mcp-server",
+    "perplexity",
+    "mcp",
+    "puppeteer",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "perplexity-mcp-server"
+    ],
+    "env": {}
+  }
+}

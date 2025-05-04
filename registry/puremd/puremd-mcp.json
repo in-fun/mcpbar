@@ -1,0 +1,38 @@
+{
+  "name": "puremd-mcp",
+  "version": "1.0.3",
+  "description": "Model Context Protocol (MCP) server for pure.md, the markdown delivery network for LLMs",
+  "homepage": "https://pure.md",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/puremd/puremd-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "cdn",
+    "markdown",
+    "markdown-converter",
+    "mcp",
+    "mcp-server",
+    "unblocker",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "puremd_api_key",
+      "type": "promptString",
+      "description": "Environment variable for puremd api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "puremd-mcp"
+    ],
+    "env": {
+      "PUREMD_API_KEY": "<TOKEN>"
+    }
+  }
+}

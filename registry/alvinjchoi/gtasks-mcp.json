@@ -1,0 +1,53 @@
+{
+  "name": "@alvincrave/gtasks-mcp",
+  "version": "0.1.2",
+  "description": "MCP server for interacting with Google Tasks",
+  "homepage": "https://github.com/alvinjchoi/gtasks-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alvinjchoi/gtasks-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "gtasks-mcp",
+    "alvinjchoi"
+  ],
+  "inputs": [
+    {
+      "id": "google_client_id",
+      "type": "promptString",
+      "description": "Environment variable for google client id configuration",
+      "password": false
+    },
+    {
+      "id": "google_client_secret",
+      "type": "promptString",
+      "description": "Environment variable for google client secret authentication",
+      "password": true
+    },
+    {
+      "id": "google_refresh_token",
+      "type": "promptString",
+      "description": "Environment variable for google refresh token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@alvincrave/gtasks-mcp"
+    ],
+    "env": {
+      "GOOGLE_CLIENT_ID": "your_client_id_here",
+      "GOOGLE_CLIENT_SECRET": "your_client_secret_here",
+      "GOOGLE_REFRESH_TOKEN": "your_refresh_token_here"
+    },
+    "connectionTypes": [
+      "stdio"
+    ],
+    "autoRestart": true
+  }
+}

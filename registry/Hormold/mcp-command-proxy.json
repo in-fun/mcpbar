@@ -1,0 +1,26 @@
+{
+  "name": "mcp-command-proxy",
+  "version": "1.0.2",
+  "description": "MCP server that proxies CLI commands and collects logs",
+  "homepage": "https://github.com/Hormold/mcp-command-proxy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hormold/mcp-command-proxy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-command-proxy",
+    "hormold"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-command-proxy"
+    ],
+    "env": {}
+  }
+}

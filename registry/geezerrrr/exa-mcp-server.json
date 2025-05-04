@@ -1,0 +1,34 @@
+{
+  "name": "exa-mcp-server",
+  "version": "0.2.1",
+  "description": "A Model Context Protocol server with Exa which does web search and scraping. Search the web using Exa AI - performs real-time web searches and can scrape content from specific URLs. Supports configurable result counts, live crawling options, and returns the content from the most relevant websites.",
+  "homepage": "https://github.com/geezerrrr/exa-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/geezerrrr/exa-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "exa-mcp-server",
+    "geezerrrr"
+  ],
+  "inputs": [
+    {
+      "id": "exa_api_key",
+      "type": "promptString",
+      "description": "Environment variable for exa api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "/path/to/exa-mcp-server/build/index.js"
+    ],
+    "env": {
+      "EXA_API_KEY": "your-api-key-here"
+    }
+  }
+}

@@ -1,0 +1,210 @@
+{
+  "name": "@mfukushim/map-traveler-mcp",
+  "version": "0.0.77",
+  "description": "Virtual traveler library for MCP",
+  "homepage": "https://akibakokoubou.jp/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mfukushim/map-traveler-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "map-traveler-mcp",
+    "mfukushim"
+  ],
+  "inputs": [
+    {
+      "id": "mt_google_map_key",
+      "type": "promptString",
+      "description": "Environment variable for mt google map key authentication",
+      "password": true
+    },
+    {
+      "id": "mt_map_api_url",
+      "type": "promptString",
+      "description": "Environment variable for mt map api url configuration",
+      "password": false
+    },
+    {
+      "id": "mt_time_scale",
+      "type": "promptString",
+      "description": "Environment variable for mt time scale configuration",
+      "password": false
+    },
+    {
+      "id": "mt_sqlite_path",
+      "type": "promptString",
+      "description": "Environment variable for mt sqlite path configuration",
+      "password": false
+    },
+    {
+      "id": "mt_rembg_path",
+      "type": "promptString",
+      "description": "Environment variable for mt rembg path configuration",
+      "password": false
+    },
+    {
+      "id": "mt_rembg_url",
+      "type": "promptString",
+      "description": "Environment variable for mt rembg url configuration",
+      "password": false
+    },
+    {
+      "id": "mt_pixai_key",
+      "type": "promptString",
+      "description": "Environment variable for mt pixai key authentication",
+      "password": true
+    },
+    {
+      "id": "mt_sd_key",
+      "type": "promptString",
+      "description": "Environment variable for mt sd key authentication",
+      "password": true
+    },
+    {
+      "id": "mt_pixai_model_id",
+      "type": "promptString",
+      "description": "Environment variable for mt pixai model id configuration",
+      "password": false
+    },
+    {
+      "id": "mt_comfy_url",
+      "type": "promptString",
+      "description": "Environment variable for mt comfy url configuration",
+      "password": false
+    },
+    {
+      "id": "mt_comfy_workflow_t2i",
+      "type": "promptString",
+      "description": "Environment variable for mt comfy workflow t2i configuration",
+      "password": false
+    },
+    {
+      "id": "mt_comfy_workflow_i2i",
+      "type": "promptString",
+      "description": "Environment variable for mt comfy workflow i2i configuration",
+      "password": false
+    },
+    {
+      "id": "mt_comfy_params",
+      "type": "promptString",
+      "description": "Environment variable for mt comfy params configuration",
+      "password": false
+    },
+    {
+      "id": "mt_fixed_model_prompt",
+      "type": "promptString",
+      "description": "Environment variable for mt fixed model prompt configuration",
+      "password": false
+    },
+    {
+      "id": "mt_body_area_ratio",
+      "type": "promptString",
+      "description": "Environment variable for mt body area ratio configuration",
+      "password": false
+    },
+    {
+      "id": "mt_body_hw_ratio",
+      "type": "promptString",
+      "description": "Environment variable for mt body hw ratio configuration",
+      "password": false
+    },
+    {
+      "id": "mt_body_window_ratio_w",
+      "type": "promptString",
+      "description": "Environment variable for mt body window ratio w configuration",
+      "password": false
+    },
+    {
+      "id": "mt_body_window_ratio_h",
+      "type": "promptString",
+      "description": "Environment variable for mt body window ratio h configuration",
+      "password": false
+    },
+    {
+      "id": "mt_bs_id",
+      "type": "promptString",
+      "description": "Environment variable for mt bs id configuration",
+      "password": false
+    },
+    {
+      "id": "mt_bs_pass",
+      "type": "promptString",
+      "description": "Environment variable for mt bs pass configuration",
+      "password": false
+    },
+    {
+      "id": "mt_bs_handle",
+      "type": "promptString",
+      "description": "Environment variable for mt bs handle configuration",
+      "password": false
+    },
+    {
+      "id": "mt_filter_tools",
+      "type": "promptString",
+      "description": "Environment variable for mt filter tools configuration",
+      "password": false
+    },
+    {
+      "id": "mt_move_mode",
+      "type": "promptString",
+      "description": "Environment variable for mt move mode configuration",
+      "password": false
+    },
+    {
+      "id": "mt_image_width",
+      "type": "promptString",
+      "description": "Environment variable for mt image width configuration",
+      "password": false
+    },
+    {
+      "id": "mt_no_image",
+      "type": "promptString",
+      "description": "Environment variable for mt no image configuration",
+      "password": false
+    },
+    {
+      "id": "mt_feed_tag",
+      "type": "promptString",
+      "description": "Environment variable for mt feed tag configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@mfukushim/map-traveler-mcp"
+    ],
+    "env": {
+      "MT_GOOGLE_MAP_KEY": "(Google Map API key)",
+      "MT_MAP_API_URL": "(Optional: Map API custom endpoint. Example: direction=https://xxxx,places=https://yyyy )",
+      "MT_TIME_SCALE": "(Optional:Scale of travel time on real roads duration. default 4)",
+      "MT_SQLITE_PATH": "(db save path: e.g. %USERPROFILE%/Desktop/traveler.sqlite ,$HOME/traveler.sqlite )",
+      "MT_REMBG_PATH": "(absolute path of the installed rembg cli)",
+      "MT_REMBG_URL": "(rembg API URL)",
+      "MT_PIXAI_KEY": "(pixAi API key)",
+      "MT_SD_KEY": "(or Stability.ai image generation API key",
+      "MT_PIXAI_MODEL_ID": "(Optional: pixAi ModelId, if not set use default model 1648918127446573124 ",
+      "MT_COMFY_URL": "(Option: Generate image using ComfyUI API at specified URL. Example: http://192.168.1.100:8188)",
+      "MT_COMFY_WORKFLOW_T2I": "(Optional: Path to API workflow file when using text to image with ComfyUI. If not specified: assets/comfy/t2i_sample.json)",
+      "MT_COMFY_WORKFLOW_I2I": "(Optional: Path of API workflow file when image to image in ComfyUI. If not specified: assets/comfy/i2i_sample.json)",
+      "MT_COMFY_PARAMS": "(Optional: Variable values to send to the workflow via comfyUI API)",
+      "MT_FIXED_MODEL_PROMPT": "(Optional: Fixed avatar generation prompt. You will no longer be able to change your avatar during conversations.)",
+      "MT_BODY_AREA_RATIO": "(Optional: Acceptable avatar image area ratio. default 0.042)",
+      "MT_BODY_HW_RATIO": "(Optional: Acceptable avatar image aspect ratios. default 1.5~2.3)",
+      "MT_BODY_WINDOW_RATIO_W": "(Optional: Avatar composite window horizontal ratio. default 0.5)",
+      "MT_BODY_WINDOW_RATIO_H": "(Optional: Avatar composite window aspect ratio. default 0.75)",
+      "MT_BS_ID": "(Bluesky sns registration address)",
+      "MT_BS_PASS": "(bluesky sns password)",
+      "MT_BS_HANDLE": "(bluesky sns handle name: e.g. xxxxxxxx.bsky.social )",
+      "MT_FILTER_TOOLS": "(Optional: Directly filter the tools to be used. All are available if not specified. e.g. tips,set_traveler_location)",
+      "MT_MOVE_MODE": "(Option: Specify whether the movement mode is realtime or skip. default realtime)",
+      "MT_IMAGE_WIDTH": "(Option: Output image width (pixels) Default is 512)",
+      "MT_NO_IMAGE": "(Options: true = do not output image, not specified = output image if possible, default is not specified)",
+      "MT_FEED_TAG": "(Optional: Specify the feed tag when posting to SNS (#required, 15 characters or more) Default is #geo_less_traveler)"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "name": "database-mcp",
+  "version": "1.0.0",
+  "description": "A server that helps people access and query data in databases using the Legion Query Runner with Model Context Protocol (MCP) in Python.",
+  "homepage": "https://thelegionai.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheRaLabs/legion-mcp"
+  },
+  "license": "GPL-3.0",
+  "keywords": [
+    "database",
+    "mcp",
+    "mcp-server",
+    "query-builder",
+    "legion-ai",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "db_type",
+      "type": "promptString",
+      "description": "Environment variable for db type configuration",
+      "password": false
+    },
+    {
+      "id": "db_config",
+      "type": "promptString",
+      "description": "Environment variable for db config configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "python",
+    "args": [
+      "-m",
+      "database_mcp",
+      "--repository",
+      "path/to/git/repo"
+    ],
+    "env": {
+      "DB_TYPE": "pg",
+      "DB_CONFIG": "{\"host\":\"localhost\",\"port\":5432,\"user\":\"user\",\"password\":\"pw\",\"dbname\":\"dbname\"}"
+    }
+  }
+}

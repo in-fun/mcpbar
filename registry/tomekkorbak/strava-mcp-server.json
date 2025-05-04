@@ -1,0 +1,48 @@
+{
+  "name": "strava-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for strava-mcp-server",
+  "homepage": "https://github.com/tomekkorbak/strava-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tomekkorbak/strava-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "strava-mcp-server",
+    "tomekkorbak"
+  ],
+  "inputs": [
+    {
+      "id": "strava_client_id",
+      "type": "promptString",
+      "description": "Environment variable for strava client id configuration",
+      "password": false
+    },
+    {
+      "id": "strava_client_secret",
+      "type": "promptString",
+      "description": "Environment variable for strava client secret authentication",
+      "password": true
+    },
+    {
+      "id": "strava_refresh_token",
+      "type": "promptString",
+      "description": "Environment variable for strava refresh token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "strava-mcp-server"
+    ],
+    "env": {
+      "STRAVA_CLIENT_ID": "YOUR_CLIENT_ID",
+      "STRAVA_CLIENT_SECRET": "YOUR_CLIENT_SECRET",
+      "STRAVA_REFRESH_TOKEN": "YOUR_REFRESH_TOKEN"
+    }
+  }
+}

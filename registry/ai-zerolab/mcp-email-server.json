@@ -1,0 +1,25 @@
+{
+  "name": "mcp-email-server",
+  "version": "1.0.0",
+  "description": "IMAP and SMTP via MCP Server",
+  "homepage": "https://github.com/ai-zerolab/mcp-email-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ai-zerolab/mcp-email-server"
+  },
+  "license": "BSD-3-Clause",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-email-server",
+    "ai-zerolab"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-email-server@latest",
+      "stdio"
+    ]
+  }
+}

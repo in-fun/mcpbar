@@ -1,0 +1,25 @@
+{
+  "name": "terminal-controller",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol (MCP) server that enables secure terminal command execution, directory navigation, and file system operations through a standardized interface.",
+  "homepage": "https://github.com/GongRzhe/terminal-controller-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GongRzhe/terminal-controller-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "terminal-controller-mcp",
+    "gongrzhe"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "terminal-controller"
+    ],
+    "env": {}
+  }
+}

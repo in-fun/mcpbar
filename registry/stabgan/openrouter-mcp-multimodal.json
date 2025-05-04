@@ -1,0 +1,42 @@
+{
+  "name": "@stabgan/openrouter-mcp-multimodal",
+  "version": "1.5.0",
+  "description": "MCP server for OpenRouter providing text chat and image analysis tools",
+  "homepage": "https://github.com/stabgan/openrouter-mcp-multimodal",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/stabgan/openrouter-mcp-multimodal"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "openrouter-mcp-multimodal",
+    "stabgan"
+  ],
+  "inputs": [
+    {
+      "id": "openrouter_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openrouter api key authentication",
+      "password": true
+    },
+    {
+      "id": "default_model",
+      "type": "promptString",
+      "description": "Environment variable for default model configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@stabgan/openrouter-mcp-multimodal"
+    ],
+    "env": {
+      "OPENROUTER_API_KEY": "your-api-key-here",
+      "DEFAULT_MODEL": "qwen/qwen2.5-vl-32b-instruct:free"
+    }
+  }
+}

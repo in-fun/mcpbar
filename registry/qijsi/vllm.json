@@ -1,0 +1,25 @@
+{
+  "name": "vllm",
+  "version": "1.0.0",
+  "description": "A high-throughput and memory-efficient inference and serving engine for LLMs",
+  "homepage": "https://docs.vllm.ai",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qijsi/vllm"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "vllm",
+    "qijsi"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "vllm"
+    ],
+    "env": {}
+  }
+}

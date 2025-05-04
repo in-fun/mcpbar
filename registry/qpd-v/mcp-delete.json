@@ -1,0 +1,26 @@
+{
+  "name": "@qpd-v/mcp-delete",
+  "version": "0.1.0",
+  "description": "A Model Context Protocol (MCP) server that provides file deletion capabilities",
+  "homepage": "https://github.com/qpd-v/mcp-delete",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qpd-v/mcp-delete"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-delete",
+    "qpd-v"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@qpd-v/mcp-delete"
+    ],
+    "env": {}
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "name": "clickhouse-mcp-server",
+  "version": "1.0.0",
+  "description": "An MCP server implementation that enables Claude AI to interact with Clickhouse databases.",
+  "homepage": "https://github.com/burakdirin/clickhouse-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/burakdirin/clickhouse-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "clickhouse-mcp-server",
+    "burakdirin"
+  ],
+  "inputs": [
+    {
+      "id": "clickhouse_host",
+      "type": "promptString",
+      "description": "Environment variable for clickhouse host configuration",
+      "password": false
+    },
+    {
+      "id": "clickhouse_user",
+      "type": "promptString",
+      "description": "Environment variable for clickhouse user configuration",
+      "password": false
+    },
+    {
+      "id": "clickhouse_password",
+      "type": "promptString",
+      "description": "Environment variable for clickhouse password authentication",
+      "password": false
+    },
+    {
+      "id": "clickhouse_database",
+      "type": "promptString",
+      "description": "Environment variable for clickhouse database configuration",
+      "password": false
+    },
+    {
+      "id": "clickhouse_readonly",
+      "type": "promptString",
+      "description": "Environment variable for clickhouse readonly configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "/Users/burakdirin/Projects/clickhouse-mcp-server",
+      "run",
+      "clickhouse-mcp-server"
+    ],
+    "env": {
+      "CLICKHOUSE_HOST": "localhost",
+      "CLICKHOUSE_USER": "root",
+      "CLICKHOUSE_PASSWORD": "password",
+      "CLICKHOUSE_DATABASE": "[optional]",
+      "CLICKHOUSE_READONLY": "true"
+    }
+  }
+}

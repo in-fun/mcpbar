@@ -1,0 +1,35 @@
+{
+  "name": "echo-mcp-server-for-testing",
+  "version": "1.0.0",
+  "description": "A simple echo MCP (Model Context Protocol) Server for testing MCP Clients.",
+  "homepage": "https://github.com/piebro/echo-mcp-server-for-testing",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/piebro/echo-mcp-server-for-testing"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "testing",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "secret_key",
+      "type": "promptString",
+      "description": "Environment variable for secret key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "name": "echo-mcp-server-for-testing",
+    "command": "uvx",
+    "args": [
+      "echo-mcp-server-for-testing"
+    ],
+    "env": {
+      "SECRET_KEY": "123456789"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "browser-use-mcp-server",
+  "version": "1.0.0",
+  "description": "Browse the web, directly from Cursor etc.",
+  "homepage": "https://github.com/Dangoron/browser-use-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dangoron/browser-use-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "browser-use-mcp-server",
+    "dangoron"
+  ],
+  "inputs": [
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "browser-use-mcp-server",
+    "args": [
+      "run",
+      "server",
+      "--port",
+      "8000",
+      "--stdio",
+      "--proxy-port",
+      "9000"
+    ],
+    "env": {
+      "OPENAI_API_KEY": "your-api-key"
+    }
+  }
+}

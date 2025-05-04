@@ -1,0 +1,36 @@
+{
+  "name": "@octomind/octomind-mcp",
+  "version": "1.0.14",
+  "description": "an mcp server for the octomind platform",
+  "homepage": "https://github.com/OctoMind-dev/octomind-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/OctoMind-dev/octomind-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "octomind-mcp",
+    "octomind-dev"
+  ],
+  "inputs": [
+    {
+      "id": "apikey",
+      "type": "promptString",
+      "description": "Environment variable for apikey configuration",
+      "password": true
+    }
+  ],
+  "server": {
+    "name": "Octomind MCP Server",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@octomind/octomind-mcp@latest"
+    ],
+    "env": {
+      "APIKEY": "your-api-key-here"
+    }
+  }
+}

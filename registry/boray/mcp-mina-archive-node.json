@@ -1,0 +1,24 @@
+{
+  "name": "mcp-mina-archive-node",
+  "version": "0.0.1",
+  "description": "MCP Server for Mina Archive Node API",
+  "homepage": "https://github.com/boray/mcp-mina-archive-node",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/boray/mcp-mina-archive-node"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-mina-archive-node",
+    "boray"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "mcp-mina-archive-node"
+    ]
+  }
+}

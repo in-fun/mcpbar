@@ -1,0 +1,34 @@
+{
+  "name": "excel-mcp-server",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol server for Excel file manipulation",
+  "homepage": "https://github.com/sarayd/excel-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sarayd/excel-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "excel-mcp-server",
+    "sarayd"
+  ],
+  "inputs": [
+    {
+      "id": "fastmcp_port",
+      "type": "promptString",
+      "description": "Environment variable for fastmcp port",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "excel-mcp-server"
+    ],
+    "env": {
+      "FASTMCP_PORT": "${input:fastmcp_port}"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "@makafeli/n8n-workflow-builder",
+  "version": "0.3.0",
+  "description": "MCP server for programmatically creating and managing n8n workflows",
+  "homepage": "https://github.com/makafeli/n8n-workflow-builder",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/makafeli/n8n-workflow-builder"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "n8n-workflow-builder",
+    "makafeli"
+  ],
+  "inputs": [
+    {
+      "id": "n_api_key",
+      "type": "promptString",
+      "description": "Environment variable for n api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@makafeli/n8n-workflow-builder"
+    ],
+    "env": {
+      "N_API_KEY": "${input:n_api_key}"
+    }
+  }
+}

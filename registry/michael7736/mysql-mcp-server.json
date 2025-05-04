@@ -1,0 +1,66 @@
+{
+  "name": "mysql-mcp-server",
+  "version": "1.0.0",
+  "description": "MySQL MCP server project",
+  "homepage": "https://github.com/michael7736/mysql-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michael7736/mysql-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mysql-mcp-server",
+    "michael7736"
+  ],
+  "inputs": [
+    {
+      "id": "mysql_host",
+      "type": "promptString",
+      "description": "Environment variable for mysql host configuration",
+      "password": false
+    },
+    {
+      "id": "mysql_port",
+      "type": "promptString",
+      "description": "Environment variable for mysql port configuration",
+      "password": false
+    },
+    {
+      "id": "mysql_user",
+      "type": "promptString",
+      "description": "Environment variable for mysql user configuration",
+      "password": false
+    },
+    {
+      "id": "mysql_password",
+      "type": "promptString",
+      "description": "Environment variable for mysql password authentication",
+      "password": false
+    },
+    {
+      "id": "mysql_database",
+      "type": "promptString",
+      "description": "Environment variable for mysql database configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "autoApprove": [],
+    "disabled": false,
+    "timeout": 60,
+    "command": "node",
+    "args": [
+      "/path/to/mysql-mcp-server/build/index.js"
+    ],
+    "env": {
+      "MYSQL_HOST": "localhost",
+      "MYSQL_PORT": "3306",
+      "MYSQL_USER": "mcp101",
+      "MYSQL_PASSWORD": "123qwe",
+      "MYSQL_DATABASE": "mcpdb"
+    },
+    "transportType": "stdio"
+  }
+}

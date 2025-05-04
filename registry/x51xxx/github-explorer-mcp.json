@@ -1,0 +1,25 @@
+{
+  "name": "@trishchuk/github-explorer-mcp",
+  "version": "0.2.0",
+  "description": "MCP server that provides Github repository info including file content, directory structure and other metadata",
+  "homepage": "https://github.com/x51xxx/github-explorer-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/x51xxx/github-explorer-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "github-explorer-mcp",
+    "x51xxx"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@trishchuk/github-explorer-mcp"
+    ]
+  }
+}

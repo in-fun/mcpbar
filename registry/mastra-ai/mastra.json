@@ -1,0 +1,50 @@
+{
+  "name": "mastra-turbo",
+  "version": "0.1.11",
+  "description": "The TypeScript AI agent framework. ⚡ Assistants, RAG, observability. Supports any LLM: GPT-4, Claude, Gemini, Llama.",
+  "homepage": "https://mastra.ai",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mastra-ai/mastra/tree/main/packages/mcp"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "agents",
+    "ai",
+    "chatbots",
+    "javascript",
+    "llm",
+    "nextjs",
+    "nodejs",
+    "reactjs",
+    "typescript",
+    "workflows",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "anthropic_api_key",
+      "type": "promptString",
+      "description": "Environment variable for anthropic api key",
+      "password": true
+    },
+    {
+      "id": "google_generative_ai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for google generative ai api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mastra-turbo"
+    ],
+    "env": {
+      "ANTHROPIC_API_KEY": "${input:anthropic_api_key}",
+      "GOOGLE_GENERATIVE_AI_API_KEY": "${input:google_generative_ai_api_key}"
+    }
+  }
+}

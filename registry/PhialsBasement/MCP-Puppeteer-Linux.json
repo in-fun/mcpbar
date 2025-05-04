@@ -1,0 +1,25 @@
+{
+  "name": "mcp-puppeteer-linux",
+  "version": "0.1.0",
+  "description": "A Model Context Protocol server for browser automation using Puppeteer with Linux display server support",
+  "homepage": "https://github.com/PhialsBasement/MCP-Puppeteer-Linux",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PhialsBasement/MCP-Puppeteer-Linux"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-puppeteer-linux",
+    "phialsbasement"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "ts-node",
+      "/path/to/index.ts"
+    ]
+  }
+}

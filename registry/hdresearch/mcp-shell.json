@@ -1,0 +1,27 @@
+{
+  "name": "mcp-shell",
+  "version": "0.1.3",
+  "description": "Secure shell server for the Model Context Protocol. Integrates with Claude Desktop.",
+  "homepage": "https://github.com/hdresearch/mcp-shell",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hdresearch/mcp-shell"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude",
+    "function-calling",
+    "shell",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-shell"
+    ],
+    "env": {}
+  }
+}

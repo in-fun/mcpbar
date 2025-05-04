@@ -1,0 +1,24 @@
+{
+  "name": "@mcp-dockmaster/mcp-server-jupiter",
+  "version": "0.1.0",
+  "description": "A Model Context Protocol server for Jupiter",
+  "homepage": "https://github.com/dcSpark/mcp-server-jupiter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dcSpark/mcp-server-jupiter"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-jupiter",
+    "dcspark"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/your/mcp-server-jupiter/build/index.js"
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "@jinzcdev/leetcode-mcp-server",
+  "version": "1.1.0",
+  "description": "MCP Server for LeetCode API (supports leetcode.com and leetcode.cn)",
+  "homepage": "https://www.npmjs.com/package/@jinzcdev/leetcode-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jinzcdev/leetcode-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "algorithm",
+    "leetcode",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "leetcode_site",
+      "type": "promptString",
+      "description": "Environment variable for leetcode site configuration",
+      "password": false
+    },
+    {
+      "id": "leetcode_session",
+      "type": "promptString",
+      "description": "Environment variable for leetcode session configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "type": "stdio",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@jinzcdev/leetcode-mcp-server"
+    ],
+    "env": {
+      "LEETCODE_SITE": "global",
+      "LEETCODE_SESSION": "<YOUR_LEETCODE_SESSION_COOKIE>"
+    }
+  }
+}

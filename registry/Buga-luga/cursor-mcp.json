@@ -1,0 +1,26 @@
+{
+  "name": "mcp-cursor",
+  "version": "1.0.0",
+  "description": "MCP server for cursor-mcp",
+  "homepage": "https://github.com/Buga-luga/cursor-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Buga-luga/cursor-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "cursor-mcp",
+    "buga-luga"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-cursor"
+    ],
+    "env": {}
+  }
+}

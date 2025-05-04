@@ -1,0 +1,27 @@
+{
+  "name": "mcp_ankiconnect",
+  "version": "1.0.0",
+  "description": "MCP server for mcp-ankiconnect",
+  "homepage": "https://github.com/samefarrar/mcp-ankiconnect",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samefarrar/mcp-ankiconnect"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-ankiconnect",
+    "samefarrar"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uv",
+    "args": [
+      "run",
+      "--with",
+      "mcp-ankiconnect",
+      "mcp-ankiconnect"
+    ]
+  }
+}

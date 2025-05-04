@@ -1,0 +1,48 @@
+{
+  "name": "@isnow890/naver-search-mcp",
+  "version": "1.0.18",
+  "description": "Naver Search MCP Server",
+  "homepage": "https://isnow.space",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/isnow890/naver-search-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "data-analysis",
+    "mcp-server",
+    "naver-api",
+    "search-api",
+    "trend-analysis",
+    "datalab-api",
+    "korean-search",
+    "naver-mcp",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "naver_client_id",
+      "type": "promptString",
+      "description": "Environment variable for naver client id configuration",
+      "password": false
+    },
+    {
+      "id": "naver_client_secret",
+      "type": "promptString",
+      "description": "Environment variable for naver client secret authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@isnow890/naver-search-mcp"
+    ],
+    "env": {
+      "NAVER_CLIENT_ID": "your_client_id",
+      "NAVER_CLIENT_SECRET": "your_client_secret"
+    }
+  }
+}

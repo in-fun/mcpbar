@@ -1,0 +1,26 @@
+{
+  "name": "software-planning-tool",
+  "version": "0.1.0",
+  "description": "A Model Context Protocol server",
+  "homepage": "https://github.com/NightTrek/Software-planning-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NightTrek/Software-planning-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "software-planning-mcp",
+    "nighttrek"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/software-planning-tool/build/index.js"
+    ],
+    "disabled": false,
+    "autoApprove": []
+  }
+}

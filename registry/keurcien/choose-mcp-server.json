@@ -1,0 +1,41 @@
+{
+  "name": "choose-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for choose-mcp-server",
+  "homepage": "https://github.com/keurcien/choose-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keurcien/choose-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "choose-mcp-server",
+    "keurcien"
+  ],
+  "inputs": [
+    {
+      "id": "your_db",
+      "type": "promptString",
+      "description": "Environment variable for your db",
+      "password": false
+    },
+    {
+      "id": "your_user",
+      "type": "promptString",
+      "description": "Environment variable for your user",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "choose-mcp-server"
+    ],
+    "env": {
+      "YOUR_DB": "${input:your_db}",
+      "YOUR_USER": "${input:your_user}"
+    }
+  }
+}

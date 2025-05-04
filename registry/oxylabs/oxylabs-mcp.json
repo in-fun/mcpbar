@@ -1,0 +1,45 @@
+{
+  "name": "oxylabs-mcp",
+  "version": "1.0.0",
+  "description": "Official Oxylabs MCP integration",
+  "homepage": "https://oxylabs.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oxylabs/oxylabs-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "data-collection",
+    "llm-tools",
+    "mcp",
+    "mcp-server",
+    "oxylabs",
+    "python",
+    "scraping",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "oxylabs_username",
+      "type": "promptString",
+      "description": "Environment variable for oxylabs username configuration",
+      "password": false
+    },
+    {
+      "id": "oxylabs_password",
+      "type": "promptString",
+      "description": "Environment variable for oxylabs password authentication",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "oxylabs-mcp"
+    ],
+    "env": {
+      "OXYLABS_USERNAME": "OXYLABS_USERNAME",
+      "OXYLABS_PASSWORD": "OXYLABS_PASSWORD"
+    }
+  }
+}

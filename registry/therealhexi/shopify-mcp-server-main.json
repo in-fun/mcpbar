@@ -1,0 +1,42 @@
+{
+  "name": "shopify-mcp-server",
+  "version": "1.0.1",
+  "description": "MCP Server for Shopify API, enabling interaction with store data through GraphQL API.",
+  "homepage": "https://github.com/therealhexi/shopify-mcp-server-main",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/therealhexi/shopify-mcp-server-main"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "shopify-mcp-server-main",
+    "therealhexi"
+  ],
+  "inputs": [
+    {
+      "id": "shopify_access_token",
+      "type": "promptString",
+      "description": "Environment variable for shopify access token authentication",
+      "password": true
+    },
+    {
+      "id": "myshopify_domain",
+      "type": "promptString",
+      "description": "Environment variable for myshopify domain configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "shopify-mcp-server"
+    ],
+    "env": {
+      "SHOPIFY_ACCESS_TOKEN": "<YOUR_ACCESS_TOKEN>",
+      "MYSHOPIFY_DOMAIN": "<YOUR_SHOP>.myshopify.com"
+    }
+  }
+}
