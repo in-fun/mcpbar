@@ -1,6 +1,6 @@
 {
   "name": "mcpbar",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "`mcpbar` is a package manager for MCP server.",
   "bin": {
     "mcpbar": "./bin/run"
@@ -13,7 +13,7 @@
     "dist",
     "bin"
   ],
-  "homepage": "https://mcp.bar",
+  "homepage": "https://www.mcp.bar",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/in-fun/mcpbar.git"

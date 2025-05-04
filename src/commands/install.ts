@@ -19,7 +19,7 @@ export function builder(yargs: Argv): Argv<InstallArgv> {
   return yargs
     .positional('source', {
       type: 'string',
-      description: 'URL or file path to the MCP server manifest',
+      description: 'URL, file path, or package alias for the MCP server manifest',
       demandOption: true,
     })
     .option('name', {
@@ -48,8 +48,16 @@ export async function handler(argv: ArgumentsCamelCase<InstallArgv>) {
       return
     }
 
+    // Transform source if it's an alias (not a file path or URL)
+    let source = manifestSource
+    if (!source.startsWith('./') && !source.startsWith('/') && !source.includes('://') && !source.startsWith('data:')) {
+      // It's an alias, transform to registry URL
+      source = `https://esm.sh/gh/in-fun/mcpbar/registry/${source}.json`
+      logger.info(`Using package alias: ${manifestSource} → ${source}`)
+    }
+
     // Download/load manifest from URL or file path
-    const server = await downloadManifest(manifestSource)
+    const server = await downloadManifest(source)
     if (!server) {
       return // Error already logged in downloadManifest
     }

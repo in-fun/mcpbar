@@ -57,7 +57,8 @@ export async function downloadManifest(source: string): Promise<McpServer | null
 
     let content: string
 
-    if (source.startsWith('http://') || source.startsWith('https://')) {
+    // Check for URL schemes - either includes "://" or starts with "data:"
+    if (source.includes('://') || source.startsWith('data:')) {
       // It's a URL, fetch it
       const response = await fetch(source)
 
