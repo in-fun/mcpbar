@@ -41,12 +41,14 @@ mcpbar s <query>             # Short alias for search
 
 ### Install a MCP Server
 
-Install a MCP server from a URL or file path:
+Install a MCP server from a URL (any protocol supported by fetch), file path, or package alias:
 
 ```bash
 mcpbar install <path-to-manifest.json>  # Install from local manifest file
 mcpbar i <path-to-manifest.json>        # Short alias for install
-mcpbar install https://example.com/manifest.json  # Install from URL
+mcpbar install https://example.com/manifest.json  # Install from HTTP URL
+mcpbar install file:///path/to/manifest.json     # Install using file protocol
+mcpbar install vendor/package-name      # Install using package alias
 ```
 
 Example:
@@ -55,8 +57,14 @@ Example:
 # Install from a local manifest file
 mcpbar install ./manifests/github.json
 
+# Install using package alias (shorthand)
+mcpbar i 21st-dev/magic-mcp
+
 # Install from a URL
-mcpbar install https://raw.githubusercontent.com/example/repo/main/mcp.json
+mcpbar install https://esm.sh/gh/in-fun/mcpbar/registry/21st-dev/magic-mcp.json
+
+# Install using file protocol
+mcpbar install file:///Users/username/projects/manifests/custom.json
 ```
 
 ### Remove a MCP Server
