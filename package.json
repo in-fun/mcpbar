@@ -13,7 +13,7 @@
     "dist",
     "bin"
   ],
-  "homepage": "https://mcp.bar",
+  "homepage": "https://www.mcp.bar",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/in-fun/mcpbar.git"

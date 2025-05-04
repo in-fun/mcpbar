@@ -2,6 +2,23 @@
 
 The CLI manager for MCP servers.
 
+## 🧩 MCP Manifest Concept
+
+MCPBar implements a standardized approach for MCP servers using `mcp.json` manifest files. This solution:
+
+- 📄 Uses a **standardized manifest format** (`mcp.json`) similar to `package.json` in npm
+- 🌐 Supports a **decentralized distribution model** where developers can host manifests anywhere
+- 🔄 Allows installation directly from URLs, local files, or package aliases
+- 🔍 Features an optional registry for enhanced discoverability
+- 🔐 Securely handles server configuration with explicit handling of sensitive inputs
+- 📚 Includes an **open registry** with 1500+ MCP servers in the `registry` directory
+
+This approach simplifies discovery, installation, and configuration of MCP servers across different clients, making the MCP ecosystem more accessible and organized.
+
+The extensive registry is the foundation of an open and standardized MCP ecosystem, enabling developers to easily discover, share, and contribute to the growing collection of MCP servers.
+
+For more details, see the [MCP Manifest Proposal](./doc/proposal.md) and [Concept Overview](./doc/idea.md).
+
 ## 🌟 Features
 
 - 🔄 Simple installation and management of MCP servers
