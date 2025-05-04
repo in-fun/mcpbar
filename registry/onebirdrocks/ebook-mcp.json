@@ -1,0 +1,28 @@
+{
+  "name": "ebook-mcp",
+  "version": "1.0.0",
+  "description": "A MCP server that supports mainstream eBook formats including EPUB, PDF and more. Simplify your eBook user experience with LLM.",
+  "homepage": "https://github.com/onebirdrocks/ebook-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/onebirdrocks/ebook-mcp"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "ebook",
+    "epub",
+    "mcp",
+    "mcp-client",
+    "mcp-server",
+    "pdf",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "ebook-mcp"
+    ],
+    "env": {}
+  }
+}

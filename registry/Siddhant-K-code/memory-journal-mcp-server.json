@@ -1,0 +1,28 @@
+{
+  "name": "memory-journal-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server designed to help you search and analyze your photo library (iCloud)",
+  "homepage": "https://x.com/siddhant_k_code/status/1883546479425671310?s=46",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Siddhant-K-code/memory-journal-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude-desktop",
+    "mcp",
+    "mcp-server",
+    "smart-photo-album",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "/Users/<YOUR_DEVICE_USERNAME>/.local/bin/uv",
+    "args": [
+      "--directory",
+      "/Users/<PATH_TO_CLONED_DIR>/memory-journal-mcp-server",
+      "run",
+      "server.py"
+    ]
+  }
+}

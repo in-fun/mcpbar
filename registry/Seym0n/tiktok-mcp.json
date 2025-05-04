@@ -1,0 +1,35 @@
+{
+  "name": "tiktok-mcp",
+  "version": "0.0.1",
+  "description": "MCP server for TikTok",
+  "homepage": "https://github.com/Seym0n/tiktok-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Seym0n/tiktok-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "tiktok",
+    "tiktok-report",
+    "tiktok-tool",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "tikneuron_mcp_api_key",
+      "type": "promptString",
+      "description": "Environment variable for tikneuron mcp api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "path\\build\\index.js"
+    ],
+    "env": {
+      "TIKNEURON_MCP_API_KEY": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+    }
+  }
+}

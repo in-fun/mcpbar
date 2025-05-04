@@ -1,0 +1,25 @@
+{
+  "name": "personal-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for personal-mcp",
+  "homepage": "https://github.com/evangstav/personal-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evangstav/personal-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "personal-mcp",
+    "evangstav"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "personal-mcp"
+    ],
+    "env": {}
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "name": "@f4ww4z/mcp-mysql-server",
+  "version": "0.1.0",
+  "description": "A Model Context Protocol server for MySQL database operations",
+  "homepage": "https://github.com/Atomzzm/mcp-mysql-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Atomzzm/mcp-mysql-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-mysql-server",
+    "atomzzm"
+  ],
+  "inputs": [
+    {
+      "id": "mysql_host",
+      "type": "promptString",
+      "description": "Environment variable for mysql host configuration",
+      "password": false
+    },
+    {
+      "id": "mysql_user",
+      "type": "promptString",
+      "description": "Environment variable for mysql user configuration",
+      "password": false
+    },
+    {
+      "id": "mysql_password",
+      "type": "promptString",
+      "description": "Environment variable for mysql password authentication",
+      "password": false
+    },
+    {
+      "id": "mysql_database",
+      "type": "promptString",
+      "description": "Environment variable for mysql database configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@f4ww4z/mcp-mysql-server"
+    ],
+    "env": {
+      "MYSQL_HOST": "your_host",
+      "MYSQL_USER": "your_user",
+      "MYSQL_PASSWORD": "your_password",
+      "MYSQL_DATABASE": "your_database"
+    }
+  }
+}

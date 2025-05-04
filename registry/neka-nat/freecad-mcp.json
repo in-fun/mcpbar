@@ -1,0 +1,24 @@
+{
+  "name": "freecad-mcp",
+  "version": "1.0.0",
+  "description": "FreeCAD MCP(Model Context Protocol) server",
+  "homepage": "https://github.com/neka-nat/freecad-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neka-nat/freecad-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "claude",
+    "freecad",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "freecad-mcp"
+    ]
+  }
+}

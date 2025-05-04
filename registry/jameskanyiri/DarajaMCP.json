@@ -1,0 +1,27 @@
+{
+  "name": "daraja",
+  "version": "1.0.0",
+  "description": "MCP server for DarajaMCP",
+  "homepage": "https://github.com/jameskanyiri/DarajaMCP",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jameskanyiri/DarajaMCP"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "darajamcp",
+    "jameskanyiri"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "/ABSOLUTE/PATH/TO/PARENT/FOLDER/DarajaMCP",
+      "run",
+      "main.py"
+    ]
+  }
+}

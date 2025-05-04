@@ -1,0 +1,27 @@
+{
+  "name": "@eventcatalog/mcp-server",
+  "version": "0.0.3",
+  "description": "MCP server for EventCatalog",
+  "homepage": "https://eventcatalog.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/event-catalog/mcp-server"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "architecture",
+    "documentation",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@eventcatalog/mcp-server",
+      "https://demo.eventcatalog.dev"
+    ]
+  }
+}

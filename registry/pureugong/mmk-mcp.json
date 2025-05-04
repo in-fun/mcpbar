@@ -1,0 +1,42 @@
+{
+  "name": "mmk-mcp",
+  "version": "1.0.18",
+  "description": "MCP server for Magic Meal Kits with Notion integration. Enables AI assistants to duplicate Notion blocks programmatically through your Magic Meal Kits API.",
+  "homepage": "https://github.com/pureugong/mmk-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pureugong/mmk-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mmk-mcp",
+    "pureugong"
+  ],
+  "inputs": [
+    {
+      "id": "mmk_api_key",
+      "type": "promptString",
+      "description": "Environment variable for mmk api key authentication",
+      "password": true
+    },
+    {
+      "id": "mmk_api_base_url",
+      "type": "promptString",
+      "description": "Environment variable for mmk api base url configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mmk-mcp"
+    ],
+    "env": {
+      "MMK_API_KEY": "<your-api-key>",
+      "MMK_API_BASE_URL": "<your-api-base-url>"
+    }
+  }
+}

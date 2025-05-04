@@ -1,0 +1,24 @@
+{
+  "name": "mcp-github-issue",
+  "version": "0.1.1",
+  "description": "An MCP server that provides LLMs with the ability to use GitHub issues as tasks",
+  "homepage": "https://github.com/sammcj/mcp-github-issue",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sammcj/mcp-github-issue"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-github-issue",
+    "sammcj"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "mcp-github-issue"
+    ]
+  }
+}

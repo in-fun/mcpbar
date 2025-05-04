@@ -1,0 +1,21 @@
+{
+  "name": "shadcn-ui-mcp-server",
+  "version": "0.1.2",
+  "description": "MCP server for shadcn/ui component references",
+  "homepage": "https://github.com/ymadd/shadcn-ui-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ymadd/shadcn-ui-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp-server",
+    "shadcn-ui",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "/path/to/shadcn-ui-server/build/index.js"
+  }
+}

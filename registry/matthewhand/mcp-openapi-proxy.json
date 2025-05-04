@@ -1,0 +1,41 @@
+{
+  "name": "mcp-openapi-proxy",
+  "version": "1.0.0",
+  "description": "MCP server for mcp-openapi-proxy",
+  "homepage": "https://github.com/matthewhand/mcp-openapi-proxy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/matthewhand/mcp-openapi-proxy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-openapi-proxy",
+    "matthewhand"
+  ],
+  "inputs": [
+    {
+      "id": "openapi_spec_url",
+      "type": "promptString",
+      "description": "Environment variable for openapi spec url configuration",
+      "password": false
+    },
+    {
+      "id": "api_key",
+      "type": "promptString",
+      "description": "Environment variable for api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-openapi-proxy"
+    ],
+    "env": {
+      "OPENAPI_SPEC_URL": "${OPENAPI_SPEC_URL}",
+      "API_KEY": "${API_OPENAPI_KEY}"
+    }
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "name": "ffmpeg-mcp",
+  "version": "0.0.3",
+  "description": "An MCP server for FFmpeg",
+  "homepage": "https://github.com/ZizoTheDev/ffmpeg-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZizoTheDev/ffmpeg-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "codec",
+    "compression",
+    "content",
+    "conversion",
+    "editing",
+    "ffmpeg",
+    "format",
+    "manipulation",
+    "mcp",
+    "media",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "ffmpeg-mcp"
+    ],
+    "env": {}
+  }
+}

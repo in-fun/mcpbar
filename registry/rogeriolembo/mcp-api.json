@@ -1,0 +1,39 @@
+{
+  "name": "@rogeriolembo/mcp-api",
+  "version": "0.1.4",
+  "description": "MCP server for SysAuto API integration",
+  "homepage": "https://github.com/rogeriolembo/mcp-api",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rogeriolembo/mcp-api"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-api",
+    "rogeriolembo"
+  ],
+  "inputs": [
+    {
+      "id": "sysauto_api_key",
+      "type": "promptString",
+      "description": "Environment variable for sysauto api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "docker",
+    "args": [
+      "run",
+      "-i",
+      "--rm",
+      "-e",
+      "SYSAUTO_API_KEY",
+      "mcp/sysauto-ask"
+    ],
+    "env": {
+      "SYSAUTO_API_KEY": "YOUR_API_KEY_HERE"
+    }
+  }
+}

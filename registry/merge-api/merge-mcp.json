@@ -1,0 +1,41 @@
+{
+  "name": "merge-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for merge-mcp",
+  "homepage": "https://github.com/merge-api/merge-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/merge-api/merge-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "merge-mcp",
+    "merge-api"
+  ],
+  "inputs": [
+    {
+      "id": "merge_api_key",
+      "type": "promptString",
+      "description": "Environment variable for merge api key authentication",
+      "password": true
+    },
+    {
+      "id": "merge_account_token",
+      "type": "promptString",
+      "description": "Environment variable for merge account token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "merge-mcp"
+    ],
+    "env": {
+      "MERGE_API_KEY": "your_api_key",
+      "MERGE_ACCOUNT_TOKEN": "your_account_token"
+    }
+  }
+}

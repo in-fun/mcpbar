@@ -1,0 +1,26 @@
+{
+  "name": "npm-mcp-server",
+  "version": "1.0.0",
+  "description": "Um servidor MCP para buscar informações de pacotes npm",
+  "homepage": "https://github.com/mateusribeirocampos/npm-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mateusribeirocampos/npm-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "npm-mcp-server",
+    "mateusribeirocampos"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "npm-mcp-server"
+    ],
+    "env": {}
+  }
+}

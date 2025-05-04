@@ -1,0 +1,35 @@
+{
+  "name": "@aiuluna/knowledge-graph-mcp",
+  "version": "0.0.7",
+  "description": "A Model Context Protocol (MCP) service for managing and visualizing knowledge graphs",
+  "homepage": "https://github.com/aiuluna/knowledge-graph-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aiuluna/knowledge-graph-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "knowledge-graph-mcp",
+    "aiuluna"
+  ],
+  "inputs": [
+    {
+      "id": "knowledge_graph_dir",
+      "type": "promptString",
+      "description": "Environment variable for knowledge graph dir configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@aiuluna/knowledge-graph-mcp"
+    ],
+    "env": {
+      "KNOWLEDGE_GRAPH_DIR": "/path/to/your/knowledge_graph/dir"
+    }
+  }
+}

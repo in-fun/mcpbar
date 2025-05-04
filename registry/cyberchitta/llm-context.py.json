@@ -1,0 +1,27 @@
+{
+  "name": "llm-context",
+  "version": "1.0.0",
+  "description": "Share code with LLMs via Model Context Protocol or clipboard. Rule-based customization enables easy switching between different tasks (like code review and documentation). Includes smart code outlining.",
+  "homepage": "https://www.cyberchitta.cc/articles/llm-ctx-why.html",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cyberchitta/llm-context.py"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "coding",
+    "tools",
+    "cli",
+    "claude-desktop",
+    "model-context-protocol",
+    "mcp"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "llm-context"
+    ],
+    "env": {}
+  }
+}

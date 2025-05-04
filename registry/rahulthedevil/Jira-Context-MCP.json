@@ -1,0 +1,56 @@
+{
+  "name": "jira-mcp",
+  "version": "0.1.0",
+  "description": "Model Context Protocol server for Jira integration",
+  "homepage": "https://github.com/rahulthedevil/Jira-Context-MCP",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rahulthedevil/Jira-Context-MCP"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "jira-context-mcp",
+    "rahulthedevil"
+  ],
+  "inputs": [
+    {
+      "id": "jira_base_url",
+      "type": "promptString",
+      "description": "Environment variable for jira base url",
+      "password": false
+    },
+    {
+      "id": "jira_user",
+      "type": "promptString",
+      "description": "Environment variable for jira user",
+      "password": false
+    },
+    {
+      "id": "jira_api_token",
+      "type": "promptString",
+      "description": "Environment variable for jira api token",
+      "password": true
+    },
+    {
+      "id": "http_port",
+      "type": "promptString",
+      "description": "Environment variable for http port",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "jira-mcp"
+    ],
+    "env": {
+      "JIRA_BASE_URL": "${input:jira_base_url}",
+      "JIRA_USER": "${input:jira_user}",
+      "JIRA_API_TOKEN": "${input:jira_api_token}",
+      "HTTP_PORT": "${input:http_port}"
+    }
+  }
+}

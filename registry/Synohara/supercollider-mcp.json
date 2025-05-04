@@ -1,0 +1,25 @@
+{
+  "name": "@makotyo/mcp-supercollider",
+  "version": "0.2.0",
+  "description": "MCP server for supercollider-mcp",
+  "homepage": "https://github.com/Synohara/supercollider-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Synohara/supercollider-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "supercollider-mcp",
+    "synohara"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@makotyo/mcp-supercollider"
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "hubspot-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for hubspot-mcp-server",
+  "homepage": "https://github.com/isaacraja/hubspot-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/isaacraja/hubspot-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "hubspot-mcp-server",
+    "isaacraja"
+  ],
+  "inputs": [
+    {
+      "id": "hubspot_api_key",
+      "type": "promptString",
+      "description": "Environment variable for hubspot api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uv",
+    "env": {
+      "HUBSPOT_API_KEY": "your-api-key"
+    },
+    "args": [
+      "--directory",
+      "{{PATH_TO_REPO}}/src/hubspot_mcp_server",
+      "run",
+      "server.py"
+    ]
+  }
+}

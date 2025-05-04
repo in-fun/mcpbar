@@ -1,0 +1,25 @@
+{
+  "name": "sketchup-mcp",
+  "version": "1.0.0",
+  "description": "Sketchup Model Context Protocol",
+  "homepage": "https://github.com/mhyrr/sketchup-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mhyrr/sketchup-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "sketchup-mcp",
+    "mhyrr"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "sketchup-mcp"
+    ],
+    "env": {}
+  }
+}

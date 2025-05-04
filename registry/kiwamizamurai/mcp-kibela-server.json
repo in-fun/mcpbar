@@ -1,0 +1,43 @@
+{
+  "name": "@kiwamizamurai/mcp-kibela-server",
+  "version": "1.1.0",
+  "description": "MCP server for Kibela API integration",
+  "homepage": "https://www.npmjs.com/package/@kiwamizamurai/mcp-kibela-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kiwamizamurai/mcp-kibela-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "kibela",
+    "kibela-web-api",
+    "mcp",
+    "modelcontextprotocol",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "kibela_team",
+      "type": "promptString",
+      "description": "Environment variable for kibela team configuration",
+      "password": false
+    },
+    {
+      "id": "kibela_token",
+      "type": "promptString",
+      "description": "Environment variable for kibela token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@kiwamizamurai/mcp-kibela-server"
+    ],
+    "env": {
+      "KIBELA_TEAM": "YOUR_TEAM_NAME",
+      "KIBELA_TOKEN": "YOUR_TOKEN"
+    }
+  }
+}

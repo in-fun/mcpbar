@@ -1,0 +1,25 @@
+{
+  "name": "mcp-desktop-automation",
+  "version": "0.1.6",
+  "description": "Model Context Protocol server for desktop automation",
+  "homepage": "https://github.com/tanob/mcp-desktop-automation",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tanob/mcp-desktop-automation"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-desktop-automation",
+    "tanob"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-desktop-automation"
+    ]
+  }
+}

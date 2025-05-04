@@ -67,7 +67,6 @@ Below is the proposed structure for `mcp.json`:
   "name": "github",
   "version": "1.0.0",
   "description": "GitHub MCP Server for AI tools using Model Context Protocol (MCP).",
-  "vendor": "GitHub",
   "homepage": "https://github.com/github/github-mcp-server",
   "repository": {
     "type": "git",
@@ -83,11 +82,6 @@ Below is the proposed structure for `mcp.json`:
     "agent",
     "integration"
   ],
-  "platforms": [
-    "vscode",
-    "claude"
-  ],
-  "protocol": "mcp",
   "inputs": [
     {
       "id": "github_token",
@@ -119,13 +113,10 @@ Below is the proposed structure for `mcp.json`:
 - **name**: Unique identifier for the MCP server.
 - **version**: Semantic versioning of the server.
 - **description**: Brief overview of the server's functionality.
-- **vendor**: Name of the organization or individual maintaining the server.
 - **homepage**: URL to the server's homepage or documentation.
 - **repository**: Details of the source code repository.
 - **license**: License under which the server is distributed.
 - **keywords**: Tags to aid in discovery.
-- **platforms**: List of compatible clients (e.g., "vscode", "claude").
-- **protocol**: Protocol used by the server, typically "mcp".
 - **inputs**: Array of user inputs required for server operation.
 - **server**: Configuration details to run the server, including command, arguments, environment variables, and timeout.
 

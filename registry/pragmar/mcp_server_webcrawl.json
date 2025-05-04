@@ -1,0 +1,29 @@
+{
+  "name": "mcp-server-webcrawl",
+  "version": "1.0.0",
+  "description": "MCP server tailored to connecting web crawler data and archives",
+  "homepage": "https://pragmar.com/mcp-server-webcrawl/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pragmar/mcp_server_webcrawl"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "mcp-servers",
+    "knowledgebase",
+    "llm",
+    "warc",
+    "wget",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-server-webcrawl"
+    ],
+    "env": {}
+  }
+}

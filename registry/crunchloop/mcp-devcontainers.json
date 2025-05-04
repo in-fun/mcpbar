@@ -1,0 +1,25 @@
+{
+  "name": "@crunchloop/mcp-devcontainers",
+  "version": "0.0.3",
+  "description": "MCP for devcontainers",
+  "homepage": "https://github.com/crunchloop/mcp-devcontainers",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crunchloop/mcp-devcontainers"
+  },
+  "license": "MIT",
+  "keywords": [
+    "devcontainers",
+    "mcp-server",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@crunchloop/mcp-devcontainers"
+    ]
+  }
+}

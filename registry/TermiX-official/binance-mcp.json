@@ -1,0 +1,43 @@
+{
+  "name": "binance-mcp",
+  "version": "1.0.8",
+  "description": "binance-mcp",
+  "homepage": "https://github.com/TermiX-official/binance-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TermiX-official/binance-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "binance-mcp",
+    "termix-official"
+  ],
+  "inputs": [
+    {
+      "id": "binance_api_key",
+      "type": "promptString",
+      "description": "Environment variable for binance api key authentication",
+      "password": true
+    },
+    {
+      "id": "binance_api_secret",
+      "type": "promptString",
+      "description": "Environment variable for binance api secret authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "/Users/Username/Desktop/binance-mcp/build/index.js"
+    ],
+    "env": {
+      "BINANCE_API_KEY": "BINANCE_API_KEY",
+      "BINANCE_API_SECRET": "BINANCE_API_SECRET"
+    },
+    "disabled": false,
+    "autoApprove": []
+  }
+}

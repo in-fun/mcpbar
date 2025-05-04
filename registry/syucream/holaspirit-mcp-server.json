@@ -1,0 +1,35 @@
+{
+  "name": "holaspirit-mcp-server",
+  "version": "0.2.0",
+  "description": "A MCP(Model Context Protocol) server that accesses to Holaspirit API",
+  "homepage": "https://www.npmjs.com/package/holaspirit-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/syucream/holaspirit-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "holaspirit",
+    "mcp",
+    "modelcontextprotocol",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "holaspirit_api_token",
+      "type": "promptString",
+      "description": "Environment variable for holaspirit api token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "holaspirit-mcp-server"
+    ],
+    "env": {
+      "HOLASPIRIT_API_TOKEN": "${input:holaspirit_api_token}"
+    }
+  }
+}

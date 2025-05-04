@@ -1,0 +1,41 @@
+{
+  "name": "mcp-server-qdrant",
+  "version": "1.0.0",
+  "description": "MCP server for mcp-server-qdrant",
+  "homepage": "https://github.com/Jimmy974/mcp-server-qdrant",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jimmy974/mcp-server-qdrant"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-qdrant",
+    "jimmy974"
+  ],
+  "inputs": [
+    {
+      "id": "qdrant_url",
+      "type": "promptString",
+      "description": "Environment variable for qdrant url",
+      "password": false
+    },
+    {
+      "id": "qdrant_api_key",
+      "type": "promptString",
+      "description": "Environment variable for qdrant api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-server-qdrant"
+    ],
+    "env": {
+      "QDRANT_URL": "${input:qdrant_url}",
+      "QDRANT_API_KEY": "${input:qdrant_api_key}"
+    }
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "name": "sql-mcp-server",
+  "version": "0.2.1",
+  "description": "MCP server for interacting with MySQL databases via SSH tunnels",
+  "homepage": "https://github.com/t3ta/sql-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/t3ta/sql-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "sql-mcp-server",
+    "t3ta"
+  ],
+  "inputs": [
+    {
+      "id": "db_user",
+      "type": "promptString",
+      "description": "Environment variable for db user",
+      "password": false
+    },
+    {
+      "id": "db_pass",
+      "type": "promptString",
+      "description": "Environment variable for db pass",
+      "password": false
+    },
+    {
+      "id": "db_host",
+      "type": "promptString",
+      "description": "Environment variable for db host",
+      "password": false
+    },
+    {
+      "id": "db_port",
+      "type": "promptString",
+      "description": "Environment variable for db port",
+      "password": false
+    },
+    {
+      "id": "ssh_bastion_host",
+      "type": "promptString",
+      "description": "Environment variable for ssh bastion host",
+      "password": false
+    },
+    {
+      "id": "ssh_bastion_user",
+      "type": "promptString",
+      "description": "Environment variable for ssh bastion user",
+      "password": false
+    },
+    {
+      "id": "ssh_private_key",
+      "type": "promptString",
+      "description": "Environment variable for ssh private key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "sql-mcp-server"
+    ],
+    "env": {
+      "DB_USER": "${input:db_user}",
+      "DB_PASS": "${input:db_pass}",
+      "DB_HOST": "${input:db_host}",
+      "DB_PORT": "${input:db_port}",
+      "SSH_BASTION_HOST": "${input:ssh_bastion_host}",
+      "SSH_BASTION_USER": "${input:ssh_bastion_user}",
+      "SSH_PRIVATE_KEY": "${input:ssh_private_key}"
+    }
+  }
+}

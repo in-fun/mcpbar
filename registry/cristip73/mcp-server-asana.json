@@ -1,0 +1,42 @@
+{
+  "name": "@cristip73/mcp-server-asana",
+  "version": "1.8.9",
+  "description": "MCP Server for Asana API",
+  "homepage": "https://github.com/cristip73/mcp-server-asana",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cristip73/mcp-server-asana"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-asana",
+    "cristip73"
+  ],
+  "inputs": [
+    {
+      "id": "asana_access_token",
+      "type": "promptString",
+      "description": "Environment variable for asana access token authentication",
+      "password": true
+    },
+    {
+      "id": "default_workspace_id",
+      "type": "promptString",
+      "description": "Environment variable for default workspace id configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@cristip73/mcp-server-asana"
+    ],
+    "env": {
+      "ASANA_ACCESS_TOKEN": "your-asana-access-token",
+      "DEFAULT_WORKSPACE_ID": "your-default-workspace-id"
+    }
+  }
+}

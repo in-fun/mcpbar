@@ -1,0 +1,26 @@
+{
+  "name": "hello-world",
+  "version": "1.0.0",
+  "description": "Demostrate simple mcp server with typescript.",
+  "homepage": "https://github.com/jageenshukla/hello-world-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jageenshukla/hello-world-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "hello-world-mcp-server",
+    "jageenshukla"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "hello-world"
+    ],
+    "env": {}
+  }
+}

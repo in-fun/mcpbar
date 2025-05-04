@@ -1,0 +1,25 @@
+{
+  "name": "@aashari/mcp-server-aws-sso",
+  "version": "1.7.8",
+  "description": "Node.js/TypeScript MCP server for AWS Single Sign-On (SSO). Enables AI systems (LLMs) with tools to initiate SSO login (device auth flow), list accounts/roles, and securely execute AWS CLI commands using temporary credentials. Streamlines AI interaction with AWS resources.",
+  "homepage": "https://github.com/aashari/mcp-server-aws-sso",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aashari/mcp-server-aws-sso"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-aws-sso",
+    "aashari"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@aashari/mcp-server-aws-sso"
+    ]
+  }
+}

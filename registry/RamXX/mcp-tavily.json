@@ -1,0 +1,36 @@
+{
+  "name": "mcp_tavily",
+  "version": "1.0.0",
+  "description": "An MCP server for Tavily's search API",
+  "homepage": "https://github.com/RamXX/mcp-tavily",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RamXX/mcp-tavily"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "news",
+    "search",
+    "tavily",
+    "web",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "apiKey",
+      "description": "Tavily API Key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-tavily"
+    ],
+    "env": {
+      "TAVILY_API_KEY": "${input:apiKey}"
+    }
+  }
+}

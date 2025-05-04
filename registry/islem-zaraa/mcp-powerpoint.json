@@ -1,0 +1,26 @@
+{
+  "name": "mcp-powerpoint",
+  "version": "0.1.3",
+  "description": "Model Context Protocol plugin for PowerPoint",
+  "homepage": "https://github.com/islem-zaraa/mcp-powerpoint",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/islem-zaraa/mcp-powerpoint"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-powerpoint",
+    "islem-zaraa"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-powerpoint"
+    ],
+    "env": {}
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "name": "dkmaker-mcp-rest-api",
+  "version": "0.4.0",
+  "description": "A generic REST API tester for testing HTTP endpoints",
+  "homepage": "https://github.com/dkmaker/mcp-rest-api",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dkmaker/mcp-rest-api"
+  },
+  "license": "MIT",
+  "keywords": [
+    "anthropic",
+    "claude-3-5-sonnet",
+    "cline",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "rest_base_url",
+      "type": "promptString",
+      "description": "Environment variable for rest base url",
+      "password": false
+    },
+    {
+      "id": "auth_basic_user",
+      "type": "promptString",
+      "description": "Environment variable for auth basic user",
+      "password": false
+    },
+    {
+      "id": "auth_basic_pass",
+      "type": "promptString",
+      "description": "Environment variable for auth basic pass",
+      "password": false
+    },
+    {
+      "id": "auth_api",
+      "type": "promptString",
+      "description": "Environment variable for auth api",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "dkmaker-mcp-rest-api"
+    ],
+    "env": {
+      "REST_BASE_URL": "${input:rest_base_url}",
+      "AUTH_BASIC_USER": "${input:auth_basic_user}",
+      "AUTH_BASIC_PASS": "${input:auth_basic_pass}",
+      "AUTH_API": "${input:auth_api}"
+    }
+  }
+}

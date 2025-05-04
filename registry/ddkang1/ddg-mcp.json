@@ -1,0 +1,55 @@
+{
+  "name": "ddg-mcp",
+  "version": "1.0.0",
+  "description": "DuckDuckGo search API MCP server",
+  "homepage": "https://github.com/ddkang1/ddg-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ddkang1/ddg-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ddg-mcp",
+    "ddkang1"
+  ],
+  "inputs": [
+    {
+      "id": "uv_publish_token",
+      "type": "promptString",
+      "description": "Environment variable for uv publish token",
+      "password": true
+    },
+    {
+      "id": "uv_publish_user",
+      "type": "promptString",
+      "description": "Environment variable for uv publish user",
+      "password": false
+    },
+    {
+      "id": "uv_publish_pass",
+      "type": "promptString",
+      "description": "Environment variable for uv publish pass",
+      "password": false
+    },
+    {
+      "id": "pypi_api_token",
+      "type": "promptString",
+      "description": "Environment variable for pypi api token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "ddg-mcp"
+    ],
+    "env": {
+      "UV_PUBLISH_TOKEN": "${input:uv_publish_token}",
+      "UV_PUBLISH_USER": "${input:uv_publish_user}",
+      "UV_PUBLISH_PASS": "${input:uv_publish_pass}",
+      "PYPI_API_TOKEN": "${input:pypi_api_token}"
+    }
+  }
+}

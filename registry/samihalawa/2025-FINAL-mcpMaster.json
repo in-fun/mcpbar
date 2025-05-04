@@ -1,0 +1,56 @@
+{
+  "name": "rest-express",
+  "version": "1.0.0",
+  "description": "MCP server for 2025-FINAL-mcpMaster",
+  "homepage": "replit.com/@samihalawaster/McpMaster",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samihalawa/2025-FINAL-mcpMaster"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "2025-final-mcpmaster",
+    "samihalawa"
+  ],
+  "inputs": [
+    {
+      "id": "reuse_port",
+      "type": "promptString",
+      "description": "Environment variable for reuse port",
+      "password": false
+    },
+    {
+      "id": "mcp_port",
+      "type": "promptString",
+      "description": "Environment variable for mcp port",
+      "password": false
+    },
+    {
+      "id": "smithery_api_key",
+      "type": "promptString",
+      "description": "Environment variable for smithery api key",
+      "password": true
+    },
+    {
+      "id": "your_api_key",
+      "type": "promptString",
+      "description": "Environment variable for your api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "rest-express"
+    ],
+    "env": {
+      "REUSE_PORT": "${input:reuse_port}",
+      "MCP_PORT": "${input:mcp_port}",
+      "SMITHERY_API_KEY": "${input:smithery_api_key}",
+      "YOUR_API_KEY": "${input:your_api_key}"
+    }
+  }
+}

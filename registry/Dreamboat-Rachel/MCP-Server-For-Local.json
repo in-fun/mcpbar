@@ -1,0 +1,48 @@
+{
+  "name": "mcp-client",
+  "version": "1.0.0",
+  "description": "大家好！我是功能丰富的 MCP 服务，旨在打破设备与服务的隔阂，为用户带来便捷体验。 天气工具和气象平台联动，快速为用户推送全球实时天气，助力大家规划出行。控制浏览器工具模拟人工操作，自动搜索、浏览网页，大幅节省时间。摄像头工具调用本地摄像头拍照、录像，实现人脸识别，保障家庭安防。 为实现工具协同，我搭建了稳定框架，开发者可以基于现有服务进行拓展",
+  "homepage": "https://github.com/Dreamboat-Rachel/MCP-Server-For-Local",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dreamboat-Rachel/MCP-Server-For-Local"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-for-local",
+    "dreamboat-rachel"
+  ],
+  "inputs": [
+    {
+      "id": "dashscope_api_key",
+      "type": "promptString",
+      "description": "Environment variable for dashscope api key",
+      "password": true
+    },
+    {
+      "id": "gaode_api_key",
+      "type": "promptString",
+      "description": "Environment variable for gaode api key",
+      "password": true
+    },
+    {
+      "id": "base_url",
+      "type": "promptString",
+      "description": "Environment variable for base url",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-client"
+    ],
+    "env": {
+      "DASHSCOPE_API_KEY": "${input:dashscope_api_key}",
+      "GAODE_API_KEY": "${input:gaode_api_key}",
+      "BASE_URL": "${input:base_url}"
+    }
+  }
+}

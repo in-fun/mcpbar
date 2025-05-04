@@ -1,0 +1,25 @@
+{
+  "name": "blender-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for blender-mcp",
+  "homepage": "https://github.com/cwahlfeldt/blender-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cwahlfeldt/blender-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "blender-mcp",
+    "cwahlfeldt"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "blender-mcp"
+    ],
+    "env": {}
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "mcp-server-ens",
+  "version": "0.1.0",
+  "description": "An MCP server for interacting with the Ethereum Name Service (ENS)",
+  "homepage": "https://github.com/JustaName-id/ens-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JustaName-id/ens-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ens-mcp-server",
+    "justaname-id"
+  ],
+  "inputs": [
+    {
+      "id": "provider_url",
+      "type": "promptString",
+      "description": "Environment variable for provider url configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-server-ens"
+    ],
+    "env": {
+      "PROVIDER_URL": "https://your-provider-url.com,https://your-backup-provider.com"
+    }
+  }
+}

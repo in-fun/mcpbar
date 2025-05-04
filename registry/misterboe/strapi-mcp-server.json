@@ -1,0 +1,25 @@
+{
+  "name": "@bschauer/strapi-mcp-server",
+  "version": "2.5.0",
+  "description": "Model Context Protocol server implementation for Strapi CMS with enhanced security disclaimer and configuration",
+  "homepage": "https://github.com/misterboe/strapi-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/misterboe/strapi-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "strapi-mcp-server",
+    "misterboe"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@bschauer/strapi-mcp-server@2.5.0"
+    ]
+  }
+}

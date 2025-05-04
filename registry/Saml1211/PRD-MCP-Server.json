@@ -1,0 +1,25 @@
+{
+  "name": "prd-creator-mcp",
+  "version": "0.1.1",
+  "description": "A Model Context Protocol server for creating Product Requirements Documents",
+  "homepage": "https://github.com/Saml1211/PRD-MCP-Server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Saml1211/PRD-MCP-Server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "prd-mcp-server",
+    "saml1211"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "prd-creator-mcp"
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "@mingzilla/pi-api-mcp-server",
+  "version": "1.0.9",
+  "description": "An MCP server for interacting with the PI Dashboard API",
+  "homepage": "https://github.com/mingzilla/pi-api-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mingzilla/pi-api-mcp-server"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "pi-api-mcp-server",
+    "mingzilla"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "docker",
+    "args": [
+      "run",
+      "-i",
+      "--rm",
+      "-e",
+      "API_URL=http://localhost:8224/pi/api/v2",
+      "-e",
+      "PI_API_KEY=XXXXXXXX",
+      "mingzilla/pi-api-mcp-server"
+    ],
+    "disabled": false,
+    "autoApprove": [
+      "keep-session-alive",
+      "check-connection",
+      "authenticate",
+      "list-categories",
+      "get-category",
+      "list-charts",
+      "get-chart",
+      "export-chart",
+      "get-filterable-attributes",
+      "export-chart"
+    ]
+  }
+}

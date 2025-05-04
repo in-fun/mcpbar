@@ -1,0 +1,27 @@
+{
+  "name": "mcp-obsidian",
+  "version": "1.0.0",
+  "description": "MCP server that interacts with Obsidian via the Obsidian rest API community plugin",
+  "homepage": "https://github.com/Jordanm37/mcp-obsidian",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jordanm37/mcp-obsidian"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-obsidian",
+    "jordanm37"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "<dir_to>/mcp-obsidian",
+      "run",
+      "mcp-obsidian"
+    ]
+  }
+}

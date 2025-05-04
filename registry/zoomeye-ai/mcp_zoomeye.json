@@ -1,0 +1,36 @@
+{
+  "name": "mcp-server-zoomeye",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol server that provides network asset information based on query conditions. This server allows LLMs to obtain network asset information and supports querying network asset information by zoomeye dork etc.",
+  "homepage": "https://www.zoomeye.ai/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zoomeye-ai/mcp_zoomeye"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "cybersecurity",
+    "osint",
+    "search-engine",
+    "zoomeye",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "zoomeye_api_key",
+      "type": "promptString",
+      "description": "Environment variable for zoomeye api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-server-zoomeye"
+    ],
+    "env": {
+      "ZOOMEYE_API_KEY": "${input:zoomeye_api_key}"
+    }
+  }
+}

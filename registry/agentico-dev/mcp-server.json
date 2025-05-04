@@ -1,0 +1,28 @@
+{
+  "name": "@agentico/mcp-server",
+  "version": "0.3.0",
+  "description": "A Model Context Protocol Server facade to simplify the implementation of agents",
+  "homepage": "https://agentico.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agentico-dev/mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "ai-agent-framework",
+    "ai-tools",
+    "mcp",
+    "modelcontextprotocol",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@agentico/mcp-server"
+    ],
+    "env": {}
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@tiangong-lca/mcp-server",
+  "version": "0.0.2",
+  "description": "TianGong LCA MCP Server",
+  "homepage": "https://github.com/linancn/tiangong-lca-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/linancn/tiangong-lca-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "tiangong-lca-mcp",
+    "linancn"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@tiangong-lca/mcp-server"
+    ],
+    "env": {}
+  }
+}

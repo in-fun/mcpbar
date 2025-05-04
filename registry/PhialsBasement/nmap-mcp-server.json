@@ -1,0 +1,24 @@
+{
+  "name": "mcp-nmap-server",
+  "version": "1.0.1",
+  "description": "MCP server for performing network scanning using NMAP",
+  "homepage": "https://github.com/PhialsBasement/nmap-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PhialsBasement/nmap-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "nmap-mcp-server",
+    "phialsbasement"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "C:\\Users\\YOUR_USERNAME\\Downloads\\mcp-nmap-server\\dist\\index.js"
+    ]
+  }
+}

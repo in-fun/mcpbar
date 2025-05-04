@@ -1,0 +1,93 @@
+{
+  "name": "task-master-ai",
+  "version": "0.12.1",
+  "description": "A task management system for ambitious AI-driven development that doesn't overwhelm and confuse Cursor.",
+  "homepage": "https://task-master.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eyaltoledano/claude-task-master"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "ai",
+    "cursor",
+    "task-manager",
+    "tasks",
+    "tasks-list",
+    "cursor-ai",
+    "cursorai",
+    "lovable",
+    "lovable-dev",
+    "roocode",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "anthropic_api_key",
+      "type": "promptString",
+      "description": "Environment variable for anthropic api key authentication",
+      "password": true
+    },
+    {
+      "id": "perplexity_api_key",
+      "type": "promptString",
+      "description": "Environment variable for perplexity api key authentication",
+      "password": true
+    },
+    {
+      "id": "model",
+      "type": "promptString",
+      "description": "Environment variable for model configuration",
+      "password": false
+    },
+    {
+      "id": "perplexity_model",
+      "type": "promptString",
+      "description": "Environment variable for perplexity model configuration",
+      "password": false
+    },
+    {
+      "id": "max_tokens",
+      "type": "promptString",
+      "description": "Environment variable for max tokens configuration",
+      "password": true
+    },
+    {
+      "id": "temperature",
+      "type": "promptString",
+      "description": "Environment variable for temperature configuration",
+      "password": false
+    },
+    {
+      "id": "default_subtasks",
+      "type": "promptString",
+      "description": "Environment variable for default subtasks configuration",
+      "password": false
+    },
+    {
+      "id": "default_priority",
+      "type": "promptString",
+      "description": "Environment variable for default priority configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "--package=task-master-ai",
+      "task-master-ai"
+    ],
+    "env": {
+      "ANTHROPIC_API_KEY": "YOUR_ANTHROPIC_API_KEY_HERE",
+      "PERPLEXITY_API_KEY": "YOUR_PERPLEXITY_API_KEY_HERE",
+      "MODEL": "claude-3-7-sonnet-20250219",
+      "PERPLEXITY_MODEL": "sonar-pro",
+      "MAX_TOKENS": "64000",
+      "TEMPERATURE": "0.2",
+      "DEFAULT_SUBTASKS": "5",
+      "DEFAULT_PRIORITY": "medium"
+    }
+  }
+}

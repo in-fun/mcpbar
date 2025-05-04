@@ -1,0 +1,55 @@
+{
+  "name": "minimax-mcp",
+  "version": "1.0.0",
+  "description": "Official MiniMax Model Context Protocol (MCP) server that enables interaction with powerful Text to Speech and video generation APIs.",
+  "homepage": "https://www.minimax.io/platform",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ropon/MiniMax-MCP"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "minimax-mcp",
+    "ropon"
+  ],
+  "inputs": [
+    {
+      "id": "minimax_api_key",
+      "type": "promptString",
+      "description": "Environment variable for minimax api key authentication",
+      "password": true
+    },
+    {
+      "id": "minimax_mcp_base_path",
+      "type": "promptString",
+      "description": "Environment variable for minimax mcp base path configuration",
+      "password": false
+    },
+    {
+      "id": "minimax_api_host",
+      "type": "promptString",
+      "description": "Environment variable for minimax api host configuration",
+      "password": false
+    },
+    {
+      "id": "minimax_api_resource_mode",
+      "type": "promptString",
+      "description": "Environment variable for minimax api resource mode configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "minimax-mcp"
+    ],
+    "env": {
+      "MINIMAX_API_KEY": "<insert-your-api-key-here>",
+      "MINIMAX_MCP_BASE_PATH": "<local-output-dir-path>",
+      "MINIMAX_API_HOST": "https://api.minimaxi.chat",
+      "MINIMAX_API_RESOURCE_MODE": "<optional, [url|local], url is default, audio/image/video are downloaded locally or provided in URL format>"
+    }
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "@negokaz/excel-mcp-server",
+  "version": "0.6.0",
+  "description": "An MCP server that reads and writes spreadsheet data to MS Excel file",
+  "homepage": "https://github.com/negokaz/excel-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/negokaz/excel-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "excel-mcp-server",
+    "negokaz"
+  ],
+  "inputs": [
+    {
+      "id": "excel_mcp_paging_cells_limit",
+      "type": "promptString",
+      "description": "Environment variable for excel mcp paging cells limit configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "cmd",
+    "args": [
+      "/c",
+      "npx",
+      "--yes",
+      "@negokaz/excel-mcp-server"
+    ],
+    "env": {
+      "EXCEL_MCP_PAGING_CELLS_LIMIT": "4000"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "stock-info",
+  "version": "1.0.0",
+  "description": "获取股票各类信息",
+  "homepage": "https://github.com/tddt/stock_info_mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tddt/stock_info_mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "stock_info_mcp",
+    "tddt"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "stock-info"
+    ],
+    "env": {}
+  }
+}

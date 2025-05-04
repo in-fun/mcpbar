@@ -1,0 +1,25 @@
+{
+  "name": "crewai-adapters",
+  "version": "1.0.0",
+  "description": "MCP server for crewai_mcp_adapter",
+  "homepage": "https://github.com/dshivendra/crewai_mcp_adapter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dshivendra/crewai_mcp_adapter"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "crewai_mcp_adapter",
+    "dshivendra"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "crewai-adapters"
+    ],
+    "env": {}
+  }
+}

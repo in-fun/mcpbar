@@ -1,0 +1,27 @@
+{
+  "name": "@zhijianren/env-mcp",
+  "version": "0.0.10",
+  "description": "获取当前环境的 mcp",
+  "homepage": "https://github.com/JackXuyi/env-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JackXuyi/env-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "env-mcp",
+    "jackxuyi"
+  ],
+  "inputs": [],
+  "server": {
+    "name": "env-mcp",
+    "type": "command",
+    "command": "node",
+    "args": [
+      "/usr/local/lib/node_modules/@zhijianren/env-mcp/dist/index.js"
+    ],
+    "enabled": true
+  }
+}

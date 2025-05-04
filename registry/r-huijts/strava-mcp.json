@@ -1,0 +1,49 @@
+{
+  "name": "strava-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for Strava API",
+  "homepage": "https://github.com/r-huijts/strava-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/r-huijts/strava-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "strava-mcp",
+    "r-huijts"
+  ],
+  "inputs": [
+    {
+      "id": "strava_client_secret",
+      "type": "promptString",
+      "description": "Environment variable for strava client secret",
+      "password": true
+    },
+    {
+      "id": "strava_access_token",
+      "type": "promptString",
+      "description": "Environment variable for strava access token",
+      "password": true
+    },
+    {
+      "id": "strava_refresh_token",
+      "type": "promptString",
+      "description": "Environment variable for strava refresh token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "strava-mcp-server"
+    ],
+    "env": {
+      "STRAVA_CLIENT_SECRET": "${input:strava_client_secret}",
+      "STRAVA_ACCESS_TOKEN": "${input:strava_access_token}",
+      "STRAVA_REFRESH_TOKEN": "${input:strava_refresh_token}"
+    }
+  }
+}

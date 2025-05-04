@@ -1,0 +1,23 @@
+{
+  "name": "semgrep-mcp",
+  "version": "1.0.0",
+  "description": "A MCP server for using Semgrep to scan code for security vulnerabilities.",
+  "homepage": "https://semgrep.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/semgrep/mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "semgrep",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "semgrep-mcp"
+    ]
+  }
+}

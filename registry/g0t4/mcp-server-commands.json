@@ -1,0 +1,24 @@
+{
+  "name": "mcp-server-commands",
+  "version": "0.5.0",
+  "description": "An MCP server to run arbitrary commands",
+  "homepage": "https://github.com/g0t4/mcp-server-commands",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/g0t4/mcp-server-commands"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-commands",
+    "g0t4"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "mcp-server-commands"
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "mcprouter",
+  "version": "0.1.6",
+  "description": "proxy for remote mcp servers.",
+  "homepage": "https://github.com/chatmcp/mcp-server-router",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chatmcp/mcp-server-router"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-router",
+    "chatmcp"
+  ],
+  "inputs": [
+    {
+      "id": "server_key",
+      "type": "promptString",
+      "description": "Environment variable for server key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcprouter"
+    ],
+    "env": {
+      "SERVER_KEY": "xxx"
+    }
+  }
+}

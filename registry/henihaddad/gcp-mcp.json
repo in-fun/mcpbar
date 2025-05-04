@@ -1,0 +1,25 @@
+{
+  "name": "gcp-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for gcp-mcp",
+  "homepage": "https://github.com/henihaddad/gcp-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/henihaddad/gcp-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "gcp-mcp",
+    "henihaddad"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "gcp-mcp"
+    ],
+    "env": {}
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "name": "iotdb-mcp-server",
+  "version": "1.0.0",
+  "description": "Apache IoTDB MCP Server",
+  "homepage": "https://iotdb.apache.org/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apache/iotdb-mcp-server"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "big-data",
+    "database",
+    "iot",
+    "mcp-server",
+    "python",
+    "timeseries",
+    "tsdb",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "iotdb_host",
+      "type": "promptString",
+      "description": "Environment variable for iotdb host configuration",
+      "password": false
+    },
+    {
+      "id": "iotdb_port",
+      "type": "promptString",
+      "description": "Environment variable for iotdb port configuration",
+      "password": false
+    },
+    {
+      "id": "iotdb_user",
+      "type": "promptString",
+      "description": "Environment variable for iotdb user configuration",
+      "password": false
+    },
+    {
+      "id": "iotdb_password",
+      "type": "promptString",
+      "description": "Environment variable for iotdb password authentication",
+      "password": false
+    },
+    {
+      "id": "iotdb_database",
+      "type": "promptString",
+      "description": "Environment variable for iotdb database configuration",
+      "password": false
+    },
+    {
+      "id": "iotdb_sql_dialect",
+      "type": "promptString",
+      "description": "Environment variable for iotdb sql dialect configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "YOUR_REPO_PATH/src/iotdb_mcp_server",
+      "run",
+      "server.py"
+    ],
+    "env": {
+      "IOTDB_HOST": "127.0.0.1",
+      "IOTDB_PORT": "6667",
+      "IOTDB_USER": "root",
+      "IOTDB_PASSWORD": "root",
+      "IOTDB_DATABASE": "test",
+      "IOTDB_SQL_DIALECT": "table"
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "websearch-mcp",
+  "version": "1.0.2",
+  "description": "A Model Context Protocol (MCP) server implementation that provides real-time web search capabilities through a simple API",
+  "homepage": "https://github.com/mnhlt/WebSearch-MCP",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mnhlt/WebSearch-MCP"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "internet-access-llm",
+    "websearch",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "cmd",
+    "args": [
+      "/c",
+      "npx",
+      "websearch-mcp"
+    ],
+    "environment": {
+      "API_URL": "http://localhost:3001",
+      "MAX_SEARCH_RESULT": "1"
+    }
+  }
+}

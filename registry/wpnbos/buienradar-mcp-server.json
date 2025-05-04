@@ -1,0 +1,27 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "MCP server for Buienradar's precipitation endpoint",
+  "homepage": "https://github.com/wpnbos/buienradar-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wpnbos/buienradar-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "buienradar-mcp-server",
+    "wpnbos"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "/ABSOLUTE/PATH/TO/PARENT/FOLDER/buienradar-mcp-server",
+      "run",
+      "server.py"
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "name": "one-search-mcp",
+  "version": "1.0.11",
+  "description": "One Search MCP Server, Web Search & Crawl & Scraper & Extract, support Firecrawl, SearXNG, Tavily, DuckDuckGo, Bing, etc.",
+  "homepage": "https://github.com/yokingma/one-search-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yokingma/one-search-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp-server",
+    "modelcontextprotocol",
+    "bing-mcp",
+    "duckduckgo-mcp",
+    "searxng-mcp",
+    "tavily-mcp",
+    "firecrawl-mcp",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "search_provider",
+      "type": "promptString",
+      "description": "Environment variable for search provider configuration",
+      "password": false
+    },
+    {
+      "id": "search_api_url",
+      "type": "promptString",
+      "description": "Environment variable for search api url configuration",
+      "password": false
+    },
+    {
+      "id": "search_api_key",
+      "type": "promptString",
+      "description": "Environment variable for search api key authentication",
+      "password": true
+    },
+    {
+      "id": "firecrawl_api_url",
+      "type": "promptString",
+      "description": "Environment variable for firecrawl api url configuration",
+      "password": false
+    },
+    {
+      "id": "firecrawl_api_key",
+      "type": "promptString",
+      "description": "Environment variable for firecrawl api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "one-search-mcp"
+    ],
+    "env": {
+      "SEARCH_PROVIDER": "searxng",
+      "SEARCH_API_URL": "http://127.0.0.1:8080",
+      "SEARCH_API_KEY": "YOUR_API_KEY",
+      "FIRECRAWL_API_URL": "http://127.0.0.1:3002",
+      "FIRECRAWL_API_KEY": "YOUR_API_KEY"
+    }
+  }
+}

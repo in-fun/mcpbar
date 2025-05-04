@@ -1,0 +1,41 @@
+{
+  "name": "mcp",
+  "version": "1.0.0",
+  "description": "MCP server for mcp-py",
+  "homepage": "https://github.com/imax09-wq/mcp-py",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/imax09-wq/mcp-py"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-py",
+    "imax09-wq"
+  ],
+  "inputs": [
+    {
+      "id": "api_key",
+      "type": "promptString",
+      "description": "Environment variable for api key",
+      "password": true
+    },
+    {
+      "id": "db_url",
+      "type": "promptString",
+      "description": "Environment variable for db url",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp"
+    ],
+    "env": {
+      "API_KEY": "${input:api_key}",
+      "DB_URL": "${input:db_url}"
+    }
+  }
+}

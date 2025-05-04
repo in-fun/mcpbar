@@ -1,0 +1,25 @@
+{
+  "name": "agpt",
+  "version": "1.0.0",
+  "description": "An experimental open-source attempt to make GPT-4 fully autonomous.",
+  "homepage": "https://agpt.co",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/a1351995160/Auto-GPT"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "auto-gpt",
+    "a1351995160"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "agpt"
+    ],
+    "env": {}
+  }
+}

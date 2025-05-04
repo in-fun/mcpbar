@@ -1,0 +1,29 @@
+{
+  "name": "@browsermcp/mcp",
+  "version": "0.1.3",
+  "description": "MCP server for browser automation using Browser MCP",
+  "homepage": "https://browsermcp.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BrowserMCP/mcp"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "browser-automation",
+    "browser-extension",
+    "claude",
+    "cursor",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@browsermcp/mcp"
+    ],
+    "env": {}
+  }
+}

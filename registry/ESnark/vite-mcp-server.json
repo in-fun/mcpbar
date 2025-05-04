@@ -1,0 +1,26 @@
+{
+  "name": "blowback-context",
+  "version": "0.4.0",
+  "description": "MCP server that integrates with FE development server for Cursor",
+  "homepage": "https://www.npmjs.com/package/blowback-context",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ESnark/vite-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "vite-mcp-server",
+    "esnark"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "blowback-context"
+    ],
+    "env": {}
+  }
+}

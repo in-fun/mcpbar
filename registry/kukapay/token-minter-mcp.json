@@ -1,0 +1,41 @@
+{
+  "name": "token-minter-mcp",
+  "version": "1.0.1",
+  "description": "An MCP server providing tools for AI agents to mint ERC-20 tokens across multiple blockchains.",
+  "homepage": "https://github.com/kukapay/token-minter-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kukapay/token-minter-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "token-minter-mcp",
+    "kukapay"
+  ],
+  "inputs": [
+    {
+      "id": "infura_key",
+      "type": "promptString",
+      "description": "Environment variable for infura key authentication",
+      "password": true
+    },
+    {
+      "id": "private_key",
+      "type": "promptString",
+      "description": "Environment variable for private key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "path/to/token-minter-mcp/server/index.js"
+    ],
+    "env": {
+      "INFURA_KEY": "your infura key",
+      "PRIVATE_KEY": "your private key"
+    }
+  }
+}

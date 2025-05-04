@@ -1,0 +1,49 @@
+{
+  "name": "appstore-connect-mcp-server",
+  "version": "1.0.1",
+  "description": "MCP server for app-store-connect-mcp-server",
+  "homepage": "https://github.com/JoshuaRileyDev/app-store-connect-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JoshuaRileyDev/app-store-connect-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "app-store-connect-mcp-server",
+    "joshuarileydev"
+  ],
+  "inputs": [
+    {
+      "id": "app_store_connect_key_id",
+      "type": "promptString",
+      "description": "Environment variable for app store connect key id authentication",
+      "password": true
+    },
+    {
+      "id": "app_store_connect_issuer_id",
+      "type": "promptString",
+      "description": "Environment variable for app store connect issuer id configuration",
+      "password": false
+    },
+    {
+      "id": "app_store_connect_p8_path",
+      "type": "promptString",
+      "description": "Environment variable for app store connect p8 path configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@your-org/app-store-connect-mcp-server"
+    ],
+    "env": {
+      "APP_STORE_CONNECT_KEY_ID": "YOUR_KEY_ID",
+      "APP_STORE_CONNECT_ISSUER_ID": "YOUR_ISSUER_ID",
+      "APP_STORE_CONNECT_P8_PATH": "/path/to/your/auth-key.p8"
+    }
+  }
+}

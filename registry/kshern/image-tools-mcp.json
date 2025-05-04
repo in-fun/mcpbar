@@ -1,0 +1,41 @@
+{
+  "name": "image-tools-mcp",
+  "version": "0.0.9",
+  "description": "A Model Context Protocol (MCP) service for retrieving image dimensions, supporting both URL and local file sources.",
+  "homepage": "https://github.com/kshern/image-tools-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kshern/image-tools-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "image-tools-mcp",
+    "kshern"
+  ],
+  "inputs": [
+    {
+      "id": "tinify_api_key",
+      "type": "promptString",
+      "description": "Environment variable for tinify api key authentication",
+      "password": true
+    },
+    {
+      "id": "figma_api_token",
+      "type": "promptString",
+      "description": "Environment variable for figma api token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "image-tools-mcp"
+    ],
+    "env": {
+      "TINIFY_API_KEY": "<YOUR_TINIFY_API_KEY>",
+      "FIGMA_API_TOKEN": "<YOUR_FIGMA_API_TOKEN>"
+    }
+  }
+}

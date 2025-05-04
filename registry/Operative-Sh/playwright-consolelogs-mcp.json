@@ -1,0 +1,25 @@
+{
+  "name": "playwrightdebugger",
+  "version": "1.0.0",
+  "description": "MCP server for playwright-consolelogs-mcp",
+  "homepage": "https://github.com/Operative-Sh/playwright-consolelogs-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Operative-Sh/playwright-consolelogs-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "playwright-consolelogs-mcp",
+    "operative-sh"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "playwrightdebugger"
+    ],
+    "env": {}
+  }
+}

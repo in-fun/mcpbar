@@ -1,0 +1,26 @@
+{
+  "name": "@dasheck0/face-generator",
+  "version": "1.0.0",
+  "description": "MCP server for generating human face images with various shapes and sizes",
+  "homepage": "https://github.com/dasheck0/face-generator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dasheck0/face-generator"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "face-generator",
+    "dasheck0"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@dasheck0/face-generator"
+    ],
+    "env": {}
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "grok-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for Grok AI API integration",
+  "homepage": "https://github.com/Bob-lance/grok-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bob-lance/grok-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "grok-mcp",
+    "bob-lance"
+  ],
+  "inputs": [
+    {
+      "id": "xai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for xai api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/grok-mcp/build/index.js"
+    ],
+    "env": {
+      "XAI_API_KEY": "your-grok-api-key"
+    },
+    "disabled": false,
+    "autoApprove": []
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "agentql-mcp",
+  "version": "1.0.0",
+  "description": "Model Context Protocol (MCP) server that integrates AgentQL data extraction capabilities.",
+  "homepage": "https://docs.agentql.com/integrations/mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tinyfish-io/agentql-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "agent",
+    "agentql",
+    "ai",
+    "aiagent",
+    "claude",
+    "cursor",
+    "llm-tools",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "agentql_api_key",
+      "type": "promptString",
+      "description": "Environment variable for agentql api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "/path/to/agentql-mcp/dist/index.js",
+    "env": {
+      "AGENTQL_API_KEY": "YOUR_API_KEY"
+    }
+  }
+}

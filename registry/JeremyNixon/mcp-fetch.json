@@ -1,0 +1,26 @@
+{
+  "name": "@smithery/mcp-fetch",
+  "version": "0.8.11",
+  "description": "A Model Context Protocol server that provides web content fetching capabilities",
+  "homepage": "https://github.com/JeremyNixon/mcp-fetch",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JeremyNixon/mcp-fetch"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-fetch",
+    "jeremynixon"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@smithery/mcp-fetch"
+    ],
+    "env": {}
+  }
+}

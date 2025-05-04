@@ -1,0 +1,25 @@
+{
+  "name": "documentation",
+  "version": "1.0.0",
+  "description": "A simple MCP server to search for documentation (tutorial)",
+  "homepage": "https://github.com/bitfollow/mcp-server-example",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bitfollow/mcp-server-example"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-example",
+    "bitfollow"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "documentation"
+    ],
+    "env": {}
+  }
+}

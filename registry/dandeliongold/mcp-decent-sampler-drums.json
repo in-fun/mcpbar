@@ -1,0 +1,28 @@
+{
+  "name": "@dandeliongold/mcp-decent-sampler-drums",
+  "version": "0.1.5",
+  "description": "A Model Context Protocol server for building Decent Sampler drum kit sample presets.",
+  "homepage": "https://github.com/dandeliongold/mcp-decent-sampler-drums",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dandeliongold/mcp-decent-sampler-drums"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude",
+    "claude-ai",
+    "decent-sampler",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@dandeliongold/mcp-decent-sampler-drums"
+    ],
+    "env": {}
+  }
+}

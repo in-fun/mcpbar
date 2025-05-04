@@ -1,0 +1,36 @@
+{
+  "name": "mcp-server-giphy",
+  "version": "1.0.3",
+  "description": "An implementation of Giphy integration with Model Context Protocol",
+  "homepage": "https://github.com/magarcia/mcp-server-giphy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/magarcia/mcp-server-giphy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "giphy",
+    "giphy-api",
+    "mcp-server",
+    "model-context-protocol",
+    "mcp"
+  ],
+  "inputs": [
+    {
+      "id": "giphy_api_key",
+      "type": "promptString",
+      "description": "Environment variable for giphy api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-server-giphy"
+    ],
+    "env": {
+      "GIPHY_API_KEY": "<YOUR_API_KEY>"
+    }
+  }
+}

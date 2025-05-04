@@ -1,0 +1,40 @@
+{
+  "name": "upsonic",
+  "version": "1.0.0",
+  "description": "The most reliable AI agent framework that supports MCP.",
+  "homepage": "https://docs.upsonic.ai",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Upsonic/Upsonic"
+  },
+  "license": "MIT",
+  "keywords": [
+    "openai",
+    "computer-use",
+    "claude",
+    "mcp",
+    "agent-framework",
+    "agent",
+    "llms",
+    "reliability",
+    "model-context-protocol",
+    "rag"
+  ],
+  "inputs": [
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "upsonic"
+    ],
+    "env": {
+      "OPENAI_API_KEY": "${input:openai_api_key}"
+    }
+  }
+}

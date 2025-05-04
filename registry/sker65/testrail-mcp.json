@@ -1,0 +1,48 @@
+{
+  "name": "testrail-mcp",
+  "version": "1.0.0",
+  "description": "An mcp server for testrail",
+  "homepage": "https://github.com/sker65/testrail-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sker65/testrail-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "testrail-mcp",
+    "sker65"
+  ],
+  "inputs": [
+    {
+      "id": "testrail_url",
+      "type": "promptString",
+      "description": "Environment variable for testrail url configuration",
+      "password": false
+    },
+    {
+      "id": "testrail_username",
+      "type": "promptString",
+      "description": "Environment variable for testrail username configuration",
+      "password": false
+    },
+    {
+      "id": "testrail_api_key",
+      "type": "promptString",
+      "description": "Environment variable for testrail api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "testrail-mcp"
+    ],
+    "env": {
+      "TESTRAIL_URL": "https://your-instance.testrail.io",
+      "TESTRAIL_USERNAME": "your-email@example.com",
+      "TESTRAIL_API_KEY": "your-api-key"
+    }
+  }
+}

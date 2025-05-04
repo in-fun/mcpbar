@@ -1,0 +1,64 @@
+{
+  "name": "mcp-postgres-server",
+  "version": "0.1.3",
+  "description": "A Model Context Protocol server for PostgreSQL database operations",
+  "homepage": "https://github.com/antonorlov/mcp-postgres-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antonorlov/mcp-postgres-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-postgres-server",
+    "antonorlov"
+  ],
+  "inputs": [
+    {
+      "id": "pg_host",
+      "type": "promptString",
+      "description": "Environment variable for pg host configuration",
+      "password": false
+    },
+    {
+      "id": "pg_port",
+      "type": "promptString",
+      "description": "Environment variable for pg port configuration",
+      "password": false
+    },
+    {
+      "id": "pg_user",
+      "type": "promptString",
+      "description": "Environment variable for pg user configuration",
+      "password": false
+    },
+    {
+      "id": "pg_password",
+      "type": "promptString",
+      "description": "Environment variable for pg password authentication",
+      "password": false
+    },
+    {
+      "id": "pg_database",
+      "type": "promptString",
+      "description": "Environment variable for pg database configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "type": "stdio",
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-postgres-server"
+    ],
+    "env": {
+      "PG_HOST": "your_host",
+      "PG_PORT": "5432",
+      "PG_USER": "your_user",
+      "PG_PASSWORD": "your_password",
+      "PG_DATABASE": "your_database"
+    }
+  }
+}

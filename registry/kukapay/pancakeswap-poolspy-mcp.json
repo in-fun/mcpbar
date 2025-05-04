@@ -1,0 +1,37 @@
+{
+  "name": "pancakeswap-poolspy-mcp",
+  "version": "1.0.0",
+  "description": "An MCP server that tracks newly created liquidity pools on Pancake Swap",
+  "homepage": "https://github.com/kukapay/pancakeswap-poolspy-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kukapay/pancakeswap-poolspy-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "pancakeswap-poolspy-mcp",
+    "kukapay"
+  ],
+  "inputs": [
+    {
+      "id": "thegraph_api_key",
+      "type": "promptString",
+      "description": "Environment variable for thegraph api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "path/to/pancakeswap-poolspy-mcp",
+      "run",
+      "main.py"
+    ],
+    "env": {
+      "THEGRAPH_API_KEY": "your api key from The Graph"
+    }
+  }
+}

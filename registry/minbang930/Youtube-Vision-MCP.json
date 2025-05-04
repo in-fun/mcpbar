@@ -1,0 +1,42 @@
+{
+  "name": "youtube-vision",
+  "version": "0.1.1",
+  "description": "MCP server using Gemini Vision API to interact with YouTube videos.",
+  "homepage": "https://github.com/minbang930/Youtube-Vision-MCP",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/minbang930/Youtube-Vision-MCP"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "youtube-vision-mcp",
+    "minbang930"
+  ],
+  "inputs": [
+    {
+      "id": "gemini_api_key",
+      "type": "promptString",
+      "description": "Environment variable for gemini api key authentication",
+      "password": true
+    },
+    {
+      "id": "gemini_model_name",
+      "type": "promptString",
+      "description": "Environment variable for gemini model name configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "youtube-vision"
+    ],
+    "env": {
+      "GEMINI_API_KEY": "YOUR_GEMINI_API_KEY",
+      "GEMINI_MODEL_NAME": "gemini-2.0-flash"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "fitbit-mcp",
+  "version": "1.0.1",
+  "description": "Fitbit Model Context Protocol integration for AI assistants",
+  "homepage": "https://github.com/NitayRabi/fitbit-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NitayRabi/fitbit-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "fitbit-mcp",
+    "nitayrabi"
+  ],
+  "inputs": [
+    {
+      "id": "fitbit_access_token",
+      "type": "promptString",
+      "description": "Environment variable for fitbit access token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "fitbit-mcp",
+      "--stdio"
+    ],
+    "env": {
+      "FITBIT_ACCESS_TOKEN": "YOUR_FITBIT_ACCESS_TOKEN"
+    }
+  }
+}

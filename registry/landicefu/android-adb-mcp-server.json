@@ -1,0 +1,28 @@
+{
+  "name": "@landicefu/android-adb-mcp-server",
+  "version": "1.0.3",
+  "description": "This MCP server provides tools for interacting with Android devices through the Android Debug Bridge (ADB). It enables AI assistants to perform common Android development and testing operations.",
+  "homepage": "https://github.com/landicefu/android-adb-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/landicefu/android-adb-mcp-server"
+  },
+  "license": "ISC",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "android-adb-mcp-server",
+    "landicefu"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@landicefu/android-adb-mcp-server"
+    ],
+    "env": {},
+    "disabled": false,
+    "alwaysAllow": []
+  }
+}

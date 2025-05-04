@@ -1,0 +1,38 @@
+{
+  "name": "@rijk/directus-mcp-server",
+  "version": "0.1.0",
+  "description": "Model context protocol server for Directus",
+  "homepage": "https://github.com/rijkvanzanten/directus-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rijkvanzanten/directus-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "directus-mcp-server",
+    "rijkvanzanten"
+  ],
+  "inputs": [
+    {
+      "id": "directus_url",
+      "type": "promptString",
+      "description": "Environment variable for directus url configuration",
+      "password": false
+    },
+    {
+      "id": "directus_token",
+      "type": "promptString",
+      "description": "Environment variable for directus token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "directus-mcp-server",
+    "env": {
+      "DIRECTUS_URL": "<your Directus instance URL>",
+      "DIRECTUS_TOKEN": "<your Directus user token>"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@superpoweredsdk/web",
+  "version": "2.7.2",
+  "description": "Superpowered interactive audio features in JavaScript + WebAssembly.",
+  "homepage": "https://github.com/Lomaloque/AUDIO",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Lomaloque/AUDIO"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "audio",
+    "lomaloque"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@superpoweredsdk/web"
+    ],
+    "env": {}
+  }
+}

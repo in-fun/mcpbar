@@ -1,0 +1,37 @@
+{
+  "name": "@mcpdotdirect/create-mcp-server",
+  "version": "2.0.1",
+  "description": "CLI tool to create a new MCP (Model Context Protocol) server project",
+  "homepage": "https://github.com/mcpdotdirect/template-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mcpdotdirect/template-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "boilerplate",
+    "mcp",
+    "mcp-server",
+    "template",
+    "mcp-server-template",
+    "agent",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "node_env",
+      "type": "promptString",
+      "description": "Environment variable for node env configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npm",
+    "args": [
+      "start"
+    ],
+    "env": {
+      "NODE_ENV": "development"
+    }
+  }
+}

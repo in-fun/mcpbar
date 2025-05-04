@@ -1,0 +1,23 @@
+{
+  "name": "mcp-etherscan-server",
+  "version": "1.0.0",
+  "description": "A TypeScript server boilerplate",
+  "homepage": "https://github.com/5ajaki/mcp-etherscan-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/5ajaki/mcp-etherscan-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-etherscan-server",
+    "5ajaki"
+  ],
+  "inputs": [],
+  "server": {
+    "name": "Etherscan Tools",
+    "transport": "stdio",
+    "command": "node /path/to/mcp-etherscan-server/build/index.js"
+  }
+}

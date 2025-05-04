@@ -1,0 +1,29 @@
+{
+  "name": "bitcoin-mcp",
+  "version": "0.0.6",
+  "description": "A Model Context Protocol server for interacting with Bitcoin.",
+  "homepage": "https://abdelstark.github.io/bitcoin-mcp/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AbdelStark/bitcoin-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "bitcoin",
+    "claude-desktop",
+    "mcp-server",
+    "ai-agents",
+    "goose",
+    "lightning-network",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "bitcoin-mcp@latest"
+    ]
+  }
+}

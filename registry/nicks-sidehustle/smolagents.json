@@ -1,0 +1,55 @@
+{
+  "name": "smolagents",
+  "version": "1.0.0",
+  "description": "🤗 smolagents: a barebones library for agents. Agents write python code to call tools and orchestrate other agents.",
+  "homepage": "https://huggingface.co/docs/smolagents",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nicks-sidehustle/smolagents"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "smolagents",
+    "nicks-sidehustle"
+  ],
+  "inputs": [
+    {
+      "id": "anthropic_api_key",
+      "type": "promptString",
+      "description": "Environment variable for anthropic api key",
+      "password": true
+    },
+    {
+      "id": "together_api_key",
+      "type": "promptString",
+      "description": "Environment variable for together api key",
+      "password": true
+    },
+    {
+      "id": "azure_openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for azure openai api key",
+      "password": true
+    },
+    {
+      "id": "openai_api",
+      "type": "promptString",
+      "description": "Environment variable for openai api",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "smolagents"
+    ],
+    "env": {
+      "ANTHROPIC_API_KEY": "${input:anthropic_api_key}",
+      "TOGETHER_API_KEY": "${input:together_api_key}",
+      "AZURE_OPENAI_API_KEY": "${input:azure_openai_api_key}",
+      "OPENAI_API": "${input:openai_api}"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "@missionsquad/mcp-github",
+  "version": "0.10.7",
+  "description": "MCP server for using the GitHub API",
+  "homepage": "https://github.com/MissionSquad/mcp-github",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MissionSquad/mcp-github"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-github",
+    "missionsquad"
+  ],
+  "inputs": [
+    {
+      "id": "github_personal_access_token",
+      "type": "promptString",
+      "description": "Environment variable for github personal access token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "docker",
+    "args": [
+      "run",
+      "-i",
+      "--rm",
+      "-e",
+      "GITHUB_PERSONAL_ACCESS_TOKEN",
+      "mcp/github"
+    ],
+    "env": {
+      "GITHUB_PERSONAL_ACCESS_TOKEN": "<YOUR_TOKEN>"
+    }
+  }
+}

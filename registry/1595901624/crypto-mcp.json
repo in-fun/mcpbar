@@ -1,0 +1,26 @@
+{
+  "name": "crypto-mcp",
+  "version": "1.0.2",
+  "description": "A Model Context Protocol (MCP) server for encrypting/decrypting/algorithm/hash",
+  "homepage": "https://github.com/1595901624/crypto-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1595901624/crypto-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "crypto-mcp",
+    "1595901624"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "path/to/crypto-mcp/build/index.js"
+    ],
+    "disabled": false,
+    "autoApprove": []
+  }
+}

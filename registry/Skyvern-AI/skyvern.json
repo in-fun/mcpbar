@@ -1,0 +1,119 @@
+{
+  "name": "skyvern",
+  "version": "1.0.0",
+  "description": "Automate browser-based workflows with LLMs and Computer Vision",
+  "homepage": "https://www.skyvern.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Skyvern-AI/skyvern/tree/main/integrations/mcp"
+  },
+  "license": "AGPL-3.0",
+  "keywords": [
+    "api",
+    "automation",
+    "browser",
+    "computer",
+    "gpt",
+    "llm",
+    "playwright",
+    "python",
+    "rpa",
+    "vision",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "llm_key",
+      "type": "promptString",
+      "description": "Environment variable for llm key",
+      "password": true
+    },
+    {
+      "id": "secondary_llm_key",
+      "type": "promptString",
+      "description": "Environment variable for secondary llm key",
+      "password": true
+    },
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key",
+      "password": true
+    },
+    {
+      "id": "openai_api",
+      "type": "promptString",
+      "description": "Environment variable for openai api",
+      "password": false
+    },
+    {
+      "id": "anthropic_api_key",
+      "type": "promptString",
+      "description": "Environment variable for anthropic api key",
+      "password": true
+    },
+    {
+      "id": "azure_api_key",
+      "type": "promptString",
+      "description": "Environment variable for azure api key",
+      "password": true
+    },
+    {
+      "id": "azure_api",
+      "type": "promptString",
+      "description": "Environment variable for azure api",
+      "password": false
+    },
+    {
+      "id": "gemini_api_key",
+      "type": "promptString",
+      "description": "Environment variable for gemini api key",
+      "password": true
+    },
+    {
+      "id": "novita_api_key",
+      "type": "promptString",
+      "description": "Environment variable for novita api key",
+      "password": true
+    },
+    {
+      "id": "openai_compatible_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai compatible api key",
+      "password": true
+    },
+    {
+      "id": "openai_compatible_api",
+      "type": "promptString",
+      "description": "Environment variable for openai compatible api",
+      "password": false
+    },
+    {
+      "id": "openai_compatible_max_token",
+      "type": "promptString",
+      "description": "Environment variable for openai compatible max token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "skyvern"
+    ],
+    "env": {
+      "LLM_KEY": "${input:llm_key}",
+      "SECONDARY_LLM_KEY": "${input:secondary_llm_key}",
+      "OPENAI_API_KEY": "${input:openai_api_key}",
+      "OPENAI_API": "${input:openai_api}",
+      "ANTHROPIC_API_KEY": "${input:anthropic_api_key}",
+      "AZURE_API_KEY": "${input:azure_api_key}",
+      "AZURE_API": "${input:azure_api}",
+      "GEMINI_API_KEY": "${input:gemini_api_key}",
+      "NOVITA_API_KEY": "${input:novita_api_key}",
+      "OPENAI_COMPATIBLE_API_KEY": "${input:openai_compatible_api_key}",
+      "OPENAI_COMPATIBLE_API": "${input:openai_compatible_api}",
+      "OPENAI_COMPATIBLE_MAX_TOKEN": "${input:openai_compatible_max_token}"
+    }
+  }
+}

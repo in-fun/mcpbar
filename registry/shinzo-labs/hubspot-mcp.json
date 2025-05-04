@@ -1,0 +1,35 @@
+{
+  "name": "@shinzolabs/hubspot-mcp",
+  "version": "1.3.1",
+  "description": "A complete MCP for the HubSpot API",
+  "homepage": "https://github.com/shinzo-labs/hubspot-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shinzo-labs/hubspot-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "hubspot-mcp",
+    "shinzo-labs"
+  ],
+  "inputs": [
+    {
+      "id": "hubspot_access_token",
+      "type": "promptString",
+      "description": "Environment variable for hubspot access token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@shinzolabs/hubspot-mcp"
+    ],
+    "env": {
+      "HUBSPOT_ACCESS_TOKEN": "${input:hubspot_access_token}"
+    }
+  }
+}

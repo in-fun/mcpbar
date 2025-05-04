@@ -1,0 +1,24 @@
+{
+  "name": "coincap-mcp",
+  "version": "0.9.3",
+  "description": "A MCP server to get crypto prices from coincap",
+  "homepage": "https://github.com/QuantGeekDev/coincap-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/QuantGeekDev/coincap-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "coincap-mcp",
+    "quantgeekdev"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "coincap-mcp"
+    ]
+  }
+}

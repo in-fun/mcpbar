@@ -1,0 +1,29 @@
+{
+  "name": "@cyanheads/filesystem-mcp-server",
+  "version": "1.0.1",
+  "description": "A Model Context Protocol (MCP) server for platform-agnostic file capabilities, including advanced search and replace, and directory tree traversal",
+  "homepage": "https://www.npmjs.com/package/@cyanheads/filesystem-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cyanheads/filesystem-mcp-server"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "ai",
+    "filesystem",
+    "llm-agents",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "modelcontextprotocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@cyanheads/filesystem-mcp-server"
+    ],
+    "env": {}
+  }
+}

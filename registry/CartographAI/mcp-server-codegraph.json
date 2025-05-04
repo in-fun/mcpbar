@@ -1,0 +1,27 @@
+{
+  "name": "@cartographai/mcp-server-codegraph",
+  "version": "0.1.0",
+  "description": "MCP server for graph representation of a codebase",
+  "homepage": "https://github.com/CartographAI/mcp-server-codegraph",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CartographAI/mcp-server-codegraph"
+  },
+  "license": "MIT",
+  "keywords": [
+    "agents",
+    "llm",
+    "modelcontextprotocol",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@cartographai/mcp-server-codegraph"
+    ],
+    "env": {}
+  }
+}

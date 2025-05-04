@@ -1,0 +1,26 @@
+{
+  "name": "openapi-mcp-server",
+  "version": "2.0.3",
+  "description": "MCP server for interacting with openapisearch.com API",
+  "homepage": "https://openapisearch.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/janwilmake/openapi-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "openapi-mcp-server",
+    "janwilmake"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "openapi-mcp-server"
+    ],
+    "env": {}
+  }
+}

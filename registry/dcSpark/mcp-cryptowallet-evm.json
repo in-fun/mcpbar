@@ -1,0 +1,24 @@
+{
+  "name": "@mcp-dockmaster/mcp-cryptowallet-evm",
+  "version": "1.0.6",
+  "description": "MCP server for EVM crypto wallet operations using ethers.js v5",
+  "homepage": "https://github.com/dcSpark/mcp-cryptowallet-evm",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dcSpark/mcp-cryptowallet-evm"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-cryptowallet-evm",
+    "dcspark"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "@mcp-dockmaster/mcp-cryptowallet-evm"
+    ]
+  }
+}

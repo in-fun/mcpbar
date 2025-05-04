@@ -1,0 +1,23 @@
+{
+  "name": "mcp-server-shell",
+  "version": "1.0.0",
+  "description": "MCP server for mcp-server-shell",
+  "homepage": "https://github.com/odysseus0/mcp-server-shell",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/odysseus0/mcp-server-shell"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-shell",
+    "odysseus0"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "ls -la",
+    "output": "total 24drwxr-xr-x  5 user  group   160 Jan  1 12:00 .drwxr-xr-x  3 user  group    96 Jan  1 12:00 ..",
+    "return_code": 0
+  }
+}

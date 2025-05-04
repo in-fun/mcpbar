@@ -1,0 +1,41 @@
+{
+  "name": "camel-ai",
+  "version": "1.0.0",
+  "description": "🐫 CAMEL: Communicative Agents for “Mind” Exploration of Large Scale Language Model Society",
+  "homepage": "https://www.camel-ai.org",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Wendong-Fan/camel"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "camel",
+    "wendong-fan"
+  ],
+  "inputs": [
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key",
+      "password": true
+    },
+    {
+      "id": "openai_api_base_url",
+      "type": "promptString",
+      "description": "Environment variable for openai api base url",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "camel-ai"
+    ],
+    "env": {
+      "OPENAI_API_KEY": "${input:openai_api_key}",
+      "OPENAI_API_BASE_URL": "${input:openai_api_base_url}"
+    }
+  }
+}

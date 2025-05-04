@@ -1,0 +1,42 @@
+{
+  "name": "@fireflyai/firefly-mcp",
+  "version": "1.0.0",
+  "description": "Firefly MCP Server",
+  "homepage": "https://github.com/gofireflyio/firefly-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gofireflyio/firefly-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "firefly-mcp",
+    "gofireflyio"
+  ],
+  "inputs": [
+    {
+      "id": "firefly_access_key",
+      "type": "promptString",
+      "description": "Environment variable for firefly access key",
+      "password": true
+    },
+    {
+      "id": "firefly_secret_key",
+      "type": "promptString",
+      "description": "Environment variable for firefly secret key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@fireflyai/firefly-mcp"
+    ],
+    "env": {
+      "FIREFLY_ACCESS_KEY": "${input:firefly_access_key}",
+      "FIREFLY_SECRET_KEY": "${input:firefly_secret_key}"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "firestore-advanced-mcp",
+  "version": "1.0.1",
+  "description": "Serveur MCP avancé pour Firestore avec support pour toutes les fonctionnalités avancées: transactions, requêtes composées, opérations atomiques, et plus",
+  "homepage": "https://github.com/diez7lm/firestore-advanced-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/diez7lm/firestore-advanced-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "firestore-advanced-mcp",
+    "diez7lm"
+  ],
+  "inputs": [
+    {
+      "id": "service_account_key",
+      "type": "promptString",
+      "description": "Environment variable for service account key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "firestore-advanced-mcp"
+    ],
+    "env": {
+      "SERVICE_ACCOUNT_KEY": "${input:service_account_key}"
+    }
+  }
+}

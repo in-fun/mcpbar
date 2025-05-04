@@ -1,0 +1,36 @@
+{
+  "name": "rootly-mcp-server",
+  "version": "1.0.0",
+  "description": "Rootly MCP server",
+  "homepage": "http://labs.rootly.ai/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Rootly-AI-Labs/Rootly-MCP-server"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "rootly-mcp-server",
+    "rootly-ai-labs"
+  ],
+  "inputs": [
+    {
+      "id": "rootly_api_token",
+      "type": "promptString",
+      "description": "Environment variable for rootly api token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "--from",
+      "rootly-mcp-server",
+      "rootly-mcp-server"
+    ],
+    "env": {
+      "ROOTLY_API_TOKEN": "<YOUR_ROOTLY_API_TOKEN>"
+    }
+  }
+}

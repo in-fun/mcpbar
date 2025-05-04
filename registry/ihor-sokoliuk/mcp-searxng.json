@@ -1,0 +1,35 @@
+{
+  "name": "mcp-searxng",
+  "version": "0.4.6",
+  "description": "MCP server for SearXNG integration",
+  "homepage": "https://github.com/ihor-sokoliuk/mcp-searxng",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ihor-sokoliuk/mcp-searxng"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-searxng",
+    "ihor-sokoliuk"
+  ],
+  "inputs": [
+    {
+      "id": "searxng_url",
+      "type": "promptString",
+      "description": "Environment variable for searxng url configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-searxng"
+    ],
+    "env": {
+      "SEARXNG_URL": "YOUR_SEARXNG_INSTANCE_URL"
+    }
+  }
+}

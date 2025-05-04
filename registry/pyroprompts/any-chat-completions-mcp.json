@@ -1,0 +1,54 @@
+{
+  "name": "@pyroprompts/any-chat-completions-mcp",
+  "version": "0.1.1",
+  "description": "A Model Context Protocol server for integrating with any OpenAI SDK compatible Chat Completion API",
+  "homepage": "https://github.com/pyroprompts/any-chat-completions-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pyroprompts/any-chat-completions-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "ai_chat_key",
+      "type": "promptString",
+      "description": "Environment variable for ai chat key authentication",
+      "password": true
+    },
+    {
+      "id": "ai_chat_name",
+      "type": "promptString",
+      "description": "Environment variable for ai chat name configuration",
+      "password": false
+    },
+    {
+      "id": "ai_chat_model",
+      "type": "promptString",
+      "description": "Environment variable for ai chat model configuration",
+      "password": false
+    },
+    {
+      "id": "ai_chat_base_url",
+      "type": "promptString",
+      "description": "Environment variable for ai chat base url configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "@pyroprompts/any-chat-completions-mcp"
+    ],
+    "env": {
+      "AI_CHAT_KEY": "OPENAI_KEY",
+      "AI_CHAT_NAME": "OpenAI",
+      "AI_CHAT_MODEL": "gpt-4o",
+      "AI_CHAT_BASE_URL": "https://api.openai.com/v1"
+    }
+  }
+}

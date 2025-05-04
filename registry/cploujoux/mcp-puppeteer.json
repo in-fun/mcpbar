@@ -1,0 +1,30 @@
+{
+  "name": "@modelcontextprotocol/server-puppeteer",
+  "version": "0.6.2",
+  "description": "MCP server for browser automation using Puppeteer",
+  "homepage": "https://github.com/cploujoux/mcp-puppeteer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cploujoux/mcp-puppeteer"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-puppeteer",
+    "cploujoux"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "docker",
+    "args": [
+      "run",
+      "-i",
+      "--rm",
+      "--init",
+      "-e",
+      "DOCKER_CONTAINER=true",
+      "mcp/puppeteer"
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "mcp-pyautogui-server",
+  "version": "1.0.0",
+  "description": "A MCP (Model Context Protocol) server that provides automated GUI testing and control capabilities through PyAutoGUI.",
+  "homepage": "https://github.com/hetaoBackend/mcp-pyautogui-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hetaoBackend/mcp-pyautogui-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-pyautogui-server",
+    "hetaobackend"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "/path/to/mcp-pyautogui-server",
+      "run",
+      "mcp-pyautogui-server"
+    ]
+  }
+}

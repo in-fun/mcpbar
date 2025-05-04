@@ -1,0 +1,26 @@
+{
+  "name": "pptxgenjs",
+  "version": "3.13.0-beta.1",
+  "description": "Create JavaScript PowerPoint Presentations",
+  "homepage": "https://gitbrent.github.io/PptxGenJS/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jdot274/PptxGenJS"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "pptxgenjs",
+    "jdot274"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "pptxgenjs"
+    ],
+    "env": {}
+  }
+}

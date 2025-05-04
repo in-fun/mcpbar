@@ -1,0 +1,25 @@
+{
+  "name": "mcp-superiorapis",
+  "version": "1.0.0",
+  "description": "MCP server for mcp-superiorapis",
+  "homepage": "https://github.com/CTeaminfo/mcp-superiorapis",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CTeaminfo/mcp-superiorapis"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-superiorapis",
+    "cteaminfo"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-superiorapis"
+    ],
+    "env": {}
+  }
+}

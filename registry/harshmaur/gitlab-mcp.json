@@ -1,0 +1,42 @@
+{
+  "name": "@harshmaur/gitlab-mcp",
+  "version": "1.0.8",
+  "description": "MCP server for using the GitLab API",
+  "homepage": "https://github.com/harshmaur/gitlab-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/harshmaur/gitlab-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "gitlab-mcp",
+    "harshmaur"
+  ],
+  "inputs": [
+    {
+      "id": "gitlab_personal_access_token",
+      "type": "promptString",
+      "description": "Environment variable for gitlab personal access token authentication",
+      "password": true
+    },
+    {
+      "id": "gitlab_api_url",
+      "type": "promptString",
+      "description": "Environment variable for gitlab api url configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@harshmaur/gitlab-mcp"
+    ],
+    "env": {
+      "GITLAB_PERSONAL_ACCESS_TOKEN": "your_gitlab_token",
+      "GITLAB_API_URL": "your_gitlab_api_url"
+    }
+  }
+}

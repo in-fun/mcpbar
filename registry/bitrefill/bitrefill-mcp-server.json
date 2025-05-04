@@ -1,0 +1,44 @@
+{
+  "name": "bitrefill-mcp-server",
+  "version": "0.3.0",
+  "description": "Shop for gift cards, mobile refills, and digital services on Bitrefill using cryptocurrency",
+  "homepage": "https://www.bitrefill.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bitrefill/bitrefill-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "agent",
+    "ai",
+    "claude",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "bitrefill_api_secret",
+      "type": "promptString",
+      "description": "Environment variable for bitrefill api secret authentication",
+      "password": true
+    },
+    {
+      "id": "bitrefill_api_id",
+      "type": "promptString",
+      "description": "Environment variable for bitrefill api id configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "bitrefill-mcp-server"
+    ],
+    "env": {
+      "BITREFILL_API_SECRET": "your_api_key_here",
+      "BITREFILL_API_ID": "your_api_id_here"
+    }
+  }
+}

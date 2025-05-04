@@ -1,0 +1,26 @@
+{
+  "name": "mcp-server-fetch-typescript",
+  "version": "0.1.1",
+  "description": "A Model Context Protocol server that provides web content fetching and conversion capabilities",
+  "homepage": "https://github.com/tatn/mcp-server-fetch-typescript",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tatn/mcp-server-fetch-typescript"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-fetch-typescript",
+    "tatn"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-server-fetch-typescript"
+    ],
+    "env": {}
+  }
+}

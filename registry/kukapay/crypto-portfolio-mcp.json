@@ -1,0 +1,24 @@
+{
+  "name": "crypto-portfolio-mcp",
+  "version": "1.0.0",
+  "description": "An MCP server for tracking and managing cryptocurrency portfolio allocations.",
+  "homepage": "https://github.com/kukapay/crypto-portfolio-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kukapay/crypto-portfolio-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "crypto-portfolio-mcp",
+    "kukapay"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "python",
+    "args": [
+      "path/to/crypto-portfolio-mcp/main.py"
+    ]
+  }
+}

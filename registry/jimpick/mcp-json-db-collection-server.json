@@ -1,0 +1,21 @@
+{
+  "name": "@jimpick/mcp-json-db-collection-server",
+  "version": "0.0.1",
+  "description": "Use Model Context Protocol with multiple Fireproof JSON document databases",
+  "homepage": "https://github.com/jimpick/mcp-json-db-collection-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jimpick/mcp-json-db-collection-server"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-json-db-collection-server",
+    "jimpick"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "<base-dir>/mcp-json-db-collection-server/build/index.js"
+  }
+}

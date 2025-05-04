@@ -1,0 +1,24 @@
+{
+  "name": "tripo-mcp",
+  "version": "1.0.0",
+  "description": "Official MCP server for Tripo",
+  "homepage": "https://platform.tripo3d.ai",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VAST-AI-Research/tripo-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "tripo-mcp",
+    "vast-ai-research"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "tripo-mcp"
+    ]
+  }
+}

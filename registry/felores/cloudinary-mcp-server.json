@@ -1,0 +1,48 @@
+{
+  "name": "@felores/cloudinary-mcp-server",
+  "version": "1.1.3",
+  "description": "MCP server for Cloudinary upload functionality",
+  "homepage": "https://github.com/felores/cloudinary-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/felores/cloudinary-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "cloudinary-mcp-server",
+    "felores"
+  ],
+  "inputs": [
+    {
+      "id": "cloudinary_cloud_name",
+      "type": "promptString",
+      "description": "Environment variable for cloudinary cloud name configuration",
+      "password": false
+    },
+    {
+      "id": "cloudinary_api_key",
+      "type": "promptString",
+      "description": "Environment variable for cloudinary api key authentication",
+      "password": true
+    },
+    {
+      "id": "cloudinary_api_secret",
+      "type": "promptString",
+      "description": "Environment variable for cloudinary api secret authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "@felores/cloudinary-mcp-server@latest"
+    ],
+    "env": {
+      "CLOUDINARY_CLOUD_NAME": "your_cloud_name",
+      "CLOUDINARY_API_KEY": "your_api_key",
+      "CLOUDINARY_API_SECRET": "your_api_secret"
+    }
+  }
+}

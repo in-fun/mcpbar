@@ -1,0 +1,27 @@
+{
+  "name": "mindmap-mcp-server",
+  "version": "1.0.0",
+  "description": "mindmap, mcp server, artifact",
+  "homepage": "https://github.com/YuChenSSR/mindmap-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YuChenSSR/mindmap-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "artifact",
+    "mcp-server",
+    "mindmap",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mindmap-mcp-server",
+      "--return-type",
+      "html"
+    ]
+  }
+}

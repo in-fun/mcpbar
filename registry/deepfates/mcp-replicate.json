@@ -1,0 +1,31 @@
+{
+  "name": "mcp-replicate",
+  "version": "0.1.1",
+  "description": "Run Replicate models through a simple MCP server interface",
+  "homepage": "https://github.com/deepfates/mcp-replicate",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deepfates/mcp-replicate"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-replicate",
+    "deepfates"
+  ],
+  "inputs": [
+    {
+      "id": "replicate_api_token",
+      "type": "promptString",
+      "description": "Environment variable for replicate api token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "mcp-replicate",
+    "env": {
+      "REPLICATE_API_TOKEN": "your_token_here"
+    }
+  }
+}

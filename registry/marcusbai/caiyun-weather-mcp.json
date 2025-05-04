@@ -1,0 +1,43 @@
+{
+  "name": "caiyun-weather-mcp",
+  "version": "1.0.0",
+  "description": "Caiyun Weather MCP Server",
+  "homepage": "https://github.com/marcusbai/caiyun-weather-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/marcusbai/caiyun-weather-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "caiyun-weather-mcp",
+    "marcusbai"
+  ],
+  "inputs": [
+    {
+      "id": "caiyun_api_key",
+      "type": "promptString",
+      "description": "Environment variable for caiyun api key authentication",
+      "password": true
+    },
+    {
+      "id": "amap_api_key",
+      "type": "promptString",
+      "description": "Environment variable for amap api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "完整路径/caiyun-weather-mcp/dist/index.js"
+    ],
+    "env": {
+      "CAIYUN_API_KEY": "您的彩云天气API密钥",
+      "AMAP_API_KEY": "您的高德地图API密钥（可选）"
+    },
+    "disabled": false,
+    "autoApprove": []
+  }
+}

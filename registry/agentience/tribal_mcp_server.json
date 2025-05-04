@@ -1,0 +1,83 @@
+{
+  "name": "tribal",
+  "version": "1.0.0",
+  "description": "MCP server for tribal_mcp_server",
+  "homepage": "https://github.com/agentience/tribal_mcp_server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agentience/tribal_mcp_server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "tribal_mcp_server",
+    "agentience"
+  ],
+  "inputs": [
+    {
+      "id": "api_key",
+      "type": "promptString",
+      "description": "Environment variable for api key",
+      "password": true
+    },
+    {
+      "id": "secret_key",
+      "type": "promptString",
+      "description": "Environment variable for secret key",
+      "password": true
+    },
+    {
+      "id": "mcp_api_url",
+      "type": "promptString",
+      "description": "Environment variable for mcp api url",
+      "password": false
+    },
+    {
+      "id": "mcp_port",
+      "type": "promptString",
+      "description": "Environment variable for mcp port",
+      "password": false
+    },
+    {
+      "id": "mcp_host",
+      "type": "promptString",
+      "description": "Environment variable for mcp host",
+      "password": false
+    },
+    {
+      "id": "aws_access_key",
+      "type": "promptString",
+      "description": "Environment variable for aws access key",
+      "password": true
+    },
+    {
+      "id": "aws_secret_access_key",
+      "type": "promptString",
+      "description": "Environment variable for aws secret access key",
+      "password": true
+    },
+    {
+      "id": "api_port",
+      "type": "promptString",
+      "description": "Environment variable for api port",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "tribal"
+    ],
+    "env": {
+      "API_KEY": "${input:api_key}",
+      "SECRET_KEY": "${input:secret_key}",
+      "MCP_API_URL": "${input:mcp_api_url}",
+      "MCP_PORT": "${input:mcp_port}",
+      "MCP_HOST": "${input:mcp_host}",
+      "AWS_ACCESS_KEY": "${input:aws_access_key}",
+      "AWS_SECRET_ACCESS_KEY": "${input:aws_secret_access_key}",
+      "API_PORT": "${input:api_port}"
+    }
+  }
+}

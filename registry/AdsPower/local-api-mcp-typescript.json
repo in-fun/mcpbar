@@ -1,0 +1,29 @@
+{
+  "name": "local-api-mcp-typescript",
+  "version": "1.0.6",
+  "description": "MCP server for using the AdsPower LocalAPI",
+  "homepage": "https://www.adspower.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AdsPower/local-api-mcp-typescript"
+  },
+  "license": "MIT",
+  "keywords": [
+    "adspower",
+    "ai",
+    "claude",
+    "llms",
+    "localapi",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "local-api-mcp-typescript"
+    ],
+    "env": {}
+  }
+}

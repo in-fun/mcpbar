@@ -1,0 +1,35 @@
+{
+  "name": "@itseasy21/mcp-knowledge-graph",
+  "version": "1.0.7",
+  "description": "MCP server enabling persistent memory for Claude through a local knowledge graph",
+  "homepage": "https://github.com/itseasy21/mcp-knowledge-graph",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/itseasy21/mcp-knowledge-graph"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-knowledge-graph",
+    "itseasy21"
+  ],
+  "inputs": [
+    {
+      "id": "memory_file_path",
+      "type": "promptString",
+      "description": "Environment variable for memory file path configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@itseasy21/mcp-knowledge-graph"
+    ],
+    "env": {
+      "MEMORY_FILE_PATH": "/path/to/your/projects.jsonl"
+    }
+  }
+}

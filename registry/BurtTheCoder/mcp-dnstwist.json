@@ -1,0 +1,21 @@
+{
+  "name": "@burtthecoder/mcp-dnstwist",
+  "version": "1.0.4",
+  "description": "MCP server for dnstwist - DNS fuzzing to detect typosquatting, phishing and corporate espionage",
+  "homepage": "https://github.com/BurtTheCoder/mcp-dnstwist",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BurtTheCoder/mcp-dnstwist"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-dnstwist",
+    "burtthecoder"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "mcp-dnstwist"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "name": "mcp-mongo-server",
+  "version": "1.3.0",
+  "description": "A Model Context Protocol server for MongoDB connections",
+  "homepage": "https://www.npmjs.com/package/mcp-mongo-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kiliczsh/mcp-mongo-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude",
+    "claude-desktop",
+    "mcp",
+    "model-context-protocol",
+    "mongo",
+    "mongodb",
+    "antrophic",
+    "cline",
+    "cursor",
+    "windsurf"
+  ],
+  "inputs": [
+    {
+      "id": "mcp_mongodb_uri",
+      "type": "promptString",
+      "description": "Environment variable for mcp mongodb uri configuration",
+      "password": false
+    },
+    {
+      "id": "mcp_mongodb_readonly",
+      "type": "promptString",
+      "description": "Environment variable for mcp mongodb readonly configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-mongo-server"
+    ],
+    "env": {
+      "MCP_MONGODB_URI": "mongodb://muhammed:kilic@localhost:27017/database",
+      "MCP_MONGODB_READONLY": "true"
+    }
+  }
+}

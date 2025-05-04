@@ -1,0 +1,39 @@
+{
+  "name": "screen-view-mcp",
+  "version": "2.0.15",
+  "description": "MCP tool for capturing screenshots and analyzing them with Claude Vision API",
+  "homepage": "https://github.com/hemenge133/screen-view-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hemenge133/screen-view-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "screen-view-mcp",
+    "hemenge133"
+  ],
+  "inputs": [
+    {
+      "id": "anthropic_api_key",
+      "type": "promptString",
+      "description": "Environment variable for anthropic api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "screen-view-mcp@2.0.15",
+      "--sse",
+      "--port",
+      "8080",
+      "--host",
+      "localhost"
+    ],
+    "env": {
+      "ANTHROPIC_API_KEY": "your-anthropic-api-key"
+    }
+  }
+}

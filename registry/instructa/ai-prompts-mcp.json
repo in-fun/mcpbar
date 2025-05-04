@@ -1,0 +1,26 @@
+{
+  "name": "prompts",
+  "version": "0.0.1",
+  "description": "Model Context Protocl for AI Prompts API",
+  "homepage": "https://github.com/instructa/ai-prompts-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/instructa/ai-prompts-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai-prompts-mcp",
+    "instructa"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "prompts"
+    ],
+    "env": {}
+  }
+}

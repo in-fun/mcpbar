@@ -1,0 +1,27 @@
+{
+  "name": "mcp-server-llmling",
+  "version": "1.0.0",
+  "description": "MCP (Model context protocol) server with LLMling backend",
+  "homepage": "https://github.com/phil65/mcp-server-llmling",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phil65/mcp-server-llmling"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-llmling",
+    "phil65"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-server-llmling",
+      "start",
+      "path/to/your/config.yml"
+    ],
+    "env": {}
+  }
+}

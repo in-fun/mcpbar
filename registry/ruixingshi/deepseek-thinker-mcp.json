@@ -1,0 +1,42 @@
+{
+  "name": "deepseek-thinker-mcp",
+  "version": "1.0.2",
+  "description": "A MCP server for get deepseek COT",
+  "homepage": "https://github.com/ruixingshi/deepseek-thinker-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ruixingshi/deepseek-thinker-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "deepseek-thinker-mcp",
+    "ruixingshi"
+  ],
+  "inputs": [
+    {
+      "id": "api_key",
+      "type": "promptString",
+      "description": "Environment variable for api key authentication",
+      "password": true
+    },
+    {
+      "id": "base_url",
+      "type": "promptString",
+      "description": "Environment variable for base url configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "deepseek-thinker-mcp"
+    ],
+    "env": {
+      "API_KEY": "<Your API Key>",
+      "BASE_URL": "<Your Base URL>"
+    }
+  }
+}

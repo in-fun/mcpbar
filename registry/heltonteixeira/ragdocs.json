@@ -1,0 +1,41 @@
+{
+  "name": "@mcpservers/ragdocs",
+  "version": "1.0.0",
+  "description": "MCP server for RAG-based document search and management",
+  "homepage": "https://github.com/heltonteixeira/ragdocs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heltonteixeira/ragdocs"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ragdocs",
+    "heltonteixeira"
+  ],
+  "inputs": [
+    {
+      "id": "qdrant_url",
+      "type": "promptString",
+      "description": "Environment variable for qdrant url configuration",
+      "password": false
+    },
+    {
+      "id": "embedding_provider",
+      "type": "promptString",
+      "description": "Environment variable for embedding provider configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "@mcpservers/ragdocs"
+    ],
+    "env": {
+      "QDRANT_URL": "http://127.0.0.1:6333",
+      "EMBEDDING_PROVIDER": "ollama"
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "name": "@pinkpixel/mem0-mcp",
+  "version": "0.3.3",
+  "description": "A Model Context Protocol server that can store and retrieve memories for LLM context control",
+  "homepage": "https://github.com/pinkpixel-dev/mem0-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pinkpixel-dev/mem0-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "agent",
+    "assistant",
+    "llm",
+    "llm-memory",
+    "mcp",
+    "mcp-server",
+    "mem0",
+    "mem0ai",
+    "memory",
+    "database",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "mem0_api_key",
+      "type": "promptString",
+      "description": "Environment variable for mem0 api key authentication",
+      "password": true
+    },
+    {
+      "id": "default_user_id",
+      "type": "promptString",
+      "description": "Environment variable for default user id configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@pinkpixel/mem0-mcp"
+    ],
+    "env": {
+      "MEM0_API_KEY": "YOUR_MEM0_API_KEY_HERE",
+      "DEFAULT_USER_ID": "user123"
+    },
+    "disabled": false,
+    "alwaysAllow": [
+      "add_memory",
+      "search_memory"
+    ]
+  }
+}

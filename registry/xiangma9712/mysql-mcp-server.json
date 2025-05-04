@@ -1,0 +1,30 @@
+{
+  "name": "mcp-mysql",
+  "version": "1.0.3",
+  "description": "MCP server for MySQL operations",
+  "homepage": "https://github.com/xiangma9712/mysql-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xiangma9712/mysql-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mysql-mcp-server",
+    "xiangma9712"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "docker",
+    "args": [
+      "run",
+      "-i",
+      "--rm",
+      "--add-host=host.docker.internal:host-gateway",
+      "--env-file",
+      "/Users/username/.mcp/.env",
+      "ghcr.io/xiangma9712/mcp/mysql"
+    ]
+  }
+}

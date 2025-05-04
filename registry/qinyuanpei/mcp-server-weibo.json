@@ -1,0 +1,26 @@
+{
+  "name": "mcp-server-weibo",
+  "version": "1.0.0",
+  "description": "A MCP Server for Sina Weibo",
+  "homepage": "https://github.com/qinyuanpei/mcp-server-weibo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qinyuanpei/mcp-server-weibo"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-weibo",
+    "qinyuanpei"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "--from",
+      "git+https://github.com/qinyuanpei/mcp-server-weibo.git",
+      "mcp-server-weibo"
+    ]
+  }
+}

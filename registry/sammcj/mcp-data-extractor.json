@@ -1,0 +1,46 @@
+{
+  "name": "mcp-data-extractor",
+  "version": "0.1.7",
+  "description": "MCP server to migrate data out of code (ts/js) into config (json)",
+  "homepage": "https://smcleod.net",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sammcj/mcp-data-extractor"
+  },
+  "license": "MIT",
+  "keywords": [
+    "data",
+    "javascript",
+    "js",
+    "json",
+    "llm",
+    "mcp",
+    "tool",
+    "ts",
+    "typescript",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "disable_source_replacement",
+      "type": "promptString",
+      "description": "Environment variable for disable source replacement configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-data-extractor"
+    ],
+    "env": {
+      "DISABLE_SOURCE_REPLACEMENT": "true"
+    },
+    "disabled": false,
+    "autoApprove": [
+      "extract_data",
+      "extract_svg"
+    ]
+  }
+}

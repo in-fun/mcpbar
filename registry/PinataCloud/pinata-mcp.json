@@ -1,0 +1,42 @@
+{
+  "name": "pinata-mcp",
+  "version": "0.1.1",
+  "description": "MCP server for pinata-mcp",
+  "homepage": "https://github.com/PinataCloud/pinata-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PinataCloud/pinata-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "pinata-mcp",
+    "pinatacloud"
+  ],
+  "inputs": [
+    {
+      "id": "pinata_jwt",
+      "type": "promptString",
+      "description": "Environment variable for pinata jwt configuration",
+      "password": false
+    },
+    {
+      "id": "gateway_url",
+      "type": "promptString",
+      "description": "Environment variable for gateway url configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "pinata-mcp",
+      "/path/to/allowed/directory"
+    ],
+    "env": {
+      "PINATA_JWT": "<YOUR_JWT>",
+      "GATEWAY_URL": "example.mypinata.cloud"
+    }
+  }
+}

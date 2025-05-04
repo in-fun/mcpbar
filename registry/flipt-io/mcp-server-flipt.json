@@ -1,0 +1,42 @@
+{
+  "name": "@flipt-io/mcp-server-flipt",
+  "version": "0.0.2",
+  "description": "Model Context Protocol server for Flipt",
+  "homepage": "https://www.npmjs.com/package/@flipt-io/mcp-server-flipt",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flipt-io/mcp-server-flipt"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-flipt",
+    "flipt-io"
+  ],
+  "inputs": [
+    {
+      "id": "flipt_api_url",
+      "type": "promptString",
+      "description": "Environment variable for flipt api url",
+      "password": false
+    },
+    {
+      "id": "flipt_api_key",
+      "type": "promptString",
+      "description": "Environment variable for flipt api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@flipt-io/mcp-server-flipt"
+    ],
+    "env": {
+      "FLIPT_API_URL": "${input:flipt_api_url}",
+      "FLIPT_API_KEY": "${input:flipt_api_key}"
+    }
+  }
+}

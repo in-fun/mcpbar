@@ -1,0 +1,25 @@
+{
+  "name": "remote-mcp-server",
+  "version": "0.0.0",
+  "description": "MCP test",
+  "homepage": "https://github.com/Laity624/my-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Laity624/my-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "my-mcp-server",
+    "laity624"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "mcp-remote",
+      "http://localhost:8787/sse"
+    ]
+  }
+}

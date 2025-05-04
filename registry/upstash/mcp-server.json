@@ -1,0 +1,35 @@
+{
+  "name": "@upstash/mcp-server",
+  "version": "0.0.0",
+  "description": "MCP server for Upstash",
+  "homepage": "https://github.com/upstash/mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/upstash/mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server",
+    "upstash"
+  ],
+  "inputs": [
+    {
+      "id": "upstash_api_key",
+      "type": "promptString",
+      "description": "Environment variable for upstash api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@upstash/mcp-server"
+    ],
+    "env": {
+      "UPSTASH_API_KEY": "${input:upstash_api_key}"
+    }
+  }
+}

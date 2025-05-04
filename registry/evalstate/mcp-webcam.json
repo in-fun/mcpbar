@@ -1,0 +1,26 @@
+{
+  "name": "@llmindset/mcp-webcam",
+  "version": "0.1.1",
+  "description": "Capture live images from your webcam with a tool or resource request ",
+  "homepage": "https://github.com/evalstate/mcp-webcam",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evalstate/mcp-webcam"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-webcam",
+    "evalstate"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@llmindset/mcp-webcam"
+    ],
+    "env": {}
+  }
+}

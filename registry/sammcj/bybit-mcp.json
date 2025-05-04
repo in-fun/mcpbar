@@ -1,0 +1,48 @@
+{
+  "name": "bybit-mcp",
+  "version": "0.1.0",
+  "description": "A MCP server to interact with Bybit's API",
+  "homepage": "https://github.com/sammcj/bybit-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sammcj/bybit-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "bybit-mcp",
+    "sammcj"
+  ],
+  "inputs": [
+    {
+      "id": "bybit_api_key",
+      "type": "promptString",
+      "description": "Environment variable for bybit api key authentication",
+      "password": true
+    },
+    {
+      "id": "bybit_api_secret",
+      "type": "promptString",
+      "description": "Environment variable for bybit api secret authentication",
+      "password": true
+    },
+    {
+      "id": "bybit_use_testnet",
+      "type": "promptString",
+      "description": "Environment variable for bybit use testnet configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/bybit-mcp/build/index.js"
+    ],
+    "env": {
+      "BYBIT_API_KEY": "your-api-key",
+      "BYBIT_API_SECRET": "your-api-secret",
+      "BYBIT_USE_TESTNET": "false"
+    }
+  }
+}

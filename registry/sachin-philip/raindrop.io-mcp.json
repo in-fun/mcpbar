@@ -1,0 +1,34 @@
+{
+  "name": "raindrop",
+  "version": "1.0.0",
+  "description": "An MCP server for Raindrop.io",
+  "homepage": "https://cursor.directory/mcp/raindrop-io-2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sachin-philip/raindrop.io-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp-server",
+    "raindrop",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "raindrop_token",
+      "type": "promptString",
+      "description": "Environment variable for raindrop token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "raindrop"
+    ],
+    "env": {
+      "RAINDROP_TOKEN": "${input:raindrop_token}"
+    }
+  }
+}

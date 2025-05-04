@@ -1,0 +1,34 @@
+{
+  "name": "databutton-app-mcp",
+  "version": "1.0.0",
+  "description": "Use your Databutton app APIs as tools in other agents with MCP",
+  "homepage": "https://github.com/databutton/databutton-app-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/databutton/databutton-app-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "databutton-app-mcp",
+    "databutton"
+  ],
+  "inputs": [
+    {
+      "id": "databutton_api_key",
+      "type": "promptString",
+      "description": "Environment variable for databutton api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "databutton-app-mcp@latest"
+    ],
+    "env": {
+      "DATABUTTON_API_KEY": "YOUR-DATABUTTON-APP-KEY"
+    }
+  }
+}

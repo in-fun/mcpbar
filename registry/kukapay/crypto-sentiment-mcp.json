@@ -1,0 +1,37 @@
+{
+  "name": "crypto-sentiment-mcp",
+  "version": "1.0.0",
+  "description": "An MCP server that delivers cryptocurrency sentiment analysis to AI agents.",
+  "homepage": "https://github.com/kukapay/crypto-sentiment-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kukapay/crypto-sentiment-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "crypto-sentiment-mcp",
+    "kukapay"
+  ],
+  "inputs": [
+    {
+      "id": "santiment_api_key",
+      "type": "promptString",
+      "description": "Environment variable for santiment api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "path/to/crypto-sentiment-mcp",
+      "run",
+      "main.py"
+    ],
+    "env": {
+      "SANTIMENT_API_KEY": "your_api_key_here"
+    }
+  }
+}

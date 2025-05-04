@@ -1,0 +1,35 @@
+{
+  "name": "mcp-use",
+  "version": "1.0.0",
+  "description": "mcp-use is the easiest way to interact with mcp servers with custom agents",
+  "homepage": "https://mcp-use.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pietrozullo/mcp-use"
+  },
+  "license": "MIT",
+  "keywords": [
+    "agents",
+    "ai",
+    "mcp",
+    "mcp-client",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "display",
+      "type": "promptString",
+      "description": "Environment variable for display configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "@playwright/mcp@latest"
+    ],
+    "env": {
+      "DISPLAY": ":1"
+    }
+  }
+}

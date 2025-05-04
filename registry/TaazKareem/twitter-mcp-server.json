@@ -1,0 +1,21 @@
+{
+  "name": "twitter-mcp-server",
+  "version": "0.1.1",
+  "description": "Twitter MCP Server based on ElizaOS Agent Twitter Client",
+  "homepage": "https://github.com/taazkareem/twitter-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/taazkareem/twitter-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "twitter-mcp-server",
+    "taazkareem"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "/path/to/twitter-mcp-server/build/index.js"
+  }
+}

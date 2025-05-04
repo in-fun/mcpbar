@@ -1,0 +1,38 @@
+{
+  "name": "mcp-flight-search",
+  "version": "1.0.0",
+  "description": "MCP Server implementation for the Model Context Protocol (MCP) enabling AI tool usage - Realtime Flight Search ",
+  "homepage": "https://pypi.org/project/mcp-flight-search/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arjunprabhulal/mcp-flight-search"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "genai",
+    "mcp",
+    "mcp-server",
+    "mcp-tools",
+    "model-context-protocol",
+    "serpapi",
+    "fligh-search"
+  ],
+  "inputs": [
+    {
+      "id": "serp_api_key",
+      "type": "promptString",
+      "description": "Environment variable for serp api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-flight-search"
+    ],
+    "env": {
+      "SERP_API_KEY": "${input:serp_api_key}"
+    }
+  }
+}

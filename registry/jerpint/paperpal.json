@@ -1,0 +1,27 @@
+{
+  "name": "paperpal",
+  "version": "1.0.0",
+  "description": "MCP server for aiding with literature reviews",
+  "homepage": "https://github.com/jerpint/paperpal",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jerpint/paperpal"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "paperpal",
+    "jerpint"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "/Users/jeremypinto/.cargo/bin/uv",
+    "args": [
+      "--directory",
+      "/Users/jeremypinto/paperpal",
+      "run",
+      "paperpal.py"
+    ]
+  }
+}

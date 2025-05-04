@@ -1,0 +1,36 @@
+{
+  "name": "@ibraheem4/linear-mcp",
+  "version": "78.0.1",
+  "description": "A Linear MCP server for interacting with Linear's API",
+  "homepage": "https://github.com/ibraheem4/linear-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ibraheem4/linear-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "linear-mcp",
+    "ibraheem4"
+  ],
+  "inputs": [
+    {
+      "id": "linear_api_key",
+      "type": "promptString",
+      "description": "Environment variable for linear api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/linear-mcp/build/index.js"
+    ],
+    "env": {
+      "LINEAR_API_KEY": "your-api-key-here"
+    },
+    "disabled": false,
+    "alwaysAllow": []
+  }
+}

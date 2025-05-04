@@ -1,40 +1,57 @@
 import { ArgumentsCamelCase, Argv } from 'yargs'
 import { logger } from '../logger'
-import { readClaudeConfig } from '../config'
+import { readClientConfig, getAvailableClients, clientPaths } from '../config'
 import { green, red, yellow, gray } from 'picocolors'
 import { spawn } from 'child_process'
 
 interface StartArgv {
   server: string
+  client?: string
 }
 
 export const command = 'start <server>'
 export const describe = 'Start an MCP server'
-export const aliases = ['s']
+export const aliases = ['st', 'run', 'r']
 
 export function builder(yargs: Argv): Argv<StartArgv> {
-  return yargs.positional('server', {
-    type: 'string',
-    description: 'Name of the MCP server to start',
-    demandOption: true,
-  })
+  return yargs
+    .positional('server', {
+      type: 'string',
+      description: 'Name of the MCP server to start',
+      demandOption: true,
+    })
+    .option('client', {
+      type: 'string',
+      description: 'MCP client to start the server from',
+      alias: 'c',
+      choices: getAvailableClients(),
+      default: 'claude',
+    })
 }
 
 export async function handler(argv: ArgumentsCamelCase<StartArgv>) {
   try {
     const serverName = argv.server as string
+    const clientName = argv.client as string
+
+    // Verify client is supported
+    if (!clientPaths[clientName]) {
+      logger.error(red(`Client "${clientName}" is not supported.`))
+      logger.info(yellow(`Supported clients: ${getAvailableClients().join(', ')}`))
+      return
+    }
 
     // Read current config
-    const config = await readClaudeConfig()
+    const config = await readClientConfig(clientName)
 
     if (!config.mcpServers || !config.mcpServers[serverName]) {
-      logger.error(yellow(`No MCP server named "${serverName}" found`))
+      logger.error(yellow(`No MCP server named "${serverName}" found in ${clientName}`))
       return
     }
 
     const serverConfig = config.mcpServers[serverName]
 
-    logger.info(green(`Starting MCP server "${serverName}"...`))
+    logger.info(green(`Starting MCP server "${serverName}" from ${clientName}...`))
     logger.info(`Command: ${serverConfig.command} ${serverConfig.args.join(' ')}`)
 
     try {

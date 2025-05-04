@@ -1,0 +1,44 @@
+{
+  "name": "base-network-mcp-server",
+  "version": "0.1.0",
+  "description": "Model Context Protocol server for Base network blockchain operations",
+  "homepage": "https://github.com/fakepixels/base-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fakepixels/base-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "base-mcp-server",
+    "fakepixels"
+  ],
+  "inputs": [
+    {
+      "id": "base_provider_url",
+      "type": "promptString",
+      "description": "Environment variable for base provider url configuration",
+      "password": false
+    },
+    {
+      "id": "wallet_private_key",
+      "type": "promptString",
+      "description": "Environment variable for wallet private key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "base-network-mcp-server"
+    ],
+    "env": {
+      "BASE_PROVIDER_URL": "https://api.developer.coinbase.com/rpc/v1/base/YOUR_API_KEY",
+      "WALLET_PRIVATE_KEY": "your_private_key_here"
+    },
+    "disabled": false,
+    "autoApprove": []
+  }
+}

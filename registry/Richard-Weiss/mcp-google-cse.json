@@ -1,0 +1,34 @@
+{
+  "name": "mcp-google-cse",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol server that provides search capabilities using a Google CSE (custom search engine).",
+  "homepage": "https://github.com/Richard-Weiss/mcp-google-cse",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Richard-Weiss/mcp-google-cse"
+  },
+  "license": "Unlicense",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-google-cse",
+    "richard-weiss"
+  ],
+  "inputs": [
+    {
+      "id": "api_key",
+      "type": "promptString",
+      "description": "Environment variable for api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-google-cse"
+    ],
+    "env": {
+      "API_KEY": "${input:api_key}"
+    }
+  }
+}

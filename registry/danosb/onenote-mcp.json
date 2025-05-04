@@ -1,0 +1,25 @@
+{
+  "name": "mcp-server-onenote",
+  "version": "0.1.0",
+  "description": "OneNote MCP Server Implementation with Device Code Authentication",
+  "homepage": "https://github.com/danosb/onenote-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/danosb/onenote-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "onenote-mcp",
+    "danosb"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "/absolute/path/to/your/onenote-mcp.mjs"
+    ],
+    "env": {}
+  }
+}

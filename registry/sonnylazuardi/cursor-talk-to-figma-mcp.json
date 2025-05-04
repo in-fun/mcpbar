@@ -1,0 +1,31 @@
+{
+  "name": "cursor-talk-to-figma-mcp",
+  "version": "0.2.1",
+  "description": "Cursor Talk to Figma MCP",
+  "homepage": "https://x.com/sonnylazuardi/status/1901325190388428999",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sonnylazuardi/cursor-talk-to-figma-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "agent",
+    "agentic",
+    "agentic-ai",
+    "ai",
+    "cursor",
+    "design",
+    "figma",
+    "mcp",
+    "ai-agents",
+    "llm",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "bunx",
+    "args": [
+      "cursor-talk-to-figma-mcp@latest"
+    ]
+  }
+}

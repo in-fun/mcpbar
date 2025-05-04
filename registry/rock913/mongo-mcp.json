@@ -1,0 +1,25 @@
+{
+  "name": "mongo-mcp",
+  "version": "0.2.0",
+  "description": "MCP server for interacting with MongoDB databases",
+  "homepage": "https://github.com/rock913/mongo-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rock913/mongo-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mongo-mcp",
+    "rock913"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "mongo-mcp",
+      "mongodb://<username>:<password>@<host>:<port>/<database>?authSource=admin"
+    ]
+  }
+}

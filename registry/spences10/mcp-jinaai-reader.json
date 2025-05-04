@@ -1,0 +1,40 @@
+{
+  "name": "mcp-jinaai-reader",
+  "version": "0.0.4",
+  "description": "MCP server for JinaAI reader",
+  "homepage": "https://github.com/spences10/mcp-jinaai-reader",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spences10/mcp-jinaai-reader"
+  },
+  "license": "MIT",
+  "keywords": [
+    "content-extraction",
+    "documentation-tool",
+    "jinaai",
+    "llm-tools",
+    "mcp",
+    "model-context-protocol",
+    "text-extraction",
+    "web-content",
+    "web-scraping"
+  ],
+  "inputs": [
+    {
+      "id": "jinaai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for jinaai api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "-y",
+      "mcp-jinaai-reader"
+    ],
+    "env": {
+      "JINAAI_API_KEY": "your-jinaai-api-key"
+    }
+  }
+}

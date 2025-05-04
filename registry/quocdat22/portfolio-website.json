@@ -1,0 +1,26 @@
+{
+  "name": "hello-react",
+  "version": "0.1.0",
+  "description": "MCP server for portfolio-website",
+  "homepage": "https://github.com/quocdat22/portfolio-website",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/quocdat22/portfolio-website"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "portfolio-website",
+    "quocdat22"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "hello-react"
+    ],
+    "env": {}
+  }
+}

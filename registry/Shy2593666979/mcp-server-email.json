@@ -1,0 +1,43 @@
+{
+  "name": "mcp-server-email",
+  "version": "1.0.0",
+  "description": "MCP server for mcp-server-email",
+  "homepage": "https://github.com/Shy2593666979/mcp-server-email",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Shy2593666979/mcp-server-email"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-email",
+    "shy2593666979"
+  ],
+  "inputs": [
+    {
+      "id": "sender",
+      "type": "promptString",
+      "description": "Environment variable for sender configuration",
+      "password": false
+    },
+    {
+      "id": "password",
+      "type": "promptString",
+      "description": "Environment variable for password authentication",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "D:\\conda\\envs\\mcp\\python.exe",
+    "args": [
+      "C:\\Users\\YourUserName\\Desktop\\servers\\src\\email\\src\\mcp_server_email",
+      "--dir",
+      "C:\\Users\\YourUserName\\Desktop"
+    ],
+    "env": {
+      "SENDER": "2593666979q@gmail.com",
+      "PASSWORD": "tuogk......."
+    }
+  }
+}

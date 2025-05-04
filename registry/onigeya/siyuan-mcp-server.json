@@ -1,0 +1,35 @@
+{
+  "name": "@onigeya/siyuan-mcp-server",
+  "version": "1.2.3",
+  "description": "思源笔记MCP服务器",
+  "homepage": "https://github.com/onigeya/siyuan-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/onigeya/siyuan-mcp-server"
+  },
+  "license": "ISC",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "siyuan-mcp-server",
+    "onigeya"
+  ],
+  "inputs": [
+    {
+      "id": "siyuan_token",
+      "type": "promptString",
+      "description": "Environment variable for siyuan token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@onigeya/siyuan-mcp-server"
+    ],
+    "env": {
+      "SIYUAN_TOKEN": "your-siyuan-token"
+    }
+  }
+}

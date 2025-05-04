@@ -1,0 +1,55 @@
+{
+  "name": "jenkins-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for jenkins-mcp",
+  "homepage": "https://github.com/kjozsa/jenkins-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kjozsa/jenkins-mcp"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "jenkins-mcp",
+    "kjozsa"
+  ],
+  "inputs": [
+    {
+      "id": "jenkins_url",
+      "type": "promptString",
+      "description": "Environment variable for jenkins url configuration",
+      "password": false
+    },
+    {
+      "id": "jenkins_username",
+      "type": "promptString",
+      "description": "Environment variable for jenkins username configuration",
+      "password": false
+    },
+    {
+      "id": "jenkins_password",
+      "type": "promptString",
+      "description": "Environment variable for jenkins password authentication",
+      "password": false
+    },
+    {
+      "id": "jenkins_use_api_token",
+      "type": "promptString",
+      "description": "Environment variable for jenkins use api token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "jenkins-mcp"
+    ],
+    "env": {
+      "JENKINS_URL": "https://your-jenkins-server/",
+      "JENKINS_USERNAME": "your-username",
+      "JENKINS_PASSWORD": "your-password",
+      "JENKINS_USE_API_TOKEN": "false"
+    }
+  }
+}

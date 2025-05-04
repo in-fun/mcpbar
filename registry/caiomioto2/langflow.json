@@ -1,0 +1,25 @@
+{
+  "name": "langflow",
+  "version": "1.0.0",
+  "description": "Langflow is a low-code app builder for RAG and multi-agent AI applications. It’s Python-based and agnostic to any model, API, or database.",
+  "homepage": "http://www.langflow.org",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/caiomioto2/langflow"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "langflow",
+    "caiomioto2"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "langflow"
+    ],
+    "env": {}
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "vue-hotel-datepicker",
+  "version": "4.6.0",
+  "description": "A responsive date range picker for Vue.js that displays the number of nights selected and allow several useful options like custom check-in/check-out rules, localization support and more",
+  "homepage": "https://github.com/Soho-Spring/vue3-datapicker",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Soho-Spring/vue3-datapicker"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "vue3-datapicker",
+    "soho-spring"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "vue-hotel-datepicker"
+    ],
+    "env": {}
+  }
+}

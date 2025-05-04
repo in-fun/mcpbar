@@ -1,0 +1,36 @@
+{
+  "name": "dart-mcp-server",
+  "version": "0.1.12",
+  "description": "The Dart MCP server",
+  "homepage": "https://github.com/its-dart/dart-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/its-dart/dart-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "dart",
+    "mcp",
+    "server",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "dart_token",
+      "type": "promptString",
+      "description": "Environment variable for dart token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "dart-mcp-server"
+    ],
+    "env": {
+      "DART_TOKEN": "dsa_..."
+    }
+  }
+}

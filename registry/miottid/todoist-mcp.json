@@ -1,0 +1,34 @@
+{
+  "name": "todoist-mcp",
+  "version": "1.0.2",
+  "description": "Connect this [Model Context Protocol](https://modelcontextprotocol.io/introduction) server to your LLM to interact with Todoist.",
+  "homepage": "https://www.todoist.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/miottid/todoist-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "todoist-mcp",
+    "miottid"
+  ],
+  "inputs": [
+    {
+      "id": "todoist_api_key",
+      "type": "promptString",
+      "description": "Environment variable for todoist api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/repo/build/index.js"
+    ],
+    "env": {
+      "TODOIST_API_KEY": "your_todoist_api_key"
+    }
+  }
+}

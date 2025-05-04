@@ -1,0 +1,29 @@
+{
+  "name": "@cgize/mcp-think-tool",
+  "version": "1.0.0",
+  "description": "MCP Think Tool server for Claude Desktop",
+  "homepage": "https://github.com/cgize/claude-mcp-think-tool",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cgize/claude-mcp-think-tool"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "claude-mcp-think-tool",
+    "cgize"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@cgize/mcp-think-tool"
+    ],
+    "type": "stdio",
+    "pollingInterval": 30000,
+    "startupTimeout": 30000,
+    "restartOnFailure": true
+  }
+}

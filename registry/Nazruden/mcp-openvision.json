@@ -1,0 +1,41 @@
+{
+  "name": "mcp-openvision",
+  "version": "1.0.0",
+  "description": "MCP Server using OpenRouter models to get descriptions for images",
+  "homepage": "https://github.com/Nazruden/mcp-openvision",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nazruden/mcp-openvision"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-openvision",
+    "nazruden"
+  ],
+  "inputs": [
+    {
+      "id": "openrouter_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openrouter api key authentication",
+      "password": true
+    },
+    {
+      "id": "openrouter_default_model",
+      "type": "promptString",
+      "description": "Environment variable for openrouter default model configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-openvision"
+    ],
+    "env": {
+      "OPENROUTER_API_KEY": "your_openrouter_api_key_here",
+      "OPENROUTER_DEFAULT_MODEL": "anthropic/claude-3-sonnet"
+    }
+  }
+}

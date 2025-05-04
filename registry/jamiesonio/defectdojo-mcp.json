@@ -1,0 +1,45 @@
+{
+  "name": "defectdojo-mcp",
+  "version": "1.0.0",
+  "description": "An experimental ModelContextProtocol server connecting LLMs to DefectDojo for AI-powered security workflows. Enables natural language interaction with vulnerability data, simplifies security analysis, and automates reporting through a lightweight middleware integration.",
+  "homepage": "https://github.com/jamiesonio/defectdojo-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jamiesonio/defectdojo-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "appsec",
+    "defectdojo",
+    "devsecops",
+    "fastmcp",
+    "mcp",
+    "security",
+    "security-automation",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "defectdojo_api_token",
+      "type": "promptString",
+      "description": "Environment variable for defectdojo api token authentication",
+      "password": true
+    },
+    {
+      "id": "defectdojo_api_base",
+      "type": "promptString",
+      "description": "Environment variable for defectdojo api base configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "defectdojo-mcp"
+    ],
+    "env": {
+      "DEFECTDOJO_API_TOKEN": "YOUR_API_TOKEN_HERE",
+      "DEFECTDOJO_API_BASE": "https://your-defectdojo-instance.com"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "etherscan-mcp",
+  "version": "1.0.4",
+  "description": "MCP server for etherscan-mcp",
+  "homepage": "https://github.com/septemhill/etherscan-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/septemhill/etherscan-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "etherscan-mcp",
+    "septemhill"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "etherscan-mcp"
+    ],
+    "env": {}
+  }
+}

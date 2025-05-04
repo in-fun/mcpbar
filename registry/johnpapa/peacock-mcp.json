@@ -1,0 +1,28 @@
+{
+  "name": "@johnpapa/peacock-mcp",
+  "version": "1.1.15",
+  "description": "Peacock Docs MCP Server demo",
+  "homepage": "https://peacockcode.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/johnpapa/peacock-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "javascript",
+    "mcp",
+    "mcp-server",
+    "typescript",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@johnpapa/peacock-mcp"
+    ],
+    "env": {}
+  }
+}

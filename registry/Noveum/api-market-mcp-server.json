@@ -1,0 +1,39 @@
+{
+  "name": "@noveum-ai/mcp-server",
+  "version": "1.0.4",
+  "description": "An MCP server that exposes OpenAPI endpoints as resources",
+  "homepage": "https://api.market",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Noveum/api-market-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "ai-api",
+    "api",
+    "api-market",
+    "artificial-intelligence",
+    "mcp-server",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "api_headers",
+      "type": "promptString",
+      "description": "Environment variable for api headers configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@noveum-ai/mcp-server"
+    ],
+    "env": {
+      "API_HEADERS": "x-magicapi-key:your-api-key"
+    }
+  }
+}

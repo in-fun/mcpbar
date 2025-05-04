@@ -1,0 +1,35 @@
+{
+  "name": "hevy-mcp",
+  "version": "1.3.0",
+  "description": "A Model Context Protocol (MCP) server implementation that interfaces with the Hevy fitness tracking app and its API.",
+  "homepage": "https://github.com/chrisdoc/hevy-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrisdoc/hevy-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "hevy-mcp",
+    "chrisdoc"
+  ],
+  "inputs": [
+    {
+      "id": "hevy_api_key",
+      "type": "promptString",
+      "description": "Environment variable for hevy api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "hevy-mcp"
+    ],
+    "env": {
+      "HEVY_API_KEY": "${input:hevy_api_key}"
+    }
+  }
+}

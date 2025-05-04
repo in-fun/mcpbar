@@ -1,0 +1,31 @@
+{
+  "name": "@modelcontextprotocol/server-gdrive",
+  "version": "0.6.2",
+  "description": "MCP server for interacting with Google Drive",
+  "homepage": "https://github.com/w-jeon/mcp-gdrive",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/w-jeon/mcp-gdrive"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-gdrive",
+    "w-jeon"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "docker",
+    "args": [
+      "run",
+      "-i",
+      "--rm",
+      "-v",
+      "mcp-gdrive:/gdrive-server",
+      "-e",
+      "GDRIVE_CREDENTIALS_PATH=/gdrive-server/credentials.json",
+      "mcp/gdrive"
+    ]
+  }
+}

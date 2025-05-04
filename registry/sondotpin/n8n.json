@@ -1,0 +1,26 @@
+{
+  "name": "n8n-monorepo",
+  "version": "1.79.0",
+  "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.",
+  "homepage": "https://n8n.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sondotpin/n8n"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "n8n",
+    "sondotpin"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "n8n-monorepo"
+    ],
+    "env": {}
+  }
+}

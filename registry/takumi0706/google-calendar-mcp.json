@@ -1,0 +1,49 @@
+{
+  "name": "@takumi0706/google-calendar-mcp",
+  "version": "1.0.6",
+  "description": "Google Calendar MCP server for Claude Desktop integration with enhanced security",
+  "homepage": "https://github.com/takumi0706/google-calendar-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/takumi0706/google-calendar-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "google-calendar-mcp",
+    "takumi0706"
+  ],
+  "inputs": [
+    {
+      "id": "google_client_id",
+      "type": "promptString",
+      "description": "Environment variable for google client id configuration",
+      "password": false
+    },
+    {
+      "id": "google_client_secret",
+      "type": "promptString",
+      "description": "Environment variable for google client secret authentication",
+      "password": true
+    },
+    {
+      "id": "google_redirect_uri",
+      "type": "promptString",
+      "description": "Environment variable for google redirect uri configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@takumi0706/google-calendar-mcp"
+    ],
+    "env": {
+      "GOOGLE_CLIENT_ID": "your_client_id",
+      "GOOGLE_CLIENT_SECRET": "your_client_secret",
+      "GOOGLE_REDIRECT_URI": "http://localhost:4153/oauth2callback"
+    }
+  }
+}

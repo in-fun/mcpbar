@@ -1,0 +1,26 @@
+{
+  "name": "cursor-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for Cursor-Browser-Tools-MCP",
+  "homepage": "https://github.com/Sugatraj/Cursor-Browser-Tools-MCP",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sugatraj/Cursor-Browser-Tools-MCP"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "cursor-browser-tools-mcp",
+    "sugatraj"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "cursor-mcp"
+    ],
+    "env": {}
+  }
+}

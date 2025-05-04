@@ -1,0 +1,52 @@
+{
+  "name": "mcp-3d-printer-server",
+  "version": "1.0.0",
+  "description": "MCP server for connecting Claude with 3D printer management systems",
+  "homepage": "https://github.com/DMontgomery40/mcp-3D-printer-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DMontgomery40/mcp-3D-printer-server"
+  },
+  "license": "GPL-2.0",
+  "keywords": [
+    "3d-printing",
+    "bambu-lab",
+    "bambu-studio",
+    "duet",
+    "klipper",
+    "mcp",
+    "mcp-server",
+    "modelcontextprotocol",
+    "moonraker",
+    "octoprint",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "api_key",
+      "type": "promptString",
+      "description": "Environment variable for api key authentication",
+      "password": true
+    },
+    {
+      "id": "printer_host",
+      "type": "promptString",
+      "description": "Environment variable for printer host configuration",
+      "password": false
+    },
+    {
+      "id": "printer_type",
+      "type": "promptString",
+      "description": "Environment variable for printer type configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "mcp-3d-printer-server",
+    "env": {
+      "API_KEY": "your_api_key_here",
+      "PRINTER_HOST": "your_printer_ip",
+      "PRINTER_TYPE": "octoprint"
+    }
+  }
+}

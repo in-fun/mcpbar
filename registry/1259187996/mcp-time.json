@@ -1,0 +1,26 @@
+{
+  "name": "mcp-time",
+  "version": "1.0.0",
+  "description": "MCP-Time 是一个基于模型上下文协议的 Node.js 服务器，专门用于处理时间相关的查询",
+  "homepage": "https://github.com/1259187996/mcp-time",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1259187996/mcp-time"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-time",
+    "1259187996"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-time"
+    ],
+    "env": {}
+  }
+}

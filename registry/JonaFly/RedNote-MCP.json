@@ -1,0 +1,24 @@
+{
+  "name": "rednote-mcp",
+  "version": "0.2.1",
+  "description": "A friendly tool to help you access and interact with Xiaohongshu (RedNote) content through Model Context Protocol.",
+  "homepage": "https://github.com/JonaFly/RedNote-MCP",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JonaFly/RedNote-MCP"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "rednote-mcp",
+    "jonafly"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "rednote-mcp",
+    "args": [
+      "--stdio"
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "name": "gmail-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for gmail-mcp",
+  "homepage": "https://github.com/bastienchabal/gmail-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bastienchabal/gmail-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "gmail-mcp",
+    "bastienchabal"
+  ],
+  "inputs": [
+    {
+      "id": "pythonpath",
+      "type": "promptString",
+      "description": "Environment variable for pythonpath configuration",
+      "password": false
+    },
+    {
+      "id": "config_file_path",
+      "type": "promptString",
+      "description": "Environment variable for config file path configuration",
+      "password": false
+    },
+    {
+      "id": "google_client_id",
+      "type": "promptString",
+      "description": "Environment variable for google client id configuration",
+      "password": false
+    },
+    {
+      "id": "google_client_secret",
+      "type": "promptString",
+      "description": "Environment variable for google client secret authentication",
+      "password": true
+    },
+    {
+      "id": "token_encryption_key",
+      "type": "promptString",
+      "description": "Environment variable for token encryption key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "/<absolute-path>/gmail-mcp/.venv/bin/mcp",
+    "args": [
+      "run",
+      "/<absolute-path>/gmail-mcp/gmail_mcp/main.py:mcp"
+    ],
+    "cwd": "/<absolute-path>/gmail-mcp",
+    "env": {
+      "PYTHONPATH": "/<absolute-path>/gmail-mcp",
+      "CONFIG_FILE_PATH": "/<absolute-path>/gmail-mcp/config.yaml",
+      "GOOGLE_CLIENT_ID": "<your-client-id>",
+      "GOOGLE_CLIENT_SECRET": "<your-client-secret>",
+      "TOKEN_ENCRYPTION_KEY": "<generate-a-random-key>"
+    }
+  }
+}

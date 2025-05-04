@@ -1,0 +1,31 @@
+{
+  "name": "@picahq/pica-mcp",
+  "version": "1.0.2",
+  "description": "A Model Context Protocol Server for Pica",
+  "homepage": "https://docs.picaos.com/sdk/anthropic-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/picahq/mcp-server"
+  },
+  "license": "GPL-3.0",
+  "keywords": [
+    "ai",
+    "anthropic",
+    "mcp",
+    "pica",
+    "tools",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "docker",
+    "args": [
+      "run",
+      "--rm",
+      "-i",
+      "-e",
+      "PICA_SECRET=YOUR_PICA_SECRET_KEY",
+      "pica-mcp-server"
+    ]
+  }
+}

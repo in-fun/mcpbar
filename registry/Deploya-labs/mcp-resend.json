@@ -1,0 +1,49 @@
+{
+  "name": "send-email",
+  "version": "1.0.0",
+  "description": "Send emails directly from Cursor with this email sending MCP server",
+  "homepage": "https://github.com/Deploya-labs/mcp-resend",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Deploya-labs/mcp-resend"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-resend",
+    "deploya-labs"
+  ],
+  "inputs": [
+    {
+      "id": "your_resend_api_key",
+      "type": "promptString",
+      "description": "Environment variable for your resend api key",
+      "password": true
+    },
+    {
+      "id": "resend_api_key",
+      "type": "promptString",
+      "description": "Environment variable for resend api key",
+      "password": true
+    },
+    {
+      "id": "your_api_key",
+      "type": "promptString",
+      "description": "Environment variable for your api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "send-email"
+    ],
+    "env": {
+      "YOUR_RESEND_API_KEY": "${input:your_resend_api_key}",
+      "RESEND_API_KEY": "${input:resend_api_key}",
+      "YOUR_API_KEY": "${input:your_api_key}"
+    }
+  }
+}

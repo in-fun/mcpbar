@@ -1,0 +1,49 @@
+{
+  "name": "google-search-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for Google search and webpage analysis",
+  "homepage": "https://github.com/mixelpixx/Google-Search-MCP-Server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mixelpixx/Google-Search-MCP-Server"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "google-search-mcp-server",
+    "mixelpixx"
+  ],
+  "inputs": [
+    {
+      "id": "google_api_key",
+      "type": "promptString",
+      "description": "Environment variable for google api key authentication",
+      "password": true
+    },
+    {
+      "id": "google_search_engine_id",
+      "type": "promptString",
+      "description": "Environment variable for google search engine id configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "autoApprove": [
+      "google_search",
+      "extract_webpage_content",
+      "extract_multiple_webpages"
+    ],
+    "disabled": false,
+    "timeout": 60,
+    "command": "node",
+    "args": [
+      "/path/to/google-search-mcp-server/dist/google-search.js"
+    ],
+    "env": {
+      "GOOGLE_API_KEY": "your-google-api-key",
+      "GOOGLE_SEARCH_ENGINE_ID": "your-custom-search-engine-id"
+    },
+    "transportType": "stdio"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "@osaas/mcp-server",
+  "version": "1.0.1",
+  "description": "MCP server for using the Eyevinn Open Source Cloud API",
+  "homepage": "https://github.com/EyevinnOSC/mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/EyevinnOSC/mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server",
+    "eyevinnosc"
+  ],
+  "inputs": [
+    {
+      "id": "osc_access_token",
+      "type": "promptString",
+      "description": "Environment variable for osc access token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@osaas/mcp-server"
+    ],
+    "env": {
+      "OSC_ACCESS_TOKEN": "<YOUR_TOKEN>"
+    }
+  }
+}

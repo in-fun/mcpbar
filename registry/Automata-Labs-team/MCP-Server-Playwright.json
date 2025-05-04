@@ -1,0 +1,25 @@
+{
+  "name": "@automatalabs/mcp-server-playwright",
+  "version": "1.2.1",
+  "description": "MCP server for browser automation using Playwright",
+  "homepage": "https://github.com/Automata-Labs-team/MCP-Server-Playwright",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Automata-Labs-team/MCP-Server-Playwright"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-playwright",
+    "automata-labs-team"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@automatalabs/mcp-server-playwright"
+    ]
+  }
+}

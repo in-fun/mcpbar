@@ -1,0 +1,43 @@
+{
+  "name": "feishu-mcp",
+  "version": "0.0.9",
+  "description": "Model Context Protocol server for Feishu integration",
+  "homepage": "https://github.com/cso1z/Feishu-MCP",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cso1z/Feishu-MCP"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "feishu-mcp",
+    "cso1z"
+  ],
+  "inputs": [
+    {
+      "id": "feishu_app_id",
+      "type": "promptString",
+      "description": "Environment variable for feishu app id configuration",
+      "password": false
+    },
+    {
+      "id": "feishu_app_secret",
+      "type": "promptString",
+      "description": "Environment variable for feishu app secret authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "feishu-mcp",
+      "--stdio"
+    ],
+    "env": {
+      "FEISHU_APP_ID": "<你的飞书应用ID>",
+      "FEISHU_APP_SECRET": "<你的飞书应用密钥>"
+    }
+  }
+}

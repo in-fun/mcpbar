@@ -1,0 +1,48 @@
+{
+  "name": "@kailashg101/mcp-figma-to-code",
+  "version": "1.0.1",
+  "description": "MCP server for converting Figma designs to React Native components",
+  "homepage": "https://github.com/kailashAppDev/figma-mcp-toolkit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kailashAppDev/figma-mcp-toolkit"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "figma-mcp-toolkit",
+    "kailashappdev"
+  ],
+  "inputs": [
+    {
+      "id": "figma_token",
+      "type": "promptString",
+      "description": "Environment variable for figma token authentication",
+      "password": true
+    },
+    {
+      "id": "figma_file",
+      "type": "promptString",
+      "description": "Environment variable for figma file configuration",
+      "password": false
+    },
+    {
+      "id": "project_dir",
+      "type": "promptString",
+      "description": "Environment variable for project dir configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "PATH_TO_REPO/build/index.js"
+    ],
+    "env": {
+      "FIGMA_TOKEN": "your_figma_token",
+      "FIGMA_FILE": "your_figma_file_id",
+      "PROJECT_DIR": "your_project_directory"
+    }
+  }
+}

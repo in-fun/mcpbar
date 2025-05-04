@@ -1,0 +1,27 @@
+{
+  "name": "structured-thinking",
+  "version": "1.0.2",
+  "description": "A TypeScript implementation of Sequential Thinking Server using MCP",
+  "homepage": "https://github.com/Promptly-Technologies-LLC/mcp-structured-thinking",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Promptly-Technologies-LLC/mcp-structured-thinking"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "mcp",
+    "mcp-server",
+    "mindmap",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "structured-thinking"
+    ],
+    "env": {}
+  }
+}

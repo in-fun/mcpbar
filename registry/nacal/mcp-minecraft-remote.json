@@ -1,0 +1,25 @@
+{
+  "name": "mcp-minecraft-remote",
+  "version": "0.1.1",
+  "description": "Minecraft Remote Control using MCP (Model Context Protocol)",
+  "homepage": "https://github.com/nacal/mcp-minecraft-remote",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nacal/mcp-minecraft-remote"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-minecraft-remote",
+    "nacal"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-minecraft-remote@latest"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@snjyor/binance-mcp",
+  "version": "1.0.1",
+  "description": "Binance Cryptocurrency Market Data MCP Service",
+  "homepage": "https://www.npmjs.com/package/@snjyor/binance-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/snjyor/binance-mcp"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "binance-mcp",
+    "snjyor"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@snjyor/binance-mcp@latest"
+    ]
+  }
+}

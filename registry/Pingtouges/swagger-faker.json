@@ -1,0 +1,26 @@
+{
+  "name": "swagger-faker",
+  "version": "3.1.2",
+  "description": "Generate mocker services automatically through Swagger or OpenAPI",
+  "homepage": "https://reeli.github.io/swagger-faker/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Pingtouges/swagger-faker"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "swagger-faker",
+    "pingtouges"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "swagger-faker"
+    ],
+    "env": {}
+  }
+}

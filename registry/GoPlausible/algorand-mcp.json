@@ -1,0 +1,154 @@
+{
+  "name": "algorand-mcp",
+  "version": "2.7.7",
+  "description": "Algorand Model Context Protocol Implementation",
+  "homepage": "https://GoPlausible.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GoPlausible/algorand-mcp/tree/main//packages/server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "algorand",
+    "mcp",
+    "mcp-client",
+    "mcp-server",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "algorand_network",
+      "type": "promptString",
+      "description": "Environment variable for algorand network configuration",
+      "password": false
+    },
+    {
+      "id": "algorand_algod_api",
+      "type": "promptString",
+      "description": "Environment variable for algorand algod api configuration",
+      "password": false
+    },
+    {
+      "id": "algorand_algod",
+      "type": "promptString",
+      "description": "Environment variable for algorand algod configuration",
+      "password": false
+    },
+    {
+      "id": "algorand_indexer_api",
+      "type": "promptString",
+      "description": "Environment variable for algorand indexer api configuration",
+      "password": false
+    },
+    {
+      "id": "algorand_indexer",
+      "type": "promptString",
+      "description": "Environment variable for algorand indexer configuration",
+      "password": false
+    },
+    {
+      "id": "algorand_algod_port",
+      "type": "promptString",
+      "description": "Environment variable for algorand algod port configuration",
+      "password": false
+    },
+    {
+      "id": "algorand_indexer_port",
+      "type": "promptString",
+      "description": "Environment variable for algorand indexer port configuration",
+      "password": false
+    },
+    {
+      "id": "algorand_token",
+      "type": "promptString",
+      "description": "Environment variable for algorand token authentication",
+      "password": true
+    },
+    {
+      "id": "algorand_agent_wallet",
+      "type": "promptString",
+      "description": "Environment variable for algorand agent wallet configuration",
+      "password": false
+    },
+    {
+      "id": "nfd_api_url",
+      "type": "promptString",
+      "description": "Environment variable for nfd api url configuration",
+      "password": false
+    },
+    {
+      "id": "nfd_api_key",
+      "type": "promptString",
+      "description": "Environment variable for nfd api key authentication",
+      "password": true
+    },
+    {
+      "id": "tinyman_active",
+      "type": "promptString",
+      "description": "Environment variable for tinyman active configuration",
+      "password": false
+    },
+    {
+      "id": "ultrade_active",
+      "type": "promptString",
+      "description": "Environment variable for ultrade active configuration",
+      "password": false
+    },
+    {
+      "id": "ultrade_api_url",
+      "type": "promptString",
+      "description": "Environment variable for ultrade api url configuration",
+      "password": false
+    },
+    {
+      "id": "vestige_active",
+      "type": "promptString",
+      "description": "Environment variable for vestige active configuration",
+      "password": false
+    },
+    {
+      "id": "vestige_api_url",
+      "type": "promptString",
+      "description": "Environment variable for vestige api url configuration",
+      "password": false
+    },
+    {
+      "id": "vestige_api_key",
+      "type": "promptString",
+      "description": "Environment variable for vestige api key authentication",
+      "password": true
+    },
+    {
+      "id": "items_per_page",
+      "type": "promptString",
+      "description": "Environment variable for items per page configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "PATH_ON_YOUR_MACHINE/Claude/mcp-servers/algorand-mcp/packages/server/dist/index.js"
+    ],
+    "env": {
+      "ALGORAND_NETWORK": "testnet",
+      "ALGORAND_ALGOD_API": "https://testnet-api.algonode.cloud/v2",
+      "ALGORAND_ALGOD": "https://testnet-api.algonode.cloud",
+      "ALGORAND_INDEXER_API": "https://testnet-idx.algonode.cloud/v2",
+      "ALGORAND_INDEXER": "https://testnet-idx.algonode.cloud",
+      "ALGORAND_ALGOD_PORT": "",
+      "ALGORAND_INDEXER_PORT": "",
+      "ALGORAND_TOKEN": "",
+      "ALGORAND_AGENT_WALLET": "problem aim online jaguar upper oil flight stumble mystery aerobic toy avoid file tomato moment exclude witness guard lab opera crunch noodle dune abandon broccoli",
+      "NFD_API_URL": "https://api.nf.domains",
+      "NFD_API_KEY": "",
+      "TINYMAN_ACTIVE": "false",
+      "ULTRADE_ACTIVE": "false",
+      "ULTRADE_API_URL": "https://api.ultrade.io",
+      "VESTIGE_ACTIVE": "false",
+      "VESTIGE_API_URL": "https://api.vestigelabs.org",
+      "VESTIGE_API_KEY": "",
+      "ITEMS_PER_PAGE": "10"
+    }
+  }
+}

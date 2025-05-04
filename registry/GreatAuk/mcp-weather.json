@@ -1,0 +1,26 @@
+{
+  "name": "mcp-starter",
+  "version": "1.0.0",
+  "description": "An opinionated starter project for Model Context Protocol (MCP) servers",
+  "homepage": "https://github.com/GreatAuk/mcp-weather",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GreatAuk/mcp-weather"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-weather",
+    "greatauk"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-starter"
+    ],
+    "env": {}
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "mcp-server-lgtm",
+  "version": "0.1.0",
+  "description": "A Model Context Protocol server",
+  "homepage": "https://github.com/dongri/mcp-server-lgtm",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dongri/mcp-server-lgtm"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-lgtm",
+    "dongri"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "/path/to/mcp-server-lgtm/build/index.js"
+  }
+}

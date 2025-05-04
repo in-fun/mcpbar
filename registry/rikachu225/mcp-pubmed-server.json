@@ -1,0 +1,26 @@
+{
+  "name": "@rikachu225/pubmed-server",
+  "version": "1.1.0",
+  "description": "PubMed Server for accessing research papers with MCP support",
+  "homepage": "https://github.com/rikachu225/mcp-pubmed-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rikachu225/mcp-pubmed-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-pubmed-server",
+    "rikachu225"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@rikachu225/pubmed-server"
+    ],
+    "env": {}
+  }
+}

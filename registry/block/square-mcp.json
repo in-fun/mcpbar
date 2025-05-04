@@ -1,0 +1,34 @@
+{
+  "name": "square-mcp",
+  "version": "1.0.0",
+  "description": "Square Model Context Protocol Server",
+  "homepage": "https://github.com/block/square-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/block/square-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "square-mcp",
+    "block"
+  ],
+  "inputs": [
+    {
+      "id": "square_access_token",
+      "type": "promptString",
+      "description": "Environment variable for square access token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "square-mcp"
+    ],
+    "env": {
+      "SQUARE_ACCESS_TOKEN": "${input:square_access_token}"
+    }
+  }
+}

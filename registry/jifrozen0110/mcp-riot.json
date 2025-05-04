@@ -1,0 +1,34 @@
+{
+  "name": "riot",
+  "version": "1.0.0",
+  "description": "League of Legends MCP Server",
+  "homepage": "https://github.com/jifrozen0110/mcp-riot",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jifrozen0110/mcp-riot"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-riot",
+    "jifrozen0110"
+  ],
+  "inputs": [
+    {
+      "id": "riot_api_key",
+      "type": "promptString",
+      "description": "Environment variable for riot api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "riot"
+    ],
+    "env": {
+      "RIOT_API_KEY": "${input:riot_api_key}"
+    }
+  }
+}

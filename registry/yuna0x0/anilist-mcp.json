@@ -1,0 +1,39 @@
+{
+  "name": "anilist-mcp",
+  "version": "1.2.4",
+  "description": "AniList MCP server for accessing AniList API data",
+  "homepage": "https://github.com/yuna0x0/anilist-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuna0x0/anilist-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "anilist",
+    "anime",
+    "api",
+    "llm",
+    "manga",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "anilist_token",
+      "type": "promptString",
+      "description": "Environment variable for anilist token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "anilist-mcp"
+    ],
+    "env": {
+      "ANILIST_TOKEN": "your_api_token"
+    }
+  }
+}

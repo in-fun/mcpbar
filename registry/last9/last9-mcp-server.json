@@ -1,0 +1,49 @@
+{
+  "name": "@last9/mcp-server",
+  "version": "0.1.4",
+  "description": "Last9 MCP Server - Model Context Protocol server implementation for Last9",
+  "homepage": "https://last9.io/mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/last9/last9-mcp-server"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "claude",
+    "cursor",
+    "mcp",
+    "observability",
+    "vibe-coding",
+    "monitoring",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "last9_auth_token",
+      "type": "promptString",
+      "description": "Environment variable for last9 auth token authentication",
+      "password": true
+    },
+    {
+      "id": "last9_base_url",
+      "type": "promptString",
+      "description": "Environment variable for last9 base url configuration",
+      "password": false
+    },
+    {
+      "id": "last9_refresh_token",
+      "type": "promptString",
+      "description": "Environment variable for last9 refresh token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "type": "stdio",
+    "command": "/opt/homebrew/bin/last9-mcp",
+    "env": {
+      "LAST9_AUTH_TOKEN": "<auth_token>",
+      "LAST9_BASE_URL": "<last9_otlp_host>",
+      "LAST9_REFRESH_TOKEN": "<write_refresh_token>"
+    }
+  }
+}

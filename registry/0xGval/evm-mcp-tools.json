@@ -1,0 +1,62 @@
+{
+  "name": "mcp",
+  "version": "1.0.0",
+  "description": "Ethereum Tools for Claude - A comprehensive blockchain analysis toolkit that enables Claude AI to audit smart contracts, analyze wallets, track profitability, and fetch on-chain data using Model Context Protocol (MCP). Seamlessly integrates blockchain capabilities into Claude for Desktop.",
+  "homepage": "https://github.com/0xGval/evm-mcp-tools",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0xGval/evm-mcp-tools"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "evm-mcp-tools",
+    "0xgval"
+  ],
+  "inputs": [
+    {
+      "id": "eth_rpc_url",
+      "type": "promptString",
+      "description": "Environment variable for eth rpc url configuration",
+      "password": false
+    },
+    {
+      "id": "moralis_api_key",
+      "type": "promptString",
+      "description": "Environment variable for moralis api key authentication",
+      "password": true
+    },
+    {
+      "id": "etherscan_api_key",
+      "type": "promptString",
+      "description": "Environment variable for etherscan api key authentication",
+      "password": true
+    },
+    {
+      "id": "codex_api_key",
+      "type": "promptString",
+      "description": "Environment variable for codex api key authentication",
+      "password": true
+    },
+    {
+      "id": "rapidapi_key",
+      "type": "promptString",
+      "description": "Environment variable for rapidapi key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "YOUR_ABSOLUTE_PATH_TO/main.js"
+    ],
+    "env": {
+      "ETH_RPC_URL": "https://eth.llamarpc.com",
+      "MORALIS_API_KEY": "your_moralis_api_key",
+      "ETHERSCAN_API_KEY": "your_etherscan_api_key",
+      "CODEX_API_KEY": "your_codex_api_key",
+      "RAPIDAPI_KEY": "your_rapidapi_key"
+    }
+  }
+}

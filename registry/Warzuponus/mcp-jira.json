@@ -1,0 +1,62 @@
+{
+  "name": "mcp-jira",
+  "version": "1.0.0",
+  "description": "JIRA integration server for Model Context Protocol (MCP) - enables LLMs to interact with JIRA tasks and workflows",
+  "homepage": "https://github.com/Warzuponus/mcp-jira",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Warzuponus/mcp-jira"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-jira",
+    "warzuponus"
+  ],
+  "inputs": [
+    {
+      "id": "jira_url",
+      "type": "promptString",
+      "description": "Environment variable for jira url",
+      "password": false
+    },
+    {
+      "id": "jira_user",
+      "type": "promptString",
+      "description": "Environment variable for jira user",
+      "password": false
+    },
+    {
+      "id": "jira_api_token",
+      "type": "promptString",
+      "description": "Environment variable for jira api token",
+      "password": true
+    },
+    {
+      "id": "project_key",
+      "type": "promptString",
+      "description": "Environment variable for project key",
+      "password": true
+    },
+    {
+      "id": "api_key",
+      "type": "promptString",
+      "description": "Environment variable for api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-jira"
+    ],
+    "env": {
+      "JIRA_URL": "${input:jira_url}",
+      "JIRA_USER": "${input:jira_user}",
+      "JIRA_API_TOKEN": "${input:jira_api_token}",
+      "PROJECT_KEY": "${input:project_key}",
+      "API_KEY": "${input:api_key}"
+    }
+  }
+}

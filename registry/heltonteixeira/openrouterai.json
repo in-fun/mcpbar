@@ -1,0 +1,41 @@
+{
+  "name": "@mcpservers/openrouterai",
+  "version": "2.2.0",
+  "description": "MCP server for OpenRouter.ai integration",
+  "homepage": "https://github.com/heltonteixeira/openrouterai",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/heltonteixeira/openrouterai"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "openrouterai",
+    "heltonteixeira"
+  ],
+  "inputs": [
+    {
+      "id": "openrouter_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openrouter api key authentication",
+      "password": true
+    },
+    {
+      "id": "openrouter_default_model",
+      "type": "promptString",
+      "description": "Environment variable for openrouter default model configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "@mcpservers/openrouterai"
+    ],
+    "env": {
+      "OPENROUTER_API_KEY": "your-api-key-here",
+      "OPENROUTER_DEFAULT_MODEL": "optional-default-model"
+    }
+  }
+}

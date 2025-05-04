@@ -1,0 +1,57 @@
+{
+  "name": "nebulagraph-mcp-server",
+  "version": "1.0.0",
+  "description": "Model Context Protocol Server for NebulaGraph 3.x",
+  "homepage": "https://pypi.org/project/nebulagraph-mcp-server/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PsiACE/nebulagraph-mcp-server"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "agent",
+    "genai",
+    "llm",
+    "mcp",
+    "nebulagraph",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "nebula_host",
+      "type": "promptString",
+      "description": "Environment variable for nebula host",
+      "password": false
+    },
+    {
+      "id": "nebula_port",
+      "type": "promptString",
+      "description": "Environment variable for nebula port",
+      "password": false
+    },
+    {
+      "id": "nebula_user",
+      "type": "promptString",
+      "description": "Environment variable for nebula user",
+      "password": false
+    },
+    {
+      "id": "nebula_pass",
+      "type": "promptString",
+      "description": "Environment variable for nebula pass",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "nebulagraph-mcp-server"
+    ],
+    "env": {
+      "NEBULA_HOST": "${input:nebula_host}",
+      "NEBULA_PORT": "${input:nebula_port}",
+      "NEBULA_USER": "${input:nebula_user}",
+      "NEBULA_PASS": "${input:nebula_pass}"
+    }
+  }
+}

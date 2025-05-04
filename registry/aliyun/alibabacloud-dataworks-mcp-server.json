@@ -1,0 +1,72 @@
+{
+  "name": "alibabacloud-dataworks-mcp-server",
+  "version": "1.0.43",
+  "description": "DataWorks MCP Server: Export the DataWorks Open API to MCP Server, allowing clients that can run MCP Server to use DataWorks Open API through AI.",
+  "homepage": "https://www.aliyun.com/product/bigdata/ide",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aliyun/alibabacloud-dataworks-mcp-server"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "ai",
+    "bigdata",
+    "data",
+    "database",
+    "scheduler",
+    "sql",
+    "aliyun",
+    "data-analysis",
+    "data-science",
+    "data-visualization",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "region",
+      "type": "promptString",
+      "description": "Environment variable for region configuration",
+      "password": false
+    },
+    {
+      "id": "alibaba_cloud_access_key_id",
+      "type": "promptString",
+      "description": "Environment variable for alibaba cloud access key id authentication",
+      "password": true
+    },
+    {
+      "id": "alibaba_cloud_access_key_secret",
+      "type": "promptString",
+      "description": "Environment variable for alibaba cloud access key secret authentication",
+      "password": true
+    },
+    {
+      "id": "tool_categories",
+      "type": "promptString",
+      "description": "Environment variable for tool categories configuration",
+      "password": false
+    },
+    {
+      "id": "tool_names",
+      "type": "promptString",
+      "description": "Environment variable for tool names configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "alibabacloud-dataworks-mcp-server"
+    ],
+    "env": {
+      "REGION": "your_dataworks_open_api_region_id_here",
+      "ALIBABA_CLOUD_ACCESS_KEY_ID": "your_alibaba_cloud_access_key_id",
+      "ALIBABA_CLOUD_ACCESS_KEY_SECRET": "your_alibaba_cloud_access_key_secret",
+      "TOOL_CATEGORIES": "optional_your_tool_categories_here_ex_UTILS",
+      "TOOL_NAMES": "optional_your_tool_names_here_ex_ListProjects"
+    },
+    "disabled": false,
+    "autoApprove": []
+  }
+}

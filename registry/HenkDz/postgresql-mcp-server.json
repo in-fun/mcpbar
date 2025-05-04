@@ -1,0 +1,36 @@
+{
+  "name": "postgresql-mcp-server",
+  "version": "0.2.0",
+  "description": "MCP server for PostgreSQL database management, schema management, data migration, and monitoring",
+  "homepage": "https://github.com/HenkDz/postgresql-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HenkDz/postgresql-mcp-server"
+  },
+  "license": "AGPL-3.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "postgresql-mcp-server",
+    "henkdz"
+  ],
+  "inputs": [
+    {
+      "id": "postgres_connection_string",
+      "type": "promptString",
+      "description": "Environment variable for postgres connection string configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/postgresql-mcp-server/build/index.js"
+    ],
+    "disabled": false,
+    "alwaysAllow": [],
+    "env": {
+      "POSTGRES_CONNECTION_STRING": "postgresql://username:password@server:port/dbname"
+    }
+  }
+}

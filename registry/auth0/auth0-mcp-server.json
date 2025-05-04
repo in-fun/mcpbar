@@ -1,0 +1,39 @@
+{
+  "name": "@auth0/auth0-mcp-server",
+  "version": "0.1.0-beta.2",
+  "description": "Auth0 Model Context Protocol (MCP) Server (Beta) — A secure and extendable implementation of an MCP server that provides AI assistants with controlled access to the Auth0 Management API through natural language. This project is in beta and not intended for production workloads. It enables AI-assisted tenant management while enforcing best practices around security, least-privilege access, and customizable toolsets.",
+  "homepage": "https://github.com/auth0/auth0-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/auth0/auth0-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "auth0-mcp-server",
+    "auth0"
+  ],
+  "inputs": [
+    {
+      "id": "debug",
+      "type": "promptString",
+      "description": "Environment variable for debug configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@auth0/auth0-mcp-server",
+      "run"
+    ],
+    "capabilities": [
+      "tools"
+    ],
+    "env": {
+      "DEBUG": "auth0-mcp"
+    }
+  }
+}

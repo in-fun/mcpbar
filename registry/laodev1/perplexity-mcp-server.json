@@ -1,0 +1,42 @@
+{
+  "name": "perplexity-mcp-server",
+  "version": "1.0.0",
+  "description": "A server that implements the MCP protocol to bring perplexity API into context. ",
+  "homepage": "https://github.com/laodev1/perplexity-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/laodev1/perplexity-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "perplexity-mcp-server",
+    "laodev1"
+  ],
+  "inputs": [
+    {
+      "id": "perplexity_api_key",
+      "type": "promptString",
+      "description": "Environment variable for perplexity api key",
+      "password": true
+    },
+    {
+      "id": "your_perplexity_api_key",
+      "type": "promptString",
+      "description": "Environment variable for your perplexity api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "perplexity-mcp-server"
+    ],
+    "env": {
+      "PERPLEXITY_API_KEY": "${input:perplexity_api_key}",
+      "YOUR_PERPLEXITY_API_KEY": "${input:your_perplexity_api_key}"
+    }
+  }
+}

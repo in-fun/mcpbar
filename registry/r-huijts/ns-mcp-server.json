@@ -1,0 +1,35 @@
+{
+  "name": "ns-mcp-server",
+  "version": "0.1.6",
+  "description": "Transform your AI assistant into a Dutch railways expert! This MCP server connects Claude to real-time NS (Nederlandse Spoorwegen) travel information, making it your perfect companion for navigating the Netherlands by train.",
+  "homepage": "https://github.com/r-huijts/ns-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/r-huijts/ns-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ns-mcp-server",
+    "r-huijts"
+  ],
+  "inputs": [
+    {
+      "id": "ns_api_key",
+      "type": "promptString",
+      "description": "Environment variable for ns api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "ns-mcp-server"
+    ],
+    "env": {
+      "NS_API_KEY": "your_api_key_here"
+    }
+  }
+}

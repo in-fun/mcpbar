@@ -1,0 +1,21 @@
+{
+  "name": "@mcpfun/mcp-server-leetcode",
+  "version": "1.0.1",
+  "description": "Model Context Protocol server for LeetCode using GraphQL",
+  "homepage": "https://github.com/doggybee/mcp-server-leetcode",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/doggybee/mcp-server-leetcode"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-leetcode",
+    "doggybee"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "mcp-server-leetcode"
+  }
+}

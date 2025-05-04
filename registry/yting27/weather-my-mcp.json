@@ -1,0 +1,27 @@
+{
+  "name": "weather-server",
+  "version": "1.0.0",
+  "description": "Model Context Protocol (MCP) server that provides weather information from Malaysia Government's Open API",
+  "homepage": "https://github.com/yting27/weather-my-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yting27/weather-my-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "agent",
+    "mcp",
+    "weather",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "weather-my-mcp",
+      "run",
+      "weather.py"
+    ]
+  }
+}

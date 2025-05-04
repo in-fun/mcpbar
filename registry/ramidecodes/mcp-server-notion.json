@@ -1,0 +1,26 @@
+{
+  "name": "@ramidecodes/mcp-server-notion",
+  "version": "1.0.6",
+  "description": "A Model Context Protocol (MCP) server that exposes the official Notion SDK",
+  "homepage": "https://github.com/ramidecodes/mcp-server-notion",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ramidecodes/mcp-server-notion"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-notion",
+    "ramidecodes"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "@ramidecodes/mcp-server-notion@latest",
+      "-y",
+      "--api-key=your-notion-integration-key"
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "name": "@coderay/mongodb-mcp-server",
+  "version": "1.0.2",
+  "description": "High-performance MongoDB Model Context Protocol (MCP) server optimized for LLMs - enables AI agents to safely and efficiently query and manipulate MongoDB data with type safety, schema validation, and controlled access patterns",
+  "homepage": "https://github.com/1RB/mongo-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1RB/mongo-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "claude",
+    "claude-desktop",
+    "cursor",
+    "cursorai",
+    "mcp",
+    "mcp-server",
+    "mongodb",
+    "model-context-protocol",
+    "model-context-protocol-servers"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "mongo-mcp",
+      "mongodb://<username>:<password>@<host>:<port>/<database>?authSource=admin"
+    ]
+  }
+}

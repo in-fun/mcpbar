@@ -1,0 +1,42 @@
+{
+  "name": "@mtane0412/ghost-mcp-server",
+  "version": "1.0.2",
+  "description": "Ghost MCP Server for interacting with Ghost CMS API",
+  "homepage": "https://github.com/mtane0412/ghost-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mtane0412/ghost-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ghost-mcp-server",
+    "mtane0412"
+  ],
+  "inputs": [
+    {
+      "id": "ghost_url",
+      "type": "promptString",
+      "description": "Environment variable for ghost url",
+      "password": false
+    },
+    {
+      "id": "ghost_admin_api_key",
+      "type": "promptString",
+      "description": "Environment variable for ghost admin api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@mtane0412/ghost-mcp-server"
+    ],
+    "env": {
+      "GHOST_URL": "${input:ghost_url}",
+      "GHOST_ADMIN_API_KEY": "${input:ghost_admin_api_key}"
+    }
+  }
+}

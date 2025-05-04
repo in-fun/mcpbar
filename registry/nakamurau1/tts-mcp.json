@@ -1,0 +1,38 @@
+{
+  "name": "tts-mcp",
+  "version": "1.1.1",
+  "description": "OpenAI Text to Speech APIを活用したコマンドラインツールとMCPサーバー",
+  "homepage": "https://github.com/nakamurau1/tts-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nakamurau1/tts-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "tts-mcp",
+    "nakamurau1"
+  ],
+  "inputs": [
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "full/path/to/bin/tts-mcp-server.js",
+      "--voice",
+      "nova",
+      "--api-key",
+      "your-openai-api-key"
+    ],
+    "env": {
+      "OPENAI_API_KEY": "your-openai-api-key"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "findata-mcp-server",
+  "version": "0.1.0",
+  "description": "MCP server for fetching financial data from Alpha Vantage.",
+  "homepage": "https://github.com/xBlueCode/findata-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xBlueCode/findata-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "findata-mcp-server",
+    "xbluecode"
+  ],
+  "inputs": [
+    {
+      "id": "alpha_vantage_api_key",
+      "type": "promptString",
+      "description": "Environment variable for alpha vantage api key",
+      "password": true
+    },
+    {
+      "id": "put_your_api_key",
+      "type": "promptString",
+      "description": "Environment variable for put your api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "findata-mcp-server"
+    ],
+    "env": {
+      "ALPHA_VANTAGE_API_KEY": "${input:alpha_vantage_api_key}",
+      "PUT_YOUR_API_KEY": "${input:put_your_api_key}"
+    }
+  }
+}

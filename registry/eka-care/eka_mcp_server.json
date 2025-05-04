@@ -1,0 +1,30 @@
+{
+  "name": "eka_mcp_server",
+  "version": "1.0.0",
+  "description": "Eka MCP Server",
+  "homepage": "https://github.com/eka-care/eka_mcp_server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eka-care/eka_mcp_server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "eka_mcp_server",
+    "eka-care"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "eka_mcp_server",
+      "--eka-api-host",
+      "https://api.eka.care",
+      "--client-id",
+      "<client_id>",
+      "--client-secret",
+      "<client_secret>"
+    ]
+  }
+}

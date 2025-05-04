@@ -1,0 +1,24 @@
+{
+  "name": "chess-mcp",
+  "version": "0.0.7",
+  "description": "Chess MCP server with position evaluation, move validation, and masters database",
+  "homepage": "https://github.com/turlockmike/chess-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/turlockmike/chess-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "chess-mcp",
+    "turlockmike"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "chess-mcp"
+    ]
+  }
+}

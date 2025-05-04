@@ -1,0 +1,34 @@
+{
+  "name": "wecom-bot-mcp-server",
+  "version": "1.0.0",
+  "description": "A Python server implementation for WeCom (WeChat Work) bot that follows the Model Context Protocol (MCP). This server provides a standardized interface for handling automated messaging and context-aware interactions within enterprise WeChat environments.",
+  "homepage": "https://github.com/loonghao/wecom-bot-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/loonghao/wecom-bot-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "wecom-bot-mcp-server",
+    "loonghao"
+  ],
+  "inputs": [
+    {
+      "id": "wecom_webhook_url",
+      "type": "promptString",
+      "description": "Environment variable for wecom webhook url",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "wecom-bot-mcp-server"
+    ],
+    "env": {
+      "WECOM_WEBHOOK_URL": "${input:wecom_webhook_url}"
+    }
+  }
+}

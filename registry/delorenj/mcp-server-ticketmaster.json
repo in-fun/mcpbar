@@ -1,0 +1,35 @@
+{
+  "name": "@delorenj/mcp-server-ticketmaster",
+  "version": "0.2.5",
+  "description": "A Model Context Protocol server for discovering events, venues, and attractions through the Ticketmaster Discovery API",
+  "homepage": "https://github.com/delorenj/mcp-server-ticketmaster",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/delorenj/mcp-server-ticketmaster"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-ticketmaster",
+    "delorenj"
+  ],
+  "inputs": [
+    {
+      "id": "ticketmaster_api_key",
+      "type": "promptString",
+      "description": "Environment variable for ticketmaster api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@delorenj/mcp-server-ticketmaster"
+    ],
+    "env": {
+      "TICKETMASTER_API_KEY": "your-api-key-here"
+    }
+  }
+}

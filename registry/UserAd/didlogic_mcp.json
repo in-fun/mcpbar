@@ -1,0 +1,41 @@
+{
+  "name": "didlogic_mcp",
+  "version": "1.0.0",
+  "description": "MCP server for didlogic_mcp",
+  "homepage": "https://github.com/UserAd/didlogic_mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/UserAd/didlogic_mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "didlogic_mcp",
+    "userad"
+  ],
+  "inputs": [
+    {
+      "id": "didlogic_api_key",
+      "type": "promptString",
+      "description": "Environment variable for didlogic api key",
+      "password": true
+    },
+    {
+      "id": "your_didlogic_key",
+      "type": "promptString",
+      "description": "Environment variable for your didlogic key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "didlogic_mcp"
+    ],
+    "env": {
+      "DIDLOGIC_API_KEY": "${input:didlogic_api_key}",
+      "YOUR_DIDLOGIC_KEY": "${input:your_didlogic_key}"
+    }
+  }
+}

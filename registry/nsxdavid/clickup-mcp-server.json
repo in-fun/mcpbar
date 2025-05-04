@@ -1,0 +1,36 @@
+{
+  "name": "clickup-mcp-server",
+  "version": "1.12.0",
+  "description": "A Model Context Protocol (MCP) server that provides a standardized interface for AI assistants to interact with the ClickUp API",
+  "homepage": "https://github.com/nsxdavid/clickup-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nsxdavid/clickup-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "clickup-mcp-server",
+    "nsxdavid"
+  ],
+  "inputs": [
+    {
+      "id": "clickup_api_token",
+      "type": "promptString",
+      "description": "Environment variable for clickup api token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/clickup-mcp-server/build/index.js"
+    ],
+    "env": {
+      "CLICKUP_API_TOKEN": "YOUR_API_TOKEN_HERE"
+    },
+    "disabled": false,
+    "autoApprove": []
+  }
+}

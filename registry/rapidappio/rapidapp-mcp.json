@@ -1,0 +1,35 @@
+{
+  "name": "@rapidappio/rapidapp-mcp",
+  "version": "1.0.13",
+  "description": "MCP Server for Rapidapp PostgreSQL Databases",
+  "homepage": "https://github.com/rapidappio/rapidapp-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rapidappio/rapidapp-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "rapidapp-mcp",
+    "rapidappio"
+  ],
+  "inputs": [
+    {
+      "id": "rapidapp_api_key",
+      "type": "promptString",
+      "description": "Environment variable for rapidapp api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@rapidappio/rapidapp-mcp"
+    ],
+    "env": {
+      "RAPIDAPP_API_KEY": "<your-api-key>"
+    }
+  }
+}

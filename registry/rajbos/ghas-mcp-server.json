@@ -1,0 +1,35 @@
+{
+  "name": "@rajbos/ghas-mcp-server",
+  "version": "0.0.4",
+  "description": "GitHub Advanced Security MCP server",
+  "homepage": "https://www.npmjs.com/package/@rajbos/ghas-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rajbos/ghas-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ghas-mcp-server",
+    "rajbos"
+  ],
+  "inputs": [
+    {
+      "id": "github_personal_access_token",
+      "type": "promptString",
+      "description": "Environment variable for github personal access token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@rajbos/ghas-mcp-server"
+    ],
+    "env": {
+      "GITHUB_PERSONAL_ACCESS_TOKEN": "${input:github_personal_access_token}"
+    }
+  }
+}

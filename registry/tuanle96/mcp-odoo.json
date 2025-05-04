@@ -1,0 +1,58 @@
+{
+  "name": "odoo-mcp",
+  "version": "1.0.0",
+  "description": "MCP Server for Odoo",
+  "homepage": "https://github.com/tuanle96/mcp-odoo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tuanle96/mcp-odoo"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "mcp-servers",
+    "odoo",
+    "odoo-mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "odoo_url",
+      "type": "promptString",
+      "description": "Environment variable for odoo url configuration",
+      "password": false
+    },
+    {
+      "id": "odoo_db",
+      "type": "promptString",
+      "description": "Environment variable for odoo db configuration",
+      "password": false
+    },
+    {
+      "id": "odoo_username",
+      "type": "promptString",
+      "description": "Environment variable for odoo username configuration",
+      "password": false
+    },
+    {
+      "id": "odoo_password",
+      "type": "promptString",
+      "description": "Environment variable for odoo password authentication",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "python",
+    "args": [
+      "-m",
+      "odoo_mcp"
+    ],
+    "env": {
+      "ODOO_URL": "https://your-odoo-instance.com",
+      "ODOO_DB": "your-database-name",
+      "ODOO_USERNAME": "your-username",
+      "ODOO_PASSWORD": "your-password-or-api-key"
+    }
+  }
+}

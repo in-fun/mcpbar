@@ -1,0 +1,34 @@
+{
+  "name": "smooth-operator-agent-tools",
+  "version": "1.0.0",
+  "description": "MCP server for smooth-operator-client-python",
+  "homepage": "https://github.com/fstandhartinger/smooth-operator-client-python",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fstandhartinger/smooth-operator-client-python"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "smooth-operator-client-python",
+    "fstandhartinger"
+  ],
+  "inputs": [
+    {
+      "id": "your_api_key",
+      "type": "promptString",
+      "description": "Environment variable for your api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "smooth-operator-agent-tools"
+    ],
+    "env": {
+      "YOUR_API_KEY": "${input:your_api_key}"
+    }
+  }
+}

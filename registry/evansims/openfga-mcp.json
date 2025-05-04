@@ -1,0 +1,26 @@
+{
+  "name": "openfga-mcp",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol (MCP) server providing tools to read, search, and manipulate OpenFGA stores programmatically via Large Language Models (LLMs.)",
+  "homepage": "https://openfga.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evansims/openfga-mcp"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "authorization",
+    "automation",
+    "generative-ai",
+    "mcp",
+    "model-context-protocol",
+    "openfga"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "openfga-mcp@latest"
+    ]
+  }
+}

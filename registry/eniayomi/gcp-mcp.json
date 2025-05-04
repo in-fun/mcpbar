@@ -1,0 +1,25 @@
+{
+  "name": "gcp-mcp",
+  "version": "1.0.2",
+  "description": "Model Context Protocol (MCP) server for Google Cloud Platform - Talk to your GCP resources",
+  "homepage": "https://github.com/eniayomi/gcp-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eniayomi/gcp-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "gcp-mcp",
+    "eniayomi"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "sh",
+    "args": [
+      "-c",
+      "npx -y gcp-mcp"
+    ]
+  }
+}

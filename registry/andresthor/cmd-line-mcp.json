@@ -1,0 +1,42 @@
+{
+  "name": "cmd-line-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for cmd-line-mcp",
+  "homepage": "https://github.com/andresthor/cmd-line-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andresthor/cmd-line-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "cmd-line-mcp",
+    "andresthor"
+  ],
+  "inputs": [
+    {
+      "id": "cmd_line_mcp_security_require_session_id",
+      "type": "promptString",
+      "description": "Environment variable for cmd line mcp security require session id configuration",
+      "password": false
+    },
+    {
+      "id": "cmd_line_mcp_security_auto_approve_directories_in_desktop_mode",
+      "type": "promptString",
+      "description": "Environment variable for cmd line mcp security auto approve directories in desktop mode configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "/path/to/venv/bin/cmd-line-mcp",
+    "args": [
+      "--config",
+      "/path/to/config.json"
+    ],
+    "env": {
+      "CMD_LINE_MCP_SECURITY_REQUIRE_SESSION_ID": "false",
+      "CMD_LINE_MCP_SECURITY_AUTO_APPROVE_DIRECTORIES_IN_DESKTOP_MODE": "true"
+    }
+  }
+}

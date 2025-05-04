@@ -1,0 +1,24 @@
+{
+  "name": "mcp-n8n-server",
+  "version": "1.0.0",
+  "description": "Serveur MCP pour n8n avec validation de workflows et bonnes pratiques",
+  "homepage": "https://github.com/lowprofix/n8n-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lowprofix/n8n-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "n8n-mcp-server",
+    "lowprofix"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "/chemin/absolu/vers/mcp-n8n-server/dist/server.js"
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "@thirdstrandstudio/mcp-xpath",
+  "version": "0.7.0",
+  "description": "MCP server for xpath",
+  "homepage": "https://github.com/thirdstrandstudio/mcp-xpath",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thirdstrandstudio/mcp-xpath"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-xpath",
+    "thirdstrandstudio"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "@thirdstrandstudio/mcp-xpath"
+    ]
+  }
+}

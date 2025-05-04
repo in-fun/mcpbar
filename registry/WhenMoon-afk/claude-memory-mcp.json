@@ -1,0 +1,35 @@
+{
+  "name": "memory_mcp",
+  "version": "1.0.0",
+  "description": "An MCP server implementation providing persistent memory capabilities for Claude, based on research into optimal LLM memory techniques",
+  "homepage": "https://github.com/WhenMoon-afk/claude-memory-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/WhenMoon-afk/claude-memory-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "claude-memory-mcp",
+    "whenmoon-afk"
+  ],
+  "inputs": [
+    {
+      "id": "memory_file_path",
+      "type": "promptString",
+      "description": "Environment variable for memory file path configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "python",
+    "args": [
+      "-m",
+      "memory_mcp"
+    ],
+    "env": {
+      "MEMORY_FILE_PATH": "/path/to/your/memory.json"
+    }
+  }
+}

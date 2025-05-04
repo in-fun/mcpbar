@@ -1,0 +1,41 @@
+{
+  "name": "mcp-google-suite",
+  "version": "1.0.0",
+  "description": "MCP server for mcp-google-suite",
+  "homepage": "https://github.com/adexltd/mcp-google-suite",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adexltd/mcp-google-suite"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-google-suite",
+    "adexltd"
+  ],
+  "inputs": [
+    {
+      "id": "google_application_credentials",
+      "type": "promptString",
+      "description": "Environment variable for google application credentials configuration",
+      "password": false
+    },
+    {
+      "id": "google_oauth_credentials",
+      "type": "promptString",
+      "description": "Environment variable for google oauth credentials configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-google-suite"
+    ],
+    "env": {
+      "GOOGLE_APPLICATION_CREDENTIALS": "~/.google/server-creds.json",
+      "GOOGLE_OAUTH_CREDENTIALS": "~/.google/oauth.keys.json"
+    }
+  }
+}

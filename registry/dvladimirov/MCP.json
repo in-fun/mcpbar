@@ -1,0 +1,62 @@
+{
+  "name": "mcp",
+  "version": "1.0.0",
+  "description": "MCP Utilities Test",
+  "homepage": "https://github.com/dvladimirov/MCP",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dvladimirov/MCP"
+  },
+  "license": "GPL-3.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp",
+    "dvladimirov"
+  ],
+  "inputs": [
+    {
+      "id": "azure_openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for azure openai api key",
+      "password": true
+    },
+    {
+      "id": "azure_openai_api",
+      "type": "promptString",
+      "description": "Environment variable for azure openai api",
+      "password": false
+    },
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key",
+      "password": true
+    },
+    {
+      "id": "prometheus_url",
+      "type": "promptString",
+      "description": "Environment variable for prometheus url",
+      "password": false
+    },
+    {
+      "id": "optional_repo_url",
+      "type": "promptString",
+      "description": "Environment variable for optional repo url",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp"
+    ],
+    "env": {
+      "AZURE_OPENAI_API_KEY": "${input:azure_openai_api_key}",
+      "AZURE_OPENAI_API": "${input:azure_openai_api}",
+      "OPENAI_API_KEY": "${input:openai_api_key}",
+      "PROMETHEUS_URL": "${input:prometheus_url}",
+      "OPTIONAL_REPO_URL": "${input:optional_repo_url}"
+    }
+  }
+}

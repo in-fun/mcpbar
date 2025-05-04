@@ -1,0 +1,25 @@
+{
+  "name": "mcp-vcd",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol implementation for Value Change Dump (VCD) files.",
+  "homepage": "https://github.com/SeanMcLoughlin/mcp-vcd",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SeanMcLoughlin/mcp-vcd"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-vcd",
+    "seanmcloughlin"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-vcd"
+    ],
+    "env": {}
+  }
+}

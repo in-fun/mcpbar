@@ -1,0 +1,42 @@
+{
+  "name": "@neurelo/connect-mcp",
+  "version": "0.0.2-8",
+  "description": "Neurelo Connect MCP server",
+  "homepage": "https://github.com/neurelo-connect/neurelo-connect-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neurelo-connect/neurelo-connect-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "neurelo-connect-mcp",
+    "neurelo-connect"
+  ],
+  "inputs": [
+    {
+      "id": "engine_api_key",
+      "type": "promptString",
+      "description": "Environment variable for engine api key authentication",
+      "password": true
+    },
+    {
+      "id": "engine_base_path",
+      "type": "promptString",
+      "description": "Environment variable for engine base path configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "@neurelo/connect-mcp",
+      "start"
+    ],
+    "env": {
+      "ENGINE_API_KEY": "YOUR_ENGINE_API_KEY",
+      "ENGINE_BASE_PATH": "YOUR_ENGINE_BASE_PATH"
+    }
+  }
+}

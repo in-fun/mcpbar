@@ -1,0 +1,26 @@
+{
+  "name": "software-planning-tool",
+  "version": "0.1.0",
+  "description": "A Model Context Protocol server",
+  "homepage": "https://github.com/PhilippMT/Software-planning-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PhilippMT/Software-planning-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "software-planning-mcp",
+    "philippmt"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/software-planning-tool/build/index.js"
+    ],
+    "disabled": false,
+    "autoApprove": []
+  }
+}

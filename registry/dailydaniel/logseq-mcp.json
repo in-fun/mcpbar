@@ -1,0 +1,41 @@
+{
+  "name": "mcp-server-logseq",
+  "version": "1.0.0",
+  "description": "simple logseq mcp server",
+  "homepage": "https://github.com/dailydaniel/logseq-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dailydaniel/logseq-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "logseq-mcp",
+    "dailydaniel"
+  ],
+  "inputs": [
+    {
+      "id": "logseq_api_token",
+      "type": "promptString",
+      "description": "Environment variable for logseq api token authentication",
+      "password": true
+    },
+    {
+      "id": "logseq_api_url",
+      "type": "promptString",
+      "description": "Environment variable for logseq api url configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-server-logseq"
+    ],
+    "env": {
+      "LOGSEQ_API_TOKEN": "<YOUR_KEY>",
+      "LOGSEQ_API_URL": "http://127.0.0.1:12315"
+    }
+  }
+}

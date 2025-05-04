@@ -1,0 +1,26 @@
+{
+  "name": "systemprompt-mcp-reddit",
+  "version": "1.0.24",
+  "description": "A specialized Model Context Protocol (MCP) server that enables you to search, read, and interact with Reddit content, leveraging an AI Agent to help with each operation.",
+  "homepage": "https://github.com/Ejb503/systemprompt-mcp-reddit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ejb503/systemprompt-mcp-reddit"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "systemprompt-mcp-reddit",
+    "ejb503"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "systemprompt-mcp-reddit"
+    ],
+    "env": {}
+  }
+}

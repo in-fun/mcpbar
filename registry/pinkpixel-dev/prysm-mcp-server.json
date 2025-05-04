@@ -1,0 +1,43 @@
+{
+  "name": "@pinkpixel/prysm-mcp",
+  "version": "1.1.2",
+  "description": "MCP server for the Prysm web scraper - enabling AI assistants to scrape web content",
+  "homepage": "https://github.com/pinkpixel-dev/prysm-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pinkpixel-dev/prysm-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "prysm-mcp-server",
+    "pinkpixel-dev"
+  ],
+  "inputs": [
+    {
+      "id": "prysm_output_dir",
+      "type": "promptString",
+      "description": "Environment variable for prysm output dir configuration",
+      "password": false
+    },
+    {
+      "id": "prysm_image_output_dir",
+      "type": "promptString",
+      "description": "Environment variable for prysm image output dir configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "description": "Prysm web scraper with custom output directories",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@pinkpixel/prysm-mcp"
+    ],
+    "env": {
+      "PRYSM_OUTPUT_DIR": "${workspaceFolder}/scrape_results",
+      "PRYSM_IMAGE_OUTPUT_DIR": "${workspaceFolder}/scrape_results/images"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "@21st-dev/magic",
+  "version": "0.0.46",
+  "description": "Magic MCP UI builder by 21st.dev",
+  "homepage": "https://21st.dev/magic",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/21st-dev/magic-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "magic-mcp",
+    "21st-dev"
+  ],
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "apiKey",
+      "description": "21st.dev Magic API Key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@21st-dev/magic@latest"
+    ],
+    "env": {
+      "API_KEY": "${input:apiKey}"
+    }
+  }
+}

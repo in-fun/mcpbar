@@ -1,0 +1,21 @@
+{
+  "name": "@sunwood-ai-labs/github-kanban-mcp-server",
+  "version": "0.2.0",
+  "description": "A Model Context Protocol server for managing GitHub issues as Kanban using gh CLI",
+  "homepage": "https://github.com/Sunwood-ai-labs/github-kanban-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sunwood-ai-labs/github-kanban-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "github-kanban-mcp-server",
+    "sunwood-ai-labs"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "github-kanban-mcp-server"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "MCP server for MCP-Weather-Server",
+  "homepage": "https://github.com/asifdotpy/MCP-Weather-Server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/asifdotpy/MCP-Weather-Server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-weather-server",
+    "asifdotpy"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "weather"
+    ],
+    "env": {}
+  }
+}

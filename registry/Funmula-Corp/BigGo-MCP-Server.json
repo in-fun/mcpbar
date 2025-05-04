@@ -1,0 +1,48 @@
+{
+  "name": "BigGo-MCP-Server",
+  "version": "1.0.0",
+  "description": "BigGo MCP Server utilizes APIs from BigGo, a professional price comparison website.",
+  "homepage": "https://github.com/Funmula-Corp/BigGo-MCP-Server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Funmula-Corp/BigGo-MCP-Server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "biggo-mcp-server",
+    "funmula-corp"
+  ],
+  "inputs": [
+    {
+      "id": "biggo_mcp_server_client_id",
+      "type": "promptString",
+      "description": "Environment variable for biggo mcp server client id configuration",
+      "password": false
+    },
+    {
+      "id": "biggo_mcp_server_client_secret",
+      "type": "promptString",
+      "description": "Environment variable for biggo mcp server client secret authentication",
+      "password": true
+    },
+    {
+      "id": "biggo_mcp_server_region",
+      "type": "promptString",
+      "description": "Environment variable for biggo mcp server region configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "BigGo-MCP-Server@latest"
+    ],
+    "env": {
+      "BIGGO_MCP_SERVER_CLIENT_ID": "CLIENT_ID",
+      "BIGGO_MCP_SERVER_CLIENT_SECRET": "CLIENT_SECRET",
+      "BIGGO_MCP_SERVER_REGION": "REGION"
+    }
+  }
+}

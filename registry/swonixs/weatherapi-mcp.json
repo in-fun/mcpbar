@@ -1,0 +1,35 @@
+{
+  "name": "@swonixs/weatherapi-mcp",
+  "version": "1.1.0",
+  "description": "WeatherAPI MCP sunucusu - Hava durumu ve hava kalitesi verileri için MCP aracı",
+  "homepage": "https://github.com/swonixs/weatherapi-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/swonixs/weatherapi-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "weatherapi-mcp",
+    "swonixs"
+  ],
+  "inputs": [
+    {
+      "id": "weather_api_key",
+      "type": "promptString",
+      "description": "Environment variable for weather api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@swonixs/weatherapi-mcp"
+    ],
+    "env": {
+      "WEATHER_API_KEY": "YOUR_API_KEY_HERE"
+    }
+  }
+}

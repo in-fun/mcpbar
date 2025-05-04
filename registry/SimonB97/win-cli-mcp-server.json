@@ -1,0 +1,27 @@
+{
+  "name": "@simonb97/server-win-cli",
+  "version": "0.2.0",
+  "description": "MCP server for Windows CLI interactions",
+  "homepage": "https://github.com/SimonB97/win-cli-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SimonB97/win-cli-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude",
+    "claude-ai",
+    "mcp",
+    "mcp-server",
+    "modelcontextprotocol",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@simonb97/server-win-cli"
+    ]
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "name": "task-master-ai",
+  "version": "0.13.0",
+  "description": "A task management system for ambitious AI-driven development that doesn't overwhelm and confuse Cursor.",
+  "homepage": "https://task-master.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eyaltoledano/claude-task-master"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "ai",
+    "cursor",
+    "task-manager",
+    "tasks",
+    "tasks-list",
+    "cursor-ai",
+    "cursorai",
+    "lovable",
+    "lovable-dev",
+    "roocode",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "anthropic_api_key",
+      "type": "promptString",
+      "description": "Environment variable for anthropic api key authentication",
+      "password": true
+    },
+    {
+      "id": "perplexity_api_key",
+      "type": "promptString",
+      "description": "Environment variable for perplexity api key authentication",
+      "password": true
+    },
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key authentication",
+      "password": true
+    },
+    {
+      "id": "google_api_key",
+      "type": "promptString",
+      "description": "Environment variable for google api key authentication",
+      "password": true
+    },
+    {
+      "id": "mistral_api_key",
+      "type": "promptString",
+      "description": "Environment variable for mistral api key authentication",
+      "password": true
+    },
+    {
+      "id": "openrouter_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openrouter api key authentication",
+      "password": true
+    },
+    {
+      "id": "xai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for xai api key authentication",
+      "password": true
+    },
+    {
+      "id": "azure_openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for azure openai api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "--package=task-master-ai",
+      "task-master-ai"
+    ],
+    "env": {
+      "ANTHROPIC_API_KEY": "YOUR_ANTHROPIC_API_KEY_HERE",
+      "PERPLEXITY_API_KEY": "YOUR_PERPLEXITY_API_KEY_HERE",
+      "OPENAI_API_KEY": "YOUR_OPENAI_KEY_HERE",
+      "GOOGLE_API_KEY": "YOUR_GOOGLE_KEY_HERE",
+      "MISTRAL_API_KEY": "YOUR_MISTRAL_KEY_HERE",
+      "OPENROUTER_API_KEY": "YOUR_OPENROUTER_KEY_HERE",
+      "XAI_API_KEY": "YOUR_XAI_KEY_HERE",
+      "AZURE_OPENAI_API_KEY": "YOUR_AZURE_KEY_HERE"
+    }
+  }
+}

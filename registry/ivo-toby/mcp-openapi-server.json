@@ -1,0 +1,49 @@
+{
+  "name": "@ivotoby/openapi-mcp-server",
+  "version": "1.0.0",
+  "description": "An MCP server that exposes OpenAPI endpoints as resources",
+  "homepage": "https://github.com/ivo-toby/mcp-openapi-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ivo-toby/mcp-openapi-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-openapi-server",
+    "ivo-toby"
+  ],
+  "inputs": [
+    {
+      "id": "api_base_url",
+      "type": "promptString",
+      "description": "Environment variable for api base url configuration",
+      "password": false
+    },
+    {
+      "id": "openapi_spec_path",
+      "type": "promptString",
+      "description": "Environment variable for openapi spec path configuration",
+      "password": false
+    },
+    {
+      "id": "api_headers",
+      "type": "promptString",
+      "description": "Environment variable for api headers configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@ivotoby/openapi-mcp-server"
+    ],
+    "env": {
+      "API_BASE_URL": "https://api.example.com",
+      "OPENAPI_SPEC_PATH": "https://api.example.com/openapi.json",
+      "API_HEADERS": "Authorization:Bearer token123,X-API-Key:your-api-key"
+    }
+  }
+}

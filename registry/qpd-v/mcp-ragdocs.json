@@ -1,0 +1,48 @@
+{
+  "name": "@qpd-v/mcp-server-ragdocs",
+  "version": "0.1.6",
+  "description": "A Model Context Protocol server for fetching and storing documentation in a vector database, enabling semantic search and retrieval to augment LLM capabilities with relevant documentation context.",
+  "homepage": "https://github.com/qpd-v/mcp-ragdocs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qpd-v/mcp-ragdocs"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-ragdocs",
+    "qpd-v"
+  ],
+  "inputs": [
+    {
+      "id": "qdrant_url",
+      "type": "promptString",
+      "description": "Environment variable for qdrant url configuration",
+      "password": false
+    },
+    {
+      "id": "embedding_provider",
+      "type": "promptString",
+      "description": "Environment variable for embedding provider configuration",
+      "password": false
+    },
+    {
+      "id": "ollama_url",
+      "type": "promptString",
+      "description": "Environment variable for ollama url configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "C:/Users/YOUR_USERNAME/AppData/Roaming/npm/node_modules/@qpd-v/mcp-server-ragdocs/build/index.js"
+    ],
+    "env": {
+      "QDRANT_URL": "http://127.0.0.1:6333",
+      "EMBEDDING_PROVIDER": "ollama",
+      "OLLAMA_URL": "http://localhost:11434"
+    }
+  }
+}

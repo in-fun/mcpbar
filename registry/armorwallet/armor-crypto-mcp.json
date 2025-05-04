@@ -1,0 +1,38 @@
+{
+  "name": "armor-crypto-mcp",
+  "version": "1.0.0",
+  "description": "The MCP server for interacting with Blockchain, Swaps, Strategic Planning and more.",
+  "homepage": "https://github.com/armorwallet/armor-crypto-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/armorwallet/armor-crypto-mcp"
+  },
+  "license": "GPL-3.0",
+  "keywords": [
+    "ai",
+    "ai-agents",
+    "cryptocurrency",
+    "mcp",
+    "tradingbot",
+    "wallet",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "armor_api_key",
+      "type": "promptString",
+      "description": "Environment variable for armor api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "armor-crypto-mcp@latest",
+      "--version"
+    ],
+    "env": {
+      "ARMOR_API_KEY": "<PUT-YOUR-KEY-HERE>"
+    }
+  }
+}

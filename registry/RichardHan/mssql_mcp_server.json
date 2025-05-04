@@ -1,0 +1,58 @@
+{
+  "name": "mssql_mcp_server",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol (MCP) server for Microsoft SQL Server that enables secure database interactions through a controlled interface. Allows AI assistants to safely list tables, read data, and execute SQL queries while maintaining security and structure.",
+  "homepage": "https://github.com/RichardHan/mssql_mcp_server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RichardHan/mssql_mcp_server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mssql_mcp_server",
+    "richardhan"
+  ],
+  "inputs": [
+    {
+      "id": "mssql_server",
+      "type": "promptString",
+      "description": "Environment variable for mssql server configuration",
+      "password": false
+    },
+    {
+      "id": "mssql_user",
+      "type": "promptString",
+      "description": "Environment variable for mssql user configuration",
+      "password": false
+    },
+    {
+      "id": "mssql_password",
+      "type": "promptString",
+      "description": "Environment variable for mssql password authentication",
+      "password": false
+    },
+    {
+      "id": "mssql_database",
+      "type": "promptString",
+      "description": "Environment variable for mssql database configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "path/to/mssql_mcp_server",
+      "run",
+      "mssql_mcp_server"
+    ],
+    "env": {
+      "MSSQL_SERVER": "localhost",
+      "MSSQL_USER": "your_username",
+      "MSSQL_PASSWORD": "your_password",
+      "MSSQL_DATABASE": "your_database"
+    }
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "name": "postgres-mcp",
+  "version": "1.0.3",
+  "description": "A blazing fast, type-safe MCP Server for AI Agents to interact with multiple PostgreSQL databases",
+  "homepage": "https://github.com/llm-graph/postgres-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/llm-graph/postgres-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "postgres-mcp",
+    "llm-graph"
+  ],
+  "inputs": [
+    {
+      "id": "default_db",
+      "type": "promptString",
+      "description": "Environment variable for default db",
+      "password": false
+    },
+    {
+      "id": "db_main_host",
+      "type": "promptString",
+      "description": "Environment variable for db main host",
+      "password": false
+    },
+    {
+      "id": "db_reporting_host",
+      "type": "promptString",
+      "description": "Environment variable for db reporting host",
+      "password": false
+    },
+    {
+      "id": "mcp_api_key",
+      "type": "promptString",
+      "description": "Environment variable for mcp api key",
+      "password": true
+    },
+    {
+      "id": "db_main_port",
+      "type": "promptString",
+      "description": "Environment variable for db main port",
+      "password": false
+    },
+    {
+      "id": "db_main_user",
+      "type": "promptString",
+      "description": "Environment variable for db main user",
+      "password": false
+    },
+    {
+      "id": "db_main_pass",
+      "type": "promptString",
+      "description": "Environment variable for db main pass",
+      "password": false
+    },
+    {
+      "id": "db_main_url",
+      "type": "promptString",
+      "description": "Environment variable for db main url",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "postgres-mcp"
+    ],
+    "env": {
+      "DEFAULT_DB": "${input:default_db}",
+      "DB_MAIN_HOST": "${input:db_main_host}",
+      "DB_REPORTING_HOST": "${input:db_reporting_host}",
+      "MCP_API_KEY": "${input:mcp_api_key}",
+      "DB_MAIN_PORT": "${input:db_main_port}",
+      "DB_MAIN_USER": "${input:db_main_user}",
+      "DB_MAIN_PASS": "${input:db_main_pass}",
+      "DB_MAIN_URL": "${input:db_main_url}"
+    }
+  }
+}

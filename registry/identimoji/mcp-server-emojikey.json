@@ -1,0 +1,41 @@
+{
+  "name": "@identimoji/mcp-server-emojikey",
+  "version": "0.2.1",
+  "description": "MCP Protocol for persisting LLM interaction style as emojikeys",
+  "homepage": "https://github.com/identimoji/mcp-server-emojikey",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/identimoji/mcp-server-emojikey"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-emojikey",
+    "identimoji"
+  ],
+  "inputs": [
+    {
+      "id": "emojikeyio_api_key",
+      "type": "promptString",
+      "description": "Environment variable for emojikeyio api key authentication",
+      "password": true
+    },
+    {
+      "id": "model_id",
+      "type": "promptString",
+      "description": "Environment variable for model id configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "@identimoji/mcp-server-emojikey"
+    ],
+    "env": {
+      "EMOJIKEYIO_API_KEY": "your-api-key-from-emojikey.io",
+      "MODEL_ID": "Claude-3-5-Sonnet-20241022"
+    }
+  }
+}

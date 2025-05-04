@@ -1,0 +1,30 @@
+{
+  "name": "mcp-server",
+  "version": "1.0.0",
+  "description": "支持查询主流agent框架技术文档的MCP server（支持stdio和sse两种传输协议）, 支持 langchain、llama-index、autogen、agno、openai-agents-sdk、mcp-doc、camel-ai 和 crew-ai",
+  "homepage": "https://github.com/GobinFan/python-mcp-server-client",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GobinFan/python-mcp-server-client"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "agent",
+    "llm",
+    "mcp",
+    "mcp-client",
+    "mcp-server",
+    "openai",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "<你的项目路径>",
+      "run",
+      "main.py"
+    ]
+  }
+}

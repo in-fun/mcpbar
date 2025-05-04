@@ -1,0 +1,41 @@
+{
+  "name": "bsv-mcp",
+  "version": "0.0.36",
+  "description": "A collection of Bitcoin SV (BSV) tools for the Model Context Protocol (MCP) framework",
+  "homepage": "https://github.com/b-open-io/bsv-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/b-open-io/bsv-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "bsv-mcp",
+    "b-open-io"
+  ],
+  "inputs": [
+    {
+      "id": "private_key_wif",
+      "type": "promptString",
+      "description": "Environment variable for private key wif authentication",
+      "password": true
+    },
+    {
+      "id": "identity_key_wif",
+      "type": "promptString",
+      "description": "Environment variable for identity key wif authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "bunx",
+    "args": [
+      "bsv-mcp@latest"
+    ],
+    "env": {
+      "PRIVATE_KEY_WIF": "<your_private_key_wif>",
+      "IDENTITY_KEY_WIF": "<your_identity_key_wif>"
+    }
+  }
+}

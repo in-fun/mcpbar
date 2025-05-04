@@ -1,0 +1,34 @@
+{
+  "name": "@notainc/gyazo-mcp-server",
+  "version": "0.1.0",
+  "description": "Official Model Context Protocol server for Gyazo",
+  "homepage": "https://github.com/yuiseki/gyazo-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuiseki/gyazo-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "gyazo-mcp-server",
+    "yuiseki"
+  ],
+  "inputs": [
+    {
+      "id": "gyazo_access_token",
+      "type": "promptString",
+      "description": "Environment variable for gyazo access token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "@notainc/gyazo-mcp-server"
+    ],
+    "env": {
+      "GYAZO_ACCESS_TOKEN": "your-access-token-here"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@simonb97/server-win-cli",
+  "version": "0.1.8",
+  "description": "MCP server for Windows CLI interactions",
+  "homepage": "https://github.com/delorenj/super-win-cli-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/delorenj/super-win-cli-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "super-win-cli-mcp-server",
+    "delorenj"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@simonb97/server-win-cli"
+    ],
+    "env": {}
+  }
+}

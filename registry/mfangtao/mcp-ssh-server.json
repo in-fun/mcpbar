@@ -1,0 +1,26 @@
+{
+  "name": "ssh-server",
+  "version": "1.0.0",
+  "description": "MCP SSH Server",
+  "homepage": "https://github.com/mfangtao/mcp-ssh-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mfangtao/mcp-ssh-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-ssh-server",
+    "mfangtao"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "ssh-server"
+    ],
+    "env": {}
+  }
+}

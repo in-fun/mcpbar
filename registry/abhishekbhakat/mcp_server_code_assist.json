@@ -1,0 +1,25 @@
+{
+  "name": "mcp-server-code-assist",
+  "version": "1.0.0",
+  "description": "MCP server for mcp_server_code_assist",
+  "homepage": "https://github.com/abhishekbhakat/mcp_server_code_assist",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abhishekbhakat/mcp_server_code_assist"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp_server_code_assist",
+    "abhishekbhakat"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-server-code-assist"
+    ],
+    "env": {}
+  }
+}

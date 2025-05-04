@@ -1,0 +1,35 @@
+{
+  "name": "@kajirita2002/honeycomb-mcp-server",
+  "version": "1.0.7",
+  "description": "MCP server for interacting with honeycomb API",
+  "homepage": "https://github.com/kajirita2002/honeycomb-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kajirita2002/honeycomb-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "honeycomb-mcp-server",
+    "kajirita2002"
+  ],
+  "inputs": [
+    {
+      "id": "honeycomb_api_key",
+      "type": "promptString",
+      "description": "Environment variable for honeycomb api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@kajirita2002/honeycomb-mcp-server"
+    ],
+    "env": {
+      "HONEYCOMB_API_KEY": "${input:honeycomb_api_key}"
+    }
+  }
+}

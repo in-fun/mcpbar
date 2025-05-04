@@ -1,0 +1,49 @@
+{
+  "name": "@alexarevalo.ai/mcp-server-ticktick",
+  "version": "1.1.9",
+  "description": "MCP server for using the TickTick API",
+  "homepage": "https://github.com/alexarevalo9/ticktick-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexarevalo9/ticktick-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "node",
+    "artificial-intelligence",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "ticktick_client_id",
+      "type": "promptString",
+      "description": "Environment variable for ticktick client id configuration",
+      "password": false
+    },
+    {
+      "id": "ticktick_client_secret",
+      "type": "promptString",
+      "description": "Environment variable for ticktick client secret authentication",
+      "password": true
+    },
+    {
+      "id": "ticktick_access_token",
+      "type": "promptString",
+      "description": "Environment variable for ticktick access token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@alexarevalo.ai/mcp-server-ticktick"
+    ],
+    "env": {
+      "TICKTICK_CLIENT_ID": "<YOUR_CLIENT_ID>",
+      "TICKTICK_CLIENT_SECRET": "<YOUR_CLIENT_SECRET>",
+      "TICKTICK_ACCESS_TOKEN": "<YOUR_ACCESS_TOKEN>"
+    }
+  }
+}

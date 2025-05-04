@@ -1,0 +1,34 @@
+{
+  "name": "pipedream",
+  "version": "1.2.1",
+  "description": "Pipedream Monorepo",
+  "homepage": "https://pipedream.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PipedreamHQ/pipedream"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "eventsourcing",
+    "event-sourcing",
+    "automation",
+    "workflow",
+    "workflows",
+    "apis",
+    "data-flow",
+    "integration-flow",
+    "cli",
+    "low-code",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "pipedream"
+    ],
+    "env": {}
+  }
+}

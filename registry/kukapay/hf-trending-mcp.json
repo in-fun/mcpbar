@@ -1,0 +1,25 @@
+{
+  "name": "hf-trending-mcp",
+  "version": "1.0.0",
+  "description": "An MCP server that tracks trending AI models, datasets, and spaces on Hugging Face.",
+  "homepage": "https://github.com/kukapay/hf-trending-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kukapay/hf-trending-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "hf-trending-mcp",
+    "kukapay"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "hf-trending-mcp"
+    ],
+    "env": {}
+  }
+}

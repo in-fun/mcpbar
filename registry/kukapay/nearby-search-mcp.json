@@ -1,0 +1,37 @@
+{
+  "name": "nearby-search-mcp",
+  "version": "1.0.0",
+  "description": "An MCP server for nearby place searches with IP-based location detection.",
+  "homepage": "https://github.com/kukapay/nearby-search-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kukapay/nearby-search-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "nearby-search-mcp",
+    "kukapay"
+  ],
+  "inputs": [
+    {
+      "id": "google_api_key",
+      "type": "promptString",
+      "description": "Environment variable for google api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "path/to/nearby-search-mcp",
+      "run",
+      "main.py"
+    ],
+    "env": {
+      "GOOGLE_API_KEY": "your google api key"
+    }
+  }
+}

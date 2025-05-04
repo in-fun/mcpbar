@@ -1,0 +1,26 @@
+{
+  "name": "@kailashg101/graphql-mcp-toolkit",
+  "version": "1.0.2",
+  "description": "MCP server for connecting to GraphQL servers",
+  "homepage": "https://github.com/kailashAppDev/graphql-mcp-toolkit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kailashAppDev/graphql-mcp-toolkit"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "graphql-mcp-toolkit",
+    "kailashappdev"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "mcp-graphql",
+      "--endpoint",
+      "http://localhost:3000/graphql"
+    ]
+  }
+}

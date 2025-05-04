@@ -1,0 +1,60 @@
+{
+  "name": "llm_bridge_mcp",
+  "version": "1.0.0",
+  "description": "A model-agnostic Message Control Protocol (MCP) server that enables seamless integration with various Large Language Models (LLMs) like GPT, DeepSeek, Claude, and more.",
+  "homepage": "https://github.com/sjquant/llm-bridge-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sjquant/llm-bridge-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude",
+    "deepssek-r1",
+    "llm",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "openai",
+    "pydantic-ai",
+    "anthropic"
+  ],
+  "inputs": [
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key",
+      "password": true
+    },
+    {
+      "id": "anthropic_api_key",
+      "type": "promptString",
+      "description": "Environment variable for anthropic api key",
+      "password": true
+    },
+    {
+      "id": "google_api_key",
+      "type": "promptString",
+      "description": "Environment variable for google api key",
+      "password": true
+    },
+    {
+      "id": "deepseek_api_key",
+      "type": "promptString",
+      "description": "Environment variable for deepseek api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "llm_bridge_mcp"
+    ],
+    "env": {
+      "OPENAI_API_KEY": "${input:openai_api_key}",
+      "ANTHROPIC_API_KEY": "${input:anthropic_api_key}",
+      "GOOGLE_API_KEY": "${input:google_api_key}",
+      "DEEPSEEK_API_KEY": "${input:deepseek_api_key}"
+    }
+  }
+}

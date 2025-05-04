@@ -1,0 +1,26 @@
+{
+  "name": "azure-mcp",
+  "version": "0.0.4",
+  "description": "A Model Context Protocol (MCP) implementation that enables Claude Desktop to interact with Azure services. This integration allows Claude to query and manage Azure resources directly through natural language conversations.",
+  "homepage": "https://container-omw0eju.containers.anotherwebservice.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Streen9/azure-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "azure",
+    "claude",
+    "mcp",
+    "node",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@modelcontextprotocol/server-sequential-thinking"
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "deepseek-mcp-server",
+  "version": "0.2.1",
+  "description": "Model Context Protocol server for DeepSeek's advanced language models.",
+  "homepage": "https://buymeacoffee.com/dmontg",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DMontgomery40/deepseek-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "deepseek-api",
+    "mcp",
+    "model-context-protocol",
+    "r1",
+    "deepseek-chat",
+    "deepseek-r1",
+    "deepseek-v3"
+  ],
+  "inputs": [
+    {
+      "id": "deepseek_api_key",
+      "type": "promptString",
+      "description": "Environment variable for deepseek api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "deepseek-mcp-server"
+    ],
+    "env": {
+      "DEEPSEEK_API_KEY": "your-api-key"
+    }
+  }
+}

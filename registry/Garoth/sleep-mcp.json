@@ -1,0 +1,27 @@
+{
+  "name": "sleep-server",
+  "version": "1.0.0",
+  "description": "Allows AI agents to wait a while, such as adding a delay between an API call and seeing the result",
+  "homepage": "https://github.com/Garoth/sleep-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Garoth/sleep-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "sleep-mcp",
+    "garoth"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/sleep-server/build/index.js"
+    ],
+    "disabled": false,
+    "autoApprove": [],
+    "timeout": 300
+  }
+}

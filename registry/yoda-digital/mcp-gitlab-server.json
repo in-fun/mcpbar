@@ -1,0 +1,48 @@
+{
+  "name": "@yoda.digital/gitlab-mcp-server",
+  "version": "0.2.10",
+  "description": "GitLab MCP Server - A Model Context Protocol server for GitLab integration",
+  "homepage": "https://yoda.digital",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yoda-digital/mcp-gitlab-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "anthropic",
+    "git",
+    "gitlab",
+    "llm",
+    "mcp",
+    "modelcontextprotocol",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "gitlab_personal_access_token",
+      "type": "promptString",
+      "description": "Environment variable for gitlab personal access token authentication",
+      "password": true
+    },
+    {
+      "id": "gitlab_api_url",
+      "type": "promptString",
+      "description": "Environment variable for gitlab api url configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@yoda.digital/gitlab-mcp-server"
+    ],
+    "env": {
+      "GITLAB_PERSONAL_ACCESS_TOKEN": "your_token_here",
+      "GITLAB_API_URL": "https://gitlab.com/api/v4"
+    },
+    "alwaysAllow": [],
+    "disabled": false
+  }
+}

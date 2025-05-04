@@ -1,0 +1,39 @@
+{
+  "name": "@yepcode/mcp-server",
+  "version": "0.6.0",
+  "description": "MCP server for YepCode",
+  "homepage": "https://yepcode.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yepcode/mcp-server-js"
+  },
+  "license": "MIT",
+  "keywords": [
+    "agent",
+    "ai",
+    "ai-agent",
+    "ai-agents",
+    "mcp-server",
+    "yepcode",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "yepcode_api_token",
+      "type": "promptString",
+      "description": "Environment variable for yepcode api token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@yepcode/mcp-server"
+    ],
+    "env": {
+      "YEPCODE_API_TOKEN": "${input:yepcode_api_token}"
+    }
+  }
+}

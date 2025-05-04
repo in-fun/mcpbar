@@ -1,0 +1,30 @@
+{
+  "name": "a11y-mcp",
+  "version": "1.0.4",
+  "description": "MCP server for performing accessibility audits on webpages",
+  "homepage": "https://github.com/priyankark/a11y-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/priyankark/a11y-mcp"
+  },
+  "license": "MPL-2.0",
+  "keywords": [
+    "a11y",
+    "a11y-testing",
+    "a11y-ai",
+    "a11y-mcp",
+    "axe-ai",
+    "axe-mcp",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "a11y-mcp"
+    ],
+    "disabled": false,
+    "autoApprove": []
+  }
+}

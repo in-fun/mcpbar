@@ -1,0 +1,26 @@
+{
+  "name": "@shinzolabs/heimdall",
+  "version": "1.0.3",
+  "description": "An MCP server that proxies other MCP servers and enables granular authorization control for your MCPs.",
+  "homepage": "https://github.com/shinzo-labs/heimdall",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shinzo-labs/heimdall"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "heimdall",
+    "shinzo-labs"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@shinzolabs/heimdall"
+    ],
+    "env": {}
+  }
+}

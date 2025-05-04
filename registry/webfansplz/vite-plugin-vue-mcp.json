@@ -1,0 +1,26 @@
+{
+  "name": "vite-plugin-vue-mcp",
+  "version": "0.3.2",
+  "description": "MCP server helping models to understand your Vue app better.",
+  "homepage": "https://github.com/webfansplz/vite-plugin-vue-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/webfansplz/vite-plugin-vue-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "vite-plugin-vue-mcp",
+    "webfansplz"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "vite-plugin-vue-mcp"
+    ],
+    "env": {}
+  }
+}

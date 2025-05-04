@@ -1,0 +1,26 @@
+{
+  "name": "mcp-test",
+  "version": "1.0.0",
+  "description": "MCP server for mcp-test",
+  "homepage": "https://github.com/flsion/mcp-test",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flsion/mcp-test"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-test",
+    "flsion"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-test"
+    ],
+    "env": {}
+  }
+}

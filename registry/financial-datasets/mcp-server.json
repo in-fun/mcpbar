@@ -1,0 +1,27 @@
+{
+  "name": "mcp-server",
+  "version": "1.0.0",
+  "description": "An MCP server for interacting with the Financial Datasets stock market API.",
+  "homepage": "https://www.financialdatasets.ai/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/financial-datasets/mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server",
+    "financial-datasets"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "/path/to/uv",
+    "args": [
+      "--directory",
+      "/absolute/path/to/financial-datasets-mcp",
+      "run",
+      "server.py"
+    ]
+  }
+}

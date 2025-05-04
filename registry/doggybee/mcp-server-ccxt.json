@@ -1,0 +1,21 @@
+{
+  "name": "@mcpfun/mcp-server-ccxt",
+  "version": "1.2.2",
+  "description": "High-performance CCXT MCP server for cryptocurrency exchange integration",
+  "homepage": "https://github.com/doggybee/mcp-server-ccxt",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/doggybee/mcp-server-ccxt"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-ccxt",
+    "doggybee"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "mcp-server-ccxt"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "coding-devops-mcp-server",
+  "version": "0.1.0",
+  "description": "A Model Context Protocol server",
+  "homepage": "https://github.com/yupengfei1209/coding_devops_mcp_server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yupengfei1209/coding_devops_mcp_server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "coding_devops_mcp_server",
+    "yupengfei1209"
+  ],
+  "inputs": [
+    {
+      "id": "coding_token",
+      "type": "promptString",
+      "description": "Environment variable for coding token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "coding-devops-mcp-server"
+    ],
+    "env": {
+      "CODING_TOKEN": "${input:coding_token}"
+    }
+  }
+}

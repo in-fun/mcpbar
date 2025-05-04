@@ -1,0 +1,42 @@
+{
+  "name": "@agentset/mcp",
+  "version": "1.2.0",
+  "description": "Agentset MCP Server - Build RAG with Agentic superpowers",
+  "homepage": "https://www.npmjs.com/package/@agentset/mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agentset-ai/mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server",
+    "agentset-ai"
+  ],
+  "inputs": [
+    {
+      "id": "agentset_api_key",
+      "type": "promptString",
+      "description": "Environment variable for agentset api key authentication",
+      "password": true
+    },
+    {
+      "id": "agentset_namespace_id",
+      "type": "promptString",
+      "description": "Environment variable for agentset namespace id configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@agentset/mcp@latest"
+    ],
+    "env": {
+      "AGENTSET_API_KEY": "agentset_xxx",
+      "AGENTSET_NAMESPACE_ID": "ns_xxx"
+    }
+  }
+}

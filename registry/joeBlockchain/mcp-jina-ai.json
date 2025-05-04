@@ -1,0 +1,35 @@
+{
+  "name": "jina-ai-mcp-server",
+  "version": "1.0.4",
+  "description": "MCP server for Jina AI services",
+  "homepage": "https://github.com/joeBlockchain/mcp-jina-ai",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joeBlockchain/mcp-jina-ai"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-jina-ai",
+    "joeblockchain"
+  ],
+  "inputs": [
+    {
+      "id": "jina_api_key",
+      "type": "promptString",
+      "description": "Environment variable for jina api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "jina-ai-mcp-server"
+    ],
+    "env": {
+      "JINA_API_KEY": "<YOUR_KEY>"
+    }
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "mcp-solarwinds",
+  "version": "0.1.7",
+  "description": "MCP server for SolarWinds Observability logs",
+  "homepage": "https://github.com/jakenuts/mcp-solarwinds",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jakenuts/mcp-solarwinds"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-solarwinds",
+    "jakenuts"
+  ],
+  "inputs": [
+    {
+      "id": "solarwinds_api_token",
+      "type": "promptString",
+      "description": "Environment variable for solarwinds api token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-solarwinds"
+    ],
+    "env": {
+      "SOLARWINDS_API_TOKEN": "your-api-token"
+    },
+    "autoApprove": [
+      "search_logs",
+      "visualize_logs"
+    ]
+  }
+}

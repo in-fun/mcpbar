@@ -1,0 +1,42 @@
+{
+  "name": "mcp-tinybird",
+  "version": "1.0.0",
+  "description": "MCP server for mcp-tinybird",
+  "homepage": "https://bluesky-demo.vercel.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tinybirdco/mcp-tinybird"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-tinybird",
+    "tinybirdco"
+  ],
+  "inputs": [
+    {
+      "id": "tb_api_url",
+      "type": "promptString",
+      "description": "Environment variable for tb api url configuration",
+      "password": false
+    },
+    {
+      "id": "tb_admin_token",
+      "type": "promptString",
+      "description": "Environment variable for tb admin token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-tinybird",
+      "stdio"
+    ],
+    "env": {
+      "TB_API_URL": "<TINYBIRD_API_URL>",
+      "TB_ADMIN_TOKEN": "<TINYBIRD_ADMIN_TOKEN>"
+    }
+  }
+}

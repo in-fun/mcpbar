@@ -1,0 +1,26 @@
+{
+  "name": "hoppscotch-app",
+  "version": "3.0.1",
+  "description": "Open source API development ecosystem",
+  "homepage": "https://hoppscotch.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fonhal/hoppscotch"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "hoppscotch",
+    "fonhal"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "hoppscotch-app"
+    ],
+    "env": {}
+  }
+}

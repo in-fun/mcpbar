@@ -1,0 +1,24 @@
+{
+  "name": "mcp-ollama",
+  "version": "1.0.0",
+  "description": "Query model running with Ollama from within Claude Desktop or other MCP clients",
+  "homepage": "https://github.com/emgeee/mcp-ollama",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/emgeee/mcp-ollama"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-ollama",
+    "emgeee"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-ollama"
+    ]
+  }
+}

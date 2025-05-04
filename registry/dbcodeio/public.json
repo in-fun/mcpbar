@@ -1,0 +1,26 @@
+{
+  "name": "dbcode",
+  "version": "1.12.3",
+  "description": "Connect to PostgreSQL, MySQL, SQL Server, SQLite, Mongo, Oracle, DuckDB and other major databases. AI queries. Create and edit tables, data, functions and procedures. Graph your data. Share reports. And more!",
+  "homepage": "https://dbcode.io",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dbcodeio/public"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "public",
+    "dbcodeio"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "dbcode"
+    ],
+    "env": {}
+  }
+}

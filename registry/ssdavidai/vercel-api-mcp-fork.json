@@ -1,0 +1,24 @@
+{
+  "name": "vercel-mcp",
+  "version": "0.0.6",
+  "description": "An MCP server that connects to Vercel API",
+  "homepage": "https://github.com/ssdavidai/vercel-api-mcp-fork",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ssdavidai/vercel-api-mcp-fork"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "vercel-api-mcp-fork",
+    "ssdavidai"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "vercel-mcp VERCEL_API_KEY=<YOUR_API_KEY>"
+    ]
+  }
+}

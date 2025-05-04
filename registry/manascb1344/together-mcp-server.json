@@ -1,0 +1,41 @@
+{
+  "name": "together-mcp",
+  "version": "0.1.7",
+  "description": "Image Generation MCP Server using Together.AI - A Model Context Protocol server for AI image generation",
+  "homepage": "https://www.pulsemcp.com/servers/together-ai-flux1-schnell",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/manascb1344/together-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude",
+    "cline",
+    "cursor",
+    "flux-schnell",
+    "image-generation",
+    "mcp-server",
+    "png",
+    "together-ai",
+    "customizable-dimensions",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "together_api_key",
+      "type": "promptString",
+      "description": "Environment variable for together api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "together-mcp@latest -y"
+    ],
+    "env": {
+      "TOGETHER_API_KEY": "<API KEY>"
+    }
+  }
+}

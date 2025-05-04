@@ -1,0 +1,25 @@
+{
+  "name": "pdf2zh",
+  "version": "1.0.0",
+  "description": "PDF scientific paper translation with preserved formats - 基于 AI 完整保留排版的 PDF 文档全文双语翻译，支持 Google/DeepL/Ollama/OpenAI 等服务，提供 CLI/GUI/Docker/Zotero",
+  "homepage": "https://pdf2zh.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhuangmanhong/PDFMathTranslate"
+  },
+  "license": "AGPL-3.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "pdfmathtranslate",
+    "zhuangmanhong"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "pdf2zh"
+    ],
+    "env": {}
+  }
+}

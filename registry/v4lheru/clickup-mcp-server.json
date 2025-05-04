@@ -1,0 +1,35 @@
+{
+  "name": "@taazkareem/clickup-mcp-server",
+  "version": "0.4.60",
+  "description": "ClickUp MCP Server - Integrate ClickUp tasks with AI through Model Context Protocol",
+  "homepage": "https://github.com/v4lheru/clickup-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/v4lheru/clickup-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "clickup-mcp-server",
+    "v4lheru"
+  ],
+  "inputs": [
+    {
+      "id": "clickup_api_key",
+      "type": "promptString",
+      "description": "Environment variable for clickup api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@taazkareem/clickup-mcp-server"
+    ],
+    "env": {
+      "CLICKUP_API_KEY": "${input:clickup_api_key}"
+    }
+  }
+}

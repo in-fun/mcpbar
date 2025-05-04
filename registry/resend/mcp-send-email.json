@@ -1,0 +1,22 @@
+{
+  "name": "send-email",
+  "version": "1.0.0",
+  "description": "Send emails directly from Cursor with this email sending MCP server",
+  "homepage": "https://github.com/resend/mcp-send-email",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/resend/mcp-send-email"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-send-email",
+    "resend"
+  ],
+  "inputs": [],
+  "server": {
+    "type": "command",
+    "command": "node ABSOLUTE_PATH_TO_MCP_SEND_EMAIL_PROJECT/build/index.js --key=YOUR_RESEND_API_KEY"
+  }
+}

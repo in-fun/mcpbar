@@ -1,0 +1,34 @@
+{
+  "name": "mcp-servers",
+  "version": "1.0.0",
+  "description": "MCP servers collection",
+  "homepage": "https://github.com/fist-maestro/mcp-servers",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fist-maestro/mcp-servers"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-servers",
+    "fist-maestro"
+  ],
+  "inputs": [
+    {
+      "id": "openweather_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openweather api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "/your/path/to/mcp-servers/build/weather/index.js"
+    ],
+    "env": {
+      "OPENWEATHER_API_KEY": "your_api_key_here"
+    }
+  }
+}

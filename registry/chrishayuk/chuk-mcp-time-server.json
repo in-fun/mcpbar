@@ -1,0 +1,25 @@
+{
+  "name": "chuk-mcp-time-server",
+  "version": "1.0.0",
+  "description": "MCP server for chuk-mcp-time-server",
+  "homepage": "https://github.com/chrishayuk/chuk-mcp-time-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chrishayuk/chuk-mcp-time-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "chuk-mcp-time-server",
+    "chrishayuk"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "chuk-mcp-time-server"
+    ],
+    "env": {}
+  }
+}

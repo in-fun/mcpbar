@@ -1,0 +1,24 @@
+{
+  "name": "edgeone-pages-mcp",
+  "version": "0.0.6",
+  "description": "An MCP service for deploying HTML content to EdgeOne Pages and obtaining a publicly accessible URL.",
+  "homepage": "https://edgeone.ai/products/pages",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ropon/edgeone-pages-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "edgeone-pages-mcp",
+    "ropon"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "edgeone-pages-mcp"
+    ]
+  }
+}

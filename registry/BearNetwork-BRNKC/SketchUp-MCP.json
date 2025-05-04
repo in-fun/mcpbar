@@ -1,0 +1,25 @@
+{
+  "name": "sketchup-mcp",
+  "version": "1.0.0",
+  "description": "SketchUp-MCP For AI",
+  "homepage": "https://github.com/BearNetwork-BRNKC/SketchUp-MCP",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BearNetwork-BRNKC/SketchUp-MCP"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "sketchup-mcp",
+    "bearnetwork-brnkc"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "sketchup-mcp"
+    ],
+    "env": {}
+  }
+}

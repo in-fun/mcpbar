@@ -1,0 +1,26 @@
+{
+  "name": "@sean.lee/server-youtube-transcription",
+  "version": "0.0.6",
+  "description": "MCP Server for Youtube Transcription",
+  "homepage": "https://github.com/seanlee10/server-youtube-transcription",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seanlee10/server-youtube-transcription"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "server-youtube-transcription",
+    "seanlee10"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@sean.lee/server-youtube-transcription"
+    ],
+    "env": {}
+  }
+}

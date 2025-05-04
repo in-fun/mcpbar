@@ -1,0 +1,25 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "一个mcp功能集合",
+  "homepage": "https://github.com/ttqhhh/my-mcp/tree/main/一个工作中用到的小功能",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ttqhhh/my-mcp/tree/main/一个工作中用到的小功能"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "my-mcp",
+    "ttqhhh"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "weather"
+    ],
+    "env": {}
+  }
+}

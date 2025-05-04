@@ -1,0 +1,56 @@
+{
+  "name": "solana-mcp",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol server for interacting with the Solana blockchain, powered by the Solana Agent Kit (https://github.com/sendaifun/solana-agent-kit)",
+  "homepage": "https://github.com/sendaifun/solana-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sendaifun/solana-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "solana-mcp",
+    "sendaifun"
+  ],
+  "inputs": [
+    {
+      "id": "solana_private_key",
+      "type": "promptString",
+      "description": "Environment variable for solana private key",
+      "password": true
+    },
+    {
+      "id": "rpc_url",
+      "type": "promptString",
+      "description": "Environment variable for rpc url",
+      "password": false
+    },
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key",
+      "password": true
+    },
+    {
+      "id": "deploy_token",
+      "type": "promptString",
+      "description": "Environment variable for deploy token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "solana-mcp"
+    ],
+    "env": {
+      "SOLANA_PRIVATE_KEY": "${input:solana_private_key}",
+      "RPC_URL": "${input:rpc_url}",
+      "OPENAI_API_KEY": "${input:openai_api_key}",
+      "DEPLOY_TOKEN": "${input:deploy_token}"
+    }
+  }
+}

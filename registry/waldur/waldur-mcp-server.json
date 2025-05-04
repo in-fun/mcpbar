@@ -1,0 +1,44 @@
+{
+  "name": "waldur-mcp-server",
+  "version": "1.0.0",
+  "description": "Server implementing Model Context Protocol for Waldur",
+  "homepage": "https://github.com/waldur/waldur-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/waldur/waldur-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "waldur-mcp-server",
+    "waldur"
+  ],
+  "inputs": [
+    {
+      "id": "waldur_api_url",
+      "type": "promptString",
+      "description": "Environment variable for waldur api url configuration",
+      "password": false
+    },
+    {
+      "id": "waldur_token",
+      "type": "promptString",
+      "description": "Environment variable for waldur token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "C:\\waldur_service",
+      "run",
+      "waldur-mcp-server"
+    ],
+    "env": {
+      "WALDUR_API_URL": "https://your-waldur-instance",
+      "WALDUR_TOKEN": "your-token"
+    }
+  }
+}

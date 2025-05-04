@@ -1,0 +1,25 @@
+{
+  "name": "arkitect",
+  "version": "1.0.0",
+  "description": "MCP server for ai-app-lab",
+  "homepage": "https://github.com/zhuyali-yl/ai-app-lab",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhuyali-yl/ai-app-lab"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai-app-lab",
+    "zhuyali-yl"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "arkitect"
+    ],
+    "env": {}
+  }
+}

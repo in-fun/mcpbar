@@ -1,0 +1,26 @@
+{
+  "name": "mcp-graphql-schema",
+  "version": "0.0.1",
+  "description": "Model Context Protocol server for GraphQL schemas",
+  "homepage": "https://github.com/hannesj/mcp-graphql-schema",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hannesj/mcp-graphql-schema"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-graphql-schema",
+    "hannesj"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-graphql-schema",
+      "/ABSOLUTE/PATH/TO/schema.graphqls"
+    ]
+  }
+}

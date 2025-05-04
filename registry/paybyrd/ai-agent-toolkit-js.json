@@ -1,0 +1,26 @@
+{
+  "name": "@paybyrd/ai-agent-toolkit-js",
+  "version": "0.3.6",
+  "description": "Toolkit for building AI agents with OpenAI and Claude",
+  "homepage": "https://github.com/paybyrd/ai-agent-toolkit-js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paybyrd/ai-agent-toolkit-js"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai-agent-toolkit-js",
+    "paybyrd"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@paybyrd/ai-agent-toolkit-js"
+    ],
+    "env": {}
+  }
+}

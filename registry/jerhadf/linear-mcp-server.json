@@ -1,0 +1,36 @@
+{
+  "name": "linear-mcp-server",
+  "version": "0.1.0",
+  "description": "A Model Context Protocol server for the Linear API.",
+  "homepage": "https://smithery.ai/server/linear-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jerhadf/linear-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "anthropic",
+    "linear",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "linear_api_key",
+      "type": "promptString",
+      "description": "Environment variable for linear api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "linear-mcp-server"
+    ],
+    "env": {
+      "LINEAR_API_KEY": "your_linear_api_key_here"
+    }
+  }
+}

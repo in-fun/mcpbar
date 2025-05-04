@@ -1,0 +1,26 @@
+{
+  "name": "mcp-tts",
+  "version": "1.0.0",
+  "description": "MCP server that allows Claude to have a voice.",
+  "homepage": "https://github.com/PhialsBasement/Zonos-TTS-MCP",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PhialsBasement/Zonos-TTS-MCP"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "zonos-tts-mcp",
+    "phialsbasement"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-tts"
+    ],
+    "env": {}
+  }
+}

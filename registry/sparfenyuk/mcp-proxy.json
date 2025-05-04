@@ -1,0 +1,35 @@
+{
+  "name": "mcp-proxy",
+  "version": "1.0.0",
+  "description": "Connect to MCP servers that run on SSE transport, or expose stdio servers as an SSE server using the MCP Proxy server.",
+  "homepage": "https://github.com/sparfenyuk/mcp-proxy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sparfenyuk/mcp-proxy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "proxy",
+    "sse",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "api_access_token",
+      "type": "promptString",
+      "description": "Environment variable for api access token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "mcp-proxy",
+    "args": [
+      "http://example.io/sse"
+    ],
+    "env": {
+      "API_ACCESS_TOKEN": "access-token"
+    }
+  }
+}

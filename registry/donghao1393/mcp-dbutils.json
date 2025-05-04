@@ -1,0 +1,28 @@
+{
+  "name": "mcp-dbutils",
+  "version": "1.0.0",
+  "description": "DButils is an all-in-one MCP service that enables your AI to do data analysis by harnessing versatile types of database (sqlite, mysql, postgres, and more) within a unified configuration of multiple connections in a secured way (like SSL).",
+  "homepage": "https://github.com/donghao1393/mcp-dbutils",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/donghao1393/mcp-dbutils"
+  },
+  "license": "MIT",
+  "keywords": [
+    "database",
+    "modelcontextprotocol",
+    "postgres",
+    "sqlite",
+    "mysql",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-dbutils"
+    ],
+    "env": {}
+  }
+}

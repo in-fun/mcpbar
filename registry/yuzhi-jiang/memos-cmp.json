@@ -1,0 +1,41 @@
+{
+  "name": "memos-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for memos-cmp",
+  "homepage": "https://github.com/yuzhi-jiang/memos-cmp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuzhi-jiang/memos-cmp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "memos-cmp",
+    "yuzhi-jiang"
+  ],
+  "inputs": [
+    {
+      "id": "memos_url",
+      "type": "promptString",
+      "description": "Environment variable for memos url configuration",
+      "password": false
+    },
+    {
+      "id": "memos_api_key",
+      "type": "promptString",
+      "description": "Environment variable for memos api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "memos-mcp"
+    ],
+    "env": {
+      "MEMOS_URL": "https://your-memos-instance-url",
+      "MEMOS_API_KEY": "your-memos-api-key"
+    }
+  }
+}

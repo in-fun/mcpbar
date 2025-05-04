@@ -1,0 +1,35 @@
+{
+  "name": "vite_react_shadcn_ts",
+  "version": "0.0.0",
+  "description": "MCP server for mining-terminal-express",
+  "homepage": "https://github.com/elinmaks/mining-terminal-express",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/elinmaks/mining-terminal-express"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mining-terminal-express",
+    "elinmaks"
+  ],
+  "inputs": [
+    {
+      "id": "your_git_url",
+      "type": "promptString",
+      "description": "Environment variable for your git url",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "vite_react_shadcn_ts"
+    ],
+    "env": {
+      "YOUR_GIT_URL": "${input:your_git_url}"
+    }
+  }
+}

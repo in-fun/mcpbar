@@ -1,0 +1,35 @@
+{
+  "name": "@joshuarileydev/supabase-mcp-server",
+  "version": "0.0.2",
+  "description": "An MCP server for using the Supabase API",
+  "homepage": "https://github.com/JoshuaRileyDev/supabase-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JoshuaRileyDev/supabase-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "supabase-mcp-server",
+    "joshuarileydev"
+  ],
+  "inputs": [
+    {
+      "id": "supabase_api_key",
+      "type": "promptString",
+      "description": "Environment variable for supabase api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "y",
+      "@joshuarileydev/supabase-mcp-server"
+    ],
+    "env": {
+      "SUPABASE_API_KEY": "API_KEY_HERE"
+    }
+  }
+}

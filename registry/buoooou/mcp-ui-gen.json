@@ -1,0 +1,35 @@
+{
+  "name": "@buouui/supaui-mcp",
+  "version": "0.0.2",
+  "description": "A Model Context Protocol server for SupaUI MCP ",
+  "homepage": "https://github.com/buoooou/mcp-ui-gen",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/buoooou/mcp-ui-gen"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-ui-gen",
+    "buoooou"
+  ],
+  "inputs": [
+    {
+      "id": "buou_api_key",
+      "type": "promptString",
+      "description": "Environment variable for buou api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@buouui/supaui-mcp"
+    ],
+    "env": {
+      "BUOU_API_KEY": "${input:buou_api_key}"
+    }
+  }
+}

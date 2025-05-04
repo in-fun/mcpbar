@@ -1,0 +1,42 @@
+{
+  "name": "powerplatform-mcp",
+  "version": "0.4.5",
+  "description": "PowerPlatform Model Context Protocol server",
+  "homepage": "https://github.com/michsob/powerplatform-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/michsob/powerplatform-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "powerplatform-mcp",
+    "michsob"
+  ],
+  "inputs": [
+    {
+      "id": "powerplatform_url",
+      "type": "promptString",
+      "description": "Environment variable for powerplatform url",
+      "password": false
+    },
+    {
+      "id": "powerplatform_client_secret",
+      "type": "promptString",
+      "description": "Environment variable for powerplatform client secret",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "powerplatform-mcp"
+    ],
+    "env": {
+      "POWERPLATFORM_URL": "${input:powerplatform_url}",
+      "POWERPLATFORM_CLIENT_SECRET": "${input:powerplatform_client_secret}"
+    }
+  }
+}

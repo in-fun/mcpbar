@@ -1,0 +1,62 @@
+{
+  "name": "spotify-mcp",
+  "version": "1.0.0",
+  "description": "MCP to connect Claude with Spotify.",
+  "homepage": "https://github.com/jamiew/spotify-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jamiew/spotify-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "spotify-mcp",
+    "jamiew"
+  ],
+  "inputs": [
+    {
+      "id": "spotify_client_secret",
+      "type": "promptString",
+      "description": "Environment variable for spotify client secret",
+      "password": true
+    },
+    {
+      "id": "your_client_secret",
+      "type": "promptString",
+      "description": "Environment variable for your client secret",
+      "password": true
+    },
+    {
+      "id": "uv_publish_token",
+      "type": "promptString",
+      "description": "Environment variable for uv publish token",
+      "password": true
+    },
+    {
+      "id": "uv_publish_user",
+      "type": "promptString",
+      "description": "Environment variable for uv publish user",
+      "password": false
+    },
+    {
+      "id": "uv_publish_pass",
+      "type": "promptString",
+      "description": "Environment variable for uv publish pass",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "spotify-mcp"
+    ],
+    "env": {
+      "SPOTIFY_CLIENT_SECRET": "${input:spotify_client_secret}",
+      "YOUR_CLIENT_SECRET": "${input:your_client_secret}",
+      "UV_PUBLISH_TOKEN": "${input:uv_publish_token}",
+      "UV_PUBLISH_USER": "${input:uv_publish_user}",
+      "UV_PUBLISH_PASS": "${input:uv_publish_pass}"
+    }
+  }
+}

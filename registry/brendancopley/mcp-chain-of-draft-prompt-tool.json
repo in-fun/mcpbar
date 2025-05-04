@@ -1,0 +1,37 @@
+{
+  "name": "mcp-chain-of-draft-prompt-tool",
+  "version": "1.1.1",
+  "description": "MCP Chain of Draft (CoD) Prompt Tool - A Model Context Protocol tool for efficient reasoning",
+  "homepage": "https://smithery.ai/server/@brendancopley/mcp-chain-of-draft-prompt-tool",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brendancopley/mcp-chain-of-draft-prompt-tool"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "ai",
+    "anthropic-claude",
+    "chain-of-draft",
+    "chain-of-thought-prompting",
+    "cod",
+    "llm",
+    "lm-studio",
+    "mcp",
+    "model-context-protocol",
+    "ollama"
+  ],
+  "inputs": [
+    {
+      "id": "anthropic_api_key",
+      "type": "promptString",
+      "description": "Environment variable for anthropic api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "/path/to/mcp-chain-of-draft-prompt-tool",
+    "env": {
+      "ANTHROPIC_API_KEY": "your_api_key_here"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "olostep-mcp",
+  "version": "1.0.4",
+  "description": "Olostep MCOP server for web scraping, google search and website urls search.",
+  "homepage": "https://github.com/olostep/olostep-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/olostep/olostep-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "olostep-mcp-server",
+    "olostep"
+  ],
+  "inputs": [
+    {
+      "id": "olostep_api_key",
+      "type": "promptString",
+      "description": "Environment variable for olostep api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "olostep-mcp"
+    ],
+    "env": {
+      "OLOSTEP_API_KEY": "YOUR_API_KEY_HERE"
+    }
+  }
+}

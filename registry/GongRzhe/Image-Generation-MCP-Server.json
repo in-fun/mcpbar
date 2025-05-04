@@ -1,0 +1,43 @@
+{
+  "name": "@gongrzhe/image-gen-server",
+  "version": "1.0.1",
+  "description": "An MCP server for image generation using the Replicate Flux model",
+  "homepage": "https://github.com/GongRzhe/Image-Generation-MCP-Server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GongRzhe/Image-Generation-MCP-Server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "image-generation-mcp-server",
+    "gongrzhe"
+  ],
+  "inputs": [
+    {
+      "id": "replicate_api_token",
+      "type": "promptString",
+      "description": "Environment variable for replicate api token authentication",
+      "password": true
+    },
+    {
+      "id": "model",
+      "type": "promptString",
+      "description": "Environment variable for model configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "@gongrzhe/image-gen-server"
+    ],
+    "env": {
+      "REPLICATE_API_TOKEN": "your-replicate-api-token",
+      "MODEL": "alternative-model-name"
+    },
+    "disabled": false,
+    "autoApprove": []
+  }
+}

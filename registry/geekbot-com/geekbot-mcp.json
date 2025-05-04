@@ -1,0 +1,34 @@
+{
+  "name": "geekbot-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for geekbot-mcp",
+  "homepage": "https://github.com/geekbot-com/geekbot-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/geekbot-com/geekbot-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "geekbot-mcp",
+    "geekbot-com"
+  ],
+  "inputs": [
+    {
+      "id": "gb_api_key",
+      "type": "promptString",
+      "description": "Environment variable for gb api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "geekbot-mcp"
+    ],
+    "env": {
+      "GB_API_KEY": "${input:gb_api_key}"
+    }
+  }
+}

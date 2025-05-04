@@ -1,0 +1,25 @@
+{
+  "name": "office-powerpoint-mcp-server",
+  "version": "1.0.0",
+  "description": "A MCP (Model Context Protocol) server for PowerPoint manipulation using python-pptx. This server provides tools for creating, editing, and manipulating PowerPoint presentations through the MCP protocol.",
+  "homepage": "https://github.com/GongRzhe/Office-PowerPoint-MCP-Server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GongRzhe/Office-PowerPoint-MCP-Server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "office-powerpoint-mcp-server",
+    "gongrzhe"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "python",
+    "args": [
+      "/path/to/ppt_mcp_server.py"
+    ],
+    "env": {}
+  }
+}

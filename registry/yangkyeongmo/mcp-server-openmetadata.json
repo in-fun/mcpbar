@@ -1,0 +1,41 @@
+{
+  "name": "mcp-server-openmetadata",
+  "version": "1.0.0",
+  "description": "MCP server for mcp-server-openmetadata",
+  "homepage": "https://github.com/yangkyeongmo/mcp-server-openmetadata",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yangkyeongmo/mcp-server-openmetadata"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-openmetadata",
+    "yangkyeongmo"
+  ],
+  "inputs": [
+    {
+      "id": "openmetadata_host",
+      "type": "promptString",
+      "description": "Environment variable for openmetadata host configuration",
+      "password": false
+    },
+    {
+      "id": "openmetadata_jwt_token",
+      "type": "promptString",
+      "description": "Environment variable for openmetadata jwt token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-server-openmetadata"
+    ],
+    "env": {
+      "OPENMETADATA_HOST": "https://your-openmetadata-host",
+      "OPENMETADATA_JWT_TOKEN": "your-jwt-token"
+    }
+  }
+}

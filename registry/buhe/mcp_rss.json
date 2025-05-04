@@ -1,0 +1,35 @@
+{
+  "name": "mcp_rss",
+  "version": "1.0.6",
+  "description": "MCP server for interacting with RSS",
+  "homepage": "https://github.com/buhe/mcp_rss",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/buhe/mcp_rss"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp_rss",
+    "buhe"
+  ],
+  "inputs": [
+    {
+      "id": "opml_file_path",
+      "type": "promptString",
+      "description": "Environment variable for opml file path configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "key": "rss",
+    "command": "npx",
+    "args": [
+      "mcp_rss"
+    ],
+    "env": {
+      "OPML_FILE_PATH": "/Users/guyanhua/feeds.opml"
+    }
+  }
+}

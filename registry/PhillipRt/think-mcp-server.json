@@ -1,0 +1,24 @@
+{
+  "name": "think-mcp-server",
+  "version": "1.0.0",
+  "description": "An MCP server that provides a 'think' tool for structured reasoning",
+  "homepage": "https://github.com/PhillipRt/think-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PhillipRt/think-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "think-mcp-server",
+    "philliprt"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "path/to/think-mcp-server/dist/server.js"
+    ]
+  }
+}

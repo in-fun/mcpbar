@@ -1,0 +1,25 @@
+{
+  "name": "@kevinwatt/yt-dlp-mcp",
+  "version": "0.6.26",
+  "description": "An MCP server implementation that integrates with yt-dlp, providing video and audio content download capabilities (e.g. YouTube, Facebook, Tiktok, etc.) for LLMs.",
+  "homepage": "https://github.com/kevinwatt/yt-dlp-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kevinwatt/yt-dlp-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "yt-dlp-mcp",
+    "kevinwatt"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@kevinwatt/yt-dlp-mcp"
+    ]
+  }
+}

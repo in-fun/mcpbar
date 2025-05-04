@@ -1,0 +1,25 @@
+{
+  "name": "nexonco-mcp",
+  "version": "1.0.0",
+  "description": "An advanced MCP Server for accessing and analyzing clinical evidence data, with flexible search options to support precision medicine and oncology research.",
+  "homepage": "https://github.com/1sustgmboab/nexonco-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1sustgmboab/nexonco-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "health",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "nexonco-mcp"
+    ],
+    "env": {}
+  }
+}

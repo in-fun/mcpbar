@@ -1,0 +1,42 @@
+{
+  "name": "1panel-mcp",
+  "version": "1.0.0",
+  "description": "1Panel MCP server for automatic website deployment",
+  "homepage": "https://www.bilibili.com/video/BV1SjQRY3EmM",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ruibaby/1panel-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "1panel-mcp",
+    "ruibaby"
+  ],
+  "inputs": [
+    {
+      "id": "onepanel_base_url",
+      "type": "promptString",
+      "description": "Environment variable for onepanel base url configuration",
+      "password": false
+    },
+    {
+      "id": "onepanel_api_key",
+      "type": "promptString",
+      "description": "Environment variable for onepanel api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "1panel-mcp"
+    ],
+    "env": {
+      "ONEPANEL_BASE_URL": "<your 1Panel base URL>",
+      "ONEPANEL_API_KEY": "<your 1Panel API key>"
+    }
+  }
+}

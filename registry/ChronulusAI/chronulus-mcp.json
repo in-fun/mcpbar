@@ -1,0 +1,35 @@
+{
+  "name": "chronulus-mcp",
+  "version": "1.0.0",
+  "description": "MCP Server for Chronulus AI Forecasting and Prediction Agents",
+  "homepage": "https://www.chronulus.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChronulusAI/chronulus-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "chronulus-mcp",
+    "chronulusai"
+  ],
+  "inputs": [
+    {
+      "id": "chronulus_api_key",
+      "type": "promptString",
+      "description": "Environment variable for chronulus api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "python",
+    "args": [
+      "-m",
+      "chronulus_mcp"
+    ],
+    "env": {
+      "CHRONULUS_API_KEY": "<YOUR_CHRONULUS_API_KEY>"
+    }
+  }
+}

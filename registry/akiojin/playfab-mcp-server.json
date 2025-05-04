@@ -1,0 +1,42 @@
+{
+  "name": "@akiojin/playfab-mcp-server",
+  "version": "0.2.1",
+  "description": "PlayFab MCP Server",
+  "homepage": "https://github.com/akiojin/playfab-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akiojin/playfab-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "playfab-mcp-server",
+    "akiojin"
+  ],
+  "inputs": [
+    {
+      "id": "playfab_title_id",
+      "type": "promptString",
+      "description": "Environment variable for playfab title id configuration",
+      "password": false
+    },
+    {
+      "id": "playfab_dev_secret_key",
+      "type": "promptString",
+      "description": "Environment variable for playfab dev secret key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@akiojin/playfab-mcp-server"
+    ],
+    "env": {
+      "PLAYFAB_TITLE_ID": "Your PlayFab Title ID",
+      "PLAYFAB_DEV_SECRET_KEY": "Your PlayFab Developer Secret Key"
+    }
+  }
+}

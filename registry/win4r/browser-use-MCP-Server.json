@@ -1,0 +1,21 @@
+{
+  "name": "browser-use",
+  "version": "0.1.0",
+  "description": "A Model Context Protocol server",
+  "homepage": "https://github.com/win4r/browser-use-MCP-Server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/win4r/browser-use-MCP-Server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "browser-use-mcp-server",
+    "win4r"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "/path/to/browser-use/build/index.js"
+  }
+}

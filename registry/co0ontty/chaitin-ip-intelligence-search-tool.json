@@ -1,0 +1,28 @@
+{
+  "name": "chaitin-ip-intelligence-search-tool",
+  "version": "0.1.1",
+  "description": "IP Intelligence Search Tool",
+  "homepage": "https://github.com/co0ontty/chaitin-ip-intelligence-search-tool",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/co0ontty/chaitin-ip-intelligence-search-tool"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "chaitin-ip-intelligence-search-tool",
+    "co0ontty"
+  ],
+  "inputs": [],
+  "server": {
+    "isActive": true,
+    "name": "chaitin-ip-intelligence",
+    "description": "",
+    "command": "npx",
+    "args": [
+      "-y",
+      "chaitin-ip-intelligence-search-tool"
+    ]
+  }
+}

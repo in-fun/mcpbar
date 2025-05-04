@@ -1,0 +1,49 @@
+{
+  "name": "jira-mcp",
+  "version": "1.0.1",
+  "description": "MCP server for jira-mcp",
+  "homepage": "https://github.com/CamdenClark/jira-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CamdenClark/jira-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "jira-mcp",
+    "camdenclark"
+  ],
+  "inputs": [
+    {
+      "id": "jira_instance_url",
+      "type": "promptString",
+      "description": "Environment variable for jira instance url configuration",
+      "password": false
+    },
+    {
+      "id": "jira_user_email",
+      "type": "promptString",
+      "description": "Environment variable for jira user email configuration",
+      "password": false
+    },
+    {
+      "id": "jira_api_key",
+      "type": "promptString",
+      "description": "Environment variable for jira api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "jira-mcp"
+    ],
+    "env": {
+      "JIRA_INSTANCE_URL": "https://your-instance.atlassian.net",
+      "JIRA_USER_EMAIL": "your-email@company.com",
+      "JIRA_API_KEY": "your-api-token"
+    }
+  }
+}

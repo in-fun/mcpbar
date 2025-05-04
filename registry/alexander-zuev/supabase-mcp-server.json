@@ -1,0 +1,56 @@
+{
+  "name": "supabase-mcp-server",
+  "version": "1.0.0",
+  "description": "Query MCP enables end-to-end management of Supabase via chat interface: read & write query executions, management API support, automatic migration versioning, access to logs and much more.",
+  "homepage": "https://thequery.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexander-zuev/supabase-mcp-server"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "model-context-protocol",
+    "supabase",
+    "cursor",
+    "windsurf",
+    "mcp"
+  ],
+  "inputs": [
+    {
+      "id": "supabase_db_pass",
+      "type": "promptString",
+      "description": "Environment variable for supabase db pass",
+      "password": false
+    },
+    {
+      "id": "supabase_access_token",
+      "type": "promptString",
+      "description": "Environment variable for supabase access token",
+      "password": true
+    },
+    {
+      "id": "supabase_service_role_key",
+      "type": "promptString",
+      "description": "Environment variable for supabase service role key",
+      "password": true
+    },
+    {
+      "id": "query_api_key",
+      "type": "promptString",
+      "description": "Environment variable for query api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "supabase-mcp-server"
+    ],
+    "env": {
+      "SUPABASE_DB_PASS": "${input:supabase_db_pass}",
+      "SUPABASE_ACCESS_TOKEN": "${input:supabase_access_token}",
+      "SUPABASE_SERVICE_ROLE_KEY": "${input:supabase_service_role_key}",
+      "QUERY_API_KEY": "${input:query_api_key}"
+    }
+  }
+}

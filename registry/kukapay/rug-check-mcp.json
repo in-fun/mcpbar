@@ -1,0 +1,34 @@
+{
+  "name": "rug-check-mcp",
+  "version": "1.0.0",
+  "description": "An MCP server that detects potential risks in Solana meme tokens.",
+  "homepage": "https://github.com/kukapay/rug-check-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kukapay/rug-check-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "rug-check-mcp",
+    "kukapay"
+  ],
+  "inputs": [
+    {
+      "id": "solsniffer_api_key",
+      "type": "promptString",
+      "description": "Environment variable for solsniffer api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "rug-check-mcp"
+    ],
+    "env": {
+      "SOLSNIFFER_API_KEY": "${input:solsniffer_api_key}"
+    }
+  }
+}

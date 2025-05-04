@@ -1,0 +1,26 @@
+{
+  "name": "swagger-mcp-server",
+  "version": "0.1.0",
+  "description": "基于MCP的Swagger工具服务器，支持解析Swagger、生成类型定义和API客户端",
+  "homepage": "https://github.com/tuskermanshu/swagger-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tuskermanshu/swagger-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "swagger-mcp-server",
+    "tuskermanshu"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "swagger-mcp-server"
+    ],
+    "env": {}
+  }
+}

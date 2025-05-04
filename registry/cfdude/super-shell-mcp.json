@@ -1,0 +1,28 @@
+{
+  "name": "super-shell-mcp",
+  "version": "2.0.13",
+  "description": "MCP server for executing shell commands across multiple platforms",
+  "homepage": "https://www.onvex.ai",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cfdude/super-shell-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "bash",
+    "mac",
+    "shell",
+    "windows",
+    "zsh",
+    "mcp-server",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "ls",
+    "args": [
+      "-la"
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "@kazuph/mcp-pocket",
+  "version": "1.0.3",
+  "description": "Model Context Protocol server for Pocket API - Access and manage your Pocket articles through Claude",
+  "homepage": "https://github.com/kazuph/mcp-pocket",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kazuph/mcp-pocket"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-pocket",
+    "kazuph"
+  ],
+  "inputs": [
+    {
+      "id": "pocket_consumer_key",
+      "type": "promptString",
+      "description": "Environment variable for pocket consumer key authentication",
+      "password": true
+    },
+    {
+      "id": "pocket_access_token",
+      "type": "promptString",
+      "description": "Environment variable for pocket access token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@kazuph/mcp-pocket"
+    ],
+    "env": {
+      "POCKET_CONSUMER_KEY": "your-pocket-consumer-key",
+      "POCKET_ACCESS_TOKEN": "your-pocket-access-token"
+    }
+  }
+}

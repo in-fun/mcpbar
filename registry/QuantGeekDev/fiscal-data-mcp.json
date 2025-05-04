@@ -1,0 +1,24 @@
+{
+  "name": "fiscal-data-mcp",
+  "version": "0.1.6",
+  "description": "MCP server for treasury data using mcp-framework",
+  "homepage": "https://github.com/QuantGeekDev/fiscal-data-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/QuantGeekDev/fiscal-data-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "fiscal-data-mcp",
+    "quantgeekdev"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "fiscal-data-mcp"
+    ]
+  }
+}

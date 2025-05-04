@@ -1,0 +1,34 @@
+{
+  "name": "mem0-mcp-for-pm",
+  "version": "1.0.0",
+  "description": "Forked repo to customize into Project Management purpose.",
+  "homepage": "https://pypi.org/project/mem0-mcp-for-pm/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KunihiroS/mem0-mcp-for-pm"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mem0-mcp-for-pm",
+    "kunihiros"
+  ],
+  "inputs": [
+    {
+      "id": "_api_key",
+      "type": "promptString",
+      "description": "Environment variable for  api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mem0-mcp-for-pm"
+    ],
+    "env": {
+      "_API_KEY": "${input:_api_key}"
+    }
+  }
+}

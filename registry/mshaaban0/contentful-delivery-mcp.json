@@ -1,0 +1,35 @@
+{
+  "name": "@mshaaban0/contentful-delivery-mcp-server",
+  "version": "0.0.12",
+  "description": "Contentful MCP Server for Delivery API",
+  "homepage": "https://github.com/mshaaban0/contentful-delivery-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mshaaban0/contentful-delivery-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "contentful-delivery-mcp",
+    "mshaaban0"
+  ],
+  "inputs": [
+    {
+      "id": "contentful_access_token",
+      "type": "promptString",
+      "description": "Environment variable for contentful access token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@mshaaban0/contentful-delivery-mcp-server"
+    ],
+    "env": {
+      "CONTENTFUL_ACCESS_TOKEN": "${input:contentful_access_token}"
+    }
+  }
+}

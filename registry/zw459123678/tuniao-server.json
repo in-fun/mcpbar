@@ -1,0 +1,25 @@
+{
+  "name": "@wopal/mcp-server-hotnews",
+  "version": "0.2.0",
+  "description": "A Model Context Protocol server that provides real-time hot trending topics from major Chinese social platforms and news sites",
+  "homepage": "https://github.com/zw459123678/tuniao-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zw459123678/tuniao-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "tuniao-server",
+    "zw459123678"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@zw459123678/tuniao-server"
+    ]
+  }
+}

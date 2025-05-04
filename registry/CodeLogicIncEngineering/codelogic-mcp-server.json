@@ -1,0 +1,66 @@
+{
+  "name": "codelogic-mcp-server",
+  "version": "1.0.0",
+  "description": "An MCP Server to utilize Codelogic's rich software dependency data in your AI programming assistant.",
+  "homepage": "https://codelogic.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CodeLogicIncEngineering/codelogic-mcp-server"
+  },
+  "license": "MPL-2.0",
+  "keywords": [
+    "ai",
+    "ai-agents",
+    "coding",
+    "developer-tools",
+    "mcp-server",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "codelogic_server_host",
+      "type": "promptString",
+      "description": "Environment variable for codelogic server host configuration",
+      "password": false
+    },
+    {
+      "id": "codelogic_username",
+      "type": "promptString",
+      "description": "Environment variable for codelogic username configuration",
+      "password": false
+    },
+    {
+      "id": "codelogic_password",
+      "type": "promptString",
+      "description": "Environment variable for codelogic password authentication",
+      "password": false
+    },
+    {
+      "id": "codelogic_workspace_name",
+      "type": "promptString",
+      "description": "Environment variable for codelogic workspace name configuration",
+      "password": false
+    },
+    {
+      "id": "codelogic_debug_mode",
+      "type": "promptString",
+      "description": "Environment variable for codelogic debug mode configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "type": "stdio",
+    "command": "uvx",
+    "args": [
+      "codelogic-mcp-server@latest"
+    ],
+    "env": {
+      "CODELOGIC_SERVER_HOST": "<url to the server e.g. https://myco.app.codelogic.com>",
+      "CODELOGIC_USERNAME": "<my username>",
+      "CODELOGIC_PASSWORD": "<my password>",
+      "CODELOGIC_WORKSPACE_NAME": "<my workspace>",
+      "CODELOGIC_DEBUG_MODE": "true"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "name": "hackmd-mcp",
+  "version": "1.2.4",
+  "description": "A Model Context Protocol server for integrating HackMD's note-taking platform with AI assistants.",
+  "homepage": "https://github.com/yuna0x0/hackmd-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yuna0x0/hackmd-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "llm",
+    "mcp",
+    "mcp-server",
+    "hackmd",
+    "api",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "hackmd_api_token",
+      "type": "promptString",
+      "description": "Environment variable for hackmd api token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "hackmd-mcp"
+    ],
+    "env": {
+      "HACKMD_API_TOKEN": "your_api_token"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "snak",
+  "version": "0.0.1",
+  "description": "Build powerful and secure agents powered by Starknet",
+  "homepage": "https://snakagent.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KasarLabs/snak"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "snak",
+    "kasarlabs"
+  ],
+  "inputs": [
+    {
+      "id": "api_key",
+      "type": "promptString",
+      "description": "Environment variable for api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@npm_package_example/npx_server_example"
+    ],
+    "env": {
+      "API_KEY": "YOUR_API_KEY"
+    }
+  }
+}

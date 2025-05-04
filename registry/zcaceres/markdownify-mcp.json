@@ -1,0 +1,31 @@
+{
+  "name": "mcp-markdownify-server",
+  "version": "0.0.1",
+  "description": "MCP Markdownify Server - Model Context Protocol Server for Converting Almost Anything to Markdown",
+  "homepage": "https://github.com/zcaceres/markdownify-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zcaceres/markdownify-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "anthropic",
+    "anthropic-ai",
+    "anthropic-claude",
+    "markdown",
+    "mcp",
+    "model-context-protocol",
+    "ocr",
+    "tools"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-markdownify-server"
+    ],
+    "env": {}
+  }
+}

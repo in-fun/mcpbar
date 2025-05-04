@@ -1,0 +1,29 @@
+{
+  "name": "@1mcp/agent",
+  "version": "0.8.2",
+  "description": "One MCP server to aggregate them all - A unified Model Context Protocol server implementation",
+  "homepage": "https://github.com/1mcp-app/agent",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/1mcp-app/agent"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "unified-mcp-server",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-server-fetch"
+    ],
+    "tags": [
+      "network",
+      "web"
+    ],
+    "disabled": false
+  }
+}

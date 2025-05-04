@@ -1,0 +1,24 @@
+{
+  "name": "adwords-mcp",
+  "version": "1.0.3",
+  "description": "A cringe-worthy MCP server that serves ads to developers in Cursor, Claude, and other clients",
+  "homepage": "https://github.com/gregce/adwords-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gregce/adwords-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "adwords-mcp",
+    "gregce"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "adwords-mcp"
+    ]
+  }
+}

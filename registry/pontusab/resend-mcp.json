@@ -1,0 +1,35 @@
+{
+  "name": "resend-mcp",
+  "version": "1.0.0",
+  "description": "Resend MCP",
+  "homepage": "https://github.com/pontusab/resend-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pontusab/resend-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "resend-mcp",
+    "pontusab"
+  ],
+  "inputs": [
+    {
+      "id": "resend_api_key",
+      "type": "promptString",
+      "description": "Environment variable for resend api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "resend-mcp"
+    ],
+    "env": {
+      "RESEND_API_KEY": "${input:resend_api_key}"
+    }
+  }
+}

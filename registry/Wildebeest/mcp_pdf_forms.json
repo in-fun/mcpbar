@@ -1,0 +1,25 @@
+{
+  "name": "mcp_pdf_forms",
+  "version": "1.0.0",
+  "description": "MCP server for mcp_pdf_forms",
+  "homepage": "https://github.com/Wildebeest/mcp_pdf_forms",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Wildebeest/mcp_pdf_forms"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp_pdf_forms",
+    "wildebeest"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp_pdf_forms"
+    ],
+    "env": {}
+  }
+}

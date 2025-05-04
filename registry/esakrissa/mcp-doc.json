@@ -1,0 +1,33 @@
+{
+  "name": "mcpdoc",
+  "version": "1.0.0",
+  "description": "Model Context Protocol documentation server for LangGraph and MCP.",
+  "homepage": "https://github.com/esakrissa/mcp-doc",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/esakrissa/mcp-doc"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-doc",
+    "esakrissa"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "--from",
+      "mcpdoc",
+      "mcpdoc",
+      "--urls",
+      "LangGraph:https://raw.githubusercontent.com/esakrissa/mcp-doc/main/docs/langgraph.txt",
+      "ModelContextProtocol:https://raw.githubusercontent.com/esakrissa/mcp-doc/main/docs/mcp.txt",
+      "--allowed-domains",
+      "*",
+      "--transport",
+      "stdio"
+    ]
+  }
+}

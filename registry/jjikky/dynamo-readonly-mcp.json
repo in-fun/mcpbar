@@ -1,0 +1,48 @@
+{
+  "name": "dynamo-readonly-mcp",
+  "version": "0.1.0",
+  "description": "DynamoDB Readonly MCP Server",
+  "homepage": "https://github.com/jjikky/dynamo-readonly-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jjikky/dynamo-readonly-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "dynamo-readonly-mcp",
+    "jjikky"
+  ],
+  "inputs": [
+    {
+      "id": "aws_access_key_id",
+      "type": "promptString",
+      "description": "Environment variable for aws access key id authentication",
+      "password": true
+    },
+    {
+      "id": "aws_secret_access_key",
+      "type": "promptString",
+      "description": "Environment variable for aws secret access key authentication",
+      "password": true
+    },
+    {
+      "id": "aws_region",
+      "type": "promptString",
+      "description": "Environment variable for aws region configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "/absolute-path/dynamo-readonly-mcp/dist/index.js"
+    ],
+    "env": {
+      "AWS_ACCESS_KEY_ID": "your_access_key",
+      "AWS_SECRET_ACCESS_KEY": "your_secret_key",
+      "AWS_REGION": "your_region"
+    }
+  }
+}

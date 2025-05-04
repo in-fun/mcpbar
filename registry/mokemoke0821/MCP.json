@@ -1,0 +1,26 @@
+{
+  "name": "claude-mcp-server",
+  "version": "1.0.0",
+  "description": "Enhanced MCP Server for Claude",
+  "homepage": "https://github.com/mokemoke0821/MCP",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mokemoke0821/MCP"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp",
+    "mokemoke0821"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "claude-mcp-server"
+    ],
+    "env": {}
+  }
+}

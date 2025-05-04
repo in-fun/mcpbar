@@ -1,0 +1,42 @@
+{
+  "name": "mcp-simple-pubmed",
+  "version": "1.0.0",
+  "description": "MCP server for searching and querying PubMed medical papers/research database",
+  "homepage": "https://github.com/andybrandt/mcp-simple-pubmed",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/andybrandt/mcp-simple-pubmed"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-simple-pubmed",
+    "andybrandt"
+  ],
+  "inputs": [
+    {
+      "id": "pubmed_email",
+      "type": "promptString",
+      "description": "Environment variable for pubmed email configuration",
+      "password": false
+    },
+    {
+      "id": "pubmed_api_key",
+      "type": "promptString",
+      "description": "Environment variable for pubmed api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "python",
+    "args": [
+      "-m",
+      "mcp_simple_pubmed"
+    ],
+    "env": {
+      "PUBMED_EMAIL": "your-email@example.com",
+      "PUBMED_API_KEY": "your-api-key"
+    }
+  }
+}

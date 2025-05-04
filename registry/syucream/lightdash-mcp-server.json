@@ -1,0 +1,42 @@
+{
+  "name": "lightdash-mcp-server",
+  "version": "0.0.11",
+  "description": "A MCP(Model Context Protocol) server that accesses to lightdash( https://www.lightdash.com/ )",
+  "homepage": "https://www.npmjs.com/package/lightdash-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/syucream/lightdash-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "lightdash",
+    "mcp",
+    "mcp-servers",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "lightdash_api_key",
+      "type": "promptString",
+      "description": "Environment variable for lightdash api key",
+      "password": true
+    },
+    {
+      "id": "lightdash_api_url",
+      "type": "promptString",
+      "description": "Environment variable for lightdash api url",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "lightdash-mcp-server"
+    ],
+    "env": {
+      "LIGHTDASH_API_KEY": "${input:lightdash_api_key}",
+      "LIGHTDASH_API_URL": "${input:lightdash_api_url}"
+    }
+  }
+}

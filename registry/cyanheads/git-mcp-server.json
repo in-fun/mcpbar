@@ -1,0 +1,47 @@
+{
+  "name": "@cyanheads/git-mcp-server",
+  "version": "2.0.2",
+  "description": "An MCP (Model Context Protocol) server providing tools to interact with Git repositories. Enables LLMs and AI agents to perform Git operations like clone, commit, push, pull, branch, diff, log, status, and more via the MCP standard.",
+  "homepage": "https://www.npmjs.com/package/@cyanheads/git-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cyanheads/git-mcp-server"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "ai",
+    "git",
+    "llm",
+    "mcp",
+    "modelcontextprotocol",
+    "git-server",
+    "mcp-server",
+    "model-context-protocol",
+    "enterprise-ready"
+  ],
+  "inputs": [
+    {
+      "id": "mcp_http_port",
+      "type": "promptString",
+      "description": "Environment variable for mcp http port",
+      "password": false
+    },
+    {
+      "id": "mcp_http_host",
+      "type": "promptString",
+      "description": "Environment variable for mcp http host",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@cyanheads/git-mcp-server"
+    ],
+    "env": {
+      "MCP_HTTP_PORT": "${input:mcp_http_port}",
+      "MCP_HTTP_HOST": "${input:mcp_http_host}"
+    }
+  }
+}

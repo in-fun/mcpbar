@@ -1,0 +1,24 @@
+{
+  "name": "mac-shell-mcp",
+  "version": "1.0.4",
+  "description": "MCP server for executing macOS terminal commands with ZSH",
+  "homepage": "https://www.onvex.ai",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cfdude/mac-shell-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mac",
+    "mcp",
+    "zsh",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "ls",
+    "args": [
+      "-la"
+    ]
+  }
+}

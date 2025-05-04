@@ -1,0 +1,24 @@
+{
+  "name": "xcode-mcp-server",
+  "version": "1.0.3",
+  "description": "An MCP server for Xcode integration, enabling AI assistants to interact with Xcode projects",
+  "homepage": "https://github.com/r-huijts/xcode-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/r-huijts/xcode-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "xcode-mcp-server",
+    "r-huijts"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/xcode-mcp-server/dist/index.js"
+    ]
+  }
+}

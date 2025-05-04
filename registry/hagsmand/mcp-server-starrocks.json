@@ -1,0 +1,25 @@
+{
+  "name": "mcp-server-starrocks",
+  "version": "1.0.0",
+  "description": "MCP server for mcp-server-starrocks",
+  "homepage": "https://github.com/hagsmand/mcp-server-starrocks",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hagsmand/mcp-server-starrocks"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-starrocks",
+    "hagsmand"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-server-starrocks"
+    ],
+    "env": {}
+  }
+}

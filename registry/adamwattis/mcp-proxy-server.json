@@ -1,0 +1,38 @@
+{
+  "name": "mcp-proxy-server",
+  "version": "0.1.0",
+  "description": "An MCP proxy server that aggregates and serves multiple MCP resource servers through a single interface",
+  "homepage": "https://github.com/adamwattis/mcp-proxy-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adamwattis/mcp-proxy-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-proxy-server",
+    "adamwattis"
+  ],
+  "inputs": [
+    {
+      "id": "mcp_config_path",
+      "type": "promptString",
+      "description": "Environment variable for mcp config path configuration",
+      "password": false
+    },
+    {
+      "id": "keep_server_open",
+      "type": "promptString",
+      "description": "Environment variable for keep server open configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "/path/to/mcp-proxy-server/build/index.js",
+    "env": {
+      "MCP_CONFIG_PATH": "/absolute/path/to/your/config.json",
+      "KEEP_SERVER_OPEN": "1"
+    }
+  }
+}

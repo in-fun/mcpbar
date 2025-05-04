@@ -1,0 +1,34 @@
+{
+  "name": "mcp-server-ipinfo",
+  "version": "1.0.0",
+  "description": "IP Geolocation Server for MCP",
+  "homepage": "https://github.com/briandconnelly/mcp-server-ipinfo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/briandconnelly/mcp-server-ipinfo"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-ipinfo",
+    "briandconnelly"
+  ],
+  "inputs": [
+    {
+      "id": "ipinfo_api_token",
+      "type": "promptString",
+      "description": "Environment variable for ipinfo api token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-server-ipinfo"
+    ],
+    "env": {
+      "IPINFO_API_TOKEN": "${input:ipinfo_api_token}"
+    }
+  }
+}

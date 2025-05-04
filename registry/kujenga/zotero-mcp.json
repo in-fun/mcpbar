@@ -1,0 +1,49 @@
+{
+  "name": "zotero-mcp",
+  "version": "1.0.0",
+  "description": "Model Context Protocol (MCP) server for the Zotero API, in Python",
+  "homepage": "https://github.com/kujenga/zotero-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kujenga/zotero-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "zotero",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "zotero_local",
+      "type": "promptString",
+      "description": "Environment variable for zotero local configuration",
+      "password": false
+    },
+    {
+      "id": "zotero_api_key",
+      "type": "promptString",
+      "description": "Environment variable for zotero api key authentication",
+      "password": true
+    },
+    {
+      "id": "zotero_library_id",
+      "type": "promptString",
+      "description": "Environment variable for zotero library id configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "--update",
+      "zotero-mcp"
+    ],
+    "env": {
+      "ZOTERO_LOCAL": "true",
+      "ZOTERO_API_KEY": "",
+      "ZOTERO_LIBRARY_ID": ""
+    }
+  }
+}

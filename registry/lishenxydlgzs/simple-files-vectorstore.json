@@ -1,0 +1,37 @@
+{
+  "name": "@lishenxydlgzs/simple-files-vectorstore",
+  "version": "0.1.7",
+  "description": "A simple vector store that indexes content of files on local file system",
+  "homepage": "https://github.com/lishenxydlgzs/simple-files-vectorstore",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lishenxydlgzs/simple-files-vectorstore"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "simple-files-vectorstore",
+    "lishenxydlgzs"
+  ],
+  "inputs": [
+    {
+      "id": "watch_directories",
+      "type": "promptString",
+      "description": "Environment variable for watch directories configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@lishenxydlgzs/simple-files-vectorstore"
+    ],
+    "env": {
+      "WATCH_DIRECTORIES": "/path/to/your/directories"
+    },
+    "disabled": false,
+    "autoApprove": []
+  }
+}

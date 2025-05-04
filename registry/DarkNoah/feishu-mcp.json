@@ -1,0 +1,26 @@
+{
+  "name": "feishu-mcp",
+  "version": "1.0.0",
+  "description": "飞书MCP服务器，提供多维表格API工具",
+  "homepage": "https://github.com/DarkNoah/feishu-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DarkNoah/feishu-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "feishu-mcp",
+    "darknoah"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "feishu-mcp"
+    ],
+    "env": {}
+  }
+}

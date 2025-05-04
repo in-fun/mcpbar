@@ -1,0 +1,34 @@
+{
+  "name": "jnews-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for jnews-mcp-server",
+  "homepage": "https://github.com/juhemcp/jnews-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/juhemcp/jnews-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "jnews-mcp-server",
+    "juhemcp"
+  ],
+  "inputs": [
+    {
+      "id": "juhe_news_api_key",
+      "type": "promptString",
+      "description": "Environment variable for juhe news api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "jnews-mcp-server"
+    ],
+    "env": {
+      "JUHE_NEWS_API_KEY": "${input:juhe_news_api_key}"
+    }
+  }
+}

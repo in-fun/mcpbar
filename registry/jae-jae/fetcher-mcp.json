@@ -1,0 +1,25 @@
+{
+  "name": "fetcher-mcp",
+  "version": "0.2.6",
+  "description": "MCP server for fetching web content using Playwright browser",
+  "homepage": "https://github.com/jae-jae/fetcher-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jae-jae/fetcher-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "ai",
+    "playwright",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "fetcher-mcp"
+    ]
+  }
+}

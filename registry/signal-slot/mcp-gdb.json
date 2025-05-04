@@ -1,0 +1,25 @@
+{
+  "name": "mcp-gdb",
+  "version": "0.1.1",
+  "description": "MCP server for GDB debugging functionality",
+  "homepage": "https://github.com/signal-slot/mcp-gdb",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/signal-slot/mcp-gdb"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-gdb",
+    "signal-slot"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/mcp-gdb/build/index.js"
+    ],
+    "disabled": false
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "@tonlab/dify-mcp-server",
+  "version": "1.1.2",
+  "description": "Dify MCP Server. This is a tool server for Dify Workflow.",
+  "homepage": "https://github.com/TomokiIshimine/dify-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TomokiIshimine/dify-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "dify-mcp-server",
+    "tomokiishimine"
+  ],
+  "inputs": [
+    {
+      "id": "dify_base_url",
+      "type": "promptString",
+      "description": "Environment variable for dify base url configuration",
+      "password": false
+    },
+    {
+      "id": "dify_api_key",
+      "type": "promptString",
+      "description": "Environment variable for dify api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "@tonlab/dify-mcp-server"
+    ],
+    "env": {
+      "DIFY_BASE_URL": "https://your-dify-endpoint",
+      "DIFY_API_KEY": "your-api-key-here"
+    }
+  }
+}

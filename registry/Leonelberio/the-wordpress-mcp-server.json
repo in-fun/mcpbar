@@ -1,0 +1,48 @@
+{
+  "name": "wordpress-server",
+  "version": "1.0.0",
+  "description": "MCP server for WordPress integration",
+  "homepage": "https://github.com/Leonelberio/the-wordpress-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Leonelberio/the-wordpress-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "the-wordpress-mcp-server",
+    "leonelberio"
+  ],
+  "inputs": [
+    {
+      "id": "wordpress_site_url",
+      "type": "promptString",
+      "description": "Environment variable for wordpress site url configuration",
+      "password": false
+    },
+    {
+      "id": "wordpress_username",
+      "type": "promptString",
+      "description": "Environment variable for wordpress username configuration",
+      "password": false
+    },
+    {
+      "id": "wordpress_password",
+      "type": "promptString",
+      "description": "Environment variable for wordpress password authentication",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "path/to/build/index.js"
+    ],
+    "env": {
+      "WORDPRESS_SITE_URL": "https://your-wordpress-site.com",
+      "WORDPRESS_USERNAME": "your-username",
+      "WORDPRESS_PASSWORD": "your-app-password"
+    }
+  }
+}

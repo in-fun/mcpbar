@@ -1,0 +1,25 @@
+{
+  "name": "@fishes/mcp-easy-copy",
+  "version": "1.0.1",
+  "description": "A MCP server that lists all available MCP services for easy copying and usage",
+  "homepage": "https://github.com/f-is-h/mcp-easy-copy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/f-is-h/mcp-easy-copy"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-easy-copy",
+    "f-is-h"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@fishes/mcp-easy-copy"
+    ]
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "name": "pushover-mcp",
+  "version": "1.0.0",
+  "description": "MCP for Pushover.net notifications",
+  "homepage": "https://www.npmjs.com/package/pushover-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AshikNesin/pushover-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "push-notifications",
+    "pushover",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "pushover-mcp@latest",
+      "start",
+      "--token",
+      "YOUR_TOKEN",
+      "--user",
+      "YOUR_USER"
+    ]
+  }
+}

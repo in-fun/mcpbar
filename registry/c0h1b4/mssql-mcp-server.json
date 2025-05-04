@@ -1,0 +1,56 @@
+{
+  "name": "mssql-mcp-server",
+  "version": "0.1.0",
+  "description": "MCP server for connecting to MSSQL databases",
+  "homepage": "https://github.com/c0h1b4/mssql-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/c0h1b4/mssql-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mssql-mcp-server",
+    "c0h1b4"
+  ],
+  "inputs": [
+    {
+      "id": "mssql_host",
+      "type": "promptString",
+      "description": "Environment variable for mssql host",
+      "password": false
+    },
+    {
+      "id": "mssql_port",
+      "type": "promptString",
+      "description": "Environment variable for mssql port",
+      "password": false
+    },
+    {
+      "id": "mssql_user",
+      "type": "promptString",
+      "description": "Environment variable for mssql user",
+      "password": false
+    },
+    {
+      "id": "mssql_pass",
+      "type": "promptString",
+      "description": "Environment variable for mssql pass",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mssql-mcp-server"
+    ],
+    "env": {
+      "MSSQL_HOST": "${input:mssql_host}",
+      "MSSQL_PORT": "${input:mssql_port}",
+      "MSSQL_USER": "${input:mssql_user}",
+      "MSSQL_PASS": "${input:mssql_pass}"
+    }
+  }
+}

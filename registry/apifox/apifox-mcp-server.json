@@ -1,0 +1,36 @@
+{
+  "name": "apifox-mcp-server",
+  "version": "0.0.10",
+  "description": "MCP server for apifox-mcp-server",
+  "homepage": "https://github.com/apifox/apifox-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/apifox/apifox-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "apifox-mcp-server",
+    "apifox"
+  ],
+  "inputs": [
+    {
+      "id": "apifox_access_token",
+      "type": "promptString",
+      "description": "Environment variable for apifox access token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "apifox-mcp-server@latest",
+      "--project-id=<project-id>"
+    ],
+    "env": {
+      "APIFOX_ACCESS_TOKEN": "<access-token>"
+    }
+  }
+}

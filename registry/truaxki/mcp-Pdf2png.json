@@ -1,0 +1,27 @@
+{
+  "name": "pdf2png",
+  "version": "1.0.0",
+  "description": "MCP tool for converting PDF's to png files.",
+  "homepage": "https://github.com/truaxki/mcp-Pdf2png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/truaxki/mcp-Pdf2png"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-pdf2png",
+    "truaxki"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "/absolute/path/to/mcp-Pdf2png",
+      "run",
+      "pdf2png"
+    ]
+  }
+}

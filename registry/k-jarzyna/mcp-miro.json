@@ -1,0 +1,35 @@
+{
+  "name": "@k-jarzyna/mcp-miro",
+  "version": "1.0.6",
+  "description": "Miro integration for Model Context Protocol",
+  "homepage": "https://github.com/k-jarzyna/mcp-miro",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/k-jarzyna/mcp-miro"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-miro",
+    "k-jarzyna"
+  ],
+  "inputs": [
+    {
+      "id": "miro_access_token",
+      "type": "promptString",
+      "description": "Environment variable for miro access token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@k-jarzyna/mcp-miro"
+    ],
+    "env": {
+      "MIRO_ACCESS_TOKEN": "your_miro_access_token"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "@landicefu/mcp-client-configuration-server",
+  "version": "0.1.2",
+  "description": "MCP server for managing client configurations",
+  "homepage": "https://github.com/landicefu/mcp-client-configuration-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/landicefu/mcp-client-configuration-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-client-configuration-server",
+    "landicefu"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@landicefu/mcp-client-configuration-server"
+    ],
+    "env": {},
+    "disabled": false,
+    "alwaysAllow": []
+  }
+}

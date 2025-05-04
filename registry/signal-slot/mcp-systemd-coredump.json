@@ -1,0 +1,26 @@
+{
+  "name": "@taskjp/server-systemd-coredump",
+  "version": "0.1.1",
+  "description": "A Model Context Protocol (MCP) server for systemd-coredump",
+  "homepage": "https://github.com/signal-slot/mcp-systemd-coredump",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/signal-slot/mcp-systemd-coredump"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-systemd-coredump",
+    "signal-slot"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@taskjp/server-systemd-coredump"
+    ],
+    "env": {}
+  }
+}

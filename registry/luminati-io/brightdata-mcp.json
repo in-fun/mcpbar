@@ -1,0 +1,49 @@
+{
+  "name": "@brightdata/mcp",
+  "version": "1.7.0",
+  "description": "An MCP interface into the Bright Data toolset",
+  "homepage": "https://brightdata.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luminati-io/brightdata-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "llm",
+    "mcp",
+    "modelcontextprotocol",
+    "scraping",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "api_token",
+      "type": "promptString",
+      "description": "Environment variable for api token authentication",
+      "password": true
+    },
+    {
+      "id": "web_unlocker_zone",
+      "type": "promptString",
+      "description": "Environment variable for web unlocker zone configuration",
+      "password": false
+    },
+    {
+      "id": "browser_auth",
+      "type": "promptString",
+      "description": "Environment variable for browser auth configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "@brightdata/mcp"
+    ],
+    "env": {
+      "API_TOKEN": "<insert-your-api-token-here>",
+      "WEB_UNLOCKER_ZONE": "<optional if you want to override the default mcp_unlocker zone name>",
+      "BROWSER_AUTH": "<optional if you want to enable remote browser control tools>"
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "searxng-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for searxng-mcp",
+  "homepage": "https://github.com/aeon-seraph/searxng-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aeon-seraph/searxng-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "searxng-mcp",
+    "aeon-seraph"
+  ],
+  "inputs": [
+    {
+      "id": "searxng_host",
+      "type": "promptString",
+      "description": "Environment variable for searxng host",
+      "password": false
+    },
+    {
+      "id": "searxng_port",
+      "type": "promptString",
+      "description": "Environment variable for searxng port",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "searxng-mcp"
+    ],
+    "env": {
+      "SEARXNG_HOST": "${input:searxng_host}",
+      "SEARXNG_PORT": "${input:searxng_port}"
+    }
+  }
+}

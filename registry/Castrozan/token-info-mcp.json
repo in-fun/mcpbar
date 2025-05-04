@@ -1,0 +1,24 @@
+{
+  "name": "@castrozan/token-info-mcp",
+  "version": "1.0.4",
+  "description": "MCP server para validar tokens Betha",
+  "homepage": "https://github.com/Castrozan/token-info-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Castrozan/token-info-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "token-info-mcp",
+    "castrozan"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "@castrozan/token-info-mcp@latest"
+    ]
+  }
+}

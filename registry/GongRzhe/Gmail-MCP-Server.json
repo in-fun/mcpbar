@@ -1,0 +1,24 @@
+{
+  "name": "@gongrzhe/server-gmail-autoauth-mcp",
+  "version": "1.1.8",
+  "description": "Gmail MCP server with auto authentication support",
+  "homepage": "https://github.com/GongRzhe/Gmail-MCP-Server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GongRzhe/Gmail-MCP-Server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "gmail-mcp-server",
+    "gongrzhe"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "@gongrzhe/server-gmail-autoauth-mcp"
+    ]
+  }
+}

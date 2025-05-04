@@ -1,0 +1,32 @@
+{
+  "name": "@buger/docs-mcp",
+  "version": "0.1.0",
+  "description": "Using probe MCP for documentation search",
+  "homepage": "https://probeai.dev/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/buger/docs-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "docs-mcp",
+    "buger"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@buger/docs-mcp@latest",
+      "--gitUrl",
+      "https://github.com/TykTechnologies/tyk-docs",
+      "--toolName",
+      "search_tyk_docs",
+      "--toolDescription",
+      "Search Tyk API Management Documentation"
+    ],
+    "enabled": true
+  }
+}

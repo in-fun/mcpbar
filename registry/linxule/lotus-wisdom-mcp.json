@@ -1,0 +1,26 @@
+{
+  "name": "lotus-wisdom-mcp",
+  "version": "0.1.1",
+  "description": "A Model Context Protocol server implementing the Lotus Wisdom framework",
+  "homepage": "https://github.com/linxule/lotus-wisdom-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/linxule/lotus-wisdom-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "modelcontextprotocol",
+    "lotus-sutra",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "lotus-wisdom-mcp"
+    ]
+  }
+}

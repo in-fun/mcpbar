@@ -1,0 +1,25 @@
+{
+  "name": "mcp-server-redis",
+  "version": "1.0.0",
+  "description": "MCP server to interact with Redis Server, AWS Memory DB, etc for caching or other use-cases where in-memory and key-value based storage is appropriate",
+  "homepage": "https://github.com/prajwalnayak7/mcp-server-redis",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/prajwalnayak7/mcp-server-redis"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-redis",
+    "prajwalnayak7"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-server-redis"
+    ],
+    "env": {}
+  }
+}

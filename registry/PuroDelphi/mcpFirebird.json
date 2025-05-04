@@ -1,0 +1,35 @@
+{
+  "name": "mcp-firebird",
+  "version": "2.1.0",
+  "description": "MCP server for Firebird database",
+  "homepage": "https://asistentesautonomos.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PuroDelphi/mcpFirebird"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcpfirebird",
+    "purodelphi"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "mcp-firebird",
+      "--host",
+      "localhost",
+      "--port",
+      "3050",
+      "--database",
+      "C:\\path\\to\\database.fdb",
+      "--user",
+      "SYSDBA",
+      "--password",
+      "masterkey"
+    ],
+    "type": "stdio"
+  }
+}

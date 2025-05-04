@@ -1,0 +1,26 @@
+{
+  "name": "pinterest-mcp-server",
+  "version": "1.1.0",
+  "description": "A Pinterest Model Context Protocol (MCP) server for image search and information retrieval",
+  "homepage": "https://github.com/terryso/mcp-pinterest",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/terryso/mcp-pinterest"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-pinterest",
+    "terryso"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "pinterest-mcp-server"
+    ],
+    "env": {}
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "mcp-datetime",
+  "version": "1.0.0",
+  "description": "A MCP server for datetime formatting and file name generation.",
+  "homepage": "https://github.com/ZeparHyfar/mcp-datetime",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZeparHyfar/mcp-datetime"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-datetime",
+    "zeparhyfar"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-datetime"
+    ]
+  }
+}

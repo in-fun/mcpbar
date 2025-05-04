@@ -1,0 +1,44 @@
+{
+  "name": "@magnetai/free-usdc-transfer",
+  "version": "0.1.5",
+  "description": "MCP (Model Context Protocol) server - free usdc transfer powered by Coinbase CDP",
+  "homepage": "https://docs.cdp.coinbase.com/mpc-wallet/docs/welcome",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/magnetai/mcp-free-usdc-transfer"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude",
+    "coinbase",
+    "magnet",
+    "modelcontextprotocol",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "coinbase_cdp_api_key_name",
+      "type": "promptString",
+      "description": "Environment variable for coinbase cdp api key name authentication",
+      "password": true
+    },
+    {
+      "id": "coinbase_cdp_private_key",
+      "type": "promptString",
+      "description": "Environment variable for coinbase cdp private key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@magnetai/free-usdc-transfer"
+    ],
+    "env": {
+      "COINBASE_CDP_API_KEY_NAME": "YOUR_COINBASE_CDP_API_KEY_NAME",
+      "COINBASE_CDP_PRIVATE_KEY": "YOUR_COINBASE_CDP_PRIVATE_KEY"
+    }
+  }
+}

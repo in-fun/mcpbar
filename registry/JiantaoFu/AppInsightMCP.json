@@ -1,0 +1,27 @@
+{
+  "name": "@jeromyfu/app-insight-mcp",
+  "version": "1.0.8",
+  "description": "MCP server for gathering market intelligence from mobile app stores (Apple App Store & Google Play)",
+  "homepage": "https://github.com/JiantaoFu/AppInsightMCP",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JiantaoFu/AppInsightMCP"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "appinsightmcp",
+    "jiantaofu"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "docker",
+    "args": [
+      "run",
+      "-i",
+      "--rm",
+      "app-insight-mcp"
+    ]
+  }
+}

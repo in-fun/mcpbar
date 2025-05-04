@@ -1,0 +1,25 @@
+{
+  "name": "@gongrzhe/server-redis-mcp",
+  "version": "1.0.0",
+  "description": "A Redis Model Context Protocol (MCP) server implementation for interacting with Redis databases",
+  "homepage": "https://github.com/GongRzhe/REDIS-MCP-Server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GongRzhe/REDIS-MCP-Server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "redis-mcp-server",
+    "gongrzhe"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "@gongrzhe/server-redis-mcp@1.0.0",
+      "redis://localhost:6379"
+    ]
+  }
+}

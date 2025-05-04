@@ -1,0 +1,24 @@
+{
+  "name": "mssql-mcp-server",
+  "version": "1.0.0",
+  "description": "MS SQL Server MCP Protocol Implementation",
+  "homepage": "https://github.com/dperussina/mssql-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dperussina/mssql-mcp-server"
+  },
+  "license": "GPL-3.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mssql-mcp-server",
+    "dperussina"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "/FULL/PATH/TO/mssql-mcp-server/server.mjs"
+    ]
+  }
+}

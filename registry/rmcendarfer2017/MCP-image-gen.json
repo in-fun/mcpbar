@@ -1,0 +1,55 @@
+{
+  "name": "image-generator",
+  "version": "1.0.0",
+  "description": "MCP server that connects to Replicate image generation api - example to connect to Windsurfer",
+  "homepage": "https://github.com/rmcendarfer2017/MCP-image-gen",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rmcendarfer2017/MCP-image-gen"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-image-gen",
+    "rmcendarfer2017"
+  ],
+  "inputs": [
+    {
+      "id": "replicate_api_token",
+      "type": "promptString",
+      "description": "Environment variable for replicate api token",
+      "password": true
+    },
+    {
+      "id": "uv_publish_token",
+      "type": "promptString",
+      "description": "Environment variable for uv publish token",
+      "password": true
+    },
+    {
+      "id": "uv_publish_user",
+      "type": "promptString",
+      "description": "Environment variable for uv publish user",
+      "password": false
+    },
+    {
+      "id": "uv_publish_pass",
+      "type": "promptString",
+      "description": "Environment variable for uv publish pass",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "image-generator"
+    ],
+    "env": {
+      "REPLICATE_API_TOKEN": "${input:replicate_api_token}",
+      "UV_PUBLISH_TOKEN": "${input:uv_publish_token}",
+      "UV_PUBLISH_USER": "${input:uv_publish_user}",
+      "UV_PUBLISH_PASS": "${input:uv_publish_pass}"
+    }
+  }
+}

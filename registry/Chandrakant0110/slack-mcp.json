@@ -1,0 +1,35 @@
+{
+  "name": "@modelcontextprotocol/server-slack",
+  "version": "0.6.2",
+  "description": "MCP server for interacting with Slack",
+  "homepage": "https://github.com/Chandrakant0110/slack-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Chandrakant0110/slack-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "slack-mcp",
+    "chandrakant0110"
+  ],
+  "inputs": [
+    {
+      "id": "bot_token",
+      "type": "promptString",
+      "description": "Environment variable for bot token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@modelcontextprotocol/server-slack"
+    ],
+    "env": {
+      "BOT_TOKEN": "${input:bot_token}"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "mcp-wsl-exec",
+  "version": "0.0.2",
+  "description": "A secure Model Context Protocol (MCP) server for executing commands in Windows Subsystem for Linux (WSL) with built-in safety features and validation",
+  "homepage": "https://github.com/spences10/mcp-wsl-exec",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spences10/mcp-wsl-exec"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-wsl-exec",
+    "spences10"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-wsl-exec"
+    ]
+  }
+}

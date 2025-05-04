@@ -1,0 +1,36 @@
+{
+  "name": "figma-mcp",
+  "version": "0.1.0",
+  "description": "A Model Context Protocol server",
+  "homepage": "https://github.com/deepsuthar496/figma-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deepsuthar496/figma-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "figma-mcp-server",
+    "deepsuthar496"
+  ],
+  "inputs": [
+    {
+      "id": "figma_access_token",
+      "type": "promptString",
+      "description": "Environment variable for figma access token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "path/to/figma-server/build/index.js"
+    ],
+    "env": {
+      "FIGMA_ACCESS_TOKEN": "your-access-token-here"
+    },
+    "disabled": false,
+    "alwaysAllow": []
+  }
+}

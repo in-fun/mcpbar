@@ -1,0 +1,56 @@
+{
+  "name": "@zereight/mcp-confluence",
+  "version": "1.0.6",
+  "description": "MCP server for using the Confluence API",
+  "homepage": "https://github.com/zereight/confluence-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zereight/confluence-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "confluence-mcp",
+    "zereight"
+  ],
+  "inputs": [
+    {
+      "id": "confluence_url",
+      "type": "promptString",
+      "description": "Environment variable for confluence url",
+      "password": false
+    },
+    {
+      "id": "jira_url",
+      "type": "promptString",
+      "description": "Environment variable for jira url",
+      "password": false
+    },
+    {
+      "id": "confluence_api",
+      "type": "promptString",
+      "description": "Environment variable for confluence api",
+      "password": false
+    },
+    {
+      "id": "confluence_api_key",
+      "type": "promptString",
+      "description": "Environment variable for confluence api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@zereight/mcp-confluence"
+    ],
+    "env": {
+      "CONFLUENCE_URL": "${input:confluence_url}",
+      "JIRA_URL": "${input:jira_url}",
+      "CONFLUENCE_API": "${input:confluence_api}",
+      "CONFLUENCE_API_KEY": "${input:confluence_api_key}"
+    }
+  }
+}

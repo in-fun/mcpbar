@@ -1,0 +1,41 @@
+{
+  "name": "mcp_snowflake_server",
+  "version": "1.0.0",
+  "description": "MCP server for mcp-snowflake-server",
+  "homepage": "https://github.com/isaacwasserman/mcp-snowflake-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/isaacwasserman/mcp-snowflake-server"
+  },
+  "license": "GPL-3.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-snowflake-server",
+    "isaacwasserman"
+  ],
+  "inputs": [
+    {
+      "id": "snowflake_user",
+      "type": "promptString",
+      "description": "Environment variable for snowflake user",
+      "password": false
+    },
+    {
+      "id": "snowflake_pass",
+      "type": "promptString",
+      "description": "Environment variable for snowflake pass",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp_snowflake_server"
+    ],
+    "env": {
+      "SNOWFLAKE_USER": "${input:snowflake_user}",
+      "SNOWFLAKE_PASS": "${input:snowflake_pass}"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "@nekzus/mcp-server",
+  "version": "0.0.0-development",
+  "description": "NPM Sentinel MCP - A powerful Model Context Protocol (MCP) server that revolutionizes NPM package analysis through AI. Built to integrate with Claude and Anthropic AI, it provides real-time intelligence on package security, dependencies, and performance.",
+  "homepage": "https://www.npmjs.com/@nekzus/mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nekzus/mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "npm",
+    "npm-package",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "type": "stdio",
+    "command": "npx",
+    "args": [
+      "-y",
+      "@nekzus/mcp-server@latest"
+    ]
+  }
+}

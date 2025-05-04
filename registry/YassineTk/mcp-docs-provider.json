@@ -1,0 +1,26 @@
+{
+  "name": "mcp-docs-provider",
+  "version": "1.0.2",
+  "description": "MCP server for providing documentation",
+  "homepage": "https://github.com/YassineTk/mcp-docs-provider",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YassineTk/mcp-docs-provider"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-docs-provider",
+    "yassinetk"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-docs-provider",
+      "/path/to/your/documentation.md"
+    ]
+  }
+}

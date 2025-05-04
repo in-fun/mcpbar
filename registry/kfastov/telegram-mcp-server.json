@@ -1,0 +1,45 @@
+{
+  "name": "telegram-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for a Telegram client built with the MTProto library and FastMCP framework",
+  "homepage": "https://github.com/kfastov/telegram-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kfastov/telegram-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai-agents",
+    "fastmcp",
+    "mcp",
+    "mcp-server",
+    "telegram",
+    "telegram-client",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "telegram_api",
+      "type": "promptString",
+      "description": "Environment variable for telegram api",
+      "password": false
+    },
+    {
+      "id": "your_api",
+      "type": "promptString",
+      "description": "Environment variable for your api",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "telegram-mcp-server"
+    ],
+    "env": {
+      "TELEGRAM_API": "${input:telegram_api}",
+      "YOUR_API": "${input:your_api}"
+    }
+  }
+}

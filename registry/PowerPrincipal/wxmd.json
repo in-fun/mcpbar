@@ -1,0 +1,26 @@
+{
+  "name": "md",
+  "version": "2.0.0",
+  "description": "✍ WeChat Markdown Editor | 一款高度简洁的微信 Markdown 编辑器：支持 Markdown 语法、色盘取色、多图上传、一键下载文档、自定义 CSS 样式、一键重置等特性",
+  "homepage": "https://md.doocs.org",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PowerPrincipal/wxmd"
+  },
+  "license": "WTFPL",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "wxmd",
+    "powerprincipal"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "md"
+    ],
+    "env": {}
+  }
+}

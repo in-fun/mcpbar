@@ -1,0 +1,59 @@
+{
+  "name": "jupyter_mcp_server",
+  "version": "1.0.0",
+  "description": "🤖 ↔️ 🪐 Extended Jupyter Model Context Protocol (MCP) Server.",
+  "homepage": "https://github.com/itisaevalex/jupyter-mcp-server-extended",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/itisaevalex/jupyter-mcp-server-extended"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "jupyter-mcp-server-extended",
+    "itisaevalex"
+  ],
+  "inputs": [
+    {
+      "id": "server_url",
+      "type": "promptString",
+      "description": "Environment variable for server url configuration",
+      "password": false
+    },
+    {
+      "id": "token",
+      "type": "promptString",
+      "description": "Environment variable for token authentication",
+      "password": true
+    },
+    {
+      "id": "notebook_path",
+      "type": "promptString",
+      "description": "Environment variable for notebook path configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "docker",
+    "args": [
+      "run",
+      "-i",
+      "--rm",
+      "-e",
+      "SERVER_URL",
+      "-e",
+      "TOKEN",
+      "-e",
+      "NOTEBOOK_PATH",
+      "-e",
+      "LOG_LEVEL=INFO",
+      "jupyter-mcp-server:latest"
+    ],
+    "env": {
+      "SERVER_URL": "http://host.docker.internal:8888",
+      "TOKEN": "YOUR_SECURE_TOKEN",
+      "NOTEBOOK_PATH": "notebook.ipynb"
+    }
+  }
+}

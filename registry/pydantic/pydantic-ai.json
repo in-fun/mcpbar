@@ -1,0 +1,27 @@
+{
+  "name": "pydantic-ai",
+  "version": "1.0.0",
+  "description": "Agent Framework / shim to use Pydantic with LLMs",
+  "homepage": "https://ai.pydantic.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pydantic/pydantic-ai"
+  },
+  "license": "MIT",
+  "keywords": [
+    "agent-framework",
+    "llms",
+    "pydantic",
+    "python",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "pydantic-ai"
+    ],
+    "env": {}
+  }
+}

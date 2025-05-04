@@ -1,0 +1,34 @@
+{
+  "name": "@felores/airtable-mcp-server",
+  "version": "0.3.0",
+  "description": "An Airtable Model Context Protocol Server",
+  "homepage": "https://github.com/felores/airtable-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/felores/airtable-mcp"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "airtable-mcp",
+    "felores"
+  ],
+  "inputs": [
+    {
+      "id": "airtable_api_key",
+      "type": "promptString",
+      "description": "Environment variable for airtable api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "@felores/airtable-mcp-server"
+    ],
+    "env": {
+      "AIRTABLE_API_KEY": "your_api_key_here"
+    }
+  }
+}

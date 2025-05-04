@@ -1,0 +1,31 @@
+{
+  "name": "@burtthecoder/mcp-shodan",
+  "version": "1.0.16",
+  "description": "A Model Context Protocol server for Shodan API queries.",
+  "homepage": "https://github.com/BurtTheCoder/mcp-shodan",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BurtTheCoder/mcp-shodan"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-shodan",
+    "burtthecoder"
+  ],
+  "inputs": [
+    {
+      "id": "shodan_api_key",
+      "type": "promptString",
+      "description": "Environment variable for shodan api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "mcp-shodan",
+    "env": {
+      "SHODAN_API_KEY": "your-shodan-api-key"
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "name": "mcp-ipfs",
+  "version": "0.1.9",
+  "description": "MCP Server for interacting with the IPFS Storacha Network",
+  "homepage": "https://github.com/alexbakers/mcp-ipfs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alexbakers/mcp-ipfs"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "decentralized",
+    "ipfs",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "model-context-protocol-servers",
+    "storage",
+    "storage-service"
+  ],
+  "inputs": [
+    {
+      "id": "w3_login_email",
+      "type": "promptString",
+      "description": "Environment variable for w3 login email configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-ipfs"
+    ],
+    "env": {
+      "W3_LOGIN_EMAIL": "your-email@example.com"
+    }
+  }
+}

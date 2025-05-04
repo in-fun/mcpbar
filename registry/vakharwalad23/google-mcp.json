@@ -1,0 +1,78 @@
+{
+  "name": "google-mcp",
+  "version": "0.0.3",
+  "description": "Google MCP tools for calendar, drive, gmail etc...",
+  "homepage": "https://github.com/vakharwalad23/google-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vakharwalad23/google-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "google",
+    "google-api",
+    "mcp",
+    "modelcontextprotocol",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "google_oauth_client_secret",
+      "type": "promptString",
+      "description": "Environment variable for google oauth client secret",
+      "password": true
+    },
+    {
+      "id": "your_client_secret",
+      "type": "promptString",
+      "description": "Environment variable for your client secret",
+      "password": true
+    },
+    {
+      "id": "google_oauth_token",
+      "type": "promptString",
+      "description": "Environment variable for google oauth token",
+      "password": true
+    },
+    {
+      "id": "path_to_store_token",
+      "type": "promptString",
+      "description": "Environment variable for path to store token",
+      "password": true
+    },
+    {
+      "id": "google_private_key",
+      "type": "promptString",
+      "description": "Environment variable for google private key",
+      "password": true
+    },
+    {
+      "id": "your_service_account_private_key",
+      "type": "promptString",
+      "description": "Environment variable for your service account private key",
+      "password": true
+    },
+    {
+      "id": "gmail_user",
+      "type": "promptString",
+      "description": "Environment variable for gmail user",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "google-mcp"
+    ],
+    "env": {
+      "GOOGLE_OAUTH_CLIENT_SECRET": "${input:google_oauth_client_secret}",
+      "YOUR_CLIENT_SECRET": "${input:your_client_secret}",
+      "GOOGLE_OAUTH_TOKEN": "${input:google_oauth_token}",
+      "PATH_TO_STORE_TOKEN": "${input:path_to_store_token}",
+      "GOOGLE_PRIVATE_KEY": "${input:google_private_key}",
+      "YOUR_SERVICE_ACCOUNT_PRIVATE_KEY": "${input:your_service_account_private_key}",
+      "GMAIL_USER": "${input:gmail_user}"
+    }
+  }
+}

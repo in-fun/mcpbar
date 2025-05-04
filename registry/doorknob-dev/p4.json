@@ -1,0 +1,26 @@
+{
+  "name": "p4",
+  "version": "1.0.0",
+  "description": "MCP server for p4",
+  "homepage": "https://github.com/doorknob-dev/p4",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/doorknob-dev/p4"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "p4",
+    "doorknob-dev"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "p4"
+    ],
+    "env": {}
+  }
+}

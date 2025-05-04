@@ -1,0 +1,24 @@
+{
+  "name": "phrases",
+  "version": "1.0.0",
+  "description": "Un servidor MCP (Model Context Protocol) elegante y eficiente para gestionar frases inspiradoras. Diseñado para integrarse perfectamente con Claude for Desktop y otros clientes MCP.",
+  "homepage": "https://dev.to/ronniemh/probando-model-context-protocol-mcp-con-claude-y-una-api-real-3a0d",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ronniemh/phrases-MCP-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "phrases-mcp-server",
+    "ronniemh"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "/RUTA_ABSOLUTA_A/phrases/build/index.js"
+    ]
+  }
+}

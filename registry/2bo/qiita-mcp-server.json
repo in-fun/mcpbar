@@ -1,0 +1,35 @@
+{
+  "name": "@2bo/qiita-mcp-server",
+  "version": "0.1.0",
+  "description": "MCP server for Qiita",
+  "homepage": "https://github.com/2bo/qiita-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/2bo/qiita-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "qiita-mcp-server",
+    "2bo"
+  ],
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "qiita-api-token",
+      "description": "Qiita API Token",
+      "password": true
+    }
+  ],
+  "server": {
+    "type": "stdio",
+    "command": "npx",
+    "args": [
+      "@2bo/qiita-mcp-server"
+    ],
+    "env": {
+      "QIITA_API_TOKEN": "${input:qiita-api-token}"
+    }
+  }
+}

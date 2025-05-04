@@ -1,0 +1,49 @@
+{
+  "name": "sourcesyncai-mcp",
+  "version": "1.0.11",
+  "description": "MCP server for sourcesyncai-mcp",
+  "homepage": "https://github.com/pbteja1998/sourcesyncai-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pbteja1998/sourcesyncai-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "sourcesyncai-mcp",
+    "pbteja1998"
+  ],
+  "inputs": [
+    {
+      "id": "sourcesync_api_key",
+      "type": "promptString",
+      "description": "Environment variable for sourcesync api key authentication",
+      "password": true
+    },
+    {
+      "id": "sourcesync_namespace_id",
+      "type": "promptString",
+      "description": "Environment variable for sourcesync namespace id configuration",
+      "password": false
+    },
+    {
+      "id": "sourcesync_tenant_id",
+      "type": "promptString",
+      "description": "Environment variable for sourcesync tenant id configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "soucesyncai-mcp"
+    ],
+    "env": {
+      "SOURCESYNC_API_KEY": "your_api_key",
+      "SOURCESYNC_NAMESPACE_ID": "your_namespace_id",
+      "SOURCESYNC_TENANT_ID": "your_tenant_id"
+    }
+  }
+}

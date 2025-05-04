@@ -1,0 +1,26 @@
+{
+  "name": "@agree-able/room-mcp",
+  "version": "1.0.3",
+  "description": "Use MCP and the room protocol",
+  "homepage": "https://github.com/agree-able/room-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/agree-able/room-mcp"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "room-mcp",
+    "agree-able"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@agree-able/room-mcp"
+    ],
+    "env": {}
+  }
+}

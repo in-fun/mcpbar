@@ -1,0 +1,41 @@
+{
+  "name": "supabase-mcp-server",
+  "version": "1.0.0",
+  "description": "Supabase MCP Server enabling Cursor & Windsurf to use any method from Management API and query your database ",
+  "homepage": "https://github.com/Deploya-labs/mcp-supabase",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Deploya-labs/mcp-supabase"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-supabase",
+    "deploya-labs"
+  ],
+  "inputs": [
+    {
+      "id": "supabase_db_pass",
+      "type": "promptString",
+      "description": "Environment variable for supabase db pass",
+      "password": false
+    },
+    {
+      "id": "supabase_access_token",
+      "type": "promptString",
+      "description": "Environment variable for supabase access token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "supabase-mcp-server"
+    ],
+    "env": {
+      "SUPABASE_DB_PASS": "${input:supabase_db_pass}",
+      "SUPABASE_ACCESS_TOKEN": "${input:supabase_access_token}"
+    }
+  }
+}

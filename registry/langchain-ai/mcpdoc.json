@@ -1,0 +1,34 @@
+{
+  "name": "mcpdoc",
+  "version": "1.0.0",
+  "description": "Expose llms-txt to IDEs for development",
+  "homepage": "https://github.com/langchain-ai/mcpdoc",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/langchain-ai/mcpdoc"
+  },
+  "license": "MIT",
+  "keywords": [
+    "agents",
+    "claude-code",
+    "cursor",
+    "ide",
+    "llms",
+    "llms-txt",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "--from",
+      "mcpdoc",
+      "mcpdoc",
+      "--urls",
+      "LangGraph:https://langchain-ai.github.io/langgraph/llms.txt LangChain:https://python.langchain.com/llms.txt",
+      "--transport",
+      "stdio"
+    ]
+  }
+}

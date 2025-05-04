@@ -1,0 +1,35 @@
+{
+  "name": "@triplewhale/mcp-server-triplewhale",
+  "version": "0.0.6",
+  "description": "MCP server for interacting with Triplewhale API",
+  "homepage": "https://github.com/Triple-Whale/mcp-server-triplewhale",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Triple-Whale/mcp-server-triplewhale"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-triplewhale",
+    "triple-whale"
+  ],
+  "inputs": [
+    {
+      "id": "triplewhale_api_key",
+      "type": "promptString",
+      "description": "Environment variable for triplewhale api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@triplewhale/mcp-server-triplewhale"
+    ],
+    "env": {
+      "TRIPLEWHALE_API_KEY": "${input:triplewhale_api_key}"
+    }
+  }
+}

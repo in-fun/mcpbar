@@ -1,0 +1,56 @@
+{
+  "name": "@sylweriusz/mcp-neo4j-memory-server",
+  "version": "1.1.5",
+  "description": "MCP Memory Server with Neo4j backend",
+  "homepage": "https://github.com/sylweriusz/mcp-neo4j-memory-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sylweriusz/mcp-neo4j-memory-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-neo4j-memory-server",
+    "sylweriusz"
+  ],
+  "inputs": [
+    {
+      "id": "neo4j_uri",
+      "type": "promptString",
+      "description": "Environment variable for neo4j uri configuration",
+      "password": false
+    },
+    {
+      "id": "neo4j_username",
+      "type": "promptString",
+      "description": "Environment variable for neo4j username configuration",
+      "password": false
+    },
+    {
+      "id": "neo4j_password",
+      "type": "promptString",
+      "description": "Environment variable for neo4j password authentication",
+      "password": false
+    },
+    {
+      "id": "neo4j_database",
+      "type": "promptString",
+      "description": "Environment variable for neo4j database configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@sylweriusz/mcp-neo4j-memory-server"
+    ],
+    "env": {
+      "NEO4J_URI": "bolt://localhost:7687",
+      "NEO4J_USERNAME": "neo4j",
+      "NEO4J_PASSWORD": "your-password",
+      "NEO4J_DATABASE": "neo4j"
+    }
+  }
+}

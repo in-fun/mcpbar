@@ -1,0 +1,24 @@
+{
+  "name": "mcp-searxng",
+  "version": "1.0.0",
+  "description": "MCP server for connecting agentic systems to search systems via searXNG",
+  "homepage": "https://github.com/SecretiveShell/MCP-searxng",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SecretiveShell/MCP-searxng"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-searxng",
+    "secretiveshell"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-searxng"
+    ]
+  }
+}

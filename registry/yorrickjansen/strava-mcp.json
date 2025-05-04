@@ -1,0 +1,37 @@
+{
+  "name": "strava-mcp",
+  "version": "1.0.0",
+  "description": "An MCP server to interact with Strava",
+  "homepage": "https://github.com/yorrickjansen/strava-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yorrickjansen/strava-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "anthropic",
+    "claude",
+    "mcp",
+    "mcp-server",
+    "python",
+    "strava",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "strava_client_secret",
+      "type": "promptString",
+      "description": "Environment variable for strava client secret",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "strava-mcp"
+    ],
+    "env": {
+      "STRAVA_CLIENT_SECRET": "${input:strava_client_secret}"
+    }
+  }
+}

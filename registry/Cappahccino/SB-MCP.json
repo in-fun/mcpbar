@@ -1,0 +1,70 @@
+{
+  "name": "supabase-mcp",
+  "version": "1.5.0",
+  "description": "MCP server for Supabase CRUD operations",
+  "homepage": "https://github.com/Cappahccino/SB-MCP",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Cappahccino/SB-MCP"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "sb-mcp",
+    "cappahccino"
+  ],
+  "inputs": [
+    {
+      "id": "supabase_url",
+      "type": "promptString",
+      "description": "Environment variable for supabase url",
+      "password": false
+    },
+    {
+      "id": "supabase_anon_key",
+      "type": "promptString",
+      "description": "Environment variable for supabase anon key",
+      "password": true
+    },
+    {
+      "id": "supabase_service_role_key",
+      "type": "promptString",
+      "description": "Environment variable for supabase service role key",
+      "password": true
+    },
+    {
+      "id": "mcp_server_port",
+      "type": "promptString",
+      "description": "Environment variable for mcp server port",
+      "password": false
+    },
+    {
+      "id": "mcp_server_host",
+      "type": "promptString",
+      "description": "Environment variable for mcp server host",
+      "password": false
+    },
+    {
+      "id": "mcp_api_key",
+      "type": "promptString",
+      "description": "Environment variable for mcp api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "supabase-mcp"
+    ],
+    "env": {
+      "SUPABASE_URL": "${input:supabase_url}",
+      "SUPABASE_ANON_KEY": "${input:supabase_anon_key}",
+      "SUPABASE_SERVICE_ROLE_KEY": "${input:supabase_service_role_key}",
+      "MCP_SERVER_PORT": "${input:mcp_server_port}",
+      "MCP_SERVER_HOST": "${input:mcp_server_host}",
+      "MCP_API_KEY": "${input:mcp_api_key}"
+    }
+  }
+}

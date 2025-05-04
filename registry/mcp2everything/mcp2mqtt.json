@@ -1,0 +1,24 @@
+{
+  "name": "mcp2mqtt",
+  "version": "1.0.0",
+  "description": "本项目通过将 MCP 协议转换为 MQTT 协议，我们能够利用强大的大型语言模型（LLMs），就能轻松操控您的智能家居、机器人或其他硬件设备。",
+  "homepage": "https://github.com/mcp2everything/mcp2mqtt",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mcp2everything/mcp2mqtt"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp2mqtt",
+    "mcp2everything"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp2mqtt"
+    ]
+  }
+}

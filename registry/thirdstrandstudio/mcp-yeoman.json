@@ -1,0 +1,24 @@
+{
+  "name": "@thirdstrandstudio/mcp-yeoman",
+  "version": "0.7.0",
+  "description": "MCP server for yeoman",
+  "homepage": "https://github.com/thirdstrandstudio/mcp-yeoman",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thirdstrandstudio/mcp-yeoman"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-yeoman",
+    "thirdstrandstudio"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "@thirdstrandstudio/mcp-yeoman"
+    ]
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "name": "mcp-neovim-server",
+  "version": "0.4.1",
+  "description": "An MCP server for neovim",
+  "homepage": "https://github.com/bigcodegen/mcp-neovim-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bigcodegen/mcp-neovim-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude",
+    "mcp",
+    "neovim",
+    "anthropic",
+    "modelcontextprotocol",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "allow_shell_commands",
+      "type": "promptString",
+      "description": "Environment variable for allow shell commands configuration",
+      "password": false
+    },
+    {
+      "id": "nvim_socket_path",
+      "type": "promptString",
+      "description": "Environment variable for nvim socket path configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-neovim-server"
+    ],
+    "env": {
+      "ALLOW_SHELL_COMMANDS": "true",
+      "NVIM_SOCKET_PATH": "/tmp/nvim"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@playwright/mcp",
+  "version": "0.0.20",
+  "description": "Playwright Tools for MCP",
+  "homepage": "https://www.npmjs.com/package/@playwright/mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/microsoft/playwright-mcp"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "playwright",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@playwright/mcp"
+    ],
+    "env": {}
+  }
+}

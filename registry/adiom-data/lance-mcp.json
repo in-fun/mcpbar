@@ -1,0 +1,25 @@
+{
+  "name": "lance-mcp",
+  "version": "0.2.2",
+  "description": "MCP server for interacting with LanceDB database",
+  "homepage": "https://github.com/adiom-data/lance-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/adiom-data/lance-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "lance-mcp",
+    "adiom-data"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "lance-mcp",
+      "PATH_TO_LOCAL_INDEX_DIR"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@executeautomation/playwright-mcp-server",
+  "version": "1.0.3",
+  "description": "Model Context Protocol servers for Playwright",
+  "homepage": "https://executeautomation.github.io/mcp-playwright/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/executeautomation/mcp-playwright"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-playwright",
+    "executeautomation"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@executeautomation/playwright-mcp-server"
+    ]
+  }
+}

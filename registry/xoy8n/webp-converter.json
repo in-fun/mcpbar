@@ -1,0 +1,25 @@
+{
+  "name": "@xoy8n/webp-converter",
+  "version": "1.0.12",
+  "description": "MCP server for webp-converter",
+  "homepage": "https://github.com/xoy8n/webp-converter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xoy8n/webp-converter"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "webp-converter",
+    "xoy8n"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@xoy8n/webp-converter@latest"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "uiflowchartcreator",
+  "version": "1.0.3",
+  "description": "MCP server for creating UI flowcharts",
+  "homepage": "https://github.com/umshere/uiflowchartcreator",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/umshere/uiflowchartcreator"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "uiflowchartcreator",
+    "umshere"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "path/to/uiflowchartcreator/build/index.js"
+    ],
+    "env": {}
+  }
+}

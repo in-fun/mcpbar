@@ -1,0 +1,26 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol (MCP) server that provides weather information and alerts using the National Weather Service (NWS) API",
+  "homepage": "https://github.com/akaramanapp/weather-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akaramanapp/weather-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "weather-mcp-server",
+    "akaramanapp"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "weather"
+    ],
+    "env": {}
+  }
+}

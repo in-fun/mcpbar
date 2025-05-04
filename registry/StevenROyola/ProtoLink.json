@@ -1,0 +1,29 @@
+{
+  "name": "mcpagentai",
+  "version": "1.0.0",
+  "description": "Simplifying MCP server interactions for seamless AI integration.",
+  "homepage": "https://www.protolinkai.xyz/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/StevenROyola/ProtoLink"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "protolink",
+    "stevenroyola"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "docker",
+    "args": [
+      "run",
+      "-i",
+      "-v",
+      "/path/to/local/eliza:/app/eliza",
+      "--rm",
+      "mcpagentai"
+    ]
+  }
+}

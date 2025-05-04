@@ -1,0 +1,23 @@
+{
+  "name": "@thedaviddias/mcp-llms-txt-explorer",
+  "version": "0.2.0",
+  "description": "A Model Context Protocol server for exploring websites with llms.txt files",
+  "homepage": "https://smithery.ai/server/@thedaviddias/mcp-llms-txt-explorer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/thedaviddias/mcp-llms-txt-explorer"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "cursor",
+    "llms-txt",
+    "llmstxt",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "/path/to/llms-txt-explorer/build/index.js"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "pymcpautogui",
+  "version": "1.0.0",
+  "description": "GUI manipulation MCP server",
+  "homepage": "https://github.com/kitfactory/PyMCPAutoGUI",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kitfactory/PyMCPAutoGUI"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "pymcpautogui",
+    "kitfactory"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "pymcpautogui"
+    ],
+    "env": {}
+  }
+}

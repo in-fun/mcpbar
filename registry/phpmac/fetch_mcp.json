@@ -1,0 +1,26 @@
+{
+  "name": "fetch",
+  "version": "1.0.0",
+  "description": "mcp server for fetch",
+  "homepage": "https://github.com/phpmac/fetch_mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phpmac/fetch_mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "fetch_mcp",
+    "phpmac"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "fetch"
+    ],
+    "env": {}
+  }
+}

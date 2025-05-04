@@ -1,0 +1,42 @@
+{
+  "name": "shouting-mcp-langfuse",
+  "version": "1.0.0",
+  "description": "MCP server for interacting with Langfuse",
+  "homepage": "https://github.com/z9905080/mcp-langfuse",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/z9905080/mcp-langfuse"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-langfuse",
+    "z9905080"
+  ],
+  "inputs": [
+    {
+      "id": "langfuse_public_key",
+      "type": "promptString",
+      "description": "Environment variable for langfuse public key",
+      "password": true
+    },
+    {
+      "id": "langfuse_private_key",
+      "type": "promptString",
+      "description": "Environment variable for langfuse private key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "shouting-mcp-langfuse"
+    ],
+    "env": {
+      "LANGFUSE_PUBLIC_KEY": "${input:langfuse_public_key}",
+      "LANGFUSE_PRIVATE_KEY": "${input:langfuse_private_key}"
+    }
+  }
+}

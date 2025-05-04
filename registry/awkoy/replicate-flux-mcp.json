@@ -1,0 +1,28 @@
+{
+  "name": "replicate-flux-mcp",
+  "version": "0.1.2",
+  "description": "MCP for Replicate Flux Model",
+  "homepage": "https://github.com/awkoy/replicate-flux-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/awkoy/replicate-flux-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai-image-generation",
+    "svg-generator",
+    "image-mcp",
+    "replicate-mcp",
+    "svg-mcp",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "env REPLICATE_API_TOKEN=YOUR_TOKEN npx",
+    "args": [
+      "-y",
+      "replicate-flux-mcp"
+    ]
+  }
+}

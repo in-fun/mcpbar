@@ -1,0 +1,56 @@
+{
+  "name": "@sanderkooger/mcp-server-ragdocs",
+  "version": "1.2.6",
+  "description": "An MCP server for semantic documentation search and retrieval using vector databases to augment LLM capabilities.",
+  "homepage": "https://github.com/sanderkooger/mcp-server-ragdocs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sanderkooger/mcp-server-ragdocs"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-ragdocs",
+    "sanderkooger"
+  ],
+  "inputs": [
+    {
+      "id": "embeddings_provider",
+      "type": "promptString",
+      "description": "Environment variable for embeddings provider configuration",
+      "password": false
+    },
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key authentication",
+      "password": true
+    },
+    {
+      "id": "qdrant_url",
+      "type": "promptString",
+      "description": "Environment variable for qdrant url configuration",
+      "password": false
+    },
+    {
+      "id": "qdrant_api_key",
+      "type": "promptString",
+      "description": "Environment variable for qdrant api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@sanderkooger/mcp-server-ragdocs"
+    ],
+    "env": {
+      "EMBEDDINGS_PROVIDER": "openai",
+      "OPENAI_API_KEY": "your-openai-key-here",
+      "QDRANT_URL": "your-qdrant-url",
+      "QDRANT_API_KEY": "your-qdrant-key"
+    }
+  }
+}

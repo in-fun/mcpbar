@@ -1,0 +1,35 @@
+{
+  "name": "@pluggedin/pluggedin-mcp-proxy",
+  "version": "0.5.9",
+  "description": "MCP Server PluggedinMCP manages all your other MCPs in one MCP.",
+  "homepage": "https://github.com/VeriTeknik/pluggedin-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VeriTeknik/pluggedin-mcp"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "pluggedin-mcp",
+    "veriteknik"
+  ],
+  "inputs": [
+    {
+      "id": "pluggedin_api_key",
+      "type": "promptString",
+      "description": "Environment variable for pluggedin api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@pluggedin/mcp-proxy@latest"
+    ],
+    "env": {
+      "PLUGGEDIN_API_KEY": "YOUR_API_KEY"
+    }
+  }
+}

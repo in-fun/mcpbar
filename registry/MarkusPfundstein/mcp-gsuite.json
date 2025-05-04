@@ -1,0 +1,27 @@
+{
+  "name": "mcp-gsuite",
+  "version": "1.0.0",
+  "description": "MCP Server to interact with Google Gsuite prodcuts",
+  "homepage": "https://github.com/MarkusPfundstein/mcp-gsuite",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MarkusPfundstein/mcp-gsuite"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-gsuite",
+    "markuspfundstein"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "<dir_to>/mcp-gsuite",
+      "run",
+      "mcp-gsuite"
+    ]
+  }
+}

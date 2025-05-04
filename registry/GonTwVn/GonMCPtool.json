@@ -1,0 +1,26 @@
+{
+  "name": "simple-mcp-server",
+  "version": "1.0.0",
+  "description": "簡單的 Anthropic Message Control Protocol (MCP) 服務器",
+  "homepage": "https://github.com/GonTwVn/GonMCPtool",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GonTwVn/GonMCPtool"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "gonmcptool",
+    "gontwvn"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "simple-mcp-server"
+    ],
+    "env": {}
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "mcp-server-stability-ai",
+  "version": "0.3.0",
+  "description": "MCP [Model Context Protocol](https://modelcontextprotocol.io/) Server integrating MCP Clients with [Stability AI](https://stability.ai/) image manipulation functionalities: generate, edit, upscale, and more.",
+  "homepage": "https://github.com/tadasant/mcp-server-stability-ai",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tadasant/mcp-server-stability-ai"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-stability-ai",
+    "tadasant"
+  ],
+  "inputs": [
+    {
+      "id": "stability_ai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for stability ai api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-server-stability-ai"
+    ],
+    "env": {
+      "STABILITY_AI_API_KEY": "sk-1234567890"
+    }
+  }
+}

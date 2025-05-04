@@ -1,0 +1,26 @@
+{
+  "name": "@chengfeng2025/findmcp",
+  "version": "1.0.6",
+  "description": "MCP服务，提供Smithery.ai网址查询功能",
+  "homepage": "https://github.com/Ceeon/findmcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ceeon/findmcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "findmcp",
+    "ceeon"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@chengfeng2025/findmcp"
+    ],
+    "env": {}
+  }
+}

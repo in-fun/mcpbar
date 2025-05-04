@@ -1,0 +1,36 @@
+{
+  "name": "chronos-mcp",
+  "version": "1.0.4",
+  "description": "Chronos – A Stellar MCP server",
+  "homepage": "https://github.com/grandmastr/chronos-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/grandmastr/chronos-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "chronos-mcp",
+    "grandmastr"
+  ],
+  "inputs": [
+    {
+      "id": "stellar_network",
+      "type": "promptString",
+      "description": "Environment variable for stellar network configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "chronos-mcp@latest"
+    ],
+    "env": {
+      "STELLAR_NETWORK": "mainnet"
+    },
+    "disabled": false,
+    "autoApprove": []
+  }
+}

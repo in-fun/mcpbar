@@ -1,0 +1,39 @@
+{
+  "name": "@modelcontextprotocol/server-brave-search",
+  "version": "0.6.2",
+  "description": "MCP server for Brave Search API integration",
+  "homepage": "https://github.com/w-jeon/mcp-brave-search",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/w-jeon/mcp-brave-search"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-brave-search",
+    "w-jeon"
+  ],
+  "inputs": [
+    {
+      "id": "brave_api_key",
+      "type": "promptString",
+      "description": "Environment variable for brave api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "docker",
+    "args": [
+      "run",
+      "-i",
+      "--rm",
+      "-e",
+      "BRAVE_API_KEY",
+      "mcp/brave-search"
+    ],
+    "env": {
+      "BRAVE_API_KEY": "YOUR_API_KEY_HERE"
+    }
+  }
+}

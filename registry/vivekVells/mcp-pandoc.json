@@ -1,0 +1,49 @@
+{
+  "name": "mcp-pandoc",
+  "version": "1.0.0",
+  "description": "MCP server for document format conversion using pandoc.",
+  "homepage": "https://pypi.org/project/mcp-pandoc",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vivekVells/mcp-pandoc"
+  },
+  "license": "MIT",
+  "keywords": [
+    "pandoc",
+    "pandoc-markdown",
+    "pandoc-template",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "uv_publish_token",
+      "type": "promptString",
+      "description": "Environment variable for uv publish token",
+      "password": true
+    },
+    {
+      "id": "uv_publish_user",
+      "type": "promptString",
+      "description": "Environment variable for uv publish user",
+      "password": false
+    },
+    {
+      "id": "uv_publish_pass",
+      "type": "promptString",
+      "description": "Environment variable for uv publish pass",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-pandoc"
+    ],
+    "env": {
+      "UV_PUBLISH_TOKEN": "${input:uv_publish_token}",
+      "UV_PUBLISH_USER": "${input:uv_publish_user}",
+      "UV_PUBLISH_PASS": "${input:uv_publish_pass}"
+    }
+  }
+}

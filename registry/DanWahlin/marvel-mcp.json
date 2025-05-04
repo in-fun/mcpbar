@@ -1,0 +1,63 @@
+{
+  "name": "@codewithdan/marvel-mcp",
+  "version": "1.7.0",
+  "description": "Marvel APIs MCP Server demo",
+  "homepage": "https://github.com/DanWahlin/marvel-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DanWahlin/marvel-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "marvel-mcp",
+    "danwahlin"
+  ],
+  "inputs": [
+    {
+      "id": "marvel_public_key",
+      "type": "promptString",
+      "description": "Environment variable for marvel public key",
+      "password": true
+    },
+    {
+      "id": "marvel_private_key",
+      "type": "promptString",
+      "description": "Environment variable for marvel private key",
+      "password": true
+    },
+    {
+      "id": "marvel_api",
+      "type": "promptString",
+      "description": "Environment variable for marvel api",
+      "password": false
+    },
+    {
+      "id": "your_public_key",
+      "type": "promptString",
+      "description": "Environment variable for your public key",
+      "password": true
+    },
+    {
+      "id": "your_private_key",
+      "type": "promptString",
+      "description": "Environment variable for your private key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@codewithdan/marvel-mcp"
+    ],
+    "env": {
+      "MARVEL_PUBLIC_KEY": "${input:marvel_public_key}",
+      "MARVEL_PRIVATE_KEY": "${input:marvel_private_key}",
+      "MARVEL_API": "${input:marvel_api}",
+      "YOUR_PUBLIC_KEY": "${input:your_public_key}",
+      "YOUR_PRIVATE_KEY": "${input:your_private_key}"
+    }
+  }
+}

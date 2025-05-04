@@ -1,0 +1,27 @@
+{
+  "name": "@nloui/paperless-mcp",
+  "version": "1.0.0",
+  "description": "Model Context Protocol (MCP) server for interacting with Paperless-NGX document management system. Enables AI assistants to manage documents, tags, correspondents, and document types through the Paperless-NGX API.",
+  "homepage": "https://www.npmjs.com/package/@nloui/paperless-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nloui/paperless-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "claude",
+    "document-management",
+    "mcp",
+    "model-context-protocol",
+    "paperless-ngx"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "paperless-mcp",
+      "http://your-paperless-instance:8000",
+      "your-api-token"
+    ]
+  }
+}

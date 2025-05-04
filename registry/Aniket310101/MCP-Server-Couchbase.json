@@ -1,0 +1,56 @@
+{
+  "name": "@couchbasedatabase/couchbase-mcp",
+  "version": "1.2.4",
+  "description": "A Couchbase MCP server for LLMs",
+  "homepage": "https://github.com/Aniket310101/MCP-Server-Couchbase",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Aniket310101/MCP-Server-Couchbase"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-couchbase",
+    "aniket310101"
+  ],
+  "inputs": [
+    {
+      "id": "couchbase_url",
+      "type": "promptString",
+      "description": "Environment variable for couchbase url configuration",
+      "password": false
+    },
+    {
+      "id": "couchbase_bucket",
+      "type": "promptString",
+      "description": "Environment variable for couchbase bucket configuration",
+      "password": false
+    },
+    {
+      "id": "couchbase_username",
+      "type": "promptString",
+      "description": "Environment variable for couchbase username configuration",
+      "password": false
+    },
+    {
+      "id": "couchbase_password",
+      "type": "promptString",
+      "description": "Environment variable for couchbase password authentication",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@couchbasedatabase/couchbase-mcp"
+    ],
+    "env": {
+      "COUCHBASE_URL": "<COUCHBASE CONNECTION STRING>",
+      "COUCHBASE_BUCKET": "<BUCKET NAME>",
+      "COUCHBASE_USERNAME": "<COUCHBASE USERNAME>",
+      "COUCHBASE_PASSWORD": "<COUCHBASE PASSWORD>"
+    }
+  }
+}

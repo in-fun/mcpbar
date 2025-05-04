@@ -1,0 +1,27 @@
+{
+  "name": "webtools",
+  "version": "1.0.0",
+  "description": "Web Search tools are a series of tools that allow Claude to acces de internet via MCP Server",
+  "homepage": "https://github.com/m4s1t4/webSearch-Tools",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/m4s1t4/webSearch-Tools"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "websearch-tools",
+    "m4s1t4"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "D:\\ABSOLUTE\\PATH\\TO\\WebSearch",
+      "run",
+      "main.py"
+    ]
+  }
+}

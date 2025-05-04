@@ -1,0 +1,30 @@
+{
+  "name": "@rashidazarang/airtable-mcp",
+  "version": "1.2.2",
+  "description": "Airtable MCP for Claude Desktop - Connect directly to Airtable using natural language",
+  "homepage": "https://github.com/rashidazarang/airtable-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rashidazarang/airtable-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "airtable-mcp",
+    "rashidazarang"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "@smithery/cli",
+      "run",
+      "@rashidazarang/airtable-mcp",
+      "--token",
+      "YOUR_AIRTABLE_TOKEN",
+      "--base",
+      "YOUR_BASE_ID"
+    ]
+  }
+}

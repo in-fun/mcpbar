@@ -1,0 +1,24 @@
+{
+  "name": "mcp2serial",
+  "version": "1.0.0",
+  "description": " A open-source library enabling AI models to control hardware devices via serial communication using the MCP protocol.  Initial support for Raspberry Pi Pico.",
+  "homepage": "https://github.com/mcp2everything/mcp2serial",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mcp2everything/mcp2serial"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp2serial",
+    "mcp2everything"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp2serial"
+    ]
+  }
+}

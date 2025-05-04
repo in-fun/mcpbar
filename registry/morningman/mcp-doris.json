@@ -1,0 +1,56 @@
+{
+  "name": "mcp-doris",
+  "version": "1.0.0",
+  "description": "An MCP server for Apache Doris & VeloDB",
+  "homepage": "https://doris.apache.org/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/morningman/mcp-doris"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "data-science",
+    "doris",
+    "mcp-server",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "doris_host",
+      "type": "promptString",
+      "description": "Environment variable for doris host",
+      "password": false
+    },
+    {
+      "id": "doris_port",
+      "type": "promptString",
+      "description": "Environment variable for doris port",
+      "password": false
+    },
+    {
+      "id": "doris_user",
+      "type": "promptString",
+      "description": "Environment variable for doris user",
+      "password": false
+    },
+    {
+      "id": "doris_pass",
+      "type": "promptString",
+      "description": "Environment variable for doris pass",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-doris"
+    ],
+    "env": {
+      "DORIS_HOST": "${input:doris_host}",
+      "DORIS_PORT": "${input:doris_port}",
+      "DORIS_USER": "${input:doris_user}",
+      "DORIS_PASS": "${input:doris_pass}"
+    }
+  }
+}

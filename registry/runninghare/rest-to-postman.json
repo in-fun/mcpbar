@@ -1,0 +1,49 @@
+{
+  "name": "rest-to-postman",
+  "version": "1.0.2",
+  "description": "Convert REST API endpoints to Postman collections",
+  "homepage": "https://github.com/runninghare/rest-to-postman",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/runninghare/rest-to-postman"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "rest-to-postman",
+    "runninghare"
+  ],
+  "inputs": [
+    {
+      "id": "postman_api_key",
+      "type": "promptString",
+      "description": "Environment variable for postman api key",
+      "password": true
+    },
+    {
+      "id": "api_url",
+      "type": "promptString",
+      "description": "Environment variable for api url",
+      "password": false
+    },
+    {
+      "id": "api_token",
+      "type": "promptString",
+      "description": "Environment variable for api token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "rest-to-postman"
+    ],
+    "env": {
+      "POSTMAN_API_KEY": "${input:postman_api_key}",
+      "API_URL": "${input:api_url}",
+      "API_TOKEN": "${input:api_token}"
+    }
+  }
+}

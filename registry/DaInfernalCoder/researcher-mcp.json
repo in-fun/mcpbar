@@ -1,0 +1,36 @@
+{
+  "name": "perplexity-mcp",
+  "version": "0.2.0",
+  "description": "MCP server providing intelligent search, reasoning, and research capabilities powered by Perplexity's specialized AI models",
+  "homepage": "https://www.youtube.com/watch?v=hNdWjp6uDmE",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DaInfernalCoder/researcher-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "researcher-mcp",
+    "dainfernalcoder"
+  ],
+  "inputs": [
+    {
+      "id": "perplexity_api_key",
+      "type": "promptString",
+      "description": "Environment variable for perplexity api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/perplexity-server/build/index.js"
+    ],
+    "env": {
+      "PERPLEXITY_API_KEY": "YOUR_API_KEY_HERE"
+    },
+    "disabled": false,
+    "autoApprove": []
+  }
+}

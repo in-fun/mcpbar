@@ -1,0 +1,37 @@
+{
+  "name": "mcp-developer-name",
+  "version": "1.0.1",
+  "description": "MCP Developer name",
+  "homepage": "https://github.com/SeriaWei/MCP-Developer-Name",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SeriaWei/MCP-Developer-Name"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-developer-name",
+    "seriawei"
+  ],
+  "inputs": [
+    {
+      "id": "developer_name",
+      "type": "promptString",
+      "description": "Environment variable for developer name configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-developer-name"
+    ],
+    "env": {
+      "DEVELOPER_NAME": "Wayne Wei"
+    },
+    "disabled": false,
+    "autoApprove": []
+  }
+}

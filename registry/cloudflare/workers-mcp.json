@@ -1,0 +1,28 @@
+{
+  "name": "workers-mcp",
+  "version": "0.0.13",
+  "description": "MCP transport to your own Cloudflare Worker",
+  "homepage": "https://www.npmjs.com/package/workers-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cloudflare/workers-mcp"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "workers-mcp",
+    "cloudflare"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "/path/to/workers-mcp",
+    "args": [
+      "run",
+      "your-mcp-server-name",
+      "https://your-server-url.workers.dev",
+      "/path/to/your/project"
+    ],
+    "env": {}
+  }
+}

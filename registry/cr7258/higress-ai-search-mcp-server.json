@@ -1,0 +1,34 @@
+{
+  "name": "higress-ai-search-mcp-server",
+  "version": "1.0.0",
+  "description": "An MCP server enhances AI responses with real-time search results via Higress ai-search.",
+  "homepage": "https://github.com/cr7258/higress-ai-search-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cr7258/higress-ai-search-mcp-server"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "higress-ai-search-mcp-server",
+    "cr7258"
+  ],
+  "inputs": [
+    {
+      "id": "higress_url",
+      "type": "promptString",
+      "description": "Environment variable for higress url",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "higress-ai-search-mcp-server"
+    ],
+    "env": {
+      "HIGRESS_URL": "${input:higress_url}"
+    }
+  }
+}

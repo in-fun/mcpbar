@@ -1,0 +1,25 @@
+{
+  "name": "stela-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for local system operations",
+  "homepage": "https://github.com/Sachin-Bhat/stela-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sachin-Bhat/stela-mcp"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "stela-mcp",
+    "sachin-bhat"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "stela-mcp"
+    ],
+    "env": {}
+  }
+}

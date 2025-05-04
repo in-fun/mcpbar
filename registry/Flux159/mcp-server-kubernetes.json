@@ -1,0 +1,25 @@
+{
+  "name": "mcp-server-kubernetes",
+  "version": "1.6.1",
+  "description": "MCP server for interacting with Kubernetes clusters via kubectl",
+  "homepage": "https://www.npmjs.com/package/mcp-server-kubernetes",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Flux159/mcp-server-kubernetes"
+  },
+  "license": "MIT",
+  "keywords": [
+    "infrastructure",
+    "kubernetes",
+    "mcp",
+    "server",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "mcp-server-kubernetes"
+    ]
+  }
+}

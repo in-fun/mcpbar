@@ -1,0 +1,26 @@
+{
+  "name": "dicom-mcp",
+  "version": "1.0.0",
+  "description": "Model Context Protocol (MCP) for interacting with dicom servers (PACS etc.)",
+  "homepage": "https://github.com/ChristianHinge/dicom-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChristianHinge/dicom-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "dicom-mcp",
+    "christianhinge"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uv",
+    "args": [
+      "tool",
+      "dicom-mcp",
+      "/path/to/your_config.yaml"
+    ]
+  }
+}

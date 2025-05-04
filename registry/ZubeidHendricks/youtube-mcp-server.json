@@ -1,0 +1,35 @@
+{
+  "name": "zubeid-youtube-mcp-server",
+  "version": "1.0.0",
+  "description": "YouTube MCP Server Implementation",
+  "homepage": "https://github.com/ZubeidHendricks/youtube-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ZubeidHendricks/youtube-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "youtube-mcp-server",
+    "zubeidhendricks"
+  ],
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "apiKey",
+      "description": "YouTube API Key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "zubeid-youtube-mcp-server"
+    ],
+    "env": {
+      "YOUTUBE_API_KEY": "${input:apiKey}"
+    }
+  }
+}

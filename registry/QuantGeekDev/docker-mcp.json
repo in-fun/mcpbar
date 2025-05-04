@@ -1,0 +1,24 @@
+{
+  "name": "docker-mcp",
+  "version": "1.0.0",
+  "description": "A docker MCP Server (modelcontextprotocol)",
+  "homepage": "https://github.com/QuantGeekDev/docker-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/QuantGeekDev/docker-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "docker-mcp",
+    "quantgeekdev"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "docker-mcp"
+    ]
+  }
+}

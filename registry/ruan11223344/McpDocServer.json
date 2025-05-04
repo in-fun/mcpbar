@@ -1,0 +1,34 @@
+{
+  "name": "doc-crawler",
+  "version": "1.0.0",
+  "description": "A MCP-based documentation crawler service",
+  "homepage": "https://github.com/ruan11223344/McpDocServer",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ruan11223344/McpDocServer"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcpdocserver",
+    "ruan11223344"
+  ],
+  "inputs": [
+    {
+      "id": "node_env",
+      "type": "promptString",
+      "description": "Environment variable for node env configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "/绝对路径/server.js"
+    ],
+    "env": {
+      "NODE_ENV": "development"
+    }
+  }
+}

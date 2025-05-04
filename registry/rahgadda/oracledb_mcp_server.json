@@ -1,0 +1,63 @@
+{
+  "name": "oracledb-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server to connect to Oracle Database",
+  "homepage": "https://github.com/rahgadda/oracledb_mcp_server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rahgadda/oracledb_mcp_server"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "oracledb_mcp_server",
+    "rahgadda"
+  ],
+  "inputs": [
+    {
+      "id": "debug",
+      "type": "promptString",
+      "description": "Environment variable for debug configuration",
+      "password": false
+    },
+    {
+      "id": "comment_db_connection_string",
+      "type": "promptString",
+      "description": "Environment variable for comment db connection string configuration",
+      "password": false
+    },
+    {
+      "id": "db_connection_string",
+      "type": "promptString",
+      "description": "Environment variable for db connection string configuration",
+      "password": false
+    },
+    {
+      "id": "table_white_list",
+      "type": "promptString",
+      "description": "Environment variable for table white list configuration",
+      "password": false
+    },
+    {
+      "id": "column_white_list",
+      "type": "promptString",
+      "description": "Environment variable for column white list configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uv",
+    "args": [
+      "run",
+      "oracledb_mcp_server"
+    ],
+    "env": {
+      "DEBUG": "True",
+      "COMMENT_DB_CONNECTION_STRING": "oracle+oracledb://USERNAME:PASSWORD@IP:PORT/?service_name=SERVICENAME",
+      "DB_CONNECTION_STRING": "oracle+oracledb://USERNAME:PASSWORD@IP:PORT/?service_name=SERVICENAME",
+      "TABLE_WHITE_LIST": "ACCOUNTS,CUS_ACC_RELATIONS,CUSTOMERS",
+      "COLUMN_WHITE_LIST": "ACCOUNTS.ACC_AAD_ID,CUS_ACC_RELATIONS.CAR_CUS_ID,CUS_ACC_RELATIONS.CAR_AAD_ID,CUSTOMERS.CUS_ID"
+    }
+  }
+}

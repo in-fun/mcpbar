@@ -1,0 +1,63 @@
+{
+  "name": "@benborla29/mcp-server-mysql",
+  "version": "1.0.7",
+  "description": "MCP server for interacting with MySQL databases based on Node",
+  "homepage": "https://github.com/hkk101/mcp-server-mysql",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hkk101/mcp-server-mysql"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-mysql",
+    "hkk101"
+  ],
+  "inputs": [
+    {
+      "id": "mysql_host",
+      "type": "promptString",
+      "description": "Environment variable for mysql host",
+      "password": false
+    },
+    {
+      "id": "mysql_port",
+      "type": "promptString",
+      "description": "Environment variable for mysql port",
+      "password": false
+    },
+    {
+      "id": "mysql_user",
+      "type": "promptString",
+      "description": "Environment variable for mysql user",
+      "password": false
+    },
+    {
+      "id": "mysql_pass",
+      "type": "promptString",
+      "description": "Environment variable for mysql pass",
+      "password": false
+    },
+    {
+      "id": "mysql_db",
+      "type": "promptString",
+      "description": "Environment variable for mysql db",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@benborla29/mcp-server-mysql"
+    ],
+    "env": {
+      "MYSQL_HOST": "${input:mysql_host}",
+      "MYSQL_PORT": "${input:mysql_port}",
+      "MYSQL_USER": "${input:mysql_user}",
+      "MYSQL_PASS": "${input:mysql_pass}",
+      "MYSQL_DB": "${input:mysql_db}"
+    }
+  }
+}

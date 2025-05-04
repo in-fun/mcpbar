@@ -1,0 +1,23 @@
+{
+  "name": "@melaodoidao/datagov-mcp-server",
+  "version": "0.1.0",
+  "description": "An MCP server for accessing data from Data.gov, providing tools and resources for interacting with government datasets.",
+  "homepage": "https://github.com/melaodoidao/datagov-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/melaodoidao/datagov-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "datagov-mcp-server",
+    "melaodoidao"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "datagov-mcp-server",
+    "args": [],
+    "env": {}
+  }
+}

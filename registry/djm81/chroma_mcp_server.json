@@ -1,0 +1,60 @@
+{
+  "name": "chroma-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP Server for ChromaDB integration into Cursor with MCP compatible AI models",
+  "homepage": "https://github.com/djm81/chroma_mcp_server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/djm81/chroma_mcp_server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "chroma_mcp_server",
+    "djm81"
+  ],
+  "inputs": [
+    {
+      "id": "chroma_client_type",
+      "type": "promptString",
+      "description": "Environment variable for chroma client type configuration",
+      "password": false
+    },
+    {
+      "id": "chroma_data_dir",
+      "type": "promptString",
+      "description": "Environment variable for chroma data dir configuration",
+      "password": false
+    },
+    {
+      "id": "chroma_log_dir",
+      "type": "promptString",
+      "description": "Environment variable for chroma log dir configuration",
+      "password": false
+    },
+    {
+      "id": "log_level",
+      "type": "promptString",
+      "description": "Environment variable for log level configuration",
+      "password": false
+    },
+    {
+      "id": "mcp_log_level",
+      "type": "promptString",
+      "description": "Environment variable for mcp log level configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "/path/to/project/scripts/run_chroma_mcp_server_dev.sh",
+    "args": [],
+    "env": {
+      "CHROMA_CLIENT_TYPE": "persistent",
+      "CHROMA_DATA_DIR": "/path/to/your/dev_data",
+      "CHROMA_LOG_DIR": "/path/to/your/dev_logs",
+      "LOG_LEVEL": "DEBUG",
+      "MCP_LOG_LEVEL": "DEBUG"
+    }
+  }
+}

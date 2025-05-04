@@ -1,0 +1,25 @@
+{
+  "name": "simple-mcp",
+  "version": "0.0.2",
+  "description": "A toolkit for building MCP servers",
+  "homepage": "https://www.npmjs.com/package/simple-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ribeirogab/simple-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "simple-mcp"
+    ],
+    "env": {}
+  }
+}

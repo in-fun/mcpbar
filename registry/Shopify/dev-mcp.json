@@ -1,0 +1,25 @@
+{
+  "name": "@shopify/dev-mcp",
+  "version": "1.0.2",
+  "description": "A command line tool for setting up Shopify Dev MCP server",
+  "homepage": "https://github.com/Shopify/dev-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Shopify/dev-mcp"
+  },
+  "license": "ISC",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "dev-mcp",
+    "shopify"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@shopify/dev-mcp@latest"
+    ]
+  }
+}

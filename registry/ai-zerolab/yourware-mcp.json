@@ -1,0 +1,26 @@
+{
+  "name": "yourware-mcp",
+  "version": "1.0.0",
+  "description": "mcp server for yourware",
+  "homepage": "https://github.com/ai-zerolab/yourware-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ai-zerolab/yourware-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "yourware-mcp",
+    "ai-zerolab"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "yourware-mcp@latest",
+      "stdio"
+    ],
+    "env": {}
+  }
+}

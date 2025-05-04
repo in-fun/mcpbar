@@ -1,0 +1,26 @@
+{
+  "name": "mcp-morpho-server",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol (MCP) server for querying the Morpho API",
+  "homepage": "https://github.com/crazyrabbitLTC/mcp-morpho-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crazyrabbitLTC/mcp-morpho-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-morpho-server",
+    "crazyrabbitltc"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-morpho-server"
+    ],
+    "env": {}
+  }
+}

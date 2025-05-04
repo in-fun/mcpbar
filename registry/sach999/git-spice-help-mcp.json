@@ -1,0 +1,26 @@
+{
+  "name": "test-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for git-spice-help-mcp",
+  "homepage": "https://github.com/sach999/git-spice-help-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sach999/git-spice-help-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "git-spice-help-mcp",
+    "sach999"
+  ],
+  "inputs": [],
+  "server": {
+    "name": "Git Spice MCP Server",
+    "command": "node",
+    "args": [
+      "dist/index.js"
+    ],
+    "cwd": "/path/to/your/project"
+  }
+}

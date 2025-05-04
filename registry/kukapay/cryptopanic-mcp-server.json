@@ -1,0 +1,34 @@
+{
+  "name": "cryptopanic-mcp-server",
+  "version": "1.0.0",
+  "description": "Provide latest cryptocurrency news to AI agents.",
+  "homepage": "https://github.com/kukapay/cryptopanic-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kukapay/cryptopanic-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "cryptopanic-mcp-server",
+    "kukapay"
+  ],
+  "inputs": [
+    {
+      "id": "cryptopanic_api_key",
+      "type": "promptString",
+      "description": "Environment variable for cryptopanic api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "cryptopanic-mcp-server"
+    ],
+    "env": {
+      "CRYPTOPANIC_API_KEY": "${input:cryptopanic_api_key}"
+    }
+  }
+}

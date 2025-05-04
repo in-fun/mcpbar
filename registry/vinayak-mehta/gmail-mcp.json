@@ -1,0 +1,43 @@
+{
+  "name": "gmail-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for gmail-mcp",
+  "homepage": "https://github.com/vinayak-mehta/gmail-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vinayak-mehta/gmail-mcp"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "gmail-mcp",
+    "vinayak-mehta"
+  ],
+  "inputs": [
+    {
+      "id": "gmail_creds_path",
+      "type": "promptString",
+      "description": "Environment variable for gmail creds path configuration",
+      "password": false
+    },
+    {
+      "id": "gmail_token_path",
+      "type": "promptString",
+      "description": "Environment variable for gmail token path authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "args": [
+      "--from",
+      "git+https://github.com/vinayak-mehta/gmail-mcp",
+      "gmail-mcp"
+    ],
+    "command": "/Users/username/.local/bin/uvx",
+    "env": {
+      "GMAIL_CREDS_PATH": "/Users/username/path/to/gmail-mcp/credentials.json",
+      "GMAIL_TOKEN_PATH": "/Users/username/path/to/gmail-mcp/token.json"
+    }
+  }
+}

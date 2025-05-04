@@ -1,0 +1,52 @@
+{
+  "name": "mcp-redmine",
+  "version": "1.0.0",
+  "description": "A redmine MCP server covering close to 100% of redmines API",
+  "homepage": "https://github.com/runekaagaard/mcp-redmine",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/runekaagaard/mcp-redmine"
+  },
+  "license": "MPL-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-redmine",
+    "runekaagaard"
+  ],
+  "inputs": [
+    {
+      "id": "redmine_url",
+      "type": "promptString",
+      "description": "Environment variable for redmine url configuration",
+      "password": false
+    },
+    {
+      "id": "redmine_api_key",
+      "type": "promptString",
+      "description": "Environment variable for redmine api key authentication",
+      "password": true
+    },
+    {
+      "id": "redmine_request_instructions",
+      "type": "promptString",
+      "description": "Environment variable for redmine request instructions configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "--from",
+      "mcp-redmine==2025.04.09.153531",
+      "--refresh-package",
+      "mcp-redmine",
+      "mcp-redmine"
+    ],
+    "env": {
+      "REDMINE_URL": "https://your-redmine-instance.example.com",
+      "REDMINE_API_KEY": "your-api-key",
+      "REDMINE_REQUEST_INSTRUCTIONS": "/path/to/instructions.md"
+    }
+  }
+}

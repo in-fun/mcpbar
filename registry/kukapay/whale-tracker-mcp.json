@@ -1,0 +1,34 @@
+{
+  "name": "whale-tracker-mcp",
+  "version": "1.0.0",
+  "description": "A mcp server for tracking cryptocurrency whale transactions.",
+  "homepage": "https://github.com/kukapay/whale-tracker-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kukapay/whale-tracker-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "whale-tracker-mcp",
+    "kukapay"
+  ],
+  "inputs": [
+    {
+      "id": "whale_alert_api_key",
+      "type": "promptString",
+      "description": "Environment variable for whale alert api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "whale-tracker-mcp"
+    ],
+    "env": {
+      "WHALE_ALERT_API_KEY": "${input:whale_alert_api_key}"
+    }
+  }
+}

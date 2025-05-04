@@ -1,0 +1,42 @@
+{
+  "name": "@airjesus17/mcp-server-spinnaker",
+  "version": "1.5.1",
+  "description": "MCP server implementation for Spinnaker integrations",
+  "homepage": "https://www.npmjs.com/package/@airjesus17/mcp-server-spinnaker",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dion-hagan/mcp-server-spinnaker"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-spinnaker",
+    "dion-hagan"
+  ],
+  "inputs": [
+    {
+      "id": "gate_url",
+      "type": "promptString",
+      "description": "Environment variable for gate url",
+      "password": false
+    },
+    {
+      "id": "mcp_port",
+      "type": "promptString",
+      "description": "Environment variable for mcp port",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@airjesus17/mcp-server-spinnaker"
+    ],
+    "env": {
+      "GATE_URL": "${input:gate_url}",
+      "MCP_PORT": "${input:mcp_port}"
+    }
+  }
+}

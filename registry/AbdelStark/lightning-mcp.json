@@ -1,0 +1,49 @@
+{
+  "name": "nostr-mcp",
+  "version": "0.0.1",
+  "description": "A Model Context Protocol server for interacting with Nostr, enabling posting notes and more",
+  "homepage": "https://github.com/AbdelStark/lightning-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AbdelStark/lightning-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "lightning-mcp",
+    "abdelstark"
+  ],
+  "inputs": [
+    {
+      "id": "bitcoin_lnbits_node_url",
+      "type": "promptString",
+      "description": "Environment variable for bitcoin lnbits node url",
+      "password": false
+    },
+    {
+      "id": "bitcoin_lnbits_admin_key",
+      "type": "promptString",
+      "description": "Environment variable for bitcoin lnbits admin key",
+      "password": true
+    },
+    {
+      "id": "bitcoin_lnbits_read_key",
+      "type": "promptString",
+      "description": "Environment variable for bitcoin lnbits read key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "nostr-mcp"
+    ],
+    "env": {
+      "BITCOIN_LNBITS_NODE_URL": "${input:bitcoin_lnbits_node_url}",
+      "BITCOIN_LNBITS_ADMIN_KEY": "${input:bitcoin_lnbits_admin_key}",
+      "BITCOIN_LNBITS_READ_KEY": "${input:bitcoin_lnbits_read_key}"
+    }
+  }
+}

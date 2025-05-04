@@ -1,0 +1,34 @@
+{
+  "name": "browser-use",
+  "version": "1.0.0",
+  "description": "Make websites accessible for AI agents",
+  "homepage": "https://browser-use.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kkk929/browser-use"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "browser-use",
+    "kkk929"
+  ],
+  "inputs": [
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "browser-use"
+    ],
+    "env": {
+      "OPENAI_API_KEY": "${input:openai_api_key}"
+    }
+  }
+}

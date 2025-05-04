@@ -1,0 +1,25 @@
+{
+  "name": "mcp-sse",
+  "version": "1.0.0",
+  "description": "MCP server for k8s-mcp",
+  "homepage": "https://github.com/Shengwenhao-manbo/k8s-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Shengwenhao-manbo/k8s-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "k8s-mcp",
+    "shengwenhao-manbo"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-sse"
+    ],
+    "env": {}
+  }
+}

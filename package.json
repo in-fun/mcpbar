@@ -34,7 +34,10 @@
     "test": "jest",
     "test:watch": "jest --watchAll",
     "prepare": "husky",
-    "release": "semantic-release"
+    "release": "semantic-release",
+    "extract-mcp": "ts-node scripts/batch-extract-mcp-manifests.ts",
+    "extract-mcp:test": "ts-node scripts/extract-mcp-manifest.ts https://github.com/eyaltoledano/claude-task-master",
+    "extract-mcp:test:uv": "ts-node scripts/extract-mcp-manifest.ts https://github.com/Alec2435/python_mcp"
   },
   "keywords": [
     "typescript",
@@ -47,6 +50,7 @@
   "devDependencies": {
     "@commitlint/cli": "^18.6.1",
     "@commitlint/config-conventional": "^18.6.3",
+    "@commitlint/types": "^19.8.0",
     "@jest/globals": "^29.7.0",
     "@tsconfig/node20": "^20.1.4",
     "@types/jest": "^29.5.12",
@@ -78,6 +82,7 @@
     "consola": "^3.2.3",
     "dotenv": "^16.4.5",
     "giget": "^1.2.3",
+    "open": "^10.1.2",
     "picocolors": "^1.0.1",
     "yargs": "^17.7.2"
   },

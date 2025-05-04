@@ -1,0 +1,25 @@
+{
+  "name": "khoj",
+  "version": "1.0.0",
+  "description": "Your AI second brain. Self-hostable. Get answers from the web or your docs. Build custom agents, schedule automations, do deep research. Turn any online or local LLM into your personal, autonomous AI (gpt, claude, gemini, llama, qwen, mistral). Get started - free.",
+  "homepage": "https://khoj.dev",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kimbj0204/khoj"
+  },
+  "license": "AGPL-3.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "khoj",
+    "kimbj0204"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "khoj"
+    ],
+    "env": {}
+  }
+}

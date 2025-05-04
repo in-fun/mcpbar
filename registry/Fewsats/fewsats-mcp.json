@@ -1,0 +1,41 @@
+{
+  "name": "fewsats-mcp",
+  "version": "1.0.0",
+  "description": "Fewsats MCP server",
+  "homepage": "https://github.com/Fewsats/fewsats-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Fewsats/fewsats-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "fewsats-mcp",
+    "fewsats"
+  ],
+  "inputs": [
+    {
+      "id": "your_fewsats_api_key",
+      "type": "promptString",
+      "description": "Environment variable for your fewsats api key",
+      "password": true
+    },
+    {
+      "id": "fewsats_api_key",
+      "type": "promptString",
+      "description": "Environment variable for fewsats api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "fewsats-mcp"
+    ],
+    "env": {
+      "YOUR_FEWSATS_API_KEY": "${input:your_fewsats_api_key}",
+      "FEWSATS_API_KEY": "${input:fewsats_api_key}"
+    }
+  }
+}

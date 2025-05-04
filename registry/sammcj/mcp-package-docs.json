@@ -1,0 +1,49 @@
+{
+  "name": "mcp-package-docs",
+  "version": "0.1.26",
+  "description": "An MCP server that provides LLMs with efficient access to package documentation across multiple programming languages",
+  "homepage": "https://smcleod.net",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sammcj/mcp-package-docs"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "docs",
+    "documentation",
+    "go",
+    "javascript",
+    "llm",
+    "mcp",
+    "node",
+    "npm",
+    "pip",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "enable_lsp",
+      "type": "promptString",
+      "description": "Environment variable for enable lsp configuration",
+      "password": false
+    },
+    {
+      "id": "typescript_server",
+      "type": "promptString",
+      "description": "Environment variable for typescript server configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-package-docs"
+    ],
+    "env": {
+      "ENABLE_LSP": "true",
+      "TYPESCRIPT_SERVER": "{\"command\":\"/custom/path/typescript-language-server\",\"args\":[\"--stdio\"]}"
+    }
+  }
+}

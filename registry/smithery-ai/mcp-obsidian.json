@@ -1,0 +1,32 @@
+{
+  "name": "mcp-obsidian",
+  "version": "1.0.0",
+  "description": "Model Context Protocol server for Obsidian Vaults",
+  "homepage": "https://github.com/smithery-ai/mcp-obsidian",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/smithery-ai/mcp-obsidian"
+  },
+  "license": "AGPL-3.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-obsidian",
+    "smithery-ai"
+  ],
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "vaultPath",
+      "description": "Path to Obsidian vault"
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-obsidian",
+      "${input:vaultPath}"
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "mcp-server-pagespeed",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol server for Google PageSpeed Insights",
+  "homepage": "https://github.com/enemyrr/mcp-server-pagespeed",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/enemyrr/mcp-server-pagespeed"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-pagespeed",
+    "enemyrr"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-server-pagespeed"
+    ],
+    "env": {}
+  }
+}

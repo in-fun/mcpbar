@@ -1,0 +1,35 @@
+{
+  "name": "@programcomputer/nasa-mcp-server",
+  "version": "1.0.11",
+  "description": "Model Context Protocol (MCP) server for NASA APIs",
+  "homepage": "https://github.com/ProgramComputer/NASA-MCP-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ProgramComputer/NASA-MCP-server"
+  },
+  "license": "ISC",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "nasa-mcp-server",
+    "programcomputer"
+  ],
+  "inputs": [
+    {
+      "id": "nasa_api_key",
+      "type": "promptString",
+      "description": "Environment variable for nasa api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@programcomputer/nasa-mcp-server@latest"
+    ],
+    "env": {
+      "NASA_API_KEY": "your-api-key"
+    }
+  }
+}

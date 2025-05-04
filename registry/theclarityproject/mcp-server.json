@@ -1,0 +1,42 @@
+{
+  "name": "clarity-mcp-server",
+  "version": "0.1.0",
+  "description": "Smuggle your HAR requests and turn them into MCP-usable tools",
+  "homepage": "https://github.com/theclarityproject/mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/theclarityproject/mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server",
+    "theclarityproject"
+  ],
+  "inputs": [
+    {
+      "id": "clarity_api_key",
+      "type": "promptString",
+      "description": "Environment variable for clarity api key",
+      "password": true
+    },
+    {
+      "id": "nextjs_app_url",
+      "type": "promptString",
+      "description": "Environment variable for nextjs app url",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "clarity-mcp-server"
+    ],
+    "env": {
+      "CLARITY_API_KEY": "${input:clarity_api_key}",
+      "NEXTJS_APP_URL": "${input:nextjs_app_url}"
+    }
+  }
+}

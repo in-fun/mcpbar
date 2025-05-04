@@ -1,0 +1,25 @@
+{
+  "name": "mcp-browser-use",
+  "version": "1.0.0",
+  "description": "MCP server for browser-use",
+  "homepage": "https://github.com/vinayak-mehta/mcp-browser-use",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vinayak-mehta/mcp-browser-use"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-browser-use",
+    "vinayak-mehta"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-browser-use"
+    ],
+    "env": {}
+  }
+}

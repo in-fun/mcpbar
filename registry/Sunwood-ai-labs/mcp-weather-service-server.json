@@ -1,0 +1,48 @@
+{
+  "name": "weather-service",
+  "version": "1.0.0",
+  "description": "MCP server for mcp-weather-service-server",
+  "homepage": "https://github.com/Sunwood-ai-labs/mcp-weather-service-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sunwood-ai-labs/mcp-weather-service-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-weather-service-server",
+    "sunwood-ai-labs"
+  ],
+  "inputs": [
+    {
+      "id": "uv_publish_token",
+      "type": "promptString",
+      "description": "Environment variable for uv publish token",
+      "password": true
+    },
+    {
+      "id": "uv_publish_user",
+      "type": "promptString",
+      "description": "Environment variable for uv publish user",
+      "password": false
+    },
+    {
+      "id": "uv_publish_pass",
+      "type": "promptString",
+      "description": "Environment variable for uv publish pass",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "weather-service"
+    ],
+    "env": {
+      "UV_PUBLISH_TOKEN": "${input:uv_publish_token}",
+      "UV_PUBLISH_USER": "${input:uv_publish_user}",
+      "UV_PUBLISH_PASS": "${input:uv_publish_pass}"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "@pollinations/chucknorris",
+  "version": "1.0.37",
+  "description": "⚡ MCP server aiming to free LLMs with enhancement prompts. Inspired by elder-plinius' L1B3RT4S.",
+  "homepage": "https://www.npmjs.com/package/@pollinations/chucknorris",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pollinations/chucknorris"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "jailbreak",
+    "llm",
+    "mcp",
+    "model-context-protocol",
+    "pollinations",
+    "prompt"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@pollinations/chucknorris"
+    ]
+  }
+}

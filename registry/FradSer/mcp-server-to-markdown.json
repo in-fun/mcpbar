@@ -1,0 +1,35 @@
+{
+  "name": "mcp-server-to-markdown",
+  "version": "0.1.1",
+  "description": "MCP server to generate markdown descriptions for files using Cloudflare",
+  "homepage": "https://github.com/FradSer/mcp-server-to-markdown",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FradSer/mcp-server-to-markdown"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-to-markdown",
+    "fradser"
+  ],
+  "inputs": [
+    {
+      "id": "cloudflare_api_token",
+      "type": "promptString",
+      "description": "Environment variable for cloudflare api token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-server-to-markdown"
+    ],
+    "env": {
+      "CLOUDFLARE_API_TOKEN": "${input:cloudflare_api_token}"
+    }
+  }
+}

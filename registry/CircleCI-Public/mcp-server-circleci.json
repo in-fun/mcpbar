@@ -1,0 +1,42 @@
+{
+  "name": "@circleci/mcp-server-circleci",
+  "version": "0.4.0",
+  "description": "A Model Context Protocol (MCP) server implementation for CircleCI, enabling natural language interactions with CircleCI functionality through MCP-enabled clients",
+  "homepage": "https://github.com/CircleCI-Public/mcp-server-circleci",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CircleCI-Public/mcp-server-circleci"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp-server",
+    "modelcontextprotocol",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "circleci_token",
+      "type": "promptString",
+      "description": "Environment variable for circleci token",
+      "password": true
+    },
+    {
+      "id": "circleci_base_url",
+      "type": "promptString",
+      "description": "Environment variable for circleci base url",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@circleci/mcp-server-circleci"
+    ],
+    "env": {
+      "CIRCLECI_TOKEN": "${input:circleci_token}",
+      "CIRCLECI_BASE_URL": "${input:circleci_base_url}"
+    }
+  }
+}

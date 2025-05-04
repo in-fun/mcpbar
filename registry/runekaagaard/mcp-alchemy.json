@@ -1,0 +1,38 @@
+{
+  "name": "mcp-alchemy",
+  "version": "1.0.0",
+  "description": "A MCP (model context protocol) server that gives the LLM access to and knowledge about relational databases like SQLite, Postgresql, MySQL & MariaDB, Oracle, and MS-SQL.",
+  "homepage": "https://github.com/runekaagaard/mcp-alchemy",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/runekaagaard/mcp-alchemy"
+  },
+  "license": "MPL-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-alchemy",
+    "runekaagaard"
+  ],
+  "inputs": [
+    {
+      "id": "db_url",
+      "type": "promptString",
+      "description": "Environment variable for db url configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "--from",
+      "mcp-alchemy==2025.5.2.210242",
+      "--refresh-package",
+      "mcp-alchemy",
+      "mcp-alchemy"
+    ],
+    "env": {
+      "DB_URL": "sqlite:////absolute/path/to/database.db"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "name": "@nitish-raj/searxng-mcp-bridge",
+  "version": "0.4.4",
+  "description": "MCP Server for SearxNG Bridge",
+  "homepage": "https://github.com/nitish-raj/searxng-mcp-bridge",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nitish-raj/searxng-mcp-bridge"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "searxng-mcp-bridge",
+    "nitish-raj"
+  ],
+  "inputs": [
+    {
+      "id": "searxng_instance_url",
+      "type": "promptString",
+      "description": "Environment variable for searxng instance url",
+      "password": false
+    },
+    {
+      "id": "your_searxng_instance_url",
+      "type": "promptString",
+      "description": "Environment variable for your searxng instance url",
+      "password": false
+    },
+    {
+      "id": "npm_token",
+      "type": "promptString",
+      "description": "Environment variable for npm token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@nitish-raj/searxng-mcp-bridge"
+    ],
+    "env": {
+      "SEARXNG_INSTANCE_URL": "${input:searxng_instance_url}",
+      "YOUR_SEARXNG_INSTANCE_URL": "${input:your_searxng_instance_url}",
+      "NPM_TOKEN": "${input:npm_token}"
+    }
+  }
+}

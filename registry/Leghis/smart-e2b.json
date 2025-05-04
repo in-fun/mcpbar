@@ -1,0 +1,35 @@
+{
+  "name": "smart-e2b",
+  "version": "0.1.2",
+  "description": "A smart MCP server that integrates E2B for code execution in the cloud",
+  "homepage": "https://github.com/Leghis/smart-e2b",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Leghis/smart-e2b"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "smart-e2b",
+    "leghis"
+  ],
+  "inputs": [
+    {
+      "id": "e2b_api_key",
+      "type": "promptString",
+      "description": "Environment variable for e2b api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "smart-e2b"
+    ],
+    "env": {
+      "E2B_API_KEY": ""
+    }
+  }
+}

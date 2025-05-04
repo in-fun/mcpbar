@@ -1,0 +1,55 @@
+{
+  "name": "keycloak-model-context-protocol",
+  "version": "0.0.2",
+  "description": "MCP server for Keycloak administration",
+  "homepage": "https://github.com/ChristophEnglisch/keycloak-model-context-protocol",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ChristophEnglisch/keycloak-model-context-protocol"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "ai-tools",
+    "authentication",
+    "claude-desktop",
+    "identity-management",
+    "keycloak",
+    "keycloak-admin",
+    "mcp",
+    "model-context-protocol",
+    "node",
+    "typescript"
+  ],
+  "inputs": [
+    {
+      "id": "keycloak_url",
+      "type": "promptString",
+      "description": "Environment variable for keycloak url configuration",
+      "password": true
+    },
+    {
+      "id": "keycloak_admin",
+      "type": "promptString",
+      "description": "Environment variable for keycloak admin configuration",
+      "password": true
+    },
+    {
+      "id": "keycloak_admin_password",
+      "type": "promptString",
+      "description": "Environment variable for keycloak admin password authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "keycloak-model-context-protocol"
+    ],
+    "env": {
+      "KEYCLOAK_URL": "http://localhost:8080",
+      "KEYCLOAK_ADMIN": "admin",
+      "KEYCLOAK_ADMIN_PASSWORD": "admin"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "scryfall-mcp-server",
+  "version": "0.1.0",
+  "description": "MCP server for interacting with the Scryfall MTG API",
+  "homepage": "https://github.com/cryppadotta/scryfall-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cryppadotta/scryfall-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "scryfall-mcp",
+    "cryppadotta"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "docker",
+    "args": [
+      "run",
+      "-i",
+      "--rm",
+      "mcp/scryfall"
+    ]
+  }
+}

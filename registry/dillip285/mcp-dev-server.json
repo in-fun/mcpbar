@@ -1,0 +1,22 @@
+{
+  "name": "mcp-dev-server",
+  "version": "1.0.0",
+  "description": "Model Context Protocol Development Server",
+  "homepage": "https://github.com/dillip285/mcp-dev-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dillip285/mcp-dev-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-dev-server",
+    "dillip285"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "mcp-dev-server",
+    "args": []
+  }
+}

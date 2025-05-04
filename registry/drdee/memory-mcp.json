@@ -1,0 +1,25 @@
+{
+  "name": "memory-mcp",
+  "version": "1.0.0",
+  "description": "An mcp server that you can use to store and retrieve ideas, prompt templates, personal preferences to use with you favourite AI tool that supports the modelcontextprovider protocol.",
+  "homepage": "https://github.com/drdee/memory-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/drdee/memory-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "memory-mcp",
+    "drdee"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "memory-mcp"
+    ],
+    "env": {}
+  }
+}

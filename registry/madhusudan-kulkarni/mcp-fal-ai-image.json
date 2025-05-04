@@ -1,0 +1,38 @@
+{
+  "name": "mcp-fal-ai-image",
+  "version": "1.0.0",
+  "description": "MCP server for fal.ai image generation",
+  "homepage": "https://github.com/madhusudan-kulkarni/mcp-fal-ai-image",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/madhusudan-kulkarni/mcp-fal-ai-image"
+  },
+  "license": "MIT",
+  "keywords": [
+    "cursor",
+    "fal-ai",
+    "image-generation",
+    "mcp-server",
+    "windsurf",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "fal_key",
+      "type": "promptString",
+      "description": "Environment variable for fal key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-fal-ai-image"
+    ],
+    "env": {
+      "FAL_KEY": "YOUR-FAL-AI-API-KEY"
+    }
+  }
+}

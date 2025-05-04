@@ -1,0 +1,26 @@
+{
+  "name": "bloodhound",
+  "version": "3.0.4",
+  "description": "Graph Theory for Active Directory",
+  "homepage": "https://github.com/starscow/BloodHound",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/starscow/BloodHound"
+  },
+  "license": "GPL-3.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "bloodhound",
+    "starscow"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "bloodhound"
+    ],
+    "env": {}
+  }
+}

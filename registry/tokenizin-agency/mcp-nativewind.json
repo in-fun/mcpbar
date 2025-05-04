@@ -1,0 +1,25 @@
+{
+  "name": "@tokenizin-com/mcp-server-nativewind",
+  "version": "1.0.0",
+  "description": "MCP server for transforming Tailwind components to NativeWind 4",
+  "homepage": "https://github.com/tokenizin-agency/mcp-nativewind",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tokenizin-agency/mcp-nativewind"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-nativewind",
+    "tokenizin-agency"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@modelcontextprotocol/server-nativewind"
+    ]
+  }
+}

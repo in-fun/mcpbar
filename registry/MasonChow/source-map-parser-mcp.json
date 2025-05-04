@@ -1,0 +1,26 @@
+{
+  "name": "source-map-parser-mcp",
+  "version": "1.2.3",
+  "description": "paser source map",
+  "homepage": "https://github.com/MasonChow/source-map-parser-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MasonChow/source-map-parser-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "source-map-parser-mcp",
+    "masonchow"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "source-map-parser-mcp"
+    ],
+    "env": {}
+  }
+}

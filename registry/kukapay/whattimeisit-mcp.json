@@ -1,0 +1,27 @@
+{
+  "name": "whattimeisit-mcp",
+  "version": "1.0.0",
+  "description": "A lightweight mcp server that tells you exactly what time is it based on your IP.",
+  "homepage": "https://github.com/kukapay/whattimeisit-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kukapay/whattimeisit-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "whattimeisit-mcp",
+    "kukapay"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "path/to/whattimeisit-mcp",
+      "run",
+      "main.py"
+    ]
+  }
+}

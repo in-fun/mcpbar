@@ -1,0 +1,48 @@
+{
+  "name": "mcp_client_cli",
+  "version": "1.0.0",
+  "description": "A simple CLI to run LLM prompt and implement MCP client.",
+  "homepage": "https://github.com/williamvd4/mcp-client-cli",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/williamvd4/mcp-client-cli"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-client-cli",
+    "williamvd4"
+  ],
+  "inputs": [
+    {
+      "id": "brave_api_key",
+      "type": "promptString",
+      "description": "Environment variable for brave api key",
+      "password": true
+    },
+    {
+      "id": "llm_api_key",
+      "type": "promptString",
+      "description": "Environment variable for llm api key",
+      "password": true
+    },
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp_client_cli"
+    ],
+    "env": {
+      "BRAVE_API_KEY": "${input:brave_api_key}",
+      "LLM_API_KEY": "${input:llm_api_key}",
+      "OPENAI_API_KEY": "${input:openai_api_key}"
+    }
+  }
+}

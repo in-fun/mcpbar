@@ -1,0 +1,35 @@
+{
+  "name": "search1api-mcp",
+  "version": "0.2.0",
+  "description": "A Model Context Protocol (MCP) server that provides search and crawl functionality using Search1API",
+  "homepage": "https://github.com/fatwang2/search1api-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fatwang2/search1api-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "search1api-mcp",
+    "fatwang2"
+  ],
+  "inputs": [
+    {
+      "id": "search1api_key",
+      "type": "promptString",
+      "description": "Environment variable for search1api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "search1api-mcp"
+    ],
+    "env": {
+      "SEARCH1API_KEY": "YOUR_SEARCH1API_KEY"
+    }
+  }
+}

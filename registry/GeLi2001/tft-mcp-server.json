@@ -1,0 +1,30 @@
+{
+  "name": "mcp-server-tft",
+  "version": "0.1.3",
+  "description": "MCP Server for Team Fight Tactics (TFT)",
+  "homepage": "https://github.com/GeLi2001/tft-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GeLi2001/tft-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "tft-mcp-server",
+    "geli2001"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "mcp-server-tft",
+      "--apiKey",
+      "<YOUR_RIOT_API_KEY>",
+      "--gameName",
+      "<YOUR_GAME_NAME>",
+      "--tagLine",
+      "<YOUR_TAG_LINE>"
+    ]
+  }
+}

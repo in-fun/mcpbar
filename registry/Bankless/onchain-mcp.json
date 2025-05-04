@@ -1,0 +1,34 @@
+{
+  "name": "@bankless/onchain-mcp",
+  "version": "1.0.6",
+  "description": "MCP server for using Bankless Onchain",
+  "homepage": "https://github.com/Bankless/onchain-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Bankless/onchain-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "onchain-mcp",
+    "bankless"
+  ],
+  "inputs": [
+    {
+      "id": "bankless_api_token",
+      "type": "promptString",
+      "description": "Environment variable for bankless api token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "@bankless/onchain-mcp"
+    ],
+    "env": {
+      "BANKLESS_API_TOKEN": "your_api_token_here"
+    }
+  }
+}

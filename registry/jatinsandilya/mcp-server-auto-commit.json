@@ -1,0 +1,26 @@
+{
+  "name": "send-email",
+  "version": "1.0.0",
+  "description": "An mcp server that auto commits changes and creates commit message in the form of conventional commits (https://www.conventionalcommits.org/en/v1.0.0/)",
+  "homepage": "https://github.com/jatinsandilya/mcp-server-auto-commit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jatinsandilya/mcp-server-auto-commit"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-auto-commit",
+    "jatinsandilya"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "ABSOLUTE_PATH_TO_MCP_SERVER/build/index.js",
+      "--key",
+      "your-api-key"
+    ]
+  }
+}

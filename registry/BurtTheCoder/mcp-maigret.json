@@ -1,0 +1,31 @@
+{
+  "name": "mcp-maigret",
+  "version": "1.0.12",
+  "description": "MCP server for maigret - OSINT username search across social networks",
+  "homepage": "https://github.com/BurtTheCoder/mcp-maigret",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BurtTheCoder/mcp-maigret"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-maigret",
+    "burtthecoder"
+  ],
+  "inputs": [
+    {
+      "id": "maigret_reports_dir",
+      "type": "promptString",
+      "description": "Environment variable for maigret reports dir configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "mcp-maigret",
+    "env": {
+      "MAIGRET_REPORTS_DIR": "/path/to/reports/directory"
+    }
+  }
+}

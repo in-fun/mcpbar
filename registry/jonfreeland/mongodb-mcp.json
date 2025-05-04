@@ -1,0 +1,37 @@
+{
+  "name": "mongodb-server",
+  "version": "0.1.1",
+  "description": "A Model Context Protocol server that provides read-only access to MongoDB databases through standardized MCP tools",
+  "homepage": "https://github.com/jonfreeland/mongodb-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonfreeland/mongodb-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp-server",
+    "model-context-protocol",
+    "mcp"
+  ],
+  "inputs": [
+    {
+      "id": "mongodb_uri",
+      "type": "promptString",
+      "description": "Environment variable for mongodb uri configuration",
+      "password": false
+    },
+    {
+      "id": "mongodb_default_database",
+      "type": "promptString",
+      "description": "Environment variable for mongodb default database configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "/path/to/mongodb-server/build/index.js",
+    "env": {
+      "MONGODB_URI": "mongodb://username:password@hostname:port/database",
+      "MONGODB_DEFAULT_DATABASE": "your_default_db"
+    }
+  }
+}

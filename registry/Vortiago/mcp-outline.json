@@ -1,0 +1,41 @@
+{
+  "name": "mcp-outline",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol (MCP) server enabling AI assistants to interact with Outline documentation services.",
+  "homepage": "https://github.com/Vortiago/mcp-outline",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Vortiago/mcp-outline"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-outline",
+    "vortiago"
+  ],
+  "inputs": [
+    {
+      "id": "outline_api_key",
+      "type": "promptString",
+      "description": "Environment variable for outline api key",
+      "password": true
+    },
+    {
+      "id": "outline_api_url",
+      "type": "promptString",
+      "description": "Environment variable for outline api url",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-outline"
+    ],
+    "env": {
+      "OUTLINE_API_KEY": "${input:outline_api_key}",
+      "OUTLINE_API_URL": "${input:outline_api_url}"
+    }
+  }
+}

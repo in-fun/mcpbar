@@ -1,0 +1,32 @@
+{
+  "name": "mcp-chain-of-draft-server",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol server which provides Chain of Draft style thinking",
+  "homepage": "https://github.com/bsmi021/mcp-chain-of-draft-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bsmi021/mcp-chain-of-draft-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "ai-tools",
+    "claude-ai",
+    "cod",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "modelcontextprotocol",
+    "server",
+    "tools"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-chain-of-draft-server"
+    ],
+    "env": {}
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "speech-mcp-server",
+  "version": "1.1.2",
+  "description": "MCP server for text-to-speech conversion using Kokoro TTS",
+  "homepage": "https://github.com/hammeiam/koroko-speech-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hammeiam/koroko-speech-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "koroko-speech-mcp",
+    "hammeiam"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "@decodershq/speech-mcp-server"
+    ]
+  }
+}

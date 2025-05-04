@@ -1,0 +1,25 @@
+{
+  "name": "@devyhan/xcode-mcp",
+  "version": "0.4.1",
+  "description": "MCP Server for executing shell commands from MCP clients, particularly useful for Xcode-related operations",
+  "homepage": "https://github.com/devyhan/xcode-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/devyhan/xcode-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "xcode-mcp",
+    "devyhan"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "@devyhan/xcode-mcp",
+      "-y"
+    ]
+  }
+}

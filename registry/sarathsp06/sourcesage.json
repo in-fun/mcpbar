@@ -1,0 +1,22 @@
+{
+  "name": "sourcesage",
+  "version": "1.0.0",
+  "description": "MCP server to cache  codebase as graph ",
+  "homepage": "https://github.com/sarathsp06/sourcesage",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sarathsp06/sourcesage"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "sourcesage",
+    "sarathsp06"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "sourcesage",
+    "args": []
+  }
+}

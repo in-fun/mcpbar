@@ -1,0 +1,25 @@
+{
+  "name": "notes",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol (MCP) server implementation providing persistent note management created with Python SDK.",
+  "homepage": "https://github.com/truaxki/mcp-notes",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/truaxki/mcp-notes"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-notes",
+    "truaxki"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "notes"
+    ],
+    "env": {}
+  }
+}

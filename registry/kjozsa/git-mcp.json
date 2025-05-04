@@ -1,0 +1,34 @@
+{
+  "name": "git-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for local git repositories",
+  "homepage": "https://github.com/kjozsa/git-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kjozsa/git-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "git-mcp",
+    "kjozsa"
+  ],
+  "inputs": [
+    {
+      "id": "git_repos_path",
+      "type": "promptString",
+      "description": "Environment variable for git repos path configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "git-mcp"
+    ],
+    "env": {
+      "GIT_REPOS_PATH": "/path/to/your/git/repositories"
+    }
+  }
+}

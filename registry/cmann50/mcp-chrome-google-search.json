@@ -1,0 +1,25 @@
+{
+  "name": "@cmann50/mcp-chrome-google-search",
+  "version": "1.0.6",
+  "description": "MCP tool for Google search and webpage content extraction using Chrome browser. Works with Claude to enable Google search and content fetching capabilities.",
+  "homepage": "https://github.com/cmann50/mcp-chrome-google-search",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cmann50/mcp-chrome-google-search"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-chrome-google-search",
+    "cmann50"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@cmann50/mcp-chrome-google-search"
+    ]
+  }
+}

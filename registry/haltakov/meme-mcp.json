@@ -1,0 +1,42 @@
+{
+  "name": "meme-mcp",
+  "version": "1.0.1",
+  "description": "A simple Model Context Protocol (MCP) server for generating memes using the ImgFlip API",
+  "homepage": "https://github.com/haltakov/meme-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/haltakov/meme-mcp"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "meme-mcp",
+    "haltakov"
+  ],
+  "inputs": [
+    {
+      "id": "imgflip_username",
+      "type": "promptString",
+      "description": "Environment variable for imgflip username configuration",
+      "password": false
+    },
+    {
+      "id": "imgflip_password",
+      "type": "promptString",
+      "description": "Environment variable for imgflip password authentication",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "meme-mcp"
+    ],
+    "env": {
+      "IMGFLIP_USERNAME": "<IMGFLIP USERNAME>",
+      "IMGFLIP_PASSWORD": "<IMGFLIP PASSWORD>"
+    }
+  }
+}

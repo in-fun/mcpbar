@@ -1,0 +1,33 @@
+{
+  "name": "typesense-mcp-server",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol server that provides access to Typesense search capabilities",
+  "homepage": "https://github.com/suhail-ak-s/mcp-typesense-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suhail-ak-s/mcp-typesense-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-typesense-server",
+    "suhail-ak-s"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "typesense-mcp-server",
+      "--host",
+      "your-typesense-host",
+      "--port",
+      "8108",
+      "--protocol",
+      "http",
+      "--api-key",
+      "your-api-key"
+    ]
+  }
+}

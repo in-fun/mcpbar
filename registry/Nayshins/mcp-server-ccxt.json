@@ -1,0 +1,27 @@
+{
+  "name": "mcp-server-ccxt",
+  "version": "1.0.0",
+  "description": "Cryptocurrency Market Data MCP Server",
+  "homepage": "https://github.com/Nayshins/mcp-server-ccxt",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Nayshins/mcp-server-ccxt"
+  },
+  "license": "MIT",
+  "keywords": [
+    "agent",
+    "ai",
+    "mcp",
+    "ccxt",
+    "cryptocurrency",
+    "mcp-server",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "python",
+    "args": [
+      "/path/to/crypto_server.py"
+    ]
+  }
+}

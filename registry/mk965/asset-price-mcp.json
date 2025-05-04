@@ -1,0 +1,25 @@
+{
+  "name": "asset-price-mcp",
+  "version": "1.0.3",
+  "description": "An MCP-compatible service that provides real-time asset prices including precious metals, cryptocurrencies, and more",
+  "homepage": "https://github.com/mk965/asset-price-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mk965/asset-price-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "llm",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "asset-price-mcp"
+    ]
+  }
+}

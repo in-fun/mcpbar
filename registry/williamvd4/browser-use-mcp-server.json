@@ -1,0 +1,41 @@
+{
+  "name": "browser-use-mcp-server",
+  "version": "1.0.0",
+  "description": "browser-use mcp server",
+  "homepage": "https://github.com/williamvd4/browser-use-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/williamvd4/browser-use-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "browser-use-mcp-server",
+    "williamvd4"
+  ],
+  "inputs": [
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key",
+      "password": true
+    },
+    {
+      "id": "vnc_pass",
+      "type": "promptString",
+      "description": "Environment variable for vnc pass",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "browser-use-mcp-server"
+    ],
+    "env": {
+      "OPENAI_API_KEY": "${input:openai_api_key}",
+      "VNC_PASS": "${input:vnc_pass}"
+    }
+  }
+}

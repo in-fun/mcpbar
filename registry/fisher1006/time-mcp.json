@@ -1,0 +1,26 @@
+{
+  "name": "mcp-server-time",
+  "version": "1.0.0",
+  "description": "MCP server for time-mcp",
+  "homepage": "https://github.com/fisher1006/time-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fisher1006/time-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "time-mcp",
+    "fisher1006"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "python",
+    "args": [
+      "-m",
+      "mcp_server_time",
+      "--local-timezone=America/New_York"
+    ]
+  }
+}

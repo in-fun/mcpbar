@@ -1,0 +1,25 @@
+{
+  "name": "mcp-server-demo",
+  "version": "1.0.0",
+  "description": "MCP server for python-mcp-carsearch-demo",
+  "homepage": "https://github.com/oshion/python-mcp-carsearch-demo",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/oshion/python-mcp-carsearch-demo"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "python-mcp-carsearch-demo",
+    "oshion"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-server-demo"
+    ],
+    "env": {}
+  }
+}

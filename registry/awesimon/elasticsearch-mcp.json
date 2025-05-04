@@ -1,0 +1,42 @@
+{
+  "name": "@awesome-ai/elasticsearch-mcp",
+  "version": "1.0.6",
+  "description": "Elasticsearch MCP Server",
+  "homepage": "https://github.com/awesimon/elasticsearch-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/awesimon/elasticsearch-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "elasticsearch",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "es_host",
+      "type": "promptString",
+      "description": "Environment variable for es host configuration",
+      "password": false
+    },
+    {
+      "id": "es_api_key",
+      "type": "promptString",
+      "description": "Environment variable for es api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@awesome-ai/elasticsearch-mcp"
+    ],
+    "env": {
+      "ES_HOST": "your-elasticsearch-host",
+      "ES_API_KEY": "your-api-key"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "@angiejones/mcp-selenium",
+  "version": "0.1.21",
+  "description": "Selenium WebDriver MCP Server",
+  "homepage": "https://github.com/angiejones/mcp-selenium",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/angiejones/mcp-selenium"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-selenium",
+    "angiejones"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@angiejones/mcp-selenium"
+    ]
+  }
+}

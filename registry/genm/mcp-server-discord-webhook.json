@@ -1,0 +1,38 @@
+{
+  "name": "@genpm/mcp-server-discord-webhook",
+  "version": "0.1.0",
+  "description": "Discord Webhook MCP Server",
+  "homepage": "https://github.com/genm/mcp-server-discord-webhook",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/genm/mcp-server-discord-webhook"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-discord-webhook",
+    "genm"
+  ],
+  "inputs": [
+    {
+      "id": "discord_webhook_url",
+      "type": "promptString",
+      "description": "Environment variable for discord webhook url configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@genpm/mcp-server-discord-webhook"
+    ],
+    "env": {
+      "DISCORD_WEBHOOK_URL": "your-discord-webhook-url"
+    },
+    "alwaysAllow": [
+      "send_message"
+    ]
+  }
+}

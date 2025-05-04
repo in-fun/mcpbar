@@ -1,0 +1,35 @@
+{
+  "name": "dart-mcp-server",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol server implementation for Dart task management system",
+  "homepage": "https://github.com/jmanhype/dart-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jmanhype/dart-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "dart-mcp-server",
+    "jmanhype"
+  ],
+  "inputs": [
+    {
+      "id": "dart_token",
+      "type": "promptString",
+      "description": "Environment variable for dart token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "dart-mcp-server"
+    ],
+    "env": {
+      "DART_TOKEN": "${input:dart_token}"
+    }
+  }
+}

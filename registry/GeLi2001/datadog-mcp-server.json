@@ -1,0 +1,30 @@
+{
+  "name": "datadog-mcp-server",
+  "version": "1.0.8",
+  "description": "MCP Server for Datadog API",
+  "homepage": "https://github.com/GeLi2001/datadog-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GeLi2001/datadog-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "datadog-mcp-server",
+    "geli2001"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "datadog-mcp-server",
+      "--apiKey",
+      "<YOUR_API_KEY>",
+      "--appKey",
+      "<YOUR_APP_KEY>",
+      "--site",
+      "<YOUR_DD_SITE>(e.g us5.datadoghq.com)"
+    ]
+  }
+}

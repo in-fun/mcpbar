@@ -1,0 +1,26 @@
+{
+  "name": "vite-react-typescript-starter",
+  "version": "0.0.0",
+  "description": "MCP server for mcp-codebase-insight",
+  "homepage": "https://github.com/tosin2013/mcp-codebase-insight",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tosin2013/mcp-codebase-insight"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-codebase-insight",
+    "tosin2013"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "vite-react-typescript-starter"
+    ],
+    "env": {}
+  }
+}

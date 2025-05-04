@@ -1,0 +1,49 @@
+{
+  "name": "@sparesparrow/mcp-prompts",
+  "version": "1.2.43",
+  "description": "An MCP server for managing and providing prompts and prompt templates",
+  "homepage": "https://github.com/sparesparrow/mcp-prompts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sparesparrow/mcp-prompts"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-prompts",
+    "sparesparrow"
+  ],
+  "inputs": [
+    {
+      "id": "storage_type",
+      "type": "promptString",
+      "description": "Environment variable for storage type configuration",
+      "password": false
+    },
+    {
+      "id": "prompts_dir",
+      "type": "promptString",
+      "description": "Environment variable for prompts dir configuration",
+      "password": false
+    },
+    {
+      "id": "log_level",
+      "type": "promptString",
+      "description": "Environment variable for log level configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@sparesparrow/mcp-prompts"
+    ],
+    "env": {
+      "STORAGE_TYPE": "file",
+      "PROMPTS_DIR": "/path/to/your/prompts/directory",
+      "LOG_LEVEL": "debug"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "@kazuph/mcp-screenshot",
+  "version": "1.0.4",
+  "description": "A Model Context Protocol server that provides screenshot and OCR capabilities",
+  "homepage": "https://github.com/kazuph/mcp-screenshot",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kazuph/mcp-screenshot"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-screenshot",
+    "kazuph"
+  ],
+  "inputs": [
+    {
+      "id": "ocr_api_url",
+      "type": "promptString",
+      "description": "Environment variable for ocr api url",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@kazuph/mcp-screenshot"
+    ],
+    "env": {
+      "OCR_API_URL": "${input:ocr_api_url}"
+    }
+  }
+}

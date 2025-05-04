@@ -1,0 +1,29 @@
+{
+  "name": "redis-mcp",
+  "version": "0.0.4",
+  "description": "Redis MCP server providing tools and resources for interacting with Redis databases through the Model Context Protocol",
+  "homepage": "https://github.com/farhankaz/redis-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/farhankaz/redis-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "redis-mcp",
+    "farhankaz"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "redis-mcp",
+      "--redis-host",
+      "localhost",
+      "--redis-port",
+      "6379"
+    ],
+    "disabled": false
+  }
+}

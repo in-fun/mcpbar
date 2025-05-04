@@ -1,0 +1,24 @@
+{
+  "name": "@gongrzhe/server-calendar-autoauth-mcp",
+  "version": "1.0.2",
+  "description": "A Model Context Protocol server for Google Calendar integration with auto authentication",
+  "homepage": "https://github.com/GongRzhe/Calendar-Autoauth-MCP-Server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GongRzhe/Calendar-Autoauth-MCP-Server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "calendar-autoauth-mcp-server",
+    "gongrzhe"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "@gongrzhe/server-calendar-autoauth-mcp"
+    ]
+  }
+}

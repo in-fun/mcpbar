@@ -1,0 +1,39 @@
+{
+  "name": "@modelcontextprotocol/server-github",
+  "version": "0.6.2",
+  "description": "MCP server for using the GitHub API",
+  "homepage": "https://github.com/AlexKissiJr/unreal-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AlexKissiJr/unreal-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "unreal-mcp-server",
+    "alexkissijr"
+  ],
+  "inputs": [
+    {
+      "id": "github_personal_access_token",
+      "type": "promptString",
+      "description": "Environment variable for github personal access token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "docker",
+    "args": [
+      "run",
+      "-i",
+      "--rm",
+      "-e",
+      "GITHUB_PERSONAL_ACCESS_TOKEN",
+      "mcp/github"
+    ],
+    "env": {
+      "GITHUB_PERSONAL_ACCESS_TOKEN": "<YOUR_TOKEN>"
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "@llmindset/mcp-hfspace",
+  "version": "0.5.0",
+  "description": "MCP Server to connect to Hugging Face spaces. Simple configuration, Claude Desktop friendly.",
+  "homepage": "https://llmindset.co.uk/resources/mcp-hfspace/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xiyuefox/mcp-hfspace"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-hfspace",
+    "xiyuefox"
+  ],
+  "inputs": [
+    {
+      "id": "hf_token",
+      "type": "promptString",
+      "description": "Environment variable for hf token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@llmindset/mcp-hfspace"
+    ],
+    "env": {
+      "HF_TOKEN": "${input:hf_token}"
+    }
+  }
+}

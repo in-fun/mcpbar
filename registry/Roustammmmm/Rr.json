@@ -1,0 +1,35 @@
+{
+  "name": "vite_react_shadcn_ts",
+  "version": "0.0.0",
+  "description": "MCP server for Rr",
+  "homepage": "https://github.com/Roustammmmm/Rr",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Roustammmmm/Rr"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "rr",
+    "roustammmmm"
+  ],
+  "inputs": [
+    {
+      "id": "your_git_url",
+      "type": "promptString",
+      "description": "Environment variable for your git url",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "vite_react_shadcn_ts"
+    ],
+    "env": {
+      "YOUR_GIT_URL": "${input:your_git_url}"
+    }
+  }
+}

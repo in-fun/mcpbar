@@ -1,0 +1,27 @@
+{
+  "name": "weather",
+  "version": "1.0.0",
+  "description": "MCP server for youtube-summarizer-mcp",
+  "homepage": "https://github.com/trilogy-group/youtube-summarizer-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/trilogy-group/youtube-summarizer-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "youtube-summarizer-mcp",
+    "trilogy-group"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "docker",
+    "args": [
+      "run",
+      "-i",
+      "--rm",
+      "youtube-summarizer-mcp"
+    ]
+  }
+}

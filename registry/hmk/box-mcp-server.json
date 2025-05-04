@@ -1,0 +1,41 @@
+{
+  "name": "box-mcp-server",
+  "version": "0.3.1",
+  "description": "MCP Server for interacting with Box",
+  "homepage": "https://github.com/hmk/box-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hmk/box-mcp-server"
+  },
+  "license": "BSD-3-Clause",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "box-mcp-server",
+    "hmk"
+  ],
+  "inputs": [
+    {
+      "id": "box_jwt_base64",
+      "type": "promptString",
+      "description": "Environment variable for box jwt base64 configuration",
+      "password": false
+    },
+    {
+      "id": "box_user_id",
+      "type": "promptString",
+      "description": "Environment variable for box user id configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "box-mcp-server"
+    ],
+    "env": {
+      "BOX_JWT_BASE64": "YOUR_BASE64_ENCODED_JWT",
+      "BOX_USER_ID": "123456"
+    }
+  }
+}

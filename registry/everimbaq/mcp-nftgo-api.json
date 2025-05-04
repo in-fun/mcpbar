@@ -1,0 +1,26 @@
+{
+  "name": "@nftgo/mcp-nftgo-api",
+  "version": "0.1.2",
+  "description": "NFTGo API MCP Server",
+  "homepage": "https://github.com/everimbaq/mcp-nftgo-api",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/everimbaq/mcp-nftgo-api"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-nftgo-api",
+    "everimbaq"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@nftgo/mcp-nftgo-api",
+      "NFTGO-API-KEY"
+    ]
+  }
+}

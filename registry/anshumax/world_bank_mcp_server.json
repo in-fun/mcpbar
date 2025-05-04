@@ -1,0 +1,27 @@
+{
+  "name": "world_bank_mcp_server",
+  "version": "1.0.0",
+  "description": "An implementation of the Model Context Protocol for the World Bank open data API",
+  "homepage": "https://github.com/anshumax/world_bank_mcp_server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/anshumax/world_bank_mcp_server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "world_bank_mcp_server",
+    "anshumax"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "path/to/world_bank_mcp_server",
+      "run",
+      "world_bank_mcp_server"
+    ]
+  }
+}

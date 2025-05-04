@@ -1,0 +1,41 @@
+{
+  "name": "git-mcp-server",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol server",
+  "homepage": "https://github.com/Sheshiyer/git-mcp-v2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sheshiyer/git-mcp-v2"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "git-mcp-v2",
+    "sheshiyer"
+  ],
+  "inputs": [
+    {
+      "id": "git_default_path",
+      "type": "promptString",
+      "description": "Environment variable for git default path configuration",
+      "password": false
+    },
+    {
+      "id": "github_personal_access_token",
+      "type": "promptString",
+      "description": "Environment variable for github personal access token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "path/to/git-mcp-v2/build/index.js"
+    ],
+    "env": {
+      "GIT_DEFAULT_PATH": "/path/to/default/git/directory",
+      "GITHUB_PERSONAL_ACCESS_TOKEN": "your-github-pat"
+    }
+  }
+}

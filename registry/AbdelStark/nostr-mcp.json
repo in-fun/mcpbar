@@ -1,0 +1,36 @@
+{
+  "name": "nostr-mcp",
+  "version": "0.0.15",
+  "description": "A Model Context Protocol server for interacting with Nostr, enabling posting notes and more",
+  "homepage": "https://github.com/AbdelStark/nostr-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AbdelStark/nostr-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "llm",
+    "mcp-server",
+    "nostr",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "nostr_nsec_key",
+      "type": "promptString",
+      "description": "Environment variable for nostr nsec key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "nostr-mcp"
+    ],
+    "env": {
+      "NOSTR_NSEC_KEY": "${input:nostr_nsec_key}"
+    }
+  }
+}

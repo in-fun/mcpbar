@@ -1,0 +1,41 @@
+{
+  "name": "mcp-sse",
+  "version": "1.0.0",
+  "description": "MCP server for vibehacker_metasploit_mcp",
+  "homepage": "https://github.com/foolsec/vibehacker_metasploit_mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/foolsec/vibehacker_metasploit_mcp"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "vibehacker_metasploit_mcp",
+    "foolsec"
+  ],
+  "inputs": [
+    {
+      "id": "msf_pass",
+      "type": "promptString",
+      "description": "Environment variable for msf pass",
+      "password": false
+    },
+    {
+      "id": "msf_port",
+      "type": "promptString",
+      "description": "Environment variable for msf port",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-sse"
+    ],
+    "env": {
+      "MSF_PASS": "${input:msf_pass}",
+      "MSF_PORT": "${input:msf_port}"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "web3-research-mcp",
+  "version": "1.0.1",
+  "description": "Deep Research for crypto - free & fully local",
+  "homepage": "https://github.com/aaronjmars/web3-research-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aaronjmars/web3-research-mcp"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "mcp-crypto",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "web3-research-mcp@latest"
+    ]
+  }
+}

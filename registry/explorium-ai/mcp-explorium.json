@@ -1,0 +1,35 @@
+{
+  "name": "explorium-mcp-server",
+  "version": "1.0.0",
+  "description": "Explorium API MCP Server",
+  "homepage": "https://www.explorium.ai",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/explorium-ai/mcp-explorium"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-explorium",
+    "explorium-ai"
+  ],
+  "inputs": [
+    {
+      "id": "explorium_api_key",
+      "type": "promptString",
+      "description": "Environment variable for explorium api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "python",
+    "args": [
+      "-m",
+      "explorium_mcp_server"
+    ],
+    "env": {
+      "EXPLORIUM_API_KEY": "YOUR_API_KEY"
+    }
+  }
+}

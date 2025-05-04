@@ -1,0 +1,25 @@
+{
+  "name": "meilisearch-mcp",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol (MCP) server for interacting with Meilisearch through LLM interfaces.",
+  "homepage": "https://github.com/meilisearch/meilisearch-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/meilisearch/meilisearch-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "meilisearch-mcp",
+    "meilisearch"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "-n",
+      "meilisearch-mcp"
+    ]
+  }
+}

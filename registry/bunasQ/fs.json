@@ -1,0 +1,35 @@
+{
+  "name": "@bunas/fs-mcp",
+  "version": "1.0.13",
+  "description": "File System MCP Server",
+  "homepage": "https://github.com/bunasQ/fs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/bunasQ/fs"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "fs",
+    "bunasq"
+  ],
+  "inputs": [
+    {
+      "id": "api_key",
+      "type": "promptString",
+      "description": "Environment variable for api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@bunas/fs-mcp"
+    ],
+    "env": {
+      "API_KEY": "${input:api_key}"
+    }
+  }
+}

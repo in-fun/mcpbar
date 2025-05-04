@@ -1,0 +1,44 @@
+{
+  "name": "godspeed-mcp",
+  "version": "1.0.4",
+  "description": "A Model Context Protocol connector for the Godspeed Task Management API",
+  "homepage": "https://github.com/AliNagy/godspeed-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AliNagy/godspeed-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai-tools",
+    "godspeed",
+    "mcp",
+    "productivity",
+    "tasks",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "godspeed_token",
+      "type": "promptString",
+      "description": "Environment variable for godspeed token",
+      "password": true
+    },
+    {
+      "id": "your_token",
+      "type": "promptString",
+      "description": "Environment variable for your token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "godspeed-mcp"
+    ],
+    "env": {
+      "GODSPEED_TOKEN": "${input:godspeed_token}",
+      "YOUR_TOKEN": "${input:your_token}"
+    }
+  }
+}

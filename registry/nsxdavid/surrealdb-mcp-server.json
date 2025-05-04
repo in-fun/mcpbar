@@ -1,0 +1,61 @@
+{
+  "name": "surrealdb-mcp-server",
+  "version": "0.1.10",
+  "description": "A Model Context Protocol (MCP) server that provides a standardized interface for AI assistants to interact with a SurrealDB database.",
+  "homepage": "https://github.com/nsxdavid/surrealdb-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nsxdavid/surrealdb-mcp-server"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "surrealdb-mcp-server",
+    "nsxdavid"
+  ],
+  "inputs": [
+    {
+      "type": "promptString",
+      "id": "surrealdb-url",
+      "description": "SurrealDB URL",
+      "default": "ws://localhost:8000"
+    },
+    {
+      "type": "promptString",
+      "id": "surrealdb-ns",
+      "description": "SurrealDB Namespace"
+    },
+    {
+      "type": "promptString",
+      "id": "surrealdb-db",
+      "description": "SurrealDB Database"
+    },
+    {
+      "type": "promptString",
+      "id": "surrealdb-user",
+      "description": "SurrealDB Username"
+    },
+    {
+      "type": "promptString",
+      "id": "surrealdb-pass",
+      "description": "SurrealDB Password",
+      "password": true
+    }
+  ],
+  "server": {
+    "type": "stdio",
+    "command": "npx",
+    "args": [
+      "-y",
+      "surrealdb-mcp-server"
+    ],
+    "env": {
+      "SURREALDB_URL": "${input:surrealdb-url}",
+      "SURREALDB_NS": "${input:surrealdb-ns}",
+      "SURREALDB_DB": "${input:surrealdb-db}",
+      "SURREALDB_USER": "${input:surrealdb-user}",
+      "SURREALDB_PASS": "${input:surrealdb-pass}"
+    }
+  }
+}

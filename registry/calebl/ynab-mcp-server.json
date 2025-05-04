@@ -1,0 +1,24 @@
+{
+  "name": "ynab-mcp-server",
+  "version": "0.1.2",
+  "description": "ynab-mcp-server MCP server",
+  "homepage": "https://github.com/calebl/ynab-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/calebl/ynab-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ynab-mcp-server",
+    "calebl"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "/absolute/path/to/ynab-mcp-server/dist/index.js"
+    ]
+  }
+}

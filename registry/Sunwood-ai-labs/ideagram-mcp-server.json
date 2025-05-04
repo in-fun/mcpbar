@@ -1,0 +1,35 @@
+{
+  "name": "@sunwood-ai-labs/ideagram-mcp-server",
+  "version": "0.1.0",
+  "description": "A Model Context Protocol server for Ideogram API",
+  "homepage": "https://github.com/Sunwood-ai-labs/ideagram-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sunwood-ai-labs/ideagram-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ideagram-mcp-server",
+    "sunwood-ai-labs"
+  ],
+  "inputs": [
+    {
+      "id": "ideogram_api_key",
+      "type": "promptString",
+      "description": "Environment variable for ideogram api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@sunwood-ai-labs/ideagram-mcp-server"
+    ],
+    "env": {
+      "IDEOGRAM_API_KEY": "${input:ideogram_api_key}"
+    }
+  }
+}

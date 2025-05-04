@@ -1,0 +1,34 @@
+{
+  "name": "artemis-mcp",
+  "version": "1.0.0",
+  "description": "Artemis MCP Server Repo",
+  "homepage": "https://github.com/Artemis-xyz/artemis-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Artemis-xyz/artemis-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "artemis-mcp",
+    "artemis-xyz"
+  ],
+  "inputs": [
+    {
+      "id": "artemis_api_key",
+      "type": "promptString",
+      "description": "Environment variable for artemis api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "artemis-mcp"
+    ],
+    "env": {
+      "ARTEMIS_API_KEY": "${input:artemis_api_key}"
+    }
+  }
+}

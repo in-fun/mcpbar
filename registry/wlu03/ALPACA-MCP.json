@@ -1,0 +1,26 @@
+{
+  "name": "alpaca-mcp",
+  "version": "1.0.0",
+  "description": "alpaca-mcp using stdio/stdout",
+  "homepage": "https://github.com/wlu03/ALPACA-MCP",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wlu03/ALPACA-MCP"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "alpaca-mcp",
+    "wlu03"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "alpaca-mcp"
+    ],
+    "env": {}
+  }
+}

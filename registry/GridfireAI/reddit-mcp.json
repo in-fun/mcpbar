@@ -1,0 +1,34 @@
+{
+  "name": "reddit-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for reddit-mcp",
+  "homepage": "https://github.com/GridfireAI/reddit-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/GridfireAI/reddit-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "reddit-mcp",
+    "gridfireai"
+  ],
+  "inputs": [
+    {
+      "id": "reddit_client_secret",
+      "type": "promptString",
+      "description": "Environment variable for reddit client secret",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "reddit-mcp"
+    ],
+    "env": {
+      "REDDIT_CLIENT_SECRET": "${input:reddit_client_secret}"
+    }
+  }
+}

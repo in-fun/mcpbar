@@ -1,0 +1,26 @@
+{
+  "name": "obsidian-mcp",
+  "version": "1.0.0",
+  "description": "Connecting Obsidian Vaults that are stored in local to AI via the Model Context Protocol (MCP).",
+  "homepage": "https://github.com/YanceyOfficial/obsidian-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YanceyOfficial/obsidian-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "obsidian-mcp",
+    "yanceyofficial"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/obsidian-mcp/build/index.js",
+      "/Users/<USERNAME>/Library/Mobile\\ Documents/iCloud~md~obsidian/Documents/<VAULT_NAME_1>",
+      "/Users/<USERNAME>/Library/Mobile\\ Documents/iCloud~md~obsidian/Documents/<VAULT_NAME_2>"
+    ]
+  }
+}

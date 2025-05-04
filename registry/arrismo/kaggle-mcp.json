@@ -1,0 +1,22 @@
+{
+  "name": "kaggle-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for Kaggle",
+  "homepage": "https://github.com/arrismo/kaggle-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arrismo/kaggle-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "kaggle",
+    "mcp-server",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "kaggle-mcp",
+    "cwd": "<path-to-their-cloned-repo>/kaggle-mcp"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "thingspanel-mcp",
+  "version": "1.0.0",
+  "description": "This MCP server integrates ThingsPanel IoT platform with AI models like Claude, GPT, and others that support the Model Context Protocol. ",
+  "homepage": "https://github.com/ThingsPanel/thingspanel-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ThingsPanel/thingspanel-mcp"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "thingspanel-mcp",
+    "thingspanel"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "thingspanel-mcp",
+    "args": [
+      "--api-key",
+      "Your API Key",
+      "--base-url",
+      "Your Base URL"
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "name": "dioxide-mcp-server",
+  "version": "1.5.1",
+  "description": "MCP server for dioxide-mcp-server",
+  "homepage": "https://github.com/c-rick/dioxide-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/c-rick/dioxide-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "dioxide-mcp-server",
+    "c-rick"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@smithery/cli@latest",
+      "run",
+      "@c-rick/dioxide-mcp-server",
+      "--key",
+      "d7de68fd-ac6d-44c6-a1e8-8c1d3e759cd8"
+    ]
+  }
+}

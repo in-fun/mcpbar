@@ -1,0 +1,36 @@
+{
+  "name": "@tacticlaunch/mcp-linear",
+  "version": "1.0.9",
+  "description": "A Model Context Protocol (MCP) server implementation for the Linear GraphQL API that enables AI assistants to interact with Linear project management systems.",
+  "homepage": "https://github.com/tacticlaunch/mcp-linear",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tacticlaunch/mcp-linear"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude",
+    "cursor",
+    "linear",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "linear_api_token",
+      "type": "promptString",
+      "description": "Environment variable for linear api token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@tacticlaunch/mcp-linear"
+    ],
+    "env": {
+      "LINEAR_API_TOKEN": "<YOUR_TOKEN>"
+    }
+  }
+}

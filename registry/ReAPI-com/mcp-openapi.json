@@ -1,0 +1,31 @@
+{
+  "name": "@reapi/mcp-openapi",
+  "version": "0.0.4",
+  "description": "MCP (Model Context Protocol) server for OpenAPI specifications - loads and serves multiple OpenAPI specs to enable LLM-powered IDE integrations",
+  "homepage": "https://reapi.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ReAPI-com/mcp-openapi"
+  },
+  "license": "MIT",
+  "keywords": [
+    "cline",
+    "cursor",
+    "mcp-server",
+    "openapi",
+    "swagger",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@reapi/mcp-openapi@latest",
+      "--dir",
+      "./specs"
+    ],
+    "env": {}
+  }
+}

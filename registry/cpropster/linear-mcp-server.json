@@ -1,0 +1,57 @@
+{
+  "name": "linear-mcp",
+  "version": "1.0.0",
+  "description": "Model Context Protocol server for Linear",
+  "homepage": "https://github.com/cpropster/linear-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cpropster/linear-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "linear-mcp-server",
+    "cpropster"
+  ],
+  "inputs": [
+    {
+      "id": "linear_client_id",
+      "type": "promptString",
+      "description": "Environment variable for linear client id configuration",
+      "password": false
+    },
+    {
+      "id": "linear_client_secret",
+      "type": "promptString",
+      "description": "Environment variable for linear client secret authentication",
+      "password": true
+    },
+    {
+      "id": "linear_redirect_uri",
+      "type": "promptString",
+      "description": "Environment variable for linear redirect uri configuration",
+      "password": false
+    },
+    {
+      "id": "linear_refresh_token",
+      "type": "promptString",
+      "description": "Environment variable for linear refresh token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "/path/to/linear-mcp-server/build/index.js"
+    ],
+    "env": {
+      "LINEAR_CLIENT_ID": "your-client-id",
+      "LINEAR_CLIENT_SECRET": "your-client-secret",
+      "LINEAR_REDIRECT_URI": "http://localhost:3000/callback",
+      "LINEAR_REFRESH_TOKEN": "your-refresh-token"
+    },
+    "disabled": false,
+    "autoApprove": []
+  }
+}

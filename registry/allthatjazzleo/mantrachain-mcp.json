@@ -1,0 +1,44 @@
+{
+  "name": "mantrachain-mcp",
+  "version": "1.0.4",
+  "description": "Model Context Protocol server for MantraChain (Cosmos SDK)",
+  "homepage": "https://github.com/allthatjazzleo/mantrachain-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/allthatjazzleo/mantrachain-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "blockchain",
+    "cosmos-sdk",
+    "rwa",
+    "mantrachain",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "mnemonic",
+      "type": "promptString",
+      "description": "Environment variable for mnemonic configuration",
+      "password": false
+    },
+    {
+      "id": "custom_networks",
+      "type": "promptString",
+      "description": "Environment variable for custom networks configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mantrachain-mcp@latest"
+    ],
+    "env": {
+      "MNEMONIC": "YOUR_MNEMONIC",
+      "CUSTOM_NETWORKS": "{\"my-custom-net\":{\"rpcEndpoint\":\"https://rpc.custom-network.io\",\"apiEndpoint\":\"https://api.custom-network.io\",\"chainId\":\"my-custom-net-1\",\"prefix\":\"custom\",\"denom\":\"ucustom\",\"gasPrice\":\"0.01\",\"isMainnet\":false}}"
+    }
+  }
+}

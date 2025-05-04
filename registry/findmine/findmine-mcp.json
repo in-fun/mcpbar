@@ -1,0 +1,42 @@
+{
+  "name": "findmine-mcp",
+  "version": "0.1.1",
+  "description": "MCP server for FindMine's styling and outfitting recommendations",
+  "homepage": "https://www.findmine.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/findmine/findmine-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "findmine-mcp",
+    "findmine"
+  ],
+  "inputs": [
+    {
+      "id": "findmine_api_url",
+      "type": "promptString",
+      "description": "Environment variable for findmine api url",
+      "password": false
+    },
+    {
+      "id": "findmine_api",
+      "type": "promptString",
+      "description": "Environment variable for findmine api",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "findmine-mcp"
+    ],
+    "env": {
+      "FINDMINE_API_URL": "${input:findmine_api_url}",
+      "FINDMINE_API": "${input:findmine_api}"
+    }
+  }
+}

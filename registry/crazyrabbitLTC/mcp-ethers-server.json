@@ -1,0 +1,42 @@
+{
+  "name": "mcp-ethers-wallet",
+  "version": "2.0.5",
+  "description": "A Model Context Protocol server for interacting with Ethereum wallets using Ethers.js",
+  "homepage": "https://github.com/crazyrabbitLTC/mcp-ethers-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/crazyrabbitLTC/mcp-ethers-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-ethers-server",
+    "crazyrabbitltc"
+  ],
+  "inputs": [
+    {
+      "id": "alchemy_api_key",
+      "type": "promptString",
+      "description": "Environment variable for alchemy api key",
+      "password": true
+    },
+    {
+      "id": "infura_api_key",
+      "type": "promptString",
+      "description": "Environment variable for infura api key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-ethers-wallet"
+    ],
+    "env": {
+      "ALCHEMY_API_KEY": "${input:alchemy_api_key}",
+      "INFURA_API_KEY": "${input:infura_api_key}"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "name": "@jasontanswe/railway-mcp",
+  "version": "1.2.1",
+  "description": "Model Context Protocol server for Railway.app - Enables AI agents to manage Railway infrastructure through natural language",
+  "homepage": "https://smithery.ai/server/@jason-tan-swe/railway-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jason-tan-swe/railway-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude",
+    "cursor",
+    "model-context-protocol",
+    "railway",
+    "railway-app",
+    "windsurf",
+    "mcp"
+  ],
+  "inputs": [
+    {
+      "id": "railway_api_token",
+      "type": "promptString",
+      "description": "Environment variable for railway api token",
+      "password": true
+    },
+    {
+      "id": "your_api_token",
+      "type": "promptString",
+      "description": "Environment variable for your api token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@jasontanswe/railway-mcp"
+    ],
+    "env": {
+      "RAILWAY_API_TOKEN": "${input:railway_api_token}",
+      "YOUR_API_TOKEN": "${input:your_api_token}"
+    }
+  }
+}

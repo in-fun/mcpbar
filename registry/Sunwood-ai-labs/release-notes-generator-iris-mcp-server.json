@@ -1,0 +1,26 @@
+{
+  "name": "@sunwood-ai-labs/iris-mcp-server",
+  "version": "0.1.0",
+  "description": "リリースノート生成のためのMCPサーバー",
+  "homepage": "https://github.com/Sunwood-ai-labs/release-notes-generator-iris-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sunwood-ai-labs/release-notes-generator-iris-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "release-notes-generator-iris-mcp-server",
+    "sunwood-ai-labs"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@sunwood-ai-labs/iris-mcp-server"
+    ],
+    "env": {}
+  }
+}

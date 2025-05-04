@@ -1,0 +1,62 @@
+{
+  "name": "mcp-server-iris",
+  "version": "1.0.0",
+  "description": "InterSystems IRIS MCP server",
+  "homepage": "https://pypi.org/project/mcp-server-iris/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/caretdev/mcp-server-iris"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-iris",
+    "caretdev"
+  ],
+  "inputs": [
+    {
+      "id": "iris_hostname",
+      "type": "promptString",
+      "description": "Environment variable for iris hostname configuration",
+      "password": false
+    },
+    {
+      "id": "iris_port",
+      "type": "promptString",
+      "description": "Environment variable for iris port configuration",
+      "password": false
+    },
+    {
+      "id": "iris_namespace",
+      "type": "promptString",
+      "description": "Environment variable for iris namespace configuration",
+      "password": false
+    },
+    {
+      "id": "iris_username",
+      "type": "promptString",
+      "description": "Environment variable for iris username configuration",
+      "password": false
+    },
+    {
+      "id": "iris_password",
+      "type": "promptString",
+      "description": "Environment variable for iris password authentication",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-server-iris"
+    ],
+    "env": {
+      "IRIS_HOSTNAME": "localhost",
+      "IRIS_PORT": "1972",
+      "IRIS_NAMESPACE": "USER",
+      "IRIS_USERNAME": "_SYSTEM",
+      "IRIS_PASSWORD": "SYS"
+    }
+  }
+}

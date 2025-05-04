@@ -1,0 +1,25 @@
+{
+  "name": "mcp-server-docker",
+  "version": "1.0.0",
+  "description": "MCP server for Docker",
+  "homepage": "https://github.com/ckreiling/mcp-server-docker",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ckreiling/mcp-server-docker"
+  },
+  "license": "GPL-3.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-docker",
+    "ckreiling"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-server-docker"
+    ],
+    "env": {}
+  }
+}

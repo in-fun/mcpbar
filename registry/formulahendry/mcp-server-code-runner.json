@@ -1,0 +1,27 @@
+{
+  "name": "mcp-server-code-runner",
+  "version": "0.1.7",
+  "description": "Code Runner MCP Server",
+  "homepage": "https://www.npmjs.com/package/mcp-server-code-runner",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/formulahendry/mcp-server-code-runner"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-code-runner",
+    "formulahendry"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "docker",
+    "args": [
+      "run",
+      "--rm",
+      "-i",
+      "formulahendry/mcp-server-code-runner"
+    ]
+  }
+}

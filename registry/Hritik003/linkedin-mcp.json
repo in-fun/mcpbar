@@ -1,0 +1,25 @@
+{
+  "name": "linkedin-mcp",
+  "version": "1.0.0",
+  "description": "A MCP server for LinkedIn to seamlessly apply for jobs🚀",
+  "homepage": "https://github.com/Hritik003/linkedin-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hritik003/linkedin-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "linkedin-mcp",
+    "hritik003"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "linkedin-mcp"
+    ],
+    "env": {}
+  }
+}

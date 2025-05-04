@@ -1,0 +1,35 @@
+{
+  "name": "tfnsw-realtime-alerts-mcp-server",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol server for Transport for NSW's (TfNSW) Realtime Alerts API",
+  "homepage": "https://github.com/piddlingtuna/tfnsw-realtime-alerts-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/piddlingtuna/tfnsw-realtime-alerts-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "tfnsw-realtime-alerts-mcp-server",
+    "piddlingtuna"
+  ],
+  "inputs": [
+    {
+      "id": "nsw_transport_api_key",
+      "type": "promptString",
+      "description": "Environment variable for nsw transport api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "tfnsw-realtime-alerts-mcp-server"
+    ],
+    "env": {
+      "NSW_TRANSPORT_API_KEY": "your_api_key_here"
+    }
+  }
+}

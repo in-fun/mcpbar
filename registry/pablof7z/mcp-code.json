@@ -1,0 +1,26 @@
+{
+  "name": "mcp-code",
+  "version": "0.2.0",
+  "description": "MCP code snippets assistant",
+  "homepage": "https://github.com/pablof7z/mcp-code",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pablof7z/mcp-code"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-code",
+    "pablof7z"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-code"
+    ],
+    "env": {}
+  }
+}

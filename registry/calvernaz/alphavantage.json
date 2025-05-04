@@ -1,0 +1,37 @@
+{
+  "name": "alphavantage",
+  "version": "1.0.0",
+  "description": "A MCP server for the stock market data API, Alphavantage API.",
+  "homepage": "https://github.com/calvernaz/alphavantage",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/calvernaz/alphavantage"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "alphavantage",
+    "calvernaz"
+  ],
+  "inputs": [
+    {
+      "id": "alphavantage_api_key",
+      "type": "promptString",
+      "description": "Environment variable for alphavantage api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "<DIRECTORY-OF-CLONED-PROJECT>/alphavantage",
+      "run",
+      "alphavantage"
+    ],
+    "env": {
+      "ALPHAVANTAGE_API_KEY": "YOUR_API_KEY_HERE"
+    }
+  }
+}

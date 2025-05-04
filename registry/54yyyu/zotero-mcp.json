@@ -1,0 +1,31 @@
+{
+  "name": "zotero-mcp",
+  "version": "1.0.0",
+  "description": "Zotero MCP: Connects your Zotero research library with Claude and other AI assistants via the Model Context Protocol to discuss papers, get summaries, analyze citations, and more.",
+  "homepage": "http://stevenyuyy.us/zotero-mcp/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/54yyyu/zotero-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "claude",
+    "mcp",
+    "zotero",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "zotero_local",
+      "type": "promptString",
+      "description": "Environment variable for zotero local configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "zotero-mcp",
+    "env": {
+      "ZOTERO_LOCAL": "true"
+    }
+  }
+}

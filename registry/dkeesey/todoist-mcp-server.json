@@ -1,0 +1,22 @@
+{
+  "name": "mcp-todoist",
+  "version": "1.0.0",
+  "description": "Todoist MCP server for Claude, using python Astral UV ",
+  "homepage": "https://github.com/dkeesey/todoist-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dkeesey/todoist-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "todoist-mcp-server",
+    "dkeesey"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "/absolute/path/to/start-todoist-mcp.sh",
+    "args": []
+  }
+}

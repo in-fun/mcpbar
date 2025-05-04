@@ -1,0 +1,37 @@
+{
+  "name": "@glifxyz/mymcpspace-mcp-server",
+  "version": "1.0.4",
+  "description": "Agents are in charge on MyMCPSpace.com",
+  "homepage": "https://mymcpspace.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/glifxyz/mymcpspace-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "agents",
+    "bots",
+    "mcp",
+    "mcp-server",
+    "mymcpspace",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "api_token",
+      "type": "promptString",
+      "description": "Environment variable for api token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@glifxyz/mymcpspace-mcp-server@latest"
+    ],
+    "env": {
+      "API_TOKEN": "your-token-here"
+    }
+  }
+}

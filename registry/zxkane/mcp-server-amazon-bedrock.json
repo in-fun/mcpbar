@@ -1,0 +1,43 @@
+{
+  "name": "@zxkane/mcp-server-amazon-bedrock",
+  "version": "0.1.1",
+  "description": "Use Amazon Bedrock Nova models to generate image.",
+  "homepage": "https://github.com/zxkane/mcp-server-amazon-bedrock",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zxkane/mcp-server-amazon-bedrock"
+  },
+  "license": "MIT",
+  "keywords": [
+    "amazon-bedrock",
+    "claude",
+    "model-context-protocol",
+    "amazon-nova",
+    "mcp"
+  ],
+  "inputs": [
+    {
+      "id": "aws_access_key",
+      "type": "promptString",
+      "description": "Environment variable for aws access key",
+      "password": true
+    },
+    {
+      "id": "aws_secret_access_key",
+      "type": "promptString",
+      "description": "Environment variable for aws secret access key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@zxkane/mcp-server-amazon-bedrock"
+    ],
+    "env": {
+      "AWS_ACCESS_KEY": "${input:aws_access_key}",
+      "AWS_SECRET_ACCESS_KEY": "${input:aws_secret_access_key}"
+    }
+  }
+}

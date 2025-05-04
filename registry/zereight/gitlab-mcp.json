@@ -1,0 +1,56 @@
+{
+  "name": "@zereight/mcp-gitlab",
+  "version": "1.0.33",
+  "description": "MCP server for using the GitLab API",
+  "homepage": "https://github.com/zereight/gitlab-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zereight/gitlab-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "gitlab-mcp",
+    "zereight"
+  ],
+  "inputs": [
+    {
+      "id": "gitlab_personal_access_token",
+      "type": "promptString",
+      "description": "Environment variable for gitlab personal access token authentication",
+      "password": true
+    },
+    {
+      "id": "gitlab_api_url",
+      "type": "promptString",
+      "description": "Environment variable for gitlab api url configuration",
+      "password": false
+    },
+    {
+      "id": "gitlab_read_only_mode",
+      "type": "promptString",
+      "description": "Environment variable for gitlab read only mode configuration",
+      "password": false
+    },
+    {
+      "id": "use_gitlab_wiki",
+      "type": "promptString",
+      "description": "Environment variable for use gitlab wiki configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@zereight/mcp-gitlab"
+    ],
+    "env": {
+      "GITLAB_PERSONAL_ACCESS_TOKEN": "your_gitlab_token",
+      "GITLAB_API_URL": "your_gitlab_api_url",
+      "GITLAB_READ_ONLY_MODE": "false",
+      "USE_GITLAB_WIKI": "true"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "cryptonewsmcp",
+  "version": "1.0.0",
+  "description": "MCP server for crypto-news-mcp",
+  "homepage": "https://github.com/narumiruna/crypto-news-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/narumiruna/crypto-news-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "crypto-news-mcp",
+    "narumiruna"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "docker",
+    "args": [
+      "run",
+      "-i",
+      "--rm",
+      "narumi/crypto-news-mcp"
+    ]
+  }
+}

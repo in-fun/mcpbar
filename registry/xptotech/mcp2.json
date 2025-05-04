@@ -1,0 +1,26 @@
+{
+  "name": "mysql-mcp-connect",
+  "version": "0.1.1",
+  "description": "MySQL MCP 서버 - Model Context Protocol로 MySQL 데이터베이스에 접근하는 도구",
+  "homepage": "https://github.com/xptotech/mcp2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xptotech/mcp2"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp2",
+    "xptotech"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mysql-mcp-connect"
+    ],
+    "env": {}
+  }
+}

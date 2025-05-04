@@ -1,0 +1,48 @@
+{
+  "name": "freqtrade-mcp",
+  "version": "1.0.0",
+  "description": "An MCP server that integrates with the Freqtrade cryptocurrency trading bot.",
+  "homepage": "https://github.com/kukapay/freqtrade-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kukapay/freqtrade-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "freqtrade-mcp",
+    "kukapay"
+  ],
+  "inputs": [
+    {
+      "id": "freqtrade_api_url",
+      "type": "promptString",
+      "description": "Environment variable for freqtrade api url",
+      "password": false
+    },
+    {
+      "id": "freqtrade_user",
+      "type": "promptString",
+      "description": "Environment variable for freqtrade user",
+      "password": false
+    },
+    {
+      "id": "freqtrade_pass",
+      "type": "promptString",
+      "description": "Environment variable for freqtrade pass",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "freqtrade-mcp"
+    ],
+    "env": {
+      "FREQTRADE_API_URL": "${input:freqtrade_api_url}",
+      "FREQTRADE_USER": "${input:freqtrade_user}",
+      "FREQTRADE_PASS": "${input:freqtrade_pass}"
+    }
+  }
+}

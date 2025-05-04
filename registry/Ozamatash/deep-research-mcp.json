@@ -1,0 +1,49 @@
+{
+  "name": "open-deep-research",
+  "version": "0.0.1",
+  "description": "MCP server for deep-research-mcp",
+  "homepage": "https://github.com/Ozamatash/deep-research-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ozamatash/deep-research-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "deep-research-mcp",
+    "ozamatash"
+  ],
+  "inputs": [
+    {
+      "id": "firecrawl_base_url",
+      "type": "promptString",
+      "description": "Environment variable for firecrawl base url",
+      "password": false
+    },
+    {
+      "id": "langfuse_public_key",
+      "type": "promptString",
+      "description": "Environment variable for langfuse public key",
+      "password": true
+    },
+    {
+      "id": "langfuse_secret_key",
+      "type": "promptString",
+      "description": "Environment variable for langfuse secret key",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "open-deep-research"
+    ],
+    "env": {
+      "FIRECRAWL_BASE_URL": "${input:firecrawl_base_url}",
+      "LANGFUSE_PUBLIC_KEY": "${input:langfuse_public_key}",
+      "LANGFUSE_SECRET_KEY": "${input:langfuse_secret_key}"
+    }
+  }
+}

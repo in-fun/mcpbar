@@ -1,0 +1,35 @@
+{
+  "name": "@ivotoby/contentful-management-mcp-server",
+  "version": "0.1.4",
+  "description": "MCP server for Contentful Content Management API integration",
+  "homepage": "https://github.com/ivo-toby/contentful-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ivo-toby/contentful-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "contentful-mcp",
+    "ivo-toby"
+  ],
+  "inputs": [
+    {
+      "id": "contentful_management_access_token",
+      "type": "promptString",
+      "description": "Environment variable for contentful management access token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@ivotoby/contentful-management-mcp-server"
+    ],
+    "env": {
+      "CONTENTFUL_MANAGEMENT_ACCESS_TOKEN": "<Your CMA token>"
+    }
+  }
+}

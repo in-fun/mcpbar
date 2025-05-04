@@ -1,0 +1,139 @@
+{
+  "name": "mcp_server_browser_use",
+  "version": "1.0.0",
+  "description": "MCP server for mcp-browser-use",
+  "homepage": "https://github.com/wenpingwu001/mcp-browser-use",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wenpingwu001/mcp-browser-use"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-browser-use",
+    "wenpingwu001"
+  ],
+  "inputs": [
+    {
+      "id": "openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openai api key",
+      "password": true
+    },
+    {
+      "id": "your_key",
+      "type": "promptString",
+      "description": "Environment variable for your key",
+      "password": true
+    },
+    {
+      "id": "anthropic_api_key",
+      "type": "promptString",
+      "description": "Environment variable for anthropic api key",
+      "password": true
+    },
+    {
+      "id": "mcp_max_input_token",
+      "type": "promptString",
+      "description": "Environment variable for mcp max input token",
+      "password": true
+    },
+    {
+      "id": "mcp_base_url",
+      "type": "promptString",
+      "description": "Environment variable for mcp base url",
+      "password": false
+    },
+    {
+      "id": "mcp_api_key",
+      "type": "promptString",
+      "description": "Environment variable for mcp api key",
+      "password": true
+    },
+    {
+      "id": "google_api_key",
+      "type": "promptString",
+      "description": "Environment variable for google api key",
+      "password": true
+    },
+    {
+      "id": "azure_openai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for azure openai api key",
+      "password": true
+    },
+    {
+      "id": "deepseek_api_key",
+      "type": "promptString",
+      "description": "Environment variable for deepseek api key",
+      "password": true
+    },
+    {
+      "id": "mistral_api_key",
+      "type": "promptString",
+      "description": "Environment variable for mistral api key",
+      "password": true
+    },
+    {
+      "id": "openrouter_api_key",
+      "type": "promptString",
+      "description": "Environment variable for openrouter api key",
+      "password": true
+    },
+    {
+      "id": "alibaba_api_key",
+      "type": "promptString",
+      "description": "Environment variable for alibaba api key",
+      "password": true
+    },
+    {
+      "id": "moonshot_api_key",
+      "type": "promptString",
+      "description": "Environment variable for moonshot api key",
+      "password": true
+    },
+    {
+      "id": "unbound_api_key",
+      "type": "promptString",
+      "description": "Environment variable for unbound api key",
+      "password": true
+    },
+    {
+      "id": "azure_openai_api",
+      "type": "promptString",
+      "description": "Environment variable for azure openai api",
+      "password": false
+    },
+    {
+      "id": "chrome_user",
+      "type": "promptString",
+      "description": "Environment variable for chrome user",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp_server_browser_use"
+    ],
+    "env": {
+      "OPENAI_API_KEY": "${input:openai_api_key}",
+      "YOUR_KEY": "${input:your_key}",
+      "ANTHROPIC_API_KEY": "${input:anthropic_api_key}",
+      "MCP_MAX_INPUT_TOKEN": "${input:mcp_max_input_token}",
+      "MCP_BASE_URL": "${input:mcp_base_url}",
+      "MCP_API_KEY": "${input:mcp_api_key}",
+      "GOOGLE_API_KEY": "${input:google_api_key}",
+      "AZURE_OPENAI_API_KEY": "${input:azure_openai_api_key}",
+      "DEEPSEEK_API_KEY": "${input:deepseek_api_key}",
+      "MISTRAL_API_KEY": "${input:mistral_api_key}",
+      "OPENROUTER_API_KEY": "${input:openrouter_api_key}",
+      "ALIBABA_API_KEY": "${input:alibaba_api_key}",
+      "MOONSHOT_API_KEY": "${input:moonshot_api_key}",
+      "UNBOUND_API_KEY": "${input:unbound_api_key}",
+      "AZURE_OPENAI_API": "${input:azure_openai_api}",
+      "CHROME_USER": "${input:chrome_user}"
+    }
+  }
+}

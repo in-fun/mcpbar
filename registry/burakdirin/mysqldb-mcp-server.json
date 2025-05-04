@@ -1,0 +1,65 @@
+{
+  "name": "mysqldb-mcp-server",
+  "version": "1.0.0",
+  "description": "An MCP server implementation that enables Claude AI to interact with MySQL databases.",
+  "homepage": "https://github.com/burakdirin/mysqldb-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/burakdirin/mysqldb-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mysqldb-mcp-server",
+    "burakdirin"
+  ],
+  "inputs": [
+    {
+      "id": "mysql_host",
+      "type": "promptString",
+      "description": "Environment variable for mysql host configuration",
+      "password": false
+    },
+    {
+      "id": "mysql_user",
+      "type": "promptString",
+      "description": "Environment variable for mysql user configuration",
+      "password": false
+    },
+    {
+      "id": "mysql_password",
+      "type": "promptString",
+      "description": "Environment variable for mysql password authentication",
+      "password": false
+    },
+    {
+      "id": "mysql_database",
+      "type": "promptString",
+      "description": "Environment variable for mysql database configuration",
+      "password": false
+    },
+    {
+      "id": "mysql_readonly",
+      "type": "promptString",
+      "description": "Environment variable for mysql readonly configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "/Users/burakdirin/Projects/mysqldb-mcp-server",
+      "run",
+      "mysqldb-mcp-server"
+    ],
+    "env": {
+      "MYSQL_HOST": "localhost",
+      "MYSQL_USER": "root",
+      "MYSQL_PASSWORD": "password",
+      "MYSQL_DATABASE": "[optional]",
+      "MYSQL_READONLY": "true"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "rplayground-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for r-playground-mcp",
+  "homepage": "https://github.com/zygi/r-playground-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zygi/r-playground-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "r-playground-mcp",
+    "zygi"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "rplayground-mcp"
+    ],
+    "env": {}
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "name": "mcp-graphql",
+  "version": "2.0.1",
+  "description": "Model Context Protocol server for GraphQL",
+  "homepage": "https://github.com/blurrah/mcp-graphql",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/blurrah/mcp-graphql"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "llm",
+    "mcp",
+    "mcp-server",
+    "modelcontextprotocol",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "endpoint",
+      "type": "promptString",
+      "description": "Environment variable for endpoint configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "mcp-graphql"
+    ],
+    "env": {
+      "ENDPOINT": "http://localhost:3000/graphql"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "name": "mcp-quickstart-ts",
+  "version": "1.0.0",
+  "description": "MCP Server enabling LLM Agents to interact with Gel databases",
+  "homepage": "https://github.com/christian561/gel-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/christian561/gel-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "gel-mcp-server",
+    "christian561"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-quickstart-ts"
+    ],
+    "env": {}
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "name": "mcp-jinaai-grounding",
+  "version": "0.0.2",
+  "description": "MCP server for JinaAI grounding",
+  "homepage": "https://github.com/spences10/mcp-jinaai-grounding",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/spences10/mcp-jinaai-grounding"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-jinaai-grounding",
+    "spences10"
+  ],
+  "inputs": [
+    {
+      "id": "jinaai_api_key",
+      "type": "promptString",
+      "description": "Environment variable for jinaai api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "-y",
+      "mcp-jinaai-grounding"
+    ],
+    "env": {
+      "JINAAI_API_KEY": "your-jinaai-api-key"
+    }
+  }
+}

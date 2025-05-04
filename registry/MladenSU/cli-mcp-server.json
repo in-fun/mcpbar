@@ -1,0 +1,72 @@
+{
+  "name": "cli-mcp-server",
+  "version": "1.0.0",
+  "description": "Command line interface for MCP clients with secure execution and customizable security policies",
+  "homepage": "https://github.com/MladenSU/cli-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MladenSU/cli-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "cli-mcp-server",
+    "mladensu"
+  ],
+  "inputs": [
+    {
+      "id": "allowed_dir",
+      "type": "promptString",
+      "description": "Environment variable for allowed dir configuration",
+      "password": false
+    },
+    {
+      "id": "allowed_commands",
+      "type": "promptString",
+      "description": "Environment variable for allowed commands configuration",
+      "password": false
+    },
+    {
+      "id": "allowed_flags",
+      "type": "promptString",
+      "description": "Environment variable for allowed flags configuration",
+      "password": false
+    },
+    {
+      "id": "max_command_length",
+      "type": "promptString",
+      "description": "Environment variable for max command length configuration",
+      "password": false
+    },
+    {
+      "id": "command_timeout",
+      "type": "promptString",
+      "description": "Environment variable for command timeout configuration",
+      "password": false
+    },
+    {
+      "id": "allow_shell_operators",
+      "type": "promptString",
+      "description": "Environment variable for allow shell operators configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uv",
+    "args": [
+      "--directory",
+      "<path/to/the/repo>/cli-mcp-server",
+      "run",
+      "cli-mcp-server"
+    ],
+    "env": {
+      "ALLOWED_DIR": "</your/desired/dir>",
+      "ALLOWED_COMMANDS": "ls,cat,pwd,echo",
+      "ALLOWED_FLAGS": "-l,-a,--help,--version",
+      "MAX_COMMAND_LENGTH": "1024",
+      "COMMAND_TIMEOUT": "30",
+      "ALLOW_SHELL_OPERATORS": "false"
+    }
+  }
+}

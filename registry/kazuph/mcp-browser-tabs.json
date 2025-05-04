@@ -1,0 +1,26 @@
+{
+  "name": "@kazuph/mcp-browser-tabs",
+  "version": "1.1.1",
+  "description": "MCP server for retrieving Chrome browser tabs information",
+  "homepage": "https://github.com/kazuph/mcp-browser-tabs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kazuph/mcp-browser-tabs"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-browser-tabs",
+    "kazuph"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@kazuph/mcp-browser-tabs"
+    ],
+    "env": {}
+  }
+}

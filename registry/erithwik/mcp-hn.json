@@ -1,0 +1,24 @@
+{
+  "name": "mcp-hn",
+  "version": "1.0.0",
+  "description": "MCP Server for Hackernews",
+  "homepage": "https://github.com/erithwik/mcp-hn",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/erithwik/mcp-hn"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-hn",
+    "erithwik"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-hn"
+    ]
+  }
+}

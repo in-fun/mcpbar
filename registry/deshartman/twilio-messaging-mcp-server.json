@@ -1,0 +1,70 @@
+{
+  "name": "@deshartman/twilio-messaging-mcp-server",
+  "version": "0.2.0",
+  "description": "Twilio Messaging MCP Server example with Tools, Resources and Prompts. Includes callback handling",
+  "homepage": "https://github.com/deshartman/twilio-messaging-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deshartman/twilio-messaging-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "twilio-messaging-mcp-server",
+    "deshartman"
+  ],
+  "inputs": [
+    {
+      "id": "ngrok_auth_token",
+      "type": "promptString",
+      "description": "Environment variable for ngrok auth token",
+      "password": true
+    },
+    {
+      "id": "api_key",
+      "type": "promptString",
+      "description": "Environment variable for api key",
+      "password": true
+    },
+    {
+      "id": "your_api_key",
+      "type": "promptString",
+      "description": "Environment variable for your api key",
+      "password": true
+    },
+    {
+      "id": "api_secret",
+      "type": "promptString",
+      "description": "Environment variable for api secret",
+      "password": true
+    },
+    {
+      "id": "your_api_secret",
+      "type": "promptString",
+      "description": "Environment variable for your api secret",
+      "password": true
+    },
+    {
+      "id": "your_ngrok_auth_token",
+      "type": "promptString",
+      "description": "Environment variable for your ngrok auth token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@deshartman/twilio-messaging-mcp-server"
+    ],
+    "env": {
+      "NGROK_AUTH_TOKEN": "${input:ngrok_auth_token}",
+      "API_KEY": "${input:api_key}",
+      "YOUR_API_KEY": "${input:your_api_key}",
+      "API_SECRET": "${input:api_secret}",
+      "YOUR_API_SECRET": "${input:your_api_secret}",
+      "YOUR_NGROK_AUTH_TOKEN": "${input:your_ngrok_auth_token}"
+    }
+  }
+}

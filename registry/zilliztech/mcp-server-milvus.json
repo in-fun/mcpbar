@@ -1,0 +1,29 @@
+{
+  "name": "mcp-server-milvus",
+  "version": "1.0.0",
+  "description": "Model Context Protocol Servers for Milvus",
+  "homepage": "https://github.com/zilliztech/mcp-server-milvus",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zilliztech/mcp-server-milvus"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-server-milvus",
+    "zilliztech"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "/PATH/TO/uv",
+    "args": [
+      "--directory",
+      "/path/to/mcp-server-milvus/src/mcp_server_milvus",
+      "run",
+      "server.py",
+      "--milvus-uri",
+      "http://localhost:19530"
+    ]
+  }
+}

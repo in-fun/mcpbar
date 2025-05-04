@@ -1,0 +1,32 @@
+{
+  "name": "@allpepper/memory-bank-mcp",
+  "version": "0.2.1",
+  "description": "MCP server for remote management of project memory banks",
+  "homepage": "https://www.npmjs.com/package/@allpepper/memory-bank-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alioshr/memory-bank-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "antrophic",
+    "claude",
+    "cline",
+    "cursor",
+    "mcp-server",
+    "model-context-protocol",
+    "windsurf",
+    "memory-bank",
+    "cline-memory-bank",
+    "mcp"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "@allpepper/memory-bank-mcp"
+    ],
+    "env": {}
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "name": "mcp-trino-python",
+  "version": "1.0.0",
+  "description": "MCP Server for Trino developed via MCP Python SDK",
+  "homepage": "https://github.com/alaturqua/mcp-trino-python",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alaturqua/mcp-trino-python"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-trino-python",
+    "alaturqua"
+  ],
+  "inputs": [
+    {
+      "id": "trino_host",
+      "type": "promptString",
+      "description": "Environment variable for trino host configuration",
+      "password": false
+    },
+    {
+      "id": "trino_port",
+      "type": "promptString",
+      "description": "Environment variable for trino port configuration",
+      "password": false
+    },
+    {
+      "id": "trino_user",
+      "type": "promptString",
+      "description": "Environment variable for trino user configuration",
+      "password": false
+    },
+    {
+      "id": "trino_password",
+      "type": "promptString",
+      "description": "Environment variable for trino password authentication",
+      "password": false
+    },
+    {
+      "id": "trino_http_scheme",
+      "type": "promptString",
+      "description": "Environment variable for trino http scheme configuration",
+      "password": false
+    },
+    {
+      "id": "trino_catalog",
+      "type": "promptString",
+      "description": "Environment variable for trino catalog configuration",
+      "password": false
+    },
+    {
+      "id": "trino_schema",
+      "type": "promptString",
+      "description": "Environment variable for trino schema configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "docker",
+    "args": [
+      "run",
+      "--rm",
+      "ghcr.io/alaturqua/mcp-trino-python:latest"
+    ],
+    "env": {
+      "TRINO_HOST": "${input:trino_host}",
+      "TRINO_PORT": "${input:trino_port}",
+      "TRINO_USER": "${input:trino_user}",
+      "TRINO_PASSWORD": "${input:trino_password}",
+      "TRINO_HTTP_SCHEME": "${input:trino_http_scheme}",
+      "TRINO_CATALOG": "${input:trino_catalog}",
+      "TRINO_SCHEMA": "${input:trino_schema}"
+    }
+  }
+}

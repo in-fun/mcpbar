@@ -1,0 +1,35 @@
+{
+  "name": "scrapeless-mcp-server",
+  "version": "0.2.0",
+  "description": "Scrapeless Mcp Server",
+  "homepage": "https://github.com/scrapeless-ai/scrapeless-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/scrapeless-ai/scrapeless-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "scrapeless-mcp-server",
+    "scrapeless-ai"
+  ],
+  "inputs": [
+    {
+      "id": "scrapeless_key",
+      "type": "promptString",
+      "description": "Environment variable for scrapeless key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "scrapeless-mcp-server"
+    ],
+    "env": {
+      "SCRAPELESS_KEY": "YOUR_SCRAPELESS_KEY"
+    }
+  }
+}

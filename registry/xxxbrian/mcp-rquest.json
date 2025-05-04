@@ -1,0 +1,26 @@
+{
+  "name": "mcp-rquest",
+  "version": "1.0.0",
+  "description": "A MCP server providing realistic browser-like HTTP request capabilities with accurate TLS/JA3/JA4 fingerprints for bypassing anti-bot measures. It also supports converting PDF and HTML documents to Markdown for easier processing by LLMs.",
+  "homepage": "https://pypi.org/project/mcp-rquest",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xxxbrian/mcp-rquest"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai",
+    "claude",
+    "http-requests",
+    "mcp",
+    "mcp-server",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-rquest"
+    ]
+  }
+}

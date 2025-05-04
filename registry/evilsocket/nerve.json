@@ -1,0 +1,30 @@
+{
+  "name": "nerve-adk",
+  "version": "1.0.0",
+  "description": "The Simple Agent Development Kit.",
+  "homepage": "https://github.com/evilsocket/nerve",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/evilsocket/nerve"
+  },
+  "license": "NOASSERTION",
+  "keywords": [
+    "agent-based-modeling",
+    "agents",
+    "llm",
+    "ai",
+    "adk",
+    "agent-development-kit",
+    "mcp",
+    "mcp-client",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "nerve-adk"
+    ],
+    "env": {}
+  }
+}

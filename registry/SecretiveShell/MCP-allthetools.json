@@ -1,0 +1,25 @@
+{
+  "name": "mcp-allthetools",
+  "version": "1.0.0",
+  "description": "test server for semantic tool search",
+  "homepage": "https://github.com/SecretiveShell/MCP-allthetools",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SecretiveShell/MCP-allthetools"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-allthetools",
+    "secretiveshell"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-allthetools"
+    ],
+    "env": {}
+  }
+}

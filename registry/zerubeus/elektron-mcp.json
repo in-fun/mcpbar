@@ -1,0 +1,25 @@
+{
+  "name": "elektron-mcp",
+  "version": "1.0.0",
+  "description": "MCP sever for controlling Elektron devices using LLMs",
+  "homepage": "https://github.com/zerubeus/elektron-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zerubeus/elektron-mcp"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "generative-ai",
+    "llm",
+    "mcp",
+    "python",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "elektron-mcp"
+    ]
+  }
+}

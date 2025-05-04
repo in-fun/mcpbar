@@ -1,0 +1,48 @@
+{
+  "name": "jira-mcp-server",
+  "version": "0.1.0",
+  "description": "Model Context Protocol (MCP) Server for Jira integration",
+  "homepage": "https://github.com/samuelrizzo/jira-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/samuelrizzo/jira-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "jira-mcp-server",
+    "samuelrizzo"
+  ],
+  "inputs": [
+    {
+      "id": "jira_host",
+      "type": "promptString",
+      "description": "Environment variable for jira host configuration",
+      "password": false
+    },
+    {
+      "id": "jira_email",
+      "type": "promptString",
+      "description": "Environment variable for jira email configuration",
+      "password": false
+    },
+    {
+      "id": "jira_api_token",
+      "type": "promptString",
+      "description": "Environment variable for jira api token authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "node",
+    "args": [
+      "./dist/index.js"
+    ],
+    "env": {
+      "JIRA_HOST": "your-domain.atlassian.net",
+      "JIRA_EMAIL": "your-email@example.com",
+      "JIRA_API_TOKEN": "your-api-token-here"
+    }
+  }
+}

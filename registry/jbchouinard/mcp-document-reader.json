@@ -1,0 +1,27 @@
+{
+  "name": "mcp-document-reader",
+  "version": "1.0.0",
+  "description": "MCP tool for LLM interaction with EPUB and PDF files.",
+  "homepage": "https://github.com/jbchouinard/mcp-document-reader",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jbchouinard/mcp-document-reader"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-document-reader",
+    "jbchouinard"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "poetry",
+    "args": [
+      "-C",
+      "path/to/mcp-document-reader",
+      "run",
+      "mcp-document-reader"
+    ]
+  }
+}

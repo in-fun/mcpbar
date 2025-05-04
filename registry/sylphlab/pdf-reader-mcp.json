@@ -1,0 +1,32 @@
+{
+  "name": "@sylphlab/pdf-reader-mcp",
+  "version": "0.3.24",
+  "description": "An MCP server providing tools to read PDF files.",
+  "homepage": "https://github.com/sylphlab/pdf-reader-mcp",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sylphlab/pdf-reader-mcp"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai-agent",
+    "llm-tool",
+    "mcp",
+    "model-content-protocol",
+    "nodejs",
+    "pdf",
+    "pdf-parse",
+    "pdf-parser",
+    "pdf-reader",
+    "stdio",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "@sylphlab/pdf-reader-mcp"
+    ],
+    "name": "PDF Reader (npx)"
+  }
+}

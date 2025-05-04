@@ -1,0 +1,31 @@
+{
+  "name": "mcp-typescribe",
+  "version": "0.7.3",
+  "description": "An MCP server that answers questions about TypeScript APIs using TypeDoc JSON documentation",
+  "homepage": "https://github.com/yWorks/mcp-typescribe",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yWorks/mcp-typescribe"
+  },
+  "license": "MIT",
+  "keywords": [
+    "api",
+    "llm",
+    "mcp-server",
+    "typedoc",
+    "typescript",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-typescribe@latest",
+      "run-server",
+      "<PATH_TO_API_DOT_JSON>"
+    ],
+    "env": {}
+  }
+}

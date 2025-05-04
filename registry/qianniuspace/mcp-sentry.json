@@ -1,0 +1,35 @@
+{
+  "name": "mcp-sentry",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol server for retrieving and analyzing issues from Sentry.io",
+  "homepage": "https://mcpdirs.com/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qianniuspace/mcp-sentry"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "python",
+    "sentry",
+    "model-context-protocol"
+  ],
+  "inputs": [
+    {
+      "id": "your_sentry_token",
+      "type": "promptString",
+      "description": "Environment variable for your sentry token",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-sentry"
+    ],
+    "env": {
+      "YOUR_SENTRY_TOKEN": "${input:your_sentry_token}"
+    }
+  }
+}

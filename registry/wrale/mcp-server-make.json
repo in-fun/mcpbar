@@ -1,0 +1,36 @@
+{
+  "name": "mcp-server-make",
+  "version": "1.0.0",
+  "description": "MCP Server for GNU Make",
+  "homepage": "https://github.com/wrale/mcp-server-make",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wrale/mcp-server-make"
+  },
+  "license": "MIT",
+  "keywords": [
+    "ai-assistant",
+    "build-system",
+    "build-tools",
+    "claude",
+    "claude-ai",
+    "claude-desktop",
+    "coding-assistant",
+    "gnu-make",
+    "make",
+    "makefiles",
+    "mcp",
+    "model-context-protocol"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-server-make",
+      "--make-path",
+      "/absolute/path/to/Makefile",
+      "--working-dir",
+      "/absolute/path/to/working/dir"
+    ]
+  }
+}

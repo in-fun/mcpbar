@@ -1,0 +1,39 @@
+{
+  "name": "@unctad-ai/eregulations-mcp-server",
+  "version": "0.4.11",
+  "description": "Model Context Protocol (MCP) server for eRegulations API",
+  "homepage": "https://github.com/unctad-ai/eregulations-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/unctad-ai/eregulations-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "eregulations-mcp-server",
+    "unctad-ai"
+  ],
+  "inputs": [
+    {
+      "id": "eregulations_api_url",
+      "type": "promptString",
+      "description": "Environment variable for eregulations api url configuration",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "docker",
+    "args": [
+      "run",
+      "-i",
+      "--rm",
+      "-e",
+      "EREGULATIONS_API_URL",
+      "ghcr.io/unctad-ai/eregulations-mcp-server:latest"
+    ],
+    "env": {
+      "EREGULATIONS_API_URL": "https://your-eregulations-api.com"
+    }
+  }
+}

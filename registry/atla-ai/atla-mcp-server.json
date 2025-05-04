@@ -1,0 +1,34 @@
+{
+  "name": "atla-mcp-server",
+  "version": "1.0.0",
+  "description": "An MCP server implementation providing a standardized interface for LLMs to interact with the Atla API.",
+  "homepage": "https://docs.atla-ai.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atla-ai/atla-mcp-server"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "atla-mcp-server",
+    "atla-ai"
+  ],
+  "inputs": [
+    {
+      "id": "atla_api_key",
+      "type": "promptString",
+      "description": "Environment variable for atla api key authentication",
+      "password": true
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "atla-mcp-server"
+    ],
+    "env": {
+      "ATLA_API_KEY": "<your-atla-api-key>"
+    }
+  }
+}

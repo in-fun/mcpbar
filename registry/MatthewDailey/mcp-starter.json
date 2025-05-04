@@ -1,0 +1,26 @@
+{
+  "name": "mcp-starter",
+  "version": "0.1.0",
+  "description": "ModelContextProtocol starter server",
+  "homepage": "https://github.com/MatthewDailey/mcp-starter",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MatthewDailey/mcp-starter"
+  },
+  "license": "Unlicense",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-starter",
+    "matthewdailey"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "npx",
+    "args": [
+      "-y",
+      "mcp-starter"
+    ],
+    "env": {}
+  }
+}

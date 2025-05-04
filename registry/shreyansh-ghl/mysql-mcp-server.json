@@ -1,0 +1,24 @@
+{
+  "name": "mysql-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for interacting with MySQL databases",
+  "homepage": "https://github.com/shreyansh-ghl/mysql-mcp-server",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shreyansh-ghl/mysql-mcp-server"
+  },
+  "license": "Unknown",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mysql-mcp-server",
+    "shreyansh-ghl"
+  ],
+  "inputs": [],
+  "server": {
+    "command": "mysql-mcp-server",
+    "args": [
+      "mysql://user:password@localhost:3306/mydb"
+    ]
+  }
+}

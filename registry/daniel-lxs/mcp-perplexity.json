@@ -1,0 +1,48 @@
+{
+  "name": "mcp-perplexity",
+  "version": "1.0.0",
+  "description": "MCP Server for the Perplexity API.",
+  "homepage": "https://github.com/daniel-lxs/mcp-perplexity",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/daniel-lxs/mcp-perplexity"
+  },
+  "license": "MIT",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "mcp-perplexity",
+    "daniel-lxs"
+  ],
+  "inputs": [
+    {
+      "id": "perplexity_api_key",
+      "type": "promptString",
+      "description": "Environment variable for perplexity api key",
+      "password": true
+    },
+    {
+      "id": "web_ui_port",
+      "type": "promptString",
+      "description": "Environment variable for web ui port",
+      "password": false
+    },
+    {
+      "id": "web_ui_host",
+      "type": "promptString",
+      "description": "Environment variable for web ui host",
+      "password": false
+    }
+  ],
+  "server": {
+    "command": "uvx",
+    "args": [
+      "mcp-perplexity"
+    ],
+    "env": {
+      "PERPLEXITY_API_KEY": "${input:perplexity_api_key}",
+      "WEB_UI_PORT": "${input:web_ui_port}",
+      "WEB_UI_HOST": "${input:web_ui_host}"
+    }
+  }
+}
