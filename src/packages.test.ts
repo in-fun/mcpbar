@@ -52,7 +52,8 @@ describe('Packages', () => {
 
   it('should load a manifest from file path', async () => {
     // Mock the file read operation
-    (fs.readFile as jest.Mock).mockResolvedValue(
+    const mockReadFile = fs.readFile as jest.Mock
+    mockReadFile.mockResolvedValue(
       JSON.stringify({
         name: 'github',
         description: 'GitHub MCP server',
