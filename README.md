@@ -1,6 +1,6 @@
 # MCP Bar
 
-The CLI manager for MCP servers.
+Your all-in-one CLI manager for MCP servers and home to an open registry with 1500+ ready-to-use servers. Install, manage, and discover AI tools effortlessly.
 
 ## 🧩 MCP Manifest Concept
 
@@ -23,8 +23,9 @@ For more details, see the [MCP Manifest Proposal](./doc/proposal.md) and [Concep
 
 - 🔄 Simple installation and management of MCP servers
 - 🛠️ User-friendly command-line interface with interactive prompts for easy configuration
-- 📱 Works cross platform
+- 📱 Works cross-platform including Windows, macOS, and Linux
 - 🔍 Search, install, disable, and enable MCP servers with ease
+- 🔌 Supports multiple MCP clients including Claude, Cline, Cursor, Windsurf, Witsy, and more
 
 ## 📦 Installation
 
