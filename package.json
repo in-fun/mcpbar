@@ -29,6 +29,7 @@
     "format:fix": "prettier . --write",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
+    "lint-staged": "lint-staged",
     "start": "ts-node ./bin/run.ts",
     "start:node": "node ./bin/run",
     "test": "jest",
@@ -37,7 +38,8 @@
     "release": "semantic-release",
     "extract-mcp": "ts-node scripts/batch-extract-mcp-manifests.ts",
     "extract-mcp:test": "ts-node scripts/extract-mcp-manifest.ts https://github.com/eyaltoledano/claude-task-master",
-    "extract-mcp:test:uv": "ts-node scripts/extract-mcp-manifest.ts https://github.com/Alec2435/python_mcp"
+    "extract-mcp:test:uv": "ts-node scripts/extract-mcp-manifest.ts https://github.com/Alec2435/python_mcp",
+    "extract-mcp:test:docker": "ts-node scripts/extract-mcp-manifest.ts https://github.com/github/github-mcp-server"
   },
   "keywords": [
     "typescript",
@@ -69,6 +71,7 @@
     "eslint-plugin-unused-imports": "^3.2.0",
     "husky": "^9.0.11",
     "jest": "^29.7.0",
+    "lint-staged": "^15.5.1",
     "prettier": "^3.2.5",
     "prettier-plugin-multiline-arrays": "^4.0.3",
     "rimraf": "^5.0.7",
@@ -90,5 +93,13 @@
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix"
+    ],
+    "*.{js,jsx,ts,tsx,json,css,md}": [
+      "prettier --write"
+    ]
   }
 }

@@ -4,7 +4,7 @@
  * Script to extract MCP manifests from GitHub repositories in batch
  * With rate limiting to avoid hitting GitHub API limits
  *
- * Usage: node batch-extract-mcp-manifests.ts
+ * Usage: node batch-extract-mcp-manifests.ts [source-file-path]
  *
  * Environment variables:
  * - GITHUB_TOKEN: GitHub personal access token (can also be set in .env file)
@@ -22,15 +22,33 @@ import dotenv from 'dotenv'
 // Load environment variables from .env file
 dotenv.config()
 
-// Get GitHub token from environment variables or CLI args
+// Get GitHub token from environment variables
 const getGitHubToken = (): string | undefined => {
-  // Priority:
-  // 1. Command line argument
-  // 2. Environment variable
-  const cliToken = process.argv[2]
-  const envToken = process.env.GITHUB_TOKEN
+  return process.env.GITHUB_TOKEN
+}
 
-  return cliToken || envToken
+// Get source file path from command line arguments or use default paths
+const getSourceFilePath = (): string => {
+  // Check command line arguments for a file path
+  for (let i = 2; i < process.argv.length; i++) {
+    const arg = process.argv[i]
+    if (arg && fs.existsSync(arg)) {
+      return path.resolve(arg)
+    }
+  }
+
+  // Default paths to check
+  const sourceFilePath = path.resolve(process.cwd(), 'scripts', 'source.json')
+  const altSourceFilePath = path.resolve(process.cwd(), 'source.json')
+
+  if (fs.existsSync(sourceFilePath)) {
+    return sourceFilePath
+  } else if (fs.existsSync(altSourceFilePath)) {
+    return altSourceFilePath
+  }
+
+  // If neither default path exists, return the first default path to report the error consistently
+  return sourceFilePath
 }
 
 // GitHub API rate limits
@@ -146,18 +164,14 @@ async function batchExtractMCPManifests(githubToken?: string): Promise<void> {
   console.log(`  - Requests per minute: ${rateLimits.requestsPerMinute}`)
   console.log(`  - Delay between requests: ${rateLimits.delayBetweenRequests}ms`)
 
-  // Read source.json file
-  const sourceFilePath = path.resolve(process.cwd(), 'scripts', 'source.json')
-  // Also check current directory if running from scripts directory
-  const altSourceFilePath = path.resolve(process.cwd(), 'source.json')
-
-  let sourceFile = sourceFilePath
-  if (!fs.existsSync(sourceFilePath) && fs.existsSync(altSourceFilePath)) {
-    sourceFile = altSourceFilePath
-  }
+  // Get source file path (from CLI args or default locations)
+  const sourceFile = getSourceFilePath()
 
   if (!fs.existsSync(sourceFile)) {
-    console.error(`Error: Source file not found at either:\n  - ${sourceFilePath}\n  - ${altSourceFilePath}`)
+    console.error(`Error: Source file not found at ${sourceFile}`)
+    console.error(
+      'Provide a valid source.json file path as the second argument: node batch-extract-mcp-manifests.ts [source-file-path]',
+    )
     process.exit(1)
   }
 
@@ -259,8 +273,10 @@ async function main(): Promise<void> {
     console.log('To provide a token, you can:')
     console.log('  1. Set GITHUB_TOKEN environment variable')
     console.log('  2. Add GITHUB_TOKEN to .env file')
-    console.log('  3. Pass token as argument: node batch-extract-mcp-manifests.ts <github-token>')
   }
+
+  console.log('Source file can be provided as a command line argument:')
+  console.log('  node batch-extract-mcp-manifests.ts [source-file-path]')
 
   try {
     await batchExtractMCPManifests(githubToken)
