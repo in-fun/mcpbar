@@ -597,21 +597,6 @@ export async function extractGitHubInfo(repoUrl: string, githubToken?: string): 
       }
     }
 
-    // Check package publish status
-    let publishStatus = { published: false }
-    if (packageName) {
-      if (runtime === 'node') {
-        publishStatus = await checkNpmPackage(packageName)
-      } else if (runtime === 'python') {
-        publishStatus = await checkPyPiPackage(packageName)
-      }
-    }
-
-    if (!publishStatus.published) {
-      console.log(`Package ${packageName} is not published on ${runtime === 'node' ? 'npm' : 'PyPI'}`)
-      return null
-    }
-
     // Extract server config, inputs, and environment variables
     let serverConfig: MCPServerConfig | null = null
     let mcpInputs: MCPInput[] = []
@@ -664,6 +649,24 @@ export async function extractGitHubInfo(repoUrl: string, githubToken?: string): 
         description: envVar.description,
         password: envVar.name.includes('KEY') || envVar.name.includes('TOKEN') || envVar.name.includes('SECRET'),
       }))
+    }
+
+    // Check if this is a Docker-based MCP server
+    const isDockerBased = serverConfig && serverConfig.command === 'docker'
+
+    // Check package publish status
+    if (packageName && !isDockerBased) {
+      let publishStatus = { published: false }
+      if (runtime === 'node') {
+        publishStatus = await checkNpmPackage(packageName)
+      } else if (runtime === 'python') {
+        publishStatus = await checkPyPiPackage(packageName)
+      }
+
+      if (!publishStatus.published) {
+        console.log(`Package ${packageName} is not published on ${runtime === 'node' ? 'npm' : 'PyPI'}`)
+        return null
+      }
     }
 
     // Create MCP manifest

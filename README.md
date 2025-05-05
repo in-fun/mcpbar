@@ -12,6 +12,7 @@ MCPBar implements a standardized approach for MCP servers using `mcp.json` manif
 - 🔍 Features an optional registry for enhanced discoverability
 - 🔐 Securely handles server configuration with explicit handling of sensitive inputs
 - 📚 Includes an **open registry** with 1500+ MCP servers in the `registry` directory
+- 🐳 Supports multiple runtime options including `npx`, `uvx` and `docker`
 
 This approach simplifies discovery, installation, and configuration of MCP servers across different clients, making the MCP ecosystem more accessible and organized.
 
