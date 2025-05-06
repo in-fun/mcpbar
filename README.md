@@ -105,6 +105,18 @@ mcpbar list
 mcpbar ls
 ```
 
+### Edit MCP Client Configuration
+
+Open the configuration file for an MCP client directly in your default editor:
+
+```bash
+mcpbar edit              # Edit configuration for the default client (claude)
+mcpbar edit --client cursor  # Edit configuration for a specific client
+mcpbar e --client witsy      # Short alias for edit
+```
+
+If the configuration file doesn't exist, the command will offer to create an empty file for you.
+
 ### Start an MCP Server
 
 Run a MCP server on standalone mode.
