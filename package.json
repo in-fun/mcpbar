@@ -1,6 +1,6 @@
 {
   "name": "mcpbar",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "`mcpbar` is a package manager for MCP server.",
   "bin": {
     "mcpbar": "./bin/run"
