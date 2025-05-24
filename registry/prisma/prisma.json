@@ -1,5 +1,5 @@
 {
-  "name": "dev-env",
+  "name": "prisma",
   "version": "1.0.0",
   "description": "Next-generation ORM for Node.js & TypeScript | PostgreSQL, MySQL, MariaDB, SQL Server, SQLite, MongoDB and CockroachDB",
   "homepage": "https://www.prisma.io",
